@@ -75,6 +75,10 @@ Real retrieval-only validation on 276 full-booklet inputs, k=5:
 | Hybrid | 0.213526 | 0.187803 |
 
 Hybrid k=5 was frozen from validation before one internal holdout retrieval comparison.
+On the 310-row internal holdout, BM25/dense/hybrid mean reference overlap is
+0.194468/0.201401/0.253554; cross-language overlap is
+0.116697/0.176814/0.203536. No holdout NLI Macro-F1 has been measured.
+
 This diagnostic measures overlap with available references, not semantic evidence
 correctness, official evidence score, or NLI Macro-F1. Dense slightly exceeds hybrid
 on cross-language overlap; hybrid wins aggregate overlap. NLI superiority is unproven.

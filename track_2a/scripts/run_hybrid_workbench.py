@@ -2,6 +2,8 @@
 import os
 import sys
 from pathlib import Path
+if os.environ.get('SSL_CERT_FILE'):
+    os.environ.setdefault('REQUESTS_CA_BUNDLE', os.environ['SSL_CERT_FILE'])
 from ost_nli.dense import download, MultilingualRetriever
 
 directory = os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small')

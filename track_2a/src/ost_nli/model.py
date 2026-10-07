@@ -45,7 +45,9 @@ def select_context(row, mode="bm25", k=5, max_bytes=48000, diversify=False):
                 if available <= 0:
                     raise ValueError("Passage metadata exceeds context byte budget")
                 text = p["text"].encode()[:available].decode("utf-8",errors="ignore")
-                selected.append({**p,"text":text,"truncated":True})
+                excerpt = {**p,"text":text,"truncated":True}
+                if 'char_start' in p: excerpt['char_end'] = p['char_start'] + len(text)
+                selected.append(excerpt)
                 blocks.append(prefix+text)
             break
         selected.append({**p,"truncated":False})

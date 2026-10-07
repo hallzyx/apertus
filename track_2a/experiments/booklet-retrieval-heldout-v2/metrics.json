@@ -244,5 +244,11 @@
     }
   },
   "macro_f1": null,
-  "notes": "Real PDFs and embeddings. Reference-overlap diagnostic, not official evidence scoring or NLI accuracy. Source references are never retrieval inputs. No parameter fitting or test-label selection."
+  "notes": "Real PDFs and embeddings. Reference-overlap diagnostic, not official evidence scoring or NLI accuracy. Source references are never retrieval inputs. No parameter fitting or test-label selection.",
+  "status": "completed",
+  "git_commit_at_launch": "eccc22496812f672e7a210fbf83f9fc631e54c37",
+  "git_working_tree_dirty_at_launch": false,
+  "source_script_sha256": "be097a08363f2ed51c7e9f41a0d22fdd26cd9a6bdc87bbd33db4d8c68f83c185",
+  "document_processing": "page-offset-plain-v2",
+  "selection": "None: frozen hybrid k=5 from validation; all three methods reported once on internal holdout without fitting or parameter changes"
 }

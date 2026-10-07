@@ -69,7 +69,10 @@ class MultilingualRetriever:
                     vectors = values['vectors']
             else:
                 vectors = self.encode([p['text'] for p in passages], 'passage: ')
-                if path: np.savez_compressed(path, vectors=vectors, revision=np.asarray(REVISION))
+                if path:
+                    temporary = path.with_suffix('.part.npz')
+                    np.savez_compressed(temporary, vectors=vectors, revision=np.asarray(REVISION))
+                    temporary.replace(path)
             if vectors.shape != (len(passages), 384) or not np.isfinite(vectors).all():
                 raise ValueError('Invalid document embeddings')
             self.documents[key] = vectors
