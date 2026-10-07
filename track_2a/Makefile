@@ -1,5 +1,5 @@
 .PHONY: run start build test smoke
-RUNTIME ?= hybrid
+RUNTIME ?= api
 IMAGE ?= apertus-ost:$(RUNTIME)
 DOCKERFILE ?= $(if $(filter hybrid,$(RUNTIME)),Dockerfile.hybrid,$(if $(filter frozen,$(RUNTIME)),Dockerfile.frozen,Dockerfile))
 MODEL_CACHE ?= $(if $(filter hybrid,$(RUNTIME)),apertus-retrieval-models,apertus-models)
@@ -14,7 +14,7 @@ build:
 run: build
 	$(MAKE) start
 start:
-	@if [ -n "$$HTTPS_PROXY" ] && command -v python >/dev/null && [ -z "$(DOCKER_RUN_ARGS)" ]; then bash scripts/cloud-docker.sh start; elif [ "$(RUNTIME)" = hybrid ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models --add-host host.docker.internal:host-gateway -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS -e RETRIEVAL_MODE $(IMAGE); elif [ "$(RUNTIME)" = frozen ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models -e OST_LABEL_MAP $(IMAGE) $(FROZEN_ARGS); else docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 --add-host host.docker.internal:host-gateway -e FROZEN_BASE_URL -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS -e OST_LABEL_MAP $(IMAGE) serve --host 0.0.0.0 --port 8000; fi
+	@if [ -n "$$HTTPS_PROXY" ] && command -v python >/dev/null && [ -z "$(DOCKER_RUN_ARGS)" ]; then bash scripts/cloud-docker.sh start; elif [ "$(RUNTIME)" = hybrid ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models --add-host host.docker.internal:host-gateway -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS -e RETRIEVAL_MODE $(IMAGE); elif [ "$(RUNTIME)" = frozen ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models -e OST_LABEL_MAP $(IMAGE) $(FROZEN_ARGS); else docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 --add-host host.docker.internal:host-gateway -e FROZEN_BASE_URL -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS -e RETRIEVAL_MODE -e OST_LABEL_MAP $(IMAGE) serve --host 0.0.0.0 --port 8000; fi
 test:
 	PYTHONPATH=src $(PYTHON) -m unittest discover -s tests -v
 smoke: build

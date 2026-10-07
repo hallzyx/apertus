@@ -1,14 +1,15 @@
 # Apertus Evidence Lab · Hack Apertus Track 2A OST
 
 Production input is **voting booklet + claim**, with DE/FR/IT and cross-lingual
-retrieval. The app extracts PDF passages with source pages and hashes, retrieves
-with public multilingual E5 + BM25, and delegates NLI to **Apertus v1.5**.
+NLI. The app extracts PDF passages with source pages and hashes, supplies the
+validation-selected full/capped booklet context, and delegates NLI to **Apertus v1.5**.
+Multilingual E5/BM25 retrieval remains available for supporting experiments.
 
 ```bash
 export LLM_NAME=swiss-ai/Apertus-v1.5-8B
 export LLM_BASE_URL=https://YOUR_AUTHORIZED_APERTUS_ENDPOINT/v1
 # Configure LLM_API_KEY securely if your endpoint requires authentication.
-make run                    # Docker app on port 8000; downloads verified retrieval weights
+make run                    # Lightweight Docker PDF/HTTP app on port 8000
 make test
 ```
 
@@ -19,7 +20,8 @@ the task obtained authorized weights and verified real native v1.5 CPU inference
 Cached weights need no Hugging Face token. Three real cross-language training PDF
 cases passed through the public CLI; these are integration checks. Real native A40
 GPU validation is now running; preliminary results are in the technical report.
-Full comparisons, decision-head training and the 310-row holdout remain pending.
+All ten validation comparisons are complete; full/capped class scoring leads at
+preliminary Macro-F1 0.671612. Decision-head training and the 310-row holdout remain pending.
 
 **The earlier 0.970353 Macro-F1 was a reference-only experiment with Apertus
 2509, not v1.5 or full-booklet production.** It remains documented as historical

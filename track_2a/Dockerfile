@@ -10,7 +10,7 @@ COPY deployment ./deployment
 COPY tests ./tests
 COPY data/example-booklet.json ./data/example-booklet.json
 RUN chmod -R a+rX /app
-ENV PYTHONPATH=/app/src PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app/src PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 APERTUS_REQUIRED_GENERATION=v1.5
 USER 65534:65534
 EXPOSE 8000
 ENTRYPOINT ["python", "-m", "ost_nli"]

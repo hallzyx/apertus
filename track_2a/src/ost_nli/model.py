@@ -153,6 +153,9 @@ class FrozenServiceClient:
             raise RuntimeError('Frozen Apertus backend unavailable; no prediction produced') from None
         if type(result.get('label')) is not int or result['label'] not in (0,1,2) or 'apertus' not in str(result.get('model','')).lower():
             raise ValueError('Invalid frozen Apertus response')
+        generation = os.environ.get('APERTUS_REQUIRED_GENERATION')
+        if generation and generation not in str(result['model']).lower():
+            raise ValueError('Production runtime requires Apertus ' + generation)
         probability=result.get('probabilities')
         import math
         if not isinstance(probability,list) or len(probability)!=3 or not all(isinstance(v,(int,float)) and math.isfinite(v) and 0<=v<=1 for v in probability) or abs(sum(probability)-1)>1e-6:

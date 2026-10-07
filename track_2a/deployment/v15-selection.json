@@ -1,0 +1,15 @@
+{
+  "status": "context_frozen_decision_method_pending",
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "choice": {
+    "context": "full"
+  },
+  "context_selection": "Highest 276-row validation Macro-F1 among booklet-only class-score baselines; all ten context/method comparisons complete. Both pending decision heads use this context.",
+  "baseline_validation_macro_f1_log_rounded": 0.671612,
+  "test_used_for_selection": false,
+  "head_training_complete": false,
+  "internal_holdout_complete": false,
+  "artifact_sha_verified_recovery_pending": true,
+  "source": "experiments/v15-provision-v8/progress.json"
+}

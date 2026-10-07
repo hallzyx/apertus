@@ -2,14 +2,9 @@
 
 ## Runtime
 
-From the repository root, `make run` builds the pinned CPU Docker image and starts
-port 8000. It downloads the public supporting retrieval model
-`intfloat/multilingual-e5-small` at immutable revision
-`614241f622f53c4eeff9890bdc4f31cfecc418b3`, verifying original LFS hashes.
-The retrieval cache persists in Docker volume `apertus-retrieval-models`.
-A practical retrieval runtime is four CPU threads, roughly 2 GB RAM and at least
-3 GB free disk (VFS cloud Docker needs roughly 8 GB during build/start) for Docker/retrieval weights. Apertus endpoint hardware is separate.
-Internet is required for first asset download and remote model inference.
+From the repository root, `make run` builds the pinned PDF/HTTP Docker image and starts port 8000. `deployment/v15-selection.json` supplies the validation-selected context; currently this is full/capped booklet text, with a 48,000-byte document-context budget and explicit truncation reporting. No supporting retrieval model is downloaded by the default frontend. Apertus endpoint hardware and weights are separate.
+
+Optional retrieval runs use `make run RUNTIME=hybrid RETRIEVAL_MODE=hybrid` (or `dense`). That image loads the public supporting `intfloat/multilingual-e5-small` model at revision `614241f622f53c4eeff9890bdc4f31cfecc418b3`, verifying original hashes and retaining assets in volume `apertus-retrieval-models`. Full/BM25 modes skip E5. Retrieval research uses four CPU threads; VFS cloud Docker can require around 8 GB free during a retrieval-image build. Classification requires the configured Apertus endpoint.
 
 Set `LLM_NAME=swiss-ai/Apertus-v1.5-8B`, `LLM_BASE_URL` to an authorized
 OpenAI-compatible endpoint ending `/v1`, and `LLM_API_KEY` securely if required.
@@ -53,7 +48,7 @@ With Docker running and cached assets, execute:
 
 ```bash
 # Mount your booklet and configure the same authorized endpoint.
-docker run --rm -v apertus-retrieval-models:/models -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS apertus-ost:hybrid predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --context hybrid --k 5
+docker run --rm -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS apertus-ost:api predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --k 5
 ```
 
 Host equivalent, after hash-locked CPU installation:
