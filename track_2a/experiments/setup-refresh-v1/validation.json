@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-07T05:05:26.462246+00:00",
+  "git_commit": "70e1fbbab3149ddd38818ca41acc69988a2b566b",
+  "command": "bash track_2a/scripts/setup-cloud.sh",
+  "exit_code": 0,
+  "tests": {
+    "executed": 36,
+    "passed": 36,
+    "skipped": 0
+  },
+  "official_source_and_frozen_split_hashes_verified": true,
+  "frozen_docker_build_passed": true,
+  "setup_script_sha256": "a0e80145e1f2671292718e0ed3e87fa9e8f06ccbe459edc8896037b9e231ea5a",
+  "log_sha256": "43d8faab829a04b179c8cf6756d045d8ff1df05de30c7d0eed07a2a93eec766f",
+  "note": "Reusable install command refresh validated; standalone real Docker inference recorded separately. No GPU launched by setup."
+}
