@@ -1,6 +1,6 @@
-# Phase 2 — preliminary falsification audit
+# Phase 2 — grounding controls and efficiency study
 
-Status: local diagnostics complete; actual Apertus claim-only/wrong-document controls pending. No phase-2 architecture selected; historical production selection and consumed 310 holdout remain frozen. No LoRA.
+Status: actual grounding controls completed and checksum verified; registered efficiency study next. No phase-2 architecture selected; historical production selection and consumed 310 holdout remain frozen. No LoRA.
 
 ## Claim artifact probes
 
@@ -52,3 +52,20 @@ Vast observed balance at phase2 start: USD6.534131. New discretionary cap USD4.5
 Frontend verification:38 application tests passed both host and minimal Docker; two separate NumPy research tests passed on host. Live Docker parsed a SHA-verified official72-page French booklet into157 passages and selected52 exact page/offset source quotes. The endpoint is unconfigured for classification on this cloud host; actual native GPU controls run on the disposable Vast lease. No live classification is claimed for the frontend.
 
 Error comparison: the restricted base class scorer is correct on20 of29 cases that the learned full head gets wrong. Both manually inspected75%/three-quarters cases have correct base full-context Entailment but incorrect learned-head decisions. This locates a decision-mapping failure in those cases; it does not establish that Apertus weights need fine-tuning or explain why the mapping fails.
+
+## Actual Apertus grounding controls
+
+Registered gate: **GO_WITH_LIMITATIONS**. No warning conditions. All2006 actual native GPU forwards completed; original model weights/head unchanged, no LoRA, no consumed310 access.
+
+| Condition | Original-label validation Macro-F1 |
+|---|---:|
+| correct_document_frozen_head | 0.894461 |
+| claim_only_train_fitted_head | 0.699640 |
+| claim-only | 0.210229 |
+| wrong-42 | 0.565341 |
+| wrong-1337 | 0.553328 |
+| generic | 0.174688 |
+
+Wrong-document scores retain only 63.2%/61.9% of correct-context score. These substantial drops support context dependence under the registered controls. They do not prove correct evidence reasoning: original labels are not true labels for intervened premises. Refitted claim-only capability .700 shows residual claim artifacts; empty-context original head .210 measures a different intervention. Only two wrong permutations and few events were tested.
+
+Source encodings and fitted claim-only audit: `../apertus-v15-phase2-controls-v1`; recovered archive SHA `d023629cf7e283a66b13b05c1f92b4c05165fc50544a7eac47aa049abe437c0b`. All105 export-part SHA checks, complete archive checksum and experiment file checks passed. Task-owned instance54722568 destroyed and verified absent via paginated provider API. New context study is preregistered in `context-protocol.json`; no efficiency architecture is selected yet.

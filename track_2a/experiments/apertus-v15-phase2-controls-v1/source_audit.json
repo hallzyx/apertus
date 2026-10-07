@@ -1,0 +1,14 @@
+{
+  "scope": "Only original train/validation IDs decoded; source archive checksum covers complete downloaded file",
+  "source_sha256": "87ee4afd9c0ee8861106c50f05884481402ca668aecf927df68fc52d915b02fd",
+  "partitions": {
+    "train": {
+      "n": 902,
+      "sha256": "9a95cf03912669132e390a676007e873aeb105b46a9bac12360f029fb571ce0c"
+    },
+    "validation": {
+      "n": 276,
+      "sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "registered_at": "2026-10-07T22:40:26.730631+00:00",
+  "registered_before_new_context_results": true,
+  "grounding_gate": "GO_WITH_LIMITATIONS",
+  "conditions": {
+    "hybrid-1k": {
+      "prompt_cap": 1024,
+      "retrieval_depth": 5
+    },
+    "hybrid-2k": {
+      "prompt_cap": 2048,
+      "retrieval_depth": 10
+    },
+    "hybrid-4k": {
+      "prompt_cap": 4096,
+      "retrieval_depth": 20
+    },
+    "hybrid-8k": {
+      "prompt_cap": 8192,
+      "retrieval_depth": 30
+    },
+    "prefix-2k": {
+      "prompt_cap": 2048,
+      "retrieval_depth": null
+    }
+  },
+  "scope": "902train+276validation for each, no consumed310",
+  "gpu_forward_bound": 5890,
+  "packing": "Whole exact source passages under total native-tokenizer prompt budget; no gold/reference input",
+  "head_fit": "Connected-group OOF C and temperature using training only, same original method",
+  "selection_rule": "Among context-matched hidden heads within0.02 validation Macro-F1 of original full0.894461, prefer lowest measured prompt tokens; preserve full if none qualify. Evidence and cross-lingual regression assessed separately; validation architecture selection is not held-out proof.",
+  "cross_lingual_guard": "Candidate cross-lingual F1 must be within0.03 of original0.873829",
+  "evidence": "Reference5gram coverage diagnostic only; exact provenance checks; never organizer evidence metric",
+  "factorial_caution": "Depth and token cap jointly varied under budget; do not attribute gains to one alone",
+  "lease_bound_usd": 1.3501171875,
+  "expected_hours": 1.75,
+  "max_hours": 3,
+  "lora": false,
+  "additional_budget_cap_usd": 4.5,
+  "reserve_usd": 2
+}

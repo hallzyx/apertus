@@ -1,0 +1,53 @@
+{
+  "scope": "train/validation only; no test access",
+  "conditions": {
+    "train-claim-only": {
+      "file": "train-claim-only.jsonl",
+      "n": 902,
+      "sha256": "8a1dd23608cd429d4c1502de571d6ed9208add9ac011ed9b775c8b7bb2e04e03",
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "mean_context_bytes": 0.0,
+      "same_language_donor_rate": null,
+      "different_event_donor_rate": null
+    },
+    "validation-claim-only": {
+      "file": "validation-claim-only.jsonl",
+      "n": 276,
+      "sha256": "ec91b2eb025c36dcf4959c23c823442172019d51dafaa0ce109da308964e8dac",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "mean_context_bytes": 0.0,
+      "same_language_donor_rate": null,
+      "different_event_donor_rate": null
+    },
+    "validation-generic": {
+      "file": "validation-generic.jsonl",
+      "n": 276,
+      "sha256": "f162a6ab896ac5d2f195e63a62eef0aec813b5bd630ad97359c29f785346e230",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "mean_context_bytes": 79.10144927536231,
+      "same_language_donor_rate": null,
+      "different_event_donor_rate": null
+    },
+    "validation-wrong-42": {
+      "file": "validation-wrong-42.jsonl",
+      "n": 276,
+      "sha256": "82de43d667724f539e2fb8ad93cae388cf4103b6eefccd8aaf2cbd2d1c3f451d",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "mean_context_bytes": 47582.49637681159,
+      "same_language_donor_rate": 1.0,
+      "different_event_donor_rate": 1.0
+    },
+    "validation-wrong-1337": {
+      "file": "validation-wrong-1337.jsonl",
+      "n": 276,
+      "sha256": "cec0d288c5eb6117c958a568405d1cbb02fff648b0a412d4e905b72a33d1a998",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "mean_context_bytes": 47545.05072463768,
+      "same_language_donor_rate": 1.0,
+      "different_event_donor_rate": 1.0
+    }
+  },
+  "wrong_document_scoring": "Original labels only diagnose artifact retention; not true swapped-pair NLI labels",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "source_script_sha256": "0c9bc306a04fc96571c488da1630cb4c817347752e5749e7b6bb1a0442b02f03"
+}

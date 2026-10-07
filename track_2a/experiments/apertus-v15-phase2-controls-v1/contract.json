@@ -1,0 +1,15 @@
+{
+  "input_manifest_sha256": "8d3d545c2caa83a754063438e3f31c65771fa3505d2503e54962e1daf2ab42ad",
+  "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "engine_sha256": "2fa8835175522390edb2dd068239b4af57129a1f37379a77beba77b979e50a07",
+  "script_sha256": "b2dcc8fdc9138a660e1bcdbac3908c8cd989aa10947941bfc7382dd5d3b15904",
+  "scope": "train/validation only; consumed310 untouched",
+  "conditions": [
+    "claim-only",
+    "wrong-42",
+    "wrong-1337",
+    "generic"
+  ],
+  "device": "cuda",
+  "weights_frozen": true
+}

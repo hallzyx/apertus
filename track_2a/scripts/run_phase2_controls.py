@@ -20,13 +20,18 @@ def main():
     p.add_argument('--inputs', required=True)
     p.add_argument('--output', required=True)
     p.add_argument('--device', default='cuda', choices=['cuda','cpu'])
+    p.add_argument('--study', default='grounding', choices=['grounding','context'])
+    p.add_argument('--max-runtime-seconds',type=int)
     p.add_argument('--conditions', nargs='+', default=['claim-only','wrong-42','wrong-1337','generic'])
     a = p.parse_args()
-    if any(c not in ('claim-only','wrong-42','wrong-1337','generic') for c in a.conditions):
+    allowed = ('claim-only','wrong-42','wrong-1337','generic') if a.study == 'grounding' else ('hybrid-1k','hybrid-2k','hybrid-4k','hybrid-8k','prefix-2k')
+    if any(c not in allowed for c in a.conditions):
         raise ValueError('Unregistered control condition')
     inputs, out = Path(a.inputs), Path(a.output)
     manifest = json.loads((inputs/'manifest.json').read_text())
     assert manifest['model_revision'] == REVISION
+    if a.study == 'context' and manifest.get('study') != 'registered_context_sweep':
+        raise ValueError('Registered context input manifest required')
     head_path = Path(__file__).resolve().parents[1]/'deployment/head-v15.json'
     head = json.loads(head_path.read_text())
     assert head['model_revision'] == REVISION
@@ -34,7 +39,7 @@ def main():
     contract = {'input_manifest_sha256':sha(inputs/'manifest.json'),'head_sha256':sha(head_path),
                 'engine_sha256':sha(Path(__file__).resolve().parents[1]/'src/ost_nli/v15.py'),
                 'script_sha256':sha(__file__),'scope':'train/validation only; consumed310 untouched',
-                'conditions':a.conditions,'device':a.device,'weights_frozen':True}
+                'conditions':a.conditions,'device':a.device,'weights_frozen':True,'study':a.study}
     contract_path = out/'contract.json'
     if contract_path.exists() and json.loads(contract_path.read_text()) != contract:
         raise ValueError('Resume source/input/head contract changed')
@@ -44,10 +49,11 @@ def main():
     metadata = {**engine.metadata,'model':engine.metadata['repo'],'model_revision':REVISION,
                 'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
                 'load_seconds':time.perf_counter()-began,**contract}
+    (out/'experiment.json').write_text(json.dumps({**metadata,'status':'started'},indent=2)+'\n')
     for condition in a.conditions:
         directory = out/condition
         directory.mkdir(exist_ok=True)
-        splits = ('train','validation') if condition == 'claim-only' else ('validation',)
+        splits = ('train','validation') if condition == 'claim-only' or a.study == 'context' else ('validation',)
         for split in splits:
             entry = manifest['conditions'][f'{split}-{condition}']
             path = inputs/entry['file']
@@ -71,10 +77,14 @@ def main():
                     logits.extend(saved['option_logits'])
             pending = []
             for index in range(len(ids),len(rows)):
+                if a.max_runtime_seconds and time.perf_counter()-began >= a.max_runtime_seconds:
+                    raise TimeoutError('Registered encoding time budget reached; completed atomic chunks preserved')
                 row = rows[index]
                 # Only messages are passed: labels, donor IDs and references are not model inputs.
                 result = engine.infer(row['messages'],method='head',head=head)
                 h, l = result.pop('hidden'), result.pop('option_logits')
+                if row.get('prompt_token_cap') is not None and result['context_tokens'] > row['prompt_token_cap']:
+                    raise ValueError('Actual model prompt exceeds registered tokenizer budget')
                 result.update(id=row['id'],context_bytes=row['context_bytes'],
                               latency_seconds=result['latency_seconds']+row['retrieval_seconds'],
                               truncated=row['truncated'],evidence_ids=row['evidence_ids'],
@@ -100,13 +110,13 @@ def main():
                 labels=np.asarray([r['label'] for r in rows],dtype=np.int64))
             (directory/f'{split}_rows.jsonl').write_text(''.join(json.dumps(r,allow_nan=False)+'\n' for r in preds))
             metrics = evaluate([{**r,'evidence_ids':[]} for r in rows],preds)
-            metrics.update(scoring_interpretation='Original-label artifact retention ONLY; swapped pair labels unknown'
+            metrics.update(scoring_interpretation='Correct-booklet frozen full-trained-head context diagnostic; matched head fitting is separate' if a.study == 'context' else 'Original-label artifact retention ONLY; swapped pair labels unknown'
                 if condition.startswith('wrong-') else 'Original-label frozen-head sensitivity control; empty evidence is a distribution shift')
             (directory/f'{split}-frozen-head-metrics.json').write_text(json.dumps(metrics,indent=2)+'\n')
         files = [{'path':path.name,'sha256':sha(path)} for path in sorted(directory.glob('*.npz'))]
         files.append({'path':'validation_rows.jsonl','sha256':sha(directory/'validation_rows.jsonl')})
         source = {**metadata,'context':condition,'status':'completed','files':files,
-                  'train_sha256':manifest['conditions']['train-claim-only']['dataset_sha256'],
+                  'train_sha256':manifest['conditions'][f'train-{condition}' if a.study == 'context' else 'train-claim-only']['dataset_sha256'],
                   'validation_sha256':manifest['conditions'][f'validation-{condition}']['dataset_sha256'],
                   'training':'Frozen Apertus encodings; any head fitting is a separate train-only CPU stage'}
         (directory/'experiment.json').write_text(json.dumps(source,indent=2)+'\n')

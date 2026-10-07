@@ -210,7 +210,7 @@ pypdf BSD-3-Clause. Original booklet content remains attributed to the Federal C
 - Submission: http://hackapertus.ch/online-hack/submissions
 
 
-## Phase 2: falsification audit in progress
+## Phase 2: grounding controls passed; efficiency study registered
 
 The historical310 score is consumed and frozen; it is not an architecture-development set. Phase2 registered grounding controls before new GPU results, with a USD4.50 discretionary ceiling and USD2 reserve. LoRA/QLoRA and70B are prohibited in this stage. Current production selection remains unchanged pending grounding controls.
 
@@ -220,4 +220,4 @@ The original full-trained hidden head on original cached validation encodings yi
 
 Validation contains276 rows but207 unique normalized claim/document pairs, three voting events and two duplicate-connected components. Deduplicated Macro-F1 is .883035. An inspected Neutral example, ost-v1.1-0732, has a COVID reference while full booklet pages6/32 discuss the claim’s climate transition/2050 target. This exposes a possible reference-relative label versus full-booklet premise-scope mismatch; labels are unchanged and the counterexample is preserved with exact page text and PDF SHA. It prevents treating every scored error as a reasoning failure.
 
-See [phase2 audit](experiments/apertus-v15-phase2/README.md), [registered protocol](experiments/apertus-v15-phase2/protocol.json), [scope counterexample](experiments/apertus-v15-phase2/premise-scope-risk.json), and [validation error inventory](experiments/apertus-v15-phase2/final-error-analysis.jsonl). GPU controls and the final grounding conclusion remain pending; no scientific claim that the historical~.90 score survives them is made.
+See [phase2 audit](experiments/apertus-v15-phase2/README.md), [registered protocol](experiments/apertus-v15-phase2/protocol.json), [scope counterexample](experiments/apertus-v15-phase2/premise-scope-risk.json), and [validation error inventory](experiments/apertus-v15-phase2/final-error-analysis.jsonl). Actual native controls completed: correct full .894461, claim-only condition-specific train-only fitted head .699640, original full head on empty .210229, wrong-event same-language booklets .565341/.553328 (seeds42/1337), generic .174688. The preregistered retention/absolute-gap gate passes with limitations. Large wrong-context drops support context dependence, while .700 claim-only capability exposes claim-label signal. Original labels are sensitivity targets, not swapped-premise NLI ground truth. All2006 new forwards used train/validation only; all export/source checksums passed, and the first GPU lease was destroyed and verified absent. No LoRA and no new310 inference. Context-matched heads at1k/2k/4k/8k hybrid budgets and a2k prefix contrast are registered before those results; joint depth/cap changes are not a factorial study.

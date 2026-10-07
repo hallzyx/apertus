@@ -1,0 +1,249 @@
+{
+  "scope": "30 actual official DE/FR/IT train/validation input-packing checks; no Apertus inference or F1",
+  "tokenizer_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "passed": 30,
+  "exact_source_quote_page_checks": true,
+  "manifest_sha256": "2a7715b9b625d5a1d799b90f5a872fbe54b5f7b72b6563e0c36701f605f3d023",
+  "checks": [
+    {
+      "condition": "hybrid-1k",
+      "split": "train",
+      "id": "ost-v1.1-0003",
+      "tokens": 925,
+      "cap": 1024,
+      "passages": 2
+    },
+    {
+      "condition": "hybrid-1k",
+      "split": "train",
+      "id": "ost-v1.1-0000",
+      "tokens": 868,
+      "cap": 1024,
+      "passages": 3
+    },
+    {
+      "condition": "hybrid-1k",
+      "split": "train",
+      "id": "ost-v1.1-0007",
+      "tokens": 969,
+      "cap": 1024,
+      "passages": 3
+    },
+    {
+      "condition": "hybrid-2k",
+      "split": "train",
+      "id": "ost-v1.1-0003",
+      "tokens": 1929,
+      "cap": 2048,
+      "passages": 5
+    },
+    {
+      "condition": "hybrid-2k",
+      "split": "train",
+      "id": "ost-v1.1-0000",
+      "tokens": 2025,
+      "cap": 2048,
+      "passages": 7
+    },
+    {
+      "condition": "hybrid-2k",
+      "split": "train",
+      "id": "ost-v1.1-0007",
+      "tokens": 1969,
+      "cap": 2048,
+      "passages": 8
+    },
+    {
+      "condition": "hybrid-4k",
+      "split": "train",
+      "id": "ost-v1.1-0003",
+      "tokens": 4074,
+      "cap": 4096,
+      "passages": 11
+    },
+    {
+      "condition": "hybrid-4k",
+      "split": "train",
+      "id": "ost-v1.1-0000",
+      "tokens": 4095,
+      "cap": 4096,
+      "passages": 15
+    },
+    {
+      "condition": "hybrid-4k",
+      "split": "train",
+      "id": "ost-v1.1-0007",
+      "tokens": 3961,
+      "cap": 4096,
+      "passages": 14
+    },
+    {
+      "condition": "hybrid-8k",
+      "split": "train",
+      "id": "ost-v1.1-0003",
+      "tokens": 8043,
+      "cap": 8192,
+      "passages": 25
+    },
+    {
+      "condition": "hybrid-8k",
+      "split": "train",
+      "id": "ost-v1.1-0000",
+      "tokens": 7946,
+      "cap": 8192,
+      "passages": 28
+    },
+    {
+      "condition": "hybrid-8k",
+      "split": "train",
+      "id": "ost-v1.1-0007",
+      "tokens": 8118,
+      "cap": 8192,
+      "passages": 28
+    },
+    {
+      "condition": "prefix-2k",
+      "split": "train",
+      "id": "ost-v1.1-0003",
+      "tokens": 2000,
+      "cap": 2048,
+      "passages": 7
+    },
+    {
+      "condition": "prefix-2k",
+      "split": "train",
+      "id": "ost-v1.1-0000",
+      "tokens": 1903,
+      "cap": 2048,
+      "passages": 8
+    },
+    {
+      "condition": "prefix-2k",
+      "split": "train",
+      "id": "ost-v1.1-0007",
+      "tokens": 1800,
+      "cap": 2048,
+      "passages": 6
+    },
+    {
+      "condition": "hybrid-1k",
+      "split": "validation",
+      "id": "ost-v1.1-0022",
+      "tokens": 856,
+      "cap": 1024,
+      "passages": 3
+    },
+    {
+      "condition": "hybrid-1k",
+      "split": "validation",
+      "id": "ost-v1.1-0019",
+      "tokens": 963,
+      "cap": 1024,
+      "passages": 3
+    },
+    {
+      "condition": "hybrid-1k",
+      "split": "validation",
+      "id": "ost-v1.1-0040",
+      "tokens": 899,
+      "cap": 1024,
+      "passages": 3
+    },
+    {
+      "condition": "hybrid-2k",
+      "split": "validation",
+      "id": "ost-v1.1-0022",
+      "tokens": 1854,
+      "cap": 2048,
+      "passages": 6
+    },
+    {
+      "condition": "hybrid-2k",
+      "split": "validation",
+      "id": "ost-v1.1-0019",
+      "tokens": 1782,
+      "cap": 2048,
+      "passages": 6
+    },
+    {
+      "condition": "hybrid-2k",
+      "split": "validation",
+      "id": "ost-v1.1-0040",
+      "tokens": 1967,
+      "cap": 2048,
+      "passages": 6
+    },
+    {
+      "condition": "hybrid-4k",
+      "split": "validation",
+      "id": "ost-v1.1-0022",
+      "tokens": 4066,
+      "cap": 4096,
+      "passages": 13
+    },
+    {
+      "condition": "hybrid-4k",
+      "split": "validation",
+      "id": "ost-v1.1-0019",
+      "tokens": 4044,
+      "cap": 4096,
+      "passages": 13
+    },
+    {
+      "condition": "hybrid-4k",
+      "split": "validation",
+      "id": "ost-v1.1-0040",
+      "tokens": 3928,
+      "cap": 4096,
+      "passages": 13
+    },
+    {
+      "condition": "hybrid-8k",
+      "split": "validation",
+      "id": "ost-v1.1-0022",
+      "tokens": 8111,
+      "cap": 8192,
+      "passages": 28
+    },
+    {
+      "condition": "hybrid-8k",
+      "split": "validation",
+      "id": "ost-v1.1-0019",
+      "tokens": 7859,
+      "cap": 8192,
+      "passages": 30
+    },
+    {
+      "condition": "hybrid-8k",
+      "split": "validation",
+      "id": "ost-v1.1-0040",
+      "tokens": 8123,
+      "cap": 8192,
+      "passages": 25
+    },
+    {
+      "condition": "prefix-2k",
+      "split": "validation",
+      "id": "ost-v1.1-0022",
+      "tokens": 1777,
+      "cap": 2048,
+      "passages": 7
+    },
+    {
+      "condition": "prefix-2k",
+      "split": "validation",
+      "id": "ost-v1.1-0019",
+      "tokens": 1890,
+      "cap": 2048,
+      "passages": 8
+    },
+    {
+      "condition": "prefix-2k",
+      "split": "validation",
+      "id": "ost-v1.1-0040",
+      "tokens": 1924,
+      "cap": 2048,
+      "passages": 7
+    }
+  ]
+}

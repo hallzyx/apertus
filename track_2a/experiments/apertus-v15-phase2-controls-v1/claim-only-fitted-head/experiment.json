@@ -1,0 +1,256 @@
+{
+  "experiment_id": "claim-only-fitted-head",
+  "status": "completed",
+  "timestamp": "2026-10-07T22:28:37.054777+00:00",
+  "git_commit": "895baf470456c841d26432ef1890b190f16fc83b",
+  "git_working_tree_dirty": true,
+  "source_script_sha256": "abe5784d6ec6caf500e4159e6ae21c1f4a138fb5b57874640d43c7bd8bf4a603",
+  "source_cache": "claim-only",
+  "source_cache_git_commit": "895baf470456c841d26432ef1890b190f16fc83b",
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "precision": "BF16 text; official tokenizer modules remain FP32",
+  "features": "hidden",
+  "n_features": 4096,
+  "context": "claim-only",
+  "train_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+  "validation_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+  "dataset_split": "strict_validation",
+  "training_configuration": {
+    "n": 902,
+    "seed": 42,
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "selection": "Training grouped OOF Macro-F1 only",
+    "groups": 2,
+    "folds": 2,
+    "max_iter": 2000,
+    "calibration": "Scalar temperature minimizing training grouped OOF NLL; no validation labels"
+  },
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "gpu": "CPU head; actual Apertus CUDA cache reused",
+  "actual_compute_cost": 0.0,
+  "estimated_compute_cost": 0.0,
+  "macro_f1": 0.6996395534083977,
+  "notes": "Frozen real Apertus features; 902 declared training rows only. Few independent groups limit confidence in calibration and generalization. Latency sums cached GPU encoding and separately measured CPU head; not a live integrated service. Booklet-only context with fixed official class semantics; no reference input and no test fitting.",
+  "n": 276,
+  "selected_C": 1.0,
+  "temperature": 7.220433165629903,
+  "training_oof_macro_f1": 0.5258856909992612,
+  "runtime_seconds": 8.025461956858635,
+  "per_class_f1": {
+    "0": 0.5952380952380952,
+    "1": 0.8442211055276382,
+    "2": 0.6594594594594595
+  },
+  "per_language_performance": {
+    "de": {
+      "n": 82,
+      "macro_f1": 0.7425213675213675,
+      "accuracy": 0.7439024390243902,
+      "per_class": {
+        "0": {
+          "precision": 0.68,
+          "recall": 0.7391304347826086,
+          "f1": 0.7083333333333334,
+          "support": 23
+        },
+        "1": {
+          "precision": 0.6486486486486487,
+          "recall": 0.8888888888888888,
+          "f1": 0.75,
+          "support": 27
+        },
+        "2": {
+          "precision": 1.0,
+          "recall": 0.625,
+          "f1": 0.7692307692307693,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          17,
+          6,
+          0
+        ],
+        [
+          3,
+          24,
+          0
+        ],
+        [
+          5,
+          7,
+          20
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "fr": {
+      "n": 100,
+      "macro_f1": 0.6794939330496836,
+      "accuracy": 0.68,
+      "per_class": {
+        "0": {
+          "precision": 0.6666666666666666,
+          "recall": 0.47368421052631576,
+          "f1": 0.5538461538461539,
+          "support": 38
+        },
+        "1": {
+          "precision": 0.9696969696969697,
+          "recall": 0.9411764705882353,
+          "f1": 0.9552238805970149,
+          "support": 34
+        },
+        "2": {
+          "precision": 0.45,
+          "recall": 0.6428571428571429,
+          "f1": 0.5294117647058824,
+          "support": 28
+        }
+      },
+      "confusion_matrix": [
+        [
+          18,
+          0,
+          20
+        ],
+        [
+          0,
+          32,
+          2
+        ],
+        [
+          9,
+          1,
+          18
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "it": {
+      "n": 94,
+      "macro_f1": 0.6922254216371863,
+      "accuracy": 0.7021276595744681,
+      "per_class": {
+        "0": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1": 0.5454545454545454,
+          "support": 25
+        },
+        "1": {
+          "precision": 0.9032258064516129,
+          "recall": 0.7567567567567568,
+          "f1": 0.8235294117647058,
+          "support": 37
+        },
+        "2": {
+          "precision": 0.696969696969697,
+          "recall": 0.71875,
+          "f1": 0.7076923076923077,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          15,
+          2,
+          8
+        ],
+        [
+          7,
+          28,
+          2
+        ],
+        [
+          8,
+          1,
+          23
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "cross_lingual_performance": {
+    "n": 190,
+    "macro_f1": 0.6886229113458565,
+    "accuracy": 0.7,
+    "per_class": {
+      "0": {
+        "precision": 0.6041666666666666,
+        "recall": 0.5087719298245614,
+        "f1": 0.5523809523809524,
+        "support": 57
+      },
+      "1": {
+        "precision": 0.8082191780821918,
+        "recall": 0.921875,
+        "f1": 0.8613138686131386,
+        "support": 64
+      },
+      "2": {
+        "precision": 0.6521739130434783,
+        "recall": 0.6521739130434783,
+        "f1": 0.6521739130434783,
+        "support": 69
+      }
+    },
+    "confusion_matrix": [
+      [
+        29,
+        7,
+        21
+      ],
+      [
+        2,
+        59,
+        3
+      ],
+      [
+        17,
+        7,
+        45
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ]
+  },
+  "calibration_metrics": {
+    "ece": 0.1379291837765287,
+    "ece_bins": 10,
+    "brier_score": 0.41527090830073665,
+    "negative_log_likelihood": 0.7063775467309368
+  },
+  "uncalibrated_calibration_metrics": {
+    "ece": 0.21924630040967094,
+    "ece_bins": 10,
+    "brier_score": 0.47922519794481777,
+    "negative_log_likelihood": 1.187838085129591
+  },
+  "average_context_tokens": 192.3731884057971,
+  "average_inference_latency": 0.06631105695513712,
+  "mean_head_only_latency_seconds": 0.00043193461454432946
+}

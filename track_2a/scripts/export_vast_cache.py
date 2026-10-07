@@ -9,6 +9,7 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--relative-root', default='track_2a/experiments/apertus-frozen-cache-v1')
+parser.add_argument('--exclude-chunks',action='store_true',help='Export consolidated completed arrays without duplicate resume chunks')
 args = parser.parse_args()
 root = Path(args.relative_root)
 if root.is_absolute() or '..' in root.parts or not root.resolve().is_relative_to(Path('track_2a/experiments').resolve()):
@@ -18,7 +19,7 @@ if not root.exists():
 else:
     archive = Path('/workspace/feature-cache.tar.gz')
     with tarfile.open(archive, 'w:gz') as bundle:
-        bundle.add(root, arcname=str(root))
+        bundle.add(root, arcname=str(root),filter=lambda member: None if args.exclude_chunks and any(p.endswith('-chunks') for p in Path(member.name).parts) else member)
     data = archive.read_bytes()
     encoded = base64.b64encode(data)
     output = Path('/workspace/cache-export')
