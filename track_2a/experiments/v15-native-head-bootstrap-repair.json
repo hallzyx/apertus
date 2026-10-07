@@ -1,0 +1,14 @@
+{
+  "instance_id": 54666272,
+  "checked_at": "2026-10-07T18:12:24.667467+00:00",
+  "git_commit": "15c6e57b4992a513ffa5f5eec350282e11dd63d5",
+  "failure": "SciPy 1.18.1 requires Python >=3.12; native GPU runtime is Python 3.11",
+  "repair": "Dedicated hash-locked Python 3.11 head dependencies (SciPy 1.17.1)",
+  "all_validation_and_902_train_features_preserved": true,
+  "no_head_fit_or_test_inference_before_repair": true,
+  "same_lease_resume_requested": true,
+  "new_rental_created": false,
+  "inference_repeated": false,
+  "pre_fit_feature_checkpoint": true,
+  "guard_deadline_unchanged": true
+}

@@ -1,13 +1,14 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 4.169460121055555,
-  "actual_spend": 2.307654565499999,
+  "estimated_spend": 4.545708908800002,
+  "actual_spend": 3.1037948463000014,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [
-    54666272
+    54666272,
+    54690554
   ],
-  "remaining_estimated_budget": 5.830539878944445,
+  "remaining_estimated_budget": 5.454291091199998,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -346,6 +347,24 @@
         "old_seconds": 10800,
         "new_seconds": 14400
       }
+    },
+    {
+      "instance_id": 54690554,
+      "offer_id": 21004761,
+      "gpu": "RTX A6000",
+      "gpu_ram_mb": 49140,
+      "disk_gb": 50,
+      "hourly_gpu_usd": 0.39999999999999997,
+      "hourly_storage_usd": 0.013888888888888888,
+      "hourly_total_usd": 0.41388888888888886,
+      "conservative_runtime_hours": 3,
+      "estimated_total_usd_bound": 1.2919140625,
+      "created_at": "2026-10-07T18:21:38.105822+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "status": "created",
+      "git_commit": "15c6e57b4992a513ffa5f5eec350282e11dd63d5",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "purpose": "Private verified copy of completed ten validation ablations and all 902 training features plus model; Python 3.11 head dependency repair, train-only CPU heads and one frozen 310-example holdout; no repeated ablations or new HF credential"
     }
   ],
   "account_credit_observed": 7.692345434500001,
