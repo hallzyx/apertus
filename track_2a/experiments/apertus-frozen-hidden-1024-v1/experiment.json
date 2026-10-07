@@ -1,0 +1,256 @@
+{
+  "experiment_id": "apertus-frozen-hidden-1024-v1",
+  "status": "completed",
+  "timestamp": "2026-10-07T05:09:13.051267+00:00",
+  "git_commit": "cd6613ffb1aadaff8d71e0991b31bc549d7b2c16",
+  "git_working_tree_dirty": false,
+  "source_script_sha256": "1b3a8d55cac4dbde89c7a79d27b57f5bdab62cca8478728d128c34d7f288bc45",
+  "source_cache": "apertus-frozen-cache-v1",
+  "source_cache_git_commit": "d0b125e4a14887b8c7af4c024d2efb3258f7d6f4",
+  "model": "swiss-ai/Apertus-8B-Instruct-2509",
+  "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+  "precision": "bfloat16",
+  "features": "hidden",
+  "n_features": 4096,
+  "reference_token_cap": 1024,
+  "train_sha256": "9a95cf03912669132e390a676007e873aeb105b46a9bac12360f029fb571ce0c",
+  "validation_sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d",
+  "dataset_split": "strict_validation",
+  "training_configuration": {
+    "n": 902,
+    "seed": 42,
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "selection": "Training grouped OOF Macro-F1 only",
+    "groups": 2,
+    "folds": 2,
+    "max_iter": 2000,
+    "calibration": "Scalar temperature minimizing training grouped OOF NLL; no validation labels"
+  },
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "gpu": "CPU head; actual Apertus CUDA cache reused",
+  "actual_compute_cost": 0.0,
+  "estimated_compute_cost": 0.0,
+  "macro_f1": 0.958789792159958,
+  "notes": "Frozen real Apertus features; full 902-row training only. Few independent groups limit confidence in calibration and generalization. Latency sums cached GPU encoding and separately measured CPU head; not a live integrated service. Provided references; no gold/full booklet or final test.",
+  "n": 276,
+  "selected_C": 1.0,
+  "temperature": 1.53736256063486,
+  "training_oof_macro_f1": 0.9376521883160712,
+  "runtime_seconds": 12.60592203700071,
+  "per_class_f1": {
+    "0": 0.9371428571428572,
+    "1": 1.0,
+    "2": 0.9392265193370166
+  },
+  "per_language_performance": {
+    "de": {
+      "n": 82,
+      "macro_f1": 0.9507168458781362,
+      "accuracy": 0.9512195121951219,
+      "per_class": {
+        "0": {
+          "precision": 0.88,
+          "recall": 0.9565217391304348,
+          "f1": 0.9166666666666666,
+          "support": 23
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 27
+        },
+        "2": {
+          "precision": 0.9666666666666667,
+          "recall": 0.90625,
+          "f1": 0.9354838709677419,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          22,
+          0,
+          1
+        ],
+        [
+          0,
+          27,
+          0
+        ],
+        [
+          3,
+          0,
+          29
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "fr": {
+      "n": 100,
+      "macro_f1": 0.9793233082706768,
+      "accuracy": 0.98,
+      "per_class": {
+        "0": {
+          "precision": 0.9736842105263158,
+          "recall": 0.9736842105263158,
+          "f1": 0.9736842105263158,
+          "support": 38
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 34
+        },
+        "2": {
+          "precision": 0.9642857142857143,
+          "recall": 0.9642857142857143,
+          "f1": 0.9642857142857143,
+          "support": 28
+        }
+      },
+      "confusion_matrix": [
+        [
+          37,
+          0,
+          1
+        ],
+        [
+          0,
+          34,
+          0
+        ],
+        [
+          1,
+          0,
+          27
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "it": {
+      "n": 94,
+      "macro_f1": 0.940865234982882,
+      "accuracy": 0.9468085106382979,
+      "per_class": {
+        "0": {
+          "precision": 0.8846153846153846,
+          "recall": 0.92,
+          "f1": 0.9019607843137255,
+          "support": 25
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 37
+        },
+        "2": {
+          "precision": 0.9354838709677419,
+          "recall": 0.90625,
+          "f1": 0.9206349206349206,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          23,
+          0,
+          2
+        ],
+        [
+          0,
+          37,
+          0
+        ],
+        [
+          3,
+          0,
+          29
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "cross_lingual_performance": {
+    "n": 190,
+    "macro_f1": 0.9520152332592827,
+    "accuracy": 0.9526315789473684,
+    "per_class": {
+      "0": {
+        "precision": 0.9137931034482759,
+        "recall": 0.9298245614035088,
+        "f1": 0.9217391304347826,
+        "support": 57
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 64
+      },
+      "2": {
+        "precision": 0.9411764705882353,
+        "recall": 0.927536231884058,
+        "f1": 0.9343065693430657,
+        "support": 69
+      }
+    },
+    "confusion_matrix": [
+      [
+        53,
+        0,
+        4
+      ],
+      [
+        0,
+        64,
+        0
+      ],
+      [
+        5,
+        0,
+        64
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ]
+  },
+  "calibration_metrics": {
+    "ece": 0.019753439153654895,
+    "ece_bins": 10,
+    "brier_score": 0.04873685044333994,
+    "negative_log_likelihood": 0.0846350382720424
+  },
+  "uncalibrated_calibration_metrics": {
+    "ece": 0.024366197368568678,
+    "ece_bins": 10,
+    "brier_score": 0.054876745584356276,
+    "negative_log_likelihood": 0.10210130927253654
+  },
+  "average_context_tokens": 983.6884057971015,
+  "average_inference_latency": 0.15654962695896465,
+  "mean_head_only_latency_seconds": 0.00019984460868727183
+}
