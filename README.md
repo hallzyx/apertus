@@ -1,7 +1,7 @@
 # Apertus Evidence Lab · Hack Apertus Track 2A OST
 
 Reproducible multilingual NLI with original frozen Apertus 8B and a small learned
-numeric decision head. Internal strict validation: **Macro-F1 0.743242**, compared
+numeric decision head over its final hidden representation. Internal strict validation: **Macro-F1 0.970353**, compared
 with **0.453510** for raw option scoring at the same 4,096-token cap.
 Official challenge schema, class names and premise scope still need verification.
 

@@ -6,8 +6,11 @@ Real original Apertus BF16 RTX 4090 inference has completed on all 276 strict
 validation examples at 1,024/4,096-token provided-reference caps. Macro-F1 is
 0.451653/0.453510. A train-only 30-row standardized option-logit classifier raises
 these to 0.689366/0.743242; this passes the cheap frozen-decision GO gate.
-A full 902-training-row option/hidden cache and grouped CPU heads are the next
-bounded experiment. Exact artifacts, failures and cleanup are in `experiments/`.
+The complete 902-training-row option/hidden cache and four grouped CPU heads
+are verified. Selected hidden4096 scores 0.970353 (deduplicated 0.965299),
+with training-only OOF temperature. Hidden1024 scores 0.958790 at about half
+the encoder latency. All three task GPU leases are destroyed, API verified;
+total observed credit reduction is USD 0.6372 (billing can settle asynchronously). Exact artifacts, failures and cleanup are in `experiments/`.
 The final 310-row test is untouched. Official full/gold scope is still unresolved.
 
 ## First required runs
@@ -32,10 +35,10 @@ The final 310-row test is untouched. Official full/gold scope is still unresolve
 8. Compare prompted and constrained output; structured-output support must be
    verified, not silently replaced. Direct class-logit scoring requires a verified
    scoring path and tokenization of the full label alternatives.
-9. Frozen option heads have measured improvements; hidden representations remain an experiment.
+9. Frozen option heads have measured improvements; hidden representations improve Macro-F1 to 0.958790/0.970353.
    Cache representations with dataset/model/prompt fingerprints before renting for
    another run. Train heads on CPU; calibrate using held-out training groups.
-10. QLoRA and adaptive retrieval require a quantitative GO decision. The cheap head GO result does not require fine-tuning; compare full frozen heads first. At most two initial tuning runs.
+10. QLoRA and adaptive retrieval require a quantitative GO decision. The cheap head GO result does not require fine-tuning; the full frozen head is selected. No further QLoRA/70B/adaptive-routing spend is justified before official scope is resolved. At most two initial tuning runs if future evidence warrants them.
 
 ## Existing baseline runner
 

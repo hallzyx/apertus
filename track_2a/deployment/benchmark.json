@@ -1,6 +1,7 @@
 {
   "scope": "Internal strict validation on 276 supplied-reference examples; 2 independent connected components; no final test or official score",
   "official": false,
+  "selected_experiment_id": "apertus-frozen-hidden-4096-v1",
   "results": [
     {
       "experiment": "apertus-8b-gpu-reference-4096-v1",
@@ -9,10 +10,16 @@
       "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.32803798428115744
     },
     {
-      "experiment": "apertus-option-head-4096-v1",
-      "macro_f1": 0.743242453361764,
+      "experiment": "apertus-frozen-hidden-4096-v1",
+      "macro_f1": 0.9703530750042378,
       "mean_context_tokens": 1996.1485507246377,
-      "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.32822530838622854
+      "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.3234384770732003,
+      "calibration": {
+        "ece": 0.02079092523553133,
+        "ece_bins": 10,
+        "brier_score": 0.03706509823468974,
+        "negative_log_likelihood": 0.057980358986467986
+      }
     }
   ]
 }

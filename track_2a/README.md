@@ -128,7 +128,8 @@ PYTHONPATH=src python -m ost_nli experiment data/private/splits-strict/validatio
 PYTHONPATH=src python -m ost_nli evaluate data/private/splits-strict/validation.jsonl experiments/artifacts/reference-prompt-v1/predictions.json
 ```
 
-Real experiments require the endpoint and verified label mapping. Dataset hashes
+The endpoint-based prompt runner requires an endpoint and verified label mapping.
+The complete frozen Docker uses local original weights and numeric heads instead. Dataset hashes
 and exact ID alignment prevent stale/mismatched predictions from being scored.
 The append-only registry preserves failed runs. Per-language and cross-lingual
 Macro-F1, token/latency coverage and calibration availability are reported.
@@ -163,30 +164,32 @@ Final submission licensing remains subject to the official event terms.
 ## Real frozen Apertus decision heads
 
 Completed real internal validation experiments and per-language/calibration metrics
-are committed in `experiments/` and summarized in `technical_report.md`. The current
-30-training-row option head reaches Macro-F1 0.743242 at a 4,096-token reference cap.
+are committed in `experiments/` and summarized in `technical_report.md`. The selected
+902-training-row hidden-state head reaches Macro-F1 0.970353 at a 4,096-token reference cap.
+Its exact-duplicate sensitivity score is 0.965299; all 310 final-test rows remain untouched.
 This is internal supplied-reference validation, not an official challenge score.
 
 After the optional original-model CPU installation/download above, classify a new
 JSON/text/PDF directly from the repository root:
 
 ```bash
-PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python -m ost_nli predict-frozen track_2a/data/example-booklet.json 'La proposta prevede un contributo annuo di 100 franchi.' --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/experiments/apertus-option-head-4096-v1
+PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python -m ost_nli predict-frozen track_2a/data/example-booklet.json 'La proposta prevede un contributo annuo di 100 franchi.' --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/deployment
 ```
 
 The head uses the exact official chat template and frozen BF16 model. It returns
 class 0/1/2, genuine classifier probabilities, exact model-input premise, available
 page provenance, tokenizer context tokens and measured latency. Official class names
 remain null without verified `OST_LABEL_MAP`; an explicitly marked training-inferred
-semantic name is separate. The 30-row head is uncalibrated. Full-booklet or BM25
+semantic name is separate. The selected head uses training-only connected-group OOF temperature calibration;
+only two independent training groups limit confidence. The older 30-row heads remain uncalibrated. Full-booklet or BM25
 inputs are accepted for exploration but their challenge accuracy has not been measured.
 
 For a persistent local model serving the Docker workbench, start this process
-before `make run` in a second terminal (32 GB RAM and original weights required):
+before the lightweight workbench in a second terminal (32 GB RAM and original weights required):
 
 ```bash
-PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/serve_frozen_apertus.py --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/experiments/apertus-option-head-4096-v1 --host 0.0.0.0 --port 8001
-FROZEN_BASE_URL=http://host.docker.internal:8001 make run
+PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/serve_frozen_apertus.py --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/deployment --host 0.0.0.0 --port 8001
+FROZEN_BASE_URL=http://host.docker.internal:8001 make run RUNTIME=workbench
 ```
 
 The backend serializes inference to avoid concurrent memory pressure. Its `/health`
@@ -218,3 +221,16 @@ docker run --rm -v apertus-models:/models -v "$PWD/track_2a/data:/input:ro" aper
 
 `--self-test` runs the software suite without downloading weights. Select
 `RUNTIME=workbench` for endpoint-mode commands using `apertus-ost:local`.
+
+
+Recompute the committed six-head comparison and all portable probability checks:
+
+```bash
+PYTHONPATH=track_2a/src .venv/bin/python track_2a/scripts/compare_frozen_heads.py --validation track_2a/data/private/splits-strict/validation.jsonl --cache track_2a/experiments/apertus-frozen-cache-v1 --experiments track_2a/experiments --output /tmp/frozen-head-comparison.json
+```
+
+`experiments/frozen_head_comparison.json` records the actual selection, calibration,
+language slices and exact-deduplicated sensitivity. The selected head's eight
+validation errors are retained in its `error_audit.json`. The prepared
+`final_frozen_evaluation.py` / `vast_final_evaluation.sh` path remains **unrun**;
+confirm official premise scope and submission rules before spending on final evaluation.

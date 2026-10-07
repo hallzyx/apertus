@@ -1,0 +1,125 @@
+{
+  "experiment_id": "apertus-frozen-hidden-4096-v1",
+  "n": 276,
+  "error_count": 8,
+  "by_claim_language": {
+    "de": 4,
+    "fr": 1,
+    "it": 3
+  },
+  "errors": [
+    {
+      "id": "ost-v1.1-0136",
+      "booklet_id": "2021-09-26",
+      "claim_language": "de",
+      "reference_language": "fr",
+      "target": 0,
+      "predicted": 2,
+      "probabilities": [
+        0.05770201552688792,
+        3.537929396135603e-05,
+        0.9422626051791506
+      ],
+      "context_tokens": 460
+    },
+    {
+      "id": "ost-v1.1-0299",
+      "booklet_id": "2026-03-08",
+      "claim_language": "fr",
+      "reference_language": "de",
+      "target": 0,
+      "predicted": 2,
+      "probabilities": [
+        0.4219010872604291,
+        0.0003745767505240008,
+        0.5777243359890469
+      ],
+      "context_tokens": 991
+    },
+    {
+      "id": "ost-v1.1-0333",
+      "booklet_id": "2023-06-18",
+      "claim_language": "it",
+      "reference_language": "de",
+      "target": 0,
+      "predicted": 2,
+      "probabilities": [
+        0.48145884554780044,
+        0.013807004619141132,
+        0.5047341498330584
+      ],
+      "context_tokens": 423
+    },
+    {
+      "id": "ost-v1.1-1052",
+      "booklet_id": "2023-06-18",
+      "claim_language": "de",
+      "reference_language": "it",
+      "target": 2,
+      "predicted": 1,
+      "probabilities": [
+        0.0013951244366445484,
+        0.846546157497462,
+        0.15205871806589347
+      ],
+      "context_tokens": 2187
+    },
+    {
+      "id": "ost-v1.1-1116",
+      "booklet_id": "2023-06-18",
+      "claim_language": "de",
+      "reference_language": "it",
+      "target": 2,
+      "predicted": 1,
+      "probabilities": [
+        0.0013951244366445484,
+        0.846546157497462,
+        0.15205871806589347
+      ],
+      "context_tokens": 2187
+    },
+    {
+      "id": "ost-v1.1-1138",
+      "booklet_id": "2023-06-18",
+      "claim_language": "de",
+      "reference_language": "de",
+      "target": 2,
+      "predicted": 0,
+      "probabilities": [
+        0.607658729488365,
+        0.00020203572450614354,
+        0.39213923478712887
+      ],
+      "context_tokens": 489
+    },
+    {
+      "id": "ost-v1.1-1389",
+      "booklet_id": "2021-09-26",
+      "claim_language": "it",
+      "reference_language": "fr",
+      "target": 2,
+      "predicted": 0,
+      "probabilities": [
+        0.9429067741691156,
+        0.001264392838412467,
+        0.055828832992471954
+      ],
+      "context_tokens": 470
+    },
+    {
+      "id": "ost-v1.1-1458",
+      "booklet_id": "2023-06-18",
+      "claim_language": "it",
+      "reference_language": "de",
+      "target": 2,
+      "predicted": 0,
+      "probabilities": [
+        0.5976318160656872,
+        0.0015727580003136166,
+        0.40079542593399925
+      ],
+      "context_tokens": 446
+    }
+  ],
+  "scope": "Observed internal validation errors; no test or gold evidence analysis"
+}
