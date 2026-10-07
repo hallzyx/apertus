@@ -8,9 +8,11 @@ must not require reference strings. The app now implements PDF processing,
 multilingual semantic/BM25 fusion retrieval, source provenance, a Docker UI and
 single/batch CLI. Exact CLI/evidence schemas are project choices, not blockers.
 
-**All ten real native v1.5 validation comparisons and both train-only decision heads are complete.** The best base-model configuration is full/capped booklet context with restricted class scoring: Macro-F1 **0.671612** on all 276 validation rows. A classifier over its three option logits reaches **0.721862**, and a classifier over its 4096-dimensional hidden representations reaches **0.894461**. Both heads were trained using only 902 training rows with training-group cross-validation; Apertus weights remain frozen (no LoRA or model-weight fine-tuning). The hidden classifier exceeded the predeclared +0.02 validation gate and was frozen before test inference. The one logical 310-row internal holdout was interrupted by an erroneous controller reboot after 26 predictions were persisted. Those predictions, the selected head, selection and test inputs must remain unchanged; completion appends only the remaining 284 rows. No final test score is available yet. These are internal results, not the organizer's hidden score. Original validation predictions/features have been recovered and verified against source SHA-256 records (`experiments/v15-features-recovery-integrity.json`).
+**Completed real Apertus v1.5 experiments:** ten validation baselines, two training-only decision heads, and the frozen 310-row internal holdout. On 276 validation rows, the best base configuration reaches Macro-F1 **0.671612**, the option-logit classifier **0.721862**, and the selected hidden classifier **0.894461**. The selected system reaches **0.899920** on 310 internal holdout examples. These are internal, booklet-disjoint results, not the organizer's hidden score. No matched base-model NLI run on the 310 holdout was made, so the 22.3-point improvement is a validation comparison only.
 
-The runtime uses an A40, original SHA-verified v1.5 weights, Torch 2.8.0/CUDA 12.8 and the pinned native fork. The temporary Hugging Face credential was removed from Vast and can be revoked. Native CPU/public PDF CLI integration and Docker checks are recorded separately; they are not benchmark estimates. The previous 0.970353 result used Apertus 2509 with supplied references and remains historical research.
+Apertus weights remain frozen: no LoRA or model-weight fine-tuning. A standardized multinomial logistic-regression head was fitted on 902 training examples. Model files, source predictions, head parameters and all recovered artifacts are SHA-256 verified. Validation/features were encoded on an A40; the final heldout evaluation and three actual multilingual PDF CLI cases ran on an RTX A6000, using BF16 text weights, FP32 tokenizer submodules, no quantization, Torch 2.8.0/CUDA 12.8 and the pinned official fork.
+
+A mistaken controller reboot interrupted the heldout evaluation after 26 persisted predictions. Recovered output preserves those exact bytes and appends only the 284 missing examples with unchanged selection, head and inputs. No partial-test score was used for selection; no training or calibration followed test inference. The resume audit records one logical fixed holdout, not a claim of exactly 310 GPU calls: an interrupted in-flight request may have been retried, and three public CLI integration requests were made separately. Temporary Hugging Face credentials were removed from Vast; cached inference needs no token. Earlier Apertus 2509 reference-only results remain historical research.
 
 ## 2. Architecture
 
@@ -34,7 +36,7 @@ Required model: `swiss-ai/Apertus-v1.5-8B`, pinned metadata revision
 `a411d838600baf0e3635a3daf66fb7c55fc97bb6`, architecture
 `Apertus1p5ForConditionalGeneration`, model type `apertus1p5`. It is distinct from
 legacy Apertus 2509; old hidden-head parameters cannot be transferred unchanged.
-The current production interface uses an authorized v1.5 endpoint through
+The selected native endpoint runs the frozen hidden classifier (deployment/head-v15.json); the frontend uses an authorized v1.5 endpoint through
 LLM_NAME/LLM_BASE_URL/LLM_API_KEY. Model names must identify the required generation;
 The native runner uses the official Transformers fork at
 `3797303dda74844e3d1f8977ff5518bb91f818b4`. Text attention uses SDPA while
@@ -82,7 +84,7 @@ Real retrieval-only validation on 276 full-booklet inputs, k=5:
 Hybrid k=5 was frozen from validation before one internal holdout retrieval comparison.
 On the 310-row internal holdout, BM25/dense/hybrid mean reference overlap is
 0.194468/0.201401/0.253554; cross-language overlap is
-0.116697/0.176814/0.203536. No holdout NLI Macro-F1 has been measured.
+0.116697/0.176814/0.203536. The final NLI holdout result is reported separately below.
 
 This diagnostic measures overlap with available references, not semantic evidence
 correctness, official evidence score, or NLI Macro-F1. Dense slightly exceeds hybrid
@@ -90,18 +92,52 @@ on cross-language overlap; hybrid wins aggregate overlap. NLI superiority is unp
 
 | Validation setup | Macro-F1 | Valid outputs | Context tokens | Latency | Evidence |
 |---|---:|---:|---:|---:|---|
-| reference / score | 0.535419 (preliminary) | 276/276 | 2269.7 | 0.540 s | Oracle/reference diagnostic only |
-| reference / prompt | 0.531363 (preliminary) | 276/276 | 2266.7 | 0.779 s | Oracle/reference diagnostic only |
-| bm25 / score | 0.436482 (preliminary) | 276/276 | 1654.6 | 0.401 s | Real booklet retrieval |
-| bm25 / prompt | 0.402027 (preliminary) | 276/276 | 1651.6 | 0.642 s | Real booklet retrieval |
-| dense / score | 0.498261 (preliminary) | 276/276 | 1395.8 | 0.359 s | Real booklet retrieval |
-| dense / prompt | 0.509928 (valid subset) (preliminary) | 274/276 | 1396.1 | 0.601 s | Real booklet retrieval |
-| hybrid / score | 0.526883 (preliminary) | 276/276 | 1656.6 | 0.426 s | Real booklet retrieval |
-| hybrid / prompt | 0.496620 (preliminary) | 276/276 | 1653.6 | 0.667 s | Real booklet retrieval |
-| full / score | 0.671612 (preliminary) | 276/276 | 14106.1 | 3.635 s | Full/capped booklet input |
-| full / prompt | 0.552448 (preliminary) | 276/276 | 14103.1 | 3.911 s | Full/capped booklet input |
+| bm25-prompt | 0.402027 | 276/276 | 1651.6 | 0.642 s | Retrieved booklet passages |
+| bm25-score | 0.436482 | 276/276 | 1654.6 | 0.401 s | Retrieved booklet passages |
+| dense-prompt | 0.509928 (valid subset) | 274/276 | 1396.1 | 0.601 s | Retrieved booklet passages |
+| dense-score | 0.498261 | 276/276 | 1395.8 | 0.359 s | Retrieved booklet passages |
+| full-prompt | 0.552448 | 276/276 | 14103.1 | 3.911 s | Full/capped source context |
+| full-score | 0.671612 | 276/276 | 14106.1 | 3.635 s | Full/capped source context |
+| hybrid-prompt | 0.496620 | 276/276 | 1653.6 | 0.667 s | Retrieved booklet passages |
+| hybrid-score | 0.526883 | 276/276 | 1656.6 | 0.426 s | Retrieved booklet passages |
+| reference-prompt | 0.531363 | 276/276 | 2266.7 | 0.779 s | Oracle/reference only |
+| reference-score | 0.535419 | 276/276 | 2269.7 | 0.540 s | Oracle/reference only |
+| full / option_logits | 0.721862 | 276/276 | 14106.1 | 3.636 s | Full/capped source context |
+| full / hidden | 0.894461 | 276/276 | 14106.1 | 3.636 s | Full/capped source context |
 
-Dense generation produced two invalid JSON decisions. Its Macro-F1 is on the 274 valid outputs; configurations with any invalid output are excluded from final selection. Oracle/reference results are diagnostic and are not a strict upper bound: additional booklet context can improve inference. All production comparisons use booklet + claim only.
+Dense generation has two invalid decisions; its score uses 274 valid outputs and the configuration is excluded from selection. All other validation setups have complete outputs. Oracle evidence is a diagnostic, not a strict upper bound: larger context can help. All production modes use booklet + claim only. Full/capped context was truncated for all 276 validation rows at the 48,000-byte document-context budget. Head validation latency is cached A40 encoding plus separately measured CPU classifier time; it is not a live integrated service measurement.
+
+The selected hidden head uses 4096 features. StandardScaler and multinomial logistic regression were fitted within each training-only connected-group fold. The C grid is 0.001, 0.01, 0.1, 1; selected C is 0.01, and training-only OOF temperature is 2.148798. Training has only two connected groups (fold sizes 838, 64), limiting confidence. The predeclared gate was +0.02 validation Macro-F1 over the best booklet-only baseline; observed gain 0.222849 passed. Test labels were excluded from fitting, calibration and selection.
+
+**Frozen internal holdout: 310 examples, Macro-F1 0.899920, accuracy 0.900000, average context 14070.0 tokens, average actual inference plus measured retrieval 3.281 seconds on RTX A6000.** Startup, weight verification/download, PDF extraction and interrupted downtime are excluded from per-example latency. The additional classifier requires no additional Apertus forward pass; its training and lease time are still costs. 310/310 heldout inputs report context truncation.
+
+| Official class | Holdout F1 | Support |
+|---|---:|---:|
+| 0 Entailment | 0.870000 | 92 |
+| 1 Neutral | 0.956522 | 104 |
+| 2 Contradiction | 0.873239 | 114 |
+
+| Claim language | Validation Macro-F1 | Holdout Macro-F1 | Holdout n |
+|---|---:|---:|---:|
+| DE | 0.878468 | 0.881537 | 109 |
+| FR | 0.886981 | 0.889234 | 86 |
+| IT | 0.911735 | 0.922059 | 115 |
+
+Cross-language holdout: 205 examples, Macro-F1 0.889426.
+
+| Document → claim | Validation Macro-F1 | Holdout Macro-F1 | Holdout n |
+|---|---:|---:|---:|
+| DE → DE | 0.915344 | 0.843640 | 26 |
+| FR → DE | 0.835940 | 0.885931 | 53 |
+| IT → DE | 0.911111 | 0.859025 | 30 |
+| DE → FR | 0.710317 | 0.866667 | 23 |
+| FR → FR | 0.908751 | 0.851010 | 34 |
+| IT → FR | 0.973374 | 0.958170 | 29 |
+| DE → IT | 0.790065 | 0.911111 | 35 |
+| FR → IT | 0.938841 | 0.845192 | 35 |
+| IT → IT | 1.000000 | 1.000000 | 45 |
+
+Holdout calibration: ECE 0.083631, Brier 0.168119, NLL 0.315898; temperature was fixed using train-only OOF scores. Evidence-ID metrics contain no annotated full-booklet gold spans and must not be treated as evidence-quality scores. Actual PDF CLI evidence quotes/pages were checked for provenance; minimality, relevance and causal model attribution are not established.
 
 Legacy timings are offline GPU encoding plus separately timed CPU head, not live CPU
 or integrated service latency. Legacy exact-deduplicated score is 0.965299 on 207 rows.
@@ -111,16 +147,7 @@ v1.5 or full-booklet scores. Historical details/negative results are preserved i
 
 ## 6. Limitations
 
-Full-booklet production NLI readiness and final F1 remain unverified until the
-real GPU benchmark finishes. Public PDF CLI/native CPU integration was verified
-on three convenience-selected training examples, but this does not establish F1. Authorized v1.5 access and
-native CPU execution have been verified. The source reference is not always a uniquely
-aligned minimal passage, and approximate overlap loses typography/word-order matches.
-Retrieved passages are transparent candidates, not proof of model attribution or
-correct evidence. Small independent group counts, duplicated examples, translated
-near-duplicates and reference-to-whole-booklet distribution shift limit conclusions.
-No OCR, dense-model fine-tuning, v1.5 head training/LoRA or official hidden evaluation
-has been performed. No unspecified interface/hardware limits are invented.
+The 310 examples are an internal heldout split, not organizer-hidden evaluation. Only two connected groups in train and validation, duplicate/translated examples and small language slices limit generalization claims; no confidence interval based on independent documents is asserted. No matched base-model holdout run was made. Full context is capped at 48,000 document bytes, so later evidence can be omitted. Retrieved/supplied passages are source-grounded candidates, not validated minimal proof or model attribution. Semantic evidence quality has not been manually scored; reference overlap is approximate. No OCR, LoRA, weight fine-tuning, or official hidden evaluation was performed. Native v1.5 needs the pinned fork and considerable RAM/VRAM; CPU operation is slow. The default Docker frontend requires a separately configured compatible backend. No unspecified organizer interface, hardware or network restrictions are invented.
 
 ## 7. Reproducibility
 
@@ -133,7 +160,7 @@ context comes from `deployment/v15-selection.json`. Explicit overrides are docum
 Batch JSONL contains id/document/claim only. Source passages carry pages/offsets/hash.
 Documented interface is separable from model/retrieval implementation.
 
-The latest host and freshly rebuilt Docker image pass 38 tests each; `experiments/v15-production-context-v1` verifies full/capped source handling on a real French PDF and includes an HTTP regression that sends the same full context through CLI and web. The earlier 37-test image is recorded separately;
+The recorded host and freshly rebuilt Docker image pass 38 tests each; the restored current host also passes 38 tests and make run processed a real 40-page PDF with verified source quotes/pages (experiments/v15-restored-frontend-v1); `experiments/v15-production-context-v1` verifies full/capped source handling on a real French PDF and includes an HTTP regression that sends the same full context through CLI and web. The earlier 37-test image is recorded separately;
 `experiments/v15-fresh-docker-v1` records a real PDF upload and hybrid evidence
 retrieval through `make run` without mounting host source into the image. The
 following earlier clean-checkout check ran 36 tests. A clean GitHub checkout successfully
@@ -147,14 +174,22 @@ Lease costs, failures, active IDs, cleanup deadlines and verified destruction ar
 recorded in `experiments/budget.json`. Provisioning failures produce no NLI score.
 The USD 10 hard budget and USD 2 reserve remain binding; billing is asynchronous.
 
+
+Reproduce the selected backend with verified weights and the pinned native dependencies:
+
+```bash
+PYTHONPATH=track_2a/src python track_2a/scripts/serve_v15.py \
+  --model-dir /path/to/verified/apertus-v15-model --device cuda \
+  --method head --head track_2a/deployment/head-v15.json --port 8001
+```
+
+On Python 3.11/Linux install requirements-v15-cuda.lock, requirements-v15.lock, then requirements-head-v15.lock to match the native head runtime; run scripts/check_v15_cuda.py. The frontend needs LLM_NAME=swiss-ai/Apertus-v1.5-8B and a reachable LLM_BASE_URL ending /v1 for this head-enabled service; ordinary base-model chat endpoints do not reproduce the reported classifier. The server above listens on loopback. On Linux a Docker frontend can use --network host and LLM_BASE_URL=http://127.0.0.1:8001/v1; configure NO_PROXY for local requests. Model weights and adapters are not downloaded into the repository. Download authorized weights once through ost_nli.v15.download(directory, os.environ["HF_TOKEN"]) in the native environment; it pins the revision and checks every original shard hash. Then use the offline cache. Generic .venv does not establish native-fork readiness.
+
+Scientific raw artifacts: experiments/apertus-v15-research-v1 (validation, training, both heads, final selection/predictions/metrics, model/input manifests, resume audit and actual CLI output). Large binary features remain ignored; model/data downloads are reproducible separately. The original inference/frozen-selection commit is 15c6e57b4992a513ffa5f5eec350282e11dd63d5. Resume/PDF-path orchestration was committed as 9910fe36ad1a90bbd182737a2a4ff8579aaf42c6, copied into that checkout, and separately SHA verified. The engine and frozen head/inputs were unchanged; the dirty runtime tree is explicitly recorded. Archive SHA, every source file SHA, split fingerprints, initial 26 predictions and deployed head SHA were verified locally; Macro-F1 was independently recomputed from the confusion matrix (experiments/v15-delivery-integrity.json).
+
 ## 8. Next steps
 
-All ten matched native v1.5 validation comparisons are complete. Full/capped class
-scoring leads the booklet-only baselines. Finish extracting the 902 training features
-and fitting the two decision heads on train only,
-freeze choices, then evaluate the 310 internal holdout once for NLI. Measure evidence
-quality manually alongside reference-overlap diagnostics. No Devpost access or exact
-organizer CLI signature is needed. Submission itself remains a separate action.
+Research and the internal frozen holdout are complete. Further work should use new development documents for improving evidence relevance and context compression; do not tune against the 310 holdout. Confirm any subsequently published evaluator adapter and arrange a documented v1.5 backend for judging. Actual submission through the organizer site is a separate action.
 
 ## 9. License
 

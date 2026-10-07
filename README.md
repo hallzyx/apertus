@@ -19,11 +19,12 @@ Official v1.5 weights require approved Hugging Face access and authentication;
 the task obtained authorized weights and verified real native v1.5 CPU inference.
 Cached weights need no Hugging Face token. Three real cross-language training PDF
 cases passed through the public CLI; these are integration checks. Real native A40
-GPU validation and both decision-head experiments are complete. On 276 validation
-rows, the best base configuration reaches Macro-F1 0.671612 and the selected
-train-only hidden classifier reaches 0.894461. Apertus weights remain frozen;
-no LoRA was trained. The 310-row internal holdout is incomplete after an
-interruption; 26 persisted predictions will be preserved when resuming.
+GPU research is complete: on 276 validation examples, the best base configuration
+reaches Macro-F1 0.671612 and the selected train-only hidden classifier reaches
+0.894461. The frozen classifier reaches **0.899920 on the 310-example
+internal holdout**. Apertus weights remain frozen; no LoRA was trained.
+The interrupted run resumed with its initial 26 predictions preserved exactly.
+These are internal results, not the organizer hidden evaluation.
 
 **The earlier 0.970353 Macro-F1 was a reference-only experiment with Apertus
 2509, not v1.5 or full-booklet production.** It remains documented as historical

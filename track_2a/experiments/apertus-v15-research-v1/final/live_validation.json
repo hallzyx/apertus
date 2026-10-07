@@ -1,0 +1,12 @@
+{
+  "real_apertus_v15": true,
+  "production_input": "PDF + claim only",
+  "languages": [
+    "de",
+    "fr",
+    "it"
+  ],
+  "n": 3,
+  "labels_match_frozen_test": true,
+  "source_quotes_and_pages_verified": true
+}

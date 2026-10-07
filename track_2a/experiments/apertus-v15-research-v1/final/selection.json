@@ -3,7 +3,7 @@
     "name": "apertus-v15-full-hidden-v1",
     "context": "full",
     "method": "head",
-    "head": "track_2a/deployment/head-v15.json",
+    "head": "/workspace/apertus/track_2a/experiments/apertus-v15-full-hidden-v1/head.json",
     "feature_kind": "hidden",
     "macro_f1": 0.8944609902440983,
     "tokens": 14106.115942028986
@@ -82,27 +82,5 @@
         "sha256": "e365be72ad377e7693112a134df5982e5060a341e1bd8fdd395637182433b5f9"
       }
     ]
-  },
-  "status": "completed_frozen_internal_evaluation",
-  "head_training_complete": true,
-  "internal_holdout_complete": true,
-  "source_head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
-  "artifact_sha_verified_recovery_pending": false,
-  "internal_test_macro_f1": 0.8999203919167176,
-  "official_challenge_score": false,
-  "source": "experiments/apertus-v15-research-v1/final/selection.json",
-  "resume_audit": {
-    "logical_heldout_evaluations": 1,
-    "persisted_predictions_before_interruption": 26,
-    "preserved_verbatim": true,
-    "completed_predictions_reinferred": false,
-    "model_or_head_refitted": false,
-    "selection_changed": false,
-    "test_used_for_selection": false,
-    "selection_sha256": "bc4b2d236bffab31a52048b419cc37bd0e532251be474005d37f6eb01c5480b4",
-    "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
-    "initial_prefix_sha256": "08826a7350450a0e34045e08489d316454b7457f7915a9b984820b83832adf75",
-    "source_resume_script_sha256": "833f35e47cf0357cc05999f1f5edfc959ada9002ee281c9e85098f7e06773a51",
-    "reason": "Cloud controller reboot interrupted the original frozen holdout; resume appends only its missing canonical IDs."
   }
 }

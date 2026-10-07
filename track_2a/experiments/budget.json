@@ -2,7 +2,7 @@
   "currency": "USD",
   "initial_budget": 10.0,
   "estimated_spend": 4.621025927100003,
-  "actual_spend": 3.337923157770005,
+  "actual_spend": 3.3393422456700046,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [
     54690554
@@ -409,9 +409,23 @@
       "git_commit": "c94bb4c2a9c0a6dab459c99141aba2e275788fc0",
       "purpose": "Reviewed frozen holdout resume scripts private transfer; no model, data, inference or fitting",
       "destroyed_verified_at": "2026-10-07T20:17:39.807650+00:00"
+    },
+    {
+      "instance_id": 54709791,
+      "offer_id": 39173941,
+      "gpu": "RTX 3060",
+      "disk_gb": 5,
+      "hourly_total_usd": 0.05694444444444445,
+      "estimated_total_usd_bound": 0.06800347222222222,
+      "created_at": "2026-10-07T20:18:01.438142+00:00",
+      "automatic_cleanup_deadline_seconds": 1800,
+      "status": "destroyed_verified",
+      "git_commit": "9910fe36ad1a90bbd182737a2a4ff8579aaf42c6",
+      "purpose": "Reviewed frozen holdout resume scripts private transfer; no model, data, inference or fitting",
+      "destroyed_verified_at": "2026-10-07T20:20:49.164212+00:00"
     }
   ],
-  "account_credit_observed": 6.662076842229995,
+  "account_credit_observed": 6.660657754329995,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T20:17:39.807650+00:00"
+  "account_checked_at": "2026-10-07T20:20:49.164212+00:00"
 }

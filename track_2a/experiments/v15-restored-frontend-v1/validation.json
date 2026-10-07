@@ -1,0 +1,9 @@
+{
+  "actual_current_instance": true,
+  "make_run_docker": true,
+  "host_tests_passed": 38,
+  "real_pdf_pages": 40,
+  "source_sha256": "15391d5fdf2faac51ceff1f4b31f463a7b838587bc1e52ada57e85cc7e6c76d5",
+  "source_quotes_and_pages_verified": true,
+  "model_configured": false
+}

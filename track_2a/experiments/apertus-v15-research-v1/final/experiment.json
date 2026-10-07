@@ -1,0 +1,52 @@
+{
+  "experiment_id": "apertus-v15-final-v1",
+  "status": "completed",
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "git_commit": "15c6e57b4992a513ffa5f5eec350282e11dd63d5",
+  "git_working_tree_dirty": true,
+  "source_resume_script_sha256": "833f35e47cf0357cc05999f1f5edfc959ada9002ee281c9e85098f7e06773a51",
+  "dataset_split": "strict_internal_test",
+  "n": 310,
+  "test_sha256": "d464d1f45776fb9ff444e8e9319eac5b47c92af133e28f1305669326d98b50f6",
+  "selection": {
+    "name": "apertus-v15-full-hidden-v1",
+    "context": "full",
+    "method": "head",
+    "head": "/workspace/apertus/track_2a/experiments/apertus-v15-full-hidden-v1/head.json",
+    "feature_kind": "hidden",
+    "macro_f1": 0.8944609902440983,
+    "tokens": 14106.115942028986
+  },
+  "macro_f1": 0.8999203919167176,
+  "resume_runtime_seconds": 1009.266210116446,
+  "hardware": {
+    "repo": "swiss-ai/Apertus-v1.5-8B",
+    "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.14.0.dev0",
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_bytes": 50908823552,
+    "precision": "BF16 text; official tokenizer modules remain FP32",
+    "quantization": null
+  },
+  "official_challenge_score": false,
+  "context_preparation": "Original frozen real booklet PDF text; booklet and claim only",
+  "latency_definition": "Actual per-row model inference plus separately measured CPU retrieval; excludes restart, startup, download and PDF parsing",
+  "notes": "One logical fixed internal holdout evaluation resumed after interruption. Original persisted predictions unchanged; no test fitting or post-test architecture changes.",
+  "resume_audit": {
+    "logical_heldout_evaluations": 1,
+    "persisted_predictions_before_interruption": 26,
+    "preserved_verbatim": true,
+    "completed_predictions_reinferred": false,
+    "model_or_head_refitted": false,
+    "selection_changed": false,
+    "test_used_for_selection": false,
+    "selection_sha256": "bc4b2d236bffab31a52048b419cc37bd0e532251be474005d37f6eb01c5480b4",
+    "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+    "initial_prefix_sha256": "08826a7350450a0e34045e08489d316454b7457f7915a9b984820b83832adf75",
+    "source_resume_script_sha256": "833f35e47cf0357cc05999f1f5edfc959ada9002ee281c9e85098f7e06773a51",
+    "reason": "Cloud controller reboot interrupted the original frozen holdout; resume appends only its missing canonical IDs."
+  }
+}

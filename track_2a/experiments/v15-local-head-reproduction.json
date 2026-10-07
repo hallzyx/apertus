@@ -1,0 +1,10 @@
+{
+  "source_hidden_features_sha256": "b891ff5c40574ebbeefec6b2f1c66a230abf322596c01818bc7be181c8de40a8",
+  "source_head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "original_frozen_head_replayed_locally": true,
+  "n": 276,
+  "macro_f1": 0.8944609902440983,
+  "all_class_decisions_reproduced": true,
+  "new_training": false,
+  "test_used": false
+}

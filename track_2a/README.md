@@ -51,10 +51,10 @@ With Docker running and cached assets, execute:
 docker run --rm -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS apertus-ost:api predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --k 5
 ```
 
-Host equivalent, after hash-locked CPU installation:
+Host equivalent, after hash-locked PDF installation (uses the selected full/capped context):
 
 ```bash
-PYTHONPATH=track_2a/src EMBEDDING_MODEL_DIR=/workspace/.cache/multilingual-e5-small .venv/bin/python -m ost_nli predict /path/booklet.pdf 'The claim' --context hybrid --k 5
+PYTHONPATH=track_2a/src .venv/bin/python -m ost_nli predict /path/booklet.pdf 'The claim'
 ```
 
 Output includes `label`, `label_name`, `evidence`, `input_tokens`,
@@ -73,11 +73,66 @@ reference strings. Relative document paths resolve against the input file direct
 ```
 
 ```bash
-PYTHONPATH=track_2a/src EMBEDDING_MODEL_DIR=/workspace/.cache/multilingual-e5-small .venv/bin/python -m ost_nli predict-batch /inputs/claims.jsonl --output /outputs/predictions.json --context hybrid
+PYTHONPATH=track_2a/src .venv/bin/python -m ost_nli predict-batch /inputs/claims.jsonl --output /outputs/predictions.json
 ```
 
 Existing batch outputs are rejected. This same internal prediction function is
 separable from the CLI and can be adapted to any later evaluator interface.
+
+## Reproduce the selected Apertus classifier
+
+The selected system keeps all Apertus weights frozen and applies a small trained
+classifier to the model's last-token hidden representation. It is not LoRA.
+The head is `deployment/head-v15.json`; the selection and quantitative results
+are recorded in `deployment/v15-selection.json` and `technical_report.md`.
+A generic base-model chat endpoint does not reproduce this classifier.
+
+Use Python 3.11/Linux in a separate native environment. Install
+`requirements-v15-cuda.lock`, `requirements-v15.lock`, then
+`requirements-head-v15.lock` with
+`pip install --require-hashes`, and run `scripts/check_v15_cuda.py`.
+The measured validation and holdout used A40 and RTX A6000 GPUs with 48 GB VRAM;
+these are reported experiment hardware, not an organizer-mandated minimum.
+The ordinary application `.venv` does not imply native v1.5 architecture support.
+
+Download the pinned model once using authorized `HF_TOKEN`, then verify and serve
+its local cache. From the repository root, with the native environment active:
+
+```bash
+export APERTUS_MODEL_DIR=/workspace/.cache/apertus-v15-model
+PYTHONPATH=track_2a/src HF_HUB_DISABLE_XET=1 python - <<'PY'
+import os
+from ost_nli.v15 import download
+download(os.environ['APERTUS_MODEL_DIR'], os.environ['HF_TOKEN'])
+PY
+PYTHONPATH=track_2a/src HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
+  python track_2a/scripts/serve_v15.py \
+  --model-dir "$APERTUS_MODEL_DIR" --device cuda \
+  --method head --head track_2a/deployment/head-v15.json --port 8001
+```
+
+The download helper verifies the original pinned revision and all six weight
+shard hashes; the server rechecks its manifest before loading. Weights total
+about 18.4 GB and must remain outside Git. Cached inference does not need a token.
+Wait for `V15_SERVING_READY` and verify the backend's `/health` reports
+`method: head`. The service listens on loopback.
+
+On Linux, connect the Docker frontend to that host backend in another terminal:
+
+```bash
+export LLM_NAME=swiss-ai/Apertus-v1.5-8B
+export LLM_BASE_URL=http://127.0.0.1:8001/v1
+export LLM_API_KEY=
+unset FROZEN_BASE_URL
+make run DOCKER_RUN_ARGS='--network host -e NO_PROXY=127.0.0.1,localhost'
+```
+
+For another hosting arrangement, set a reachable authorized `/v1` endpoint and
+its required API credential securely. Earlier CPU smoke checks used `--device cpu`
+with a separately pinned CPU Torch installation, but CPU inference is slow and
+the reported benchmark latencies are GPU measurements. Increase client timeout
+when appropriate. Starting the frontend without a backend still supports PDF
+processing and source inspection; classification fails explicitly.
 
 ## Reproduce official booklet preparation and diagnostics
 

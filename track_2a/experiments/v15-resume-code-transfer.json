@@ -1,0 +1,22 @@
+{
+  "source_instance": 54709791,
+  "destination_instance": 54690554,
+  "copied_code_sha_verified": true,
+  "files": [
+    {
+      "path": "finish_v15_research.py",
+      "sha256": "847cf63059670176d7917dfe2fabd91100b4fb6d4f5a828d502e54e216cbe753"
+    },
+    {
+      "path": "resume_v15_final.py",
+      "sha256": "833f35e47cf0357cc05999f1f5edfc959ada9002ee281c9e85098f7e06773a51"
+    },
+    {
+      "path": "v15_resume_contract.json",
+      "sha256": "dc051c7818460d6011bfa05d086c456336b87a4dee92e52a500a0ecb665a081c"
+    }
+  ],
+  "timestamp": "2026-10-07T20:20:06.889081+00:00",
+  "original_frozen_prefix_n": 26,
+  "head_and_selection_unchanged": true
+}

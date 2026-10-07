@@ -1,0 +1,21 @@
+{
+  "repo": "swiss-ai/Apertus-v1.5-8B",
+  "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.14.0.dev0",
+  "gpu": "NVIDIA A40",
+  "gpu_bytes": 47699722240,
+  "precision": "BF16 text; official tokenizer modules remain FP32",
+  "quantization": null,
+  "git_commit": "eceea5a5d643bcf62a15d0763a040a85d88986af",
+  "git_working_tree_dirty": false,
+  "source_engine_sha256": "2fa8835175522390edb2dd068239b4af57129a1f37379a77beba77b979e50a07",
+  "source_script_sha256": "16f8d2f1123531fdd642af6e0e4805642ed069a024fa670be2745d5e5d8f0aa3",
+  "inputs_manifest_sha256": "feace037bb219fdfe9369ed73704c5748213b01095813e3466b39d26cc1ef26a",
+  "load_seconds": 29.531749142101035,
+  "status": "completed",
+  "mode": "train",
+  "training": "Frozen weights; no evaluation labels used in inference",
+  "runtime_seconds": 3218.9283079700544
+}

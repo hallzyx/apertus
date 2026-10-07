@@ -1,26 +1,136 @@
 {
-  "scope": "Legacy Apertus 2509 oracle/reference diagnostic only: 276 internal examples. Not Apertus v1.5, not full-booklet production, not an official score.",
+  "scope": "Apertus v1.5 booklet + claim only. Internal booklet-disjoint validation and holdout; not organizer hidden evaluation.",
   "official": false,
-  "selected_experiment_id": "apertus-frozen-hidden-4096-v1",
+  "legacy_research_only": false,
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "selected_experiment_id": "apertus-v15-full-hidden-v1",
+  "apertus_weights_frozen": true,
+  "lora": false,
   "results": [
     {
-      "experiment": "apertus-8b-gpu-reference-4096-v1",
-      "macro_f1": 0.45351021194986424,
-      "mean_context_tokens": 1996.1485507246377,
-      "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.32803798428115744
+      "experiment": "bm25-prompt",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.40202704918795534,
+      "mean_context_tokens": 1651.623188405797,
+      "mean_inference_seconds": 0.641739601506413,
+      "invalid_outputs": 0
     },
     {
-      "experiment": "apertus-frozen-hidden-4096-v1",
-      "macro_f1": 0.9703530750042378,
-      "mean_context_tokens": 1996.1485507246377,
-      "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.3234384770732003,
+      "experiment": "bm25-score",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.43648229783716763,
+      "mean_context_tokens": 1654.623188405797,
+      "mean_inference_seconds": 0.400857006337163,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "dense-prompt",
+      "split": "validation",
+      "n": 274,
+      "macro_f1": 0.5099282547053114,
+      "mean_context_tokens": 1396.0693430656934,
+      "mean_inference_seconds": 0.6005173287045101,
+      "invalid_outputs": 2
+    },
+    {
+      "experiment": "dense-score",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.49826065959465593,
+      "mean_context_tokens": 1395.8079710144928,
+      "mean_inference_seconds": 0.35879956679064373,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "full-prompt",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.5524477713482078,
+      "mean_context_tokens": 14103.115942028986,
+      "mean_inference_seconds": 3.911265939292734,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "full-score",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.6716119853717717,
+      "mean_context_tokens": 14106.115942028986,
+      "mean_inference_seconds": 3.6351558427466415,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "hybrid-prompt",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.49661983514068037,
+      "mean_context_tokens": 1653.5615942028985,
+      "mean_inference_seconds": 0.6671446442715419,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "hybrid-score",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.5268833410442851,
+      "mean_context_tokens": 1656.5615942028985,
+      "mean_inference_seconds": 0.42618234864641924,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "reference-prompt",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.5313628899835797,
+      "mean_context_tokens": 2266.7246376811595,
+      "mean_inference_seconds": 0.7790933637103686,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "reference-score",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.5354192832453917,
+      "mean_context_tokens": 2269.7246376811595,
+      "mean_inference_seconds": 0.5397388104432046,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "apertus-v15-full-option_logits-v1",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.7218619953144144,
+      "mean_context_tokens": 14106.115942028986,
+      "mean_inference_seconds": 3.635556945158,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "apertus-v15-full-hidden-v1",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.8944609902440983,
+      "mean_context_tokens": 14106.115942028986,
+      "mean_inference_seconds": 3.6355845756631386,
+      "invalid_outputs": 0
+    },
+    {
+      "experiment": "apertus-v15-full-hidden-v1",
+      "split": "internal_test",
+      "n": 310,
+      "macro_f1": 0.8999203919167176,
+      "mean_context_tokens": 14070.012903225806,
+      "mean_inference_seconds": 3.28080194003865,
       "calibration": {
-        "ece": 0.02079092523553133,
+        "ece": 0.0836310079880202,
         "ece_bins": 10,
-        "brier_score": 0.03706509823468974,
-        "negative_log_likelihood": 0.057980358986467986
+        "brier_score": 0.16811942615460612,
+        "negative_log_likelihood": 0.3158977908500724
       }
     }
   ],
-  "legacy_research_only": true
+  "baseline_test_comparison_available": false,
+  "internal_test_truncated_inputs": 310
 }
