@@ -10,7 +10,7 @@ def main():
     from ost_nli.metrics import evaluate
     rows = load_dataset('track_2a/data/private/full-booklets-v2/validation.jsonl')
     root = Path('track_2a/experiments/apertus-v15-research-v1')
-    head = json.loads(Path('track_2a/deployment/head-v15.json').read_text())
+    head = json.loads(Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json').read_text())
     recorded = json.loads((root/'experiment.json').read_text())
     expected = {r['path']:r['sha256'] for r in recorded['files']}
     original = json.loads((root/'apertus-v15-full-hidden-v1/predictions.json').read_text())['predictions']

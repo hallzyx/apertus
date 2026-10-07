@@ -15,7 +15,7 @@ from phase2_remote_bootstrap import run
 def main():
     proposal=json.loads(Path('track_2a/experiments/apertus-v15-phase2/context-results.json').read_text())
     condition=proposal['provisional_choice']
-    source_head=Path(proposal['comparisons'][condition]['source_head']) if condition!='full' else Path('track_2a/deployment/head-v15.json')
+    source_head=Path(proposal['comparisons'][condition]['source_head']) if condition!='full' else Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json')
     head_bytes=source_head.read_bytes()
     expected_sha=proposal['comparisons'][condition]['head_sha256'] if condition!='full' else json.loads(Path('track_2a/experiments/apertus-v15-phase2-controls-v1/contract.json').read_text())['head_sha256']
     if hashlib.sha256(head_bytes).hexdigest()!=expected_sha:
@@ -65,8 +65,8 @@ def main():
         last['hidden']=result['hidden'].copy();last['option_logits']=result['option_logits'].copy()
         return result
     engine.infer=captured_infer
-    original_head=json.loads(Path('track_2a/deployment/head-v15.json').read_text())
-    assert hashlib.sha256(Path('track_2a/deployment/head-v15.json').read_bytes()).hexdigest()==json.loads(Path('track_2a/experiments/apertus-v15-phase2-controls-v1/contract.json').read_text())['head_sha256']
+    original_head=json.loads(Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json').read_text())
+    assert hashlib.sha256(Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json').read_bytes()).hexdigest()==json.loads(Path('track_2a/experiments/apertus-v15-phase2-controls-v1/contract.json').read_text())['head_sha256']
     full_pipeline=DocumentPipeline(engine,original_head)
     correct=[];correct_hidden=[];correct_logits=[]
     for index,row in enumerate(rows):

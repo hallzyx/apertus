@@ -21,7 +21,7 @@ def main():
     contract = json.loads((root/'contract.json').read_text())
     if hashlib.sha256((root/'inputs_manifest.json').read_bytes()).hexdigest() != contract['input_manifest_sha256']:
         raise ValueError('Input manifest recovery mismatch')
-    head_path = Path('track_2a/deployment/head-v15.json')
+    head_path = Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json')
     if hashlib.sha256(head_path.read_bytes()).hexdigest() != contract['head_sha256']:
         raise ValueError('Historical frozen head changed')
     old_path = Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/predictions.json')

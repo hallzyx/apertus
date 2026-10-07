@@ -33,7 +33,7 @@ def main():
     condition=proposal['provisional_choice'];assert record['context']==condition
     controlroot=Path('track_2a/experiments/apertus-v15-phase2-controls-v1')
     contract=json.loads((controlroot/'contract.json').read_text())
-    originalhead=Path('track_2a/deployment/head-v15.json')
+    originalhead=Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json')
     assert sha(originalhead)==contract['head_sha256']
     headpath=Path(proposal['comparisons'][condition]['source_head']) if condition!='full' else originalhead
     assert sha(headpath)==record['head_sha256']
