@@ -15,9 +15,10 @@ The runtime uses an A40, original SHA-verified v1.5 weights, Torch 2.8.0/CUDA 12
 ## 2. Architecture
 
 PDF → per-page text → overlapping source passages (1,200 characters, overlap 200)
-→ multilingual E5 dense retrieval + positive-score BM25 rank fusion → five passages
+→ validation-selected full/capped context (48,000 document-context bytes)
 → configured Apertus v1.5 endpoint → strictly parsed numeric relation → evidence
-and runtime/token metadata. Passage text remains an exact substring of extracted
+and runtime/token metadata. BM25, E5 dense and hybrid k=5 retrieval remain optional
+comparison modes; they are not the selected production context. Passage text remains an exact substring of extracted
 page text, with page/offsets and original PDF SHA-256. Production uses no labels,
 reference strings or dataset baseline scores.
 
@@ -123,10 +124,12 @@ has been performed. No unspecified interface/hardware limits are invented.
 
 ## 7. Reproducibility
 
-Clean-checkout `make run` builds Dockerfile.hybrid, installs hash-locked dependencies,
-downloads/verifies public retrieval weights and starts port 8000. Classification needs
+Clean-checkout `make run` builds the lightweight PDF/HTTP Dockerfile, installs
+hash-locked dependencies and starts port 8000. The selected full-context frontend
+requires no supporting model download. Optional `RUNTIME=hybrid` supports E5 retrieval. Classification needs
 an authorized v1.5 endpoint; unavailable inference produces an explicit failure.
-Project-defined CLI: `python -m ost_nli predict BOOKLET.pdf CLAIM --context hybrid`.
+Project-defined CLI: `python -m ost_nli predict BOOKLET.pdf CLAIM`; its default
+context comes from `deployment/v15-selection.json`. Explicit overrides are documented.
 Batch JSONL contains id/document/claim only. Source passages carry pages/offsets/hash.
 Documented interface is separable from model/retrieval implementation.
 
@@ -146,8 +149,9 @@ The USD 10 hard budget and USD 2 reserve remain binding; billing is asynchronous
 
 ## 8. Next steps
 
-Authorized weights, native CPU serving and real GPU class scoring have been verified. Complete matched full/capped, oracle,
-BM25/dense/hybrid v1.5 comparisons on validation; train any new v1.5 head on train only,
+All ten matched native v1.5 validation comparisons are complete. Full/capped class
+scoring leads the booklet-only baselines. Finish extracting the 902 training features
+and fitting the two decision heads on train only,
 freeze choices, then evaluate the 310 internal holdout once for NLI. Measure evidence
 quality manually alongside reference-overlap diagnostics. No Devpost access or exact
 organizer CLI signature is needed. Submission itself remains a separate action.
