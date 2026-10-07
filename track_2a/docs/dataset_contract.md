@@ -1,9 +1,9 @@
 # Dataset contract and leakage controls
 
-The official OST dataset has **not yet been obtained**. This is an internal
-canonical interchange format, not a claim about the official field names.
-Implement and review the official adapter after inspecting real records and the
-official class mapping. Never infer the class mapping from model preferences.
+The official OST dataset has been obtained and SHA-256 verified. This internal
+canonical format is produced by the pinned v1.1 adapter in `ost_nli.official`.
+The source provides premise excerpts rather than annotated minimal gold evidence.
+The numeric class semantics still require confirmation from the official rules.
 
 One example per JSONL line:
 
@@ -25,12 +25,13 @@ One example per JSONL line:
   a document filename. Mixed-language evidence may include passage language.
 
 ```bash
-PYTHONPATH=src python -m ost_nli inspect data/private/ost.jsonl --output experiments/artifacts/dataset_audit.json
-PYTHONPATH=src python -m ost_nli split data/private/ost.jsonl --output-dir data/private/splits --seed 42
+PYTHONPATH=src python -m ost_nli inspect data/private/ost-reference.jsonl --output experiments/artifacts/dataset_audit.json
+PYTHONPATH=src python -m ost_nli split data/private/ost-reference.jsonl --output-dir data/private/splits-strict --seed 42
 ```
 
 The split manifest records example IDs, booklet groups, dataset fingerprints and
-class/language distributions. Split selection is deterministic and independent
+class/language distributions. Dates sharing normalized identical claims are
+connected before partition assignment. Split selection is deterministic and independent
 of input row order. It is not stratified: inspect minority-class support and
 report absent classes rather than searching split seeds to improve model scores.
 Use validation only for model selection. Freeze test before experiments; run the
@@ -51,3 +52,7 @@ Evidence scores match passage IDs, not semantic relevance or span correctness.
 Truncated passage text is explicitly marked and needs additional span-level review.
 CLI PDF extraction is for text-based PDFs; scanned PDFs fail clearly and require
 a documented OCR path before any claim of support for scanned booklets.
+
+The preliminary local date-only `data/private/splits/` is superseded by
+`splits-strict/`. Only the committed `experiments/split_manifest.json` defines
+the frozen research partitions. Translated/paraphrased claims still require review.
