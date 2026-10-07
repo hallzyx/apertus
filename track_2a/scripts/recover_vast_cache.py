@@ -18,6 +18,7 @@ def main():
     p.add_argument('--instance', required=True, type=int)
     p.add_argument('--output-dir', required=True)
     p.add_argument('--checkout', required=True)
+    p.add_argument('--relative-root', default='track_2a/experiments/apertus-frozen-cache-v1')
     args = p.parse_args()
     root = Path(args.output_dir)
     root.mkdir(parents=True, exist_ok=True)
@@ -60,7 +61,10 @@ def main():
     if len(data) != manifest['archive_bytes'] or hashlib.sha256(data).hexdigest() != manifest['archive_sha256']:
         raise ValueError('Original remote archive checksum mismatch')
     checkout = Path(args.checkout).resolve()
-    prefix = 'track_2a/experiments/apertus-frozen-cache-v1'
+    prefix = args.relative_root
+    relative = Path(prefix)
+    if relative.is_absolute() or '..' in relative.parts or not prefix.startswith('track_2a/experiments/'):
+        raise ValueError('Only a task experiment directory can be recovered')
     target = checkout / prefix
     if target.exists() and any(target.iterdir()):
         raise ValueError('Existing feature cache cannot be overwritten')

@@ -1,4 +1,5 @@
 """Package task feature data into checksummed UTF-8 parts for Vast cat reads."""
+import argparse
 import base64
 import hashlib
 import json
@@ -6,7 +7,12 @@ import tarfile
 from pathlib import Path
 
 
-root = Path('track_2a/experiments/apertus-frozen-cache-v1')
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--relative-root', default='track_2a/experiments/apertus-frozen-cache-v1')
+args = parser.parse_args()
+root = Path(args.relative_root)
+if root.is_absolute() or '..' in root.parts or not root.resolve().is_relative_to(Path('track_2a/experiments').resolve()):
+    raise ValueError('Only a task experiment directory can be exported')
 if not root.exists():
     print('APERTUS_CACHE_MISSING=1', flush=True)
 else:
