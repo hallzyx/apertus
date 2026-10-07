@@ -53,7 +53,7 @@ def main():
     run(['python','-m','pip','install','--no-cache-dir','--require-hashes','-r','track_2a/requirements-pdf.lock'])
     reference=Path('track_2a/data/private/ost-reference.jsonl')
     splits=Path('track_2a/data/private/splits-strict')
-    if not reference.exists():run(['python','-m','ost_nli','prepare-ost','--output',str(reference)])
+    if not reference.exists():run(['python','-m','ost_nli','prepare-ost','--source','track_2a/data/private/official/v1.1.jsonl','--output',str(reference)])
     if not (splits/'manifest.json').exists():run(['python','-m','ost_nli','split',str(reference),'--output-dir',str(splits),'--seed','42'])
     expected=json.loads(Path('track_2a/experiments/split_manifest.json').read_text())
     if json.loads((splits/'manifest.json').read_text())!=expected:raise ValueError('Frozen split mismatch')
@@ -72,6 +72,7 @@ def main():
             '--embedding-dir','/workspace/e5','--cache-dir','/workspace/e5-vectors','--output','/workspace/v15-inputs'])
     print('V15_REPRODUCED_BOOKLET_INPUTS_VERIFIED',flush=True)
     run(['bash','track_2a/scripts/vast_v15_worker.sh'])
+    run(['python','track_2a/scripts/finish_v15_research.py'])
 
 
 if __name__=='__main__':main()

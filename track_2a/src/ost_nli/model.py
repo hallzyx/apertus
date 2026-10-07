@@ -120,7 +120,12 @@ def predict(row, client, mapping, mode="bm25", k=5, max_bytes=48000, method="pro
         raise ValueError("Model did not return a complete valid three-class decision; fail rather than invent a label") from e
     latency = time.perf_counter()-start
     tokens = response.get("usage",{}).get("prompt_tokens")
-    return {"id":row.get("id"), "label":label,"label_name":mapping[str(label)],"class_name":mapping[str(label)],"probabilities":None,"evidence":selected,"evidence_ids":[p["id"] for p in selected],"evidence_role":"Retrieved input passages; relevance and sufficiency require evaluation, not model-attributed minimal gold evidence","input_tokens":tokens,"inference_time_ms":latency*1000,"context_tokens":tokens,"context_token_definition":"Server-reported prompt tokens including system message and claim; null if unavailable", "context_bytes":len(context.encode()),"latency_seconds":latency,"model":client.model,"method":method,"retrieval":mode,"truncated":any(p["truncated"] for p in selected) or (mode=="full" and len(selected)<len(row["passages"])),"max_context_bytes":max_bytes}
+    probabilities = response.get('class_probabilities')
+    if probabilities is not None:
+        import math
+        if not isinstance(probabilities,list) or len(probabilities)!=3 or any(type(v) not in (int,float) or not math.isfinite(v) or not 0<=v<=1 for v in probabilities) or abs(sum(probabilities)-1)>1e-6:
+            raise ValueError('Invalid server-reported class probabilities')
+    return {"id":row.get("id"), "label":label,"label_name":mapping[str(label)],"class_name":mapping[str(label)],"probabilities":probabilities,"probability_note":response.get('probability_note'),"decision_method":response.get('decision_method',method),"model_revision":response.get('model_revision'),"evidence":selected,"evidence_ids":[p["id"] for p in selected],"evidence_role":"Retrieved input passages; relevance and sufficiency require evaluation, not model-attributed minimal gold evidence","input_tokens":tokens,"inference_time_ms":latency*1000,"context_tokens":tokens,"context_token_definition":"Server-reported prompt tokens including system message and claim; null if unavailable", "context_bytes":len(context.encode()),"latency_seconds":latency,"model":client.model,"method":method,"retrieval":mode,"truncated":any(p["truncated"] for p in selected) or (mode=="full" and len(selected)<len(row["passages"])),"max_context_bytes":max_bytes}
 
 
 class FrozenServiceClient:
