@@ -1,0 +1,12 @@
+{
+  "status": "failed_during_image_pull",
+  "instance_id": 54639540,
+  "source_commit": "3be9222",
+  "reason": "Provider remained loading for about 18 minutes, then reported retrying a 32-byte Docker image layer. No task container or model execution became available.",
+  "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+  "model_download_started": false,
+  "nli_predictions": 0,
+  "instance_destroyed_verified": true,
+  "observed_total_task_spend_usd": 0.9026455208000002,
+  "next_action": "Try a different machine with the previously successful provider, retaining the strict model/data checks and bounded cleanup guard."
+}

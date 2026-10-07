@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "actual_apertus_v15": true,
+  "source_commit": "3be9222",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "production_input": "Actual PDF upload + claim; no reference or label",
+  "n": 1,
+  "split": "train",
+  "id": "ost-v1.1-0000",
+  "same_label_and_token_usage_as_public_cli": true,
+  "exact_quotes_pages_and_source_hash_verified": true,
+  "docker_source_mode": "Existing verified hybrid image with current src/tests bind-mounted read-only; not a new clean image build",
+  "docker_image": "sha256:08451ca2fa00c947425071ebc19512d3d383af7f5fc1a989e3ee7d5910d8f2d2",
+  "native_model_server": "Isolated official Transformers fork running on cloud host CPU, accessed from Docker host networking",
+  "cloud_runtime_overrides": [
+    "host networking for loopback native endpoint",
+    "root UID for development source bind mount permissions",
+    "128 MB /tmp tmpfs for PDF processing on full VFS-backed disk",
+    "LLM_TIMEOUT_SECONDS=900 for actual slow CPU inference"
+  ],
+  "tests_passed": 37,
+  "clean_current_image_build": "Failed: no disk space with cloud Docker VFS snapshot duplication. Earlier clean checkout Docker build and 36 tests are separately preserved; not relabeled as this run.",
+  "benchmark_or_organizer_score": false,
+  "token_count": 1603,
+  "inference_time_ms": 144935.70039900078,
+  "containers_stopped": [
+    "0355c6762c91",
+    "2d864ad17787"
+  ],
+  "native_cpu_server_stopped": true,
+  "recorded_at": "2026-10-07T12:39:53.036581+00:00"
+}

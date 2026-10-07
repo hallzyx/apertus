@@ -11,7 +11,11 @@ single/batch CLI. Exact CLI/evidence schemas are project choices, not blockers.
 **No full-booklet Apertus v1.5 NLI score is claimed.** Authorized v1.5 weights have been downloaded and SHA-256 verified. Native
 CPU loading and three toy inferences succeeded; this is an environment check, not
 a benchmark. The former HTTP 401 access blocker is resolved. GPU OST evaluation
-is still pending and is not inferred from the toy check. The earlier 0.970353
+is still pending and is not inferred from the toy check. The public CLI has also
+completed three real training PDF cases (DE/FR/IT), with exact quote/page/offset/PDF
+hash checks. A Docker PDF upload and real native CPU decision reproduced the CLI
+class and 1,603 tokens. These are integration checks, not benchmark estimates; see
+`experiments/v15-real-cpu-cli-v1` and `experiments/v15-real-docker-v1`. The earlier 0.970353
 result used Apertus 2509 and supplied references; it is historical inference/head
 research, not the final challenge score or evidence of v1.5 performance.
 
@@ -108,7 +112,8 @@ v1.5 or full-booklet scores. Historical details/negative results are preserved i
 ## 6. Limitations
 
 Full-booklet production NLI readiness and final F1 remain unverified until the
-real GPU benchmark and public PDF CLI checks finish. Authorized v1.5 access and
+real GPU benchmark finishes. Public PDF CLI/native CPU integration was verified
+on three convenience-selected training examples, but this does not establish F1. Authorized v1.5 access and
 native CPU execution have been verified. The source reference is not always a uniquely
 aligned minimal passage, and approximate overlap loses typography/word-order matches.
 Retrieved passages are transparent candidates, not proof of model attribution or

@@ -38,7 +38,14 @@ def main():
                     backup=pdf.with_name(pdf.name+'.rejected-'+str(time.time_ns()))
                     pdf.replace(backup)
                 if not pdf.exists():
-                    request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                    # A retry must not reuse a cached truncated HTTP response.
+                    download_url = url
+                    if attempt:
+                        query = parsed.query + ('&' if parsed.query else '') + 'apertus_retry=' + str(attempt)
+                        download_url = urllib.parse.urlunsplit(parsed._replace(query=query))
+                    request = urllib.request.Request(download_url, headers={
+                        'User-Agent': 'Mozilla/5.0', 'Accept-Encoding': 'identity',
+                        'Cache-Control': 'no-cache'})
                     with urllib.request.urlopen(request, timeout=60) as response:
                         content = response.read(50_000_001)
                     if len(content) > 50_000_000 or not content.startswith(b'%PDF-'):

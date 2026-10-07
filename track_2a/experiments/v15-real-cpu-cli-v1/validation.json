@@ -1,0 +1,50 @@
+{
+  "status": "completed",
+  "real_apertus_v15": true,
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "source_commit": "3be9222",
+  "production_input": "PDF + claim only; no reference_string or labels",
+  "split": "train",
+  "selection": "First training example in each claim language, chosen for integration coverage, not performance",
+  "languages": [
+    "de",
+    "fr",
+    "it"
+  ],
+  "n": 3,
+  "source_quotes_pages_offsets_pdf_hashes_verified": true,
+  "method": "restricted next-token class score",
+  "lora_or_weight_updates": false,
+  "benchmark_or_organizer_score": false,
+  "hardware": "Cloud CPU, Torch 2.8.0+cpu, 4 threads, BF16 text, FP32 official tokenizers",
+  "client_timeout_seconds": 900,
+  "input_sha256": "623c68fa5e8072ea5bf51dcfd710d46fccb4d337cbbaff69de5842ef6dbd34e4",
+  "predictions_sha256": "2a95f359447fb2dd87467fa8dc3f1fc2f760b8a9ceae3300d697a72cfba8d539",
+  "examples": [
+    {
+      "id": "ost-v1.1-0000",
+      "claim_language": "de",
+      "document_language": "fr",
+      "label": 2,
+      "input_tokens": 1603,
+      "inference_time_ms": 145657.90701999504
+    },
+    {
+      "id": "ost-v1.1-0165",
+      "claim_language": "fr",
+      "document_language": "it",
+      "label": 0,
+      "input_tokens": 1868,
+      "inference_time_ms": 209178.70256899914
+    },
+    {
+      "id": "ost-v1.1-0331",
+      "claim_language": "it",
+      "document_language": "de",
+      "label": 1,
+      "input_tokens": 1798,
+      "inference_time_ms": 177073.99210899894
+    }
+  ],
+  "recorded_at": "2026-10-07T12:28:34.813077+00:00"
+}
