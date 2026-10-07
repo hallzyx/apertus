@@ -1,0 +1,63 @@
+{
+  "model": {
+    "repo": "swiss-ai/Apertus-v1.5-8B",
+    "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+    "torch": "2.8.0+cpu",
+    "transformers": "5.14.0.dev0",
+    "gpu": "CPU",
+    "gpu_bytes": null,
+    "precision": "BF16 text; official tokenizer modules remain FP32",
+    "quantization": null
+  },
+  "real_weights_verified": true,
+  "cases": [
+    {
+      "claim_language": "de",
+      "label": 0,
+      "content": "{\"label\": 0}",
+      "invalid_output": false,
+      "probabilities": [
+        1.0,
+        3.850741947530878e-09,
+        4.799545309797093e-12
+      ],
+      "probability_note": "Restricted next-token class probabilities; uncalibrated",
+      "context_tokens": 180,
+      "completion_tokens": 1,
+      "latency_seconds": 14.458515143000113
+    },
+    {
+      "claim_language": "fr",
+      "label": 2,
+      "content": "{\"label\": 2}",
+      "invalid_output": false,
+      "probabilities": [
+        6.023572751701067e-08,
+        9.23744902792123e-09,
+        0.9999998807907104
+      ],
+      "probability_note": "Restricted next-token class probabilities; uncalibrated",
+      "context_tokens": 180,
+      "completion_tokens": 1,
+      "latency_seconds": 15.412165464000282
+    },
+    {
+      "claim_language": "it",
+      "label": 0,
+      "content": "{\"label\": 0}",
+      "invalid_output": false,
+      "probabilities": [
+        0.9783958792686462,
+        0.02030595950782299,
+        0.0012981165200471878
+      ],
+      "probability_note": "Restricted next-token class probabilities; uncalibrated",
+      "context_tokens": 180,
+      "completion_tokens": 1,
+      "latency_seconds": 14.262481911002396
+    }
+  ],
+  "scope": "Actual model inference on toy document/claims; no benchmark score or fine-tuning claim",
+  "elapsed_seconds": 72.81700927100246
+}

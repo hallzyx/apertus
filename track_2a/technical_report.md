@@ -8,8 +8,10 @@ must not require reference strings. The app now implements PDF processing,
 multilingual semantic/BM25 fusion retrieval, source provenance, a Docker UI and
 single/batch CLI. Exact CLI/evidence schemas are project choices, not blockers.
 
-**No full-booklet Apertus v1.5 NLI score is claimed.** Official v1.5 model access
-returns HTTP 401 without approved Hugging Face authentication. The earlier 0.970353
+**No full-booklet Apertus v1.5 NLI score is claimed.** Authorized v1.5 weights have been downloaded and SHA-256 verified. Native
+CPU loading and three toy inferences succeeded; this is an environment check, not
+a benchmark. The former HTTP 401 access blocker is resolved. GPU OST evaluation
+is still pending and is not inferred from the toy check. The earlier 0.970353
 result used Apertus 2509 and supplied references; it is historical inference/head
 research, not the final challenge score or evidence of v1.5 performance.
 
@@ -36,7 +38,12 @@ Required model: `swiss-ai/Apertus-v1.5-8B`, pinned metadata revision
 legacy Apertus 2509; old hidden-head parameters cannot be transferred unchanged.
 The current production interface uses an authorized v1.5 endpoint through
 LLM_NAME/LLM_BASE_URL/LLM_API_KEY. Model names must identify the required generation;
-actual server model/revision should be verified when endpoint access becomes available.
+The native runner uses the official Transformers fork at
+`3797303dda74844e3d1f8977ff5518bb91f818b4`. Text attention uses SDPA while
+vision/audio submodels use their supported eager implementation. CPU verification
+used Torch 2.8.0+cpu and BF16 text weights, with no quantization; see
+`experiments/v15-access-v1/real_cpu_preflight.json`. Cached weights need no token.
+The temporary task credential was deleted from Vast after checksum verification.
 
 Supporting model: `intfloat/multilingual-e5-small`, immutable revision
 `614241f622f53c4eeff9890bdc4f31cfecc418b3`, MIT, CPU, original FP32 weights with
@@ -100,8 +107,9 @@ v1.5 or full-booklet scores. Historical details/negative results are preserved i
 
 ## 6. Limitations
 
-Required v1.5 model/endpoint access is missing; production NLI readiness and final
-F1 therefore remain unverified. The source reference is not always a uniquely
+Full-booklet production NLI readiness and final F1 remain unverified until the
+real GPU benchmark and public PDF CLI checks finish. Authorized v1.5 access and
+native CPU execution have been verified. The source reference is not always a uniquely
 aligned minimal passage, and approximate overlap loses typography/word-order matches.
 Retrieved passages are transparent candidates, not proof of model attribution or
 correct evidence. Small independent group counts, duplicated examples, translated
