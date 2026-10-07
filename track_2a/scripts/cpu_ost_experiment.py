@@ -23,6 +23,7 @@ def main():
     p.add_argument('--train-per-class',type=int,default=10)
     p.add_argument('--reference-token-cap',type=int,default=1024)
     p.add_argument('--threads',type=int,default=4)
+    p.add_argument('--device',choices=['cpu','cuda'],default='cpu')
     args=p.parse_args()
     registry=Path(__file__).resolve().parents[1]/'experiments'/'registry.jsonl'
     from ost_nli.data import fingerprint,load_dataset,words
@@ -31,6 +32,8 @@ def main():
     import torch
     import transformers
     from transformers import AutoModelForCausalLM,AutoTokenizer
+    if args.device=='cuda' and (not torch.cuda.is_available() or not torch.cuda.is_bf16_supported()):
+        raise SystemExit('Requested GPU must support CUDA and original BF16 weights')
     train,val=load_dataset(args.train),load_dataset(args.validation)
     if {r['booklet_id'] for r in train}&{r['booklet_id'] for r in val}:raise SystemExit('Booklet leakage')
     if {' '.join(words(r['claim'])) for r in train}&{' '.join(words(r['claim'])) for r in val}:raise SystemExit('Duplicate claim leakage')
@@ -60,13 +63,14 @@ def main():
     out.mkdir(parents=True,exist_ok=True)
     commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     record={'experiment_id':out.name,'timestamp':utc_now(),'status':'started','git_commit':commit,'source_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'dataset_split':'strict_validation','training_dataset_sha256':fingerprint(train),'validation_dataset_sha256':fingerprint(val),'training_mapping_ids':[r['id'] for r in chosen],'model':manifest['repo'],'model_revision':manifest['revision'],'precision':'bfloat16','torch':torch.__version__,'transformers':transformers.__version__,'gpu':'CPU; no Vast rental','threads':args.threads,'retrieval_configuration':{'mode':'provided_reference','reference_token_cap':args.reference_token_cap},'prompt_configuration':{'semantic_options':['entailment','contradiction','neutral'],'numeric_mapping':'Fitted on training only; official class-name semantics not asserted','method':'greedy-first-token and restricted option logits'},'training_configuration':{'method':'6-permutation correspondence fit, maximize correct decisions on balanced training sample','examples':len(chosen),'seed':42},'estimated_compute_cost':0.,'actual_compute_cost':0.,'macro_f1':None,'notes':'Internal held-out evaluation, not official challenge score; provided premise excerpts, not full booklet/gold annotations; first-token option probabilities are not calibrated'}
+    record.update({'device':args.device,'gpu':torch.cuda.get_device_name(0) if args.device=='cuda' else 'CPU; no Vast rental','actual_compute_cost':None if args.device=='cuda' else 0.})
     save(out/'experiment.json',record)
     append_event(registry,record)
     start=time.perf_counter()
     try:
         tokenizer=AutoTokenizer.from_pretrained(root,local_files_only=True,trust_remote_code=False)
         if not tokenizer.chat_template:raise ValueError('Missing official chat template')
-        model=AutoModelForCausalLM.from_pretrained(root,local_files_only=True,trust_remote_code=False,dtype=torch.bfloat16,attn_implementation='sdpa').eval()
+        model=AutoModelForCausalLM.from_pretrained(root,local_files_only=True,trust_remote_code=False,dtype=torch.bfloat16,attn_implementation='sdpa').to(args.device).eval()
         options=[tokenizer.encode(x,add_special_tokens=False) for x in ['A','B','C']]
         if any(len(x)!=1 for x in options):raise ValueError('Single-token options required')
         load_seconds=time.perf_counter()-start
@@ -79,7 +83,7 @@ def main():
             context=tokenizer.decode(capped,skip_special_tokens=True)
             messages=[{'role':'system','content':system},{'role':'user','content':json.dumps({'premise':context,'claim':row['claim']},ensure_ascii=False)}]
             text=tokenizer.apply_chat_template(messages,tokenize=False,add_generation_prompt=True)
-            inputs=tokenizer(text,return_tensors='pt',add_special_tokens=False)
+            inputs=tokenizer(text,return_tensors='pt',add_special_tokens=False).to(args.device)
             with torch.inference_mode():
                 output=model(**inputs,use_cache=False,logits_to_keep=1)
                 logits=output.logits[0,-1].float()

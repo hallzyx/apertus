@@ -1,7 +1,7 @@
 {
   "experiment_id": "apertus-8b-cpu-reference-1024-v1",
-  "timestamp": "2026-10-07T01:57:37.699568+00:00",
-  "status": "started",
+  "timestamp": "2026-10-07T02:28:20.433826+00:00",
+  "status": "interrupted",
   "git_commit": "a4091d0eb733cc1dbac6872644904e443dcfb887",
   "source_script_sha256": "91631140abdb450d4ad58ea27f3d454276e03633a1c5326ca9510bf1066129d4",
   "dataset_split": "strict_validation",
@@ -67,5 +67,7 @@
   "estimated_compute_cost": 0.0,
   "actual_compute_cost": 0.0,
   "macro_f1": null,
-  "notes": "Internal held-out evaluation, not official challenge score; provided premise excerpts, not full booklet/gold annotations; first-token option probabilities are not calibrated"
+  "notes": "Internal held-out evaluation, not official challenge score; provided premise excerpts, not full booklet/gold annotations; first-token option probabilities are not calibrated; environment publication/restart ended worker and persistence monitor; partial predictions retained, no complete validation score",
+  "completed_training_examples": 30,
+  "completed_validation_examples": 19
 }

@@ -1,0 +1,16 @@
+{
+  "semantic_options": [
+    "entailment",
+    "contradiction",
+    "neutral"
+  ],
+  "option_index_to_numeric_label": [
+    0,
+    2,
+    1
+  ],
+  "training_correct": 18,
+  "training_examples": 30,
+  "fit_definition": "Training-only balanced sample; no validation labels used",
+  "official_semantics_verified": false
+}

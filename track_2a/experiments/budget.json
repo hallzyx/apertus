@@ -2,10 +2,13 @@
   "currency": "USD",
   "initial_budget": 10.0,
   "estimated_spend": 0.0,
-  "actual_spend": null,
-  "actual_spend_note": "Account access unavailable; no instances created by this task.",
+  "actual_spend": 0.0,
+  "actual_spend_note": "Authenticated account: balance 0, credit 10 USD, no active instances; task has created none.",
   "active_instance_ids": [],
   "remaining_estimated_budget": 10.0,
   "recovery_reserve": 2.0,
-  "instances": []
+  "instances": [],
+  "account_credit_observed": 10.0,
+  "account_balance_observed": 0.0,
+  "account_checked_at": "2026-10-07T02:28:20.433826+00:00"
 }
