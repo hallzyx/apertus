@@ -7,6 +7,8 @@ import random
 import subprocess
 import sys
 import threading
+import urllib.request
+from http.server import ThreadingHTTPServer
 from phase2_remote_bootstrap import run
 
 
@@ -66,14 +68,18 @@ def main():
     original_head=json.loads(Path('track_2a/deployment/head-v15.json').read_text())
     assert hashlib.sha256(Path('track_2a/deployment/head-v15.json').read_bytes()).hexdigest()==json.loads(Path('track_2a/experiments/apertus-v15-phase2-controls-v1/contract.json').read_text())['head_sha256']
     full_pipeline=DocumentPipeline(engine,original_head)
-    correct=[]
+    correct=[];correct_hidden=[];correct_logits=[]
     for index,row in enumerate(rows):
         result=full_pipeline.predict(row,row['claim']);result['id']=row['id']
+        correct_hidden.append(last['hidden']);correct_logits.append(last['option_logits'])
         scores=last['option_logits'].astype(np.float64);q=np.exp(scores-scores.max());q/=q.sum()
         result['native_base_scores_label']=int(q.argmax());result['native_base_scores_probabilities']=q.tolist();correct.append(result)
         with (root/'correct-full-recheck.jsonl').open('a') as file:file.write(json.dumps(result,ensure_ascii=False,allow_nan=False)+'\n')
         if (index+1)%20==0 or index+1==len(rows):print('PHASE2_FULL_RECHECK',index+1,len(rows),flush=True)
     (root/'correct-full-recheck-metrics.json').write_text(json.dumps(evaluate(rows,correct),indent=2)+'\n')
+    np.savez_compressed(root/'correct-full-recheck.npz',ids=np.asarray([r['id'] for r in rows]),
+        labels=np.asarray([r['label'] for r in rows]),hidden=np.asarray(correct_hidden,dtype=np.float32),
+        option_logits=np.asarray(correct_logits,dtype=np.float32))
     for seed in ([42,1337] if condition!='full' else []):
         folder=root/f'wrong-{seed}';folder.mkdir();predictions=[];hidden=[];logits=[]
         for index,row in enumerate(rows):
@@ -113,12 +119,31 @@ def main():
                 'max_probability_difference':delta,'output':value}
             integration.append(proof)
             print('PHASE2_REAL_PDF_CLI',claim_lang,doc_lang,'label',value['label'],'cache_label_reproduced',proof['label_reproduced'],flush=True)
+        # Exercise the actual frontend upload and prediction route, not a fake model.
+        from ost_nli.web import Handler
+        os.environ['FROZEN_BASE_URL']=f'http://127.0.0.1:{server.server_port}'
+        front=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+        front_thread=threading.Thread(target=front.serve_forever,daemon=True);front_thread.start()
+        try:
+            row=next(r for r in rows if r['claim_language']=='de' and r['document_language']=='fr')
+            pdf=full/(hashlib.sha256(row['source_booklet_url'].encode()).hexdigest()+'.pdf')
+            base=f'http://127.0.0.1:{front.server_port}'
+            request=urllib.request.Request(base+'/api/document',data=pdf.read_bytes(),headers={'Content-Type':'application/pdf'})
+            document=json.load(urllib.request.urlopen(request,timeout=180))
+            request=urllib.request.Request(base+'/api/predict',data=json.dumps({'document':document,'claim':row['claim']}).encode(),headers={'Content-Type':'application/json'})
+            value=json.load(urllib.request.urlopen(request,timeout=180))
+            proof={'scope':'Actual frontend PDF upload + native Apertus inference; browser visual rendering separate',
+                'id':row['id'],'pdf_sha256':row['source_pdf_sha256'],'pages':document['pages'],
+                'label_reproduced':value['label']==expected[row['id']]['label'],'output':value}
+            (root/'frontend-real-inference.json').write_text(json.dumps(proof,indent=2,allow_nan=False)+'\n')
+            print('PHASE2_REAL_FRONTEND_INFERENCE',value['label'],flush=True)
+        finally:front.shutdown();front.server_close();front_thread.join()
     finally:server.shutdown();server.server_close();thread.join()
     (root/'cli-integration.json').write_text(json.dumps(integration,indent=2,allow_nan=False)+'\n')
     (root/'model_manifest.json').write_bytes(Path('/workspace/model/verified_manifest.json').read_bytes())
     if retriever:(root/'retriever_manifest.json').write_bytes(Path('/workspace/e5/verified_manifest.json').read_bytes())
     files=[{'path':str(p.relative_to(root)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file() and p.name!='experiment.json']
-    record.update(status='completed',files=files,gpu_forward_count=831 if condition!='full' else 279,
+    record.update(status='completed',files=files,gpu_forward_count=832 if condition!='full' else 280,
         full_recheck_reason='Resolve original A40-correct versus A6000-control precision/hardware confound; validation only')
     (root/'experiment.json').write_text(json.dumps(record,indent=2)+'\n')
     run(['python','track_2a/scripts/export_vast_cache.py','--relative-root',str(root)])
