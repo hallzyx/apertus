@@ -1,13 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.8311730353999994,
-  "actual_spend": 0.002735535399999378,
-  "actual_spend_note": "Observed account credit reduction after task instance destruction; billing may settle asynchronously; no other instances observed before/after.",
-  "active_instance_ids": [
-    54575345
-  ],
-  "remaining_estimated_budget": 9.168826964600001,
+  "estimated_spend": 0.1501151153000002,
+  "actual_spend": 0.1501151153000002,
+  "actual_spend_note": "Observed total account credit reduction, both task-created instances destroyed and API absence verified; final billing may settle asynchronously.",
+  "active_instance_ids": [],
+  "remaining_estimated_budget": 9.8498848847,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -48,11 +46,13 @@
       "git_commit": "e0a1bea2dfa904fd67679aeb339f531a162ac157",
       "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
       "created_at": "2026-10-07T02:54:22.307646+00:00",
-      "status": "created",
-      "instance_id": 54575345
+      "status": "destroyed_verified",
+      "instance_id": 54575345,
+      "destroyed_verified_at": "2026-10-07T03:23:19.582117+00:00",
+      "artifacts_persisted_before_destruction_commit": "90ff589"
     }
   ],
-  "account_credit_observed": 9.9972644646,
+  "account_credit_observed": 9.8498848847,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T02:54:22.307646+00:00"
+  "account_checked_at": "2026-10-07T03:23:19.582117+00:00"
 }

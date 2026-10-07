@@ -1,0 +1,12 @@
+{
+  "instance_id": 54575345,
+  "delete_success": true,
+  "verified_absent": true,
+  "account_instance_ids": [],
+  "verified_at": "2026-10-07T03:23:19.582117+00:00",
+  "artifacts_persisted_before_destruction_commit": "90ff589",
+  "observed_account_credit": 9.8498848847,
+  "observed_account_balance": 0,
+  "observed_total_account_spend_delta_usd": 0.1501151153000002,
+  "scope": "Both task-created instances absent; account list empty at this timestamp; billing may settle asynchronously"
+}

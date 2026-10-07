@@ -1,0 +1,278 @@
+{
+  "experiment_id": "apertus-option-head-1024-v1",
+  "status": "completed",
+  "timestamp": "2026-10-07T03:23:22.226036+00:00",
+  "git_commit": "90ff589edaf067b63fad1a648b0f0989eac3ceab",
+  "source_script_sha256": "276cbe3d92722e1f018f442a6f1fe6e96a7792930e5ae74e51196f9d99cc2cf6",
+  "model": "swiss-ai/Apertus-8B-Instruct-2509",
+  "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+  "precision": "bfloat16",
+  "source_experiment_id": "apertus-8b-gpu-reference-1024-v1",
+  "source_predictions_sha256": "089173e741014ada519561a29e500f8ec822ee88bb8176b5883f1495dc19864e",
+  "training_dataset_sha256": "9a95cf03912669132e390a676007e873aeb105b46a9bac12360f029fb571ce0c",
+  "validation_dataset_sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d",
+  "dataset_split": "strict_validation",
+  "training_configuration": {
+    "n": 30,
+    "features": "Three centered frozen Apertus next-token option logits; no hidden-state cache",
+    "method": "StandardScaler fitted on training only + L2 multinomial LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "seed": 42,
+    "hyperparameters_selected_without_validation": true,
+    "training_ids": [
+      "ost-v1.1-0358",
+      "ost-v1.1-0267",
+      "ost-v1.1-0317",
+      "ost-v1.1-0387",
+      "ost-v1.1-0376",
+      "ost-v1.1-0069",
+      "ost-v1.1-0042",
+      "ost-v1.1-0091",
+      "ost-v1.1-0352",
+      "ost-v1.1-0102",
+      "ost-v1.1-0823",
+      "ost-v1.1-0793",
+      "ost-v1.1-0960",
+      "ost-v1.1-0650",
+      "ost-v1.1-0967",
+      "ost-v1.1-0630",
+      "ost-v1.1-0645",
+      "ost-v1.1-0651",
+      "ost-v1.1-0557",
+      "ost-v1.1-0815",
+      "ost-v1.1-1148",
+      "ost-v1.1-1041",
+      "ost-v1.1-1467",
+      "ost-v1.1-1047",
+      "ost-v1.1-1293",
+      "ost-v1.1-1178",
+      "ost-v1.1-1103",
+      "ost-v1.1-1108",
+      "ost-v1.1-1451",
+      "ost-v1.1-1329"
+    ]
+  },
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "gpu": "CPU head; source encoding on RTX 4090",
+  "estimated_compute_cost": 0.0,
+  "actual_compute_cost": 0.0,
+  "macro_f1": 0.6893655798507234,
+  "notes": "Reuses actual GPU logits; no new rental cost. Raw trained classifier probabilities, not independently calibrated. Training sample is small and concentrated in two connected groups; grouped calibration was not performed. Latency sums measured source encoding and per-row CPU head inference, not a live integrated service. Official class semantics/full-booklet scope unverified; no final test.",
+  "n": 276,
+  "runtime_seconds": 0.04635749599992778,
+  "per_class_f1": {
+    "0": 0.7830188679245284,
+    "1": 0.7035175879396985,
+    "2": 0.5815602836879432
+  },
+  "per_language_performance": {
+    "de": {
+      "n": 82,
+      "macro_f1": 0.6498908092593748,
+      "accuracy": 0.6585365853658537,
+      "per_class": {
+        "0": {
+          "precision": 0.5897435897435898,
+          "recall": 1.0,
+          "f1": 0.7419354838709677,
+          "support": 23
+        },
+        "1": {
+          "precision": 0.6428571428571429,
+          "recall": 0.6666666666666666,
+          "f1": 0.6545454545454545,
+          "support": 27
+        },
+        "2": {
+          "precision": 0.8666666666666667,
+          "recall": 0.40625,
+          "f1": 0.5531914893617021,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          23,
+          0,
+          0
+        ],
+        [
+          7,
+          18,
+          2
+        ],
+        [
+          9,
+          10,
+          13
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "fr": {
+      "n": 100,
+      "macro_f1": 0.607865892972276,
+      "accuracy": 0.66,
+      "per_class": {
+        "0": {
+          "precision": 0.6607142857142857,
+          "recall": 0.9736842105263158,
+          "f1": 0.7872340425531915,
+          "support": 38
+        },
+        "1": {
+          "precision": 0.65625,
+          "recall": 0.6176470588235294,
+          "f1": 0.6363636363636364,
+          "support": 34
+        },
+        "2": {
+          "precision": 0.6666666666666666,
+          "recall": 0.2857142857142857,
+          "f1": 0.4,
+          "support": 28
+        }
+      },
+      "confusion_matrix": [
+        [
+          37,
+          1,
+          0
+        ],
+        [
+          9,
+          21,
+          4
+        ],
+        [
+          10,
+          10,
+          8
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "it": {
+      "n": 94,
+      "macro_f1": 0.7856803690137023,
+      "accuracy": 0.7872340425531915,
+      "per_class": {
+        "0": {
+          "precision": 0.7419354838709677,
+          "recall": 0.92,
+          "f1": 0.8214285714285714,
+          "support": 25
+        },
+        "1": {
+          "precision": 0.7560975609756098,
+          "recall": 0.8378378378378378,
+          "f1": 0.7948717948717948,
+          "support": 37
+        },
+        "2": {
+          "precision": 0.9090909090909091,
+          "recall": 0.625,
+          "f1": 0.7407407407407407,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          23,
+          2,
+          0
+        ],
+        [
+          4,
+          31,
+          2
+        ],
+        [
+          4,
+          8,
+          20
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "cross_lingual_performance": {
+    "n": 190,
+    "macro_f1": 0.6835472798232002,
+    "accuracy": 0.6947368421052632,
+    "per_class": {
+      "0": {
+        "precision": 0.6585365853658537,
+        "recall": 0.9473684210526315,
+        "f1": 0.7769784172661871,
+        "support": 57
+      },
+      "1": {
+        "precision": 0.6533333333333333,
+        "recall": 0.765625,
+        "f1": 0.7050359712230215,
+        "support": 64
+      },
+      "2": {
+        "precision": 0.8787878787878788,
+        "recall": 0.42028985507246375,
+        "f1": 0.5686274509803921,
+        "support": 69
+      }
+    },
+    "confusion_matrix": [
+      [
+        54,
+        3,
+        0
+      ],
+      [
+        11,
+        49,
+        4
+      ],
+      [
+        17,
+        23,
+        29
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ]
+  },
+  "evidence_metrics": {
+    "n_annotated": 0,
+    "recall": null,
+    "precision": null,
+    "all_gold_retrieved": null,
+    "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+  },
+  "calibration_metrics": {
+    "ece": 0.09951377916054922,
+    "ece_bins": 10,
+    "brier_score": 0.434336709237431,
+    "negative_log_likelihood": 0.8094353206059758
+  },
+  "average_context_tokens": 983.6884057971015,
+  "average_inference_latency": 0.15646711742012973,
+  "mean_head_only_latency_seconds": 0.00013895409782547347,
+  "macro_f1_delta_from_source": 0.23771236709461324
+}
