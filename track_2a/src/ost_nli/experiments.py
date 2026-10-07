@@ -1,4 +1,5 @@
 import datetime
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -24,7 +25,11 @@ def append_event(path, record):
 
 
 def new_record(experiment_id, rows, args):
-    return {"experiment_id":experiment_id,"timestamp":utc_now(),"status":"started","git_commit":git_commit(),"dataset_split":args.split_name,"dataset_sha256":fingerprint(rows),"model":args.model_name,"retrieval_configuration":{"mode":args.context,"k":args.k,"diversify":args.diversify,"max_context_bytes":args.max_context_bytes},"prompt_configuration":{"method":args.method,"version":"ost-nli-v1","label_map":args.mapping},"training_configuration":None,"macro_f1":None,"per_class_f1":None,"per_language_performance":None,"cross_lingual_performance":None,"evidence_metrics":None,"average_context_tokens":None,"average_inference_latency":None,"gpu":args.gpu,"runtime_seconds":None,"estimated_compute_cost":args.estimated_cost,"actual_compute_cost":None,"notes":args.notes}
+    root=Path(__file__).parent
+    digest=hashlib.sha256()
+    for path in sorted(root.rglob('*.py')):
+        digest.update(str(path.relative_to(root)).encode()+b'\x00'+path.read_bytes()+b'\x00')
+    return {"experiment_id":experiment_id,"timestamp":utc_now(),"status":"started","git_commit":git_commit(),"code_tree_sha256":digest.hexdigest(),"dataset_split":args.split_name,"dataset_sha256":fingerprint(rows),"model":args.model_name,"retrieval_configuration":{"mode":args.context,"k":args.k,"diversify":args.diversify,"max_context_bytes":args.max_context_bytes},"prompt_configuration":{"method":args.method,"version":"ost-nli-v1","label_map":args.mapping},"training_configuration":None,"macro_f1":None,"per_class_f1":None,"per_language_performance":None,"cross_lingual_performance":None,"evidence_metrics":None,"average_context_tokens":None,"average_inference_latency":None,"gpu":args.gpu,"runtime_seconds":None,"estimated_compute_cost":args.estimated_cost,"actual_compute_cost":None,"notes":args.notes}
 
 
 def finish_record(record, metrics, runtime):

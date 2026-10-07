@@ -113,7 +113,7 @@ def main():
             import subprocess
             try:
                 record["git_dirty"] = bool(subprocess.check_output(["git","status","--porcelain"],text=True,stderr=subprocess.DEVNULL))
-            except subprocess.CalledProcessError:
+            except (subprocess.CalledProcessError,FileNotFoundError):
                 record["git_dirty"] = None
             append_event(args.registry,record)
             out.mkdir(parents=True,exist_ok=True)
