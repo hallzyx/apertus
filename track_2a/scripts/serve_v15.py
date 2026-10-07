@@ -42,9 +42,10 @@ def main():
     from ost_nli.v15 import Engine
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--model-dir',required=True);p.add_argument('--head')
+    p.add_argument('--device',choices=['cpu','cuda'],default='cuda')
     p.add_argument('--method',choices=['score','prompt','head'],default='score')
     p.add_argument('--port',type=int,default=8001)
-    a=p.parse_args();engine=Engine(a.model_dir)
+    a=p.parse_args();engine=Engine(a.model_dir,a.device)
     head=json.loads(open(a.head).read()) if a.head else None
     server=make_server(engine,a.method,head,a.port)
     print('V15_SERVING_READY',flush=True)

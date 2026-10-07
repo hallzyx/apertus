@@ -55,7 +55,7 @@ def download(directory, token, external_shard_dir=None):
 
 
 class Engine:
-    def __init__(self, directory):
+    def __init__(self, directory, device='cuda'):
         import torch
         import transformers
         from transformers import AutoTokenizer, Apertus1p5ForConditionalGeneration
@@ -65,20 +65,22 @@ class Engine:
             raise ValueError('Pinned verified v1.5 weights required')
         for entry in manifest['files']:
             if digest(root/entry['name']) != entry['sha256']: raise ValueError('Model checksum failure')
-        if not torch.cuda.is_available() or not torch.cuda.is_bf16_supported():
+        if device not in ('cpu','cuda'):raise ValueError('Unsupported inference device')
+        if device=='cuda' and (not torch.cuda.is_available() or not torch.cuda.is_bf16_supported()):
             raise ValueError('This runtime requires BF16 CUDA hardware')
         torch.set_num_threads(4); torch.manual_seed(42)
-        self.torch = torch
+        self.torch = torch; self.device = device
         self.tokenizer = AutoTokenizer.from_pretrained(root,local_files_only=True,trust_remote_code=False)
         self.model, loading = Apertus1p5ForConditionalGeneration.from_pretrained(root,
             local_files_only=True,trust_remote_code=False,dtype=torch.bfloat16,
             attn_implementation='sdpa',output_loading_info=True)
         if any(loading.get(k) for k in ['missing_keys','unexpected_keys','mismatched_keys','error_msgs']):
             raise ValueError('Incomplete or mismatched native model loading')
-        self.model = self.model.to('cuda').eval()
+        self.model = self.model.to(device).eval()
         self.metadata = {'repo':REPO,'revision':REVISION,'transformers_revision':TRANSFORMERS_REVISION,
             'torch':torch.__version__,'transformers':transformers.__version__,
-            'gpu':torch.cuda.get_device_name(0),'gpu_bytes':torch.cuda.get_device_properties(0).total_memory,
+            'gpu':torch.cuda.get_device_name(0) if device=='cuda' else 'CPU',
+            'gpu_bytes':torch.cuda.get_device_properties(0).total_memory if device=='cuda' else None,
             'precision':'BF16 text; official tokenizer modules remain FP32','quantization':None}
         self.numeric = [self.tokenizer.encode(str(i),add_special_tokens=False) for i in range(3)]
         if any(len(x)!=1 for x in self.numeric): raise ValueError('Numeric labels require single-token options')
@@ -90,11 +92,11 @@ class Engine:
         text = self.tokenizer.apply_chat_template(messages,tokenize=False,
             add_generation_prompt=True,enable_thinking=False)
         if method in ['score','head']: text += '{"label":'
-        inputs = self.tokenizer(text,return_tensors='pt',add_special_tokens=False).to('cuda')
+        inputs = self.tokenizer(text,return_tensors='pt',add_special_tokens=False).to(self.device)
         tokens = int(inputs['input_ids'].shape[1])
         if tokens > 32768: raise ValueError('Prompt exceeds documented experiment/runtime token limit')
         hidden = None; scores = None; probabilities = None; invalid = False
-        torch.cuda.synchronize()
+        if self.device=='cuda':torch.cuda.synchronize()
         if method == 'prompt':
             with torch.inference_mode():
                 output = self.model.generate(**inputs,max_new_tokens=32,do_sample=False)
@@ -123,7 +125,7 @@ class Engine:
                 exp = np.exp(scores_for_prob-scores_for_prob.max()); probabilities = (exp/exp.sum()).tolist()
                 label = int(np.argmax(probabilities)); content = json.dumps({'label':label}); completion_tokens = 1
             finally: hook.remove()
-        torch.cuda.synchronize()
+        if self.device=='cuda':torch.cuda.synchronize()
         return {'label':label,'content':content,'invalid_output':invalid,'probabilities':probabilities,
             'probability_note':'Restricted next-token class probabilities; uncalibrated' if method=='score' else
                 ('Training-group OOF calibrated head posterior' if method=='head' else 'Unavailable'),
