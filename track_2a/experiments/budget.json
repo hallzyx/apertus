@@ -2,8 +2,8 @@
   "currency": "USD",
   "initial_budget": 10.0,
   "estimated_spend": 0.9787226181999994,
-  "actual_spend": 0.15028511819999935,
-  "actual_spend_note": "Observed total account credit reduction, both task-created instances destroyed and API absence verified; final billing may settle asynchronously.",
+  "actual_spend": 0.5299155373000008,
+  "actual_spend_note": "Observed account credit reduction with task instance 54580160 active; prior two instances destroyed. Billing remains provisional until cleanup and settlement.",
   "active_instance_ids": [
     54580160
   ],
@@ -69,13 +69,13 @@
       "git_commit": "d0b125e4a14887b8c7af4c024d2efb3258f7d6f4",
       "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
       "created_at": "2026-10-07T03:42:07.523827+00:00",
-      "status": "created",
+      "status": "running_model_download",
       "instance_id": 54580160,
       "automatic_cleanup_deadline_seconds": 5400,
       "deadline_note": "90-minute cleanup guard within reserved conservative two-hour cost; same-lease model-cache recovery"
     }
   ],
-  "account_credit_observed": 9.8498848847,
+  "account_credit_observed": 9.4700844627,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T03:23:19.582117+00:00"
+  "account_checked_at": "2026-10-07T04:45:04.432941+00:00"
 }
