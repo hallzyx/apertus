@@ -1,7 +1,7 @@
 {
   "instance_id": 54653201,
   "source_commit": "b37140f",
-  "status": "booklet_preparation_in_progress",
+  "status": "context_preparation_in_progress",
   "real_nli_predictions": 0,
   "private_model_copy": {
     "source_instance": 54642634,
@@ -11,5 +11,18 @@
     "destination_restart_required_for_visibility": true
   },
   "cache_wait_seconds": 1800,
-  "restart_uses_same_existing_lease": true
+  "restart_uses_same_existing_lease": true,
+  "booklets_verified": 51,
+  "booklets_total": 60,
+  "train_available_n": 683,
+  "canonical_train_n": 902,
+  "validation_n": 276,
+  "test_n": 310,
+  "validation_test_fingerprints_verified": true,
+  "training_groups": 5,
+  "training_labels": {
+    "0": 238,
+    "1": 218,
+    "2": 227
+  }
 }

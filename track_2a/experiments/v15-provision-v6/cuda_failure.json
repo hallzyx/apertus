@@ -1,0 +1,13 @@
+{
+  "instance_id": 54653201,
+  "status": "failed_before_prediction",
+  "source_commit": "b37140f",
+  "model_loaded_on_cpu_with_original_hashes": true,
+  "real_nli_predictions": 0,
+  "cuda_error": "no kernel image is available for execution on the device",
+  "actual_torch": "2.8.0+cu126",
+  "gpu": "RTX 5090 sm_120",
+  "root_cause": "CUDA 12.6 binary does not include Blackwell kernels; CUDA availability/BF16 flag checks were insufficient.",
+  "repair": "Pin original official Torch 2.8.0+cu128 wheel and every dependency hash; verify BF16 matmul and cuDNN recurrent kernels before research. Preserve all frozen contexts and the selected 683-row training subset. No evaluation inference has run.",
+  "timestamp": "2026-10-07T14:38:39.830400+00:00"
+}

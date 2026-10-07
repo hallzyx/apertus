@@ -4,7 +4,9 @@ set -euo pipefail
 cd /workspace/apertus
 export PYTHONPATH=track_2a/src HF_HUB_DISABLE_XET=1 HF_HUB_DISABLE_TELEMETRY=1
 export HF_HUB_DISABLE_PROGRESS_BARS=1 HF_HOME=/workspace/hf
+python -m pip install --no-cache-dir --require-hashes -r track_2a/requirements-v15-cuda.lock
 python -m pip install --no-cache-dir --require-hashes -r track_2a/requirements-v15.lock
+python track_2a/scripts/check_v15_cuda.py
 python - <<'PY'
 import torch
 from transformers import Apertus1p5ForConditionalGeneration
