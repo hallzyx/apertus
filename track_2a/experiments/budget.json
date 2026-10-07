@@ -1,13 +1,35 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.0,
+  "estimated_spend": 0.8472187499999999,
   "actual_spend": 0.0,
   "actual_spend_note": "Authenticated account: balance 0, credit 10 USD, no active instances; task has created none.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 10.0,
+  "active_instance_ids": [
+    54573150
+  ],
+  "remaining_estimated_budget": 9.15278125,
   "recovery_reserve": 2.0,
-  "instances": [],
+  "instances": [
+    {
+      "offer_id": 45992367,
+      "gpu": "RTX 4090",
+      "disk_gb": 45,
+      "hourly_gpu_usd": 0.38399999999999995,
+      "hourly_storage_usd": 0.018333333333333337,
+      "hourly_total_usd": 0.40233333333333327,
+      "expected_runtime_hours": 0.5,
+      "conservative_runtime_hours": 2,
+      "download_gb_bound": 25,
+      "download_rate_usd_gb": 0.0013020833333333333,
+      "estimated_total_usd_bound": 0.8472187499999999,
+      "purpose": "Paired OST validation provided-reference 1024/4096 tokens; original Apertus8B BF16",
+      "git_commit": "a3d859c37cf2050e056ef16482a984df5319e2bc",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T02:29:53.349022+00:00",
+      "status": "created",
+      "instance_id": 54573150
+    }
+  ],
   "account_credit_observed": 10.0,
   "account_balance_observed": 0.0,
   "account_checked_at": "2026-10-07T02:28:20.433826+00:00"
