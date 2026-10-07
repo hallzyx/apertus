@@ -1,0 +1,5980 @@
+{
+  "booklets_total": 60,
+  "booklets_downloaded": 60,
+  "partitions": {
+    "train": {
+      "n": 902,
+      "missing_ids": [],
+      "sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "reference_alignment": [
+        {
+          "id": "ost-v1.1-0000",
+          "reference_5gram_coverage_in_full_booklet": 0.8442028985507246
+        },
+        {
+          "id": "ost-v1.1-0001",
+          "reference_5gram_coverage_in_full_booklet": 0.8832116788321168
+        },
+        {
+          "id": "ost-v1.1-0002",
+          "reference_5gram_coverage_in_full_booklet": 0.8645833333333334
+        },
+        {
+          "id": "ost-v1.1-0003",
+          "reference_5gram_coverage_in_full_booklet": 0.8318181818181818
+        },
+        {
+          "id": "ost-v1.1-0005",
+          "reference_5gram_coverage_in_full_booklet": 0.748314606741573
+        },
+        {
+          "id": "ost-v1.1-0006",
+          "reference_5gram_coverage_in_full_booklet": 0.7919896640826873
+        },
+        {
+          "id": "ost-v1.1-0007",
+          "reference_5gram_coverage_in_full_booklet": 0.8399581589958159
+        },
+        {
+          "id": "ost-v1.1-0009",
+          "reference_5gram_coverage_in_full_booklet": 0.8594771241830066
+        },
+        {
+          "id": "ost-v1.1-0013",
+          "reference_5gram_coverage_in_full_booklet": 0.7665615141955836
+        },
+        {
+          "id": "ost-v1.1-0014",
+          "reference_5gram_coverage_in_full_booklet": 0.7617079889807162
+        },
+        {
+          "id": "ost-v1.1-0015",
+          "reference_5gram_coverage_in_full_booklet": 0.8105263157894737
+        },
+        {
+          "id": "ost-v1.1-0016",
+          "reference_5gram_coverage_in_full_booklet": 0.8267605633802817
+        },
+        {
+          "id": "ost-v1.1-0017",
+          "reference_5gram_coverage_in_full_booklet": 0.8465063001145475
+        },
+        {
+          "id": "ost-v1.1-0020",
+          "reference_5gram_coverage_in_full_booklet": 0.7927710843373494
+        },
+        {
+          "id": "ost-v1.1-0025",
+          "reference_5gram_coverage_in_full_booklet": 0.9212598425196851
+        },
+        {
+          "id": "ost-v1.1-0027",
+          "reference_5gram_coverage_in_full_booklet": 0.8389513108614233
+        },
+        {
+          "id": "ost-v1.1-0028",
+          "reference_5gram_coverage_in_full_booklet": 0.8205574912891986
+        },
+        {
+          "id": "ost-v1.1-0029",
+          "reference_5gram_coverage_in_full_booklet": 0.8542056074766355
+        },
+        {
+          "id": "ost-v1.1-0031",
+          "reference_5gram_coverage_in_full_booklet": 0.8086763070077865
+        },
+        {
+          "id": "ost-v1.1-0035",
+          "reference_5gram_coverage_in_full_booklet": 0.8797909407665505
+        },
+        {
+          "id": "ost-v1.1-0036",
+          "reference_5gram_coverage_in_full_booklet": 0.882960413080895
+        },
+        {
+          "id": "ost-v1.1-0037",
+          "reference_5gram_coverage_in_full_booklet": 0.7839080459770115
+        },
+        {
+          "id": "ost-v1.1-0038",
+          "reference_5gram_coverage_in_full_booklet": 0.8797909407665505
+        },
+        {
+          "id": "ost-v1.1-0039",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0042",
+          "reference_5gram_coverage_in_full_booklet": 0.8797909407665505
+        },
+        {
+          "id": "ost-v1.1-0043",
+          "reference_5gram_coverage_in_full_booklet": 0.8091603053435115
+        },
+        {
+          "id": "ost-v1.1-0044",
+          "reference_5gram_coverage_in_full_booklet": 0.8305084745762712
+        },
+        {
+          "id": "ost-v1.1-0047",
+          "reference_5gram_coverage_in_full_booklet": 0.8542056074766355
+        },
+        {
+          "id": "ost-v1.1-0049",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-0051",
+          "reference_5gram_coverage_in_full_booklet": 0.8091603053435115
+        },
+        {
+          "id": "ost-v1.1-0052",
+          "reference_5gram_coverage_in_full_booklet": 0.7565632458233891
+        },
+        {
+          "id": "ost-v1.1-0053",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-0054",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0055",
+          "reference_5gram_coverage_in_full_booklet": 0.7922297297297297
+        },
+        {
+          "id": "ost-v1.1-0058",
+          "reference_5gram_coverage_in_full_booklet": 0.8091603053435115
+        },
+        {
+          "id": "ost-v1.1-0059",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0060",
+          "reference_5gram_coverage_in_full_booklet": 0.8185483870967742
+        },
+        {
+          "id": "ost-v1.1-0062",
+          "reference_5gram_coverage_in_full_booklet": 0.8542056074766355
+        },
+        {
+          "id": "ost-v1.1-0063",
+          "reference_5gram_coverage_in_full_booklet": 0.8306527909176916
+        },
+        {
+          "id": "ost-v1.1-0065",
+          "reference_5gram_coverage_in_full_booklet": 0.9323671497584541
+        },
+        {
+          "id": "ost-v1.1-0066",
+          "reference_5gram_coverage_in_full_booklet": 0.896
+        },
+        {
+          "id": "ost-v1.1-0067",
+          "reference_5gram_coverage_in_full_booklet": 0.7565632458233891
+        },
+        {
+          "id": "ost-v1.1-0069",
+          "reference_5gram_coverage_in_full_booklet": 0.8278985507246377
+        },
+        {
+          "id": "ost-v1.1-0070",
+          "reference_5gram_coverage_in_full_booklet": 0.9212598425196851
+        },
+        {
+          "id": "ost-v1.1-0071",
+          "reference_5gram_coverage_in_full_booklet": 0.7848101265822784
+        },
+        {
+          "id": "ost-v1.1-0072",
+          "reference_5gram_coverage_in_full_booklet": 0.9323671497584541
+        },
+        {
+          "id": "ost-v1.1-0073",
+          "reference_5gram_coverage_in_full_booklet": 0.882960413080895
+        },
+        {
+          "id": "ost-v1.1-0074",
+          "reference_5gram_coverage_in_full_booklet": 0.7890466531440162
+        },
+        {
+          "id": "ost-v1.1-0076",
+          "reference_5gram_coverage_in_full_booklet": 0.8153241650294696
+        },
+        {
+          "id": "ost-v1.1-0077",
+          "reference_5gram_coverage_in_full_booklet": 0.8797909407665505
+        },
+        {
+          "id": "ost-v1.1-0078",
+          "reference_5gram_coverage_in_full_booklet": 0.8782608695652174
+        },
+        {
+          "id": "ost-v1.1-0079",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0082",
+          "reference_5gram_coverage_in_full_booklet": 0.6751152073732719
+        },
+        {
+          "id": "ost-v1.1-0083",
+          "reference_5gram_coverage_in_full_booklet": 0.8438985736925515
+        },
+        {
+          "id": "ost-v1.1-0084",
+          "reference_5gram_coverage_in_full_booklet": 0.9135802469135802
+        },
+        {
+          "id": "ost-v1.1-0085",
+          "reference_5gram_coverage_in_full_booklet": 0.7472118959107806
+        },
+        {
+          "id": "ost-v1.1-0086",
+          "reference_5gram_coverage_in_full_booklet": 0.8183716075156576
+        },
+        {
+          "id": "ost-v1.1-0088",
+          "reference_5gram_coverage_in_full_booklet": 0.7428571428571429
+        },
+        {
+          "id": "ost-v1.1-0090",
+          "reference_5gram_coverage_in_full_booklet": 0.9296482412060302
+        },
+        {
+          "id": "ost-v1.1-0091",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-0092",
+          "reference_5gram_coverage_in_full_booklet": 0.8403361344537815
+        },
+        {
+          "id": "ost-v1.1-0093",
+          "reference_5gram_coverage_in_full_booklet": 0.8020408163265306
+        },
+        {
+          "id": "ost-v1.1-0096",
+          "reference_5gram_coverage_in_full_booklet": 0.7758620689655172
+        },
+        {
+          "id": "ost-v1.1-0097",
+          "reference_5gram_coverage_in_full_booklet": 0.792147806004619
+        },
+        {
+          "id": "ost-v1.1-0098",
+          "reference_5gram_coverage_in_full_booklet": 0.8711340206185567
+        },
+        {
+          "id": "ost-v1.1-0100",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-0101",
+          "reference_5gram_coverage_in_full_booklet": 0.8470394736842105
+        },
+        {
+          "id": "ost-v1.1-0102",
+          "reference_5gram_coverage_in_full_booklet": 0.8185483870967742
+        },
+        {
+          "id": "ost-v1.1-0103",
+          "reference_5gram_coverage_in_full_booklet": 0.8730964467005076
+        },
+        {
+          "id": "ost-v1.1-0104",
+          "reference_5gram_coverage_in_full_booklet": 0.79375
+        },
+        {
+          "id": "ost-v1.1-0106",
+          "reference_5gram_coverage_in_full_booklet": 0.8272357723577236
+        },
+        {
+          "id": "ost-v1.1-0108",
+          "reference_5gram_coverage_in_full_booklet": 0.7565632458233891
+        },
+        {
+          "id": "ost-v1.1-0109",
+          "reference_5gram_coverage_in_full_booklet": 0.8734177215189873
+        },
+        {
+          "id": "ost-v1.1-0110",
+          "reference_5gram_coverage_in_full_booklet": 0.8270676691729323
+        },
+        {
+          "id": "ost-v1.1-0111",
+          "reference_5gram_coverage_in_full_booklet": 0.8427672955974843
+        },
+        {
+          "id": "ost-v1.1-0113",
+          "reference_5gram_coverage_in_full_booklet": 0.8814814814814815
+        },
+        {
+          "id": "ost-v1.1-0115",
+          "reference_5gram_coverage_in_full_booklet": 0.7785388127853882
+        },
+        {
+          "id": "ost-v1.1-0117",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0118",
+          "reference_5gram_coverage_in_full_booklet": 0.889763779527559
+        },
+        {
+          "id": "ost-v1.1-0120",
+          "reference_5gram_coverage_in_full_booklet": 0.8389513108614233
+        },
+        {
+          "id": "ost-v1.1-0121",
+          "reference_5gram_coverage_in_full_booklet": 0.8911917098445595
+        },
+        {
+          "id": "ost-v1.1-0122",
+          "reference_5gram_coverage_in_full_booklet": 0.7995391705069125
+        },
+        {
+          "id": "ost-v1.1-0124",
+          "reference_5gram_coverage_in_full_booklet": 0.798469387755102
+        },
+        {
+          "id": "ost-v1.1-0125",
+          "reference_5gram_coverage_in_full_booklet": 0.7348484848484849
+        },
+        {
+          "id": "ost-v1.1-0126",
+          "reference_5gram_coverage_in_full_booklet": 0.9311926605504587
+        },
+        {
+          "id": "ost-v1.1-0127",
+          "reference_5gram_coverage_in_full_booklet": 0.8423645320197044
+        },
+        {
+          "id": "ost-v1.1-0128",
+          "reference_5gram_coverage_in_full_booklet": 0.8205574912891986
+        },
+        {
+          "id": "ost-v1.1-0130",
+          "reference_5gram_coverage_in_full_booklet": 0.9171270718232044
+        },
+        {
+          "id": "ost-v1.1-0131",
+          "reference_5gram_coverage_in_full_booklet": 0.7348484848484849
+        },
+        {
+          "id": "ost-v1.1-0133",
+          "reference_5gram_coverage_in_full_booklet": 0.7602209944751381
+        },
+        {
+          "id": "ost-v1.1-0134",
+          "reference_5gram_coverage_in_full_booklet": 0.8385214007782101
+        },
+        {
+          "id": "ost-v1.1-0135",
+          "reference_5gram_coverage_in_full_booklet": 0.7883597883597884
+        },
+        {
+          "id": "ost-v1.1-0140",
+          "reference_5gram_coverage_in_full_booklet": 0.8306527909176916
+        },
+        {
+          "id": "ost-v1.1-0142",
+          "reference_5gram_coverage_in_full_booklet": 0.8296703296703297
+        },
+        {
+          "id": "ost-v1.1-0143",
+          "reference_5gram_coverage_in_full_booklet": 0.8136645962732919
+        },
+        {
+          "id": "ost-v1.1-0144",
+          "reference_5gram_coverage_in_full_booklet": 0.896
+        },
+        {
+          "id": "ost-v1.1-0147",
+          "reference_5gram_coverage_in_full_booklet": 0.8370672097759674
+        },
+        {
+          "id": "ost-v1.1-0148",
+          "reference_5gram_coverage_in_full_booklet": 0.8270042194092827
+        },
+        {
+          "id": "ost-v1.1-0150",
+          "reference_5gram_coverage_in_full_booklet": 0.8345454545454546
+        },
+        {
+          "id": "ost-v1.1-0152",
+          "reference_5gram_coverage_in_full_booklet": 0.8735632183908046
+        },
+        {
+          "id": "ost-v1.1-0155",
+          "reference_5gram_coverage_in_full_booklet": 0.7922297297297297
+        },
+        {
+          "id": "ost-v1.1-0157",
+          "reference_5gram_coverage_in_full_booklet": 0.9114219114219114
+        },
+        {
+          "id": "ost-v1.1-0159",
+          "reference_5gram_coverage_in_full_booklet": 0.8825757575757576
+        },
+        {
+          "id": "ost-v1.1-0160",
+          "reference_5gram_coverage_in_full_booklet": 0.7916666666666666
+        },
+        {
+          "id": "ost-v1.1-0161",
+          "reference_5gram_coverage_in_full_booklet": 0.8345454545454546
+        },
+        {
+          "id": "ost-v1.1-0162",
+          "reference_5gram_coverage_in_full_booklet": 0.8624338624338624
+        },
+        {
+          "id": "ost-v1.1-0163",
+          "reference_5gram_coverage_in_full_booklet": 0.8542056074766355
+        },
+        {
+          "id": "ost-v1.1-0164",
+          "reference_5gram_coverage_in_full_booklet": 0.8469601677148847
+        },
+        {
+          "id": "ost-v1.1-0165",
+          "reference_5gram_coverage_in_full_booklet": 0.8139097744360902
+        },
+        {
+          "id": "ost-v1.1-0166",
+          "reference_5gram_coverage_in_full_booklet": 0.8910411622276029
+        },
+        {
+          "id": "ost-v1.1-0168",
+          "reference_5gram_coverage_in_full_booklet": 0.8105263157894737
+        },
+        {
+          "id": "ost-v1.1-0171",
+          "reference_5gram_coverage_in_full_booklet": 0.8727272727272727
+        },
+        {
+          "id": "ost-v1.1-0175",
+          "reference_5gram_coverage_in_full_booklet": 0.8194748358862144
+        },
+        {
+          "id": "ost-v1.1-0176",
+          "reference_5gram_coverage_in_full_booklet": 0.8441176470588235
+        },
+        {
+          "id": "ost-v1.1-0177",
+          "reference_5gram_coverage_in_full_booklet": 0.8201320132013201
+        },
+        {
+          "id": "ost-v1.1-0178",
+          "reference_5gram_coverage_in_full_booklet": 0.8541247484909457
+        },
+        {
+          "id": "ost-v1.1-0180",
+          "reference_5gram_coverage_in_full_booklet": 0.8542056074766355
+        },
+        {
+          "id": "ost-v1.1-0181",
+          "reference_5gram_coverage_in_full_booklet": 0.9445005045408678
+        },
+        {
+          "id": "ost-v1.1-0182",
+          "reference_5gram_coverage_in_full_booklet": 0.7473118279569892
+        },
+        {
+          "id": "ost-v1.1-0183",
+          "reference_5gram_coverage_in_full_booklet": 0.7922297297297297
+        },
+        {
+          "id": "ost-v1.1-0184",
+          "reference_5gram_coverage_in_full_booklet": 0.8477157360406091
+        },
+        {
+          "id": "ost-v1.1-0185",
+          "reference_5gram_coverage_in_full_booklet": 0.8173076923076923
+        },
+        {
+          "id": "ost-v1.1-0188",
+          "reference_5gram_coverage_in_full_booklet": 0.7869628550619082
+        },
+        {
+          "id": "ost-v1.1-0189",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0192",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0194",
+          "reference_5gram_coverage_in_full_booklet": 0.8296703296703297
+        },
+        {
+          "id": "ost-v1.1-0195",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-0196",
+          "reference_5gram_coverage_in_full_booklet": 0.8550228310502284
+        },
+        {
+          "id": "ost-v1.1-0197",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-0198",
+          "reference_5gram_coverage_in_full_booklet": 0.8442028985507246
+        },
+        {
+          "id": "ost-v1.1-0200",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-0201",
+          "reference_5gram_coverage_in_full_booklet": 0.8617131062951496
+        },
+        {
+          "id": "ost-v1.1-0202",
+          "reference_5gram_coverage_in_full_booklet": 0.8240534521158129
+        },
+        {
+          "id": "ost-v1.1-0203",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0204",
+          "reference_5gram_coverage_in_full_booklet": 0.8020408163265306
+        },
+        {
+          "id": "ost-v1.1-0206",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-0207",
+          "reference_5gram_coverage_in_full_booklet": 0.7861386138613862
+        },
+        {
+          "id": "ost-v1.1-0209",
+          "reference_5gram_coverage_in_full_booklet": 0.8772321428571429
+        },
+        {
+          "id": "ost-v1.1-0210",
+          "reference_5gram_coverage_in_full_booklet": 0.8240534521158129
+        },
+        {
+          "id": "ost-v1.1-0214",
+          "reference_5gram_coverage_in_full_booklet": 0.9748953974895398
+        },
+        {
+          "id": "ost-v1.1-0216",
+          "reference_5gram_coverage_in_full_booklet": 0.7436440677966102
+        },
+        {
+          "id": "ost-v1.1-0217",
+          "reference_5gram_coverage_in_full_booklet": 0.8185483870967742
+        },
+        {
+          "id": "ost-v1.1-0218",
+          "reference_5gram_coverage_in_full_booklet": 0.8617131062951496
+        },
+        {
+          "id": "ost-v1.1-0219",
+          "reference_5gram_coverage_in_full_booklet": 0.8296703296703297
+        },
+        {
+          "id": "ost-v1.1-0220",
+          "reference_5gram_coverage_in_full_booklet": 0.7436440677966102
+        },
+        {
+          "id": "ost-v1.1-0221",
+          "reference_5gram_coverage_in_full_booklet": 0.8359739049394221
+        },
+        {
+          "id": "ost-v1.1-0222",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-0225",
+          "reference_5gram_coverage_in_full_booklet": 0.7919896640826873
+        },
+        {
+          "id": "ost-v1.1-0226",
+          "reference_5gram_coverage_in_full_booklet": 0.8240534521158129
+        },
+        {
+          "id": "ost-v1.1-0228",
+          "reference_5gram_coverage_in_full_booklet": 0.7959641255605381
+        },
+        {
+          "id": "ost-v1.1-0229",
+          "reference_5gram_coverage_in_full_booklet": 0.8550228310502284
+        },
+        {
+          "id": "ost-v1.1-0230",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-0231",
+          "reference_5gram_coverage_in_full_booklet": 0.8240534521158129
+        },
+        {
+          "id": "ost-v1.1-0232",
+          "reference_5gram_coverage_in_full_booklet": 0.8141993957703928
+        },
+        {
+          "id": "ost-v1.1-0233",
+          "reference_5gram_coverage_in_full_booklet": 0.8385214007782101
+        },
+        {
+          "id": "ost-v1.1-0234",
+          "reference_5gram_coverage_in_full_booklet": 0.9748953974895398
+        },
+        {
+          "id": "ost-v1.1-0237",
+          "reference_5gram_coverage_in_full_booklet": 0.9082969432314411
+        },
+        {
+          "id": "ost-v1.1-0238",
+          "reference_5gram_coverage_in_full_booklet": 0.7919896640826873
+        },
+        {
+          "id": "ost-v1.1-0239",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-0240",
+          "reference_5gram_coverage_in_full_booklet": 0.8812260536398467
+        },
+        {
+          "id": "ost-v1.1-0242",
+          "reference_5gram_coverage_in_full_booklet": 0.7919896640826873
+        },
+        {
+          "id": "ost-v1.1-0246",
+          "reference_5gram_coverage_in_full_booklet": 0.8141993957703928
+        },
+        {
+          "id": "ost-v1.1-0247",
+          "reference_5gram_coverage_in_full_booklet": 0.8278985507246377
+        },
+        {
+          "id": "ost-v1.1-0248",
+          "reference_5gram_coverage_in_full_booklet": 0.9218362282878412
+        },
+        {
+          "id": "ost-v1.1-0249",
+          "reference_5gram_coverage_in_full_booklet": 0.8550228310502284
+        },
+        {
+          "id": "ost-v1.1-0251",
+          "reference_5gram_coverage_in_full_booklet": 0.7890466531440162
+        },
+        {
+          "id": "ost-v1.1-0252",
+          "reference_5gram_coverage_in_full_booklet": 0.7962085308056872
+        },
+        {
+          "id": "ost-v1.1-0255",
+          "reference_5gram_coverage_in_full_booklet": 0.7602209944751381
+        },
+        {
+          "id": "ost-v1.1-0260",
+          "reference_5gram_coverage_in_full_booklet": 0.889763779527559
+        },
+        {
+          "id": "ost-v1.1-0261",
+          "reference_5gram_coverage_in_full_booklet": 0.9243027888446215
+        },
+        {
+          "id": "ost-v1.1-0263",
+          "reference_5gram_coverage_in_full_booklet": 0.8300970873786407
+        },
+        {
+          "id": "ost-v1.1-0264",
+          "reference_5gram_coverage_in_full_booklet": 0.832258064516129
+        },
+        {
+          "id": "ost-v1.1-0265",
+          "reference_5gram_coverage_in_full_booklet": 0.8470394736842105
+        },
+        {
+          "id": "ost-v1.1-0266",
+          "reference_5gram_coverage_in_full_booklet": 0.7861386138613862
+        },
+        {
+          "id": "ost-v1.1-0267",
+          "reference_5gram_coverage_in_full_booklet": 0.8582677165354331
+        },
+        {
+          "id": "ost-v1.1-0270",
+          "reference_5gram_coverage_in_full_booklet": 0.9308755760368663
+        },
+        {
+          "id": "ost-v1.1-0271",
+          "reference_5gram_coverage_in_full_booklet": 0.7428571428571429
+        },
+        {
+          "id": "ost-v1.1-0272",
+          "reference_5gram_coverage_in_full_booklet": 0.8185483870967742
+        },
+        {
+          "id": "ost-v1.1-0273",
+          "reference_5gram_coverage_in_full_booklet": 0.8911917098445595
+        },
+        {
+          "id": "ost-v1.1-0274",
+          "reference_5gram_coverage_in_full_booklet": 0.8359739049394221
+        },
+        {
+          "id": "ost-v1.1-0276",
+          "reference_5gram_coverage_in_full_booklet": 0.901840490797546
+        },
+        {
+          "id": "ost-v1.1-0283",
+          "reference_5gram_coverage_in_full_booklet": 0.8604497354497355
+        },
+        {
+          "id": "ost-v1.1-0284",
+          "reference_5gram_coverage_in_full_booklet": 0.8731501057082452
+        },
+        {
+          "id": "ost-v1.1-0287",
+          "reference_5gram_coverage_in_full_booklet": 0.7959641255605381
+        },
+        {
+          "id": "ost-v1.1-0289",
+          "reference_5gram_coverage_in_full_booklet": 0.8772321428571429
+        },
+        {
+          "id": "ost-v1.1-0290",
+          "reference_5gram_coverage_in_full_booklet": 0.8442028985507246
+        },
+        {
+          "id": "ost-v1.1-0291",
+          "reference_5gram_coverage_in_full_booklet": 0.8240534521158129
+        },
+        {
+          "id": "ost-v1.1-0292",
+          "reference_5gram_coverage_in_full_booklet": 0.7482517482517482
+        },
+        {
+          "id": "ost-v1.1-0294",
+          "reference_5gram_coverage_in_full_booklet": 0.8652849740932642
+        },
+        {
+          "id": "ost-v1.1-0296",
+          "reference_5gram_coverage_in_full_booklet": 0.79375
+        },
+        {
+          "id": "ost-v1.1-0297",
+          "reference_5gram_coverage_in_full_booklet": 0.8812260536398467
+        },
+        {
+          "id": "ost-v1.1-0300",
+          "reference_5gram_coverage_in_full_booklet": 0.768
+        },
+        {
+          "id": "ost-v1.1-0302",
+          "reference_5gram_coverage_in_full_booklet": 0.8427331887201736
+        },
+        {
+          "id": "ost-v1.1-0303",
+          "reference_5gram_coverage_in_full_booklet": 0.7049608355091384
+        },
+        {
+          "id": "ost-v1.1-0306",
+          "reference_5gram_coverage_in_full_booklet": 0.7785388127853882
+        },
+        {
+          "id": "ost-v1.1-0307",
+          "reference_5gram_coverage_in_full_booklet": 0.792147806004619
+        },
+        {
+          "id": "ost-v1.1-0308",
+          "reference_5gram_coverage_in_full_booklet": 0.8581235697940504
+        },
+        {
+          "id": "ost-v1.1-0309",
+          "reference_5gram_coverage_in_full_booklet": 0.9138576779026217
+        },
+        {
+          "id": "ost-v1.1-0310",
+          "reference_5gram_coverage_in_full_booklet": 0.8403669724770643
+        },
+        {
+          "id": "ost-v1.1-0311",
+          "reference_5gram_coverage_in_full_booklet": 0.8983050847457628
+        },
+        {
+          "id": "ost-v1.1-0313",
+          "reference_5gram_coverage_in_full_booklet": 0.7428571428571429
+        },
+        {
+          "id": "ost-v1.1-0314",
+          "reference_5gram_coverage_in_full_booklet": 0.8141993957703928
+        },
+        {
+          "id": "ost-v1.1-0315",
+          "reference_5gram_coverage_in_full_booklet": 0.7919896640826873
+        },
+        {
+          "id": "ost-v1.1-0316",
+          "reference_5gram_coverage_in_full_booklet": 0.896
+        },
+        {
+          "id": "ost-v1.1-0317",
+          "reference_5gram_coverage_in_full_booklet": 0.8605056669572798
+        },
+        {
+          "id": "ost-v1.1-0319",
+          "reference_5gram_coverage_in_full_booklet": 0.8624338624338624
+        },
+        {
+          "id": "ost-v1.1-0322",
+          "reference_5gram_coverage_in_full_booklet": 0.8385214007782101
+        },
+        {
+          "id": "ost-v1.1-0324",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-0325",
+          "reference_5gram_coverage_in_full_booklet": 0.8185483870967742
+        },
+        {
+          "id": "ost-v1.1-0326",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-0327",
+          "reference_5gram_coverage_in_full_booklet": 0.8423645320197044
+        },
+        {
+          "id": "ost-v1.1-0328",
+          "reference_5gram_coverage_in_full_booklet": 0.88510101010101
+        },
+        {
+          "id": "ost-v1.1-0329",
+          "reference_5gram_coverage_in_full_booklet": 0.8296703296703297
+        },
+        {
+          "id": "ost-v1.1-0331",
+          "reference_5gram_coverage_in_full_booklet": 0.9215686274509803
+        },
+        {
+          "id": "ost-v1.1-0334",
+          "reference_5gram_coverage_in_full_booklet": 0.8755411255411255
+        },
+        {
+          "id": "ost-v1.1-0335",
+          "reference_5gram_coverage_in_full_booklet": 0.7354838709677419
+        },
+        {
+          "id": "ost-v1.1-0336",
+          "reference_5gram_coverage_in_full_booklet": 0.9880952380952381
+        },
+        {
+          "id": "ost-v1.1-0337",
+          "reference_5gram_coverage_in_full_booklet": 0.7904984423676013
+        },
+        {
+          "id": "ost-v1.1-0340",
+          "reference_5gram_coverage_in_full_booklet": 0.9082969432314411
+        },
+        {
+          "id": "ost-v1.1-0342",
+          "reference_5gram_coverage_in_full_booklet": 0.8933764135702746
+        },
+        {
+          "id": "ost-v1.1-0346",
+          "reference_5gram_coverage_in_full_booklet": 0.8526672311600338
+        },
+        {
+          "id": "ost-v1.1-0347",
+          "reference_5gram_coverage_in_full_booklet": 0.8450363196125908
+        },
+        {
+          "id": "ost-v1.1-0351",
+          "reference_5gram_coverage_in_full_booklet": 0.7617079889807162
+        },
+        {
+          "id": "ost-v1.1-0352",
+          "reference_5gram_coverage_in_full_booklet": 0.8416988416988417
+        },
+        {
+          "id": "ost-v1.1-0353",
+          "reference_5gram_coverage_in_full_booklet": 0.9181286549707602
+        },
+        {
+          "id": "ost-v1.1-0356",
+          "reference_5gram_coverage_in_full_booklet": 0.7916666666666666
+        },
+        {
+          "id": "ost-v1.1-0357",
+          "reference_5gram_coverage_in_full_booklet": 0.9135802469135802
+        },
+        {
+          "id": "ost-v1.1-0358",
+          "reference_5gram_coverage_in_full_booklet": 0.8306527909176916
+        },
+        {
+          "id": "ost-v1.1-0360",
+          "reference_5gram_coverage_in_full_booklet": 0.8616279069767442
+        },
+        {
+          "id": "ost-v1.1-0364",
+          "reference_5gram_coverage_in_full_booklet": 0.8652849740932642
+        },
+        {
+          "id": "ost-v1.1-0365",
+          "reference_5gram_coverage_in_full_booklet": 0.8652849740932642
+        },
+        {
+          "id": "ost-v1.1-0366",
+          "reference_5gram_coverage_in_full_booklet": 0.9324324324324325
+        },
+        {
+          "id": "ost-v1.1-0367",
+          "reference_5gram_coverage_in_full_booklet": 0.88510101010101
+        },
+        {
+          "id": "ost-v1.1-0368",
+          "reference_5gram_coverage_in_full_booklet": 0.8155172413793104
+        },
+        {
+          "id": "ost-v1.1-0369",
+          "reference_5gram_coverage_in_full_booklet": 0.9324324324324325
+        },
+        {
+          "id": "ost-v1.1-0370",
+          "reference_5gram_coverage_in_full_booklet": 0.8370672097759674
+        },
+        {
+          "id": "ost-v1.1-0372",
+          "reference_5gram_coverage_in_full_booklet": 0.7049608355091384
+        },
+        {
+          "id": "ost-v1.1-0373",
+          "reference_5gram_coverage_in_full_booklet": 0.9324324324324325
+        },
+        {
+          "id": "ost-v1.1-0374",
+          "reference_5gram_coverage_in_full_booklet": 0.9395348837209302
+        },
+        {
+          "id": "ost-v1.1-0376",
+          "reference_5gram_coverage_in_full_booklet": 0.93
+        },
+        {
+          "id": "ost-v1.1-0377",
+          "reference_5gram_coverage_in_full_booklet": 0.7049608355091384
+        },
+        {
+          "id": "ost-v1.1-0378",
+          "reference_5gram_coverage_in_full_booklet": 0.8616279069767442
+        },
+        {
+          "id": "ost-v1.1-0379",
+          "reference_5gram_coverage_in_full_booklet": 0.8270042194092827
+        },
+        {
+          "id": "ost-v1.1-0380",
+          "reference_5gram_coverage_in_full_booklet": 0.7721518987341772
+        },
+        {
+          "id": "ost-v1.1-0382",
+          "reference_5gram_coverage_in_full_booklet": 0.9395348837209302
+        },
+        {
+          "id": "ost-v1.1-0383",
+          "reference_5gram_coverage_in_full_booklet": 0.9841269841269841
+        },
+        {
+          "id": "ost-v1.1-0387",
+          "reference_5gram_coverage_in_full_booklet": 0.8375286041189931
+        },
+        {
+          "id": "ost-v1.1-0388",
+          "reference_5gram_coverage_in_full_booklet": 0.9135802469135802
+        },
+        {
+          "id": "ost-v1.1-0389",
+          "reference_5gram_coverage_in_full_booklet": 0.9395348837209302
+        },
+        {
+          "id": "ost-v1.1-0390",
+          "reference_5gram_coverage_in_full_booklet": 0.8370672097759674
+        },
+        {
+          "id": "ost-v1.1-0393",
+          "reference_5gram_coverage_in_full_booklet": 0.8616279069767442
+        },
+        {
+          "id": "ost-v1.1-0394",
+          "reference_5gram_coverage_in_full_booklet": 0.7472118959107806
+        },
+        {
+          "id": "ost-v1.1-0396",
+          "reference_5gram_coverage_in_full_booklet": 0.889763779527559
+        },
+        {
+          "id": "ost-v1.1-0398",
+          "reference_5gram_coverage_in_full_booklet": 0.9841269841269841
+        },
+        {
+          "id": "ost-v1.1-0401",
+          "reference_5gram_coverage_in_full_booklet": 0.748730964467005
+        },
+        {
+          "id": "ost-v1.1-0402",
+          "reference_5gram_coverage_in_full_booklet": 0.7049608355091384
+        },
+        {
+          "id": "ost-v1.1-0403",
+          "reference_5gram_coverage_in_full_booklet": 0.93
+        },
+        {
+          "id": "ost-v1.1-0404",
+          "reference_5gram_coverage_in_full_booklet": 0.76775956284153
+        },
+        {
+          "id": "ost-v1.1-0405",
+          "reference_5gram_coverage_in_full_booklet": 0.9311926605504587
+        },
+        {
+          "id": "ost-v1.1-0406",
+          "reference_5gram_coverage_in_full_booklet": 0.7810945273631841
+        },
+        {
+          "id": "ost-v1.1-0407",
+          "reference_5gram_coverage_in_full_booklet": 0.8616279069767442
+        },
+        {
+          "id": "ost-v1.1-0408",
+          "reference_5gram_coverage_in_full_booklet": 0.9296482412060302
+        },
+        {
+          "id": "ost-v1.1-0409",
+          "reference_5gram_coverage_in_full_booklet": 0.917910447761194
+        },
+        {
+          "id": "ost-v1.1-0413",
+          "reference_5gram_coverage_in_full_booklet": 0.9130434782608695
+        },
+        {
+          "id": "ost-v1.1-0414",
+          "reference_5gram_coverage_in_full_booklet": 0.8442028985507246
+        },
+        {
+          "id": "ost-v1.1-0416",
+          "reference_5gram_coverage_in_full_booklet": 0.7348484848484849
+        },
+        {
+          "id": "ost-v1.1-0417",
+          "reference_5gram_coverage_in_full_booklet": 0.7890466531440162
+        },
+        {
+          "id": "ost-v1.1-0418",
+          "reference_5gram_coverage_in_full_booklet": 0.7482517482517482
+        },
+        {
+          "id": "ost-v1.1-0419",
+          "reference_5gram_coverage_in_full_booklet": 0.832258064516129
+        },
+        {
+          "id": "ost-v1.1-0421",
+          "reference_5gram_coverage_in_full_booklet": 0.8206686930091185
+        },
+        {
+          "id": "ost-v1.1-0424",
+          "reference_5gram_coverage_in_full_booklet": 0.8139097744360902
+        },
+        {
+          "id": "ost-v1.1-0426",
+          "reference_5gram_coverage_in_full_booklet": 0.8306527909176916
+        },
+        {
+          "id": "ost-v1.1-0427",
+          "reference_5gram_coverage_in_full_booklet": 0.9212598425196851
+        },
+        {
+          "id": "ost-v1.1-0428",
+          "reference_5gram_coverage_in_full_booklet": 0.901840490797546
+        },
+        {
+          "id": "ost-v1.1-0429",
+          "reference_5gram_coverage_in_full_booklet": 0.8543689320388349
+        },
+        {
+          "id": "ost-v1.1-0430",
+          "reference_5gram_coverage_in_full_booklet": 0.8734177215189873
+        },
+        {
+          "id": "ost-v1.1-0431",
+          "reference_5gram_coverage_in_full_booklet": 0.886654478976234
+        },
+        {
+          "id": "ost-v1.1-0433",
+          "reference_5gram_coverage_in_full_booklet": 0.7983870967741935
+        },
+        {
+          "id": "ost-v1.1-0435",
+          "reference_5gram_coverage_in_full_booklet": 0.8652849740932642
+        },
+        {
+          "id": "ost-v1.1-0438",
+          "reference_5gram_coverage_in_full_booklet": 0.9841269841269841
+        },
+        {
+          "id": "ost-v1.1-0439",
+          "reference_5gram_coverage_in_full_booklet": 0.7974683544303798
+        },
+        {
+          "id": "ost-v1.1-0440",
+          "reference_5gram_coverage_in_full_booklet": 0.8582677165354331
+        },
+        {
+          "id": "ost-v1.1-0441",
+          "reference_5gram_coverage_in_full_booklet": 0.8375286041189931
+        },
+        {
+          "id": "ost-v1.1-0444",
+          "reference_5gram_coverage_in_full_booklet": 0.9135802469135802
+        },
+        {
+          "id": "ost-v1.1-0445",
+          "reference_5gram_coverage_in_full_booklet": 0.8270042194092827
+        },
+        {
+          "id": "ost-v1.1-0447",
+          "reference_5gram_coverage_in_full_booklet": 0.9032258064516129
+        },
+        {
+          "id": "ost-v1.1-0450",
+          "reference_5gram_coverage_in_full_booklet": 0.8345454545454546
+        },
+        {
+          "id": "ost-v1.1-0451",
+          "reference_5gram_coverage_in_full_booklet": 0.7472118959107806
+        },
+        {
+          "id": "ost-v1.1-0453",
+          "reference_5gram_coverage_in_full_booklet": 0.9395348837209302
+        },
+        {
+          "id": "ost-v1.1-0455",
+          "reference_5gram_coverage_in_full_booklet": 0.8492569002123143
+        },
+        {
+          "id": "ost-v1.1-0457",
+          "reference_5gram_coverage_in_full_booklet": 0.8270676691729323
+        },
+        {
+          "id": "ost-v1.1-0458",
+          "reference_5gram_coverage_in_full_booklet": 0.8270676691729323
+        },
+        {
+          "id": "ost-v1.1-0459",
+          "reference_5gram_coverage_in_full_booklet": 0.8604497354497355
+        },
+        {
+          "id": "ost-v1.1-0461",
+          "reference_5gram_coverage_in_full_booklet": 0.8469601677148847
+        },
+        {
+          "id": "ost-v1.1-0464",
+          "reference_5gram_coverage_in_full_booklet": 0.8370672097759674
+        },
+        {
+          "id": "ost-v1.1-0465",
+          "reference_5gram_coverage_in_full_booklet": 0.7927710843373494
+        },
+        {
+          "id": "ost-v1.1-0466",
+          "reference_5gram_coverage_in_full_booklet": 0.8066298342541437
+        },
+        {
+          "id": "ost-v1.1-0467",
+          "reference_5gram_coverage_in_full_booklet": 0.7482517482517482
+        },
+        {
+          "id": "ost-v1.1-0468",
+          "reference_5gram_coverage_in_full_booklet": 0.8153153153153153
+        },
+        {
+          "id": "ost-v1.1-0470",
+          "reference_5gram_coverage_in_full_booklet": 0.88510101010101
+        },
+        {
+          "id": "ost-v1.1-0471",
+          "reference_5gram_coverage_in_full_booklet": 0.8527443105756358
+        },
+        {
+          "id": "ost-v1.1-0472",
+          "reference_5gram_coverage_in_full_booklet": 0.6751152073732719
+        },
+        {
+          "id": "ost-v1.1-0474",
+          "reference_5gram_coverage_in_full_booklet": 0.6547945205479452
+        },
+        {
+          "id": "ost-v1.1-0475",
+          "reference_5gram_coverage_in_full_booklet": 0.9308755760368663
+        },
+        {
+          "id": "ost-v1.1-0476",
+          "reference_5gram_coverage_in_full_booklet": 0.8882235528942116
+        },
+        {
+          "id": "ost-v1.1-0477",
+          "reference_5gram_coverage_in_full_booklet": 0.7916666666666666
+        },
+        {
+          "id": "ost-v1.1-0478",
+          "reference_5gram_coverage_in_full_booklet": 0.7995391705069125
+        },
+        {
+          "id": "ost-v1.1-0483",
+          "reference_5gram_coverage_in_full_booklet": 0.8345454545454546
+        },
+        {
+          "id": "ost-v1.1-0484",
+          "reference_5gram_coverage_in_full_booklet": 0.7789473684210526
+        },
+        {
+          "id": "ost-v1.1-0486",
+          "reference_5gram_coverage_in_full_booklet": 0.889763779527559
+        },
+        {
+          "id": "ost-v1.1-0487",
+          "reference_5gram_coverage_in_full_booklet": 0.7721518987341772
+        },
+        {
+          "id": "ost-v1.1-0488",
+          "reference_5gram_coverage_in_full_booklet": 0.7785388127853882
+        },
+        {
+          "id": "ost-v1.1-0489",
+          "reference_5gram_coverage_in_full_booklet": 0.8854166666666666
+        },
+        {
+          "id": "ost-v1.1-0490",
+          "reference_5gram_coverage_in_full_booklet": 0.9324324324324325
+        },
+        {
+          "id": "ost-v1.1-0492",
+          "reference_5gram_coverage_in_full_booklet": 0.8543689320388349
+        },
+        {
+          "id": "ost-v1.1-0493",
+          "reference_5gram_coverage_in_full_booklet": 0.8477842003853564
+        },
+        {
+          "id": "ost-v1.1-0494",
+          "reference_5gram_coverage_in_full_booklet": 0.8507795100222717
+        },
+        {
+          "id": "ost-v1.1-0495",
+          "reference_5gram_coverage_in_full_booklet": 0.8811028144744399
+        },
+        {
+          "id": "ost-v1.1-0496",
+          "reference_5gram_coverage_in_full_booklet": 0.7837314396384765
+        },
+        {
+          "id": "ost-v1.1-0497",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0498",
+          "reference_5gram_coverage_in_full_booklet": 0.849845882870982
+        },
+        {
+          "id": "ost-v1.1-0501",
+          "reference_5gram_coverage_in_full_booklet": 0.7566858940744625
+        },
+        {
+          "id": "ost-v1.1-0502",
+          "reference_5gram_coverage_in_full_booklet": 0.7277158774373259
+        },
+        {
+          "id": "ost-v1.1-0503",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0504",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0507",
+          "reference_5gram_coverage_in_full_booklet": 0.8589285714285714
+        },
+        {
+          "id": "ost-v1.1-0508",
+          "reference_5gram_coverage_in_full_booklet": 0.8589285714285714
+        },
+        {
+          "id": "ost-v1.1-0509",
+          "reference_5gram_coverage_in_full_booklet": 0.8231495280675608
+        },
+        {
+          "id": "ost-v1.1-0510",
+          "reference_5gram_coverage_in_full_booklet": 0.8043363299841354
+        },
+        {
+          "id": "ost-v1.1-0511",
+          "reference_5gram_coverage_in_full_booklet": 0.8680078508341511
+        },
+        {
+          "id": "ost-v1.1-0512",
+          "reference_5gram_coverage_in_full_booklet": 0.8335983041865395
+        },
+        {
+          "id": "ost-v1.1-0514",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0516",
+          "reference_5gram_coverage_in_full_booklet": 0.8231495280675608
+        },
+        {
+          "id": "ost-v1.1-0517",
+          "reference_5gram_coverage_in_full_booklet": 0.8640611724723875
+        },
+        {
+          "id": "ost-v1.1-0518",
+          "reference_5gram_coverage_in_full_booklet": 0.8005988023952095
+        },
+        {
+          "id": "ost-v1.1-0520",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0522",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0523",
+          "reference_5gram_coverage_in_full_booklet": 0.8478057889822596
+        },
+        {
+          "id": "ost-v1.1-0524",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0527",
+          "reference_5gram_coverage_in_full_booklet": 0.755765819041987
+        },
+        {
+          "id": "ost-v1.1-0528",
+          "reference_5gram_coverage_in_full_booklet": 0.8370892018779342
+        },
+        {
+          "id": "ost-v1.1-0529",
+          "reference_5gram_coverage_in_full_booklet": 0.8440709617180205
+        },
+        {
+          "id": "ost-v1.1-0530",
+          "reference_5gram_coverage_in_full_booklet": 0.8673946957878315
+        },
+        {
+          "id": "ost-v1.1-0531",
+          "reference_5gram_coverage_in_full_booklet": 0.7945544554455446
+        },
+        {
+          "id": "ost-v1.1-0532",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0534",
+          "reference_5gram_coverage_in_full_booklet": 0.8097068716962998
+        },
+        {
+          "id": "ost-v1.1-0536",
+          "reference_5gram_coverage_in_full_booklet": 0.7901754385964912
+        },
+        {
+          "id": "ost-v1.1-0537",
+          "reference_5gram_coverage_in_full_booklet": 0.7901754385964912
+        },
+        {
+          "id": "ost-v1.1-0538",
+          "reference_5gram_coverage_in_full_booklet": 0.8048048048048048
+        },
+        {
+          "id": "ost-v1.1-0539",
+          "reference_5gram_coverage_in_full_booklet": 0.7901754385964912
+        },
+        {
+          "id": "ost-v1.1-0540",
+          "reference_5gram_coverage_in_full_booklet": 0.8257065948855989
+        },
+        {
+          "id": "ost-v1.1-0541",
+          "reference_5gram_coverage_in_full_booklet": 0.8362244897959183
+        },
+        {
+          "id": "ost-v1.1-0542",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0543",
+          "reference_5gram_coverage_in_full_booklet": 0.8335983041865395
+        },
+        {
+          "id": "ost-v1.1-0544",
+          "reference_5gram_coverage_in_full_booklet": 0.8058252427184466
+        },
+        {
+          "id": "ost-v1.1-0545",
+          "reference_5gram_coverage_in_full_booklet": 0.8257065948855989
+        },
+        {
+          "id": "ost-v1.1-0546",
+          "reference_5gram_coverage_in_full_booklet": 0.7898789878987899
+        },
+        {
+          "id": "ost-v1.1-0547",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0549",
+          "reference_5gram_coverage_in_full_booklet": 0.8734472049689441
+        },
+        {
+          "id": "ost-v1.1-0550",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0551",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0552",
+          "reference_5gram_coverage_in_full_booklet": 0.755765819041987
+        },
+        {
+          "id": "ost-v1.1-0556",
+          "reference_5gram_coverage_in_full_booklet": 0.7771047849788008
+        },
+        {
+          "id": "ost-v1.1-0557",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0559",
+          "reference_5gram_coverage_in_full_booklet": 0.8589285714285714
+        },
+        {
+          "id": "ost-v1.1-0560",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0565",
+          "reference_5gram_coverage_in_full_booklet": 0.8048048048048048
+        },
+        {
+          "id": "ost-v1.1-0570",
+          "reference_5gram_coverage_in_full_booklet": 0.8195057369814651
+        },
+        {
+          "id": "ost-v1.1-0571",
+          "reference_5gram_coverage_in_full_booklet": 0.8048048048048048
+        },
+        {
+          "id": "ost-v1.1-0574",
+          "reference_5gram_coverage_in_full_booklet": 0.8697986577181208
+        },
+        {
+          "id": "ost-v1.1-0576",
+          "reference_5gram_coverage_in_full_booklet": 0.8404145077720208
+        },
+        {
+          "id": "ost-v1.1-0578",
+          "reference_5gram_coverage_in_full_booklet": 0.8697986577181208
+        },
+        {
+          "id": "ost-v1.1-0580",
+          "reference_5gram_coverage_in_full_booklet": 0.7856517935258093
+        },
+        {
+          "id": "ost-v1.1-0581",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0582",
+          "reference_5gram_coverage_in_full_booklet": 0.7289416846652268
+        },
+        {
+          "id": "ost-v1.1-0583",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0585",
+          "reference_5gram_coverage_in_full_booklet": 0.8058252427184466
+        },
+        {
+          "id": "ost-v1.1-0586",
+          "reference_5gram_coverage_in_full_booklet": 0.8005988023952095
+        },
+        {
+          "id": "ost-v1.1-0588",
+          "reference_5gram_coverage_in_full_booklet": 0.8640611724723875
+        },
+        {
+          "id": "ost-v1.1-0589",
+          "reference_5gram_coverage_in_full_booklet": 0.7788894447223612
+        },
+        {
+          "id": "ost-v1.1-0594",
+          "reference_5gram_coverage_in_full_booklet": 0.7898789878987899
+        },
+        {
+          "id": "ost-v1.1-0595",
+          "reference_5gram_coverage_in_full_booklet": 0.7566858940744625
+        },
+        {
+          "id": "ost-v1.1-0596",
+          "reference_5gram_coverage_in_full_booklet": 0.8640611724723875
+        },
+        {
+          "id": "ost-v1.1-0598",
+          "reference_5gram_coverage_in_full_booklet": 0.813774354327141
+        },
+        {
+          "id": "ost-v1.1-0600",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0601",
+          "reference_5gram_coverage_in_full_booklet": 0.7901754385964912
+        },
+        {
+          "id": "ost-v1.1-0603",
+          "reference_5gram_coverage_in_full_booklet": 0.7478684531059683
+        },
+        {
+          "id": "ost-v1.1-0607",
+          "reference_5gram_coverage_in_full_booklet": 0.8097068716962998
+        },
+        {
+          "id": "ost-v1.1-0611",
+          "reference_5gram_coverage_in_full_booklet": 0.7771047849788008
+        },
+        {
+          "id": "ost-v1.1-0612",
+          "reference_5gram_coverage_in_full_booklet": 0.859504132231405
+        },
+        {
+          "id": "ost-v1.1-0614",
+          "reference_5gram_coverage_in_full_booklet": 0.823803967327888
+        },
+        {
+          "id": "ost-v1.1-0615",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0619",
+          "reference_5gram_coverage_in_full_booklet": 0.8572949946751863
+        },
+        {
+          "id": "ost-v1.1-0620",
+          "reference_5gram_coverage_in_full_booklet": 0.7277158774373259
+        },
+        {
+          "id": "ost-v1.1-0621",
+          "reference_5gram_coverage_in_full_booklet": 0.7460799190692969
+        },
+        {
+          "id": "ost-v1.1-0623",
+          "reference_5gram_coverage_in_full_booklet": 0.8257065948855989
+        },
+        {
+          "id": "ost-v1.1-0624",
+          "reference_5gram_coverage_in_full_booklet": 0.8595271210013908
+        },
+        {
+          "id": "ost-v1.1-0625",
+          "reference_5gram_coverage_in_full_booklet": 0.7289416846652268
+        },
+        {
+          "id": "ost-v1.1-0626",
+          "reference_5gram_coverage_in_full_booklet": 0.849845882870982
+        },
+        {
+          "id": "ost-v1.1-0627",
+          "reference_5gram_coverage_in_full_booklet": 0.8440709617180205
+        },
+        {
+          "id": "ost-v1.1-0628",
+          "reference_5gram_coverage_in_full_booklet": 0.7931034482758621
+        },
+        {
+          "id": "ost-v1.1-0629",
+          "reference_5gram_coverage_in_full_booklet": 0.8222705839680813
+        },
+        {
+          "id": "ost-v1.1-0630",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0632",
+          "reference_5gram_coverage_in_full_booklet": 0.7945544554455446
+        },
+        {
+          "id": "ost-v1.1-0636",
+          "reference_5gram_coverage_in_full_booklet": 0.8043363299841354
+        },
+        {
+          "id": "ost-v1.1-0639",
+          "reference_5gram_coverage_in_full_booklet": 0.8206761391474767
+        },
+        {
+          "id": "ost-v1.1-0641",
+          "reference_5gram_coverage_in_full_booklet": 0.8095435684647303
+        },
+        {
+          "id": "ost-v1.1-0644",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0645",
+          "reference_5gram_coverage_in_full_booklet": 0.796
+        },
+        {
+          "id": "ost-v1.1-0648",
+          "reference_5gram_coverage_in_full_booklet": 0.7565359477124183
+        },
+        {
+          "id": "ost-v1.1-0649",
+          "reference_5gram_coverage_in_full_booklet": 0.8560727661851257
+        },
+        {
+          "id": "ost-v1.1-0650",
+          "reference_5gram_coverage_in_full_booklet": 0.8370892018779342
+        },
+        {
+          "id": "ost-v1.1-0651",
+          "reference_5gram_coverage_in_full_booklet": 0.7888165038002172
+        },
+        {
+          "id": "ost-v1.1-0652",
+          "reference_5gram_coverage_in_full_booklet": 0.8257065948855989
+        },
+        {
+          "id": "ost-v1.1-0653",
+          "reference_5gram_coverage_in_full_booklet": 0.8680078508341511
+        },
+        {
+          "id": "ost-v1.1-0654",
+          "reference_5gram_coverage_in_full_booklet": 0.8147720715522215
+        },
+        {
+          "id": "ost-v1.1-0655",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0656",
+          "reference_5gram_coverage_in_full_booklet": 0.7837314396384765
+        },
+        {
+          "id": "ost-v1.1-0657",
+          "reference_5gram_coverage_in_full_booklet": 0.8058252427184466
+        },
+        {
+          "id": "ost-v1.1-0658",
+          "reference_5gram_coverage_in_full_booklet": 0.8688600556070436
+        },
+        {
+          "id": "ost-v1.1-0659",
+          "reference_5gram_coverage_in_full_booklet": 0.7359550561797753
+        },
+        {
+          "id": "ost-v1.1-0662",
+          "reference_5gram_coverage_in_full_booklet": 0.8524361948955916
+        },
+        {
+          "id": "ost-v1.1-0663",
+          "reference_5gram_coverage_in_full_booklet": 0.8595271210013908
+        },
+        {
+          "id": "ost-v1.1-0665",
+          "reference_5gram_coverage_in_full_booklet": 0.8811028144744399
+        },
+        {
+          "id": "ost-v1.1-0666",
+          "reference_5gram_coverage_in_full_booklet": 0.7837314396384765
+        },
+        {
+          "id": "ost-v1.1-0667",
+          "reference_5gram_coverage_in_full_booklet": 0.812691914022518
+        },
+        {
+          "id": "ost-v1.1-0668",
+          "reference_5gram_coverage_in_full_booklet": 0.8169611307420495
+        },
+        {
+          "id": "ost-v1.1-0670",
+          "reference_5gram_coverage_in_full_booklet": 0.886964886964887
+        },
+        {
+          "id": "ost-v1.1-0671",
+          "reference_5gram_coverage_in_full_booklet": 0.8129649309245484
+        },
+        {
+          "id": "ost-v1.1-0672",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0673",
+          "reference_5gram_coverage_in_full_booklet": 0.8222705839680813
+        },
+        {
+          "id": "ost-v1.1-0674",
+          "reference_5gram_coverage_in_full_booklet": 0.8058252427184466
+        },
+        {
+          "id": "ost-v1.1-0675",
+          "reference_5gram_coverage_in_full_booklet": 0.7633202467750981
+        },
+        {
+          "id": "ost-v1.1-0676",
+          "reference_5gram_coverage_in_full_booklet": 0.7633202467750981
+        },
+        {
+          "id": "ost-v1.1-0677",
+          "reference_5gram_coverage_in_full_booklet": 0.8206761391474767
+        },
+        {
+          "id": "ost-v1.1-0679",
+          "reference_5gram_coverage_in_full_booklet": 0.7744107744107744
+        },
+        {
+          "id": "ost-v1.1-0681",
+          "reference_5gram_coverage_in_full_booklet": 0.8474721508140531
+        },
+        {
+          "id": "ost-v1.1-0683",
+          "reference_5gram_coverage_in_full_booklet": 0.8206761391474767
+        },
+        {
+          "id": "ost-v1.1-0684",
+          "reference_5gram_coverage_in_full_booklet": 0.8170563961485557
+        },
+        {
+          "id": "ost-v1.1-0687",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0688",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0689",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0691",
+          "reference_5gram_coverage_in_full_booklet": 0.7837314396384765
+        },
+        {
+          "id": "ost-v1.1-0692",
+          "reference_5gram_coverage_in_full_booklet": 0.8524361948955916
+        },
+        {
+          "id": "ost-v1.1-0695",
+          "reference_5gram_coverage_in_full_booklet": 0.7945544554455446
+        },
+        {
+          "id": "ost-v1.1-0698",
+          "reference_5gram_coverage_in_full_booklet": 0.8673946957878315
+        },
+        {
+          "id": "ost-v1.1-0699",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0704",
+          "reference_5gram_coverage_in_full_booklet": 0.8478057889822596
+        },
+        {
+          "id": "ost-v1.1-0706",
+          "reference_5gram_coverage_in_full_booklet": 0.8811028144744399
+        },
+        {
+          "id": "ost-v1.1-0708",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0709",
+          "reference_5gram_coverage_in_full_booklet": 0.7744107744107744
+        },
+        {
+          "id": "ost-v1.1-0710",
+          "reference_5gram_coverage_in_full_booklet": 0.8811028144744399
+        },
+        {
+          "id": "ost-v1.1-0711",
+          "reference_5gram_coverage_in_full_booklet": 0.8442982456140351
+        },
+        {
+          "id": "ost-v1.1-0712",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0715",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0716",
+          "reference_5gram_coverage_in_full_booklet": 0.8048048048048048
+        },
+        {
+          "id": "ost-v1.1-0718",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0719",
+          "reference_5gram_coverage_in_full_booklet": 0.8206761391474767
+        },
+        {
+          "id": "ost-v1.1-0720",
+          "reference_5gram_coverage_in_full_booklet": 0.869215291750503
+        },
+        {
+          "id": "ost-v1.1-0722",
+          "reference_5gram_coverage_in_full_booklet": 0.8474721508140531
+        },
+        {
+          "id": "ost-v1.1-0724",
+          "reference_5gram_coverage_in_full_booklet": 0.7898465171192444
+        },
+        {
+          "id": "ost-v1.1-0725",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0729",
+          "reference_5gram_coverage_in_full_booklet": 0.8478057889822596
+        },
+        {
+          "id": "ost-v1.1-0730",
+          "reference_5gram_coverage_in_full_booklet": 0.8546296296296296
+        },
+        {
+          "id": "ost-v1.1-0734",
+          "reference_5gram_coverage_in_full_booklet": 0.7945544554455446
+        },
+        {
+          "id": "ost-v1.1-0735",
+          "reference_5gram_coverage_in_full_booklet": 0.8399814471243042
+        },
+        {
+          "id": "ost-v1.1-0736",
+          "reference_5gram_coverage_in_full_booklet": 0.845442536327609
+        },
+        {
+          "id": "ost-v1.1-0738",
+          "reference_5gram_coverage_in_full_booklet": 0.8811028144744399
+        },
+        {
+          "id": "ost-v1.1-0739",
+          "reference_5gram_coverage_in_full_booklet": 0.7888165038002172
+        },
+        {
+          "id": "ost-v1.1-0740",
+          "reference_5gram_coverage_in_full_booklet": 0.8363984674329502
+        },
+        {
+          "id": "ost-v1.1-0741",
+          "reference_5gram_coverage_in_full_booklet": 0.8688600556070436
+        },
+        {
+          "id": "ost-v1.1-0744",
+          "reference_5gram_coverage_in_full_booklet": 0.8478057889822596
+        },
+        {
+          "id": "ost-v1.1-0745",
+          "reference_5gram_coverage_in_full_booklet": 0.8680078508341511
+        },
+        {
+          "id": "ost-v1.1-0747",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0751",
+          "reference_5gram_coverage_in_full_booklet": 0.8431952662721893
+        },
+        {
+          "id": "ost-v1.1-0752",
+          "reference_5gram_coverage_in_full_booklet": 0.8206761391474767
+        },
+        {
+          "id": "ost-v1.1-0754",
+          "reference_5gram_coverage_in_full_booklet": 0.7277158774373259
+        },
+        {
+          "id": "ost-v1.1-0755",
+          "reference_5gram_coverage_in_full_booklet": 0.8222705839680813
+        },
+        {
+          "id": "ost-v1.1-0758",
+          "reference_5gram_coverage_in_full_booklet": 0.7633202467750981
+        },
+        {
+          "id": "ost-v1.1-0760",
+          "reference_5gram_coverage_in_full_booklet": 0.813774354327141
+        },
+        {
+          "id": "ost-v1.1-0762",
+          "reference_5gram_coverage_in_full_booklet": 0.8031111111111111
+        },
+        {
+          "id": "ost-v1.1-0763",
+          "reference_5gram_coverage_in_full_booklet": 0.845442536327609
+        },
+        {
+          "id": "ost-v1.1-0764",
+          "reference_5gram_coverage_in_full_booklet": 0.8169611307420495
+        },
+        {
+          "id": "ost-v1.1-0766",
+          "reference_5gram_coverage_in_full_booklet": 0.850609756097561
+        },
+        {
+          "id": "ost-v1.1-0769",
+          "reference_5gram_coverage_in_full_booklet": 0.8355989804587935
+        },
+        {
+          "id": "ost-v1.1-0770",
+          "reference_5gram_coverage_in_full_booklet": 0.8582844965370272
+        },
+        {
+          "id": "ost-v1.1-0771",
+          "reference_5gram_coverage_in_full_booklet": 0.8546754020250149
+        },
+        {
+          "id": "ost-v1.1-0775",
+          "reference_5gram_coverage_in_full_booklet": 0.7898465171192444
+        },
+        {
+          "id": "ost-v1.1-0776",
+          "reference_5gram_coverage_in_full_booklet": 0.8058252427184466
+        },
+        {
+          "id": "ost-v1.1-0779",
+          "reference_5gram_coverage_in_full_booklet": 0.7633202467750981
+        },
+        {
+          "id": "ost-v1.1-0780",
+          "reference_5gram_coverage_in_full_booklet": 0.7945544554455446
+        },
+        {
+          "id": "ost-v1.1-0781",
+          "reference_5gram_coverage_in_full_booklet": 0.7289416846652268
+        },
+        {
+          "id": "ost-v1.1-0782",
+          "reference_5gram_coverage_in_full_booklet": 0.8031111111111111
+        },
+        {
+          "id": "ost-v1.1-0783",
+          "reference_5gram_coverage_in_full_booklet": 0.8524361948955916
+        },
+        {
+          "id": "ost-v1.1-0785",
+          "reference_5gram_coverage_in_full_booklet": 0.7901754385964912
+        },
+        {
+          "id": "ost-v1.1-0790",
+          "reference_5gram_coverage_in_full_booklet": 0.8335983041865395
+        },
+        {
+          "id": "ost-v1.1-0792",
+          "reference_5gram_coverage_in_full_booklet": 0.8440709617180205
+        },
+        {
+          "id": "ost-v1.1-0793",
+          "reference_5gram_coverage_in_full_booklet": 0.8301973382285452
+        },
+        {
+          "id": "ost-v1.1-0794",
+          "reference_5gram_coverage_in_full_booklet": 0.849845882870982
+        },
+        {
+          "id": "ost-v1.1-0796",
+          "reference_5gram_coverage_in_full_booklet": 0.8058252427184466
+        },
+        {
+          "id": "ost-v1.1-0797",
+          "reference_5gram_coverage_in_full_booklet": 0.7856517935258093
+        },
+        {
+          "id": "ost-v1.1-0799",
+          "reference_5gram_coverage_in_full_booklet": 0.8680078508341511
+        },
+        {
+          "id": "ost-v1.1-0800",
+          "reference_5gram_coverage_in_full_booklet": 0.7363636363636363
+        },
+        {
+          "id": "ost-v1.1-0801",
+          "reference_5gram_coverage_in_full_booklet": 0.8442982456140351
+        },
+        {
+          "id": "ost-v1.1-0804",
+          "reference_5gram_coverage_in_full_booklet": 0.8474721508140531
+        },
+        {
+          "id": "ost-v1.1-0808",
+          "reference_5gram_coverage_in_full_booklet": 0.7898789878987899
+        },
+        {
+          "id": "ost-v1.1-0809",
+          "reference_5gram_coverage_in_full_booklet": 0.869215291750503
+        },
+        {
+          "id": "ost-v1.1-0810",
+          "reference_5gram_coverage_in_full_booklet": 0.7771047849788008
+        },
+        {
+          "id": "ost-v1.1-0812",
+          "reference_5gram_coverage_in_full_booklet": 0.7931034482758621
+        },
+        {
+          "id": "ost-v1.1-0813",
+          "reference_5gram_coverage_in_full_booklet": 0.7479849543256314
+        },
+        {
+          "id": "ost-v1.1-0814",
+          "reference_5gram_coverage_in_full_booklet": 0.886964886964887
+        },
+        {
+          "id": "ost-v1.1-0815",
+          "reference_5gram_coverage_in_full_booklet": 0.8689866939611054
+        },
+        {
+          "id": "ost-v1.1-0816",
+          "reference_5gram_coverage_in_full_booklet": 0.8323529411764706
+        },
+        {
+          "id": "ost-v1.1-0819",
+          "reference_5gram_coverage_in_full_booklet": 0.8440709617180205
+        },
+        {
+          "id": "ost-v1.1-0820",
+          "reference_5gram_coverage_in_full_booklet": 0.7898789878987899
+        },
+        {
+          "id": "ost-v1.1-0821",
+          "reference_5gram_coverage_in_full_booklet": 0.7771604938271605
+        },
+        {
+          "id": "ost-v1.1-0823",
+          "reference_5gram_coverage_in_full_booklet": 0.8388603456328818
+        },
+        {
+          "id": "ost-v1.1-0825",
+          "reference_5gram_coverage_in_full_booklet": 0.8560727661851257
+        },
+        {
+          "id": "ost-v1.1-0826",
+          "reference_5gram_coverage_in_full_booklet": 0.8688600556070436
+        },
+        {
+          "id": "ost-v1.1-0827",
+          "reference_5gram_coverage_in_full_booklet": 0.7959798994974875
+        },
+        {
+          "id": "ost-v1.1-0828",
+          "reference_5gram_coverage_in_full_booklet": 0.852475752935171
+        },
+        {
+          "id": "ost-v1.1-0830",
+          "reference_5gram_coverage_in_full_booklet": 0.8048048048048048
+        },
+        {
+          "id": "ost-v1.1-0831",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0835",
+          "reference_5gram_coverage_in_full_booklet": 0.8673946957878315
+        },
+        {
+          "id": "ost-v1.1-0839",
+          "reference_5gram_coverage_in_full_booklet": 0.852475752935171
+        },
+        {
+          "id": "ost-v1.1-0840",
+          "reference_5gram_coverage_in_full_booklet": 0.8640611724723875
+        },
+        {
+          "id": "ost-v1.1-0845",
+          "reference_5gram_coverage_in_full_booklet": 0.852475752935171
+        },
+        {
+          "id": "ost-v1.1-0849",
+          "reference_5gram_coverage_in_full_booklet": 0.7359550561797753
+        },
+        {
+          "id": "ost-v1.1-0854",
+          "reference_5gram_coverage_in_full_booklet": 0.8442982456140351
+        },
+        {
+          "id": "ost-v1.1-0856",
+          "reference_5gram_coverage_in_full_booklet": 0.8366483283961066
+        },
+        {
+          "id": "ost-v1.1-0857",
+          "reference_5gram_coverage_in_full_booklet": 0.8222705839680813
+        },
+        {
+          "id": "ost-v1.1-0858",
+          "reference_5gram_coverage_in_full_booklet": 0.7717391304347826
+        },
+        {
+          "id": "ost-v1.1-0859",
+          "reference_5gram_coverage_in_full_booklet": 0.7898465171192444
+        },
+        {
+          "id": "ost-v1.1-0860",
+          "reference_5gram_coverage_in_full_booklet": 0.7946793997271487
+        },
+        {
+          "id": "ost-v1.1-0862",
+          "reference_5gram_coverage_in_full_booklet": 0.8323529411764706
+        },
+        {
+          "id": "ost-v1.1-0863",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0866",
+          "reference_5gram_coverage_in_full_booklet": 0.8546754020250149
+        },
+        {
+          "id": "ost-v1.1-0868",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0869",
+          "reference_5gram_coverage_in_full_booklet": 0.8582844965370272
+        },
+        {
+          "id": "ost-v1.1-0870",
+          "reference_5gram_coverage_in_full_booklet": 0.7359550561797753
+        },
+        {
+          "id": "ost-v1.1-0872",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0873",
+          "reference_5gram_coverage_in_full_booklet": 0.8363984674329502
+        },
+        {
+          "id": "ost-v1.1-0876",
+          "reference_5gram_coverage_in_full_booklet": 0.8005988023952095
+        },
+        {
+          "id": "ost-v1.1-0877",
+          "reference_5gram_coverage_in_full_booklet": 0.852475752935171
+        },
+        {
+          "id": "ost-v1.1-0879",
+          "reference_5gram_coverage_in_full_booklet": 0.8366483283961066
+        },
+        {
+          "id": "ost-v1.1-0881",
+          "reference_5gram_coverage_in_full_booklet": 0.8734472049689441
+        },
+        {
+          "id": "ost-v1.1-0883",
+          "reference_5gram_coverage_in_full_booklet": 0.755765819041987
+        },
+        {
+          "id": "ost-v1.1-0886",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0888",
+          "reference_5gram_coverage_in_full_booklet": 0.845442536327609
+        },
+        {
+          "id": "ost-v1.1-0889",
+          "reference_5gram_coverage_in_full_booklet": 0.8195057369814651
+        },
+        {
+          "id": "ost-v1.1-0890",
+          "reference_5gram_coverage_in_full_booklet": 0.8673946957878315
+        },
+        {
+          "id": "ost-v1.1-0891",
+          "reference_5gram_coverage_in_full_booklet": 0.8546754020250149
+        },
+        {
+          "id": "ost-v1.1-0894",
+          "reference_5gram_coverage_in_full_booklet": 0.8546296296296296
+        },
+        {
+          "id": "ost-v1.1-0895",
+          "reference_5gram_coverage_in_full_booklet": 0.8442982456140351
+        },
+        {
+          "id": "ost-v1.1-0899",
+          "reference_5gram_coverage_in_full_booklet": 0.7479849543256314
+        },
+        {
+          "id": "ost-v1.1-0900",
+          "reference_5gram_coverage_in_full_booklet": 0.8640611724723875
+        },
+        {
+          "id": "ost-v1.1-0901",
+          "reference_5gram_coverage_in_full_booklet": 0.8404145077720208
+        },
+        {
+          "id": "ost-v1.1-0902",
+          "reference_5gram_coverage_in_full_booklet": 0.8734472049689441
+        },
+        {
+          "id": "ost-v1.1-0905",
+          "reference_5gram_coverage_in_full_booklet": 0.8335983041865395
+        },
+        {
+          "id": "ost-v1.1-0906",
+          "reference_5gram_coverage_in_full_booklet": 0.8366483283961066
+        },
+        {
+          "id": "ost-v1.1-0910",
+          "reference_5gram_coverage_in_full_booklet": 0.8407079646017699
+        },
+        {
+          "id": "ost-v1.1-0911",
+          "reference_5gram_coverage_in_full_booklet": 0.8107714701601164
+        },
+        {
+          "id": "ost-v1.1-0914",
+          "reference_5gram_coverage_in_full_booklet": 0.8775923115832068
+        },
+        {
+          "id": "ost-v1.1-0916",
+          "reference_5gram_coverage_in_full_booklet": 0.7946793997271487
+        },
+        {
+          "id": "ost-v1.1-0918",
+          "reference_5gram_coverage_in_full_booklet": 0.8370044052863436
+        },
+        {
+          "id": "ost-v1.1-0921",
+          "reference_5gram_coverage_in_full_booklet": 0.8169611307420495
+        },
+        {
+          "id": "ost-v1.1-0923",
+          "reference_5gram_coverage_in_full_booklet": 0.8129649309245484
+        },
+        {
+          "id": "ost-v1.1-0924",
+          "reference_5gram_coverage_in_full_booklet": 0.7901754385964912
+        },
+        {
+          "id": "ost-v1.1-0925",
+          "reference_5gram_coverage_in_full_booklet": 0.8524361948955916
+        },
+        {
+          "id": "ost-v1.1-0926",
+          "reference_5gram_coverage_in_full_booklet": 0.8442982456140351
+        },
+        {
+          "id": "ost-v1.1-0927",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0930",
+          "reference_5gram_coverage_in_full_booklet": 0.8276283618581907
+        },
+        {
+          "id": "ost-v1.1-0931",
+          "reference_5gram_coverage_in_full_booklet": 0.8404145077720208
+        },
+        {
+          "id": "ost-v1.1-0932",
+          "reference_5gram_coverage_in_full_booklet": 0.7837314396384765
+        },
+        {
+          "id": "ost-v1.1-0933",
+          "reference_5gram_coverage_in_full_booklet": 0.8363984674329502
+        },
+        {
+          "id": "ost-v1.1-0934",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0935",
+          "reference_5gram_coverage_in_full_booklet": 0.8595271210013908
+        },
+        {
+          "id": "ost-v1.1-0939",
+          "reference_5gram_coverage_in_full_booklet": 0.7888165038002172
+        },
+        {
+          "id": "ost-v1.1-0940",
+          "reference_5gram_coverage_in_full_booklet": 0.7898465171192444
+        },
+        {
+          "id": "ost-v1.1-0941",
+          "reference_5gram_coverage_in_full_booklet": 0.8363984674329502
+        },
+        {
+          "id": "ost-v1.1-0942",
+          "reference_5gram_coverage_in_full_booklet": 0.8005988023952095
+        },
+        {
+          "id": "ost-v1.1-0945",
+          "reference_5gram_coverage_in_full_booklet": 0.8301973382285452
+        },
+        {
+          "id": "ost-v1.1-0947",
+          "reference_5gram_coverage_in_full_booklet": 0.8129649309245484
+        },
+        {
+          "id": "ost-v1.1-0948",
+          "reference_5gram_coverage_in_full_booklet": 0.869215291750503
+        },
+        {
+          "id": "ost-v1.1-0949",
+          "reference_5gram_coverage_in_full_booklet": 0.8546296296296296
+        },
+        {
+          "id": "ost-v1.1-0950",
+          "reference_5gram_coverage_in_full_booklet": 0.8673946957878315
+        },
+        {
+          "id": "ost-v1.1-0951",
+          "reference_5gram_coverage_in_full_booklet": 0.8362244897959183
+        },
+        {
+          "id": "ost-v1.1-0953",
+          "reference_5gram_coverage_in_full_booklet": 0.7959798994974875
+        },
+        {
+          "id": "ost-v1.1-0954",
+          "reference_5gram_coverage_in_full_booklet": 0.8169611307420495
+        },
+        {
+          "id": "ost-v1.1-0955",
+          "reference_5gram_coverage_in_full_booklet": 0.8222705839680813
+        },
+        {
+          "id": "ost-v1.1-0956",
+          "reference_5gram_coverage_in_full_booklet": 0.8231495280675608
+        },
+        {
+          "id": "ost-v1.1-0957",
+          "reference_5gram_coverage_in_full_booklet": 0.8640611724723875
+        },
+        {
+          "id": "ost-v1.1-0958",
+          "reference_5gram_coverage_in_full_booklet": 0.8689866939611054
+        },
+        {
+          "id": "ost-v1.1-0960",
+          "reference_5gram_coverage_in_full_booklet": 0.8582844965370272
+        },
+        {
+          "id": "ost-v1.1-0961",
+          "reference_5gram_coverage_in_full_booklet": 0.8811028144744399
+        },
+        {
+          "id": "ost-v1.1-0962",
+          "reference_5gram_coverage_in_full_booklet": 0.755804643714972
+        },
+        {
+          "id": "ost-v1.1-0966",
+          "reference_5gram_coverage_in_full_booklet": 0.812691914022518
+        },
+        {
+          "id": "ost-v1.1-0967",
+          "reference_5gram_coverage_in_full_booklet": 0.7771047849788008
+        },
+        {
+          "id": "ost-v1.1-0968",
+          "reference_5gram_coverage_in_full_booklet": 0.829744616925388
+        },
+        {
+          "id": "ost-v1.1-0970",
+          "reference_5gram_coverage_in_full_booklet": 0.7277158774373259
+        },
+        {
+          "id": "ost-v1.1-0971",
+          "reference_5gram_coverage_in_full_booklet": 0.849845882870982
+        },
+        {
+          "id": "ost-v1.1-0972",
+          "reference_5gram_coverage_in_full_booklet": 0.8399814471243042
+        },
+        {
+          "id": "ost-v1.1-0974",
+          "reference_5gram_coverage_in_full_booklet": 0.840316573556797
+        },
+        {
+          "id": "ost-v1.1-0975",
+          "reference_5gram_coverage_in_full_booklet": 0.7359550561797753
+        },
+        {
+          "id": "ost-v1.1-0977",
+          "reference_5gram_coverage_in_full_booklet": 0.8656626506024097
+        },
+        {
+          "id": "ost-v1.1-0979",
+          "reference_5gram_coverage_in_full_booklet": 0.8595271210013908
+        },
+        {
+          "id": "ost-v1.1-0985",
+          "reference_5gram_coverage_in_full_booklet": 0.755765819041987
+        },
+        {
+          "id": "ost-v1.1-0986",
+          "reference_5gram_coverage_in_full_booklet": 0.8170563961485557
+        },
+        {
+          "id": "ost-v1.1-0987",
+          "reference_5gram_coverage_in_full_booklet": 0.8339606859054789
+        },
+        {
+          "id": "ost-v1.1-0988",
+          "reference_5gram_coverage_in_full_booklet": 0.8388603456328818
+        },
+        {
+          "id": "ost-v1.1-0989",
+          "reference_5gram_coverage_in_full_booklet": 0.8546754020250149
+        },
+        {
+          "id": "ost-v1.1-0990",
+          "reference_5gram_coverage_in_full_booklet": 0.7599318955732123
+        },
+        {
+          "id": "ost-v1.1-0992",
+          "reference_5gram_coverage_in_full_booklet": 0.886964886964887
+        },
+        {
+          "id": "ost-v1.1-0994",
+          "reference_5gram_coverage_in_full_booklet": 0.8574635241301908
+        },
+        {
+          "id": "ost-v1.1-0998",
+          "reference_5gram_coverage_in_full_booklet": 0.8313492063492064
+        },
+        {
+          "id": "ost-v1.1-1000",
+          "reference_5gram_coverage_in_full_booklet": 0.8270676691729323
+        },
+        {
+          "id": "ost-v1.1-1003",
+          "reference_5gram_coverage_in_full_booklet": 0.7375
+        },
+        {
+          "id": "ost-v1.1-1005",
+          "reference_5gram_coverage_in_full_booklet": 0.9674418604651163
+        },
+        {
+          "id": "ost-v1.1-1006",
+          "reference_5gram_coverage_in_full_booklet": 0.7096774193548387
+        },
+        {
+          "id": "ost-v1.1-1007",
+          "reference_5gram_coverage_in_full_booklet": 0.8096846846846847
+        },
+        {
+          "id": "ost-v1.1-1010",
+          "reference_5gram_coverage_in_full_booklet": 0.8032454361054767
+        },
+        {
+          "id": "ost-v1.1-1011",
+          "reference_5gram_coverage_in_full_booklet": 0.7035294117647058
+        },
+        {
+          "id": "ost-v1.1-1015",
+          "reference_5gram_coverage_in_full_booklet": 0.8389513108614233
+        },
+        {
+          "id": "ost-v1.1-1016",
+          "reference_5gram_coverage_in_full_booklet": 0.8872832369942196
+        },
+        {
+          "id": "ost-v1.1-1017",
+          "reference_5gram_coverage_in_full_booklet": 0.8132911392405063
+        },
+        {
+          "id": "ost-v1.1-1018",
+          "reference_5gram_coverage_in_full_booklet": 0.8015414258188824
+        },
+        {
+          "id": "ost-v1.1-1023",
+          "reference_5gram_coverage_in_full_booklet": 0.8728813559322034
+        },
+        {
+          "id": "ost-v1.1-1024",
+          "reference_5gram_coverage_in_full_booklet": 0.8728813559322034
+        },
+        {
+          "id": "ost-v1.1-1025",
+          "reference_5gram_coverage_in_full_booklet": 0.9917864476386037
+        },
+        {
+          "id": "ost-v1.1-1026",
+          "reference_5gram_coverage_in_full_booklet": 0.9372549019607843
+        },
+        {
+          "id": "ost-v1.1-1027",
+          "reference_5gram_coverage_in_full_booklet": 0.9917864476386037
+        },
+        {
+          "id": "ost-v1.1-1030",
+          "reference_5gram_coverage_in_full_booklet": 0.8132911392405063
+        },
+        {
+          "id": "ost-v1.1-1031",
+          "reference_5gram_coverage_in_full_booklet": 0.9917864476386037
+        },
+        {
+          "id": "ost-v1.1-1032",
+          "reference_5gram_coverage_in_full_booklet": 0.8306527909176916
+        },
+        {
+          "id": "ost-v1.1-1033",
+          "reference_5gram_coverage_in_full_booklet": 0.8132911392405063
+        },
+        {
+          "id": "ost-v1.1-1038",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-1039",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-1041",
+          "reference_5gram_coverage_in_full_booklet": 0.8269230769230769
+        },
+        {
+          "id": "ost-v1.1-1042",
+          "reference_5gram_coverage_in_full_booklet": 0.8015414258188824
+        },
+        {
+          "id": "ost-v1.1-1046",
+          "reference_5gram_coverage_in_full_booklet": 0.8205574912891986
+        },
+        {
+          "id": "ost-v1.1-1047",
+          "reference_5gram_coverage_in_full_booklet": 0.7487179487179487
+        },
+        {
+          "id": "ost-v1.1-1048",
+          "reference_5gram_coverage_in_full_booklet": 0.8112874779541446
+        },
+        {
+          "id": "ost-v1.1-1049",
+          "reference_5gram_coverage_in_full_booklet": 0.8905109489051095
+        },
+        {
+          "id": "ost-v1.1-1050",
+          "reference_5gram_coverage_in_full_booklet": 0.7983870967741935
+        },
+        {
+          "id": "ost-v1.1-1051",
+          "reference_5gram_coverage_in_full_booklet": 0.8205574912891986
+        },
+        {
+          "id": "ost-v1.1-1055",
+          "reference_5gram_coverage_in_full_booklet": 0.7985781990521327
+        },
+        {
+          "id": "ost-v1.1-1060",
+          "reference_5gram_coverage_in_full_booklet": 0.7178770949720671
+        },
+        {
+          "id": "ost-v1.1-1062",
+          "reference_5gram_coverage_in_full_booklet": 0.8080808080808081
+        },
+        {
+          "id": "ost-v1.1-1069",
+          "reference_5gram_coverage_in_full_booklet": 0.8063492063492064
+        },
+        {
+          "id": "ost-v1.1-1070",
+          "reference_5gram_coverage_in_full_booklet": 0.8735244519392917
+        },
+        {
+          "id": "ost-v1.1-1071",
+          "reference_5gram_coverage_in_full_booklet": 0.9695945945945946
+        },
+        {
+          "id": "ost-v1.1-1073",
+          "reference_5gram_coverage_in_full_booklet": 0.8205574912891986
+        },
+        {
+          "id": "ost-v1.1-1077",
+          "reference_5gram_coverage_in_full_booklet": 0.5954773869346733
+        },
+        {
+          "id": "ost-v1.1-1079",
+          "reference_5gram_coverage_in_full_booklet": 0.6141732283464567
+        },
+        {
+          "id": "ost-v1.1-1081",
+          "reference_5gram_coverage_in_full_booklet": 0.7894736842105263
+        },
+        {
+          "id": "ost-v1.1-1082",
+          "reference_5gram_coverage_in_full_booklet": 0.8318181818181818
+        },
+        {
+          "id": "ost-v1.1-1083",
+          "reference_5gram_coverage_in_full_booklet": 0.7100591715976331
+        },
+        {
+          "id": "ost-v1.1-1086",
+          "reference_5gram_coverage_in_full_booklet": 0.934156378600823
+        },
+        {
+          "id": "ost-v1.1-1087",
+          "reference_5gram_coverage_in_full_booklet": 0.9917864476386037
+        },
+        {
+          "id": "ost-v1.1-1088",
+          "reference_5gram_coverage_in_full_booklet": 0.8015414258188824
+        },
+        {
+          "id": "ost-v1.1-1089",
+          "reference_5gram_coverage_in_full_booklet": 0.7983870967741935
+        },
+        {
+          "id": "ost-v1.1-1090",
+          "reference_5gram_coverage_in_full_booklet": 0.7663316582914573
+        },
+        {
+          "id": "ost-v1.1-1092",
+          "reference_5gram_coverage_in_full_booklet": 0.8621553884711779
+        },
+        {
+          "id": "ost-v1.1-1093",
+          "reference_5gram_coverage_in_full_booklet": 0.7783132530120482
+        },
+        {
+          "id": "ost-v1.1-1095",
+          "reference_5gram_coverage_in_full_booklet": 0.9724310776942355
+        },
+        {
+          "id": "ost-v1.1-1097",
+          "reference_5gram_coverage_in_full_booklet": 0.8382352941176471
+        },
+        {
+          "id": "ost-v1.1-1098",
+          "reference_5gram_coverage_in_full_booklet": 0.8766114180478821
+        },
+        {
+          "id": "ost-v1.1-1101",
+          "reference_5gram_coverage_in_full_booklet": 0.785377358490566
+        },
+        {
+          "id": "ost-v1.1-1102",
+          "reference_5gram_coverage_in_full_booklet": 0.8073170731707318
+        },
+        {
+          "id": "ost-v1.1-1103",
+          "reference_5gram_coverage_in_full_booklet": 0.838150289017341
+        },
+        {
+          "id": "ost-v1.1-1104",
+          "reference_5gram_coverage_in_full_booklet": 0.8700173310225303
+        },
+        {
+          "id": "ost-v1.1-1105",
+          "reference_5gram_coverage_in_full_booklet": 0.901840490797546
+        },
+        {
+          "id": "ost-v1.1-1106",
+          "reference_5gram_coverage_in_full_booklet": 0.8730964467005076
+        },
+        {
+          "id": "ost-v1.1-1107",
+          "reference_5gram_coverage_in_full_booklet": 0.8
+        },
+        {
+          "id": "ost-v1.1-1108",
+          "reference_5gram_coverage_in_full_booklet": 0.9223300970873787
+        },
+        {
+          "id": "ost-v1.1-1111",
+          "reference_5gram_coverage_in_full_booklet": 0.8112874779541446
+        },
+        {
+          "id": "ost-v1.1-1112",
+          "reference_5gram_coverage_in_full_booklet": 0.7255936675461742
+        },
+        {
+          "id": "ost-v1.1-1113",
+          "reference_5gram_coverage_in_full_booklet": 0.9156626506024096
+        },
+        {
+          "id": "ost-v1.1-1114",
+          "reference_5gram_coverage_in_full_booklet": 0.8143322475570033
+        },
+        {
+          "id": "ost-v1.1-1115",
+          "reference_5gram_coverage_in_full_booklet": 0.9264214046822743
+        },
+        {
+          "id": "ost-v1.1-1117",
+          "reference_5gram_coverage_in_full_booklet": 0.75
+        },
+        {
+          "id": "ost-v1.1-1119",
+          "reference_5gram_coverage_in_full_booklet": 0.8066298342541437
+        },
+        {
+          "id": "ost-v1.1-1121",
+          "reference_5gram_coverage_in_full_booklet": 0.9691119691119691
+        },
+        {
+          "id": "ost-v1.1-1124",
+          "reference_5gram_coverage_in_full_booklet": 0.7771084337349398
+        },
+        {
+          "id": "ost-v1.1-1125",
+          "reference_5gram_coverage_in_full_booklet": 0.838150289017341
+        },
+        {
+          "id": "ost-v1.1-1127",
+          "reference_5gram_coverage_in_full_booklet": 0.8403361344537815
+        },
+        {
+          "id": "ost-v1.1-1128",
+          "reference_5gram_coverage_in_full_booklet": 0.9114583333333334
+        },
+        {
+          "id": "ost-v1.1-1129",
+          "reference_5gram_coverage_in_full_booklet": 0.9382239382239382
+        },
+        {
+          "id": "ost-v1.1-1131",
+          "reference_5gram_coverage_in_full_booklet": 0.8577154308617234
+        },
+        {
+          "id": "ost-v1.1-1132",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-1133",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-1135",
+          "reference_5gram_coverage_in_full_booklet": 0.819366852886406
+        },
+        {
+          "id": "ost-v1.1-1136",
+          "reference_5gram_coverage_in_full_booklet": 0.8798076923076923
+        },
+        {
+          "id": "ost-v1.1-1139",
+          "reference_5gram_coverage_in_full_booklet": 0.7487179487179487
+        },
+        {
+          "id": "ost-v1.1-1140",
+          "reference_5gram_coverage_in_full_booklet": 0.8191268191268192
+        },
+        {
+          "id": "ost-v1.1-1141",
+          "reference_5gram_coverage_in_full_booklet": 0.9130434782608695
+        },
+        {
+          "id": "ost-v1.1-1142",
+          "reference_5gram_coverage_in_full_booklet": 0.9423868312757202
+        },
+        {
+          "id": "ost-v1.1-1143",
+          "reference_5gram_coverage_in_full_booklet": 0.8451882845188284
+        },
+        {
+          "id": "ost-v1.1-1145",
+          "reference_5gram_coverage_in_full_booklet": 0.8132911392405063
+        },
+        {
+          "id": "ost-v1.1-1148",
+          "reference_5gram_coverage_in_full_booklet": 0.8088235294117647
+        },
+        {
+          "id": "ost-v1.1-1149",
+          "reference_5gram_coverage_in_full_booklet": 0.9039301310043668
+        },
+        {
+          "id": "ost-v1.1-1150",
+          "reference_5gram_coverage_in_full_booklet": 0.8270042194092827
+        },
+        {
+          "id": "ost-v1.1-1152",
+          "reference_5gram_coverage_in_full_booklet": 0.8155172413793104
+        },
+        {
+          "id": "ost-v1.1-1155",
+          "reference_5gram_coverage_in_full_booklet": 0.9372549019607843
+        },
+        {
+          "id": "ost-v1.1-1156",
+          "reference_5gram_coverage_in_full_booklet": 0.8823529411764706
+        },
+        {
+          "id": "ost-v1.1-1157",
+          "reference_5gram_coverage_in_full_booklet": 0.8385214007782101
+        },
+        {
+          "id": "ost-v1.1-1158",
+          "reference_5gram_coverage_in_full_booklet": 0.9880952380952381
+        },
+        {
+          "id": "ost-v1.1-1160",
+          "reference_5gram_coverage_in_full_booklet": 0.8997035573122529
+        },
+        {
+          "id": "ost-v1.1-1163",
+          "reference_5gram_coverage_in_full_booklet": 0.8735244519392917
+        },
+        {
+          "id": "ost-v1.1-1165",
+          "reference_5gram_coverage_in_full_booklet": 0.8020408163265306
+        },
+        {
+          "id": "ost-v1.1-1166",
+          "reference_5gram_coverage_in_full_booklet": 0.8298611111111112
+        },
+        {
+          "id": "ost-v1.1-1169",
+          "reference_5gram_coverage_in_full_booklet": 0.7995391705069125
+        },
+        {
+          "id": "ost-v1.1-1171",
+          "reference_5gram_coverage_in_full_booklet": 0.8376068376068376
+        },
+        {
+          "id": "ost-v1.1-1178",
+          "reference_5gram_coverage_in_full_booklet": 0.8405253283302064
+        },
+        {
+          "id": "ost-v1.1-1180",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-1181",
+          "reference_5gram_coverage_in_full_booklet": 0.952
+        },
+        {
+          "id": "ost-v1.1-1182",
+          "reference_5gram_coverage_in_full_booklet": 0.8361581920903954
+        },
+        {
+          "id": "ost-v1.1-1183",
+          "reference_5gram_coverage_in_full_booklet": 0.8728813559322034
+        },
+        {
+          "id": "ost-v1.1-1184",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-1185",
+          "reference_5gram_coverage_in_full_booklet": 0.9732142857142857
+        },
+        {
+          "id": "ost-v1.1-1186",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-1187",
+          "reference_5gram_coverage_in_full_booklet": 0.8431372549019608
+        },
+        {
+          "id": "ost-v1.1-1188",
+          "reference_5gram_coverage_in_full_booklet": 0.8080808080808081
+        },
+        {
+          "id": "ost-v1.1-1190",
+          "reference_5gram_coverage_in_full_booklet": 0.8728813559322034
+        },
+        {
+          "id": "ost-v1.1-1191",
+          "reference_5gram_coverage_in_full_booklet": 0.8728813559322034
+        },
+        {
+          "id": "ost-v1.1-1193",
+          "reference_5gram_coverage_in_full_booklet": 0.9732142857142857
+        },
+        {
+          "id": "ost-v1.1-1195",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-1197",
+          "reference_5gram_coverage_in_full_booklet": 0.7375
+        },
+        {
+          "id": "ost-v1.1-1198",
+          "reference_5gram_coverage_in_full_booklet": 0.7315634218289085
+        },
+        {
+          "id": "ost-v1.1-1199",
+          "reference_5gram_coverage_in_full_booklet": 0.9732142857142857
+        },
+        {
+          "id": "ost-v1.1-1202",
+          "reference_5gram_coverage_in_full_booklet": 0.8361581920903954
+        },
+        {
+          "id": "ost-v1.1-1203",
+          "reference_5gram_coverage_in_full_booklet": 0.7965451055662188
+        },
+        {
+          "id": "ost-v1.1-1205",
+          "reference_5gram_coverage_in_full_booklet": 0.9493333333333334
+        },
+        {
+          "id": "ost-v1.1-1206",
+          "reference_5gram_coverage_in_full_booklet": 0.9732142857142857
+        },
+        {
+          "id": "ost-v1.1-1207",
+          "reference_5gram_coverage_in_full_booklet": 0.8112874779541446
+        },
+        {
+          "id": "ost-v1.1-1208",
+          "reference_5gram_coverage_in_full_booklet": 0.8824626865671642
+        },
+        {
+          "id": "ost-v1.1-1209",
+          "reference_5gram_coverage_in_full_booklet": 0.8088235294117647
+        },
+        {
+          "id": "ost-v1.1-1210",
+          "reference_5gram_coverage_in_full_booklet": 0.8823529411764706
+        },
+        {
+          "id": "ost-v1.1-1212",
+          "reference_5gram_coverage_in_full_booklet": 0.8361581920903954
+        },
+        {
+          "id": "ost-v1.1-1213",
+          "reference_5gram_coverage_in_full_booklet": 0.9382239382239382
+        },
+        {
+          "id": "ost-v1.1-1214",
+          "reference_5gram_coverage_in_full_booklet": 0.9163498098859315
+        },
+        {
+          "id": "ost-v1.1-1216",
+          "reference_5gram_coverage_in_full_booklet": 0.838150289017341
+        },
+        {
+          "id": "ost-v1.1-1218",
+          "reference_5gram_coverage_in_full_booklet": 0.8155172413793104
+        },
+        {
+          "id": "ost-v1.1-1219",
+          "reference_5gram_coverage_in_full_booklet": 0.8828451882845189
+        },
+        {
+          "id": "ost-v1.1-1222",
+          "reference_5gram_coverage_in_full_booklet": 0.8427672955974843
+        },
+        {
+          "id": "ost-v1.1-1226",
+          "reference_5gram_coverage_in_full_booklet": 0.9032258064516129
+        },
+        {
+          "id": "ost-v1.1-1227",
+          "reference_5gram_coverage_in_full_booklet": 0.9348534201954397
+        },
+        {
+          "id": "ost-v1.1-1228",
+          "reference_5gram_coverage_in_full_booklet": 0.937799043062201
+        },
+        {
+          "id": "ost-v1.1-1230",
+          "reference_5gram_coverage_in_full_booklet": 0.8820754716981132
+        },
+        {
+          "id": "ost-v1.1-1231",
+          "reference_5gram_coverage_in_full_booklet": 0.9130434782608695
+        },
+        {
+          "id": "ost-v1.1-1232",
+          "reference_5gram_coverage_in_full_booklet": 0.7699805068226121
+        },
+        {
+          "id": "ost-v1.1-1233",
+          "reference_5gram_coverage_in_full_booklet": 0.7473118279569892
+        },
+        {
+          "id": "ost-v1.1-1235",
+          "reference_5gram_coverage_in_full_booklet": 0.9241706161137441
+        },
+        {
+          "id": "ost-v1.1-1236",
+          "reference_5gram_coverage_in_full_booklet": 0.9408450704225352
+        },
+        {
+          "id": "ost-v1.1-1239",
+          "reference_5gram_coverage_in_full_booklet": 0.9
+        },
+        {
+          "id": "ost-v1.1-1240",
+          "reference_5gram_coverage_in_full_booklet": 0.7771084337349398
+        },
+        {
+          "id": "ost-v1.1-1241",
+          "reference_5gram_coverage_in_full_booklet": 0.8695652173913043
+        },
+        {
+          "id": "ost-v1.1-1242",
+          "reference_5gram_coverage_in_full_booklet": 0.8474164133738602
+        },
+        {
+          "id": "ost-v1.1-1243",
+          "reference_5gram_coverage_in_full_booklet": 0.8547717842323651
+        },
+        {
+          "id": "ost-v1.1-1244",
+          "reference_5gram_coverage_in_full_booklet": 0.9181286549707602
+        },
+        {
+          "id": "ost-v1.1-1245",
+          "reference_5gram_coverage_in_full_booklet": 0.8582677165354331
+        },
+        {
+          "id": "ost-v1.1-1246",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-1249",
+          "reference_5gram_coverage_in_full_booklet": 0.8830645161290323
+        },
+        {
+          "id": "ost-v1.1-1252",
+          "reference_5gram_coverage_in_full_booklet": 0.9288888888888889
+        },
+        {
+          "id": "ost-v1.1-1257",
+          "reference_5gram_coverage_in_full_booklet": 0.8823529411764706
+        },
+        {
+          "id": "ost-v1.1-1259",
+          "reference_5gram_coverage_in_full_booklet": 0.8222748815165877
+        },
+        {
+          "id": "ost-v1.1-1260",
+          "reference_5gram_coverage_in_full_booklet": 0.8106382978723404
+        },
+        {
+          "id": "ost-v1.1-1261",
+          "reference_5gram_coverage_in_full_booklet": 0.768
+        },
+        {
+          "id": "ost-v1.1-1262",
+          "reference_5gram_coverage_in_full_booklet": 0.9732142857142857
+        },
+        {
+          "id": "ost-v1.1-1265",
+          "reference_5gram_coverage_in_full_booklet": 0.8087954110898662
+        },
+        {
+          "id": "ost-v1.1-1266",
+          "reference_5gram_coverage_in_full_booklet": 0.8431372549019608
+        },
+        {
+          "id": "ost-v1.1-1267",
+          "reference_5gram_coverage_in_full_booklet": 0.8577494692144374
+        },
+        {
+          "id": "ost-v1.1-1270",
+          "reference_5gram_coverage_in_full_booklet": 0.9323671497584541
+        },
+        {
+          "id": "ost-v1.1-1272",
+          "reference_5gram_coverage_in_full_booklet": 0.9059633027522935
+        },
+        {
+          "id": "ost-v1.1-1273",
+          "reference_5gram_coverage_in_full_booklet": 0.8077709611451943
+        },
+        {
+          "id": "ost-v1.1-1274",
+          "reference_5gram_coverage_in_full_booklet": 0.7398568019093079
+        },
+        {
+          "id": "ost-v1.1-1276",
+          "reference_5gram_coverage_in_full_booklet": 0.8778625954198473
+        },
+        {
+          "id": "ost-v1.1-1277",
+          "reference_5gram_coverage_in_full_booklet": 0.8011152416356877
+        },
+        {
+          "id": "ost-v1.1-1278",
+          "reference_5gram_coverage_in_full_booklet": 0.8021052631578948
+        },
+        {
+          "id": "ost-v1.1-1279",
+          "reference_5gram_coverage_in_full_booklet": 0.8080808080808081
+        },
+        {
+          "id": "ost-v1.1-1280",
+          "reference_5gram_coverage_in_full_booklet": 0.9609929078014184
+        },
+        {
+          "id": "ost-v1.1-1281",
+          "reference_5gram_coverage_in_full_booklet": 0.7730496453900709
+        },
+        {
+          "id": "ost-v1.1-1283",
+          "reference_5gram_coverage_in_full_booklet": 0.9917864476386037
+        },
+        {
+          "id": "ost-v1.1-1285",
+          "reference_5gram_coverage_in_full_booklet": 0.8666666666666667
+        },
+        {
+          "id": "ost-v1.1-1287",
+          "reference_5gram_coverage_in_full_booklet": 0.8947368421052632
+        },
+        {
+          "id": "ost-v1.1-1289",
+          "reference_5gram_coverage_in_full_booklet": 0.9039301310043668
+        },
+        {
+          "id": "ost-v1.1-1290",
+          "reference_5gram_coverage_in_full_booklet": 0.785377358490566
+        },
+        {
+          "id": "ost-v1.1-1291",
+          "reference_5gram_coverage_in_full_booklet": 0.832258064516129
+        },
+        {
+          "id": "ost-v1.1-1292",
+          "reference_5gram_coverage_in_full_booklet": 0.7375
+        },
+        {
+          "id": "ost-v1.1-1293",
+          "reference_5gram_coverage_in_full_booklet": 0.9493333333333334
+        },
+        {
+          "id": "ost-v1.1-1294",
+          "reference_5gram_coverage_in_full_booklet": 0.9478021978021978
+        },
+        {
+          "id": "ost-v1.1-1295",
+          "reference_5gram_coverage_in_full_booklet": 0.8448979591836735
+        },
+        {
+          "id": "ost-v1.1-1297",
+          "reference_5gram_coverage_in_full_booklet": 0.8629441624365483
+        },
+        {
+          "id": "ost-v1.1-1298",
+          "reference_5gram_coverage_in_full_booklet": 0.7965451055662188
+        },
+        {
+          "id": "ost-v1.1-1299",
+          "reference_5gram_coverage_in_full_booklet": 0.9353932584269663
+        },
+        {
+          "id": "ost-v1.1-1300",
+          "reference_5gram_coverage_in_full_booklet": 0.9215686274509803
+        },
+        {
+          "id": "ost-v1.1-1301",
+          "reference_5gram_coverage_in_full_booklet": 0.8268156424581006
+        },
+        {
+          "id": "ost-v1.1-1302",
+          "reference_5gram_coverage_in_full_booklet": 0.8155172413793104
+        },
+        {
+          "id": "ost-v1.1-1304",
+          "reference_5gram_coverage_in_full_booklet": 0.9138576779026217
+        },
+        {
+          "id": "ost-v1.1-1305",
+          "reference_5gram_coverage_in_full_booklet": 0.7487179487179487
+        },
+        {
+          "id": "ost-v1.1-1306",
+          "reference_5gram_coverage_in_full_booklet": 0.823076923076923
+        },
+        {
+          "id": "ost-v1.1-1307",
+          "reference_5gram_coverage_in_full_booklet": 0.9130434782608695
+        },
+        {
+          "id": "ost-v1.1-1308",
+          "reference_5gram_coverage_in_full_booklet": 0.8032454361054767
+        },
+        {
+          "id": "ost-v1.1-1311",
+          "reference_5gram_coverage_in_full_booklet": 0.93
+        },
+        {
+          "id": "ost-v1.1-1312",
+          "reference_5gram_coverage_in_full_booklet": 0.9543147208121827
+        },
+        {
+          "id": "ost-v1.1-1313",
+          "reference_5gram_coverage_in_full_booklet": 0.8155172413793104
+        },
+        {
+          "id": "ost-v1.1-1314",
+          "reference_5gram_coverage_in_full_booklet": 0.7796901893287436
+        },
+        {
+          "id": "ost-v1.1-1315",
+          "reference_5gram_coverage_in_full_booklet": 0.8422018348623853
+        },
+        {
+          "id": "ost-v1.1-1316",
+          "reference_5gram_coverage_in_full_booklet": 0.8318181818181818
+        },
+        {
+          "id": "ost-v1.1-1317",
+          "reference_5gram_coverage_in_full_booklet": 0.9235474006116208
+        },
+        {
+          "id": "ost-v1.1-1319",
+          "reference_5gram_coverage_in_full_booklet": 0.9243027888446215
+        },
+        {
+          "id": "ost-v1.1-1320",
+          "reference_5gram_coverage_in_full_booklet": 0.8073170731707318
+        },
+        {
+          "id": "ost-v1.1-1321",
+          "reference_5gram_coverage_in_full_booklet": 0.937799043062201
+        },
+        {
+          "id": "ost-v1.1-1322",
+          "reference_5gram_coverage_in_full_booklet": 0.7319347319347319
+        },
+        {
+          "id": "ost-v1.1-1323",
+          "reference_5gram_coverage_in_full_booklet": 0.7272727272727273
+        },
+        {
+          "id": "ost-v1.1-1324",
+          "reference_5gram_coverage_in_full_booklet": 0.8105263157894737
+        },
+        {
+          "id": "ost-v1.1-1326",
+          "reference_5gram_coverage_in_full_booklet": 0.8086763070077865
+        },
+        {
+          "id": "ost-v1.1-1327",
+          "reference_5gram_coverage_in_full_booklet": 0.8405253283302064
+        },
+        {
+          "id": "ost-v1.1-1328",
+          "reference_5gram_coverage_in_full_booklet": 0.7115839243498818
+        },
+        {
+          "id": "ost-v1.1-1329",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-1333",
+          "reference_5gram_coverage_in_full_booklet": 0.9841269841269841
+        },
+        {
+          "id": "ost-v1.1-1334",
+          "reference_5gram_coverage_in_full_booklet": 0.8077709611451943
+        },
+        {
+          "id": "ost-v1.1-1338",
+          "reference_5gram_coverage_in_full_booklet": 0.7805429864253394
+        },
+        {
+          "id": "ost-v1.1-1339",
+          "reference_5gram_coverage_in_full_booklet": 0.9130434782608695
+        },
+        {
+          "id": "ost-v1.1-1341",
+          "reference_5gram_coverage_in_full_booklet": 0.8983050847457628
+        },
+        {
+          "id": "ost-v1.1-1343",
+          "reference_5gram_coverage_in_full_booklet": 0.8430962343096234
+        },
+        {
+          "id": "ost-v1.1-1346",
+          "reference_5gram_coverage_in_full_booklet": 0.836996336996337
+        },
+        {
+          "id": "ost-v1.1-1348",
+          "reference_5gram_coverage_in_full_booklet": 0.8474164133738602
+        },
+        {
+          "id": "ost-v1.1-1354",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1355",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1356",
+          "reference_5gram_coverage_in_full_booklet": 0.9880952380952381
+        },
+        {
+          "id": "ost-v1.1-1358",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1359",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1360",
+          "reference_5gram_coverage_in_full_booklet": 0.8375420875420876
+        },
+        {
+          "id": "ost-v1.1-1361",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1366",
+          "reference_5gram_coverage_in_full_booklet": 0.8797909407665505
+        },
+        {
+          "id": "ost-v1.1-1368",
+          "reference_5gram_coverage_in_full_booklet": 0.8087954110898662
+        },
+        {
+          "id": "ost-v1.1-1371",
+          "reference_5gram_coverage_in_full_booklet": 0.9880952380952381
+        },
+        {
+          "id": "ost-v1.1-1375",
+          "reference_5gram_coverage_in_full_booklet": 0.7839080459770115
+        },
+        {
+          "id": "ost-v1.1-1376",
+          "reference_5gram_coverage_in_full_booklet": 0.8106382978723404
+        },
+        {
+          "id": "ost-v1.1-1377",
+          "reference_5gram_coverage_in_full_booklet": 0.8797909407665505
+        },
+        {
+          "id": "ost-v1.1-1378",
+          "reference_5gram_coverage_in_full_booklet": 0.8277511961722488
+        },
+        {
+          "id": "ost-v1.1-1380",
+          "reference_5gram_coverage_in_full_booklet": 0.8585271317829457
+        },
+        {
+          "id": "ost-v1.1-1387",
+          "reference_5gram_coverage_in_full_booklet": 0.9181286549707602
+        },
+        {
+          "id": "ost-v1.1-1390",
+          "reference_5gram_coverage_in_full_booklet": 0.772972972972973
+        },
+        {
+          "id": "ost-v1.1-1391",
+          "reference_5gram_coverage_in_full_booklet": 0.8354037267080745
+        },
+        {
+          "id": "ost-v1.1-1392",
+          "reference_5gram_coverage_in_full_booklet": 0.8798076923076923
+        },
+        {
+          "id": "ost-v1.1-1393",
+          "reference_5gram_coverage_in_full_booklet": 0.7910189982728842
+        },
+        {
+          "id": "ost-v1.1-1394",
+          "reference_5gram_coverage_in_full_booklet": 0.7702407002188184
+        },
+        {
+          "id": "ost-v1.1-1395",
+          "reference_5gram_coverage_in_full_booklet": 0.9880952380952381
+        },
+        {
+          "id": "ost-v1.1-1396",
+          "reference_5gram_coverage_in_full_booklet": 0.9372549019607843
+        },
+        {
+          "id": "ost-v1.1-1398",
+          "reference_5gram_coverage_in_full_booklet": 0.7518796992481203
+        },
+        {
+          "id": "ost-v1.1-1399",
+          "reference_5gram_coverage_in_full_booklet": 0.7275
+        },
+        {
+          "id": "ost-v1.1-1401",
+          "reference_5gram_coverage_in_full_booklet": 0.8629441624365483
+        },
+        {
+          "id": "ost-v1.1-1402",
+          "reference_5gram_coverage_in_full_booklet": 0.819366852886406
+        },
+        {
+          "id": "ost-v1.1-1405",
+          "reference_5gram_coverage_in_full_booklet": 0.7255936675461742
+        },
+        {
+          "id": "ost-v1.1-1406",
+          "reference_5gram_coverage_in_full_booklet": 0.8058823529411765
+        },
+        {
+          "id": "ost-v1.1-1407",
+          "reference_5gram_coverage_in_full_booklet": 0.970074812967581
+        },
+        {
+          "id": "ost-v1.1-1408",
+          "reference_5gram_coverage_in_full_booklet": 0.7730496453900709
+        },
+        {
+          "id": "ost-v1.1-1410",
+          "reference_5gram_coverage_in_full_booklet": 0.9163498098859315
+        },
+        {
+          "id": "ost-v1.1-1412",
+          "reference_5gram_coverage_in_full_booklet": 0.8235294117647058
+        },
+        {
+          "id": "ost-v1.1-1413",
+          "reference_5gram_coverage_in_full_booklet": 0.8232044198895028
+        },
+        {
+          "id": "ost-v1.1-1414",
+          "reference_5gram_coverage_in_full_booklet": 0.9331103678929766
+        },
+        {
+          "id": "ost-v1.1-1415",
+          "reference_5gram_coverage_in_full_booklet": 0.8474164133738602
+        },
+        {
+          "id": "ost-v1.1-1416",
+          "reference_5gram_coverage_in_full_booklet": 0.9496124031007752
+        },
+        {
+          "id": "ost-v1.1-1417",
+          "reference_5gram_coverage_in_full_booklet": 0.9598997493734336
+        },
+        {
+          "id": "ost-v1.1-1422",
+          "reference_5gram_coverage_in_full_booklet": 0.821917808219178
+        },
+        {
+          "id": "ost-v1.1-1423",
+          "reference_5gram_coverage_in_full_booklet": 0.7785977859778598
+        },
+        {
+          "id": "ost-v1.1-1424",
+          "reference_5gram_coverage_in_full_booklet": 0.8322981366459627
+        },
+        {
+          "id": "ost-v1.1-1426",
+          "reference_5gram_coverage_in_full_booklet": 0.8917378917378918
+        },
+        {
+          "id": "ost-v1.1-1427",
+          "reference_5gram_coverage_in_full_booklet": 0.8735244519392917
+        },
+        {
+          "id": "ost-v1.1-1428",
+          "reference_5gram_coverage_in_full_booklet": 0.8828451882845189
+        },
+        {
+          "id": "ost-v1.1-1429",
+          "reference_5gram_coverage_in_full_booklet": 0.8179419525065963
+        },
+        {
+          "id": "ost-v1.1-1433",
+          "reference_5gram_coverage_in_full_booklet": 0.8324225865209471
+        },
+        {
+          "id": "ost-v1.1-1436",
+          "reference_5gram_coverage_in_full_booklet": 0.9423868312757202
+        },
+        {
+          "id": "ost-v1.1-1437",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1438",
+          "reference_5gram_coverage_in_full_booklet": 0.9288888888888889
+        },
+        {
+          "id": "ost-v1.1-1439",
+          "reference_5gram_coverage_in_full_booklet": 0.8482905982905983
+        },
+        {
+          "id": "ost-v1.1-1440",
+          "reference_5gram_coverage_in_full_booklet": 0.8542805100182149
+        },
+        {
+          "id": "ost-v1.1-1442",
+          "reference_5gram_coverage_in_full_booklet": 0.8443271767810027
+        },
+        {
+          "id": "ost-v1.1-1443",
+          "reference_5gram_coverage_in_full_booklet": 0.782608695652174
+        },
+        {
+          "id": "ost-v1.1-1444",
+          "reference_5gram_coverage_in_full_booklet": 0.8782608695652174
+        },
+        {
+          "id": "ost-v1.1-1445",
+          "reference_5gram_coverage_in_full_booklet": 0.9082969432314411
+        },
+        {
+          "id": "ost-v1.1-1448",
+          "reference_5gram_coverage_in_full_booklet": 0.7839080459770115
+        },
+        {
+          "id": "ost-v1.1-1451",
+          "reference_5gram_coverage_in_full_booklet": 0.8687872763419483
+        },
+        {
+          "id": "ost-v1.1-1452",
+          "reference_5gram_coverage_in_full_booklet": 0.8730964467005076
+        },
+        {
+          "id": "ost-v1.1-1453",
+          "reference_5gram_coverage_in_full_booklet": 0.8663101604278075
+        },
+        {
+          "id": "ost-v1.1-1456",
+          "reference_5gram_coverage_in_full_booklet": 0.8640167364016736
+        },
+        {
+          "id": "ost-v1.1-1460",
+          "reference_5gram_coverage_in_full_booklet": 0.7771084337349398
+        },
+        {
+          "id": "ost-v1.1-1461",
+          "reference_5gram_coverage_in_full_booklet": 0.8514492753623188
+        },
+        {
+          "id": "ost-v1.1-1465",
+          "reference_5gram_coverage_in_full_booklet": 0.832258064516129
+        },
+        {
+          "id": "ost-v1.1-1466",
+          "reference_5gram_coverage_in_full_booklet": 0.8313492063492064
+        },
+        {
+          "id": "ost-v1.1-1467",
+          "reference_5gram_coverage_in_full_booklet": 0.9657794676806084
+        },
+        {
+          "id": "ost-v1.1-1468",
+          "reference_5gram_coverage_in_full_booklet": 0.8189158016147635
+        },
+        {
+          "id": "ost-v1.1-1474",
+          "reference_5gram_coverage_in_full_booklet": 0.8614718614718615
+        },
+        {
+          "id": "ost-v1.1-1475",
+          "reference_5gram_coverage_in_full_booklet": 0.8669623059866962
+        },
+        {
+          "id": "ost-v1.1-1476",
+          "reference_5gram_coverage_in_full_booklet": 0.8715277777777778
+        },
+        {
+          "id": "ost-v1.1-1479",
+          "reference_5gram_coverage_in_full_booklet": 0.7565632458233891
+        },
+        {
+          "id": "ost-v1.1-1483",
+          "reference_5gram_coverage_in_full_booklet": 0.8805031446540881
+        },
+        {
+          "id": "ost-v1.1-1485",
+          "reference_5gram_coverage_in_full_booklet": 0.9296482412060302
+        },
+        {
+          "id": "ost-v1.1-1486",
+          "reference_5gram_coverage_in_full_booklet": 0.8033333333333333
+        },
+        {
+          "id": "ost-v1.1-1487",
+          "reference_5gram_coverage_in_full_booklet": 0.9724310776942355
+        }
+      ]
+    },
+    "validation": {
+      "n": 276,
+      "missing_ids": [],
+      "sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "reference_alignment": [
+        {
+          "id": "ost-v1.1-0019",
+          "reference_5gram_coverage_in_full_booklet": 0.8313492063492064
+        },
+        {
+          "id": "ost-v1.1-0022",
+          "reference_5gram_coverage_in_full_booklet": 0.7835990888382688
+        },
+        {
+          "id": "ost-v1.1-0024",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-0026",
+          "reference_5gram_coverage_in_full_booklet": 0.7370786516853932
+        },
+        {
+          "id": "ost-v1.1-0030",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-0032",
+          "reference_5gram_coverage_in_full_booklet": 0.8256880733944955
+        },
+        {
+          "id": "ost-v1.1-0040",
+          "reference_5gram_coverage_in_full_booklet": 0.8650088809946714
+        },
+        {
+          "id": "ost-v1.1-0050",
+          "reference_5gram_coverage_in_full_booklet": 0.8650088809946714
+        },
+        {
+          "id": "ost-v1.1-0057",
+          "reference_5gram_coverage_in_full_booklet": 0.7370786516853932
+        },
+        {
+          "id": "ost-v1.1-0064",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-0068",
+          "reference_5gram_coverage_in_full_booklet": 0.8203883495145631
+        },
+        {
+          "id": "ost-v1.1-0080",
+          "reference_5gram_coverage_in_full_booklet": 0.8558139534883721
+        },
+        {
+          "id": "ost-v1.1-0081",
+          "reference_5gram_coverage_in_full_booklet": 0.8341463414634146
+        },
+        {
+          "id": "ost-v1.1-0087",
+          "reference_5gram_coverage_in_full_booklet": 0.7630057803468208
+        },
+        {
+          "id": "ost-v1.1-0105",
+          "reference_5gram_coverage_in_full_booklet": 0.8807692307692307
+        },
+        {
+          "id": "ost-v1.1-0114",
+          "reference_5gram_coverage_in_full_booklet": 0.8802816901408451
+        },
+        {
+          "id": "ost-v1.1-0119",
+          "reference_5gram_coverage_in_full_booklet": 0.9292035398230089
+        },
+        {
+          "id": "ost-v1.1-0129",
+          "reference_5gram_coverage_in_full_booklet": 0.7370786516853932
+        },
+        {
+          "id": "ost-v1.1-0136",
+          "reference_5gram_coverage_in_full_booklet": 0.9156118143459916
+        },
+        {
+          "id": "ost-v1.1-0145",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-0146",
+          "reference_5gram_coverage_in_full_booklet": 0.7336683417085427
+        },
+        {
+          "id": "ost-v1.1-0153",
+          "reference_5gram_coverage_in_full_booklet": 0.8256880733944955
+        },
+        {
+          "id": "ost-v1.1-0158",
+          "reference_5gram_coverage_in_full_booklet": 0.8650088809946714
+        },
+        {
+          "id": "ost-v1.1-0169",
+          "reference_5gram_coverage_in_full_booklet": 0.9016393442622951
+        },
+        {
+          "id": "ost-v1.1-0172",
+          "reference_5gram_coverage_in_full_booklet": 0.8578535891968728
+        },
+        {
+          "id": "ost-v1.1-0173",
+          "reference_5gram_coverage_in_full_booklet": 0.8183716075156576
+        },
+        {
+          "id": "ost-v1.1-0174",
+          "reference_5gram_coverage_in_full_booklet": 0.9049676025917927
+        },
+        {
+          "id": "ost-v1.1-0186",
+          "reference_5gram_coverage_in_full_booklet": 0.8150470219435737
+        },
+        {
+          "id": "ost-v1.1-0190",
+          "reference_5gram_coverage_in_full_booklet": 0.8208616780045351
+        },
+        {
+          "id": "ost-v1.1-0199",
+          "reference_5gram_coverage_in_full_booklet": 0.8459477561955794
+        },
+        {
+          "id": "ost-v1.1-0205",
+          "reference_5gram_coverage_in_full_booklet": 0.8834080717488789
+        },
+        {
+          "id": "ost-v1.1-0211",
+          "reference_5gram_coverage_in_full_booklet": 0.8208616780045351
+        },
+        {
+          "id": "ost-v1.1-0212",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0213",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0215",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0223",
+          "reference_5gram_coverage_in_full_booklet": 0.9438202247191011
+        },
+        {
+          "id": "ost-v1.1-0224",
+          "reference_5gram_coverage_in_full_booklet": 0.8863636363636364
+        },
+        {
+          "id": "ost-v1.1-0227",
+          "reference_5gram_coverage_in_full_booklet": 0.8559804719283971
+        },
+        {
+          "id": "ost-v1.1-0235",
+          "reference_5gram_coverage_in_full_booklet": 0.6773049645390071
+        },
+        {
+          "id": "ost-v1.1-0236",
+          "reference_5gram_coverage_in_full_booklet": 0.8073394495412844
+        },
+        {
+          "id": "ost-v1.1-0241",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0243",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0245",
+          "reference_5gram_coverage_in_full_booklet": 0.8863636363636364
+        },
+        {
+          "id": "ost-v1.1-0250",
+          "reference_5gram_coverage_in_full_booklet": 0.8440748440748441
+        },
+        {
+          "id": "ost-v1.1-0254",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0256",
+          "reference_5gram_coverage_in_full_booklet": 0.8802816901408451
+        },
+        {
+          "id": "ost-v1.1-0258",
+          "reference_5gram_coverage_in_full_booklet": 0.9335180055401662
+        },
+        {
+          "id": "ost-v1.1-0259",
+          "reference_5gram_coverage_in_full_booklet": 0.8559804719283971
+        },
+        {
+          "id": "ost-v1.1-0262",
+          "reference_5gram_coverage_in_full_booklet": 0.8208616780045351
+        },
+        {
+          "id": "ost-v1.1-0269",
+          "reference_5gram_coverage_in_full_booklet": 0.7786259541984732
+        },
+        {
+          "id": "ost-v1.1-0278",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0280",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0298",
+          "reference_5gram_coverage_in_full_booklet": 0.8863636363636364
+        },
+        {
+          "id": "ost-v1.1-0299",
+          "reference_5gram_coverage_in_full_booklet": 0.9575971731448764
+        },
+        {
+          "id": "ost-v1.1-0301",
+          "reference_5gram_coverage_in_full_booklet": 0.8459477561955794
+        },
+        {
+          "id": "ost-v1.1-0304",
+          "reference_5gram_coverage_in_full_booklet": 0.8564356435643564
+        },
+        {
+          "id": "ost-v1.1-0305",
+          "reference_5gram_coverage_in_full_booklet": 0.890295358649789
+        },
+        {
+          "id": "ost-v1.1-0312",
+          "reference_5gram_coverage_in_full_booklet": 0.90625
+        },
+        {
+          "id": "ost-v1.1-0318",
+          "reference_5gram_coverage_in_full_booklet": 0.8073394495412844
+        },
+        {
+          "id": "ost-v1.1-0320",
+          "reference_5gram_coverage_in_full_booklet": 0.8834080717488789
+        },
+        {
+          "id": "ost-v1.1-0323",
+          "reference_5gram_coverage_in_full_booklet": 0.8007380073800738
+        },
+        {
+          "id": "ost-v1.1-0333",
+          "reference_5gram_coverage_in_full_booklet": 0.803680981595092
+        },
+        {
+          "id": "ost-v1.1-0338",
+          "reference_5gram_coverage_in_full_booklet": 0.7689873417721519
+        },
+        {
+          "id": "ost-v1.1-0341",
+          "reference_5gram_coverage_in_full_booklet": 0.75
+        },
+        {
+          "id": "ost-v1.1-0343",
+          "reference_5gram_coverage_in_full_booklet": 0.8321554770318021
+        },
+        {
+          "id": "ost-v1.1-0345",
+          "reference_5gram_coverage_in_full_booklet": 0.8008658008658008
+        },
+        {
+          "id": "ost-v1.1-0355",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0359",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-0361",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0363",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0391",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0395",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0399",
+          "reference_5gram_coverage_in_full_booklet": 0.8498098859315589
+        },
+        {
+          "id": "ost-v1.1-0400",
+          "reference_5gram_coverage_in_full_booklet": 0.9147286821705426
+        },
+        {
+          "id": "ost-v1.1-0410",
+          "reference_5gram_coverage_in_full_booklet": 0.8650088809946714
+        },
+        {
+          "id": "ost-v1.1-0411",
+          "reference_5gram_coverage_in_full_booklet": 0.9300411522633745
+        },
+        {
+          "id": "ost-v1.1-0412",
+          "reference_5gram_coverage_in_full_booklet": 0.8807692307692307
+        },
+        {
+          "id": "ost-v1.1-0422",
+          "reference_5gram_coverage_in_full_booklet": 0.7786259541984732
+        },
+        {
+          "id": "ost-v1.1-0432",
+          "reference_5gram_coverage_in_full_booklet": 0.8498098859315589
+        },
+        {
+          "id": "ost-v1.1-0434",
+          "reference_5gram_coverage_in_full_booklet": 0.7630057803468208
+        },
+        {
+          "id": "ost-v1.1-0446",
+          "reference_5gram_coverage_in_full_booklet": 0.9292035398230089
+        },
+        {
+          "id": "ost-v1.1-0449",
+          "reference_5gram_coverage_in_full_booklet": 0.7619047619047619
+        },
+        {
+          "id": "ost-v1.1-0456",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0460",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-0463",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-0481",
+          "reference_5gram_coverage_in_full_booklet": 0.8294930875576036
+        },
+        {
+          "id": "ost-v1.1-0499",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0505",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0506",
+          "reference_5gram_coverage_in_full_booklet": 0.8501291989664083
+        },
+        {
+          "id": "ost-v1.1-0513",
+          "reference_5gram_coverage_in_full_booklet": 0.8501291989664083
+        },
+        {
+          "id": "ost-v1.1-0515",
+          "reference_5gram_coverage_in_full_booklet": 0.8023088023088023
+        },
+        {
+          "id": "ost-v1.1-0519",
+          "reference_5gram_coverage_in_full_booklet": 0.8023088023088023
+        },
+        {
+          "id": "ost-v1.1-0525",
+          "reference_5gram_coverage_in_full_booklet": 0.8514888805126272
+        },
+        {
+          "id": "ost-v1.1-0526",
+          "reference_5gram_coverage_in_full_booklet": 0.8501291989664083
+        },
+        {
+          "id": "ost-v1.1-0555",
+          "reference_5gram_coverage_in_full_booklet": 0.7952415284787311
+        },
+        {
+          "id": "ost-v1.1-0558",
+          "reference_5gram_coverage_in_full_booklet": 0.8023088023088023
+        },
+        {
+          "id": "ost-v1.1-0563",
+          "reference_5gram_coverage_in_full_booklet": 0.8501291989664083
+        },
+        {
+          "id": "ost-v1.1-0566",
+          "reference_5gram_coverage_in_full_booklet": 0.7804295942720764
+        },
+        {
+          "id": "ost-v1.1-0569",
+          "reference_5gram_coverage_in_full_booklet": 0.8501291989664083
+        },
+        {
+          "id": "ost-v1.1-0572",
+          "reference_5gram_coverage_in_full_booklet": 0.8664163090128756
+        },
+        {
+          "id": "ost-v1.1-0573",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0592",
+          "reference_5gram_coverage_in_full_booklet": 0.8474820143884892
+        },
+        {
+          "id": "ost-v1.1-0597",
+          "reference_5gram_coverage_in_full_booklet": 0.840377358490566
+        },
+        {
+          "id": "ost-v1.1-0599",
+          "reference_5gram_coverage_in_full_booklet": 0.8285280728376327
+        },
+        {
+          "id": "ost-v1.1-0604",
+          "reference_5gram_coverage_in_full_booklet": 0.8023088023088023
+        },
+        {
+          "id": "ost-v1.1-0610",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0616",
+          "reference_5gram_coverage_in_full_booklet": 0.7952415284787311
+        },
+        {
+          "id": "ost-v1.1-0634",
+          "reference_5gram_coverage_in_full_booklet": 0.8664163090128756
+        },
+        {
+          "id": "ost-v1.1-0638",
+          "reference_5gram_coverage_in_full_booklet": 0.7651905252317199
+        },
+        {
+          "id": "ost-v1.1-0640",
+          "reference_5gram_coverage_in_full_booklet": 0.840377358490566
+        },
+        {
+          "id": "ost-v1.1-0642",
+          "reference_5gram_coverage_in_full_booklet": 0.739524348810872
+        },
+        {
+          "id": "ost-v1.1-0646",
+          "reference_5gram_coverage_in_full_booklet": 0.7391780821917808
+        },
+        {
+          "id": "ost-v1.1-0660",
+          "reference_5gram_coverage_in_full_booklet": 0.8300117233294255
+        },
+        {
+          "id": "ost-v1.1-0664",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0669",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0680",
+          "reference_5gram_coverage_in_full_booklet": 0.8514888805126272
+        },
+        {
+          "id": "ost-v1.1-0682",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0685",
+          "reference_5gram_coverage_in_full_booklet": 0.739524348810872
+        },
+        {
+          "id": "ost-v1.1-0686",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0693",
+          "reference_5gram_coverage_in_full_booklet": 0.8514888805126272
+        },
+        {
+          "id": "ost-v1.1-0696",
+          "reference_5gram_coverage_in_full_booklet": 0.739524348810872
+        },
+        {
+          "id": "ost-v1.1-0700",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0701",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0721",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0723",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0726",
+          "reference_5gram_coverage_in_full_booklet": 0.8514888805126272
+        },
+        {
+          "id": "ost-v1.1-0727",
+          "reference_5gram_coverage_in_full_booklet": 0.8501291989664083
+        },
+        {
+          "id": "ost-v1.1-0728",
+          "reference_5gram_coverage_in_full_booklet": 0.7282668124658284
+        },
+        {
+          "id": "ost-v1.1-0731",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0732",
+          "reference_5gram_coverage_in_full_booklet": 0.8333333333333334
+        },
+        {
+          "id": "ost-v1.1-0746",
+          "reference_5gram_coverage_in_full_booklet": 0.840377358490566
+        },
+        {
+          "id": "ost-v1.1-0748",
+          "reference_5gram_coverage_in_full_booklet": 0.8285280728376327
+        },
+        {
+          "id": "ost-v1.1-0761",
+          "reference_5gram_coverage_in_full_booklet": 0.8521806252412196
+        },
+        {
+          "id": "ost-v1.1-0765",
+          "reference_5gram_coverage_in_full_booklet": 0.7282668124658284
+        },
+        {
+          "id": "ost-v1.1-0768",
+          "reference_5gram_coverage_in_full_booklet": 0.8285280728376327
+        },
+        {
+          "id": "ost-v1.1-0777",
+          "reference_5gram_coverage_in_full_booklet": 0.8300536672629696
+        },
+        {
+          "id": "ost-v1.1-0778",
+          "reference_5gram_coverage_in_full_booklet": 0.8664163090128756
+        },
+        {
+          "id": "ost-v1.1-0784",
+          "reference_5gram_coverage_in_full_booklet": 0.8705324580598104
+        },
+        {
+          "id": "ost-v1.1-0786",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0787",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0788",
+          "reference_5gram_coverage_in_full_booklet": 0.8300117233294255
+        },
+        {
+          "id": "ost-v1.1-0791",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0795",
+          "reference_5gram_coverage_in_full_booklet": 0.7952415284787311
+        },
+        {
+          "id": "ost-v1.1-0798",
+          "reference_5gram_coverage_in_full_booklet": 0.8705324580598104
+        },
+        {
+          "id": "ost-v1.1-0802",
+          "reference_5gram_coverage_in_full_booklet": 0.8705324580598104
+        },
+        {
+          "id": "ost-v1.1-0806",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0817",
+          "reference_5gram_coverage_in_full_booklet": 0.7391780821917808
+        },
+        {
+          "id": "ost-v1.1-0833",
+          "reference_5gram_coverage_in_full_booklet": 0.7531794630240226
+        },
+        {
+          "id": "ost-v1.1-0834",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0837",
+          "reference_5gram_coverage_in_full_booklet": 0.7651905252317199
+        },
+        {
+          "id": "ost-v1.1-0838",
+          "reference_5gram_coverage_in_full_booklet": 0.7651905252317199
+        },
+        {
+          "id": "ost-v1.1-0843",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0847",
+          "reference_5gram_coverage_in_full_booklet": 0.7649593106749641
+        },
+        {
+          "id": "ost-v1.1-0851",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0852",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0853",
+          "reference_5gram_coverage_in_full_booklet": 0.8333333333333334
+        },
+        {
+          "id": "ost-v1.1-0864",
+          "reference_5gram_coverage_in_full_booklet": 0.840377358490566
+        },
+        {
+          "id": "ost-v1.1-0865",
+          "reference_5gram_coverage_in_full_booklet": 0.840377358490566
+        },
+        {
+          "id": "ost-v1.1-0867",
+          "reference_5gram_coverage_in_full_booklet": 0.840377358490566
+        },
+        {
+          "id": "ost-v1.1-0874",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0875",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0878",
+          "reference_5gram_coverage_in_full_booklet": 0.7611589663273297
+        },
+        {
+          "id": "ost-v1.1-0882",
+          "reference_5gram_coverage_in_full_booklet": 0.7804295942720764
+        },
+        {
+          "id": "ost-v1.1-0884",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0897",
+          "reference_5gram_coverage_in_full_booklet": 0.7611589663273297
+        },
+        {
+          "id": "ost-v1.1-0903",
+          "reference_5gram_coverage_in_full_booklet": 0.7649593106749641
+        },
+        {
+          "id": "ost-v1.1-0909",
+          "reference_5gram_coverage_in_full_booklet": 0.7952415284787311
+        },
+        {
+          "id": "ost-v1.1-0912",
+          "reference_5gram_coverage_in_full_booklet": 0.8454469507101086
+        },
+        {
+          "id": "ost-v1.1-0915",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0919",
+          "reference_5gram_coverage_in_full_booklet": 0.7804295942720764
+        },
+        {
+          "id": "ost-v1.1-0937",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0943",
+          "reference_5gram_coverage_in_full_booklet": 0.7649593106749641
+        },
+        {
+          "id": "ost-v1.1-0944",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0946",
+          "reference_5gram_coverage_in_full_booklet": 0.8454469507101086
+        },
+        {
+          "id": "ost-v1.1-0952",
+          "reference_5gram_coverage_in_full_booklet": 0.8333333333333334
+        },
+        {
+          "id": "ost-v1.1-0959",
+          "reference_5gram_coverage_in_full_booklet": 0.8127679847546451
+        },
+        {
+          "id": "ost-v1.1-0963",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0964",
+          "reference_5gram_coverage_in_full_booklet": 0.7611589663273297
+        },
+        {
+          "id": "ost-v1.1-0969",
+          "reference_5gram_coverage_in_full_booklet": 0.8036509349955476
+        },
+        {
+          "id": "ost-v1.1-0976",
+          "reference_5gram_coverage_in_full_booklet": 0.8300117233294255
+        },
+        {
+          "id": "ost-v1.1-0980",
+          "reference_5gram_coverage_in_full_booklet": 0.8664163090128756
+        },
+        {
+          "id": "ost-v1.1-0982",
+          "reference_5gram_coverage_in_full_booklet": 0.8138788608102687
+        },
+        {
+          "id": "ost-v1.1-0983",
+          "reference_5gram_coverage_in_full_booklet": 0.8705324580598104
+        },
+        {
+          "id": "ost-v1.1-0991",
+          "reference_5gram_coverage_in_full_booklet": 0.7678479712378018
+        },
+        {
+          "id": "ost-v1.1-0995",
+          "reference_5gram_coverage_in_full_booklet": 0.8082474226804124
+        },
+        {
+          "id": "ost-v1.1-0996",
+          "reference_5gram_coverage_in_full_booklet": 0.8830645161290323
+        },
+        {
+          "id": "ost-v1.1-1001",
+          "reference_5gram_coverage_in_full_booklet": 0.811623246492986
+        },
+        {
+          "id": "ost-v1.1-1004",
+          "reference_5gram_coverage_in_full_booklet": 0.8776290630975143
+        },
+        {
+          "id": "ost-v1.1-1013",
+          "reference_5gram_coverage_in_full_booklet": 0.8778135048231511
+        },
+        {
+          "id": "ost-v1.1-1019",
+          "reference_5gram_coverage_in_full_booklet": 0.9057377049180327
+        },
+        {
+          "id": "ost-v1.1-1029",
+          "reference_5gram_coverage_in_full_booklet": 0.9141414141414141
+        },
+        {
+          "id": "ost-v1.1-1036",
+          "reference_5gram_coverage_in_full_booklet": 0.8240740740740741
+        },
+        {
+          "id": "ost-v1.1-1037",
+          "reference_5gram_coverage_in_full_booklet": 0.9141414141414141
+        },
+        {
+          "id": "ost-v1.1-1052",
+          "reference_5gram_coverage_in_full_booklet": 0.8041704442429737
+        },
+        {
+          "id": "ost-v1.1-1056",
+          "reference_5gram_coverage_in_full_booklet": 0.7959866220735786
+        },
+        {
+          "id": "ost-v1.1-1057",
+          "reference_5gram_coverage_in_full_booklet": 0.8207070707070707
+        },
+        {
+          "id": "ost-v1.1-1063",
+          "reference_5gram_coverage_in_full_booklet": 0.7435897435897436
+        },
+        {
+          "id": "ost-v1.1-1064",
+          "reference_5gram_coverage_in_full_booklet": 0.9082969432314411
+        },
+        {
+          "id": "ost-v1.1-1065",
+          "reference_5gram_coverage_in_full_booklet": 0.8725806451612903
+        },
+        {
+          "id": "ost-v1.1-1066",
+          "reference_5gram_coverage_in_full_booklet": 0.9489795918367347
+        },
+        {
+          "id": "ost-v1.1-1072",
+          "reference_5gram_coverage_in_full_booklet": 0.9057377049180327
+        },
+        {
+          "id": "ost-v1.1-1076",
+          "reference_5gram_coverage_in_full_booklet": 0.8256880733944955
+        },
+        {
+          "id": "ost-v1.1-1078",
+          "reference_5gram_coverage_in_full_booklet": 0.9335180055401662
+        },
+        {
+          "id": "ost-v1.1-1080",
+          "reference_5gram_coverage_in_full_booklet": 0.8636363636363636
+        },
+        {
+          "id": "ost-v1.1-1084",
+          "reference_5gram_coverage_in_full_booklet": 0.8240740740740741
+        },
+        {
+          "id": "ost-v1.1-1096",
+          "reference_5gram_coverage_in_full_booklet": 0.8349514563106796
+        },
+        {
+          "id": "ost-v1.1-1100",
+          "reference_5gram_coverage_in_full_booklet": 0.8547486033519553
+        },
+        {
+          "id": "ost-v1.1-1109",
+          "reference_5gram_coverage_in_full_booklet": 0.8619402985074627
+        },
+        {
+          "id": "ost-v1.1-1110",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-1116",
+          "reference_5gram_coverage_in_full_booklet": 0.8041704442429737
+        },
+        {
+          "id": "ost-v1.1-1118",
+          "reference_5gram_coverage_in_full_booklet": 0.862708719851577
+        },
+        {
+          "id": "ost-v1.1-1130",
+          "reference_5gram_coverage_in_full_booklet": 0.9141414141414141
+        },
+        {
+          "id": "ost-v1.1-1138",
+          "reference_5gram_coverage_in_full_booklet": 0.8564356435643564
+        },
+        {
+          "id": "ost-v1.1-1144",
+          "reference_5gram_coverage_in_full_booklet": 0.9292035398230089
+        },
+        {
+          "id": "ost-v1.1-1146",
+          "reference_5gram_coverage_in_full_booklet": 0.8863636363636364
+        },
+        {
+          "id": "ost-v1.1-1151",
+          "reference_5gram_coverage_in_full_booklet": 0.8268156424581006
+        },
+        {
+          "id": "ost-v1.1-1159",
+          "reference_5gram_coverage_in_full_booklet": 0.8743169398907104
+        },
+        {
+          "id": "ost-v1.1-1161",
+          "reference_5gram_coverage_in_full_booklet": 0.8007380073800738
+        },
+        {
+          "id": "ost-v1.1-1162",
+          "reference_5gram_coverage_in_full_booklet": 0.8777633289986996
+        },
+        {
+          "id": "ost-v1.1-1167",
+          "reference_5gram_coverage_in_full_booklet": 0.7615112160566706
+        },
+        {
+          "id": "ost-v1.1-1168",
+          "reference_5gram_coverage_in_full_booklet": 0.9575971731448764
+        },
+        {
+          "id": "ost-v1.1-1170",
+          "reference_5gram_coverage_in_full_booklet": 0.6421052631578947
+        },
+        {
+          "id": "ost-v1.1-1172",
+          "reference_5gram_coverage_in_full_booklet": 0.811623246492986
+        },
+        {
+          "id": "ost-v1.1-1174",
+          "reference_5gram_coverage_in_full_booklet": 0.9642497482376636
+        },
+        {
+          "id": "ost-v1.1-1192",
+          "reference_5gram_coverage_in_full_booklet": 0.8547486033519553
+        },
+        {
+          "id": "ost-v1.1-1194",
+          "reference_5gram_coverage_in_full_booklet": 0.8321554770318021
+        },
+        {
+          "id": "ost-v1.1-1196",
+          "reference_5gram_coverage_in_full_booklet": 0.8547486033519553
+        },
+        {
+          "id": "ost-v1.1-1200",
+          "reference_5gram_coverage_in_full_booklet": 0.9005714285714286
+        },
+        {
+          "id": "ost-v1.1-1201",
+          "reference_5gram_coverage_in_full_booklet": 0.8547486033519553
+        },
+        {
+          "id": "ost-v1.1-1204",
+          "reference_5gram_coverage_in_full_booklet": 0.9005714285714286
+        },
+        {
+          "id": "ost-v1.1-1211",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-1221",
+          "reference_5gram_coverage_in_full_booklet": 0.7632241813602015
+        },
+        {
+          "id": "ost-v1.1-1223",
+          "reference_5gram_coverage_in_full_booklet": 0.898989898989899
+        },
+        {
+          "id": "ost-v1.1-1234",
+          "reference_5gram_coverage_in_full_booklet": 0.8547486033519553
+        },
+        {
+          "id": "ost-v1.1-1237",
+          "reference_5gram_coverage_in_full_booklet": 0.7536656891495601
+        },
+        {
+          "id": "ost-v1.1-1238",
+          "reference_5gram_coverage_in_full_booklet": 0.8863636363636364
+        },
+        {
+          "id": "ost-v1.1-1251",
+          "reference_5gram_coverage_in_full_booklet": 0.8426294820717132
+        },
+        {
+          "id": "ost-v1.1-1256",
+          "reference_5gram_coverage_in_full_booklet": 0.7020725388601037
+        },
+        {
+          "id": "ost-v1.1-1258",
+          "reference_5gram_coverage_in_full_booklet": 0.8636363636363636
+        },
+        {
+          "id": "ost-v1.1-1268",
+          "reference_5gram_coverage_in_full_booklet": 0.8321554770318021
+        },
+        {
+          "id": "ost-v1.1-1269",
+          "reference_5gram_coverage_in_full_booklet": 0.890295358649789
+        },
+        {
+          "id": "ost-v1.1-1286",
+          "reference_5gram_coverage_in_full_booklet": 0.8164335664335665
+        },
+        {
+          "id": "ost-v1.1-1309",
+          "reference_5gram_coverage_in_full_booklet": 0.8268156424581006
+        },
+        {
+          "id": "ost-v1.1-1318",
+          "reference_5gram_coverage_in_full_booklet": 0.7514450867052023
+        },
+        {
+          "id": "ost-v1.1-1335",
+          "reference_5gram_coverage_in_full_booklet": 0.80306905370844
+        },
+        {
+          "id": "ost-v1.1-1340",
+          "reference_5gram_coverage_in_full_booklet": 0.7576974564926372
+        },
+        {
+          "id": "ost-v1.1-1349",
+          "reference_5gram_coverage_in_full_booklet": 0.8426294820717132
+        },
+        {
+          "id": "ost-v1.1-1350",
+          "reference_5gram_coverage_in_full_booklet": 0.8082474226804124
+        },
+        {
+          "id": "ost-v1.1-1351",
+          "reference_5gram_coverage_in_full_booklet": 0.9005714285714286
+        },
+        {
+          "id": "ost-v1.1-1352",
+          "reference_5gram_coverage_in_full_booklet": 0.7689873417721519
+        },
+        {
+          "id": "ost-v1.1-1353",
+          "reference_5gram_coverage_in_full_booklet": 0.7689873417721519
+        },
+        {
+          "id": "ost-v1.1-1362",
+          "reference_5gram_coverage_in_full_booklet": 0.8426294820717132
+        },
+        {
+          "id": "ost-v1.1-1373",
+          "reference_5gram_coverage_in_full_booklet": 0.8426294820717132
+        },
+        {
+          "id": "ost-v1.1-1381",
+          "reference_5gram_coverage_in_full_booklet": 0.7632241813602015
+        },
+        {
+          "id": "ost-v1.1-1383",
+          "reference_5gram_coverage_in_full_booklet": 0.7412790697674418
+        },
+        {
+          "id": "ost-v1.1-1384",
+          "reference_5gram_coverage_in_full_booklet": 0.7536656891495601
+        },
+        {
+          "id": "ost-v1.1-1389",
+          "reference_5gram_coverage_in_full_booklet": 0.933920704845815
+        },
+        {
+          "id": "ost-v1.1-1400",
+          "reference_5gram_coverage_in_full_booklet": 0.9005714285714286
+        },
+        {
+          "id": "ost-v1.1-1404",
+          "reference_5gram_coverage_in_full_booklet": 0.7435897435897436
+        },
+        {
+          "id": "ost-v1.1-1409",
+          "reference_5gram_coverage_in_full_booklet": 0.8073394495412844
+        },
+        {
+          "id": "ost-v1.1-1418",
+          "reference_5gram_coverage_in_full_booklet": 0.8073394495412844
+        },
+        {
+          "id": "ost-v1.1-1421",
+          "reference_5gram_coverage_in_full_booklet": 0.7020725388601037
+        },
+        {
+          "id": "ost-v1.1-1430",
+          "reference_5gram_coverage_in_full_booklet": 0.8256880733944955
+        },
+        {
+          "id": "ost-v1.1-1432",
+          "reference_5gram_coverage_in_full_booklet": 0.8619402985074627
+        },
+        {
+          "id": "ost-v1.1-1446",
+          "reference_5gram_coverage_in_full_booklet": 0.8426294820717132
+        },
+        {
+          "id": "ost-v1.1-1450",
+          "reference_5gram_coverage_in_full_booklet": 0.8082474226804124
+        },
+        {
+          "id": "ost-v1.1-1454",
+          "reference_5gram_coverage_in_full_booklet": 0.8183716075156576
+        },
+        {
+          "id": "ost-v1.1-1455",
+          "reference_5gram_coverage_in_full_booklet": 0.7020725388601037
+        },
+        {
+          "id": "ost-v1.1-1458",
+          "reference_5gram_coverage_in_full_booklet": 0.7514450867052023
+        },
+        {
+          "id": "ost-v1.1-1459",
+          "reference_5gram_coverage_in_full_booklet": 0.898989898989899
+        },
+        {
+          "id": "ost-v1.1-1464",
+          "reference_5gram_coverage_in_full_booklet": 0.8863636363636364
+        },
+        {
+          "id": "ost-v1.1-1469",
+          "reference_5gram_coverage_in_full_booklet": 0.890295358649789
+        },
+        {
+          "id": "ost-v1.1-1471",
+          "reference_5gram_coverage_in_full_booklet": 0.8129770992366412
+        },
+        {
+          "id": "ost-v1.1-1472",
+          "reference_5gram_coverage_in_full_booklet": 0.803680981595092
+        },
+        {
+          "id": "ost-v1.1-1477",
+          "reference_5gram_coverage_in_full_booklet": 0.811623246492986
+        },
+        {
+          "id": "ost-v1.1-1481",
+          "reference_5gram_coverage_in_full_booklet": 0.8834080717488789
+        }
+      ]
+    },
+    "test": {
+      "n": 310,
+      "missing_ids": [],
+      "sha256": "d464d1f45776fb9ff444e8e9319eac5b47c92af133e28f1305669326d98b50f6",
+      "reference_alignment": [
+        {
+          "id": "ost-v1.1-0004",
+          "reference_5gram_coverage_in_full_booklet": 0.7917737789203085
+        },
+        {
+          "id": "ost-v1.1-0008",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-0010",
+          "reference_5gram_coverage_in_full_booklet": 0.8379705400981997
+        },
+        {
+          "id": "ost-v1.1-0011",
+          "reference_5gram_coverage_in_full_booklet": 0.7917737789203085
+        },
+        {
+          "id": "ost-v1.1-0012",
+          "reference_5gram_coverage_in_full_booklet": 0.8066666666666666
+        },
+        {
+          "id": "ost-v1.1-0018",
+          "reference_5gram_coverage_in_full_booklet": 0.7066326530612245
+        },
+        {
+          "id": "ost-v1.1-0021",
+          "reference_5gram_coverage_in_full_booklet": 0.8198037466547725
+        },
+        {
+          "id": "ost-v1.1-0023",
+          "reference_5gram_coverage_in_full_booklet": 0.8464285714285714
+        },
+        {
+          "id": "ost-v1.1-0033",
+          "reference_5gram_coverage_in_full_booklet": 0.8260869565217391
+        },
+        {
+          "id": "ost-v1.1-0034",
+          "reference_5gram_coverage_in_full_booklet": 0.8260869565217391
+        },
+        {
+          "id": "ost-v1.1-0041",
+          "reference_5gram_coverage_in_full_booklet": 0.8571428571428571
+        },
+        {
+          "id": "ost-v1.1-0045",
+          "reference_5gram_coverage_in_full_booklet": 0.8444119795471147
+        },
+        {
+          "id": "ost-v1.1-0046",
+          "reference_5gram_coverage_in_full_booklet": 0.8571428571428571
+        },
+        {
+          "id": "ost-v1.1-0048",
+          "reference_5gram_coverage_in_full_booklet": 0.8114406779661016
+        },
+        {
+          "id": "ost-v1.1-0056",
+          "reference_5gram_coverage_in_full_booklet": 0.7372262773722628
+        },
+        {
+          "id": "ost-v1.1-0061",
+          "reference_5gram_coverage_in_full_booklet": 0.9665071770334929
+        },
+        {
+          "id": "ost-v1.1-0075",
+          "reference_5gram_coverage_in_full_booklet": 0.7745664739884393
+        },
+        {
+          "id": "ost-v1.1-0089",
+          "reference_5gram_coverage_in_full_booklet": 0.7712765957446809
+        },
+        {
+          "id": "ost-v1.1-0094",
+          "reference_5gram_coverage_in_full_booklet": 0.8446428571428571
+        },
+        {
+          "id": "ost-v1.1-0095",
+          "reference_5gram_coverage_in_full_booklet": 0.8683274021352313
+        },
+        {
+          "id": "ost-v1.1-0099",
+          "reference_5gram_coverage_in_full_booklet": 0.725
+        },
+        {
+          "id": "ost-v1.1-0107",
+          "reference_5gram_coverage_in_full_booklet": 0.8737373737373737
+        },
+        {
+          "id": "ost-v1.1-0112",
+          "reference_5gram_coverage_in_full_booklet": 0.8633818589025756
+        },
+        {
+          "id": "ost-v1.1-0116",
+          "reference_5gram_coverage_in_full_booklet": 0.6897810218978102
+        },
+        {
+          "id": "ost-v1.1-0123",
+          "reference_5gram_coverage_in_full_booklet": 0.808
+        },
+        {
+          "id": "ost-v1.1-0132",
+          "reference_5gram_coverage_in_full_booklet": 0.8778761061946903
+        },
+        {
+          "id": "ost-v1.1-0137",
+          "reference_5gram_coverage_in_full_booklet": 0.9665071770334929
+        },
+        {
+          "id": "ost-v1.1-0138",
+          "reference_5gram_coverage_in_full_booklet": 0.8114406779661016
+        },
+        {
+          "id": "ost-v1.1-0139",
+          "reference_5gram_coverage_in_full_booklet": 0.8571428571428571
+        },
+        {
+          "id": "ost-v1.1-0141",
+          "reference_5gram_coverage_in_full_booklet": 0.7372262773722628
+        },
+        {
+          "id": "ost-v1.1-0149",
+          "reference_5gram_coverage_in_full_booklet": 0.7527114967462039
+        },
+        {
+          "id": "ost-v1.1-0151",
+          "reference_5gram_coverage_in_full_booklet": 0.7426470588235294
+        },
+        {
+          "id": "ost-v1.1-0154",
+          "reference_5gram_coverage_in_full_booklet": 0.8714285714285714
+        },
+        {
+          "id": "ost-v1.1-0156",
+          "reference_5gram_coverage_in_full_booklet": 0.8565292096219931
+        },
+        {
+          "id": "ost-v1.1-0167",
+          "reference_5gram_coverage_in_full_booklet": 0.7840136054421769
+        },
+        {
+          "id": "ost-v1.1-0170",
+          "reference_5gram_coverage_in_full_booklet": 0.89272030651341
+        },
+        {
+          "id": "ost-v1.1-0179",
+          "reference_5gram_coverage_in_full_booklet": 0.755
+        },
+        {
+          "id": "ost-v1.1-0187",
+          "reference_5gram_coverage_in_full_booklet": 0.8079847908745247
+        },
+        {
+          "id": "ost-v1.1-0191",
+          "reference_5gram_coverage_in_full_booklet": 0.8142589118198874
+        },
+        {
+          "id": "ost-v1.1-0193",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-0208",
+          "reference_5gram_coverage_in_full_booklet": 0.9110169491525424
+        },
+        {
+          "id": "ost-v1.1-0244",
+          "reference_5gram_coverage_in_full_booklet": 0.8435374149659864
+        },
+        {
+          "id": "ost-v1.1-0253",
+          "reference_5gram_coverage_in_full_booklet": 0.8970588235294118
+        },
+        {
+          "id": "ost-v1.1-0257",
+          "reference_5gram_coverage_in_full_booklet": 0.7846153846153846
+        },
+        {
+          "id": "ost-v1.1-0268",
+          "reference_5gram_coverage_in_full_booklet": 0.8681818181818182
+        },
+        {
+          "id": "ost-v1.1-0275",
+          "reference_5gram_coverage_in_full_booklet": 0.8169934640522876
+        },
+        {
+          "id": "ost-v1.1-0277",
+          "reference_5gram_coverage_in_full_booklet": 0.8142589118198874
+        },
+        {
+          "id": "ost-v1.1-0279",
+          "reference_5gram_coverage_in_full_booklet": 0.8560411311053985
+        },
+        {
+          "id": "ost-v1.1-0281",
+          "reference_5gram_coverage_in_full_booklet": 0.9171597633136095
+        },
+        {
+          "id": "ost-v1.1-0282",
+          "reference_5gram_coverage_in_full_booklet": 0.8511627906976744
+        },
+        {
+          "id": "ost-v1.1-0285",
+          "reference_5gram_coverage_in_full_booklet": 0.9110169491525424
+        },
+        {
+          "id": "ost-v1.1-0286",
+          "reference_5gram_coverage_in_full_booklet": 0.8376623376623377
+        },
+        {
+          "id": "ost-v1.1-0288",
+          "reference_5gram_coverage_in_full_booklet": 0.973404255319149
+        },
+        {
+          "id": "ost-v1.1-0293",
+          "reference_5gram_coverage_in_full_booklet": 0.725
+        },
+        {
+          "id": "ost-v1.1-0295",
+          "reference_5gram_coverage_in_full_booklet": 0.9186991869918699
+        },
+        {
+          "id": "ost-v1.1-0321",
+          "reference_5gram_coverage_in_full_booklet": 0.8693693693693694
+        },
+        {
+          "id": "ost-v1.1-0330",
+          "reference_5gram_coverage_in_full_booklet": 0.9042145593869731
+        },
+        {
+          "id": "ost-v1.1-0332",
+          "reference_5gram_coverage_in_full_booklet": 0.7741273100616016
+        },
+        {
+          "id": "ost-v1.1-0339",
+          "reference_5gram_coverage_in_full_booklet": 0.8178294573643411
+        },
+        {
+          "id": "ost-v1.1-0344",
+          "reference_5gram_coverage_in_full_booklet": 0.7854077253218884
+        },
+        {
+          "id": "ost-v1.1-0348",
+          "reference_5gram_coverage_in_full_booklet": 0.9665071770334929
+        },
+        {
+          "id": "ost-v1.1-0349",
+          "reference_5gram_coverage_in_full_booklet": 0.8072407045009785
+        },
+        {
+          "id": "ost-v1.1-0350",
+          "reference_5gram_coverage_in_full_booklet": 0.826530612244898
+        },
+        {
+          "id": "ost-v1.1-0354",
+          "reference_5gram_coverage_in_full_booklet": 0.8778761061946903
+        },
+        {
+          "id": "ost-v1.1-0362",
+          "reference_5gram_coverage_in_full_booklet": 0.8034351145038168
+        },
+        {
+          "id": "ost-v1.1-0371",
+          "reference_5gram_coverage_in_full_booklet": 0.8488888888888889
+        },
+        {
+          "id": "ost-v1.1-0375",
+          "reference_5gram_coverage_in_full_booklet": 0.8008948545861297
+        },
+        {
+          "id": "ost-v1.1-0381",
+          "reference_5gram_coverage_in_full_booklet": 0.8488888888888889
+        },
+        {
+          "id": "ost-v1.1-0384",
+          "reference_5gram_coverage_in_full_booklet": 0.8379705400981997
+        },
+        {
+          "id": "ost-v1.1-0385",
+          "reference_5gram_coverage_in_full_booklet": 0.8444119795471147
+        },
+        {
+          "id": "ost-v1.1-0386",
+          "reference_5gram_coverage_in_full_booklet": 0.8511627906976744
+        },
+        {
+          "id": "ost-v1.1-0392",
+          "reference_5gram_coverage_in_full_booklet": 0.795
+        },
+        {
+          "id": "ost-v1.1-0397",
+          "reference_5gram_coverage_in_full_booklet": 0.8114406779661016
+        },
+        {
+          "id": "ost-v1.1-0415",
+          "reference_5gram_coverage_in_full_booklet": 0.8379705400981997
+        },
+        {
+          "id": "ost-v1.1-0420",
+          "reference_5gram_coverage_in_full_booklet": 0.8435374149659864
+        },
+        {
+          "id": "ost-v1.1-0423",
+          "reference_5gram_coverage_in_full_booklet": 0.8376623376623377
+        },
+        {
+          "id": "ost-v1.1-0425",
+          "reference_5gram_coverage_in_full_booklet": 0.8488888888888889
+        },
+        {
+          "id": "ost-v1.1-0436",
+          "reference_5gram_coverage_in_full_booklet": 0.8034351145038168
+        },
+        {
+          "id": "ost-v1.1-0437",
+          "reference_5gram_coverage_in_full_booklet": 0.8213592233009709
+        },
+        {
+          "id": "ost-v1.1-0442",
+          "reference_5gram_coverage_in_full_booklet": 0.795
+        },
+        {
+          "id": "ost-v1.1-0443",
+          "reference_5gram_coverage_in_full_booklet": 0.7149643705463183
+        },
+        {
+          "id": "ost-v1.1-0448",
+          "reference_5gram_coverage_in_full_booklet": 0.8446428571428571
+        },
+        {
+          "id": "ost-v1.1-0452",
+          "reference_5gram_coverage_in_full_booklet": 0.8444119795471147
+        },
+        {
+          "id": "ost-v1.1-0454",
+          "reference_5gram_coverage_in_full_booklet": 0.8446428571428571
+        },
+        {
+          "id": "ost-v1.1-0462",
+          "reference_5gram_coverage_in_full_booklet": 0.8114406779661016
+        },
+        {
+          "id": "ost-v1.1-0469",
+          "reference_5gram_coverage_in_full_booklet": 0.9186991869918699
+        },
+        {
+          "id": "ost-v1.1-0473",
+          "reference_5gram_coverage_in_full_booklet": 0.8008948545861297
+        },
+        {
+          "id": "ost-v1.1-0479",
+          "reference_5gram_coverage_in_full_booklet": 0.8205128205128205
+        },
+        {
+          "id": "ost-v1.1-0480",
+          "reference_5gram_coverage_in_full_booklet": 0.8511627906976744
+        },
+        {
+          "id": "ost-v1.1-0482",
+          "reference_5gram_coverage_in_full_booklet": 0.7149643705463183
+        },
+        {
+          "id": "ost-v1.1-0485",
+          "reference_5gram_coverage_in_full_booklet": 0.8888888888888888
+        },
+        {
+          "id": "ost-v1.1-0491",
+          "reference_5gram_coverage_in_full_booklet": 0.7712765957446809
+        },
+        {
+          "id": "ost-v1.1-0500",
+          "reference_5gram_coverage_in_full_booklet": 0.8092725216735771
+        },
+        {
+          "id": "ost-v1.1-0521",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0533",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0535",
+          "reference_5gram_coverage_in_full_booklet": 0.8092725216735771
+        },
+        {
+          "id": "ost-v1.1-0548",
+          "reference_5gram_coverage_in_full_booklet": 0.7908496732026143
+        },
+        {
+          "id": "ost-v1.1-0553",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0554",
+          "reference_5gram_coverage_in_full_booklet": 0.7980556783031374
+        },
+        {
+          "id": "ost-v1.1-0561",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0562",
+          "reference_5gram_coverage_in_full_booklet": 0.7819264069264069
+        },
+        {
+          "id": "ost-v1.1-0564",
+          "reference_5gram_coverage_in_full_booklet": 0.8657243816254417
+        },
+        {
+          "id": "ost-v1.1-0567",
+          "reference_5gram_coverage_in_full_booklet": 0.8134328358208955
+        },
+        {
+          "id": "ost-v1.1-0568",
+          "reference_5gram_coverage_in_full_booklet": 0.8092725216735771
+        },
+        {
+          "id": "ost-v1.1-0575",
+          "reference_5gram_coverage_in_full_booklet": 0.7982407916437603
+        },
+        {
+          "id": "ost-v1.1-0577",
+          "reference_5gram_coverage_in_full_booklet": 0.8260670032124828
+        },
+        {
+          "id": "ost-v1.1-0579",
+          "reference_5gram_coverage_in_full_booklet": 0.7014326647564469
+        },
+        {
+          "id": "ost-v1.1-0584",
+          "reference_5gram_coverage_in_full_booklet": 0.86281179138322
+        },
+        {
+          "id": "ost-v1.1-0587",
+          "reference_5gram_coverage_in_full_booklet": 0.8339181286549707
+        },
+        {
+          "id": "ost-v1.1-0590",
+          "reference_5gram_coverage_in_full_booklet": 0.7928331466965286
+        },
+        {
+          "id": "ost-v1.1-0591",
+          "reference_5gram_coverage_in_full_booklet": 0.7242751563388289
+        },
+        {
+          "id": "ost-v1.1-0593",
+          "reference_5gram_coverage_in_full_booklet": 0.7908496732026143
+        },
+        {
+          "id": "ost-v1.1-0602",
+          "reference_5gram_coverage_in_full_booklet": 0.7903516681695221
+        },
+        {
+          "id": "ost-v1.1-0605",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0606",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0608",
+          "reference_5gram_coverage_in_full_booklet": 0.7980556783031374
+        },
+        {
+          "id": "ost-v1.1-0609",
+          "reference_5gram_coverage_in_full_booklet": 0.8002729754322111
+        },
+        {
+          "id": "ost-v1.1-0613",
+          "reference_5gram_coverage_in_full_booklet": 0.7908496732026143
+        },
+        {
+          "id": "ost-v1.1-0617",
+          "reference_5gram_coverage_in_full_booklet": 0.7980556783031374
+        },
+        {
+          "id": "ost-v1.1-0618",
+          "reference_5gram_coverage_in_full_booklet": 0.8657195233730522
+        },
+        {
+          "id": "ost-v1.1-0622",
+          "reference_5gram_coverage_in_full_booklet": 0.8339181286549707
+        },
+        {
+          "id": "ost-v1.1-0631",
+          "reference_5gram_coverage_in_full_booklet": 0.8279530447542186
+        },
+        {
+          "id": "ost-v1.1-0633",
+          "reference_5gram_coverage_in_full_booklet": 0.7729403884795714
+        },
+        {
+          "id": "ost-v1.1-0635",
+          "reference_5gram_coverage_in_full_booklet": 0.8657243816254417
+        },
+        {
+          "id": "ost-v1.1-0637",
+          "reference_5gram_coverage_in_full_booklet": 0.8279530447542186
+        },
+        {
+          "id": "ost-v1.1-0643",
+          "reference_5gram_coverage_in_full_booklet": 0.7819264069264069
+        },
+        {
+          "id": "ost-v1.1-0647",
+          "reference_5gram_coverage_in_full_booklet": 0.8092725216735771
+        },
+        {
+          "id": "ost-v1.1-0661",
+          "reference_5gram_coverage_in_full_booklet": 0.8612059158134243
+        },
+        {
+          "id": "ost-v1.1-0678",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0690",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0694",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0697",
+          "reference_5gram_coverage_in_full_booklet": 0.7732949087415946
+        },
+        {
+          "id": "ost-v1.1-0702",
+          "reference_5gram_coverage_in_full_booklet": 0.8404029692470838
+        },
+        {
+          "id": "ost-v1.1-0703",
+          "reference_5gram_coverage_in_full_booklet": 0.8404029692470838
+        },
+        {
+          "id": "ost-v1.1-0705",
+          "reference_5gram_coverage_in_full_booklet": 0.8404029692470838
+        },
+        {
+          "id": "ost-v1.1-0707",
+          "reference_5gram_coverage_in_full_booklet": 0.7657502863688431
+        },
+        {
+          "id": "ost-v1.1-0713",
+          "reference_5gram_coverage_in_full_booklet": 0.8134328358208955
+        },
+        {
+          "id": "ost-v1.1-0714",
+          "reference_5gram_coverage_in_full_booklet": 0.8612059158134243
+        },
+        {
+          "id": "ost-v1.1-0717",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0733",
+          "reference_5gram_coverage_in_full_booklet": 0.7968678028558268
+        },
+        {
+          "id": "ost-v1.1-0737",
+          "reference_5gram_coverage_in_full_booklet": 0.8291970802919708
+        },
+        {
+          "id": "ost-v1.1-0742",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0743",
+          "reference_5gram_coverage_in_full_booklet": 0.7657502863688431
+        },
+        {
+          "id": "ost-v1.1-0749",
+          "reference_5gram_coverage_in_full_booklet": 0.8092725216735771
+        },
+        {
+          "id": "ost-v1.1-0750",
+          "reference_5gram_coverage_in_full_booklet": 0.7968678028558268
+        },
+        {
+          "id": "ost-v1.1-0753",
+          "reference_5gram_coverage_in_full_booklet": 0.8612059158134243
+        },
+        {
+          "id": "ost-v1.1-0756",
+          "reference_5gram_coverage_in_full_booklet": 0.8260670032124828
+        },
+        {
+          "id": "ost-v1.1-0757",
+          "reference_5gram_coverage_in_full_booklet": 0.7908496732026143
+        },
+        {
+          "id": "ost-v1.1-0759",
+          "reference_5gram_coverage_in_full_booklet": 0.795631067961165
+        },
+        {
+          "id": "ost-v1.1-0767",
+          "reference_5gram_coverage_in_full_booklet": 0.7980556783031374
+        },
+        {
+          "id": "ost-v1.1-0772",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0773",
+          "reference_5gram_coverage_in_full_booklet": 0.8246392896781354
+        },
+        {
+          "id": "ost-v1.1-0774",
+          "reference_5gram_coverage_in_full_booklet": 0.7014326647564469
+        },
+        {
+          "id": "ost-v1.1-0789",
+          "reference_5gram_coverage_in_full_booklet": 0.7732949087415946
+        },
+        {
+          "id": "ost-v1.1-0803",
+          "reference_5gram_coverage_in_full_booklet": 0.7732949087415946
+        },
+        {
+          "id": "ost-v1.1-0805",
+          "reference_5gram_coverage_in_full_booklet": 0.8134328358208955
+        },
+        {
+          "id": "ost-v1.1-0807",
+          "reference_5gram_coverage_in_full_booklet": 0.8134328358208955
+        },
+        {
+          "id": "ost-v1.1-0811",
+          "reference_5gram_coverage_in_full_booklet": 0.7684210526315789
+        },
+        {
+          "id": "ost-v1.1-0818",
+          "reference_5gram_coverage_in_full_booklet": 0.8404029692470838
+        },
+        {
+          "id": "ost-v1.1-0822",
+          "reference_5gram_coverage_in_full_booklet": 0.8657195233730522
+        },
+        {
+          "id": "ost-v1.1-0824",
+          "reference_5gram_coverage_in_full_booklet": 0.7980556783031374
+        },
+        {
+          "id": "ost-v1.1-0829",
+          "reference_5gram_coverage_in_full_booklet": 0.8339181286549707
+        },
+        {
+          "id": "ost-v1.1-0832",
+          "reference_5gram_coverage_in_full_booklet": 0.7846460618145563
+        },
+        {
+          "id": "ost-v1.1-0836",
+          "reference_5gram_coverage_in_full_booklet": 0.8134328358208955
+        },
+        {
+          "id": "ost-v1.1-0841",
+          "reference_5gram_coverage_in_full_booklet": 0.8282828282828283
+        },
+        {
+          "id": "ost-v1.1-0842",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0844",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0846",
+          "reference_5gram_coverage_in_full_booklet": 0.8404029692470838
+        },
+        {
+          "id": "ost-v1.1-0848",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0850",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0855",
+          "reference_5gram_coverage_in_full_booklet": 0.8556763285024155
+        },
+        {
+          "id": "ost-v1.1-0861",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0871",
+          "reference_5gram_coverage_in_full_booklet": 0.8282828282828283
+        },
+        {
+          "id": "ost-v1.1-0880",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0885",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0887",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0892",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0893",
+          "reference_5gram_coverage_in_full_booklet": 0.7827536922343973
+        },
+        {
+          "id": "ost-v1.1-0896",
+          "reference_5gram_coverage_in_full_booklet": 0.7657502863688431
+        },
+        {
+          "id": "ost-v1.1-0898",
+          "reference_5gram_coverage_in_full_booklet": 0.8227672373900972
+        },
+        {
+          "id": "ost-v1.1-0904",
+          "reference_5gram_coverage_in_full_booklet": 0.7903516681695221
+        },
+        {
+          "id": "ost-v1.1-0907",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0908",
+          "reference_5gram_coverage_in_full_booklet": 0.7846460618145563
+        },
+        {
+          "id": "ost-v1.1-0913",
+          "reference_5gram_coverage_in_full_booklet": 0.7819264069264069
+        },
+        {
+          "id": "ost-v1.1-0917",
+          "reference_5gram_coverage_in_full_booklet": 0.7732949087415946
+        },
+        {
+          "id": "ost-v1.1-0920",
+          "reference_5gram_coverage_in_full_booklet": 0.7968678028558268
+        },
+        {
+          "id": "ost-v1.1-0922",
+          "reference_5gram_coverage_in_full_booklet": 0.7846460618145563
+        },
+        {
+          "id": "ost-v1.1-0928",
+          "reference_5gram_coverage_in_full_booklet": 0.8404029692470838
+        },
+        {
+          "id": "ost-v1.1-0929",
+          "reference_5gram_coverage_in_full_booklet": 0.7846460618145563
+        },
+        {
+          "id": "ost-v1.1-0936",
+          "reference_5gram_coverage_in_full_booklet": 0.7978075517661388
+        },
+        {
+          "id": "ost-v1.1-0938",
+          "reference_5gram_coverage_in_full_booklet": 0.7827536922343973
+        },
+        {
+          "id": "ost-v1.1-0965",
+          "reference_5gram_coverage_in_full_booklet": 0.7908496732026143
+        },
+        {
+          "id": "ost-v1.1-0973",
+          "reference_5gram_coverage_in_full_booklet": 0.8255718954248366
+        },
+        {
+          "id": "ost-v1.1-0978",
+          "reference_5gram_coverage_in_full_booklet": 0.8260670032124828
+        },
+        {
+          "id": "ost-v1.1-0981",
+          "reference_5gram_coverage_in_full_booklet": 0.7729403884795714
+        },
+        {
+          "id": "ost-v1.1-0984",
+          "reference_5gram_coverage_in_full_booklet": 0.7980556783031374
+        },
+        {
+          "id": "ost-v1.1-0993",
+          "reference_5gram_coverage_in_full_booklet": 0.8457446808510638
+        },
+        {
+          "id": "ost-v1.1-0997",
+          "reference_5gram_coverage_in_full_booklet": 0.6978922716627635
+        },
+        {
+          "id": "ost-v1.1-0999",
+          "reference_5gram_coverage_in_full_booklet": 0.8079847908745247
+        },
+        {
+          "id": "ost-v1.1-1002",
+          "reference_5gram_coverage_in_full_booklet": 0.8700361010830325
+        },
+        {
+          "id": "ost-v1.1-1008",
+          "reference_5gram_coverage_in_full_booklet": 0.8446428571428571
+        },
+        {
+          "id": "ost-v1.1-1009",
+          "reference_5gram_coverage_in_full_booklet": 0.8344051446945338
+        },
+        {
+          "id": "ost-v1.1-1012",
+          "reference_5gram_coverage_in_full_booklet": 0.8170289855072463
+        },
+        {
+          "id": "ost-v1.1-1014",
+          "reference_5gram_coverage_in_full_booklet": 0.6897810218978102
+        },
+        {
+          "id": "ost-v1.1-1020",
+          "reference_5gram_coverage_in_full_booklet": 0.769100169779287
+        },
+        {
+          "id": "ost-v1.1-1021",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-1022",
+          "reference_5gram_coverage_in_full_booklet": 0.9875259875259875
+        },
+        {
+          "id": "ost-v1.1-1028",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1034",
+          "reference_5gram_coverage_in_full_booklet": 0.769100169779287
+        },
+        {
+          "id": "ost-v1.1-1035",
+          "reference_5gram_coverage_in_full_booklet": 0.8142589118198874
+        },
+        {
+          "id": "ost-v1.1-1040",
+          "reference_5gram_coverage_in_full_booklet": 0.8778761061946903
+        },
+        {
+          "id": "ost-v1.1-1043",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1044",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1045",
+          "reference_5gram_coverage_in_full_booklet": 0.769100169779287
+        },
+        {
+          "id": "ost-v1.1-1053",
+          "reference_5gram_coverage_in_full_booklet": 0.753199268738574
+        },
+        {
+          "id": "ost-v1.1-1054",
+          "reference_5gram_coverage_in_full_booklet": 0.8170289855072463
+        },
+        {
+          "id": "ost-v1.1-1058",
+          "reference_5gram_coverage_in_full_booklet": 0.9110169491525424
+        },
+        {
+          "id": "ost-v1.1-1059",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-1061",
+          "reference_5gram_coverage_in_full_booklet": 0.8092566619915849
+        },
+        {
+          "id": "ost-v1.1-1067",
+          "reference_5gram_coverage_in_full_booklet": 0.9186991869918699
+        },
+        {
+          "id": "ost-v1.1-1068",
+          "reference_5gram_coverage_in_full_booklet": 0.8714285714285714
+        },
+        {
+          "id": "ost-v1.1-1074",
+          "reference_5gram_coverage_in_full_booklet": 0.8117154811715481
+        },
+        {
+          "id": "ost-v1.1-1075",
+          "reference_5gram_coverage_in_full_booklet": 0.8376623376623377
+        },
+        {
+          "id": "ost-v1.1-1085",
+          "reference_5gram_coverage_in_full_booklet": 0.8354430379746836
+        },
+        {
+          "id": "ost-v1.1-1091",
+          "reference_5gram_coverage_in_full_booklet": 0.856951871657754
+        },
+        {
+          "id": "ost-v1.1-1094",
+          "reference_5gram_coverage_in_full_booklet": 0.9875259875259875
+        },
+        {
+          "id": "ost-v1.1-1099",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1120",
+          "reference_5gram_coverage_in_full_booklet": 0.9
+        },
+        {
+          "id": "ost-v1.1-1122",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1123",
+          "reference_5gram_coverage_in_full_booklet": 0.8323108384458078
+        },
+        {
+          "id": "ost-v1.1-1126",
+          "reference_5gram_coverage_in_full_booklet": 0.8142589118198874
+        },
+        {
+          "id": "ost-v1.1-1134",
+          "reference_5gram_coverage_in_full_booklet": 0.9745222929936306
+        },
+        {
+          "id": "ost-v1.1-1137",
+          "reference_5gram_coverage_in_full_booklet": 0.8867132867132868
+        },
+        {
+          "id": "ost-v1.1-1147",
+          "reference_5gram_coverage_in_full_booklet": 0.9699248120300752
+        },
+        {
+          "id": "ost-v1.1-1153",
+          "reference_5gram_coverage_in_full_booklet": 0.9669421487603306
+        },
+        {
+          "id": "ost-v1.1-1154",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-1164",
+          "reference_5gram_coverage_in_full_booklet": 0.8379705400981997
+        },
+        {
+          "id": "ost-v1.1-1173",
+          "reference_5gram_coverage_in_full_booklet": 0.7871939736346516
+        },
+        {
+          "id": "ost-v1.1-1175",
+          "reference_5gram_coverage_in_full_booklet": 0.9565217391304348
+        },
+        {
+          "id": "ost-v1.1-1176",
+          "reference_5gram_coverage_in_full_booklet": 0.9243275199527047
+        },
+        {
+          "id": "ost-v1.1-1177",
+          "reference_5gram_coverage_in_full_booklet": 0.725
+        },
+        {
+          "id": "ost-v1.1-1179",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-1189",
+          "reference_5gram_coverage_in_full_booklet": 0.8778761061946903
+        },
+        {
+          "id": "ost-v1.1-1215",
+          "reference_5gram_coverage_in_full_booklet": 0.7784090909090909
+        },
+        {
+          "id": "ost-v1.1-1217",
+          "reference_5gram_coverage_in_full_booklet": 0.9322033898305084
+        },
+        {
+          "id": "ost-v1.1-1220",
+          "reference_5gram_coverage_in_full_booklet": 0.8323108384458078
+        },
+        {
+          "id": "ost-v1.1-1224",
+          "reference_5gram_coverage_in_full_booklet": 0.8778761061946903
+        },
+        {
+          "id": "ost-v1.1-1225",
+          "reference_5gram_coverage_in_full_booklet": 0.9738562091503268
+        },
+        {
+          "id": "ost-v1.1-1229",
+          "reference_5gram_coverage_in_full_booklet": 0.8464285714285714
+        },
+        {
+          "id": "ost-v1.1-1247",
+          "reference_5gram_coverage_in_full_booklet": 0.975609756097561
+        },
+        {
+          "id": "ost-v1.1-1248",
+          "reference_5gram_coverage_in_full_booklet": 0.8628318584070797
+        },
+        {
+          "id": "ost-v1.1-1250",
+          "reference_5gram_coverage_in_full_booklet": 0.8376623376623377
+        },
+        {
+          "id": "ost-v1.1-1253",
+          "reference_5gram_coverage_in_full_booklet": 0.7745664739884393
+        },
+        {
+          "id": "ost-v1.1-1254",
+          "reference_5gram_coverage_in_full_booklet": 0.6903409090909091
+        },
+        {
+          "id": "ost-v1.1-1255",
+          "reference_5gram_coverage_in_full_booklet": 0.9042145593869731
+        },
+        {
+          "id": "ost-v1.1-1263",
+          "reference_5gram_coverage_in_full_booklet": 0.7712765957446809
+        },
+        {
+          "id": "ost-v1.1-1264",
+          "reference_5gram_coverage_in_full_booklet": 0.907563025210084
+        },
+        {
+          "id": "ost-v1.1-1271",
+          "reference_5gram_coverage_in_full_booklet": 0.8488888888888889
+        },
+        {
+          "id": "ost-v1.1-1275",
+          "reference_5gram_coverage_in_full_booklet": 0.8737373737373737
+        },
+        {
+          "id": "ost-v1.1-1282",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-1284",
+          "reference_5gram_coverage_in_full_booklet": 0.8207705192629816
+        },
+        {
+          "id": "ost-v1.1-1288",
+          "reference_5gram_coverage_in_full_booklet": 0.8306010928961749
+        },
+        {
+          "id": "ost-v1.1-1296",
+          "reference_5gram_coverage_in_full_booklet": 0.7846153846153846
+        },
+        {
+          "id": "ost-v1.1-1303",
+          "reference_5gram_coverage_in_full_booklet": 0.8571428571428571
+        },
+        {
+          "id": "ost-v1.1-1310",
+          "reference_5gram_coverage_in_full_booklet": 0.7854077253218884
+        },
+        {
+          "id": "ost-v1.1-1325",
+          "reference_5gram_coverage_in_full_booklet": 0.725
+        },
+        {
+          "id": "ost-v1.1-1330",
+          "reference_5gram_coverage_in_full_booklet": 0.7975103734439835
+        },
+        {
+          "id": "ost-v1.1-1331",
+          "reference_5gram_coverage_in_full_booklet": 0.8464285714285714
+        },
+        {
+          "id": "ost-v1.1-1332",
+          "reference_5gram_coverage_in_full_booklet": 0.8501805054151624
+        },
+        {
+          "id": "ost-v1.1-1336",
+          "reference_5gram_coverage_in_full_booklet": 0.8531187122736419
+        },
+        {
+          "id": "ost-v1.1-1337",
+          "reference_5gram_coverage_in_full_booklet": 0.8066666666666666
+        },
+        {
+          "id": "ost-v1.1-1342",
+          "reference_5gram_coverage_in_full_booklet": 0.9824561403508771
+        },
+        {
+          "id": "ost-v1.1-1344",
+          "reference_5gram_coverage_in_full_booklet": 0.9103896103896104
+        },
+        {
+          "id": "ost-v1.1-1345",
+          "reference_5gram_coverage_in_full_booklet": 0.825187969924812
+        },
+        {
+          "id": "ost-v1.1-1347",
+          "reference_5gram_coverage_in_full_booklet": 0.7752525252525253
+        },
+        {
+          "id": "ost-v1.1-1357",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1363",
+          "reference_5gram_coverage_in_full_booklet": 0.8008658008658008
+        },
+        {
+          "id": "ost-v1.1-1364",
+          "reference_5gram_coverage_in_full_booklet": 0.7121588089330024
+        },
+        {
+          "id": "ost-v1.1-1365",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1367",
+          "reference_5gram_coverage_in_full_booklet": 0.77
+        },
+        {
+          "id": "ost-v1.1-1369",
+          "reference_5gram_coverage_in_full_booklet": 0.8700361010830325
+        },
+        {
+          "id": "ost-v1.1-1370",
+          "reference_5gram_coverage_in_full_booklet": 0.7752525252525253
+        },
+        {
+          "id": "ost-v1.1-1372",
+          "reference_5gram_coverage_in_full_booklet": 0.9442231075697212
+        },
+        {
+          "id": "ost-v1.1-1374",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1379",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1382",
+          "reference_5gram_coverage_in_full_booklet": 0.7917737789203085
+        },
+        {
+          "id": "ost-v1.1-1385",
+          "reference_5gram_coverage_in_full_booklet": 0.8354430379746836
+        },
+        {
+          "id": "ost-v1.1-1386",
+          "reference_5gram_coverage_in_full_booklet": 0.7752525252525253
+        },
+        {
+          "id": "ost-v1.1-1388",
+          "reference_5gram_coverage_in_full_booklet": 0.8073217726396917
+        },
+        {
+          "id": "ost-v1.1-1397",
+          "reference_5gram_coverage_in_full_booklet": 0.8008658008658008
+        },
+        {
+          "id": "ost-v1.1-1403",
+          "reference_5gram_coverage_in_full_booklet": 0.8079847908745247
+        },
+        {
+          "id": "ost-v1.1-1411",
+          "reference_5gram_coverage_in_full_booklet": 0.9415584415584416
+        },
+        {
+          "id": "ost-v1.1-1419",
+          "reference_5gram_coverage_in_full_booklet": 0.84765625
+        },
+        {
+          "id": "ost-v1.1-1420",
+          "reference_5gram_coverage_in_full_booklet": 0.8323108384458078
+        },
+        {
+          "id": "ost-v1.1-1425",
+          "reference_5gram_coverage_in_full_booklet": 0.9479768786127167
+        },
+        {
+          "id": "ost-v1.1-1431",
+          "reference_5gram_coverage_in_full_booklet": 0.8488888888888889
+        },
+        {
+          "id": "ost-v1.1-1434",
+          "reference_5gram_coverage_in_full_booklet": 0.77
+        },
+        {
+          "id": "ost-v1.1-1435",
+          "reference_5gram_coverage_in_full_booklet": 0.77
+        },
+        {
+          "id": "ost-v1.1-1441",
+          "reference_5gram_coverage_in_full_booklet": 0.6903409090909091
+        },
+        {
+          "id": "ost-v1.1-1447",
+          "reference_5gram_coverage_in_full_booklet": 0.982646420824295
+        },
+        {
+          "id": "ost-v1.1-1449",
+          "reference_5gram_coverage_in_full_booklet": 0.907563025210084
+        },
+        {
+          "id": "ost-v1.1-1457",
+          "reference_5gram_coverage_in_full_booklet": 0.9186991869918699
+        },
+        {
+          "id": "ost-v1.1-1462",
+          "reference_5gram_coverage_in_full_booklet": 0.753199268738574
+        },
+        {
+          "id": "ost-v1.1-1463",
+          "reference_5gram_coverage_in_full_booklet": 0.753199268738574
+        },
+        {
+          "id": "ost-v1.1-1470",
+          "reference_5gram_coverage_in_full_booklet": 0.8464285714285714
+        },
+        {
+          "id": "ost-v1.1-1473",
+          "reference_5gram_coverage_in_full_booklet": 0.8066666666666666
+        },
+        {
+          "id": "ost-v1.1-1478",
+          "reference_5gram_coverage_in_full_booklet": 0.8681818181818182
+        },
+        {
+          "id": "ost-v1.1-1480",
+          "reference_5gram_coverage_in_full_booklet": 0.8306010928961749
+        },
+        {
+          "id": "ost-v1.1-1482",
+          "reference_5gram_coverage_in_full_booklet": 0.8457446808510638
+        },
+        {
+          "id": "ost-v1.1-1484",
+          "reference_5gram_coverage_in_full_booklet": 0.8700361010830325
+        }
+      ]
+    }
+  },
+  "note": "Reference 5-gram coverage is diagnostic alignment, not organizer gold evidence scoring. No missing rows silently scored."
+}

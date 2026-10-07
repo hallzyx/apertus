@@ -39,8 +39,8 @@ def main():
     p = subs.add_parser("evaluate");p.add_argument("dataset");p.add_argument("predictions");p.add_argument("--output")
     p = subs.add_parser("retrieve");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--k",type=int,default=5);p.add_argument("--diversify",action="store_true")
     p = subs.add_parser("predict-frozen");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--model-dir",required=True);p.add_argument("--head-dir",required=True);p.add_argument("--device",choices=["cpu","cuda"],default="cpu");p.add_argument("--context",choices=["full","bm25"],default="full");p.add_argument("--k",type=int,default=5)
-    p = subs.add_parser("predict");p.add_argument("booklet");p.add_argument("claim");model_options(p)
-    p = subs.add_parser("predict-batch");p.add_argument("input");p.add_argument("--output",required=True);model_options(p)
+    p = subs.add_parser("predict");p.add_argument("booklet");p.add_argument("claim");model_options(p);p.set_defaults(context='hybrid')
+    p = subs.add_parser("predict-batch");p.add_argument("input");p.add_argument("--output",required=True);model_options(p);p.set_defaults(context='hybrid')
     p = subs.add_parser("experiment");p.add_argument("dataset");p.add_argument("--id",required=True);p.add_argument("--split-name",required=True,choices=["train","validation","test"]);p.add_argument("--output-dir",required=True);p.add_argument("--registry",default="experiments/registry.jsonl");p.add_argument("--estimated-cost",type=float,default=0);p.add_argument("--gpu",default="unknown");p.add_argument("--notes",default="");model_options(p)
     p = subs.add_parser("serve");p.add_argument("--host",default="127.0.0.1");p.add_argument("--port",type=int,default=8000)
     subs.add_parser("self-test")
@@ -99,8 +99,9 @@ def main():
             emit(FrozenApertus(args.model_dir,args.head_dir,args.device).predict(
                  load_document(args.booklet),args.claim,args.context,args.k,mapping))
         elif args.command == "predict":
-            if args.context == "gold":
-                raise ValueError("Gold evidence is an evaluation diagnostic, unavailable in real CLI input")
+            if args.context in ('gold','reference'):
+                raise ValueError("Reference/gold evidence is an evaluation diagnostic, never production input")
+            os.environ['APERTUS_REQUIRED_GENERATION']='v1.5'
             doc = load_document(args.booklet)
             began = time.perf_counter()
             mode = args.context
@@ -116,6 +117,7 @@ def main():
             result['latency_seconds'] = result['inference_time_ms']/1000
             emit(result)
         elif args.command == 'predict-batch':
+            os.environ['APERTUS_REQUIRED_GENERATION']='v1.5'
             if args.context in ('gold','reference'):
                 raise ValueError('Production batch input is booklet + claim, never reference/gold evidence')
             if Path(args.output).exists(): raise ValueError('Existing batch output cannot be overwritten')
@@ -150,8 +152,14 @@ def main():
                 raise ValueError("Experiment output directory must be empty")
             args.mapping = label_map()
             client = ApertusClient()
+            retriever = None
+            if args.context in ('dense','hybrid'):
+                from .dense import MultilingualRetriever, REPO, REVISION
+                retriever = MultilingualRetriever(os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small'))
             args.model_name = client.model
             record = new_record(args.id,rows,args)
+            if retriever:
+                record['supporting_retrieval_model']={'repo':REPO,'revision':REVISION}
             # Capture dirty status: commit SHA alone does not identify uncommitted code.
             import subprocess
             try:
@@ -163,7 +171,17 @@ def main():
             predictions, start = [], time.perf_counter()
             try:
                 for r in rows:
-                    pred = predict(r,client,args.mapping,args.context,args.k,args.max_context_bytes,args.method,args.diversify)
+                    began = time.perf_counter()
+                    mode = args.context
+                    prepared = r
+                    if retriever:
+                        prepared = {**r,'passages':retriever.retrieve(r['passages'],r['claim'],args.k,mode)}
+                        mode = 'full'
+                    pred = predict(prepared,client,args.mapping,mode,args.k,args.max_context_bytes,args.method,args.diversify)
+                    pred['retrieval']=args.context
+                    pred['model_inference_time_ms']=pred['inference_time_ms']
+                    pred['latency_seconds']=time.perf_counter()-began
+                    pred['inference_time_ms']=pred['latency_seconds']*1000
                     predictions.append(pred)
                     append_event(out/"partial_predictions.jsonl",pred)
                 metrics = evaluate(rows,predictions)

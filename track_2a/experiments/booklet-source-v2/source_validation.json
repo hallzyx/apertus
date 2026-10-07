@@ -1,0 +1,14 @@
+{
+  "source_documents": 60,
+  "all_downloaded": true,
+  "partitions": {
+    "train": 902,
+    "validation": 276,
+    "test": 310
+  },
+  "missing_examples": 0,
+  "document_processing": "page-offset-plain-v2",
+  "source_urls_and_pdf_hashes": "manifest.json",
+  "processing_selection": "Five training-only extraction comparisons before v2; layout fragmented words. No test-based extraction/parameter optimization.",
+  "reference_used_at_production_inference": false
+}

@@ -9,7 +9,8 @@ COPY scripts/run_hybrid_workbench.py ./scripts/
 COPY deployment ./deployment
 COPY data/example-booklet.json ./data/example-booklet.json
 COPY tests ./tests
-RUN mkdir -p /models && chmod -R a+rX /app && chmod 777 /models
+RUN mkdir -p /models && chmod 777 /models
+RUN chmod -R a+rX /app/src /app/scripts /app/deployment /app/data /app/tests
 ENV PYTHONPATH=/app/src PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 APERTUS_REQUIRED_GENERATION=v1.5 EMBEDDING_MODEL_DIR=/models/multilingual-e5-small RETRIEVAL_MODE=hybrid HF_HOME=/models/hf HF_HUB_DISABLE_XET=1 OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
 USER 65534:65534
 EXPOSE 8000

@@ -1,0 +1,607 @@
+{
+  "source_sha256": "87ee4afd9c0ee8861106c50f05884481402ca668aecf927df68fc52d915b02fd",
+  "records": [
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/6DaWglL-N7NM/2025-09-28_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "650f9b46770f49892e727664a02061a3f82f754cfd5e256159ea2fef03dccb83.pdf",
+      "document": "650f9b46770f49892e727664a02061a3f82f754cfd5e256159ea2fef03dccb83.json",
+      "sha256": "39c020145299913685e4d0b6899fa23bb1f94938652a417e0c1da08d316ade8a",
+      "bytes": 1140829,
+      "pages": 48,
+      "passages": 99,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/9igLXNhBGtsc/2025-02-09_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "ada94fb50a1f0a2b995bb20eff1c21f1cd234a4520cdcbdc583cdaec43e9589d.pdf",
+      "document": "ada94fb50a1f0a2b995bb20eff1c21f1cd234a4520cdcbdc583cdaec43e9589d.json",
+      "sha256": "97756edd20157c63956334c8ef563af17fecfd96afa9fd8fba2777b64df36180",
+      "bytes": 589908,
+      "pages": 16,
+      "passages": 28,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/In9i5Kp4p64r/2024-03-03_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "b42ca2da64162a6433b5baa93f6c5b45978d216801520848fc2496999fa4c223.pdf",
+      "document": "b42ca2da64162a6433b5baa93f6c5b45978d216801520848fc2496999fa4c223.json",
+      "sha256": "53c7cc72c28f80969ed56d7813ad8c05e505b1817923418d0dfa45368a6bd07e",
+      "bytes": 759783,
+      "pages": 32,
+      "passages": 53,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/JwKnnvQMcYT2/2022-02-13_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "5226acda3d506981a24224eb3316bc83425414121df9a5179e77b12d6710cfff.pdf",
+      "document": "5226acda3d506981a24224eb3316bc83425414121df9a5179e77b12d6710cfff.json",
+      "sha256": "4979a6ed7f2f6616cc692638341b00ef20bb3e74cb6a40608f6f8c968fe167a4",
+      "bytes": 869635,
+      "pages": 64,
+      "passages": 109,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "a25af5e538733680a5454b92ff8e7d3efbb61e0f5be6e50b9067f523ac9b68c0.pdf",
+      "document": "a25af5e538733680a5454b92ff8e7d3efbb61e0f5be6e50b9067f523ac9b68c0.json",
+      "sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+      "bytes": 1104889,
+      "pages": 56,
+      "passages": 113,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/MDRXrtFaVPNG/2026-03-08_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "35aad2265f34206a8c94a0d07c13ea6ad14f157ad96e177202f29407e9dbafd9.pdf",
+      "document": "35aad2265f34206a8c94a0d07c13ea6ad14f157ad96e177202f29407e9dbafd9.json",
+      "sha256": "d0c794f37d6d2cb25e9969ed058e2a7d7c3e2508f7f03e2b5e90415d364f6170",
+      "bytes": 1281545,
+      "pages": 72,
+      "passages": 144,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "239e412995ceff9c0f2fb03eedcd160d1cde051a672c6a7647af71c230e15e32.pdf",
+      "document": "239e412995ceff9c0f2fb03eedcd160d1cde051a672c6a7647af71c230e15e32.json",
+      "sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+      "bytes": 753452,
+      "pages": 40,
+      "passages": 65,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/PCWaDg8-GOcJ/2022-05-15_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "032d07e6c70a8a780f8f33f26fa95c9bf9307e3e0ffd9210210a4cd3d40bcb66.pdf",
+      "document": "032d07e6c70a8a780f8f33f26fa95c9bf9307e3e0ffd9210210a4cd3d40bcb66.json",
+      "sha256": "c12ea935b73d98790649c3bb8f3f3c5ff967a999a0a4ddc969121b9dd5d47335",
+      "bytes": 1978279,
+      "pages": 56,
+      "passages": 94,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/SwAIDvDocLte/2022-09-25_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "d81390fb58738ce0591649d8de2d9a374297b09d3926263eee545bb683893a69.pdf",
+      "document": "d81390fb58738ce0591649d8de2d9a374297b09d3926263eee545bb683893a69.json",
+      "sha256": "c67c9bce6da1b5587ee25919cff8172d33c45081e10a96f7c0476f49a91d2b97",
+      "bytes": 1615276,
+      "pages": 80,
+      "passages": 257,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/TbPPMZBkuvPm/2021-11-28_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "5d1a5d1414aafdfd15b0dae2501a609e99ebfe2950b31df23bd3e77dbcdc23dc.pdf",
+      "document": "5d1a5d1414aafdfd15b0dae2501a609e99ebfe2950b31df23bd3e77dbcdc23dc.json",
+      "sha256": "f463fb7ea4b7f663d5e2af0f67bc8e364778ee3c0a19f56caadc655bc2670a7b",
+      "bytes": 594969,
+      "pages": 48,
+      "passages": 89,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/UxUxfYD5ma0h/2021-06-13_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "5aad16851c6b8575a4957e5df9aad58199f21daf4cf08cf9b7e41af7447b9199.pdf",
+      "document": "5aad16851c6b8575a4957e5df9aad58199f21daf4cf08cf9b7e41af7447b9199.json",
+      "sha256": "521e39af06717d2adeb2f787a08b533164921a952c59b7ad3e5b114fcadec744",
+      "bytes": 1563498,
+      "pages": 144,
+      "passages": 308,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/WeUrKyC0FyPc/2026-06-14_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "8228e5139d7e30b75021bb36d9e3729f92dcc3bf49c941605f4031ca3ea0aa99.pdf",
+      "document": "8228e5139d7e30b75021bb36d9e3729f92dcc3bf49c941605f4031ca3ea0aa99.json",
+      "sha256": "13c434202d63d32ca57f03311fb9de5fc7477d5c49ea14b06984f5d3a8591115",
+      "bytes": 848547,
+      "pages": 40,
+      "passages": 75,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/XuiMCko39BzI/2020-09-27_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "75dc1a878a0daf50331b361c023cdb1f563e77ab77b70dd6c3ebc6d0f3d2235c.pdf",
+      "document": "75dc1a878a0daf50331b361c023cdb1f563e77ab77b70dd6c3ebc6d0f3d2235c.json",
+      "sha256": "a6663984e2d5c42e4c2548fd146229440e9ed941236b1d0221891f0b5c0ca50b",
+      "bytes": 941983,
+      "pages": 88,
+      "passages": 146,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/aSmZ7rOvZDrG/2020-02-09_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "d0e1a88ec4cb70a550dc05c554c37a4833717e4c5fff0e042e73c067babce4a1.pdf",
+      "document": "d0e1a88ec4cb70a550dc05c554c37a4833717e4c5fff0e042e73c067babce4a1.json",
+      "sha256": "9df0813f2728c9de6dd29b132acf11d3e13bf7a011b7e6475a4c8b5155c889c8",
+      "bytes": 2424583,
+      "pages": 32,
+      "passages": 54,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/iWYLyEPfLvhn/2024-09-22_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "07aa4ebe1d9fdac7e8f5529299559db6ce108363818de1574496668c7001edfa.pdf",
+      "document": "07aa4ebe1d9fdac7e8f5529299559db6ce108363818de1574496668c7001edfa.json",
+      "sha256": "d8e0047ae589df3bdaa91c93fcb0f6dd0cbb5e36f7aab00fe293ad996a9bfed4",
+      "bytes": 2680718,
+      "pages": 40,
+      "passages": 58,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/jezxrs8DLj5a/2021-03-07_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "9c7c82126209674fb3d90ea680d7fd1f4c75c0c6e055f89927c65178a7c8c5b7.pdf",
+      "document": "9c7c82126209674fb3d90ea680d7fd1f4c75c0c6e055f89927c65178a7c8c5b7.json",
+      "sha256": "a4cc2b811cdd959cbb3353101c226cdbd2398cef17028349c241a833559dc6d2",
+      "bytes": 2358162,
+      "pages": 56,
+      "passages": 93,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/wHXT9BH3VlYQ/2024-11-24_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "a82aed93f1bde23279372b533175e039b106d81e4b6857ad14fa76b588639cfa.pdf",
+      "document": "a82aed93f1bde23279372b533175e039b106d81e4b6857ad14fa76b588639cfa.json",
+      "sha256": "9ea4ea66c852f580360e4b0837e0af8b5b201eedb8c2f4639fce9a7420dd4b84",
+      "bytes": 1362467,
+      "pages": 72,
+      "passages": 172,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/x6Qn59zt63F7/2025-11-30_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "d19c14c542c678e8124d81b1aae4f03d08dca3147062cf175b8af746369dd72e.pdf",
+      "document": "d19c14c542c678e8124d81b1aae4f03d08dca3147062cf175b8af746369dd72e.json",
+      "sha256": "4b612b614e65e028c2c0fdaf7bf3d32ddbdcbea060b7540180969c95cf694636",
+      "bytes": 667877,
+      "pages": 32,
+      "passages": 64,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/ywovGJwC1GeO/2020-11-29_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "5997ae8c22484b550110486eb2a79925ef830d5bc801f33430de5de314025116.pdf",
+      "document": "5997ae8c22484b550110486eb2a79925ef830d5bc801f33430de5de314025116.json",
+      "sha256": "bc43ce8b442b0fd05821da5619afc173d3ba0e9936cef91c6a8772e600885f88",
+      "bytes": 402177,
+      "pages": 32,
+      "passages": 51,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/de/sd-web/z11TVw3xAFqy/2024-06-09_erlaeuterungen_des_bundesrates.pdf",
+      "pdf": "1ca8c310f55c65625f2116c2a0704eff3307b1b3ab330438eb8bdf59cc85ed6a.pdf",
+      "document": "1ca8c310f55c65625f2116c2a0704eff3307b1b3ab330438eb8bdf59cc85ed6a.json",
+      "sha256": "b5ced6e09502bf5956ce6219c8332a1611566b19a8d8ff7ddf3beb6c44924f92",
+      "bytes": 2161327,
+      "pages": 88,
+      "passages": 244,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/6DaWglL-N7NM/2025-09-28_explications_du_conseil_federal.pdf",
+      "pdf": "59ad69c00b2a2badf1525a0a9a0669f28adf96290ae7bae634569d73fbd0ef8b.pdf",
+      "document": "59ad69c00b2a2badf1525a0a9a0669f28adf96290ae7bae634569d73fbd0ef8b.json",
+      "sha256": "f426e4637a10ecdb7a14296c6455918d47e90b4347a953156be1c00cf1bbfd67",
+      "bytes": 862887,
+      "pages": 48,
+      "passages": 113,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/9igLXNhBGtsc/2025-02-09_explications_du_conseil_federal.pdf",
+      "pdf": "b8e7eb76ecd0b3e6ac24c725a5d3a422071b12adb22c73ee9d77119e4be5b6f9.pdf",
+      "document": "b8e7eb76ecd0b3e6ac24c725a5d3a422071b12adb22c73ee9d77119e4be5b6f9.json",
+      "sha256": "166db1fcd0587220d3a8f92bad101523a134b77d7a8e2be4b03690c9c16f0fd0",
+      "bytes": 576173,
+      "pages": 16,
+      "passages": 31,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/In9i5Kp4p64r/2024-03-03_explications_du_conseil_federal.pdf",
+      "pdf": "346b8b5a1ad5427dbdb93b7f50ac4c6ef05c186a350ac76b0faea380ce6c90bb.pdf",
+      "document": "346b8b5a1ad5427dbdb93b7f50ac4c6ef05c186a350ac76b0faea380ce6c90bb.json",
+      "sha256": "b28e64fbbdb39c3e9499056e433cbcb763c154799fff775262d0becd86d77cd9",
+      "bytes": 759195,
+      "pages": 32,
+      "passages": 54,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/JwKnnvQMcYT2/2022-02-13_explications_du_conseil_federal.pdf",
+      "pdf": "2d3744ea8dc91b2d5264a8f2c91fe2f0f2dc0f771ba15e8eeb23f4c30e9b52ce.pdf",
+      "document": "2d3744ea8dc91b2d5264a8f2c91fe2f0f2dc0f771ba15e8eeb23f4c30e9b52ce.json",
+      "sha256": "2d8cb9710acf095b5bdb2f5cf431f1bdd93e21b5e250b168170a1e249b0b7a22",
+      "bytes": 903952,
+      "pages": 64,
+      "passages": 121,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/Lv5UWt6X1iUj/2023-06-18_explications_du_conseil_federal.pdf",
+      "pdf": "66e39f622810b901eec67af28b0cb04aed318de084c2f8eba25682e0b46bb1d0.pdf",
+      "document": "66e39f622810b901eec67af28b0cb04aed318de084c2f8eba25682e0b46bb1d0.json",
+      "sha256": "925a6f553a6f67059cebacccfa7d4efcffc3a31d5441d9c978a57546b6b8bdd6",
+      "bytes": 1804931,
+      "pages": 56,
+      "passages": 125,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+      "pdf": "6cfbe4f549c63e9acc33d3d17efe4a1620961d28efec17591d77efd71bf019c6.pdf",
+      "document": "6cfbe4f549c63e9acc33d3d17efe4a1620961d28efec17591d77efd71bf019c6.json",
+      "sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+      "bytes": 1193762,
+      "pages": 72,
+      "passages": 157,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/NJXQlhZXHqDA/2021-09-26_explications_du_conseil_federal.pdf",
+      "pdf": "a3a6c56ab9660486f2533a9988f4b212043d990cb65718fe627d2d2d1d4d8417.pdf",
+      "document": "a3a6c56ab9660486f2533a9988f4b212043d990cb65718fe627d2d2d1d4d8417.json",
+      "sha256": "ae46dce97c0eb0b000339159ba998f373126f1879eff6bcfed6398d147d30ecf",
+      "bytes": 753196,
+      "pages": 40,
+      "passages": 67,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/PCWaDg8-GOcJ/2022-05-15_explications_du_conseil_federal.pdf",
+      "pdf": "9159039a26e80374df577df3e5074255cb9b851e0ac6b74bbaffff40f3ddec93.pdf",
+      "document": "9159039a26e80374df577df3e5074255cb9b851e0ac6b74bbaffff40f3ddec93.json",
+      "sha256": "f9c5d7830a90b9af3b0c8fde853e036a14ca1b111958342bb39ad98576adc308",
+      "bytes": 1994060,
+      "pages": 56,
+      "passages": 98,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/SwAIDvDocLte/2022-09-25_explications_du_conseil_federal.pdf",
+      "pdf": "d5171e885fcb998785372f42dfe061b2bfa1eeabb58fb99e7e5b0c10f35d698c.pdf",
+      "document": "d5171e885fcb998785372f42dfe061b2bfa1eeabb58fb99e7e5b0c10f35d698c.json",
+      "sha256": "ed311ed79502a5ffb79d33e83d6ed177cb01aa3b9d1fdb9b5e324fadb443ca78",
+      "bytes": 1627659,
+      "pages": 80,
+      "passages": 283,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/TbPPMZBkuvPm/2021-11-28_explications_du_conseil_federal.pdf",
+      "pdf": "adfc878533933d8e70376d49a2f3866fbe62420492ba62c511a74a0603a5881b.pdf",
+      "document": "adfc878533933d8e70376d49a2f3866fbe62420492ba62c511a74a0603a5881b.json",
+      "sha256": "340fecfcdcdf292824addf73002c60e91a86744648355665035a5356a38d2225",
+      "bytes": 2532158,
+      "pages": 48,
+      "passages": 135,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/UxUxfYD5ma0h/2021-06-13_explications_du_conseil_federal.pdf",
+      "pdf": "5977f9067a54451d52115acca303ef3f5e184bb9e032bc9a261e1aa66ab45607.pdf",
+      "document": "5977f9067a54451d52115acca303ef3f5e184bb9e032bc9a261e1aa66ab45607.json",
+      "sha256": "65c54df2537b8ab9d6e155c0e602d6bc2379e47741004bc66565064d0aee4ab4",
+      "bytes": 1398389,
+      "pages": 144,
+      "passages": 323,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/WeUrKyC0FyPc/2026-06-14_explications_du_conseil_federal.pdf",
+      "pdf": "bedaf0d07327143077b51c10be3c9531148aa6bf988a677acac2d84b6b8f3019.pdf",
+      "document": "bedaf0d07327143077b51c10be3c9531148aa6bf988a677acac2d84b6b8f3019.json",
+      "sha256": "15391d5fdf2faac51ceff1f4b31f463a7b838587bc1e52ada57e85cc7e6c76d5",
+      "bytes": 1003316,
+      "pages": 40,
+      "passages": 77,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/XuiMCko39BzI/2020-09-27_explications_du_conseil_federal.pdf",
+      "pdf": "c7e9a49cad953da0fa00464523b32a0737a82d8056a9b1d3caf7330e83b402a7.pdf",
+      "document": "c7e9a49cad953da0fa00464523b32a0737a82d8056a9b1d3caf7330e83b402a7.json",
+      "sha256": "8e3c67fd515a7438d1ec687be65001c01a0ece56eb952fdd23f9ca23c8393355",
+      "bytes": 944186,
+      "pages": 88,
+      "passages": 155,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/aSmZ7rOvZDrG/2020-02-09_explications_du_conseil_federal.pdf",
+      "pdf": "9664831f45c460242c480a75c30714d43b67460641647f805a7de6bc15e0f1c2.pdf",
+      "document": "9664831f45c460242c480a75c30714d43b67460641647f805a7de6bc15e0f1c2.json",
+      "sha256": "e57074725ce371592bfb0760665c3d90d99b972ca48dfcb0577022276da9a54e",
+      "bytes": 2453106,
+      "pages": 32,
+      "passages": 57,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/iWYLyEPfLvhn/2024-09-22_explications_du_conseil_federal.pdf",
+      "pdf": "ae395ed8670970ebb3955f15fd1156bea3d5172445d8a80148667e6fe398ecba.pdf",
+      "document": "ae395ed8670970ebb3955f15fd1156bea3d5172445d8a80148667e6fe398ecba.json",
+      "sha256": "e6717534db788bf85e15bc505c5ab6f839cd61396be0f84a5aa035c767de8578",
+      "bytes": 1072900,
+      "pages": 40,
+      "passages": 97,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/jezxrs8DLj5a/2021-03-07_explications_du_conseil_federal.pdf",
+      "pdf": "4fc4b444a653ada76a760d115bb333c533fa0e9a08e3814d742c912650492a99.pdf",
+      "document": "4fc4b444a653ada76a760d115bb333c533fa0e9a08e3814d742c912650492a99.json",
+      "sha256": "127fe5bf35487ae5327cf27553838123974263f140d924fc5c1e73c0fca0bfcf",
+      "bytes": 702633,
+      "pages": 56,
+      "passages": 99,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/wHXT9BH3VlYQ/2024-11-24_explications_du_conseil_federal.pdf",
+      "pdf": "d410a65e831ac757b7259cedefc6fe0bb0de803a505efe1723d10d9102a09623.pdf",
+      "document": "d410a65e831ac757b7259cedefc6fe0bb0de803a505efe1723d10d9102a09623.json",
+      "sha256": "39d395833d051d950d37c75003b4ecbea917e221db17eed55e3cb5ffdcd364b1",
+      "bytes": 1393828,
+      "pages": 72,
+      "passages": 172,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/x6Qn59zt63F7/2025-11-30_explications_du_conseil_federal.pdf",
+      "pdf": "b068b0e1bf36113d847f1f7f1990b43eef1ce5b0bd8d014f6e25890cce8f8332.pdf",
+      "document": "b068b0e1bf36113d847f1f7f1990b43eef1ce5b0bd8d014f6e25890cce8f8332.json",
+      "sha256": "137ed9d255ab729265d7cfb765e9befc8a51e3fe5723e88772717ebb59504f8f",
+      "bytes": 763628,
+      "pages": 32,
+      "passages": 81,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/ywovGJwC1GeO/2020-11-29_explications_du_conseil_federal.pdf",
+      "pdf": "9ad3f6083cf0a3ed7d7f29ff875aa74e838ccbf39ac0c8ffad413a8a8e0f678a.pdf",
+      "document": "9ad3f6083cf0a3ed7d7f29ff875aa74e838ccbf39ac0c8ffad413a8a8e0f678a.json",
+      "sha256": "62870b79f34f5d9af48ca53709090140403133edc23ef393bf7b17bcdd35c48f",
+      "bytes": 400027,
+      "pages": 32,
+      "passages": 55,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/fr/sd-web/z11TVw3xAFqy/2024-06-09_explications_du_conseil_federal.pdf",
+      "pdf": "f0096fe73531fedd92847b7025d9e7664212253a9c2b4aacdecd5681a119850d.pdf",
+      "document": "f0096fe73531fedd92847b7025d9e7664212253a9c2b4aacdecd5681a119850d.json",
+      "sha256": "8cedb2df05d10299734c86d6d37d80fbd4bb4a6685044455792c77fc73f2d7f6",
+      "bytes": 2324659,
+      "pages": 88,
+      "passages": 268,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/6DaWglL-N7NM/2025-09-28_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "7b877146f5cf006d490a8fc7a201733880b73b99efe0fa4c5394ae0fefe842c1.pdf",
+      "document": "7b877146f5cf006d490a8fc7a201733880b73b99efe0fa4c5394ae0fefe842c1.json",
+      "sha256": "7b8d069bb8d207a1a8ec9a7af49a765d4c19153dee249b3818261d45bf2d5ed8",
+      "bytes": 1162353,
+      "pages": 48,
+      "passages": 110,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/9igLXNhBGtsc/2025-02-09_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "1fe94c1fc6bf01e834897a5aea8c5d155da3d82a78ecf746fa2e50e647abd993.pdf",
+      "document": "1fe94c1fc6bf01e834897a5aea8c5d155da3d82a78ecf746fa2e50e647abd993.json",
+      "sha256": "68a097ce1c55950e4edb824d40d954c623a2b53112a22db455e1c9af6b419563",
+      "bytes": 568731,
+      "pages": 16,
+      "passages": 32,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/In9i5Kp4p64r/2024-03-03_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "f1979a8d3494f17f23804584f8791a54d463159cf85e98c307406d2abfefb816.pdf",
+      "document": "f1979a8d3494f17f23804584f8791a54d463159cf85e98c307406d2abfefb816.json",
+      "sha256": "3d701765d014b9072a084dcd47ae4dd7bbf798a4b0f382078645b2683a4ce114",
+      "bytes": 775326,
+      "pages": 32,
+      "passages": 54,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/JwKnnvQMcYT2/2022-02-13_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "5894d41410a7d51856cb1c6fceeecfe13da2cb18f3adffc9a5030b26914a1a93.pdf",
+      "document": "5894d41410a7d51856cb1c6fceeecfe13da2cb18f3adffc9a5030b26914a1a93.json",
+      "sha256": "1f3346e546e5384f70fd7df7bb80db3be2df5681bd0ff5067437fa1ee7b52a2d",
+      "bytes": 871126,
+      "pages": 64,
+      "passages": 119,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/Lv5UWt6X1iUj/2023-06-18_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "8efaedb2e7dca11cae9c065b6d6aa44ac57439af865b2dd7aa793a55a6f5af0f.pdf",
+      "document": "8efaedb2e7dca11cae9c065b6d6aa44ac57439af865b2dd7aa793a55a6f5af0f.json",
+      "sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a",
+      "bytes": 1779741,
+      "pages": 56,
+      "passages": 127,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "a1a3dfbdd4f7dc28e63796857c9998dff557bc50c6cdeb34061f13c15b1a0d6b.pdf",
+      "document": "a1a3dfbdd4f7dc28e63796857c9998dff557bc50c6cdeb34061f13c15b1a0d6b.json",
+      "sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+      "bytes": 1244435,
+      "pages": 72,
+      "passages": 153,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/NJXQlhZXHqDA/2021-09-26_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "b37c3e4cdc67a37f46e169911eb7ab2aa3594e8fa9fed364e7f6ef1fe11bf58a.pdf",
+      "document": "b37c3e4cdc67a37f46e169911eb7ab2aa3594e8fa9fed364e7f6ef1fe11bf58a.json",
+      "sha256": "d01075b2fabc1609d8c7e2b5ede595286c504d35ea4947b1fa0709fddbb63538",
+      "bytes": 749324,
+      "pages": 40,
+      "passages": 65,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/PCWaDg8-GOcJ/2022-05-15_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "64f9bd0c9aa278890641765ba1a113d3881ee10cf9b15ee9fea2cd168fbd989e.pdf",
+      "document": "64f9bd0c9aa278890641765ba1a113d3881ee10cf9b15ee9fea2cd168fbd989e.json",
+      "sha256": "f23c14a6ee995836f5a8e0ec5c1776e429128313f59231fc723cc09260d0a608",
+      "bytes": 1983382,
+      "pages": 56,
+      "passages": 98,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/SwAIDvDocLte/2022-09-25_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "37fc6aa5e1a21d77f20c8c88e97943f3877797ee11f4b007ba71bc8be121d81d.pdf",
+      "document": "37fc6aa5e1a21d77f20c8c88e97943f3877797ee11f4b007ba71bc8be121d81d.json",
+      "sha256": "7889873c9920e2d9d587d52a6067076123d15810065248349f47253fb85c151d",
+      "bytes": 1649911,
+      "pages": 80,
+      "passages": 280,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/TbPPMZBkuvPm/2021-11-28_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "99ca2b532c577c1cdf905c842eabe6476094b3df49fabd6e4e0440d67884e507.pdf",
+      "document": "99ca2b532c577c1cdf905c842eabe6476094b3df49fabd6e4e0440d67884e507.json",
+      "sha256": "72bc2e78fd62f8452a8fe9aebd31c5740e77d30e298ed940dcbf788b4ab8cba2",
+      "bytes": 571450,
+      "pages": 48,
+      "passages": 97,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/UxUxfYD5ma0h/2021-06-13_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "2dc71d194a3129a758799671b7c51d882ab8728cda00d7566a852c994d5d3b68.pdf",
+      "document": "2dc71d194a3129a758799671b7c51d882ab8728cda00d7566a852c994d5d3b68.json",
+      "sha256": "89443719a1e8c0ea4d954754d50e81253bb2f4d2f6ce4d2ad1c19cf0edd570de",
+      "bytes": 1456260,
+      "pages": 144,
+      "passages": 316,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/WeUrKyC0FyPc/2026-06-14_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "a92426bc93e602bebb49b54376c0f4c40ff863b118d85a48f4a0e29f0e2a8013.pdf",
+      "document": "a92426bc93e602bebb49b54376c0f4c40ff863b118d85a48f4a0e29f0e2a8013.json",
+      "sha256": "b5212bf5086306a5d45058aae56be6cef2af02f76bc963b7f72cf2c71c4b6931",
+      "bytes": 998151,
+      "pages": 40,
+      "passages": 79,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/XuiMCko39BzI/2020-09-27_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "2015c2525d232f348cbf76406007003fcbe3014994cc2d1d99a67895cd692f8f.pdf",
+      "document": "2015c2525d232f348cbf76406007003fcbe3014994cc2d1d99a67895cd692f8f.json",
+      "sha256": "76acc2e7d58639dccae9d52d7cdeba73418f57aec9928fa0898017f7be2e5111",
+      "bytes": 1254806,
+      "pages": 88,
+      "passages": 156,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/aSmZ7rOvZDrG/2020-02-09_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "7f57252c1441ef78090fc4c7db2bd761977516733d0535ec6358c11572298c36.pdf",
+      "document": "7f57252c1441ef78090fc4c7db2bd761977516733d0535ec6358c11572298c36.json",
+      "sha256": "480dd90b98de6d9f680a98d0cc165715b939e539e5e31da3dbe34846a610ad6d",
+      "bytes": 2434783,
+      "pages": 32,
+      "passages": 59,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/iWYLyEPfLvhn/2024-09-22_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "6eae278508df0d28049605357d393b7f743cf846109569208760cf903715a738.pdf",
+      "document": "6eae278508df0d28049605357d393b7f743cf846109569208760cf903715a738.json",
+      "sha256": "581a2c4bdacc8e31bd1d9f854e16918d13f2bf2687971daa886300193de6f327",
+      "bytes": 1087305,
+      "pages": 40,
+      "passages": 107,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/jezxrs8DLj5a/2021-03-07_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "c5e0fe54167212d7728db5b03b8fd6c21c7d3605cb52fcb517713d9a24e36bac.pdf",
+      "document": "c5e0fe54167212d7728db5b03b8fd6c21c7d3605cb52fcb517713d9a24e36bac.json",
+      "sha256": "e6ffd768c3c65b9ca19566bc6bc6fda6f1f9e4324cce7898475e02bfec526e21",
+      "bytes": 689984,
+      "pages": 56,
+      "passages": 97,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/wHXT9BH3VlYQ/2024-11-24_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "8c8c1b3c4f42f2953d825caf8b14ce1989adacad5a918b9581c737ebc3ebbd91.pdf",
+      "document": "8c8c1b3c4f42f2953d825caf8b14ce1989adacad5a918b9581c737ebc3ebbd91.json",
+      "sha256": "a8d40f5f65411f258a36aa7f64941a8853fe7c23c9cb9d0609d5addd4aa4932a",
+      "bytes": 1350944,
+      "pages": 72,
+      "passages": 185,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/x6Qn59zt63F7/2025-11-30_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "4f3197365efeafab8433a18882fb8614747a69cffc3d6c5cd0343fa9ed014868.pdf",
+      "document": "4f3197365efeafab8433a18882fb8614747a69cffc3d6c5cd0343fa9ed014868.json",
+      "sha256": "05a8b22b924597419ba1a89a06e9261a143111944be670260b9e3a0df5c9404a",
+      "bytes": 1163254,
+      "pages": 32,
+      "passages": 86,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/ywovGJwC1GeO/2020-11-29_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "0898e617455304f7ad5ef6553ccd5e2dd9da7b1a8afc38789f1415c99967c76d.pdf",
+      "document": "0898e617455304f7ad5ef6553ccd5e2dd9da7b1a8afc38789f1415c99967c76d.json",
+      "sha256": "6d4b77f24df45bf73e4e4fefdff30e1a77016ccc057ed2137d04269367490f6e",
+      "bytes": 436840,
+      "pages": 32,
+      "passages": 51,
+      "status": "completed"
+    },
+    {
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/z11TVw3xAFqy/2024-06-09_spiegazioni_del_consigliofederale.pdf",
+      "pdf": "ecd5607f957ed5ee86cc0d1c6a6e9c099fb9d92cd5987b5cbe799614eba67683.pdf",
+      "document": "ecd5607f957ed5ee86cc0d1c6a6e9c099fb9d92cd5987b5cbe799614eba67683.json",
+      "sha256": "691ad90ad95cb4983dfc0bf1f7b43750af34ccc7d3f737ad19a48c263ee54676",
+      "bytes": 2200699,
+      "pages": 88,
+      "passages": 267,
+      "status": "completed"
+    }
+  ],
+  "document_processing": "page-offset-plain-v2",
+  "reference_used_for_production_context": false
+}

@@ -91,6 +91,8 @@ class ApertusClient:
 
 
 def predict(row, client, mapping, mode="bm25", k=5, max_bytes=48000, method="prompt", diversify=False):
+    if not isinstance(row.get('claim'),str) or not row['claim'].strip() or len(row['claim'])>16000:
+        raise ValueError('Claim must be nonempty and at most 16000 characters')
     start = time.perf_counter()
     selected, context = select_context(row, mode, k, max_bytes, diversify)
     definitions = {"entailment":"The booklet supports every material part of the claim.","contradiction":"The booklet contradicts at least one material part of the claim.","neutral":"The booklet neither supports nor contradicts the claim; missing evidence is not contradiction."}
