@@ -1,11 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.637380266000001,
+  "estimated_spend": 2.3130747104444453,
   "actual_spend": 0.637380266000001,
   "actual_spend_note": "Timestamped account credit reduction after all task-created leases destroyed and absence verified; billing may settle asynchronously.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 9.362619733999999,
+  "active_instance_ids": [
+    54630169
+  ],
+  "remaining_estimated_budget": 7.686925289555555,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -73,6 +75,27 @@
       "deadline_note": "Two-hour bounded lease guard; GPU stopped after cache completed; source-checksummed export recovery underway",
       "destroyed_verified_at": "2026-10-07T05:08:43.978357+00:00",
       "artifacts_persisted_before_destruction_commit": "c30e308609846289bf1711482526513b91c45d40"
+    },
+    {
+      "offer_id": 48989778,
+      "gpu": "RTX 5090",
+      "gpu_ram_mb": 32607,
+      "disk_gb": 50,
+      "hourly_gpu_usd": 0.4666666666666666,
+      "hourly_storage_usd": 0.023148148148148147,
+      "hourly_total_usd": 0.48981481481481476,
+      "expected_runtime_hours": 1,
+      "conservative_runtime_hours": 3,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 0.005208333333333333,
+      "estimated_total_usd_bound": 1.6756944444444444,
+      "purpose": "Official Apertus v1.5 8B BF16 full-booklet/reference/retrieval validation, frozen training features and final heldout evaluation",
+      "git_commit": "02734a49ce6fce48880d209a95d21f860dbea36b",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T11:06:22.142094+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "instance_id": 54630169,
+      "status": "created"
     }
   ],
   "account_credit_observed": 9.362619733999999,

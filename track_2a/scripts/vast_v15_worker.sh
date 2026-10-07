@@ -22,11 +22,11 @@ context=$(python - <<'PY'
 import json
 from pathlib import Path
 values=[]
-for context in ['bm25','dense','hybrid']:
+for context in ['full','bm25','dense','hybrid']:
     metrics=json.loads((Path('/workspace/v15-validation')/(context+'-score')/'metrics.json').read_text())
     values.append((metrics['macro_f1'],-metrics['average_context_tokens'],context))
 choice=max(values)[-1]
-Path('/workspace/v15-context-choice.json').write_text(json.dumps({'context':choice,'selection':'Highest validation Macro-F1 among booklet-only retrieval class-score baselines; token count breaks ties. Test unused.'})+'\n')
+Path('/workspace/v15-context-choice.json').write_text(json.dumps({'context':choice,'selection':'Highest validation Macro-F1 among booklet-only full/retrieval class-score baselines; token count breaks ties. Test unused.'})+'\n')
 print(choice)
 PY
 )

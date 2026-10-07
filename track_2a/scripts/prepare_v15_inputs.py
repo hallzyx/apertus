@@ -32,7 +32,7 @@ def main():
         rows = load_dataset(Path(a.full_dir)/f'{split}.jsonl')
         refs = load_dataset(Path(a.reference_dir)/f'{split}.jsonl')
         if [r['id'] for r in rows] != [r['id'] for r in refs]: raise ValueError('ID mismatch')
-        modes = ['full', 'reference', 'bm25', 'dense', 'hybrid'] if split == 'validation' else ['bm25', 'dense', 'hybrid']
+        modes = ['full', 'reference', 'bm25', 'dense', 'hybrid'] if split == 'validation' else ['full', 'bm25', 'dense', 'hybrid']
         paths = {mode: out/f'{split}-{mode}.jsonl' for mode in modes}
         handles = {mode: path.open('w') for mode, path in paths.items()}
         try:
