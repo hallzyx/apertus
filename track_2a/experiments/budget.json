@@ -1,13 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 4.621025927100003,
-  "actual_spend": 3.3393422456700046,
+  "estimated_spend": 3.4655744308700047,
+  "actual_spend": 3.4655744308700047,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
-  "active_instance_ids": [
-    54690554
-  ],
-  "remaining_estimated_budget": 5.378974072899997,
+  "active_instance_ids": [],
+  "remaining_estimated_budget": 6.534425569129995,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -361,10 +359,11 @@
       "estimated_total_usd_bound": 1.2919140625,
       "created_at": "2026-10-07T18:21:38.105822+00:00",
       "automatic_cleanup_deadline_seconds": 10800,
-      "status": "created",
+      "status": "destroyed_verified",
       "git_commit": "15c6e57b4992a513ffa5f5eec350282e11dd63d5",
       "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
-      "purpose": "Private verified copy of completed ten validation ablations and all 902 training features plus model; Python 3.11 head dependency repair, train-only CPU heads and one frozen 310-example holdout; no repeated ablations or new HF credential"
+      "purpose": "Private verified copy of completed ten validation ablations and all 902 training features plus model; Python 3.11 head dependency repair, train-only CPU heads and one frozen 310-example holdout; no repeated ablations or new HF credential",
+      "destroyed_verified_at": "2026-10-07T20:45:40.024679+00:00"
     },
     {
       "instance_id": 54701932,
@@ -425,7 +424,9 @@
       "destroyed_verified_at": "2026-10-07T20:20:49.164212+00:00"
     }
   ],
-  "account_credit_observed": 6.660657754329995,
+  "account_credit_observed": 6.534425569129995,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T20:20:49.164212+00:00"
+  "account_checked_at": "2026-10-07T20:45:40.024679+00:00",
+  "outstanding_task_lease_reservations_usd": 0,
+  "all_task_instances_destroyed_verified": true
 }

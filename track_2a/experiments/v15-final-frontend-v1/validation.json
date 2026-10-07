@@ -1,0 +1,12 @@
+{
+  "make_run_started": true,
+  "docker_image": "sha256:ed8df6ff4625b661892a7342306d9c90034bb1200a15e67bb40e453874aeea2b",
+  "final_benchmark_served_exactly": true,
+  "selected_head_sha256_in_image": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "matches_frozen_selected_head": true,
+  "model_configured": false,
+  "note": "Current frontend serves final research metadata and PDF processing. A separately configured head-enabled v1.5 backend is required for classification; actual native GPU PDF CLI checks are recorded in the final research artifacts.",
+  "docker_tests_passed": 38,
+  "failed": 0,
+  "skipped": 0
+}

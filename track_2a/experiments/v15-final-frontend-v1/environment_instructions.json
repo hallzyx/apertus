@@ -1,0 +1,10 @@
+{
+  "start_skill_saved": true,
+  "start_skill_sha256": "5862a23af49e19c3d52a278263a9a8d0bc10a373494a42a1f460cf7fc044b93f",
+  "install_script_preserved": true,
+  "network_and_secret_bindings_preserved": true,
+  "requires_publish_for_future_startup": true,
+  "current_frontend_and_scientific_evaluation_verified": true,
+  "new_hf_access_verified": true,
+  "native_cpu_cache_and_environment_not_assumed_restored": true
+}

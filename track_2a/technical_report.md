@@ -169,10 +169,12 @@ from an official French PDF for German, French and Italian claims. Source hashes
 pages and quote offsets were checked. Unconfigured v1.5 prediction correctly fails
 without returning a label. Records are in `experiments/contract-software-v1/`;
 the separate synthetic HTTP batch fixture does not constitute real v1.5 inference.
-CPU PDF/retrieval checks are separate from the real v1.5 GPU research attempts.
+The final deployment image also passed all 38 tests with no failures/skips; /benchmarks serves the exact final JSON and the packaged head SHA matches the frozen source (experiments/v15-final-frontend-v1). Its current frontend has no persistent NLI backend configured; actual selected v1.5 NLI was verified by the three real GPU PDF CLI cases. CPU PDF/retrieval checks are separate from GPU benchmark performance.
 Lease costs, failures, active IDs, cleanup deadlines and verified destruction are
 recorded in `experiments/budget.json`. Provisioning failures produce no NLI score.
 The USD 10 hard budget and USD 2 reserve remain binding; billing is asynchronous.
+
+All 21 recorded task leases were destroyed and verified absent from the paginated provider listing. Observed account-credit reduction is USD 3.465574; observed credit remaining is USD 6.534426, checked at 2026-10-07T20:45:40.024679+00:00. No outstanding task lease remains. Billing may settle asynchronously. The temporary task SSH key was removed and unrelated keys preserved; task HF secrets remain absent from Vast. The new cloud HF_TOKEN binding was retained and its gated configuration access verified without downloading weights. See experiments/v15-final-provider-cleanup.json and budget.json.
 
 
 Reproduce the selected backend with verified weights and the pinned native dependencies:

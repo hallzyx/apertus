@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-07T20:45:40.991594+00:00",
+  "task_ssh_key_id": 1509477,
+  "task_ssh_key_removed_verified": true,
+  "unrelated_ssh_keys_preserved": true,
+  "task_hf_provider_secrets_absent_verified": true,
+  "new_cloud_hf_secret_preserved": true,
+  "credential_values_logged": false,
+  "task_gpu_instances_absent_verified": true
+}
