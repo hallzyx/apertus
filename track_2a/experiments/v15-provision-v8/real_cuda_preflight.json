@@ -1,0 +1,11 @@
+{
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A40",
+  "capability": [
+    8,
+    6
+  ],
+  "bf16_matmul": true,
+  "cudnn_recurrent_loading": true
+}
