@@ -12,7 +12,13 @@ trap export_results EXIT
 trap 'exit 143' TERM
 export PYTHONPATH=track_2a/src HF_HOME=/workspace/hf
 python -m pip install --no-cache-dir 'transformers==4.56.2' 'huggingface-hub==0.35.3' 'safetensors==0.6.2' 'numpy==2.2.6'
-python -m ost_nli prepare-ost --output track_2a/data/private/ost-reference.jsonl
+python - <<'PY'
+import torch
+if not torch.cuda.is_available() or not torch.cuda.is_bf16_supported():
+    raise SystemExit('CUDA/BF16 unavailable before model download')
+print('GPU:',torch.cuda.get_device_name(0),'Torch:',torch.__version__,flush=True)
+PY
+python -m ost_nli prepare-ost --source track_2a/data/private/official/v1.1.jsonl --output track_2a/data/private/ost-reference.jsonl
 python -m ost_nli split track_2a/data/private/ost-reference.jsonl --output-dir track_2a/data/private/splits-strict --seed 42
 python - <<'PY'
 import json

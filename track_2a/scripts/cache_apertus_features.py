@@ -51,6 +51,7 @@ def main():
     torch.manual_seed(42)
     launch = {'experiment_id': root.name, 'status': 'started', 'timestamp': utc_now(),
               'git_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+              'git_working_tree_dirty': bool(subprocess.check_output(['git', 'status', '--porcelain'], text=True).strip()),
               'source_script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               'model': manifest['repo'], 'model_revision': manifest['revision'],
               'precision': 'bfloat16', 'gpu': torch.cuda.get_device_name(0),
