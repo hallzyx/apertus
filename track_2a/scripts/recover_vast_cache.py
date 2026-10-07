@@ -1,6 +1,7 @@
 """Recover a task's stopped-instance feature cache with source SHA-256 checks."""
 import argparse
 import base64
+import email.utils
 import hashlib
 import io
 import json
@@ -10,6 +11,7 @@ import tarfile
 import time
 import urllib.error
 import urllib.request
+import urllib.parse
 from pathlib import Path
 
 
@@ -24,16 +26,29 @@ def main():
     root.mkdir(parents=True, exist_ok=True)
     headers = {'Authorization': 'Bearer ' + os.environ['VAST_API_KEY'], 'Content-Type': 'application/json'}
     def read_remote(path):
+        ledger = json.loads((Path(args.checkout)/'track_2a/experiments/budget.json').read_text())
+        if args.instance not in ledger['active_instance_ids']:
+            raise ValueError('Remote recovery is restricted to an active task-owned lease')
+        started = int(time.time())
         req = urllib.request.Request(f'https://console.vast.ai/api/v0/instances/command/{args.instance}/',
               headers=headers, data=json.dumps({'command': 'cat ' + path}).encode(), method='PUT')
         with urllib.request.urlopen(req, timeout=40) as response:
             result = json.load(response)
+        if not result.get('success'):
+            raise RuntimeError('Provider rejected the task cache read')
         url = result.get('result_url')
         if not url or not url.startswith('https://s3.amazonaws.com/'):
             raise ValueError('Unsupported result destination')
-        for attempt in range(20):
+        if not urllib.parse.urlsplit(url).query:
+            url += '?apertus_task=' + str(time.time_ns())
+        for attempt in range(60):
             try:
-                with urllib.request.urlopen(url, timeout=40) as response:
+                request = urllib.request.Request(url, headers={'Cache-Control': 'no-cache'})
+                with urllib.request.urlopen(request, timeout=40) as response:
+                    modified = email.utils.parsedate_to_datetime(response.headers['Last-Modified']).timestamp()
+                    if modified < started:
+                        time.sleep(1)
+                        continue
                     return response.read(1_000_000)
             except urllib.error.HTTPError as error:
                 if error.code not in (403, 404):
