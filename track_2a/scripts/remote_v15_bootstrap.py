@@ -58,7 +58,8 @@ def main():
     expected=json.loads(Path('track_2a/experiments/split_manifest.json').read_text())
     if json.loads((splits/'manifest.json').read_text())!=expected:raise ValueError('Frozen split mismatch')
     full=Path('track_2a/data/private/full-booklets-v2')
-    if not (full/'audit.json').exists():
+    existing=json.loads((full/'audit.json').read_text()) if (full/'audit.json').exists() else None
+    if not existing or existing.get('booklets_downloaded')!=existing.get('booklets_total'):
         run(['python','track_2a/scripts/prepare_booklets.py','--source','track_2a/data/private/official/v1.1.jsonl',
             '--splits',str(splits),'--output',str(full)])
     audit=json.loads((full/'audit.json').read_text())

@@ -73,7 +73,8 @@ class Engine:
         self.tokenizer = AutoTokenizer.from_pretrained(root,local_files_only=True,trust_remote_code=False)
         self.model, loading = Apertus1p5ForConditionalGeneration.from_pretrained(root,
             local_files_only=True,trust_remote_code=False,dtype=torch.bfloat16,
-            attn_implementation='sdpa',output_loading_info=True)
+            attn_implementation={'':'eager','text_config':'sdpa',
+                'vision_tokenizer_config':'eager','audio_tokenizer_config':'eager'},output_loading_info=True)
         if any(loading.get(k) for k in ['missing_keys','unexpected_keys','mismatched_keys','error_msgs']):
             raise ValueError('Incomplete or mismatched native model loading')
         self.model = self.model.to(device).eval()

@@ -21,6 +21,9 @@ def main():
     root = Path(args.output); root.mkdir(parents=True, exist_ok=True)
     raw = [json.loads(s) for s in Path(args.source).read_text().splitlines() if s.strip()]
     urls = sorted({r['booklet_url'] for r in raw})
+    expected_path=Path(__file__).resolve().parents[1]/'experiments/booklet-source-v2/manifest.json'
+    expected={r['url']:r['sha256'] for r in json.loads(expected_path.read_text())['records']
+              if r.get('status')=='completed'} if expected_path.exists() else {}
     def fetch(url):
         parsed = urllib.parse.urlsplit(url)
         if parsed.scheme != 'https' or parsed.hostname != 'www.bk.admin.ch':
@@ -30,12 +33,18 @@ def main():
         error = None
         for attempt in range(3):
             try:
+                if pdf.exists() and url in expected and hashlib.sha256(pdf.read_bytes()).hexdigest()!=expected[url]:
+                    # Preserve corrupt downloads for diagnosis; never accept or reuse them.
+                    backup=pdf.with_name(pdf.name+'.rejected-'+str(time.time_ns()))
+                    pdf.replace(backup)
                 if not pdf.exists():
                     request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
                     with urllib.request.urlopen(request, timeout=60) as response:
                         content = response.read(50_000_001)
                     if len(content) > 50_000_000 or not content.startswith(b'%PDF-'):
                         raise ValueError('Invalid or oversized PDF')
+                    if url in expected and hashlib.sha256(content).hexdigest()!=expected[url]:
+                        raise ValueError('Downloaded PDF does not match pinned source checksum')
                     partial = pdf.with_suffix('.part'); partial.write_bytes(content); partial.replace(pdf)
                 if target.exists():
                     doc = json.loads(target.read_text())

@@ -24,6 +24,9 @@ def main():
     manifest=json.loads((Path(a.inputs)/'manifest.json').read_text())
     began=time.perf_counter();engine=Engine(a.model_dir)
     metadata={**engine.metadata,'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+        'git_working_tree_dirty':bool(subprocess.check_output(['git','status','--porcelain'],text=True).strip()),
+        'source_engine_sha256':hashlib.sha256((Path(__file__).resolve().parents[1]/'src/ost_nli/v15.py').read_bytes()).hexdigest(),
+        'source_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'inputs_manifest_sha256':hashlib.sha256((Path(a.inputs)/'manifest.json').read_bytes()).hexdigest(),
         'load_seconds':time.perf_counter()-began,'status':'started','mode':a.mode,'training':'Frozen weights; no evaluation labels used in inference'}
     save(out/'experiment.json',metadata)
