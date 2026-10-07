@@ -101,10 +101,25 @@ def main():
     for r in rows:
         key=(r['document_id'],' '.join(words(r['claim'])))
         if key not in seen:seen.add(key);unique.append(r)
+    buckets=[]
+    for low,high in ((0,.5),(.5,.7),(.7,.85),(.85,.95),(.95,1.000001)):
+        subset=[r for r in rows if low<=max(by[r['id']]['probabilities'])<high]
+        buckets.append({'low':low,'high':min(high,1),'n':len(subset),
+            'accuracy':sum(by[r['id']]['label']==r['label'] for r in subset)/len(subset) if subset else None,
+            'mean_confidence':sum(max(by[r['id']]['probabilities']) for r in subset)/len(subset) if subset else None})
+    original_errors={p['id']:p for p in readlines(Path('track_2a/experiments/apertus-v15-phase2/final-error-analysis.jsonl'))}
+    errors=[{'id':r['id'],'gold':r['label'],'predicted':by[r['id']]['label'],
+        'claim_language':r['claim_language'],'document_language':r['document_language'],
+        'booklet_id':r['booklet_id'],'claim':r['claim'],
+        'original_source_inspection':{k:v for k,v in original_errors.get(r['id'],{}).items()
+            if k in ('suspected_failure_mode','notes','diagnostic_comparison')},
+        'cause':'Undetermined; original inspected hypothesis, if present, is not proof of cause for the selected context'}
+        for r in rows if by[r['id']]['label']!=r['label']]
     result={'status':'completed_frozen_final_validation','provisional_choice':condition,'final_choice':selected,
         'candidate_head_sha256':sha(headpath),'candidate_metrics':candidate_metrics,'guard_failures':failures,
         'full_recheck':replication,'context_matched_controls':controls,
         'final_validation_metrics':evaluate(rows,chosen),'deduplicated_macro_f1':evaluate(unique,[by[r['id']] for r in unique])['macro_f1'],
+        'confidence_buckets':buckets,'final_validation_errors':errors,
         'by_voting_event':{event:evaluate([r for r in rows if r['booklet_id']==event],[by[r['id']] for r in rows if r['booklet_id']==event]) for event in sorted({r['booklet_id'] for r in rows})},
         'real_pdf_cli':cli,'real_frontend':front,'actual_gpu_forward_count':record['gpu_forward_count'],
         'training_performed':False,'lora_performed':False,'consumed310_accessed':False,'deployment_changed':False,
