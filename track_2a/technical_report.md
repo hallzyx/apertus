@@ -131,21 +131,23 @@ Project-defined CLI: `python -m ost_nli predict BOOKLET.pdf CLAIM --context hybr
 Batch JSONL contains id/document/claim only. Source passages carry pages/offsets/hash.
 Documented interface is separable from model/retrieval implementation.
 
-Host and Docker tests pass (36 tests each). A clean GitHub checkout successfully
+The latest host and freshly rebuilt Docker image pass 37 tests each;
+`experiments/v15-fresh-docker-v1` records a real PDF upload and hybrid evidence
+retrieval through `make run` without mounting host source into the image. The
+following earlier clean-checkout check ran 36 tests. A clean GitHub checkout successfully
 ran `make run`, downloaded fresh public E5 weights, and retrieved source passages
 from an official French PDF for German, French and Italian claims. Source hashes,
 pages and quote offsets were checked. Unconfigured v1.5 prediction correctly fails
 without returning a label. Records are in `experiments/contract-software-v1/`;
 the separate synthetic HTTP batch fixture does not constitute real v1.5 inference.
-No task GPU was rented for PDF/retrieval work. Prior three task-created leases were
-destroyed and paginated API absence verified. Prior observed total credit reduction:
-USD 0.637380 (asynchronous billing, observed 2026-10-07), out of USD 10 with
-USD 2 recovery reserve. All task leases were absent at the latest observation.
+CPU PDF/retrieval checks are separate from the real v1.5 GPU research attempts.
+Lease costs, failures, active IDs, cleanup deadlines and verified destruction are
+recorded in `experiments/budget.json`. Provisioning failures produce no NLI score.
+The USD 10 hard budget and USD 2 reserve remain binding; billing is asynchronous.
 
 ## 8. Next steps
 
-Authenticate approved v1.5 weights or configure a verified v1.5 endpoint. Verify
-native architecture/serving support before renting. Run matched full/capped, oracle,
+Authorized weights and native CPU serving have been verified. Complete matched full/capped, oracle,
 BM25/dense/hybrid v1.5 comparisons on validation; train any new v1.5 head on train only,
 freeze choices, then evaluate the 310 internal holdout once for NLI. Measure evidence
 quality manually alongside reference-overlap diagnostics. No Devpost access or exact

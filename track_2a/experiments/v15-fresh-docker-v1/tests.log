@@ -1,0 +1,42 @@
+test_duplicate_ids_rejected (test_core.DataTests.test_duplicate_ids_rejected) ... ok
+test_group_split_translations_and_repeatability (test_core.DataTests.test_group_split_translations_and_repeatability) ... ok
+test_inspection (test_core.DataTests.test_inspection) ... ok
+test_insufficient_groups (test_core.DataTests.test_insufficient_groups) ... ok
+test_invalid_evidence_rejected (test_core.DataTests.test_invalid_evidence_rejected) ... ok
+test_load_pdf_page_and_text (test_core.DataTests.test_load_pdf_page_and_text) ... ok
+test_load_text_provenance_not_invented (test_core.DataTests.test_load_text_provenance_not_invented) ... ok
+test_repeated_claims_never_cross_partitions (test_core.DataTests.test_repeated_claims_never_cross_partitions) ... ok
+test_same_doc_group_mismatch (test_core.DataTests.test_same_doc_group_mismatch) ... ok
+test_single_duplicate_component_fails (test_core.DataTests.test_single_duplicate_component_fails) ... ok
+test_small_split_not_empty (test_core.DataTests.test_small_split_not_empty) ... ok
+test_empty_not_success (test_core.MetricsTests.test_empty_not_success) ... ok
+test_fixed_class_macro (test_core.MetricsTests.test_fixed_class_macro) ... ok
+test_invalid_label (test_core.MetricsTests.test_invalid_label) ... ok
+test_known_confusion_matrix (test_core.MetricsTests.test_known_confusion_matrix) ... ok
+test_missing_usage_not_zero (test_core.MetricsTests.test_missing_usage_not_zero) ... ok
+test_perfect_calibration (test_core.MetricsTests.test_perfect_calibration) ... ok
+test_prediction_alignment (test_core.MetricsTests.test_prediction_alignment) ... ok
+test_reject_invalid_probabilities (test_core.MetricsTests.test_reject_invalid_probabilities) ... ok
+test_slices_and_evidence (test_core.MetricsTests.test_slices_and_evidence) ... ok
+test_uniform_calibration (test_core.MetricsTests.test_uniform_calibration) ... ok
+test_constrained_payload (test_core.ModelTests.test_constrained_payload) ... ok
+test_endpoint_security (test_core.ModelTests.test_endpoint_security) ... ok
+test_invalid_outputs_never_fallback (test_core.ModelTests.test_invalid_outputs_never_fallback) ... ok
+test_native_probabilities_preserved_and_invalid_rejected (test_core.ModelTests.test_native_probabilities_preserved_and_invalid_rejected) ... ok
+test_non_apertus_not_submission (test_core.ModelTests.test_non_apertus_not_submission) ... ok
+test_prediction (test_core.ModelTests.test_prediction) ... ok
+test_truncated_generation_rejected (test_core.ModelTests.test_truncated_generation_rejected) ... ok
+test_unverified_mapping_not_defaulted (test_core.ModelTests.test_unverified_mapping_not_defaulted) ... ok
+test_context_cap_multibyte (test_core.RetrievalTests.test_context_cap_multibyte) ... ok
+test_context_modes_do_not_mutate_data (test_core.RetrievalTests.test_context_modes_do_not_mutate_data) ... ok
+test_diversification_no_duplicate (test_core.RetrievalTests.test_diversification_no_duplicate) ... ok
+test_gold_exact (test_core.RetrievalTests.test_gold_exact) ... ok
+test_k_bounded (test_core.RetrievalTests.test_k_bounded) ... ok
+test_relevant_first_unicode (test_core.RetrievalTests.test_relevant_first_unicode) ... ok
+test_real_http_experiment_and_evaluator_roundtrip (test_integration.CliIntegration.test_real_http_experiment_and_evaluator_roundtrip) ... ok
+test_reference_not_misreported_as_full_booklet (test_integration.CliIntegration.test_reference_not_misreported_as_full_booklet) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.761s
+
+OK

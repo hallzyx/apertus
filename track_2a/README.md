@@ -8,7 +8,7 @@ port 8000. It downloads the public supporting retrieval model
 `614241f622f53c4eeff9890bdc4f31cfecc418b3`, verifying original LFS hashes.
 The retrieval cache persists in Docker volume `apertus-retrieval-models`.
 A practical retrieval runtime is four CPU threads, roughly 2 GB RAM and at least
-3 GB free disk for Docker/retrieval weights. Apertus endpoint hardware is separate.
+3 GB free disk (VFS cloud Docker needs roughly 8 GB during build/start) for Docker/retrieval weights. Apertus endpoint hardware is separate.
 Internet is required for first asset download and remote model inference.
 
 Set `LLM_NAME=swiss-ai/Apertus-v1.5-8B`, `LLM_BASE_URL` to an authorized
@@ -91,7 +91,7 @@ organizer's unspecified evidence score or exact gold Recall@k. Reference text is
 used only by the evaluator after retrieval, never by the retriever or production.
 The 310 split is our internal holdout, not the organizer's hidden benchmark.
 
-Once real v1.5 inference access exists, run matched full/reference/BM25/hybrid
+With the verified v1.5 native stack or authorized endpoint, run matched full/reference/BM25/hybrid
 experiments using the committed strict IDs. Reference inputs are diagnostics only:
 
 ```bash
@@ -112,10 +112,11 @@ compliant with the v1.5 generation requirement. Historical 0.970353 results are
 reference-only; see `docs/legacy_apertus_2509_report.md`. Binary feature caches are
 ignored in the current checkout and must be regenerated for those old experiments.
 
-All task-created Vast instances were destroyed and API absence verified. The
-USD 10 hard budget and USD 2 reserve remain in `experiments/budget.json`.
+Task-created Vast research leases and verified destruction are recorded in
+`experiments/budget.json`; inspect `active_instance_ids` for current status. The
+USD 10 hard budget and USD 2 reserve apply to every retry.
 Never rent before checking model access, stack support, current offer/cost and
-bounded cleanup; persist verified results before destruction. No new GPU lease
-was created for the current PDF/retrieval work.
+bounded cleanup; persist verified results before destruction. Real v1.5 GPU research is separately budgeted and guarded; CPU PDF/retrieval
+checks are not GPU benchmark results.
 
 Code/model licensing and additional results are in `technical_report.md`.

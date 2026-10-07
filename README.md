@@ -15,7 +15,10 @@ make test
 The actual endpoint is required for classification. Without it, PDF processing
 and real multilingual retrieval work; no label or probabilities are invented.
 Official v1.5 weights require approved Hugging Face access and authentication;
-that access is not currently configured. No v1.5 NLI Macro-F1 is claimed yet.
+the task obtained authorized weights and verified real native v1.5 CPU inference.
+Cached weights need no Hugging Face token. Three real cross-language training PDF
+cases passed through the public CLI; these are integration checks. No v1.5 NLI
+Macro-F1 is claimed until the full benchmark completes.
 
 **The earlier 0.970353 Macro-F1 was a reference-only experiment with Apertus
 2509, not v1.5 or full-booklet production.** It remains documented as historical

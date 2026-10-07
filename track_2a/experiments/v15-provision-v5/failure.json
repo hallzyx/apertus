@@ -1,0 +1,21 @@
+{
+  "status": "failed_before_inference",
+  "instance_id": 54649960,
+  "source_commit": "f3393e6",
+  "real_nli_predictions": 0,
+  "model_copy": {
+    "provider_report": "Done receiving copy",
+    "destination_bytes_approximately_gb": 18,
+    "all_expected_file_names_and_sizes_observed": true,
+    "destination_sha256_verification_completed": false
+  },
+  "failure": "600-second cache wait expired before private provider transfer could be verified; task self-stopped. Resume returned resources_unavailable; lease destroyed and absence verified. Increased future cache wait to 1800 seconds.",
+  "destroyed_verified": true,
+  "observed_account_credit_usd": 8.6822477876,
+  "observed_total_spend_usd": 1.3177522124,
+  "controller_negative_result": {
+    "instance_id": 54649350,
+    "failure": "Extra-escaped onstart EXIT trap rejected by shell; caught before model copy. Lease destroyed and absence verified."
+  },
+  "timestamp": "2026-10-07T14:05:40.863539+00:00"
+}

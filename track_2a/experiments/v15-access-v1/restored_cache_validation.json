@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "original_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "original_weight_shards": 6,
+  "all_manifest_file_hashes_verified": true,
+  "temporary_lossless_storage_restored": true,
+  "hf_token_required": false,
+  "cache_in_current_instance_only": true,
+  "new_task_cache_persistence_verified": false,
+  "timestamp": "2026-10-07T14:07:43.293696+00:00"
+}
