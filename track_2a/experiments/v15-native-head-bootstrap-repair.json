@@ -10,5 +10,9 @@
   "new_rental_created": false,
   "inference_repeated": false,
   "pre_fit_feature_checkpoint": true,
-  "guard_deadline_unchanged": true
+  "guard_deadline_unchanged": true,
+  "same_lease_resume_actual_outcome": "Original container onstart reran and rejected overwriting completed experiment directories; no NLI repeated",
+  "replacement_instance_id": 54690554,
+  "replacement_gpu": "RTX A6000 48 GB",
+  "source_features_preserved": true
 }

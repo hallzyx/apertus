@@ -1,0 +1,18 @@
+{
+  "archive": {
+    "instance_id": 54690554,
+    "archive_sha256": "2f37b169e6b9d8cab0361c3071b32be7adf08fbaf1e49dba946e7b3977af8e6a",
+    "archive_bytes": 17431272,
+    "part_count": 59,
+    "original_remote_archive_verified": true,
+    "cache_status": "completed"
+  },
+  "original_source_train_and_validation_feature_sha256_match": true,
+  "all_ten_original_source_metric_files_match": true,
+  "canonical_ids_and_labels_verified": true,
+  "train_n": 902,
+  "validation_n": 276,
+  "hidden_features": 4096,
+  "option_logit_features": 3,
+  "no_test_inference_yet": true
+}

@@ -1,0 +1,10 @@
+{
+  "source_instance_id": 54666272,
+  "destination_instance_id": 54690554,
+  "purpose": "Preserve original completed ten validation runs, 902 training features and authorized v1.5 weights",
+  "first_attempt_failure": "rsync mkdir /workspace/recovered failed: parent /workspace not yet materialized in the destination writable layer",
+  "retry": "Requested after Git clone/onstart created destination workspace; transfer currently pending",
+  "mere_container_running_is_insufficient_for_copy_readiness": true,
+  "original_source_not_destroyed": true,
+  "cached_model_needs_no_hf_token": true
+}
