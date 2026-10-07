@@ -1,11 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.1501151153000002,
-  "actual_spend": 0.1501151153000002,
+  "estimated_spend": 0.9787226181999994,
+  "actual_spend": 0.15028511819999935,
   "actual_spend_note": "Observed total account credit reduction, both task-created instances destroyed and API absence verified; final billing may settle asynchronously.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 9.8498848847,
+  "active_instance_ids": [
+    54580160
+  ],
+  "remaining_estimated_budget": 9.021277381800001,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -50,6 +52,25 @@
       "instance_id": 54575345,
       "destroyed_verified_at": "2026-10-07T03:23:19.582117+00:00",
       "artifacts_persisted_before_destruction_commit": "90ff589"
+    },
+    {
+      "offer_id": 54486048,
+      "gpu": "RTX 4090",
+      "disk_gb": 45,
+      "hourly_gpu_usd": 0.36000000000000004,
+      "hourly_storage_usd": 0.016666666666666663,
+      "hourly_total_usd": 0.3766666666666667,
+      "expected_runtime_hours": 0.5,
+      "conservative_runtime_hours": 2,
+      "download_gb_bound": 25,
+      "download_rate_usd_gb": 0.0026041666666666665,
+      "estimated_total_usd_bound": 0.8284375,
+      "purpose": "Frozen original Apertus representations/logits for 902 train and 276 validation, 1024/4096 tokens; no test",
+      "git_commit": "d0b125e4a14887b8c7af4c024d2efb3258f7d6f4",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T03:42:07.523827+00:00",
+      "status": "created",
+      "instance_id": 54580160
     }
   ],
   "account_credit_observed": 9.8498848847,
