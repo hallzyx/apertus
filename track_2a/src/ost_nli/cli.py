@@ -9,6 +9,7 @@ from .experiments import append_event, finish_record, new_record
 from .metrics import evaluate
 from .model import ApertusClient, label_map, predict
 from .retrieval import retrieve
+from .runtime import production_context
 
 
 def emit(value, path=None):
@@ -39,13 +40,15 @@ def main():
     p = subs.add_parser("evaluate");p.add_argument("dataset");p.add_argument("predictions");p.add_argument("--output")
     p = subs.add_parser("retrieve");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--k",type=int,default=5);p.add_argument("--diversify",action="store_true")
     p = subs.add_parser("predict-frozen");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--model-dir",required=True);p.add_argument("--head-dir",required=True);p.add_argument("--device",choices=["cpu","cuda"],default="cpu");p.add_argument("--context",choices=["full","bm25"],default="full");p.add_argument("--k",type=int,default=5)
-    p = subs.add_parser("predict");p.add_argument("booklet");p.add_argument("claim");model_options(p);p.set_defaults(context='hybrid')
-    p = subs.add_parser("predict-batch");p.add_argument("input");p.add_argument("--output",required=True);model_options(p);p.set_defaults(context='hybrid')
+    p = subs.add_parser("predict");p.add_argument("booklet");p.add_argument("claim");model_options(p);p.set_defaults(context=None)
+    p = subs.add_parser("predict-batch");p.add_argument("input");p.add_argument("--output",required=True);model_options(p);p.set_defaults(context=None)
     p = subs.add_parser("experiment");p.add_argument("dataset");p.add_argument("--id",required=True);p.add_argument("--split-name",required=True,choices=["train","validation","test"]);p.add_argument("--output-dir",required=True);p.add_argument("--registry",default="experiments/registry.jsonl");p.add_argument("--estimated-cost",type=float,default=0);p.add_argument("--gpu",default="unknown");p.add_argument("--notes",default="");model_options(p)
     p = subs.add_parser("serve");p.add_argument("--host",default="127.0.0.1");p.add_argument("--port",type=int,default=8000)
     subs.add_parser("self-test")
     args = parser.parse_args()
     try:
+        if args.command in ('predict', 'predict-batch') and args.context is None:
+            args.context = production_context()
         if args.command == "budget-plan":
             from .budget import estimate
             emit(estimate(args.ledger,args.gpu_hourly,args.storage_monthly_gb,args.disk_gb,args.hours,args.transfer,args.margin))

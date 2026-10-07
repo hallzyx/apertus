@@ -3,16 +3,20 @@ import os
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from .data import validate_document
-from .model import ApertusClient, FrozenServiceClient, label_map, predict
+from .model import ApertusClient, FrozenServiceClient, label_map, predict, select_context
 from .retrieval import retrieve
+from .runtime import production_context
 
 RETRIEVER = None
 
 def selected_passages(document, claim):
-    if RETRIEVER is None:
+    mode = production_context()
+    if mode == 'full':
+        return [{**p, 'retrieval_method': 'full'} for p in select_context(document, mode='full')[0]]
+    if mode == 'bm25' or RETRIEVER is None:
         return retrieve(document['passages'], claim, k=5)
     return RETRIEVER.retrieve(document['passages'], claim, k=5,
-                              mode=os.environ.get('RETRIEVAL_MODE','hybrid'))
+                              mode=mode)
 
 HTML = r'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apertus · Evidence Lab</title>
 <style>body{font:16px system-ui;background:#101827;color:#e8eef8;max-width:1050px;margin:50px auto;padding:0 24px}h1{font-size:42px}p{line-height:1.6;color:#b5c2d6}textarea,input,select{box-sizing:border-box;width:100%;background:#19253a;color:#fff;border:1px solid #43536d;border-radius:8px;padding:12px;margin:8px 0}textarea{min-height:160px}button{background:#77e3c2;color:#10231c;border:0;border-radius:8px;padding:12px 22px;font-weight:700;margin:12px 12px 12px 0;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#19253a;padding:20px;border-radius:12px}label{display:block;margin-top:20px}.tag{color:#77e3c2}#status{padding:12px;border:1px solid #43536d;border-radius:8px}small{color:#b5c2d6}</style>
@@ -100,9 +104,13 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     import time
                     began = time.perf_counter()
-                    passages = selected_passages(doc,claim)
-                    result = predict({**doc,'passages':passages,"claim":claim},ApertusClient(),label_map(),mode='full')
-                    result['retrieval'] = passages[0].get('retrieval_method','bm25')
+                    mode = production_context()
+                    if mode == 'full':
+                        result = predict({**doc,"claim":claim},ApertusClient(),label_map(),mode='full')
+                    else:
+                        passages = selected_passages(doc,claim)
+                        result = predict({**doc,'passages':passages,"claim":claim},ApertusClient(),label_map(),mode='full')
+                    result['retrieval'] = mode
                     result['model_inference_time_ms']=result['inference_time_ms']
                     result['inference_time_ms']=(time.perf_counter()-began)*1000
                     result['latency_seconds']=result['inference_time_ms']/1000

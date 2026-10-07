@@ -17,7 +17,7 @@ RUN --mount=type=bind,source=src,target=/stage/src \
     cp /stage/run_hybrid_workbench.py /app/scripts/ && \
     cp /stage/example-booklet.json /app/data/ && chmod 777 /models && \
     chmod -R a+rX /app/src /app/scripts /app/deployment /app/data /app/tests
-ENV PYTHONPATH=/app/src PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 APERTUS_REQUIRED_GENERATION=v1.5 EMBEDDING_MODEL_DIR=/models/multilingual-e5-small RETRIEVAL_MODE=hybrid HF_HOME=/models/hf HF_HUB_DISABLE_XET=1 OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
+ENV PYTHONPATH=/app/src PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 APERTUS_REQUIRED_GENERATION=v1.5 EMBEDDING_MODEL_DIR=/models/multilingual-e5-small HF_HOME=/models/hf HF_HUB_DISABLE_XET=1 OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
 USER 65534:65534
 EXPOSE 8000
 VOLUME /models
