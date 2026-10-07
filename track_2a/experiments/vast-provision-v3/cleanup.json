@@ -1,0 +1,12 @@
+{
+  "instance_id": 54580160,
+  "delete_success": true,
+  "verified_absent": true,
+  "account_instance_ids": [],
+  "verified_at": "2026-10-07T05:08:43.978357+00:00",
+  "artifacts_persisted_before_destruction_commit": "c30e308609846289bf1711482526513b91c45d40",
+  "observed_account_credit": 9.3627854364,
+  "observed_account_balance": 0,
+  "observed_total_account_spend_delta_usd": 0.6372145636000006,
+  "scope": "Task cache lease destroyed; paginated API account observation. Billing may settle asynchronously."
+}
