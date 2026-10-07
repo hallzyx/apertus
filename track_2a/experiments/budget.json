@@ -1,11 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.0015865794999996297,
-  "actual_spend": 0.0015865794999996297,
+  "estimated_spend": 0.8311730353999994,
+  "actual_spend": 0.002735535399999378,
   "actual_spend_note": "Observed account credit reduction after task instance destruction; billing may settle asynchronously; no other instances observed before/after.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 9.9984134205,
+  "active_instance_ids": [
+    54575345
+  ],
+  "remaining_estimated_budget": 9.168826964600001,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -29,9 +31,28 @@
       "elapsed_seconds_before_destruction": 348.09328532218933,
       "destroyed_verified_at": "2026-10-07T02:36:24.289040+00:00",
       "actual_spend_observed_usd": 0.0015865794999996297
+    },
+    {
+      "offer_id": 54489652,
+      "gpu": "RTX 4090",
+      "disk_gb": 45,
+      "hourly_gpu_usd": 0.36000000000000004,
+      "hourly_storage_usd": 0.016666666666666663,
+      "hourly_total_usd": 0.3766666666666667,
+      "expected_runtime_hours": 0.5,
+      "conservative_runtime_hours": 2,
+      "download_gb_bound": 25,
+      "download_rate_usd_gb": 0.0026041666666666665,
+      "estimated_total_usd_bound": 0.8284375,
+      "purpose": "Paired OST validation 1024/4096 tokens, original Apertus8B BF16; API/S3 artifact recovery",
+      "git_commit": "e0a1bea2dfa904fd67679aeb339f531a162ac157",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T02:54:22.307646+00:00",
+      "status": "created",
+      "instance_id": 54575345
     }
   ],
-  "account_credit_observed": 9.9984134205,
+  "account_credit_observed": 9.9972644646,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T02:36:24.289040+00:00"
+  "account_checked_at": "2026-10-07T02:54:22.307646+00:00"
 }
