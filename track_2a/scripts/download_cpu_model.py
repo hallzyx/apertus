@@ -12,9 +12,11 @@ def main():
     args = parser.parse_args()
     repo = 'swiss-ai/Apertus-8B-Instruct-2509'
     revision = 'b946d40447b2b597999b9c86d44bee0b452c919f'
-    info = HfApi().model_info(repo, revision=revision, files_metadata=True)
+    print('Checking pinned official Apertus model metadata', flush=True)
+    info = HfApi().model_info(repo, revision=revision, files_metadata=True, timeout=30)
     if info.sha != revision:
         raise SystemExit('Official model revision mismatch')
+    print('Downloading original model shards and official tokenizer/template', flush=True)
     root = Path(snapshot_download(repo, revision=revision, local_dir=args.model_dir,
                                  allow_patterns=['*.json', '*.safetensors', '*.txt',
                                                  '*.model', 'chat_template.jinja']))
@@ -24,6 +26,7 @@ def main():
             continue
         if item.lfs is None:
             raise SystemExit('Missing official model shard checksum')
+        print('Verifying model shard:', item.rfilename, flush=True)
         path = root / item.rfilename
         digest = hashlib.sha256()
         with path.open('rb') as source:

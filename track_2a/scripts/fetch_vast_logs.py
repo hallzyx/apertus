@@ -48,15 +48,29 @@ def main():
     digest = re.findall(r'APERTUS_RESULTS_SHA256=([0-9a-f]{64})', text)
     payloads = re.findall(r'APERTUS_RESULTS_B64=([A-Za-z0-9+/=]+)', text)
     if digest and payloads:
-        data = base64.b64decode(payloads[-1], validate=True)
-        if hashlib.sha256(data).hexdigest() != digest[-1]:
+        # Docker logging can split a long stdout line into multiple records.
+        suffix = text.rsplit('APERTUS_RESULTS_B64=', 1)[1]
+        joined = ''
+        data = None
+        for line in suffix.splitlines():
+            if not re.fullmatch(r'[A-Za-z0-9+/=]+', line):
+                break
+            joined += line
+            if len(joined) % 4:
+                continue
+            candidate = base64.b64decode(joined, validate=True)
+            if hashlib.sha256(candidate).hexdigest() == digest[-1]:
+                data = candidate
+                break
+        if data is None:
             raise SystemExit('Remote artifact checksum mismatch')
         (root / 'results.tar.gz').write_bytes(data)
         (root / 'artifact_integrity.json').write_text(json.dumps(
             {'instance_id': args.instance, 'sha256': digest[-1], 'bytes': len(data),
              'verified': True}, indent=2) + '\n')
         print('Verified artifact archive recovered:', len(data), 'bytes')
-    lines = [line for line in text.splitlines() if 'APERTUS_RESULTS_B64=' not in line]
+    lines = [line for line in text.splitlines() if 'APERTUS_RESULTS_B64=' not in line
+             and not (len(line) > 150 and re.fullmatch(r'[A-Za-z0-9+/=]+', line))]
     print('\n'.join(lines[-12:]))
 
 

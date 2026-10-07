@@ -30,8 +30,12 @@ if not torch.cuda.is_available() or not torch.cuda.is_bf16_supported():
     raise SystemExit('CUDA/BF16 unavailable; no substitute CPU rental run')
 print('GPU:',torch.cuda.get_device_name(0),'Torch:',torch.__version__,flush=True)
 PY
-python -m ost_nli prepare-ost --output track_2a/data/private/ost-reference.jsonl
-python -m ost_nli split track_2a/data/private/ost-reference.jsonl --output-dir track_2a/data/private/splits-strict --seed 42
+if [[ ! -f track_2a/data/private/ost-reference.jsonl ]]; then
+    python -m ost_nli prepare-ost --output track_2a/data/private/ost-reference.jsonl
+fi
+if [[ ! -f track_2a/data/private/splits-strict/manifest.json ]]; then
+    python -m ost_nli split track_2a/data/private/ost-reference.jsonl --output-dir track_2a/data/private/splits-strict --seed 42
+fi
 python - <<'PY'
 import json
 from pathlib import Path
