@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-07T11:35:03.572539+00:00",
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "authenticated_config_access_verified": true,
+  "config_sha256": "391963f8b992c8445f68123306c8fb4aff1df62ddb5477989efd5cd2d491b686",
+  "native_transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+  "native_architecture_tiny_cpu_test_passed": true,
+  "tiny_test_is_real_model_inference": false,
+  "real_weights_status": "download_in_progress",
+  "credential_value_recorded": false
+}

@@ -144,6 +144,15 @@ class ModelTests(unittest.TestCase):
         p=predict(example(),self.client(response),self.mapping)
         self.assertEqual(p["label"],1);self.assertEqual(p["context_tokens"],123)
         self.assertIsNone(p["probabilities"])
+    def test_native_probabilities_preserved_and_invalid_rejected(self):
+        response={"choices":[{"message":{"content":'{"label":1}'}}],
+                  "class_probabilities":[.1,.8,.1],"decision_method":"head"}
+        result=predict(example(),self.client(response),self.mapping)
+        self.assertEqual(result['probabilities'],[.1,.8,.1])
+        self.assertEqual(result['decision_method'],'head')
+        for values in [[.1,.1,.1],[float('nan'),0.,1.],[True,0.,0.],{'1':1.}]:
+            with self.assertRaises(ValueError):
+                predict(example(),self.client({**response,'class_probabilities':values}),self.mapping)
     def test_invalid_outputs_never_fallback(self):
         for content in ['{"label":4}','{"label":true}','{"label":"0"}','Some explanation','{"label":0,"other":1}']:
             with self.assertRaises(ValueError):predict(example(),self.client({"choices":[{"message":{"content":content}}]}),self.mapping)

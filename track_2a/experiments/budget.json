@@ -1,11 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.6981868012000003,
-  "actual_spend": 0.6981868012000003,
+  "estimated_spend": 2.3751301378444443,
+  "actual_spend": 0.6994356933999999,
   "actual_spend_note": "Timestamped account credit reduction after all task-created leases destroyed and absence verified; billing may settle asynchronously.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 9.3018131988,
+  "active_instance_ids": [
+    54633506
+  ],
+  "remaining_estimated_budget": 7.624869862155556,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -95,6 +97,27 @@
       "instance_id": 54630169,
       "status": "destroyed_verified",
       "destroyed_verified_at": "2026-10-07T11:24:38.115121+00:00"
+    },
+    {
+      "offer_id": 50135017,
+      "gpu": "RTX 5090",
+      "gpu_ram_mb": 32607,
+      "disk_gb": 50,
+      "hourly_gpu_usd": 0.4666666666666666,
+      "hourly_storage_usd": 0.023148148148148147,
+      "hourly_total_usd": 0.48981481481481476,
+      "expected_runtime_hours": 1,
+      "conservative_runtime_hours": 3,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 0.005208333333333333,
+      "estimated_total_usd_bound": 1.6756944444444444,
+      "purpose": "Official Apertus v1.5 8B BF16 full-booklet/reference/retrieval validation, frozen training features and final heldout evaluation",
+      "git_commit": "31b31c694b972c0d959e262a68f28dbbfd88581f",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T11:33:35.655839+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "instance_id": 54633506,
+      "status": "created"
     }
   ],
   "account_credit_observed": 9.3018131988,
