@@ -1,0 +1,8 @@
+{
+  "process_pid": 7411,
+  "launch_cwd": "/workspace/apertus",
+  "execution_source_commit": "a4091d0",
+  "registry_at_execution": "/workspace/apertus/experiments/registry.jsonl",
+  "canonical_registry": "/workspace/apertus/track_2a/experiments/registry.jsonl",
+  "note": "Running interpreter uses original source at a4091d0. A later registry-path fix affects subsequent runs only. After this run, merge its root-level registry events into the canonical registry without duplicating events. Model processes do not survive snapshot publication. Preserve partial outputs and mark interrupted rather than claiming completed."
+}

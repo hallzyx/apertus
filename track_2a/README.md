@@ -43,6 +43,28 @@ ordinary Docker networking and public CAs work with `make run`.
 
 ## CLI
 
+### Optional real Apertus inference on CPU
+
+The original public Apertus 8B model has executed on CPU. This optional workflow
+requires about 16.1 GB of weights, additional dependency/cache space, and at least
+32 GB RAM. It is separate from the lightweight Docker workbench. From the
+repository root:
+
+```bash
+UV_CACHE_DIR=/workspace/.cache/uv uv pip install --python .venv/bin/python --torch-backend cpu --require-hashes -r track_2a/requirements-cpu.lock
+.venv/bin/python track_2a/scripts/download_cpu_model.py --model-dir /workspace/.cache/apertus-8b
+.venv/bin/python track_2a/scripts/cpu_apertus_smoke.py --model-dir /workspace/.cache/apertus-8b --output-dir /tmp/apertus-new-smoke
+PYTHONPATH=track_2a/src .venv/bin/python track_2a/scripts/cpu_ost_experiment.py --model-dir /workspace/.cache/apertus-8b --train track_2a/data/private/splits-strict/train.jsonl --validation track_2a/data/private/splits-strict/validation.jsonl --output-dir track_2a/experiments/new-cpu-reference-run --train-per-class 10 --reference-token-cap 1024
+```
+
+Existing nonempty experiment directories are rejected. The completed short
+synthetic diagnostic got 2/3 correct, including a contradiction error; it is not
+an OST benchmark. The long-reference OST run is recorded separately and its
+`experiment.json` status must be `completed` before treating its metrics as a
+full validation result. The numeric option mapping uses training labels only;
+it does not establish the official class-name convention. CPU prefill on this
+machine can take 15–40 seconds per long example.
+
 ```bash
 PYTHONPATH=src python -m ost_nli retrieve data/example-booklet.json 'jährlicher Beitrag 100 Franken'
 PYTHONPATH=src python -m ost_nli predict /path/to/booklet.pdf 'natural-language claim'

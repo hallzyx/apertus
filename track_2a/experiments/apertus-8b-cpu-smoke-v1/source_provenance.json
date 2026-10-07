@@ -1,0 +1,5 @@
+{
+  "source_script_sha256": "cd55e398c81860d87b99b7f61720d740c6506dd380c2a74c75fdd549e93b2043",
+  "source_committed_at": "a4091d0",
+  "note": "Smoke executed while script was uncommitted; experiment git_commit records checkout HEAD at execution, not inclusion of the script. Script subsequently committed without changes."
+}

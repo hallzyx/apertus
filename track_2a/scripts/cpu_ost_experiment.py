@@ -24,6 +24,7 @@ def main():
     p.add_argument('--reference-token-cap',type=int,default=1024)
     p.add_argument('--threads',type=int,default=4)
     args=p.parse_args()
+    registry=Path(__file__).resolve().parents[1]/'experiments'/'registry.jsonl'
     from ost_nli.data import fingerprint,load_dataset,words
     from ost_nli.metrics import evaluate
     from ost_nli.experiments import append_event,utc_now
@@ -60,7 +61,7 @@ def main():
     commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     record={'experiment_id':out.name,'timestamp':utc_now(),'status':'started','git_commit':commit,'source_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'dataset_split':'strict_validation','training_dataset_sha256':fingerprint(train),'validation_dataset_sha256':fingerprint(val),'training_mapping_ids':[r['id'] for r in chosen],'model':manifest['repo'],'model_revision':manifest['revision'],'precision':'bfloat16','torch':torch.__version__,'transformers':transformers.__version__,'gpu':'CPU; no Vast rental','threads':args.threads,'retrieval_configuration':{'mode':'provided_reference','reference_token_cap':args.reference_token_cap},'prompt_configuration':{'semantic_options':['entailment','contradiction','neutral'],'numeric_mapping':'Fitted on training only; official class-name semantics not asserted','method':'greedy-first-token and restricted option logits'},'training_configuration':{'method':'6-permutation correspondence fit, maximize correct decisions on balanced training sample','examples':len(chosen),'seed':42},'estimated_compute_cost':0.,'actual_compute_cost':0.,'macro_f1':None,'notes':'Internal held-out evaluation, not official challenge score; provided premise excerpts, not full booklet/gold annotations; first-token option probabilities are not calibrated'}
     save(out/'experiment.json',record)
-    append_event('experiments/registry.jsonl',record)
+    append_event(registry,record)
     start=time.perf_counter()
     try:
         tokenizer=AutoTokenizer.from_pretrained(root,local_files_only=True,trust_remote_code=False)
@@ -110,11 +111,11 @@ def main():
         save(out/'metrics.json',{'option_scoring':metrics,'greedy_first_token':greedy_metrics,'greedy_valid_coverage':len(greedy_valid)/len(val),'n_truncated':sum(p['truncated'] for p in predictions),'scope':'Internal held-out OST source population; no claim of official evaluator compliance'})
         save(out/'predictions.json',{'dataset_sha256':fingerprint(val),'configuration':record,'predictions':predictions})
         final={**record,'timestamp':utc_now(),'status':'completed','numeric_mapping':list(permutation),'load_seconds':load_seconds,'runtime_seconds':time.perf_counter()-start,'macro_f1':metrics['macro_f1'],'per_class_f1':{k:v['f1'] for k,v in metrics['per_class'].items()},'per_language_performance':metrics['by_language'],'cross_lingual_performance':metrics['cross_lingual'],'evidence_metrics':metrics['evidence'],'average_context_tokens':metrics['average_context_tokens'],'average_inference_latency':metrics['average_latency_seconds'],'n':len(val),'n_truncated':sum(p['truncated'] for p in predictions),'greedy_valid_coverage':len(greedy_valid)/len(val)}
-        save(out/'experiment.json',final);append_event('experiments/registry.jsonl',final)
+        save(out/'experiment.json',final);append_event(registry,final)
         print(f'Completed actual Apertus validation: Macro-F1 {metrics["macro_f1"]:.6f}',flush=True)
     except Exception as error:
         failure={**record,'timestamp':utc_now(),'status':'failed','runtime_seconds':time.perf_counter()-start,'error_type':type(error).__name__,'notes':record['notes']+'; partial scores retained, no complete-run score'}
-        save(out/'experiment.json',failure);append_event('experiments/registry.jsonl',failure)
+        save(out/'experiment.json',failure);append_event(registry,failure)
         print('Experiment failed:',type(error).__name__,flush=True)
         raise
 

@@ -1,0 +1,71 @@
+{
+  "experiment_id": "apertus-8b-cpu-reference-1024-v1",
+  "timestamp": "2026-10-07T01:57:37.699568+00:00",
+  "status": "started",
+  "git_commit": "a4091d0eb733cc1dbac6872644904e443dcfb887",
+  "source_script_sha256": "91631140abdb450d4ad58ea27f3d454276e03633a1c5326ca9510bf1066129d4",
+  "dataset_split": "strict_validation",
+  "training_dataset_sha256": "9a95cf03912669132e390a676007e873aeb105b46a9bac12360f029fb571ce0c",
+  "validation_dataset_sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d",
+  "training_mapping_ids": [
+    "ost-v1.1-0358",
+    "ost-v1.1-0267",
+    "ost-v1.1-0317",
+    "ost-v1.1-0387",
+    "ost-v1.1-0376",
+    "ost-v1.1-0069",
+    "ost-v1.1-0042",
+    "ost-v1.1-0091",
+    "ost-v1.1-0352",
+    "ost-v1.1-0102",
+    "ost-v1.1-0823",
+    "ost-v1.1-0793",
+    "ost-v1.1-0960",
+    "ost-v1.1-0650",
+    "ost-v1.1-0967",
+    "ost-v1.1-0630",
+    "ost-v1.1-0645",
+    "ost-v1.1-0651",
+    "ost-v1.1-0557",
+    "ost-v1.1-0815",
+    "ost-v1.1-1148",
+    "ost-v1.1-1041",
+    "ost-v1.1-1467",
+    "ost-v1.1-1047",
+    "ost-v1.1-1293",
+    "ost-v1.1-1178",
+    "ost-v1.1-1103",
+    "ost-v1.1-1108",
+    "ost-v1.1-1451",
+    "ost-v1.1-1329"
+  ],
+  "model": "swiss-ai/Apertus-8B-Instruct-2509",
+  "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+  "precision": "bfloat16",
+  "torch": "2.8.0+cpu",
+  "transformers": "4.56.2",
+  "gpu": "CPU; no Vast rental",
+  "threads": 4,
+  "retrieval_configuration": {
+    "mode": "provided_reference",
+    "reference_token_cap": 1024
+  },
+  "prompt_configuration": {
+    "semantic_options": [
+      "entailment",
+      "contradiction",
+      "neutral"
+    ],
+    "numeric_mapping": "Fitted on training only; official class-name semantics not asserted",
+    "method": "greedy-first-token and restricted option logits"
+  },
+  "training_configuration": {
+    "method": "6-permutation correspondence fit, maximize correct decisions on balanced training sample",
+    "examples": 30,
+    "seed": 42
+  },
+  "estimated_compute_cost": 0.0,
+  "actual_compute_cost": 0.0,
+  "macro_f1": null,
+  "notes": "Internal held-out evaluation, not official challenge score; provided premise excerpts, not full booklet/gold annotations; first-token option probabilities are not calibrated"
+}

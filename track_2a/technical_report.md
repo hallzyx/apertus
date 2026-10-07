@@ -183,10 +183,41 @@ These are software checks, not evidence that real Apertus inference or official
 challenge accuracy works. The Docker UI's health response explicitly distinguishes
 configuration presence from model connectivity and benchmark validation.
 
-## 8. Blockers, limitations and next research decision
+## 8. Real Apertus CPU experiments
 
-Secure Vast authentication remains unavailable. The public original Apertus 8B
-model is a viable download candidate, but no model endpoint or GPU is prepared.
+Original `swiss-ai/Apertus-8B-Instruct-2509`, revision
+`b946d40447b2b597999b9c86d44bee0b452c919f`, has now executed on this
+machine. All four original BF16 weight shards were checked against official LFS
+SHA-256 metadata. The CPU stack is Torch 2.8.0+cpu / Transformers 4.56.2,
+SDPA, four threads, seed 42, no remote model code. Dependencies are hash locked
+in `requirements-cpu.lock`; `scripts/download_cpu_model.py` reproduces download
+and checksum verification including the official chat template.
+
+The completed three-case cross-language synthetic diagnostic achieved **2/3**
+for both greedy generation and constrained A/B/C first-token choice. It failed
+the FR-premise / IT-claim contradiction case by returning neutral. Mean prompt
+length was 130 tokens and measured mean inference latency was **3.663 seconds**.
+These are real Apertus outputs, but synthetic diagnostic accuracy is not an OST
+score. Full artifacts and candid script/checkout provenance are in
+`experiments/apertus-8b-cpu-smoke-v1/`. Vast rental expenditure is zero.
+
+A real OST CPU run was launched from commit `a4091d0` against the frozen strict
+validation partition of 276 rows. A correspondence between semantic options and
+numeric labels is fitted exclusively on 30 balanced training examples; this is
+supervision and does not verify the official class-name convention. The prompt
+uses the supplied reference, capped to its first 1,024 tokens, not a complete
+booklet or annotated gold evidence. All truncation and raw first-token logits
+are retained; no calibrated probabilities are asserted. Long-reference prefill
+has measured roughly 15–40 seconds per training example, substantially slower
+than the short smoke. At this checkpoint the experiment is **in progress**;
+there is no completed validation Macro-F1 or final-test result to report. Inspect
+`experiments/apertus-8b-cpu-reference-1024-v1/experiment.json` for the actual
+state, and do not score an unfinished run as if it covered all validation rows.
+
+## 9. Blockers, limitations and next research decision
+
+Secure Vast authentication remains unavailable. The public original Apertus 8B model has been downloaded with verified official
+weight hashes and executed on CPU; no GPU or serving endpoint is prepared.
 The official event guide/terms URLs return HTTP 403 (error 1010). Multiple official
 booklet PDF URLs were probed and returned HTTP 503 upstream connection failures.
 The dataset has no minimal gold-evidence labels or exact page provenance.
@@ -199,7 +230,7 @@ booklets and whether gold evidence exists. Then cost and run the cheapest paired
 supported until those baseline results exist.
 
 The CLI and workbench are research scaffolding, not a completed challenge-compliant
-submission. PDF OCR, official interface/schema compliance, actual Apertus results,
+submission. PDF OCR, official interface/schema compliance, completed OST Apertus metrics,
 final system selection, final report, quantitative demo comparison and account-wide
 billable-resource verification remain outstanding.
 
