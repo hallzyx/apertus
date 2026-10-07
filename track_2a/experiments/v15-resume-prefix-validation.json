@@ -1,0 +1,7 @@
+{
+  "checks_passed": 5,
+  "real_saved_prefix_n": 26,
+  "valid_prefix_accepted": true,
+  "reordered_duplicate_invalid_and_changed_evidence_prefixes_rejected": true,
+  "no_model_inference_performed": true
+}

@@ -21,6 +21,9 @@ def main():
     p.add_argument('--workspace',default='/workspace')
     a=p.parse_args();work=Path(a.workspace);repo=Path(__file__).resolve().parents[2]
     os.chdir(repo);out=repo/'track_2a/experiments/apertus-v15-final-v1'
+    if (out/'selection.json').exists() and (repo/'track_2a/scripts/v15_resume_contract.json').exists():
+        subprocess.run(['python','track_2a/scripts/resume_v15_final.py','--workspace',str(work)],check=True)
+        return
     if out.exists():raise ValueError('Final evaluation cannot be repeated or overwritten')
     out.mkdir(parents=True)
     validation=work/'v15-validation';training=work/'v15-train'

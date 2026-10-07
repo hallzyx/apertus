@@ -1,0 +1,13 @@
+{
+  "source_instance_id": 54690554,
+  "original_frozen_selection_git_commit": "15c6e57b4992a513ffa5f5eec350282e11dd63d5",
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "selection_sha256": "bc4b2d236bffab31a52048b419cc37bd0e532251be474005d37f6eb01c5480b4",
+  "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "persisted_prefix_n": 26,
+  "persisted_prefix_sha256": "08826a7350450a0e34045e08489d316454b7457f7915a9b984820b83832adf75",
+  "test_dataset_sha256": "d464d1f45776fb9ff444e8e9319eac5b47c92af133e28f1305669326d98b50f6",
+  "reason": "Controller reboot interrupted the already-running frozen evaluation; only the 284 unpersisted canonical IDs may be inferred. No re-fitting or selection changes.",
+  "scope": "One logical 310-row internal holdout evaluation, not an official hidden score"
+}
