@@ -19,12 +19,13 @@ def run(args):subprocess.run(args,check=True)
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--sealed-token')
+    p.add_argument('--token-env', help='Provider-managed temporary read credential; removed from child process environment')
     a=p.parse_args()
     root=Path('/workspace/apertus');os.chdir(root)
     os.environ.update(PYTHONPATH='track_2a/src',HF_HUB_DISABLE_XET='1',HF_HUB_DISABLE_TELEMETRY='1',
         HF_HUB_DISABLE_PROGRESS_BARS='1',HF_HOME='/workspace/hf',OPENBLAS_NUM_THREADS='4',OMP_NUM_THREADS='4')
     private=Path('/workspace/v15-hf-transport.pem')
-    if not a.sealed_token:
+    if not a.sealed_token and not a.token_env:
         if not private.exists():
             old=os.umask(0o077)
             try:run(['openssl','genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:3072','-out',str(private)])
@@ -37,10 +38,14 @@ def main():
         print('HF_TRANSPORT_PUBLIC_SHA256='+hashlib.sha256(public).hexdigest(),flush=True)
         return
     if not Path('/workspace/model/verified_manifest.json').exists():
-        encrypted=base64.b64decode(a.sealed_token,validate=True)
-        token=subprocess.check_output(['openssl','pkeyutl','-decrypt','-inkey',str(private),
-            '-pkeyopt','rsa_padding_mode:oaep','-pkeyopt','rsa_oaep_md:sha256'],input=encrypted).decode().strip()
-        private.unlink()
+        if a.token_env:
+            token=os.environ.pop(a.token_env, '')
+            if not token:raise ValueError('Provider-managed read credential was not injected')
+        else:
+            encrypted=base64.b64decode(a.sealed_token,validate=True)
+            token=subprocess.check_output(['openssl','pkeyutl','-decrypt','-inkey',str(private),
+                '-pkeyopt','rsa_padding_mode:oaep','-pkeyopt','rsa_oaep_md:sha256'],input=encrypted).decode().strip()
+            private.unlink()
         from ost_nli.v15 import download
         try:manifest=download('/workspace/model',token)
         finally:del token
