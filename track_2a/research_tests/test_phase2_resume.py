@@ -12,6 +12,12 @@ from unittest.mock import patch
 
 
 class Phase2ResumeTests(unittest.TestCase):
+    def test_paired_research_head_cannot_silently_use_single_forward_features(self):
+        from ost_nli.v15 import Engine
+        engine = object.__new__(Engine)
+        with self.assertRaisesRegex(ValueError,'explicit paired runtime'):
+            engine.infer([],method='head',head={'feature_kind':'paired_hidden_difference'})
+
     def test_completed_chunks_are_reused_and_partial_file_ignored(self):
         import numpy as np
         script = Path(__file__).resolve().parents[1]/'scripts/run_phase2_controls.py'

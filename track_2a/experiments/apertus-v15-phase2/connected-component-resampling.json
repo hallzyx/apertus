@@ -1,0 +1,16 @@
+{
+  "scope": "validation only",
+  "resampling_unit": "booklet-event connected by repeated normalized claims",
+  "n_independent_components": 2,
+  "component_sizes": {
+    "2021-09-26": 199,
+    "2023-06-18": 77
+  },
+  "seed": 42,
+  "draws": 2000,
+  "macro_f1_percentile95": [
+    0.8636165577342049,
+    0.9031657093599094
+  ],
+  "caution": "Only two components and three events; descriptive sensitivity, not credible population/generalization confidence interval. No new holdout or new labels."
+}

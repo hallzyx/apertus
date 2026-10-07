@@ -87,6 +87,8 @@ class Engine:
         if any(len(x)!=1 for x in self.numeric): raise ValueError('Numeric labels require single-token options')
 
     def infer(self, messages, method='score', head=None):
+        if method == 'head' and (not head or head.get('feature_kind') not in ('hidden','option_logits')):
+            raise ValueError('Single-forward Engine requires a hidden or option_logits head; paired research heads need an explicit paired runtime')
         import numpy as np
         torch = self.torch
         began = time.perf_counter()

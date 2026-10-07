@@ -9,6 +9,8 @@ def make_server(engine, method='score', head=None, port=8001):
     from ost_nli.v15 import REPO, REVISION
     if method=='head' and (not head or head.get('model_revision')!=REVISION):
         raise ValueError('A trained compatible v1.5 head is required')
+    if method=='head' and head.get('feature_kind') not in ('hidden','option_logits'):
+        raise ValueError('Paired research heads cannot be served by the single-forward endpoint')
     lock=threading.Lock()
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass

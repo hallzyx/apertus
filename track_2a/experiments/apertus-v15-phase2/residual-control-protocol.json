@@ -1,0 +1,14 @@
+{
+  "status": "conditional_preregistration_before_control_results",
+  "trigger": "Only if original grounding gate warns; cheap artifact investigation, not automatic architecture adoption",
+  "hypothesis": "Subtracting claim-only hidden features from joint booklet+claim features reduces claim-only label signal while preserving relational information",
+  "features": "h(booklet,claim)-h(empty,claim), same frozen Apertus model/prompt position",
+  "fit": "Training902 only; unchanged connected-group OOF C/temperature methodology",
+  "evaluate": "Validation276, wrong-document seeds42/1337 and generic using recovered caches only; original310 untouched",
+  "claim_only_condition": "Residual is exactly zero; report majority/intercept behavior, not proof of sufficient grounding",
+  "runtime": "If ever selected, production needs two frozen Apertus forwards; head parameters alone are not compatible with existing single-forward runtime",
+  "selection": "No architecture adoption without correct-context F1 plus source-sensitivity evidence; negative results preserved",
+  "cost_usd": 0,
+  "new_gpu_forwards": 0,
+  "caution": "Original full features A40, new controls A6000; hardware/condition confound disclosed; no paired latency benchmark claimed"
+}

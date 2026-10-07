@@ -1,0 +1,13 @@
+{
+  "status": "verified",
+  "host_application_tests": 38,
+  "host_research_tests": 2,
+  "docker_application_tests": 38,
+  "docker_application_failures": 0,
+  "docker_application_skips": 0,
+  "research_suite": "Separate research_tests requires NumPy; not shipped/required by minimal PDF+HTTP frontend",
+  "docker_image": "sha256:b1c98bf4ca784dcfc244fb9ab5a378203b5bdd7a80c2e30eee5ffe4e4feff006",
+  "model_inference_on_this_cloud_host": false,
+  "current_selected_head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "changes": "Reject unsupported paired research heads rather than silently apply single-forward features; selected hidden-head numerical path unchanged"
+}
