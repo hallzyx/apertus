@@ -1,0 +1,99 @@
+{
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "gpu_instance_id": 54666272,
+  "scope": "Frozen 276-row internal validation; provisional progress from task logs, SHA-verified artifact recovery pending",
+  "official_hidden_score": false,
+  "log_sha256": "b8825e7256592430f3db199e8cacea84bf7b1d5a233e31372ea48d77703ef20d",
+  "updated_at": "2026-10-07T16:43:55.688472+00:00",
+  "completed_runs": [
+    {
+      "context": "reference",
+      "method": "score",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.535419,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": true
+    },
+    {
+      "context": "reference",
+      "method": "prompt",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.531363,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": true
+    },
+    {
+      "context": "hybrid",
+      "method": "score",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.526883,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    },
+    {
+      "context": "hybrid",
+      "method": "prompt",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.49662,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    },
+    {
+      "context": "dense",
+      "method": "score",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.498261,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    },
+    {
+      "context": "dense",
+      "method": "prompt",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.509928,
+      "invalid_outputs": 2,
+      "valid_n": 274,
+      "macro_f1_scope": "valid-output subset",
+      "valid_output_coverage": 0.9927536231884058,
+      "oracle_only": false
+    },
+    {
+      "context": "bm25",
+      "method": "score",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.436482,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    },
+    {
+      "context": "bm25",
+      "method": "prompt",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.402027,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    }
+  ]
+}

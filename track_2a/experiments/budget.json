@@ -1,13 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 3.755571232166666,
+  "estimated_spend": 4.169460121055555,
   "actual_spend": 2.307654565499999,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [
     54666272
   ],
-  "remaining_estimated_budget": 6.244428767833334,
+  "remaining_estimated_budget": 5.830539878944445,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -329,17 +329,23 @@
       "hourly_storage_usd": 0.013888888888888888,
       "hourly_total_usd": 0.41388888888888886,
       "expected_runtime_hours": 1,
-      "conservative_runtime_hours": 3,
+      "conservative_runtime_hours": 4,
       "download_gb_bound": 30,
       "download_rate_usd_gb": 0.0026041666666666665,
-      "estimated_total_usd_bound": 1.4479166666666667,
+      "estimated_total_usd_bound": 1.8618055555555557,
       "purpose": "Transfer complete verified model/source cache from resource-unavailable task instance 54660880; use matching Torch/TorchAudio/TorchVision CUDA 12.8 with real kernel checks; all original 902/276/310 rows; no Hugging Face credential",
       "git_commit": "eceea5a5d643bcf62a15d0763a040a85d88986af",
       "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
       "created_at": "2026-10-07T15:38:57.430805+00:00",
-      "automatic_cleanup_deadline_seconds": 10800,
+      "automatic_cleanup_deadline_seconds": 14400,
       "instance_id": 54666272,
-      "status": "created"
+      "status": "created",
+      "cleanup_limit_revision": {
+        "reason": "Measured full context around 15000 tokens /4 seconds; reserve time for full-context feature extraction and artifact recovery",
+        "recorded_at": "2026-10-07T16:43:26.526826+00:00",
+        "old_seconds": 10800,
+        "new_seconds": 14400
+      }
     }
   ],
   "account_credit_observed": 7.692345434500001,

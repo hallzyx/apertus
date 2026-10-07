@@ -97,5 +97,11 @@
       "official_hidden_score": false,
       "artifact_recovery_sha_verification_pending": true
     }
-  ]
+  ],
+  "bounded_cleanup_revision": {
+    "seconds": 14400,
+    "estimated_network_inclusive_usd_bound": 1.8618055555555557,
+    "reason": "Full-context runtime measured around 4 seconds per example; bounded margin for full-context training features and SHA-verified result recovery",
+    "automatic_guard_verified_running": true
+  }
 }
