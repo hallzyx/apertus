@@ -2,6 +2,26 @@
 # Run only on the task-created CUDA instance; contains no account credentials.
 set -euo pipefail
 cd /workspace/apertus
+emit_results() {
+    result=$?
+    trap - EXIT
+    echo "APERTUS_WORKER_EXIT=$result"
+    paths=()
+    for cap in 1024 4096; do
+        path="track_2a/experiments/apertus-8b-gpu-reference-${cap}-v1"
+        [[ ! -d "$path" ]] || paths+=("$path")
+    done
+    if [[ ${#paths[@]} -gt 0 ]]; then
+        tar -czf /workspace/results.tar.gz "${paths[@]}"
+        printf 'APERTUS_RESULTS_SHA256='
+        sha256sum /workspace/results.tar.gz | cut -d ' ' -f 1
+        printf 'APERTUS_RESULTS_B64='
+        base64 -w 0 /workspace/results.tar.gz
+        printf '\n'
+    fi
+    exit "$result"
+}
+trap emit_results EXIT
 export PYTHONPATH=track_2a/src HF_HOME=/workspace/hf
 python -m pip install --no-cache-dir 'transformers==4.56.2' 'huggingface-hub==0.35.3' 'safetensors==0.6.2' 'numpy==2.2.6'
 python - <<'PY'
