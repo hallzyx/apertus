@@ -1,0 +1,10 @@
+{
+  "instance_id": 54660880,
+  "source_commit": "a8f11a9",
+  "status": "failed_before_prediction",
+  "real_nli_predictions": 0,
+  "model_and_all_original_902_276_310_source_hashes_verified": true,
+  "failure": "TorchAudio in the base image uses CUDA 12.6, while the corrected Torch wheel uses CUDA 12.8; importing BERT for E5 indirectly imports that optional audio extension.",
+  "repair": "Pin TorchAudio and TorchVision official CUDA 12.8 wheels with original hashes, preserving the existing model/source cache. The only new context output directory was empty and removed after inspection.",
+  "timestamp": "2026-10-07T15:24:47.490547+00:00"
+}

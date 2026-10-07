@@ -1,14 +1,14 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 5.35530426411111,
-  "actual_spend": 1.7754431529999994,
+  "estimated_spend": 3.828986776328395,
+  "actual_spend": 1.9405917146,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [
-    54653201,
-    54660880
+    54660880,
+    54664931
   ],
-  "remaining_estimated_budget": 4.64469573588889,
+  "remaining_estimated_budget": 6.171013223671605,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -266,7 +266,8 @@
       "created_at": "2026-10-07T14:03:55.171078+00:00",
       "automatic_cleanup_deadline_seconds": 10800,
       "instance_id": 54653201,
-      "status": "created"
+      "status": "destroyed_verified",
+      "destroyed_verified_at": "2026-10-07T15:13:56.558309+00:00"
     },
     {
       "instance_id": 54659541,
@@ -303,9 +304,23 @@
       "automatic_cleanup_deadline_seconds": 10800,
       "instance_id": 54660880,
       "status": "created"
+    },
+    {
+      "instance_id": 54664931,
+      "offer_id": 49337314,
+      "gpu": "RTX 5090",
+      "disk_gb": 8,
+      "hourly_total_usd": 0.4703703703703703,
+      "estimated_total_usd_bound": 0.08839506172839505,
+      "created_at": "2026-10-07T15:28:42.366476+00:00",
+      "automatic_cleanup_deadline_seconds": 600,
+      "status": "created",
+      "purpose": "Transfer one SHA-verified public dependency lock with CUDA-matched Torch/TorchAudio/TorchVision wheels; preserve existing model/source cache. No inference, model or credential.",
+      "git_commit": "804a95a366f351cce6c7768e9df2bbf9140cc3cd",
+      "image": "python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d"
     }
   ],
-  "account_credit_observed": 8.258161032,
+  "account_credit_observed": 8.066378802300001,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T14:56:10.169847+00:00"
+  "account_checked_at": "2026-10-07T15:13:56.558309+00:00"
 }
