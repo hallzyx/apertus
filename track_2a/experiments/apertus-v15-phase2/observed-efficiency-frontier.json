@@ -1,0 +1,36 @@
+{
+  "scope": "Descriptive partial frontier of frozen full-trained head on historical validation encodings; not a context-matched sweep or deployment selection",
+  "oracle_excluded": true,
+  "grounding_dependency": "Efficiency does not establish booklet dependence; interpret after registered controls",
+  "latency": "Historical GPU encodings + prior retrieval, not current end-to-end serving",
+  "points": [
+    {
+      "context": "full",
+      "macro_f1": 0.8944609902440983,
+      "mean_input_tokens": 14106.115942028986,
+      "cached_latency_seconds": 3.6351558427466415,
+      "dominated_within_observed_conditions": false
+    },
+    {
+      "context": "bm25",
+      "macro_f1": 0.6611080721365727,
+      "mean_input_tokens": 1654.623188405797,
+      "cached_latency_seconds": 0.400857006337163,
+      "dominated_within_observed_conditions": true
+    },
+    {
+      "context": "dense",
+      "macro_f1": 0.8480701397368064,
+      "mean_input_tokens": 1395.8079710144928,
+      "cached_latency_seconds": 0.35879956679064373,
+      "dominated_within_observed_conditions": false
+    },
+    {
+      "context": "hybrid",
+      "macro_f1": 0.8617040731994375,
+      "mean_input_tokens": 1656.5615942028985,
+      "cached_latency_seconds": 0.42618234864641924,
+      "dominated_within_observed_conditions": false
+    }
+  ]
+}

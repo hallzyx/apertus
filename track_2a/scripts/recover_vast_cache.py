@@ -25,7 +25,7 @@ def main():
     root = Path(args.output_dir)
     root.mkdir(parents=True, exist_ok=True)
     headers = {'Authorization': 'Bearer ' + os.environ['VAST_API_KEY'], 'Content-Type': 'application/json'}
-    def read_remote(path):
+    def read_remote(path, expected_sha256=None):
         ledger = json.loads((Path(args.checkout)/'track_2a/experiments/budget.json').read_text())
         if args.instance not in ledger['active_instance_ids']:
             raise ValueError('Remote recovery is restricted to an active task-owned lease')
@@ -46,6 +46,15 @@ def main():
                 request = urllib.request.Request(url, headers={'Cache-Control': 'no-cache'})
                 with urllib.request.urlopen(request, timeout=40) as response:
                     modified = email.utils.parsedate_to_datetime(response.headers['Last-Modified']).timestamp()
+                    # A registered source digest proves the exact requested content,
+                    # even when S3's timestamp trails the controller clock. Never
+                    # accept a different shared-command result on timestamp alone.
+                    if expected_sha256 is not None:
+                        content = response.read(1_000_000)
+                        if hashlib.sha256(content).hexdigest() == expected_sha256:
+                            return content
+                        time.sleep(1)
+                        continue
                     if modified < started:
                         time.sleep(1)
                         continue
@@ -66,7 +75,7 @@ def main():
             raise ValueError('Invalid part name')
         local = root / name
         if not local.exists():
-            local.write_bytes(read_remote('/workspace/cache-export/' + name))
+            local.write_bytes(read_remote('/workspace/cache-export/' + name, entry['sha256']))
         content = local.read_bytes()
         if len(content) != entry['bytes'] or hashlib.sha256(content).hexdigest() != entry['sha256']:
             raise ValueError('Remote part checksum mismatch: ' + name)
