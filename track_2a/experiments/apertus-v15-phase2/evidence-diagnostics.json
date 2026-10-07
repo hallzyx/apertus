@@ -1,0 +1,6682 @@
+{
+  "definition": "Development5gram reference overlap; not official scoring or semantic correctness",
+  "reference_never_used_in_production": true,
+  "results": {
+    "full": {
+      "n": 276,
+      "mean_reference_5gram_coverage": 0.5856322485242353,
+      "coverage_ge_0_5": 0.6304347826086957,
+      "coverage_ge_0_8": 0.463768115942029,
+      "per_class_mean": {
+        "0": 0.7115081166281939,
+        "1": 0.46915390857279027,
+        "2": 0.5920404295927264
+      },
+      "rows": [
+        {
+          "id": "ost-v1.1-0019",
+          "label": 0,
+          "coverage": 0.8313492063492064,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0022",
+          "label": 0,
+          "coverage": 0.7835990888382688,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-0024",
+          "label": 0,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0026",
+          "label": 0,
+          "coverage": 0.10786516853932585,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0030",
+          "label": 0,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0032",
+          "label": 0,
+          "coverage": 0.1577981651376147,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0040",
+          "label": 0,
+          "coverage": 0.8650088809946714,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0050",
+          "label": 0,
+          "coverage": 0.8650088809946714,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0057",
+          "label": 0,
+          "coverage": 0.10786516853932585,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0064",
+          "label": 0,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0068",
+          "label": 0,
+          "coverage": 0.2203883495145631,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0080",
+          "label": 0,
+          "coverage": 0.8558139534883721,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0081",
+          "label": 0,
+          "coverage": 0.8341463414634146,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0087",
+          "label": 0,
+          "coverage": 0.7630057803468208,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0105",
+          "label": 0,
+          "coverage": 0.8807692307692307,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0114",
+          "label": 0,
+          "coverage": 0.8802816901408451,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0119",
+          "label": 0,
+          "coverage": 0.9292035398230089,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0129",
+          "label": 0,
+          "coverage": 0.10786516853932585,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0136",
+          "label": 0,
+          "coverage": 0.9156118143459916,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0145",
+          "label": 0,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0146",
+          "label": 0,
+          "coverage": 0.7336683417085427,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0153",
+          "label": 0,
+          "coverage": 0.1577981651376147,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0158",
+          "label": 0,
+          "coverage": 0.8650088809946714,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0169",
+          "label": 0,
+          "coverage": 0.9016393442622951,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0172",
+          "label": 0,
+          "coverage": 0.8578535891968728,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0173",
+          "label": 0,
+          "coverage": 0.8183716075156576,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0174",
+          "label": 0,
+          "coverage": 0.19438444924406048,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0186",
+          "label": 0,
+          "coverage": 0.29310344827586204,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0190",
+          "label": 0,
+          "coverage": 0.8208616780045351,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0199",
+          "label": 0,
+          "coverage": 0.03415941058271936,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0205",
+          "label": 0,
+          "coverage": 0.8834080717488789,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0211",
+          "label": 0,
+          "coverage": 0.8208616780045351,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0212",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0213",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0215",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0223",
+          "label": 0,
+          "coverage": 0.20224719101123595,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0224",
+          "label": 0,
+          "coverage": 0.8863636363636364,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0227",
+          "label": 0,
+          "coverage": 0.855166802278275,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0235",
+          "label": 0,
+          "coverage": 0.6737588652482269,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0236",
+          "label": 0,
+          "coverage": 0.16972477064220184,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0241",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0243",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0245",
+          "label": 0,
+          "coverage": 0.8863636363636364,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0250",
+          "label": 0,
+          "coverage": 0.8440748440748441,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0254",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0256",
+          "label": 0,
+          "coverage": 0.8802816901408451,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0258",
+          "label": 0,
+          "coverage": 0.1772853185595568,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0259",
+          "label": 0,
+          "coverage": 0.855166802278275,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0262",
+          "label": 0,
+          "coverage": 0.8208616780045351,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0269",
+          "label": 0,
+          "coverage": 0.12213740458015267,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0278",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0280",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0298",
+          "label": 0,
+          "coverage": 0.8863636363636364,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0299",
+          "label": 0,
+          "coverage": 0.9575971731448764,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0301",
+          "label": 0,
+          "coverage": 0.03415941058271936,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0304",
+          "label": 0,
+          "coverage": 0.8564356435643564,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0305",
+          "label": 0,
+          "coverage": 0.8649789029535865,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0312",
+          "label": 0,
+          "coverage": 0.90625,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0318",
+          "label": 0,
+          "coverage": 0.16972477064220184,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0320",
+          "label": 0,
+          "coverage": 0.8834080717488789,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0323",
+          "label": 0,
+          "coverage": 0.8007380073800738,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0333",
+          "label": 0,
+          "coverage": 0.7852760736196319,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0338",
+          "label": 0,
+          "coverage": 0.7658227848101266,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0341",
+          "label": 0,
+          "coverage": 0.75,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-0343",
+          "label": 0,
+          "coverage": 0.8321554770318021,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0345",
+          "label": 0,
+          "coverage": 0.6017316017316018,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0355",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0359",
+          "label": 0,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0361",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0363",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0391",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0395",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0399",
+          "label": 0,
+          "coverage": 0.8498098859315589,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0400",
+          "label": 0,
+          "coverage": 0.8914728682170543,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0410",
+          "label": 0,
+          "coverage": 0.8650088809946714,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0411",
+          "label": 0,
+          "coverage": 0.9300411522633745,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0412",
+          "label": 0,
+          "coverage": 0.8807692307692307,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0422",
+          "label": 0,
+          "coverage": 0.12213740458015267,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0432",
+          "label": 0,
+          "coverage": 0.8498098859315589,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0434",
+          "label": 0,
+          "coverage": 0.7630057803468208,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0446",
+          "label": 0,
+          "coverage": 0.9292035398230089,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0449",
+          "label": 0,
+          "coverage": 0.7619047619047619,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0456",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0460",
+          "label": 0,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0463",
+          "label": 0,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0481",
+          "label": 0,
+          "coverage": 0.8294930875576036,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0499",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0505",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0506",
+          "label": 1,
+          "coverage": 0.8501291989664083,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0513",
+          "label": 1,
+          "coverage": 0.8501291989664083,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0515",
+          "label": 1,
+          "coverage": 0.13275613275613277,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0519",
+          "label": 1,
+          "coverage": 0.13275613275613277,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0525",
+          "label": 1,
+          "coverage": 0.12250282698831512,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0526",
+          "label": 1,
+          "coverage": 0.8501291989664083,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0555",
+          "label": 1,
+          "coverage": 0.7952415284787311,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0558",
+          "label": 1,
+          "coverage": 0.13275613275613277,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0563",
+          "label": 1,
+          "coverage": 0.8501291989664083,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0566",
+          "label": 1,
+          "coverage": 0.1515513126491647,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0569",
+          "label": 1,
+          "coverage": 0.8501291989664083,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0572",
+          "label": 1,
+          "coverage": 0.8664163090128756,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0573",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0592",
+          "label": 1,
+          "coverage": 0.16498800959232615,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0597",
+          "label": 1,
+          "coverage": 0.26867924528301884,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0599",
+          "label": 1,
+          "coverage": 0.1248103186646434,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0604",
+          "label": 1,
+          "coverage": 0.13275613275613277,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0610",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0616",
+          "label": 1,
+          "coverage": 0.7952415284787311,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0634",
+          "label": 1,
+          "coverage": 0.8664163090128756,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0638",
+          "label": 1,
+          "coverage": 0.7651905252317199,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0640",
+          "label": 1,
+          "coverage": 0.26867924528301884,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0642",
+          "label": 1,
+          "coverage": 0.42129105322763305,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0646",
+          "label": 1,
+          "coverage": 0.7386301369863014,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0660",
+          "label": 1,
+          "coverage": 0.8300117233294255,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0664",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0669",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0680",
+          "label": 1,
+          "coverage": 0.12250282698831512,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0682",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0685",
+          "label": 1,
+          "coverage": 0.42129105322763305,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0686",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0693",
+          "label": 1,
+          "coverage": 0.12250282698831512,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0696",
+          "label": 1,
+          "coverage": 0.42129105322763305,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0700",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0701",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0721",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0723",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0726",
+          "label": 1,
+          "coverage": 0.12250282698831512,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0727",
+          "label": 1,
+          "coverage": 0.8501291989664083,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0728",
+          "label": 1,
+          "coverage": 0.11864406779661017,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0731",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0732",
+          "label": 1,
+          "coverage": 0.1452318460192476,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0746",
+          "label": 1,
+          "coverage": 0.26867924528301884,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0748",
+          "label": 1,
+          "coverage": 0.1248103186646434,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0761",
+          "label": 1,
+          "coverage": 0.8521806252412196,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0765",
+          "label": 1,
+          "coverage": 0.11864406779661017,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0768",
+          "label": 1,
+          "coverage": 0.1248103186646434,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0777",
+          "label": 1,
+          "coverage": 0.8300536672629696,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0778",
+          "label": 1,
+          "coverage": 0.8664163090128756,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0784",
+          "label": 1,
+          "coverage": 0.8705324580598104,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0786",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0787",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0788",
+          "label": 1,
+          "coverage": 0.8300117233294255,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0791",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0795",
+          "label": 1,
+          "coverage": 0.7952415284787311,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0798",
+          "label": 1,
+          "coverage": 0.8705324580598104,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0802",
+          "label": 1,
+          "coverage": 0.8705324580598104,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0806",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0817",
+          "label": 1,
+          "coverage": 0.7386301369863014,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-0833",
+          "label": 1,
+          "coverage": 0.09561940650023551,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0834",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0837",
+          "label": 1,
+          "coverage": 0.7651905252317199,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0838",
+          "label": 1,
+          "coverage": 0.7651905252317199,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0843",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0847",
+          "label": 1,
+          "coverage": 0.7649593106749641,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-0851",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0852",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0853",
+          "label": 1,
+          "coverage": 0.1452318460192476,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0864",
+          "label": 1,
+          "coverage": 0.26867924528301884,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0865",
+          "label": 1,
+          "coverage": 0.26867924528301884,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0867",
+          "label": 1,
+          "coverage": 0.26867924528301884,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0874",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0875",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0878",
+          "label": 1,
+          "coverage": 0.7611589663273297,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0882",
+          "label": 1,
+          "coverage": 0.1515513126491647,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0884",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0897",
+          "label": 1,
+          "coverage": 0.7611589663273297,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0903",
+          "label": 1,
+          "coverage": 0.7649593106749641,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-0909",
+          "label": 1,
+          "coverage": 0.7952415284787311,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0912",
+          "label": 1,
+          "coverage": 0.8450292397660819,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0915",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0919",
+          "label": 1,
+          "coverage": 0.1515513126491647,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0937",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0943",
+          "label": 1,
+          "coverage": 0.7649593106749641,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-0944",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0946",
+          "label": 1,
+          "coverage": 0.8450292397660819,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0952",
+          "label": 1,
+          "coverage": 0.1452318460192476,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-0959",
+          "label": 1,
+          "coverage": 0.16245831348261078,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0963",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0964",
+          "label": 1,
+          "coverage": 0.7611589663273297,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-0969",
+          "label": 1,
+          "coverage": 0.21593944790739092,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0976",
+          "label": 1,
+          "coverage": 0.8300117233294255,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0980",
+          "label": 1,
+          "coverage": 0.8664163090128756,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0982",
+          "label": 1,
+          "coverage": 0.26875250701965503,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0983",
+          "label": 1,
+          "coverage": 0.8705324580598104,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-0991",
+          "label": 1,
+          "coverage": 0.7678479712378018,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-0995",
+          "label": 2,
+          "coverage": 0.08247422680412371,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-0996",
+          "label": 2,
+          "coverage": 0.875,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1001",
+          "label": 2,
+          "coverage": 0.13226452905811623,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1004",
+          "label": 2,
+          "coverage": 0.12810707456978968,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1013",
+          "label": 2,
+          "coverage": 0.8778135048231511,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1019",
+          "label": 2,
+          "coverage": 0.8811475409836066,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1029",
+          "label": 2,
+          "coverage": 0.15151515151515152,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1036",
+          "label": 2,
+          "coverage": 0.8240740740740741,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1037",
+          "label": 2,
+          "coverage": 0.15151515151515152,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1052",
+          "label": 2,
+          "coverage": 0.8041704442429737,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1056",
+          "label": 2,
+          "coverage": 0.7959866220735786,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1057",
+          "label": 2,
+          "coverage": 0.8207070707070707,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1063",
+          "label": 2,
+          "coverage": 0.7435897435897436,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1064",
+          "label": 2,
+          "coverage": 0.9082969432314411,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1065",
+          "label": 2,
+          "coverage": 0.8725806451612903,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1066",
+          "label": 2,
+          "coverage": 0.15714285714285714,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1072",
+          "label": 2,
+          "coverage": 0.8811475409836066,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1076",
+          "label": 2,
+          "coverage": 0.1577981651376147,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1078",
+          "label": 2,
+          "coverage": 0.1772853185595568,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1080",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1084",
+          "label": 2,
+          "coverage": 0.8240740740740741,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1096",
+          "label": 2,
+          "coverage": 0.8349514563106796,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1100",
+          "label": 2,
+          "coverage": 0.8491620111731844,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1109",
+          "label": 2,
+          "coverage": 0.13992537313432835,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1110",
+          "label": 2,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1116",
+          "label": 2,
+          "coverage": 0.8041704442429737,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1118",
+          "label": 2,
+          "coverage": 0.15769944341372913,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1130",
+          "label": 2,
+          "coverage": 0.15151515151515152,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1138",
+          "label": 2,
+          "coverage": 0.8564356435643564,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1144",
+          "label": 2,
+          "coverage": 0.9292035398230089,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1146",
+          "label": 2,
+          "coverage": 0.8863636363636364,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1151",
+          "label": 2,
+          "coverage": 0.8268156424581006,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1159",
+          "label": 2,
+          "coverage": 0.8743169398907104,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1161",
+          "label": 2,
+          "coverage": 0.8007380073800738,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1162",
+          "label": 2,
+          "coverage": 0.38296488946684004,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1167",
+          "label": 2,
+          "coverage": 0.680047225501771,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1168",
+          "label": 2,
+          "coverage": 0.9575971731448764,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1170",
+          "label": 2,
+          "coverage": 0.6394736842105263,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1172",
+          "label": 2,
+          "coverage": 0.13226452905811623,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1174",
+          "label": 2,
+          "coverage": 0.013091641490433032,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1192",
+          "label": 2,
+          "coverage": 0.8491620111731844,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1194",
+          "label": 2,
+          "coverage": 0.8321554770318021,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1196",
+          "label": 2,
+          "coverage": 0.8491620111731844,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1200",
+          "label": 2,
+          "coverage": 0.036571428571428574,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1201",
+          "label": 2,
+          "coverage": 0.8491620111731844,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1204",
+          "label": 2,
+          "coverage": 0.036571428571428574,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1211",
+          "label": 2,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1221",
+          "label": 2,
+          "coverage": 0.12090680100755667,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1223",
+          "label": 2,
+          "coverage": 0.898989898989899,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1234",
+          "label": 2,
+          "coverage": 0.8491620111731844,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1237",
+          "label": 2,
+          "coverage": 0.7536656891495601,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1238",
+          "label": 2,
+          "coverage": 0.8863636363636364,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1251",
+          "label": 2,
+          "coverage": 0.8406374501992032,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1256",
+          "label": 2,
+          "coverage": 0.10103626943005181,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1258",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1268",
+          "label": 2,
+          "coverage": 0.8321554770318021,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1269",
+          "label": 2,
+          "coverage": 0.8649789029535865,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1286",
+          "label": 2,
+          "coverage": 0.15734265734265734,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1309",
+          "label": 2,
+          "coverage": 0.8268156424581006,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1318",
+          "label": 2,
+          "coverage": 0.7514450867052023,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1335",
+          "label": 2,
+          "coverage": 0.80306905370844,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1340",
+          "label": 2,
+          "coverage": 0.7576974564926372,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1349",
+          "label": 2,
+          "coverage": 0.8406374501992032,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1350",
+          "label": 2,
+          "coverage": 0.08247422680412371,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1351",
+          "label": 2,
+          "coverage": 0.036571428571428574,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1352",
+          "label": 2,
+          "coverage": 0.7658227848101266,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1353",
+          "label": 2,
+          "coverage": 0.7658227848101266,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1362",
+          "label": 2,
+          "coverage": 0.8406374501992032,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1373",
+          "label": 2,
+          "coverage": 0.8406374501992032,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1381",
+          "label": 2,
+          "coverage": 0.12090680100755667,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1383",
+          "label": 2,
+          "coverage": 0.7412790697674418,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1384",
+          "label": 2,
+          "coverage": 0.7536656891495601,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1389",
+          "label": 2,
+          "coverage": 0.933920704845815,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1400",
+          "label": 2,
+          "coverage": 0.036571428571428574,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1404",
+          "label": 2,
+          "coverage": 0.7435897435897436,
+          "n_passages": 55
+        },
+        {
+          "id": "ost-v1.1-1409",
+          "label": 2,
+          "coverage": 0.16972477064220184,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1418",
+          "label": 2,
+          "coverage": 0.12477064220183487,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1421",
+          "label": 2,
+          "coverage": 0.10103626943005181,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1430",
+          "label": 2,
+          "coverage": 0.1577981651376147,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1432",
+          "label": 2,
+          "coverage": 0.13992537313432835,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1446",
+          "label": 2,
+          "coverage": 0.8406374501992032,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1450",
+          "label": 2,
+          "coverage": 0.08247422680412371,
+          "n_passages": 50
+        },
+        {
+          "id": "ost-v1.1-1454",
+          "label": 2,
+          "coverage": 0.8183716075156576,
+          "n_passages": 51
+        },
+        {
+          "id": "ost-v1.1-1455",
+          "label": 2,
+          "coverage": 0.10103626943005181,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1458",
+          "label": 2,
+          "coverage": 0.7514450867052023,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1459",
+          "label": 2,
+          "coverage": 0.898989898989899,
+          "n_passages": 53
+        },
+        {
+          "id": "ost-v1.1-1464",
+          "label": 2,
+          "coverage": 0.8863636363636364,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1469",
+          "label": 2,
+          "coverage": 0.8649789029535865,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1471",
+          "label": 2,
+          "coverage": 0.8129770992366412,
+          "n_passages": 47
+        },
+        {
+          "id": "ost-v1.1-1472",
+          "label": 2,
+          "coverage": 0.7852760736196319,
+          "n_passages": 48
+        },
+        {
+          "id": "ost-v1.1-1477",
+          "label": 2,
+          "coverage": 0.13226452905811623,
+          "n_passages": 52
+        },
+        {
+          "id": "ost-v1.1-1481",
+          "label": 2,
+          "coverage": 0.8834080717488789,
+          "n_passages": 51
+        }
+      ]
+    },
+    "bm25": {
+      "n": 276,
+      "mean_reference_5gram_coverage": 0.1473560697376436,
+      "coverage_ge_0_5": 0.09420289855072464,
+      "coverage_ge_0_8": 0.025362318840579712,
+      "per_class_mean": {
+        "0": 0.20892656363883372,
+        "1": 0.0478932523866133,
+        "2": 0.1957505656604546
+      },
+      "rows": [
+        {
+          "id": "ost-v1.1-0019",
+          "label": 0,
+          "coverage": 0.013888888888888888,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0022",
+          "label": 0,
+          "coverage": 0.30296127562642367,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0024",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0026",
+          "label": 0,
+          "coverage": 0.4651685393258427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0030",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0032",
+          "label": 0,
+          "coverage": 0.044036697247706424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0040",
+          "label": 0,
+          "coverage": 0.2895204262877442,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0050",
+          "label": 0,
+          "coverage": 0.2895204262877442,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0057",
+          "label": 0,
+          "coverage": 0.4651685393258427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0064",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0068",
+          "label": 0,
+          "coverage": 0.040776699029126215,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0080",
+          "label": 0,
+          "coverage": 0.010852713178294573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0081",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0087",
+          "label": 0,
+          "coverage": 0.7630057803468208,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0105",
+          "label": 0,
+          "coverage": 0.15,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0114",
+          "label": 0,
+          "coverage": 0.05985915492957746,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0119",
+          "label": 0,
+          "coverage": 0.07964601769911504,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0129",
+          "label": 0,
+          "coverage": 0.4651685393258427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0136",
+          "label": 0,
+          "coverage": 0.004219409282700422,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0145",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0146",
+          "label": 0,
+          "coverage": 0.7336683417085427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0153",
+          "label": 0,
+          "coverage": 0.044036697247706424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0158",
+          "label": 0,
+          "coverage": 0.2895204262877442,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0169",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0172",
+          "label": 0,
+          "coverage": 0.011371712864250177,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0173",
+          "label": 0,
+          "coverage": 0.348643006263048,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0174",
+          "label": 0,
+          "coverage": 0.468682505399568,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0186",
+          "label": 0,
+          "coverage": 0.0007836990595611285,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0190",
+          "label": 0,
+          "coverage": 0.011337868480725623,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0199",
+          "label": 0,
+          "coverage": 0.20629604822505024,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0205",
+          "label": 0,
+          "coverage": 0.8789237668161435,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0211",
+          "label": 0,
+          "coverage": 0.011337868480725623,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0212",
+          "label": 0,
+          "coverage": 0.01152073732718894,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0213",
+          "label": 0,
+          "coverage": 0.01152073732718894,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0215",
+          "label": 0,
+          "coverage": 0.01152073732718894,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0223",
+          "label": 0,
+          "coverage": 0.008988764044943821,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0224",
+          "label": 0,
+          "coverage": 0.255050505050505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0227",
+          "label": 0,
+          "coverage": 0.22864117168429618,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0235",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0236",
+          "label": 0,
+          "coverage": 0.14908256880733944,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0241",
+          "label": 0,
+          "coverage": 0.02534562211981567,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0243",
+          "label": 0,
+          "coverage": 0.02534562211981567,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0245",
+          "label": 0,
+          "coverage": 0.255050505050505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0250",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0254",
+          "label": 0,
+          "coverage": 0.02534562211981567,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0256",
+          "label": 0,
+          "coverage": 0.8503521126760564,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0258",
+          "label": 0,
+          "coverage": 0.4792243767313019,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0259",
+          "label": 0,
+          "coverage": 0.22864117168429618,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0262",
+          "label": 0,
+          "coverage": 0.009070294784580499,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0269",
+          "label": 0,
+          "coverage": 0.6335877862595419,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0278",
+          "label": 0,
+          "coverage": 0.01152073732718894,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0280",
+          "label": 0,
+          "coverage": 0.5438931297709924,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0298",
+          "label": 0,
+          "coverage": 0.255050505050505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0299",
+          "label": 0,
+          "coverage": 0.02120141342756184,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0301",
+          "label": 0,
+          "coverage": 0.20629604822505024,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0304",
+          "label": 0,
+          "coverage": 0.024752475247524754,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0305",
+          "label": 0,
+          "coverage": 0.8860759493670886,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0312",
+          "label": 0,
+          "coverage": 0.42604166666666665,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0318",
+          "label": 0,
+          "coverage": 0.14908256880733944,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0320",
+          "label": 0,
+          "coverage": 0.8789237668161435,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0323",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0333",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0338",
+          "label": 0,
+          "coverage": 0.04746835443037975,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0341",
+          "label": 0,
+          "coverage": 0.0017985611510791368,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0343",
+          "label": 0,
+          "coverage": 0.12897526501766785,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0345",
+          "label": 0,
+          "coverage": 0.21818181818181817,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0355",
+          "label": 0,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0359",
+          "label": 0,
+          "coverage": 0.09516129032258064,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0361",
+          "label": 0,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0363",
+          "label": 0,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0391",
+          "label": 0,
+          "coverage": 0.2857142857142857,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0395",
+          "label": 0,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0399",
+          "label": 0,
+          "coverage": 0.7490494296577946,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0400",
+          "label": 0,
+          "coverage": 0.8953488372093024,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0410",
+          "label": 0,
+          "coverage": 0.07815275310834814,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0411",
+          "label": 0,
+          "coverage": 0.6790123456790124,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0412",
+          "label": 0,
+          "coverage": 0.015384615384615385,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0422",
+          "label": 0,
+          "coverage": 0.34096692111959287,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0432",
+          "label": 0,
+          "coverage": 0.7490494296577946,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0434",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0446",
+          "label": 0,
+          "coverage": 0.09292035398230089,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0449",
+          "label": 0,
+          "coverage": 0.012698412698412698,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0456",
+          "label": 0,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0460",
+          "label": 0,
+          "coverage": 0.09516129032258064,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0463",
+          "label": 0,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0481",
+          "label": 0,
+          "coverage": 0.2857142857142857,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0499",
+          "label": 1,
+          "coverage": 0.004412354592860008,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0505",
+          "label": 1,
+          "coverage": 0.02572653644592663,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0506",
+          "label": 1,
+          "coverage": 0.0036175710594315244,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0513",
+          "label": 1,
+          "coverage": 0.0036175710594315244,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0515",
+          "label": 1,
+          "coverage": 0.13035113035113036,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0519",
+          "label": 1,
+          "coverage": 0.13035113035113036,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0525",
+          "label": 1,
+          "coverage": 0.004900113079532605,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0526",
+          "label": 1,
+          "coverage": 0.0036175710594315244,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0555",
+          "label": 1,
+          "coverage": 0.05912040374909877,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0558",
+          "label": 1,
+          "coverage": 0.13035113035113036,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0563",
+          "label": 1,
+          "coverage": 0.011369509043927648,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0566",
+          "label": 1,
+          "coverage": 0.14558472553699284,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0569",
+          "label": 1,
+          "coverage": 0.0036175710594315244,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0572",
+          "label": 1,
+          "coverage": 0.002145922746781116,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0573",
+          "label": 1,
+          "coverage": 0.015921931176168466,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0592",
+          "label": 1,
+          "coverage": 0.0014388489208633094,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0597",
+          "label": 1,
+          "coverage": 0.09735849056603774,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0599",
+          "label": 1,
+          "coverage": 0.0011380880121396055,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0604",
+          "label": 1,
+          "coverage": 0.13035113035113036,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0610",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0616",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0634",
+          "label": 1,
+          "coverage": 0.002145922746781116,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0638",
+          "label": 1,
+          "coverage": 0.04943357363542739,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0640",
+          "label": 1,
+          "coverage": 0.09886792452830188,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0642",
+          "label": 1,
+          "coverage": 0.0985277463193658,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0646",
+          "label": 1,
+          "coverage": 0.000547945205479452,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0660",
+          "label": 1,
+          "coverage": 0.004103165298944901,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0664",
+          "label": 1,
+          "coverage": 0.12288512911843277,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0669",
+          "label": 1,
+          "coverage": 0.004011231448054553,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0680",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0682",
+          "label": 1,
+          "coverage": 0.06882383153569595,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0685",
+          "label": 1,
+          "coverage": 0.004530011325028313,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0686",
+          "label": 1,
+          "coverage": 0.06882383153569595,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0693",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0696",
+          "label": 1,
+          "coverage": 0.11891279728199321,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0700",
+          "label": 1,
+          "coverage": 0.12288512911843277,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0701",
+          "label": 1,
+          "coverage": 0.004011231448054553,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0721",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0723",
+          "label": 1,
+          "coverage": 0.06882383153569595,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0726",
+          "label": 1,
+          "coverage": 0.002638522427440633,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0727",
+          "label": 1,
+          "coverage": 0.07235142118863049,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0728",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0731",
+          "label": 1,
+          "coverage": 0.13935886019590382,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0732",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0746",
+          "label": 1,
+          "coverage": 0.18716981132075472,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0748",
+          "label": 1,
+          "coverage": 0.008725341426403643,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0761",
+          "label": 1,
+          "coverage": 0.2238517946738711,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0765",
+          "label": 1,
+          "coverage": 0.0010934937124111536,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0768",
+          "label": 1,
+          "coverage": 0.08459787556904401,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0777",
+          "label": 1,
+          "coverage": 0.14967203339296362,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0778",
+          "label": 1,
+          "coverage": 0.002682403433476395,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0784",
+          "label": 1,
+          "coverage": 0.13347921225382933,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0786",
+          "label": 1,
+          "coverage": 0.12288512911843277,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0787",
+          "label": 1,
+          "coverage": 0.005240590757503573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0788",
+          "label": 1,
+          "coverage": 0.15357561547479484,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0791",
+          "label": 1,
+          "coverage": 0.13935886019590382,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0795",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0798",
+          "label": 1,
+          "coverage": 0.14442013129102846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0802",
+          "label": 1,
+          "coverage": 0.137490882567469,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0806",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0817",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0833",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0834",
+          "label": 1,
+          "coverage": 0.05535499398315283,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0837",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0838",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0843",
+          "label": 1,
+          "coverage": 0.05387355298308103,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0847",
+          "label": 1,
+          "coverage": 0.05792245093346099,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0851",
+          "label": 1,
+          "coverage": 0.05535499398315283,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0852",
+          "label": 1,
+          "coverage": 0.0008904719501335708,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0853",
+          "label": 1,
+          "coverage": 0.07874015748031496,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0864",
+          "label": 1,
+          "coverage": 0.04679245283018868,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0865",
+          "label": 1,
+          "coverage": 0.04679245283018868,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0867",
+          "label": 1,
+          "coverage": 0.04679245283018868,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0874",
+          "label": 1,
+          "coverage": 0.05535499398315283,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0875",
+          "label": 1,
+          "coverage": 0.0004764173415912339,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0878",
+          "label": 1,
+          "coverage": 0.008613938919342208,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0882",
+          "label": 1,
+          "coverage": 0.0065632458233890216,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0884",
+          "label": 1,
+          "coverage": 0.05387355298308103,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0897",
+          "label": 1,
+          "coverage": 0.008613938919342208,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0903",
+          "label": 1,
+          "coverage": 0.05792245093346099,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0909",
+          "label": 1,
+          "coverage": 0.06056236481614996,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0912",
+          "label": 1,
+          "coverage": 0.06265664160401002,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0915",
+          "label": 1,
+          "coverage": 0.05495634309193631,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0919",
+          "label": 1,
+          "coverage": 0.0065632458233890216,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0937",
+          "label": 1,
+          "coverage": 0.005136106831022085,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0943",
+          "label": 1,
+          "coverage": 0.03303015797032073,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0944",
+          "label": 1,
+          "coverage": 0.10348977135980746,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0946",
+          "label": 1,
+          "coverage": 0.005430242272347535,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0952",
+          "label": 1,
+          "coverage": 0.07874015748031496,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0959",
+          "label": 1,
+          "coverage": 0.0004764173415912339,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0963",
+          "label": 1,
+          "coverage": 0.05334937825912555,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0964",
+          "label": 1,
+          "coverage": 0.008613938919342208,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0969",
+          "label": 1,
+          "coverage": 0.05387355298308103,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0976",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0980",
+          "label": 1,
+          "coverage": 0.002145922746781116,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0982",
+          "label": 1,
+          "coverage": 0.05535499398315283,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0983",
+          "label": 1,
+          "coverage": 0.008388037928519328,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0991",
+          "label": 1,
+          "coverage": 0.015921931176168466,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0995",
+          "label": 2,
+          "coverage": 0.002061855670103093,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0996",
+          "label": 2,
+          "coverage": 0.07661290322580645,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1001",
+          "label": 2,
+          "coverage": 0.008016032064128256,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1004",
+          "label": 2,
+          "coverage": 0.3632887189292543,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1013",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1019",
+          "label": 2,
+          "coverage": 0.03278688524590164,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1029",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1036",
+          "label": 2,
+          "coverage": 0.02546296296296296,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1037",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1052",
+          "label": 2,
+          "coverage": 0.009972801450589302,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1056",
+          "label": 2,
+          "coverage": 0.3511705685618729,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1057",
+          "label": 2,
+          "coverage": 0.4015151515151515,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1063",
+          "label": 2,
+          "coverage": 0.7435897435897436,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1064",
+          "label": 2,
+          "coverage": 0.31004366812227074,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1065",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1066",
+          "label": 2,
+          "coverage": 0.6326530612244898,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1072",
+          "label": 2,
+          "coverage": 0.03278688524590164,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1076",
+          "label": 2,
+          "coverage": 0.044036697247706424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1078",
+          "label": 2,
+          "coverage": 0.4792243767313019,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1080",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1084",
+          "label": 2,
+          "coverage": 0.02546296296296296,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1096",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1100",
+          "label": 2,
+          "coverage": 0.027932960893854747,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1109",
+          "label": 2,
+          "coverage": 0.03917910447761194,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1110",
+          "label": 2,
+          "coverage": 0.05152671755725191,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1116",
+          "label": 2,
+          "coverage": 0.009972801450589302,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1118",
+          "label": 2,
+          "coverage": 0.03896103896103896,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1130",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1138",
+          "label": 2,
+          "coverage": 0.024752475247524754,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1144",
+          "label": 2,
+          "coverage": 0.3274336283185841,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1146",
+          "label": 2,
+          "coverage": 0.09090909090909091,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1151",
+          "label": 2,
+          "coverage": 0.547486033519553,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1159",
+          "label": 2,
+          "coverage": 0.14617486338797814,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1161",
+          "label": 2,
+          "coverage": 0.24907749077490776,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1162",
+          "label": 2,
+          "coverage": 0.10403120936280884,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1167",
+          "label": 2,
+          "coverage": 0.07674144037780402,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1168",
+          "label": 2,
+          "coverage": 0.02120141342756184,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1170",
+          "label": 2,
+          "coverage": 0.031578947368421054,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1172",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1174",
+          "label": 2,
+          "coverage": 0.13293051359516617,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1192",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1194",
+          "label": 2,
+          "coverage": 0.09187279151943463,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1196",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1200",
+          "label": 2,
+          "coverage": 0.26057142857142856,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1201",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1204",
+          "label": 2,
+          "coverage": 0.26057142857142856,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1211",
+          "label": 2,
+          "coverage": 0.35877862595419846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1221",
+          "label": 2,
+          "coverage": 0.0025188916876574307,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1223",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1234",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1237",
+          "label": 2,
+          "coverage": 0.011730205278592375,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1238",
+          "label": 2,
+          "coverage": 0.255050505050505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1251",
+          "label": 2,
+          "coverage": 0.2968127490039841,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1256",
+          "label": 2,
+          "coverage": 0.023316062176165803,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1258",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1268",
+          "label": 2,
+          "coverage": 0.09187279151943463,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1269",
+          "label": 2,
+          "coverage": 0.379746835443038,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1286",
+          "label": 2,
+          "coverage": 0.25874125874125875,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1309",
+          "label": 2,
+          "coverage": 0.0111731843575419,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1318",
+          "label": 2,
+          "coverage": 0.028901734104046242,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1335",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1340",
+          "label": 2,
+          "coverage": 0.33065595716198126,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1349",
+          "label": 2,
+          "coverage": 0.029880478087649404,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1350",
+          "label": 2,
+          "coverage": 0.6164948453608248,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1351",
+          "label": 2,
+          "coverage": 0.36342857142857143,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1352",
+          "label": 2,
+          "coverage": 0.056962025316455694,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1353",
+          "label": 2,
+          "coverage": 0.056962025316455694,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1362",
+          "label": 2,
+          "coverage": 0.029880478087649404,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1373",
+          "label": 2,
+          "coverage": 0.029880478087649404,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1381",
+          "label": 2,
+          "coverage": 0.2518891687657431,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1383",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1384",
+          "label": 2,
+          "coverage": 0.20234604105571846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1389",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1400",
+          "label": 2,
+          "coverage": 0.36342857142857143,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1404",
+          "label": 2,
+          "coverage": 0.10897435897435898,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1409",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1418",
+          "label": 2,
+          "coverage": 0.5100917431192661,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1421",
+          "label": 2,
+          "coverage": 0.015544041450777202,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1430",
+          "label": 2,
+          "coverage": 0.027522935779816515,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1432",
+          "label": 2,
+          "coverage": 0.5485074626865671,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1446",
+          "label": 2,
+          "coverage": 0.029880478087649404,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1450",
+          "label": 2,
+          "coverage": 0.6164948453608248,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1454",
+          "label": 2,
+          "coverage": 0.348643006263048,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1455",
+          "label": 2,
+          "coverage": 0.015544041450777202,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1458",
+          "label": 2,
+          "coverage": 0.005780346820809248,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1459",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1464",
+          "label": 2,
+          "coverage": 0.12121212121212122,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1469",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1471",
+          "label": 2,
+          "coverage": 0.022900763358778626,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1472",
+          "label": 2,
+          "coverage": 0.7852760736196319,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1477",
+          "label": 2,
+          "coverage": 0.6613226452905812,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1481",
+          "label": 2,
+          "coverage": 0.02242152466367713,
+          "n_passages": 5
+        }
+      ]
+    },
+    "dense": {
+      "n": 276,
+      "mean_reference_5gram_coverage": 0.2007607554363125,
+      "coverage_ge_0_5": 0.13405797101449277,
+      "coverage_ge_0_8": 0.021739130434782608,
+      "per_class_mean": {
+        "0": 0.34550281090090945,
+        "1": 0.01981991576135762,
+        "2": 0.25819972846011946
+      },
+      "rows": [
+        {
+          "id": "ost-v1.1-0019",
+          "label": 0,
+          "coverage": 0.39880952380952384,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0022",
+          "label": 0,
+          "coverage": 0.6264236902050114,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0024",
+          "label": 0,
+          "coverage": 0.12903225806451613,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0026",
+          "label": 0,
+          "coverage": 0.4651685393258427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0030",
+          "label": 0,
+          "coverage": 0.12903225806451613,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0032",
+          "label": 0,
+          "coverage": 0.7211009174311926,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0040",
+          "label": 0,
+          "coverage": 0.6021314387211367,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0050",
+          "label": 0,
+          "coverage": 0.6021314387211367,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0057",
+          "label": 0,
+          "coverage": 0.4651685393258427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0064",
+          "label": 0,
+          "coverage": 0.12903225806451613,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0068",
+          "label": 0,
+          "coverage": 0.3446601941747573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0080",
+          "label": 0,
+          "coverage": 0.26666666666666666,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0081",
+          "label": 0,
+          "coverage": 0.6487804878048781,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0087",
+          "label": 0,
+          "coverage": 0.3583815028901734,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0105",
+          "label": 0,
+          "coverage": 0.15,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0114",
+          "label": 0,
+          "coverage": 0.2887323943661972,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0119",
+          "label": 0,
+          "coverage": 0.7256637168141593,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0129",
+          "label": 0,
+          "coverage": 0.4651685393258427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0136",
+          "label": 0,
+          "coverage": 0.6624472573839663,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0145",
+          "label": 0,
+          "coverage": 0.12903225806451613,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0146",
+          "label": 0,
+          "coverage": 0.7336683417085427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0153",
+          "label": 0,
+          "coverage": 0.7211009174311926,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0158",
+          "label": 0,
+          "coverage": 0.6021314387211367,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0169",
+          "label": 0,
+          "coverage": 0.012295081967213115,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0172",
+          "label": 0,
+          "coverage": 0.11087420042643924,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0173",
+          "label": 0,
+          "coverage": 0.6450939457202505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0174",
+          "label": 0,
+          "coverage": 0.47516198704103674,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0186",
+          "label": 0,
+          "coverage": 0.009404388714733543,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0190",
+          "label": 0,
+          "coverage": 0.17233560090702948,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0199",
+          "label": 0,
+          "coverage": 0.10984594775619558,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0205",
+          "label": 0,
+          "coverage": 0.3452914798206278,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0211",
+          "label": 0,
+          "coverage": 0.17233560090702948,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0212",
+          "label": 0,
+          "coverage": 0.42626728110599077,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0213",
+          "label": 0,
+          "coverage": 0.42626728110599077,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0215",
+          "label": 0,
+          "coverage": 0.42626728110599077,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0223",
+          "label": 0,
+          "coverage": 0.035955056179775284,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0224",
+          "label": 0,
+          "coverage": 0.24494949494949494,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0227",
+          "label": 0,
+          "coverage": 0.3889340927583401,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0235",
+          "label": 0,
+          "coverage": 0.0070921985815602835,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0236",
+          "label": 0,
+          "coverage": 0.03211009174311927,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0241",
+          "label": 0,
+          "coverage": 0.20276497695852536,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0243",
+          "label": 0,
+          "coverage": 0.20276497695852536,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0245",
+          "label": 0,
+          "coverage": 0.24494949494949494,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0250",
+          "label": 0,
+          "coverage": 0.0498960498960499,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0254",
+          "label": 0,
+          "coverage": 0.20276497695852536,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0256",
+          "label": 0,
+          "coverage": 0.8538732394366197,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0258",
+          "label": 0,
+          "coverage": 0.8227146814404432,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0259",
+          "label": 0,
+          "coverage": 0.3889340927583401,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0262",
+          "label": 0,
+          "coverage": 0.41950113378684806,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0269",
+          "label": 0,
+          "coverage": 0.3333333333333333,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0278",
+          "label": 0,
+          "coverage": 0.42626728110599077,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0280",
+          "label": 0,
+          "coverage": 0.5133587786259542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0298",
+          "label": 0,
+          "coverage": 0.24494949494949494,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0299",
+          "label": 0,
+          "coverage": 0.1166077738515901,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0301",
+          "label": 0,
+          "coverage": 0.10984594775619558,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0304",
+          "label": 0,
+          "coverage": 0.0049504950495049506,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0305",
+          "label": 0,
+          "coverage": 0.35443037974683544,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0312",
+          "label": 0,
+          "coverage": 0.33541666666666664,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0318",
+          "label": 0,
+          "coverage": 0.03211009174311927,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0320",
+          "label": 0,
+          "coverage": 0.3452914798206278,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0323",
+          "label": 0,
+          "coverage": 0.27121771217712176,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0333",
+          "label": 0,
+          "coverage": 0.7055214723926381,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0338",
+          "label": 0,
+          "coverage": 0.2120253164556962,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0341",
+          "label": 0,
+          "coverage": 0.0341726618705036,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0343",
+          "label": 0,
+          "coverage": 0.42226148409893993,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0345",
+          "label": 0,
+          "coverage": 0.2805194805194805,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0355",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0359",
+          "label": 0,
+          "coverage": 0.40483870967741936,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0361",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0363",
+          "label": 0,
+          "coverage": 0.27099236641221375,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0391",
+          "label": 0,
+          "coverage": 0.3709677419354839,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0395",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0399",
+          "label": 0,
+          "coverage": 0.526615969581749,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0400",
+          "label": 0,
+          "coverage": 0.5,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0410",
+          "label": 0,
+          "coverage": 0.15630550621669628,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0411",
+          "label": 0,
+          "coverage": 0.9259259259259259,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0412",
+          "label": 0,
+          "coverage": 0.3346153846153846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0422",
+          "label": 0,
+          "coverage": 0.34096692111959287,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0432",
+          "label": 0,
+          "coverage": 0.526615969581749,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0434",
+          "label": 0,
+          "coverage": 0.5491329479768786,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0446",
+          "label": 0,
+          "coverage": 0.7256637168141593,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0449",
+          "label": 0,
+          "coverage": 0.4984126984126984,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0456",
+          "label": 0,
+          "coverage": 0.27099236641221375,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0460",
+          "label": 0,
+          "coverage": 0.40483870967741936,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0463",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0481",
+          "label": 0,
+          "coverage": 0.3709677419354839,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0499",
+          "label": 1,
+          "coverage": 0.0024067388688327317,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0505",
+          "label": 1,
+          "coverage": 0.01095759885659838,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0506",
+          "label": 1,
+          "coverage": 0.005684754521963824,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0513",
+          "label": 1,
+          "coverage": 0.008268733850129198,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0515",
+          "label": 1,
+          "coverage": 0.08561808561808562,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0519",
+          "label": 1,
+          "coverage": 0.08561808561808562,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0525",
+          "label": 1,
+          "coverage": 0.06558612891066717,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0526",
+          "label": 1,
+          "coverage": 0.008268733850129198,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0555",
+          "label": 1,
+          "coverage": 0.0007209805335255948,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0558",
+          "label": 1,
+          "coverage": 0.08561808561808562,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0563",
+          "label": 1,
+          "coverage": 0.08165374677002583,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0566",
+          "label": 1,
+          "coverage": 0.003579952267303103,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0569",
+          "label": 1,
+          "coverage": 0.005684754521963824,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0572",
+          "label": 1,
+          "coverage": 0.003218884120171674,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0573",
+          "label": 1,
+          "coverage": 0.011299435028248588,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0592",
+          "label": 1,
+          "coverage": 0.01342925659472422,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0597",
+          "label": 1,
+          "coverage": 0.0011320754716981133,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0599",
+          "label": 1,
+          "coverage": 0.0015174506828528073,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0604",
+          "label": 1,
+          "coverage": 0.08561808561808562,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0610",
+          "label": 1,
+          "coverage": 0.0009528346831824678,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0616",
+          "label": 1,
+          "coverage": 0.0007209805335255948,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0634",
+          "label": 1,
+          "coverage": 0.08744635193133048,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0638",
+          "label": 1,
+          "coverage": 0.0756951596292482,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0640",
+          "label": 1,
+          "coverage": 0.004905660377358491,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0642",
+          "label": 1,
+          "coverage": 0.007927519818799546,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0646",
+          "label": 1,
+          "coverage": 0.000547945205479452,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0660",
+          "label": 1,
+          "coverage": 0.009378663540445486,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0664",
+          "label": 1,
+          "coverage": 0.01068566340160285,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0669",
+          "label": 1,
+          "coverage": 0.0024067388688327317,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0680",
+          "label": 1,
+          "coverage": 0.004523181304183943,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0682",
+          "label": 1,
+          "coverage": 0.0025680534155110425,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0685",
+          "label": 1,
+          "coverage": 0.011325028312570781,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0686",
+          "label": 1,
+          "coverage": 0.0025680534155110425,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0693",
+          "label": 1,
+          "coverage": 0.004523181304183943,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0696",
+          "label": 1,
+          "coverage": 0.007927519818799546,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0700",
+          "label": 1,
+          "coverage": 0.015138023152270703,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0701",
+          "label": 1,
+          "coverage": 0.0024067388688327317,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0721",
+          "label": 1,
+          "coverage": 0.004764173415912339,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0723",
+          "label": 1,
+          "coverage": 0.0025680534155110425,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0726",
+          "label": 1,
+          "coverage": 0.0018846588767433095,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0727",
+          "label": 1,
+          "coverage": 0.009302325581395349,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0728",
+          "label": 1,
+          "coverage": 0.002733734281027884,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0731",
+          "label": 1,
+          "coverage": 0.01157613535173642,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0732",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0746",
+          "label": 1,
+          "coverage": 0.0030188679245283017,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0748",
+          "label": 1,
+          "coverage": 0.06069802731411229,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0761",
+          "label": 1,
+          "coverage": 0.026630644538788113,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0765",
+          "label": 1,
+          "coverage": 0.002733734281027884,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0768",
+          "label": 1,
+          "coverage": 0.0030349013657056147,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0777",
+          "label": 1,
+          "coverage": 0.00655933214072749,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0778",
+          "label": 1,
+          "coverage": 0.005901287553648069,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0784",
+          "label": 1,
+          "coverage": 0.07549234135667396,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0786",
+          "label": 1,
+          "coverage": 0.015138023152270703,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0787",
+          "label": 1,
+          "coverage": 0.004764173415912339,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0788",
+          "label": 1,
+          "coverage": 0.038686987104337635,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0791",
+          "label": 1,
+          "coverage": 0.01157613535173642,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0795",
+          "label": 1,
+          "coverage": 0.0136986301369863,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0798",
+          "label": 1,
+          "coverage": 0.0007293946024799417,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0802",
+          "label": 1,
+          "coverage": 0.09810357403355215,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0806",
+          "label": 1,
+          "coverage": 0.004764173415912339,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0817",
+          "label": 1,
+          "coverage": 0.0027397260273972603,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0833",
+          "label": 1,
+          "coverage": 0.0023551577955723034,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0834",
+          "label": 1,
+          "coverage": 0.0020056157240272766,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0837",
+          "label": 1,
+          "coverage": 0.0010298661174047373,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0838",
+          "label": 1,
+          "coverage": 0.0010298661174047373,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0843",
+          "label": 1,
+          "coverage": 0.10017809439002671,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0847",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0851",
+          "label": 1,
+          "coverage": 0.0020056157240272766,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0852",
+          "label": 1,
+          "coverage": 0.0013357079252003562,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0853",
+          "label": 1,
+          "coverage": 0.009186351706036745,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0864",
+          "label": 1,
+          "coverage": 0.004905660377358491,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0865",
+          "label": 1,
+          "coverage": 0.004905660377358491,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0867",
+          "label": 1,
+          "coverage": 0.004905660377358491,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0874",
+          "label": 1,
+          "coverage": 0.0020056157240272766,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0875",
+          "label": 1,
+          "coverage": 0.016198189614101955,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0878",
+          "label": 1,
+          "coverage": 0.014878621769772905,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0882",
+          "label": 1,
+          "coverage": 0.0029832935560859188,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0884",
+          "label": 1,
+          "coverage": 0.10017809439002671,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0897",
+          "label": 1,
+          "coverage": 0.014878621769772905,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0903",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0909",
+          "label": 1,
+          "coverage": 0.012256669069935111,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0912",
+          "label": 1,
+          "coverage": 0.08688387635756056,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0915",
+          "label": 1,
+          "coverage": 0.019517205957883924,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0919",
+          "label": 1,
+          "coverage": 0.0029832935560859188,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0937",
+          "label": 1,
+          "coverage": 0.001027221366204417,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0943",
+          "label": 1,
+          "coverage": 0.09573958831977022,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0944",
+          "label": 1,
+          "coverage": 0.001604492579221821,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0946",
+          "label": 1,
+          "coverage": 0.004594820384294068,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0952",
+          "label": 1,
+          "coverage": 0.009186351706036745,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0959",
+          "label": 1,
+          "coverage": 0.016198189614101955,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0963",
+          "label": 1,
+          "coverage": 0.00762133975130365,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0964",
+          "label": 1,
+          "coverage": 0.014878621769772905,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0969",
+          "label": 1,
+          "coverage": 0.10017809439002671,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0976",
+          "label": 1,
+          "coverage": 0.0023446658851113715,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0980",
+          "label": 1,
+          "coverage": 0.003218884120171674,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0982",
+          "label": 1,
+          "coverage": 0.0020056157240272766,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0983",
+          "label": 1,
+          "coverage": 0.02735229759299781,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0991",
+          "label": 1,
+          "coverage": 0.025166923472008218,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0995",
+          "label": 2,
+          "coverage": 0.5051546391752577,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0996",
+          "label": 2,
+          "coverage": 0.3346774193548387,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1001",
+          "label": 2,
+          "coverage": 0.3286573146292585,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1004",
+          "label": 2,
+          "coverage": 0.3690248565965583,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1013",
+          "label": 2,
+          "coverage": 0.05305466237942122,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1019",
+          "label": 2,
+          "coverage": 0.004098360655737705,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1029",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1036",
+          "label": 2,
+          "coverage": 0.5694444444444444,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1037",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1052",
+          "label": 2,
+          "coverage": 0.13327289211242066,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1056",
+          "label": 2,
+          "coverage": 0.2140468227424749,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1057",
+          "label": 2,
+          "coverage": 0.3686868686868687,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1063",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1064",
+          "label": 2,
+          "coverage": 0.32751091703056767,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1065",
+          "label": 2,
+          "coverage": 0.12903225806451613,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1066",
+          "label": 2,
+          "coverage": 0.12040816326530612,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1072",
+          "label": 2,
+          "coverage": 0.004098360655737705,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1076",
+          "label": 2,
+          "coverage": 0.7211009174311926,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1078",
+          "label": 2,
+          "coverage": 0.47645429362880887,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1080",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1084",
+          "label": 2,
+          "coverage": 0.5694444444444444,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1096",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1100",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1109",
+          "label": 2,
+          "coverage": 0.007462686567164179,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1110",
+          "label": 2,
+          "coverage": 0.05343511450381679,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1116",
+          "label": 2,
+          "coverage": 0.13327289211242066,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1118",
+          "label": 2,
+          "coverage": 0.0074211502782931356,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1130",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1138",
+          "label": 2,
+          "coverage": 0.3415841584158416,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1144",
+          "label": 2,
+          "coverage": 0.9292035398230089,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1146",
+          "label": 2,
+          "coverage": 0.017676767676767676,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1151",
+          "label": 2,
+          "coverage": 0.547486033519553,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1159",
+          "label": 2,
+          "coverage": 0.16256830601092895,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1161",
+          "label": 2,
+          "coverage": 0.4354243542435424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1162",
+          "label": 2,
+          "coverage": 0.09947984395318596,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1167",
+          "label": 2,
+          "coverage": 0.05430932703659976,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1168",
+          "label": 2,
+          "coverage": 0.1166077738515901,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1170",
+          "label": 2,
+          "coverage": 0.031578947368421054,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1172",
+          "label": 2,
+          "coverage": 0.33266533066132264,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1174",
+          "label": 2,
+          "coverage": 0.017623363544813697,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1192",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1194",
+          "label": 2,
+          "coverage": 0.34452296819787986,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1196",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1200",
+          "label": 2,
+          "coverage": 0.2057142857142857,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1201",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1204",
+          "label": 2,
+          "coverage": 0.2057142857142857,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1211",
+          "label": 2,
+          "coverage": 0.08587786259541985,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1221",
+          "label": 2,
+          "coverage": 0.027707808564231738,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1223",
+          "label": 2,
+          "coverage": 0.4393939393939394,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1234",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1237",
+          "label": 2,
+          "coverage": 0.002932551319648094,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1238",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1251",
+          "label": 2,
+          "coverage": 0.1952191235059761,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1256",
+          "label": 2,
+          "coverage": 0.03626943005181347,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1258",
+          "label": 2,
+          "coverage": 0.011363636363636364,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1268",
+          "label": 2,
+          "coverage": 0.34452296819787986,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1269",
+          "label": 2,
+          "coverage": 0.35443037974683544,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1286",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1309",
+          "label": 2,
+          "coverage": 0.0223463687150838,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1318",
+          "label": 2,
+          "coverage": 0.028901734104046242,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1335",
+          "label": 2,
+          "coverage": 0.710997442455243,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1340",
+          "label": 2,
+          "coverage": 0.3132530120481928,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1349",
+          "label": 2,
+          "coverage": 0.2051792828685259,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1350",
+          "label": 2,
+          "coverage": 0.31752577319587627,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1351",
+          "label": 2,
+          "coverage": 0.46514285714285714,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1352",
+          "label": 2,
+          "coverage": 0.07278481012658228,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1353",
+          "label": 2,
+          "coverage": 0.07278481012658228,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1362",
+          "label": 2,
+          "coverage": 0.2051792828685259,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1373",
+          "label": 2,
+          "coverage": 0.2051792828685259,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1381",
+          "label": 2,
+          "coverage": 0.5491183879093199,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1383",
+          "label": 2,
+          "coverage": 0.32848837209302323,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1384",
+          "label": 2,
+          "coverage": 0.20234604105571846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1389",
+          "label": 2,
+          "coverage": 0.9295154185022027,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1400",
+          "label": 2,
+          "coverage": 0.46514285714285714,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1404",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1409",
+          "label": 2,
+          "coverage": 0.4105504587155963,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1418",
+          "label": 2,
+          "coverage": 0.005504587155963303,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1421",
+          "label": 2,
+          "coverage": 0.038860103626943004,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1430",
+          "label": 2,
+          "coverage": 0.27889908256880735,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1432",
+          "label": 2,
+          "coverage": 0.251865671641791,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1446",
+          "label": 2,
+          "coverage": 0.2051792828685259,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1450",
+          "label": 2,
+          "coverage": 0.31752577319587627,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1454",
+          "label": 2,
+          "coverage": 0.651356993736952,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1455",
+          "label": 2,
+          "coverage": 0.023316062176165803,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1458",
+          "label": 2,
+          "coverage": 0.5722543352601156,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1459",
+          "label": 2,
+          "coverage": 0.18686868686868688,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1464",
+          "label": 2,
+          "coverage": 0.2398989898989899,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1469",
+          "label": 2,
+          "coverage": 0.35443037974683544,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1471",
+          "label": 2,
+          "coverage": 0.02480916030534351,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1472",
+          "label": 2,
+          "coverage": 0.7852760736196319,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1477",
+          "label": 2,
+          "coverage": 0.32064128256513025,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1481",
+          "label": 2,
+          "coverage": 0.04035874439461883,
+          "n_passages": 5
+        }
+      ]
+    },
+    "hybrid": {
+      "n": 276,
+      "mean_reference_5gram_coverage": 0.21725325777289287,
+      "coverage_ge_0_5": 0.14855072463768115,
+      "coverage_ge_0_8": 0.028985507246376812,
+      "per_class_mean": {
+        "0": 0.36886281717258257,
+        "1": 0.03774684639762483,
+        "2": 0.2667446295816206
+      },
+      "rows": [
+        {
+          "id": "ost-v1.1-0019",
+          "label": 0,
+          "coverage": 0.013888888888888888,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0022",
+          "label": 0,
+          "coverage": 0.6264236902050114,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0024",
+          "label": 0,
+          "coverage": 0.23387096774193547,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0026",
+          "label": 0,
+          "coverage": 0.6696629213483146,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0030",
+          "label": 0,
+          "coverage": 0.23387096774193547,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0032",
+          "label": 0,
+          "coverage": 0.7211009174311926,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0040",
+          "label": 0,
+          "coverage": 0.5737122557726465,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0050",
+          "label": 0,
+          "coverage": 0.5737122557726465,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0057",
+          "label": 0,
+          "coverage": 0.6696629213483146,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0064",
+          "label": 0,
+          "coverage": 0.23387096774193547,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0068",
+          "label": 0,
+          "coverage": 0.2,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0080",
+          "label": 0,
+          "coverage": 0.22325581395348837,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0081",
+          "label": 0,
+          "coverage": 0.02926829268292683,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0087",
+          "label": 0,
+          "coverage": 0.3583815028901734,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0105",
+          "label": 0,
+          "coverage": 0.15,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0114",
+          "label": 0,
+          "coverage": 0.3345070422535211,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0119",
+          "label": 0,
+          "coverage": 0.7964601769911505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0129",
+          "label": 0,
+          "coverage": 0.6696629213483146,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0136",
+          "label": 0,
+          "coverage": 0.6624472573839663,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0145",
+          "label": 0,
+          "coverage": 0.23387096774193547,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0146",
+          "label": 0,
+          "coverage": 0.7336683417085427,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0153",
+          "label": 0,
+          "coverage": 0.7211009174311926,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0158",
+          "label": 0,
+          "coverage": 0.5737122557726465,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0169",
+          "label": 0,
+          "coverage": 0.4385245901639344,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0172",
+          "label": 0,
+          "coverage": 0.11656005685856433,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0173",
+          "label": 0,
+          "coverage": 0.4154488517745303,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0174",
+          "label": 0,
+          "coverage": 0.468682505399568,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0186",
+          "label": 0,
+          "coverage": 0.0109717868338558,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0190",
+          "label": 0,
+          "coverage": 0.034013605442176874,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0199",
+          "label": 0,
+          "coverage": 0.2103148024112525,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0205",
+          "label": 0,
+          "coverage": 0.8789237668161435,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0211",
+          "label": 0,
+          "coverage": 0.034013605442176874,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0212",
+          "label": 0,
+          "coverage": 0.3294930875576037,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0213",
+          "label": 0,
+          "coverage": 0.3294930875576037,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0215",
+          "label": 0,
+          "coverage": 0.3294930875576037,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0223",
+          "label": 0,
+          "coverage": 0.04044943820224719,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0224",
+          "label": 0,
+          "coverage": 0.25757575757575757,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0227",
+          "label": 0,
+          "coverage": 0.3425549227013832,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0235",
+          "label": 0,
+          "coverage": 0.28368794326241137,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0236",
+          "label": 0,
+          "coverage": 0.14908256880733944,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0241",
+          "label": 0,
+          "coverage": 0.07373271889400922,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0243",
+          "label": 0,
+          "coverage": 0.07373271889400922,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0245",
+          "label": 0,
+          "coverage": 0.25757575757575757,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0250",
+          "label": 0,
+          "coverage": 0.04365904365904366,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0254",
+          "label": 0,
+          "coverage": 0.07373271889400922,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0256",
+          "label": 0,
+          "coverage": 0.8538732394366197,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0258",
+          "label": 0,
+          "coverage": 0.7423822714681441,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0259",
+          "label": 0,
+          "coverage": 0.3425549227013832,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0262",
+          "label": 0,
+          "coverage": 0.35600907029478457,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0269",
+          "label": 0,
+          "coverage": 0.6335877862595419,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0278",
+          "label": 0,
+          "coverage": 0.3294930875576037,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0280",
+          "label": 0,
+          "coverage": 0.4961832061068702,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0298",
+          "label": 0,
+          "coverage": 0.25757575757575757,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0299",
+          "label": 0,
+          "coverage": 0.4876325088339223,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0301",
+          "label": 0,
+          "coverage": 0.2103148024112525,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0304",
+          "label": 0,
+          "coverage": 0.024752475247524754,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0305",
+          "label": 0,
+          "coverage": 0.379746835443038,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0312",
+          "label": 0,
+          "coverage": 0.325,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0318",
+          "label": 0,
+          "coverage": 0.14908256880733944,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0320",
+          "label": 0,
+          "coverage": 0.8789237668161435,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0323",
+          "label": 0,
+          "coverage": 0.29704797047970477,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0333",
+          "label": 0,
+          "coverage": 0.6993865030674846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0338",
+          "label": 0,
+          "coverage": 0.04746835443037975,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0341",
+          "label": 0,
+          "coverage": 0.1223021582733813,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0343",
+          "label": 0,
+          "coverage": 0.1978798586572438,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0345",
+          "label": 0,
+          "coverage": 0.2727272727272727,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0355",
+          "label": 0,
+          "coverage": 0.2824427480916031,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0359",
+          "label": 0,
+          "coverage": 0.4661290322580645,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0361",
+          "label": 0,
+          "coverage": 0.2824427480916031,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0363",
+          "label": 0,
+          "coverage": 0.29389312977099236,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0391",
+          "label": 0,
+          "coverage": 0.23963133640552994,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0395",
+          "label": 0,
+          "coverage": 0.2824427480916031,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0399",
+          "label": 0,
+          "coverage": 0.5190114068441065,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0400",
+          "label": 0,
+          "coverage": 0.9069767441860465,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0410",
+          "label": 0,
+          "coverage": 0.15630550621669628,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0411",
+          "label": 0,
+          "coverage": 0.9300411522633745,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0412",
+          "label": 0,
+          "coverage": 0.3346153846153846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0422",
+          "label": 0,
+          "coverage": 0.34096692111959287,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0432",
+          "label": 0,
+          "coverage": 0.5190114068441065,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0434",
+          "label": 0,
+          "coverage": 0.5491329479768786,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0446",
+          "label": 0,
+          "coverage": 0.8053097345132744,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0449",
+          "label": 0,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0456",
+          "label": 0,
+          "coverage": 0.29389312977099236,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0460",
+          "label": 0,
+          "coverage": 0.4661290322580645,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0463",
+          "label": 0,
+          "coverage": 0.2824427480916031,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0481",
+          "label": 0,
+          "coverage": 0.23963133640552994,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0499",
+          "label": 1,
+          "coverage": 0.0036101083032490976,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0505",
+          "label": 1,
+          "coverage": 0.03049070986183897,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0506",
+          "label": 1,
+          "coverage": 0.008785529715762274,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0513",
+          "label": 1,
+          "coverage": 0.0036175710594315244,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0515",
+          "label": 1,
+          "coverage": 0.14574314574314573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0519",
+          "label": 1,
+          "coverage": 0.14574314574314573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0525",
+          "label": 1,
+          "coverage": 0.06257067470787787,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0526",
+          "label": 1,
+          "coverage": 0.0036175710594315244,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0555",
+          "label": 1,
+          "coverage": 0.0007209805335255948,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0558",
+          "label": 1,
+          "coverage": 0.14574314574314573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0563",
+          "label": 1,
+          "coverage": 0.013953488372093023,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0566",
+          "label": 1,
+          "coverage": 0.1509546539379475,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0569",
+          "label": 1,
+          "coverage": 0.008785529715762274,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0572",
+          "label": 1,
+          "coverage": 0.003218884120171674,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0573",
+          "label": 1,
+          "coverage": 0.015921931176168466,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0592",
+          "label": 1,
+          "coverage": 0.011031175059952039,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0597",
+          "label": 1,
+          "coverage": 0.0003773584905660377,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0599",
+          "label": 1,
+          "coverage": 0.00037936267071320183,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0604",
+          "label": 1,
+          "coverage": 0.14574314574314573,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0610",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0616",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0634",
+          "label": 1,
+          "coverage": 0.08744635193133048,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0638",
+          "label": 1,
+          "coverage": 0.04943357363542739,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0640",
+          "label": 1,
+          "coverage": 0.09811320754716982,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0642",
+          "label": 1,
+          "coverage": 0.030577576443941108,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0646",
+          "label": 1,
+          "coverage": 0.000547945205479452,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0660",
+          "label": 1,
+          "coverage": 0.004103165298944901,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0664",
+          "label": 1,
+          "coverage": 0.12911843276936777,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0669",
+          "label": 1,
+          "coverage": 0.0020056157240272766,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0680",
+          "label": 1,
+          "coverage": 0.0015077271013946476,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0682",
+          "label": 1,
+          "coverage": 0.0025680534155110425,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0685",
+          "label": 1,
+          "coverage": 0.005096262740656852,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0686",
+          "label": 1,
+          "coverage": 0.0025680534155110425,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0693",
+          "label": 1,
+          "coverage": 0.0015077271013946476,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0696",
+          "label": 1,
+          "coverage": 0.017553793884484713,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0700",
+          "label": 1,
+          "coverage": 0.06322350845948353,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0701",
+          "label": 1,
+          "coverage": 0.0020056157240272766,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0721",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0723",
+          "label": 1,
+          "coverage": 0.0025680534155110425,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0726",
+          "label": 1,
+          "coverage": 0.0022615906520919715,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0727",
+          "label": 1,
+          "coverage": 0.07286821705426356,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0728",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0731",
+          "label": 1,
+          "coverage": 0.07658058771148708,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0732",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0746",
+          "label": 1,
+          "coverage": 0.07735849056603773,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0748",
+          "label": 1,
+          "coverage": 0.06031866464339909,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0761",
+          "label": 1,
+          "coverage": 0.12273253570050174,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0765",
+          "label": 1,
+          "coverage": 0.0038272279934390375,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0768",
+          "label": 1,
+          "coverage": 0.05993930197268589,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0777",
+          "label": 1,
+          "coverage": 0.0011926058437686344,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0778",
+          "label": 1,
+          "coverage": 0.0037553648068669528,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0784",
+          "label": 1,
+          "coverage": 0.10940919037199125,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0786",
+          "label": 1,
+          "coverage": 0.06322350845948353,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0787",
+          "label": 1,
+          "coverage": 0.005717008099094807,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0788",
+          "label": 1,
+          "coverage": 0.031066822977725676,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0791",
+          "label": 1,
+          "coverage": 0.07658058771148708,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0795",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0798",
+          "label": 1,
+          "coverage": 0.005105762217359592,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0802",
+          "label": 1,
+          "coverage": 0.12654996353026987,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0806",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0817",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0833",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0834",
+          "label": 1,
+          "coverage": 0.10549538708383474,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0837",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0838",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0843",
+          "label": 1,
+          "coverage": 0.07836153161175423,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0847",
+          "label": 1,
+          "coverage": 0.05792245093346099,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0851",
+          "label": 1,
+          "coverage": 0.10549538708383474,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0852",
+          "label": 1,
+          "coverage": 0.0008904719501335708,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0853",
+          "label": 1,
+          "coverage": 0.08486439195100612,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0864",
+          "label": 1,
+          "coverage": 0.0018867924528301887,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0865",
+          "label": 1,
+          "coverage": 0.0018867924528301887,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0867",
+          "label": 1,
+          "coverage": 0.0018867924528301887,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0874",
+          "label": 1,
+          "coverage": 0.10549538708383474,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0875",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0878",
+          "label": 1,
+          "coverage": 0.0007830853563038371,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0882",
+          "label": 1,
+          "coverage": 0.0065632458233890216,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0884",
+          "label": 1,
+          "coverage": 0.07836153161175423,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0897",
+          "label": 1,
+          "coverage": 0.0007830853563038371,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0903",
+          "label": 1,
+          "coverage": 0.05792245093346099,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0909",
+          "label": 1,
+          "coverage": 0.061283345349675555,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0912",
+          "label": 1,
+          "coverage": 0.1136173767752715,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0915",
+          "label": 1,
+          "coverage": 0.022085259373394967,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0919",
+          "label": 1,
+          "coverage": 0.0065632458233890216,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0937",
+          "label": 1,
+          "coverage": 0.0035952747817154596,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0943",
+          "label": 1,
+          "coverage": 0.034944949736716135,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0944",
+          "label": 1,
+          "coverage": 0.0048134777376654635,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0946",
+          "label": 1,
+          "coverage": 0.000835421888053467,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0952",
+          "label": 1,
+          "coverage": 0.08486439195100612,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0959",
+          "label": 1,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0963",
+          "label": 1,
+          "coverage": 0.0950661853188929,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0964",
+          "label": 1,
+          "coverage": 0.0007830853563038371,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0969",
+          "label": 1,
+          "coverage": 0.07836153161175423,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0976",
+          "label": 1,
+          "coverage": 0.0035169988276670576,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0980",
+          "label": 1,
+          "coverage": 0.003218884120171674,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0982",
+          "label": 1,
+          "coverage": 0.10549538708383474,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0983",
+          "label": 1,
+          "coverage": 0.0700218818380744,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0991",
+          "label": 1,
+          "coverage": 0.022085259373394967,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0995",
+          "label": 2,
+          "coverage": 0.012371134020618556,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-0996",
+          "label": 2,
+          "coverage": 0.07661290322580645,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1001",
+          "label": 2,
+          "coverage": 0.008016032064128256,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1004",
+          "label": 2,
+          "coverage": 0.3632887189292543,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1013",
+          "label": 2,
+          "coverage": 0.05305466237942122,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1019",
+          "label": 2,
+          "coverage": 0.004098360655737705,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1029",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1036",
+          "label": 2,
+          "coverage": 0.3148148148148148,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1037",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1052",
+          "label": 2,
+          "coverage": 0.12239347234814144,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1056",
+          "label": 2,
+          "coverage": 0.40468227424749165,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1057",
+          "label": 2,
+          "coverage": 0.4090909090909091,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1063",
+          "label": 2,
+          "coverage": 0.7435897435897436,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1064",
+          "label": 2,
+          "coverage": 0.31877729257641924,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1065",
+          "label": 2,
+          "coverage": 0.23387096774193547,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1066",
+          "label": 2,
+          "coverage": 0.45510204081632655,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1072",
+          "label": 2,
+          "coverage": 0.004098360655737705,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1076",
+          "label": 2,
+          "coverage": 0.7211009174311926,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1078",
+          "label": 2,
+          "coverage": 0.44598337950138506,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1080",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1084",
+          "label": 2,
+          "coverage": 0.3148148148148148,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1096",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1100",
+          "label": 2,
+          "coverage": 0.0670391061452514,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1109",
+          "label": 2,
+          "coverage": 0.007462686567164179,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1110",
+          "label": 2,
+          "coverage": 0.05343511450381679,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1116",
+          "label": 2,
+          "coverage": 0.12239347234814144,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1118",
+          "label": 2,
+          "coverage": 0.04452690166975881,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1130",
+          "label": 2,
+          "coverage": 0.5050505050505051,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1138",
+          "label": 2,
+          "coverage": 0.024752475247524754,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1144",
+          "label": 2,
+          "coverage": 0.3274336283185841,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1146",
+          "label": 2,
+          "coverage": 0.022727272727272728,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1151",
+          "label": 2,
+          "coverage": 0.547486033519553,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1159",
+          "label": 2,
+          "coverage": 0.3879781420765027,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1161",
+          "label": 2,
+          "coverage": 0.6568265682656826,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1162",
+          "label": 2,
+          "coverage": 0.10403120936280884,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1167",
+          "label": 2,
+          "coverage": 0.07674144037780402,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1168",
+          "label": 2,
+          "coverage": 0.4876325088339223,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1170",
+          "label": 2,
+          "coverage": 0.042105263157894736,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1172",
+          "label": 2,
+          "coverage": 0.3246492985971944,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1174",
+          "label": 2,
+          "coverage": 0.0030211480362537764,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1192",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1194",
+          "label": 2,
+          "coverage": 0.09187279151943463,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1196",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1200",
+          "label": 2,
+          "coverage": 0.41485714285714287,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1201",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1204",
+          "label": 2,
+          "coverage": 0.41485714285714287,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1211",
+          "label": 2,
+          "coverage": 0.14694656488549618,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1221",
+          "label": 2,
+          "coverage": 0.005037783375314861,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1223",
+          "label": 2,
+          "coverage": 0.6616161616161617,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1234",
+          "label": 2,
+          "coverage": 0.2011173184357542,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1237",
+          "label": 2,
+          "coverage": 0.01466275659824047,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1238",
+          "label": 2,
+          "coverage": 0.23484848484848486,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1251",
+          "label": 2,
+          "coverage": 0.2968127490039841,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1256",
+          "label": 2,
+          "coverage": 0.03626943005181347,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1258",
+          "label": 2,
+          "coverage": 0.8636363636363636,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1268",
+          "label": 2,
+          "coverage": 0.09187279151943463,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1269",
+          "label": 2,
+          "coverage": 0.3755274261603376,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1286",
+          "label": 2,
+          "coverage": 0.01048951048951049,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1309",
+          "label": 2,
+          "coverage": 0.027932960893854747,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1318",
+          "label": 2,
+          "coverage": 0.028901734104046242,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1335",
+          "label": 2,
+          "coverage": 0.0025575447570332483,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1340",
+          "label": 2,
+          "coverage": 0.3467202141900937,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1349",
+          "label": 2,
+          "coverage": 0.28884462151394424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1350",
+          "label": 2,
+          "coverage": 0.6164948453608248,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1351",
+          "label": 2,
+          "coverage": 0.392,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1352",
+          "label": 2,
+          "coverage": 0.07278481012658228,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1353",
+          "label": 2,
+          "coverage": 0.07278481012658228,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1362",
+          "label": 2,
+          "coverage": 0.28884462151394424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1373",
+          "label": 2,
+          "coverage": 0.28884462151394424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1381",
+          "label": 2,
+          "coverage": 0.4433249370277078,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1383",
+          "label": 2,
+          "coverage": 0.0,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1384",
+          "label": 2,
+          "coverage": 0.20234604105571846,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1389",
+          "label": 2,
+          "coverage": 0.4713656387665198,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1400",
+          "label": 2,
+          "coverage": 0.392,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1404",
+          "label": 2,
+          "coverage": 0.10897435897435898,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1409",
+          "label": 2,
+          "coverage": 0.009174311926605505,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1418",
+          "label": 2,
+          "coverage": 0.44403669724770645,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1421",
+          "label": 2,
+          "coverage": 0.015544041450777202,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1430",
+          "label": 2,
+          "coverage": 0.26422018348623855,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1432",
+          "label": 2,
+          "coverage": 0.3414179104477612,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1446",
+          "label": 2,
+          "coverage": 0.28884462151394424,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1450",
+          "label": 2,
+          "coverage": 0.6164948453608248,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1454",
+          "label": 2,
+          "coverage": 0.5845511482254697,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1455",
+          "label": 2,
+          "coverage": 0.015544041450777202,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1458",
+          "label": 2,
+          "coverage": 0.5722543352601156,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1459",
+          "label": 2,
+          "coverage": 0.07575757575757576,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1464",
+          "label": 2,
+          "coverage": 0.027777777777777776,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1469",
+          "label": 2,
+          "coverage": 0.008438818565400843,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1471",
+          "label": 2,
+          "coverage": 0.02480916030534351,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1472",
+          "label": 2,
+          "coverage": 0.7852760736196319,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1477",
+          "label": 2,
+          "coverage": 0.5511022044088176,
+          "n_passages": 5
+        },
+        {
+          "id": "ost-v1.1-1481",
+          "label": 2,
+          "coverage": 0.7219730941704036,
+          "n_passages": 5
+        }
+      ]
+    }
+  }
+}

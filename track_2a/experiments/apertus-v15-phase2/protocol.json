@@ -1,0 +1,32 @@
+{
+  "phase": 2,
+  "registered_at": "2026-10-07T21:33:14.934855+00:00",
+  "status": "registered_before_new_results",
+  "hypothesis": "Frozen Apertus hidden head depends materially on booklet-claim interaction",
+  "splits": {
+    "train_n": 902,
+    "validation_n": 276,
+    "holdout_policy": "Consumed historical310; no reading, inference, inspection, calibration or architecture selection in phase2"
+  },
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "additional_discretionary_budget_usd": 4.5,
+  "minimum_credit_reserve_usd": 2,
+  "fine_tuning": "Forbidden before controls and context/evidence diagnostics",
+  "priority": [
+    "CPU claim lexical/metadata controls",
+    "Apertus empty-context train-only head and frozen-head empty control",
+    "Frozen correct head on same-language different-event booklets seeds42,1337",
+    "Grounding gate",
+    "Context/retrieval hidden-head sweep if gate passes",
+    "Evidence/calibration/errors/Pareto/freeze"
+  ],
+  "interpretation": {
+    "warning": "Claim-only or wrong-document F1 within0.05 of correct validation, or retention>=0.90 triggers artifact investigation rather than architecture optimization",
+    "grounding_support": "Strong degradation under both document interventions; no causal NLI claim from original-label scoring on mismatched inputs alone"
+  },
+  "wrong_document_labels": "Original labels retained ONLY for artifact/sensitivity diagnostic; are not ground truth NLI for swapped booklets. Report prediction changes and neutral/confidence separately.",
+  "head_comparisons": "Claim-only condition-specific train-only fit plus original frozen head under interventions; distinguish distribution shift from refitted capability",
+  "selection": "C/temperature train connected-group OOF; architecture validation only; never310",
+  "context_sweep": "Adaptive bounded subset of1k/2k/4k/8k/full tokens; measured tokenizer budgets, no byte-to-token equivalence claim",
+  "data_audit": "Booklet-event and duplicate-claim component aggregation; few independent groups limit generalization"
+}

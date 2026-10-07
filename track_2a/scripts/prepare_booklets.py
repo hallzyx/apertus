@@ -17,6 +17,8 @@ def main():
     p.add_argument('--splits', required=True)
     p.add_argument('--output', required=True)
     p.add_argument('--pdf-dir', help='Reuse only original PDF downloads, regenerate processed documents')
+    p.add_argument('--partitions', nargs='+', choices=['train','validation','test'],
+                   default=['train','validation','test'], help='Phase2 must explicitly select train validation')
     args = p.parse_args()
     root = Path(args.output); root.mkdir(parents=True, exist_ok=True)
     raw = [json.loads(s) for s in Path(args.source).read_text().splitlines() if s.strip()]
@@ -104,7 +106,7 @@ def main():
     by_url = {r['url']: r for r in records if r['status'] == 'completed'}
     documents = {u: json.loads((root / r['document']).read_text()) for u, r in by_url.items()}
     audit = {'booklets_total': len(urls), 'booklets_downloaded': len(by_url), 'partitions': {}}
-    for name in ['train', 'validation', 'test']:
+    for name in args.partitions:
         rows = load_dataset(Path(args.splits) / (name + '.jsonl'))
         full, diagnostics, missing = [], [], []
         for row in rows:

@@ -208,3 +208,16 @@ pypdf BSD-3-Clause. Original booklet content remains attributed to the Federal C
 - https://huggingface.co/swiss-ai/Apertus-v1.5-8B
 - https://huggingface.co/intfloat/multilingual-e5-small
 - Submission: http://hackapertus.ch/online-hack/submissions
+
+
+## Phase 2: falsification audit in progress
+
+The historical310 score is consumed and frozen; it is not an architecture-development set. Phase2 registered grounding controls before new GPU results, with a USD4.50 discretionary ceiling and USD2 reserve. LoRA/QLoRA and70B are prohibited in this stage. Current production selection remains unchanged pending grounding controls.
+
+Local train-only CPU probes achieve validation Macro-F1 .620765 (wordTFIDF), .626285 (characterTFIDF), and .507226 (language/length metadata). These are supplementary artifact controls, not an Apertus claim-only experiment.
+
+The original full-trained hidden head on original cached validation encodings yields .861704 with hybridk5 (~1657 prompt tokens), .848070 with densek5 (~1396), .661108 with BM25k5 (~1655), and .940951 with oracle reference (~2270). Same full head/weights, no refitting or new GPU calls: these context interventions diagnose sensitivity, not a context-matched head sweep or a final Pareto-selected architecture. Hybrid is a promising efficiency candidate; optimization waits for source-dependence controls.
+
+Validation contains276 rows but207 unique normalized claim/document pairs, three voting events and two duplicate-connected components. Deduplicated Macro-F1 is .883035. An inspected Neutral example, ost-v1.1-0732, has a COVID reference while full booklet pages6/32 discuss the claim’s climate transition/2050 target. This exposes a possible reference-relative label versus full-booklet premise-scope mismatch; labels are unchanged and the counterexample is preserved with exact page text and PDF SHA. It prevents treating every scored error as a reasoning failure.
+
+See [phase2 audit](experiments/apertus-v15-phase2/README.md), [registered protocol](experiments/apertus-v15-phase2/protocol.json), [scope counterexample](experiments/apertus-v15-phase2/premise-scope-risk.json), and [validation error inventory](experiments/apertus-v15-phase2/final-error-analysis.jsonl). GPU controls and the final grounding conclusion remain pending; no scientific claim that the historical~.90 score survives them is made.

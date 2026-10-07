@@ -20,12 +20,16 @@ def main():
     from ost_nli.metrics import classification, evaluate
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--cache', required=True)
-    p.add_argument('--context', choices=['full','bm25','dense','hybrid'], required=True)
+    p.add_argument('--context', required=True,
+                   help='Exact cache condition; full/bm25/dense/hybrid or a registered phase-2 condition')
     p.add_argument('--features', choices=['option_logits', 'hidden'], required=True)
     p.add_argument('--train', required=True)
     p.add_argument('--validation', required=True)
     p.add_argument('--output-dir', required=True)
     args = p.parse_args()
+    import re
+    if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,63}', args.context):
+        raise ValueError('Invalid context condition identifier')
     cache, out = Path(args.cache), Path(args.output_dir)
     source = json.loads((cache / 'experiment.json').read_text())
     train, val = load_dataset(args.train), load_dataset(args.validation)

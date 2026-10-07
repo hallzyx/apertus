@@ -1,11 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 3.4655744308700047,
-  "actual_spend": 3.4655744308700047,
+  "estimated_spend": 3.465868808670005,
+  "actual_spend": 3.465868808670005,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [],
-  "remaining_estimated_budget": 6.534425569129995,
+  "remaining_estimated_budget": 6.534131191329995,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -424,9 +424,18 @@
       "destroyed_verified_at": "2026-10-07T20:20:49.164212+00:00"
     }
   ],
-  "account_credit_observed": 6.534425569129995,
+  "account_credit_observed": 6.534131191329995,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T20:45:40.024679+00:00",
+  "account_checked_at": "2026-10-07T21:39:52.332096+00:00",
   "outstanding_task_lease_reservations_usd": 0,
-  "all_task_instances_destroyed_verified": true
+  "all_task_instances_destroyed_verified": true,
+  "phase2": {
+    "authorized_additional_discretionary_cap_usd": 4.5,
+    "credit_at_start": 6.534131191329995,
+    "started_at": "2026-10-07T21:39:52.332096+00:00",
+    "gpu_leases_created": 0,
+    "additional_observed_spend_usd": 0,
+    "status": "local_diagnostics_complete_remote_download_credential_pending",
+    "reserve_usd": 2
+  }
 }
