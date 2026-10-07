@@ -1,0 +1,35 @@
+total 1237568
+-rw-r--r-- 1 root root      14601 Oct  7 03:46 chat_template.jinja
+-rw-r--r-- 1 root root        901 Oct  7 03:46 config.json
+-rw-r--r-- 1 root root        126 Oct  7 03:46 generation_config.json
+-rw-r--r-- 1 root root      11394 Oct  7 03:46 LICENSE.txt
+-rw-r--r-- 1 root root 1249928160 Oct  7 03:57 model-00004-of-00004.safetensors
+-rw-r--r-- 1 root root      36480 Oct  7 03:46 model.safetensors.index.json
+-rw-r--r-- 1 root root        337 Oct  7 03:46 special_tokens_map.json
+-rw-r--r-- 1 root root     177337 Oct  7 03:46 tokenizer_config.json
+-rw-r--r-- 1 root root   17078480 Oct  7 03:46 tokenizer.json
+total 12130276
+-rw-r--r-- 1 root root          0 Oct  7 04:04 chat_template.jinja.lock
+-rw-r--r-- 1 root root        100 Oct  7 03:46 chat_template.jinja.metadata
+-rw-r--r-- 1 root root          0 Oct  7 04:04 config.json.lock
+-rw-r--r-- 1 root root         98 Oct  7 03:46 config.json.metadata
+-rw-r--r-- 1 root root 3617587200 Oct  7 04:14 DaGOU-KRMVrY0aYktrsE34tL0Bs=.8c2a98c71209664b1e7c8a2df80782cac1a90cc11feda5cd5c5495c5dd9b584e.incomplete
+-rw-r--r-- 1 root root          0 Oct  7 04:04 generation_config.json.lock
+-rw-r--r-- 1 root root        101 Oct  7 03:46 generation_config.json.metadata
+-rw-r--r-- 1 root root 4257218560 Oct  7 04:23 IO4xwqmZYzFmxznkwkiNSBwO1H0=.3c0d9506c084975849cefc1410dbb0300eafc0f480a5fcbc3db8f54c10500912.incomplete
+-rw-r--r-- 1 root root          0 Oct  7 04:04 LICENSE.txt.lock
+-rw-r--r-- 1 root root        100 Oct  7 03:46 LICENSE.txt.metadata
+-rw-r--r-- 1 root root          0 Oct  7 04:04 model-00001-of-00004.safetensors.lock
+-rw-r--r-- 1 root root          0 Oct  7 04:04 model-00002-of-00004.safetensors.lock
+-rw-r--r-- 1 root root          0 Oct  7 04:04 model-00003-of-00004.safetensors.lock
+-rw-r--r-- 1 root root          0 Oct  7 04:04 model-00004-of-00004.safetensors.lock
+-rw-r--r-- 1 root root        125 Oct  7 03:57 model-00004-of-00004.safetensors.metadata
+-rw-r--r-- 1 root root          0 Oct  7 04:04 model.safetensors.index.json.lock
+-rw-r--r-- 1 root root        100 Oct  7 03:46 model.safetensors.index.json.metadata
+-rw-r--r-- 1 root root          0 Oct  7 04:04 special_tokens_map.json.lock
+-rw-r--r-- 1 root root        101 Oct  7 03:46 special_tokens_map.json.metadata
+-rw-r--r-- 1 root root 4236247040 Oct  7 04:23 t9msAuTjAZjuQnmzGOwTjiptvIU=.a934231fe465a8f4b0028454218d787f02b7cae3f91d886ca73b85ca368f2b21.incomplete
+-rw-r--r-- 1 root root          0 Oct  7 04:04 tokenizer_config.json.lock
+-rw-r--r-- 1 root root        100 Oct  7 03:46 tokenizer_config.json.metadata
+-rw-r--r-- 1 root root          0 Oct  7 04:04 tokenizer.json.lock
+-rw-r--r-- 1 root root        125 Oct  7 03:46 tokenizer.json.metadata
