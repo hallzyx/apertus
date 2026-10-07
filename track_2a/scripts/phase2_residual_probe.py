@@ -83,6 +83,10 @@ def main():
         conditions = {}
         for condition in ('claim-only','wrong-42','wrong-1337','generic'):
             folder = controls/condition
+            original_manifest = json.loads((folder/'experiment.json').read_text())
+            for entry in original_manifest['files']:
+                if checksum(folder/entry['path']) != entry['sha256']:
+                    raise ValueError('Intervention feature checksum mismatch')
             with np.load(folder/'validation.npz',allow_pickle=False) as values:
                 assert values['ids'].tolist() == [r['id'] for r in datasets['validation']]
                 x = values[feature].astype(np.float64)-blank_features['validation'][feature]
