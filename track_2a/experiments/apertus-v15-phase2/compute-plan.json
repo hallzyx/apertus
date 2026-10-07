@@ -1,0 +1,12 @@
+{
+  "gpu": "RTX A6000",
+  "vram_mb": 49140,
+  "disk_gb": 60,
+  "hourly_total_usd": 0.41666666666666663,
+  "expected_runtime_hours": 1.5,
+  "conservative_runtime_hours": 3,
+  "estimated_total_usd_bound": 1.3501171875,
+  "new_forward_passes_bound": 2006,
+  "model_weights_frozen": true,
+  "source_download": "Provider-managed HF_TOKEN; never copied from cloud proxy or logged"
+}

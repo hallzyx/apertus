@@ -1,0 +1,355 @@
+{
+  "scope": "train-only lexical model coefficients and train/validation structure; no causal explanation asserted",
+  "selected_C_from_train_OOF": 1.0,
+  "top_positive_word_features": {
+    "0": [
+      {
+        "term": "initiative abzulehnen",
+        "coefficient": 1.1131323308537242
+      },
+      {
+        "term": "an",
+        "coefficient": 0.867035809731828
+      },
+      {
+        "term": "respingere iniziativa",
+        "coefficient": 0.8467536690694658
+      },
+      {
+        "term": "rejeter initiative",
+        "coefficient": 0.8336977990979384
+      },
+      {
+        "term": "abzulehnen",
+        "coefficient": 0.7281016532446154
+      },
+      {
+        "term": "weil",
+        "coefficient": 0.7240418630564757
+      },
+      {
+        "term": "rejeter",
+        "coefficient": 0.6460546629373201
+      },
+      {
+        "term": "de rejeter",
+        "coefficient": 0.6460546629373201
+      },
+      {
+        "term": "von",
+        "coefficient": 0.6289693318897526
+      },
+      {
+        "term": "milioni",
+        "coefficient": 0.6070639427616595
+      },
+      {
+        "term": "oder",
+        "coefficient": 0.5593431808232638
+      },
+      {
+        "term": "milliarden franken",
+        "coefficient": 0.5370981633594402
+      },
+      {
+        "term": "milliarden",
+        "coefficient": 0.5370981633594402
+      },
+      {
+        "term": "di franchi",
+        "coefficient": 0.531037525355024
+      },
+      {
+        "term": "cantons de",
+        "coefficient": 0.5150597731743859
+      }
+    ],
+    "1": [
+      {
+        "term": "la suisse",
+        "coefficient": 1.3149856986177098
+      },
+      {
+        "term": "suisse",
+        "coefficient": 1.2242522442716004
+      },
+      {
+        "term": "co₂",
+        "coefficient": 0.9059691495203798
+      },
+      {
+        "term": "schweiz",
+        "coefficient": 0.8314918883377982
+      },
+      {
+        "term": "in der",
+        "coefficient": 0.8294766910957789
+      },
+      {
+        "term": "auf",
+        "coefficient": 0.8225897503218025
+      },
+      {
+        "term": "2030",
+        "coefficient": 0.8211240313421241
+      },
+      {
+        "term": "2025",
+        "coefficient": 0.794281320811903
+      },
+      {
+        "term": "la svizzera",
+        "coefficient": 0.7916939605860843
+      },
+      {
+        "term": "entro il",
+        "coefficient": 0.7731612599042816
+      },
+      {
+        "term": "approuvé",
+        "coefficient": 0.7331857275863863
+      },
+      {
+        "term": "ici",
+        "coefficient": 0.69200539097974
+      },
+      {
+        "term": "réforme",
+        "coefficient": 0.6814388442281812
+      },
+      {
+        "term": "20",
+        "coefficient": 0.6655477186752355
+      },
+      {
+        "term": "würde",
+        "coefficient": 0.6642673220094156
+      }
+    ],
+    "2": [
+      {
+        "term": "et",
+        "coefficient": 1.2513553725044864
+      },
+      {
+        "term": "non",
+        "coefficient": 1.1284028272324202
+      },
+      {
+        "term": "approvare iniziativa",
+        "coefficient": 0.9499736389158532
+      },
+      {
+        "term": "und",
+        "coefficient": 0.9098241257941132
+      },
+      {
+        "term": "initiative anzunehmen",
+        "coefficient": 0.8745968547221448
+      },
+      {
+        "term": "iniziativa",
+        "coefficient": 0.856567727517851
+      },
+      {
+        "term": "initiative",
+        "coefficient": 0.8003099794208944
+      },
+      {
+        "term": "anzunehmen",
+        "coefficient": 0.7731720406247461
+      },
+      {
+        "term": "accepter initiative",
+        "coefficient": 0.7711642520738987
+      },
+      {
+        "term": "accepter",
+        "coefficient": 0.7525084602005815
+      },
+      {
+        "term": "peuple",
+        "coefficient": 0.6355422389725159
+      },
+      {
+        "term": "que",
+        "coefficient": 0.6241152387588299
+      },
+      {
+        "term": "vollständig",
+        "coefficient": 0.6219818742010799
+      },
+      {
+        "term": "al",
+        "coefficient": 0.6199347735674136
+      },
+      {
+        "term": "che non",
+        "coefficient": 0.6091587108827575
+      }
+    ]
+  },
+  "repeated_normalized_claims": 193,
+  "mixed_label_repeat_groups": 0,
+  "largest_repeats": [
+    {
+      "claim": "D’après le texte soumis au vote, l’Assemblée fédérale recommande au peuple et aux cantons d’accepter l’initiative.",
+      "n": 7,
+      "labels": {
+        "2": 7
+      },
+      "events": [
+        "2020-02-09",
+        "2021-11-28",
+        "2026-06-14"
+      ]
+    },
+    {
+      "claim": "Laut dem Abstimmungstext empfiehlt die Bundesversammlung Volk und Kantonen, die Initiative anzunehmen.",
+      "n": 6,
+      "labels": {
+        "2": 6
+      },
+      "events": [
+        "2020-02-09",
+        "2021-06-13",
+        "2021-11-28",
+        "2024-09-22"
+      ]
+    },
+    {
+      "claim": "Selon le texte soumis au vote, l’Assemblée fédérale recommande aux citoyens et aux cantons de rejeter l’initiative.",
+      "n": 5,
+      "labels": {
+        "0": 5
+      },
+      "events": [
+        "2022-02-13"
+      ]
+    },
+    {
+      "claim": "Le comité estime que la politique, l’industrie pharmaceutique et les organisations internationales ne devraient pas avoir le pouvoir de décider si un microchip implantable, des nanoparticules, une manipulation génétique ou un vaccin pénètre dans notre corps.",
+      "n": 5,
+      "labels": {
+        "0": 5
+      },
+      "events": [
+        "2024-06-09"
+      ]
+    },
+    {
+      "claim": "Der Bundesrat spricht sich dafür aus, die Reform der beruflichen Vorsorge anzunehmen.",
+      "n": 4,
+      "labels": {
+        "0": 4
+      },
+      "events": [
+        "2024-09-22"
+      ]
+    },
+    {
+      "claim": "Der Bundesrat rät dazu, die Initiative für eine 13. AHV-Rente abzulehnen, weil zunächst die Finanzierung der AHV stabilisiert und die Renten gesichert werden müssen.",
+      "n": 4,
+      "labels": {
+        "0": 4
+      },
+      "events": [
+        "2024-03-03"
+      ]
+    },
+    {
+      "claim": "Si le vote est approuvé, les droits de douane sur tous les principaux produits suisses exportés vers l’Indonésie seront éliminés.",
+      "n": 4,
+      "labels": {
+        "0": 4
+      },
+      "events": [
+        "2021-03-07"
+      ]
+    },
+    {
+      "claim": "Se la votazione venisse approvata, le opportunità di promuovere i prodotti del tabacco si ridurrebbero notevolmente.",
+      "n": 4,
+      "labels": {
+        "0": 4
+      },
+      "events": [
+        "2022-02-13"
+      ]
+    },
+    {
+      "claim": "Stando al testo di voto, qualsiasi intervento sull’integrità fisica o mentale di una persona necessita del suo consenso, e il suo rifiuto non può comportare punizioni né svantaggi sociali o professionali.",
+      "n": 4,
+      "labels": {
+        "0": 4
+      },
+      "events": [
+        "2024-06-09"
+      ]
+    },
+    {
+      "claim": "Il riassunto dichiara che l’iniziativa è stata respinta dal Consiglio federale e dal Parlamento.",
+      "n": 4,
+      "labels": {
+        "0": 4
+      },
+      "events": [
+        "2020-02-09"
+      ]
+    },
+    {
+      "claim": "Laut der Zusammenfassung sieht die Initiative «Für ein Verbot von Glyphosat» eine fünfjährige Übergangsfrist vor, in der der Bund die entsprechenden Verordnungen erlassen muss.",
+      "n": 4,
+      "labels": {
+        "1": 4
+      },
+      "events": [
+        "2025-02-09"
+      ]
+    },
+    {
+      "claim": "Laut der Zusammenfassung wurde die Mindestlohn-Initiative von der Bevölkerung abgelehnt.",
+      "n": 4,
+      "labels": {
+        "1": 4
+      },
+      "events": [
+        "2021-03-07"
+      ]
+    },
+    {
+      "claim": "Si le vote est approuvé, les entreprises suisses profiteront d’une baisse de l’impôt sur les bénéfices dès 2025.",
+      "n": 4,
+      "labels": {
+        "1": 4
+      },
+      "events": [
+        "2021-06-13"
+      ]
+    },
+    {
+      "claim": "Dem Abstimmungstext zufolge beträgt der Steuersatz auf Erbschaften und Schenkungen 20 %.",
+      "n": 4,
+      "labels": {
+        "2": 4
+      },
+      "events": [
+        "2025-11-30"
+      ]
+    },
+    {
+      "claim": "Laut dem Abstimmungstext empfiehlt die Bundesversammlung Volk und Ständen, die Initiative anzunehmen.",
+      "n": 4,
+      "labels": {
+        "2": 4
+      },
+      "events": [
+        "2020-11-29",
+        "2022-02-13"
+      ]
+    }
+  ],
+  "train_unique_claim_document_pairs": 697,
+  "exact_normalized_claim_overlap_train_validation": 0,
+  "interpretation": "Same-label repeated propositions and discriminative wording are artifact risks. Grouped split eliminates exact normalized claim overlap, but not semantic/template similarity or real-world plausibility cues."
+}

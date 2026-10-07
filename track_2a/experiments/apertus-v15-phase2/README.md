@@ -30,7 +30,7 @@ Oracle/reference context is diagnostic only and cannot be required in production
 
 Validation: 276 rows, 207 unique normalized claim/document pairs, three voting events, two duplicate-connected components. Deterministic deduplicated Macro-F1: 0.883035, versus row-level 0.894461. Exploratory event-resampling 95% percentiles: [0.863617, 0.944241]; three events do not support a reliable population interval and two are duplicate-connected.
 
-`premise-scope-risk.json` records manually inspected example ost-v1.1-0732: stored Neutral label and COVID reference, while full booklet pages 6/32 discuss climate neutrality2050 and Federal Council arguments for accelerating fossil-fuel transition. This is a possible reference-vs-booklet scope mismatch, not proof that every neutral label is wrong. Original labels remain unchanged. `final-error-analysis.jsonl` inventories all29 validation errors; one has source-based scope diagnosis, others remain undetermined rather than receiving invented causal explanations.
+`premise-scope-risk.json` records manually inspected example ost-v1.1-0732: stored Neutral label and COVID reference, while full booklet pages 6/32 discuss climate neutrality2050 and Federal Council arguments for accelerating fossil-fuel transition. This is a possible reference-vs-booklet scope mismatch, not proof that every neutral label is wrong. Original labels remain unchanged. `final-error-analysis.jsonl` inventories all29 validation errors; five have source-inspected qualified hypotheses (scope, numeric equivalence, truncation/current-vs-proposed rules); others remain undetermined rather than receiving invented causal explanations.
 
 ## Evidence and confidence
 
@@ -45,4 +45,4 @@ Original full head validation: ECE .082754 (10 bins), Brier .173079, NLL .321408
 3. If scores retain>=90% of correct-context F1 or lie within .05, investigate artifacts and stop architecture optimization. Wrong-document original-label scoring measures artifact retention, not actual NLI correctness for swapped booklets.
 4. Only then context/retrieval matched-head efficiency experiments, evidence, final architecture.
 
-Vast observed balance at phase2 start: USD6.534131. New discretionary cap USD4.50; preserve USD2.00. No new GPU lease at this preliminary snapshot. Quoted known RTX A6000 48GB /60GB disk: USD0.416667/h, expected1.5h (~USD0.63), conservative3h plus30GB download/recovery margin <=USD1.351. Recheck offer and account credit immediately before leasing; host quotes are not reservations.
+Vast observed balance at phase2 start: USD6.534131. New discretionary cap USD4.50; preserve USD2.00. Local audit snapshot predates GPU launch; current lease/cost status is authoritative in `../budget.json`. Quoted known RTX A6000 48GB /60GB disk: USD0.416667/h, expected1.5h (~USD0.63), conservative3h plus30GB download/recovery margin <=USD1.351. Recheck offer and account credit immediately before leasing; host quotes are not reservations.

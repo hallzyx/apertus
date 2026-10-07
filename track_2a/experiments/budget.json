@@ -1,11 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 3.465868808670005,
-  "actual_spend": 3.465868808670005,
+  "estimated_spend": 4.815985996170005,
+  "actual_spend": 3.4890780497700042,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 6.534131191329995,
+  "active_instance_ids": [
+    54722568
+  ],
+  "remaining_estimated_budget": 5.184014003829995,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -422,20 +424,46 @@
       "git_commit": "9910fe36ad1a90bbd182737a2a4ff8579aaf42c6",
       "purpose": "Reviewed frozen holdout resume scripts private transfer; no model, data, inference or fitting",
       "destroyed_verified_at": "2026-10-07T20:20:49.164212+00:00"
+    },
+    {
+      "instance_id": 54722568,
+      "offer_id": 21004756,
+      "gpu": "RTX A6000",
+      "gpu_ram_mb": 49140,
+      "disk_gb": 60,
+      "hourly_gpu_usd": 0.39999999999999997,
+      "hourly_storage_usd": 0.016666666666666663,
+      "hourly_total_usd": 0.41666666666666663,
+      "expected_runtime_hours": 1.5,
+      "conservative_runtime_hours": 3,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 3.90625e-06,
+      "estimated_total_usd_bound": 1.3501171875,
+      "purpose": "Phase2 claim-only902train/276val, frozen full-head wrong-event same-language seeds42/1337 and generic276; no consumed310/no LoRA",
+      "new_gpu_forward_passes_bound": 2006,
+      "cached_features_cannot_substitute": "Changed input requires fresh forward; old full/retrieval cache reused for CPU sensitivity diagnostics",
+      "git_commit": "895baf470456c841d26432ef1890b190f16fc83b",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T21:43:20.833277+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "status": "running",
+      "phase": 2,
+      "last_provider_status_verified_at": "2026-10-07T21:47:50.877999+00:00"
     }
   ],
-  "account_credit_observed": 6.534131191329995,
+  "account_credit_observed": 6.510921950229996,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T21:39:52.332096+00:00",
-  "outstanding_task_lease_reservations_usd": 0,
-  "all_task_instances_destroyed_verified": true,
+  "account_checked_at": "2026-10-07T21:47:50.877999+00:00",
+  "outstanding_task_lease_reservations_usd": 1.3501171875,
+  "all_task_instances_destroyed_verified": false,
   "phase2": {
     "authorized_additional_discretionary_cap_usd": 4.5,
     "credit_at_start": 6.534131191329995,
     "started_at": "2026-10-07T21:39:52.332096+00:00",
-    "gpu_leases_created": 0,
-    "additional_observed_spend_usd": 0,
-    "status": "local_diagnostics_complete_remote_download_credential_pending",
-    "reserve_usd": 2
+    "gpu_leases_created": 1,
+    "additional_observed_spend_usd": 0.02320924109999911,
+    "status": "grounding_controls_running",
+    "reserve_usd": 2,
+    "estimated_reserved_spend_usd": 1.3501171875
   }
 }
