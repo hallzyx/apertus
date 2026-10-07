@@ -129,6 +129,8 @@ The new feature transport successfully recovered the 17,939,726-byte original ar
 
 The live frozen classifier has also executed through the Docker HTTP workbench in DE/FR/IT. It got 2/3 synthetic cases correct and failed the French numerical contradiction; these results are retained at `experiments/frozen-live-software-v1/`, not presented as an OST score.
 
+The selected hidden4096 Docker was subsequently built and exercised through `/health`, `/benchmarks` and actual `/api/predict` in DE/FR/IT. All 36 Docker tests passed without skips. It matched 2/3 synthetic fixtures: the Italian neutral claim was predicted as training-inferred contradiction. This diagnostic is retained without refitting at `experiments/selected-docker-validation-v1/validation.json`; it is not an OST score. Initial Docker startup failed after accumulated task build cache filled the 32 GB root disk; old task images/build cache were removed, weights/results preserved, and startup/inference then passed. Validation containers were stopped and removed.
+
 Optional real CPU inference uses hash-locked `requirements-cpu.lock` and the pinned original model downloader. Optional lightweight head training uses `requirements-head.lock`. Existing nonempty experiment directories are rejected. Dataset/model hashes and source revision are retained. Large raw data and weights are downloaded and verified separately rather than assumed to be present in a clean checkout.
 
 ## 8. Negative results and limitations

@@ -1,0 +1,220 @@
+{
+  "timestamp": "2026-10-07T05:16:48.117020+00:00",
+  "status": "completed",
+  "command": "make -C track_2a start MODEL_CACHE=/workspace/.cache/apertus-8b FROZEN_ARGS='--model-dir /models' DOCKER_RUN_ARGS='--user 1000:1000 --name apertus-selected-validation'",
+  "health": {
+    "status": "ok",
+    "retrieval_available": true,
+    "model_configured": true,
+    "model_connectivity_verified": false,
+    "benchmark_verified": false
+  },
+  "benchmarks": {
+    "scope": "Internal strict validation on 276 supplied-reference examples; 2 independent connected components; no final test or official score",
+    "official": false,
+    "selected_experiment_id": "apertus-frozen-hidden-4096-v1",
+    "results": [
+      {
+        "experiment": "apertus-8b-gpu-reference-4096-v1",
+        "macro_f1": 0.45351021194986424,
+        "mean_context_tokens": 1996.1485507246377,
+        "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.32803798428115744
+      },
+      {
+        "experiment": "apertus-frozen-hidden-4096-v1",
+        "macro_f1": 0.9703530750042378,
+        "mean_context_tokens": 1996.1485507246377,
+        "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.3234384770732003,
+        "calibration": {
+          "ece": 0.02079092523553133,
+          "ece_bins": 10,
+          "brier_score": 0.03706509823468974,
+          "negative_log_likelihood": 0.057980358986467986
+        }
+      }
+    ]
+  },
+  "actual_cpu_predictions": [
+    {
+      "claim_language": "de",
+      "claim": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.",
+      "training_inferred_fixture_label": 0,
+      "matches_fixture": true,
+      "actual_prediction": {
+        "label": 0,
+        "class_name": null,
+        "training_inferred_class_name": "entailment",
+        "official_class_semantics_verified": false,
+        "probabilities": [
+          0.9998732473510952,
+          1.2399062688022558e-05,
+          0.00011435358621684443
+        ],
+        "probability_calibration": "Training-only connected-group out-of-fold scores",
+        "evidence": [
+          {
+            "id": "p1",
+            "page": 1,
+            "text": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.",
+            "language": "de",
+            "truncated": false
+          },
+          {
+            "id": "p2",
+            "page": 2,
+            "text": "La proposition pr\u00e9voit une contribution annuelle de 100 francs.",
+            "language": "fr",
+            "truncated": false
+          },
+          {
+            "id": "p3",
+            "page": 3,
+            "text": "La proposta prevede un contributo annuo di 100 franchi.",
+            "language": "it",
+            "truncated": false
+          }
+        ],
+        "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+        "document_id": "synthetic-demo-only",
+        "context_tokens": 166,
+        "reference_token_cap": 4096,
+        "truncated": false,
+        "model_input_premise": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.\n\nLa proposition pr\u00e9voit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+        "evidence_prefix_alignment_verified": true,
+        "latency_seconds": 13.840886657000738,
+        "model": "swiss-ai/Apertus-8B-Instruct-2509",
+        "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+        "head_experiment": "apertus-frozen-hidden-4096-v1",
+        "method": "frozen_hidden",
+        "retrieval": "full",
+        "precision": "bfloat16",
+        "device": "cpu"
+      }
+    },
+    {
+      "claim_language": "fr",
+      "claim": "La proposition pr\u00e9voit une contribution annuelle de 200 francs.",
+      "training_inferred_fixture_label": 2,
+      "matches_fixture": true,
+      "actual_prediction": {
+        "label": 2,
+        "class_name": null,
+        "training_inferred_class_name": "contradiction",
+        "official_class_semantics_verified": false,
+        "probabilities": [
+          0.007049676256516801,
+          4.2344725092141325e-05,
+          0.992907979018391
+        ],
+        "probability_calibration": "Training-only connected-group out-of-fold scores",
+        "evidence": [
+          {
+            "id": "p1",
+            "page": 1,
+            "text": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.",
+            "language": "de",
+            "truncated": false
+          },
+          {
+            "id": "p2",
+            "page": 2,
+            "text": "La proposition pr\u00e9voit une contribution annuelle de 100 francs.",
+            "language": "fr",
+            "truncated": false
+          },
+          {
+            "id": "p3",
+            "page": 3,
+            "text": "La proposta prevede un contributo annuo di 100 franchi.",
+            "language": "it",
+            "truncated": false
+          }
+        ],
+        "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+        "document_id": "synthetic-demo-only",
+        "context_tokens": 163,
+        "reference_token_cap": 4096,
+        "truncated": false,
+        "model_input_premise": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.\n\nLa proposition pr\u00e9voit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+        "evidence_prefix_alignment_verified": true,
+        "latency_seconds": 12.380727636998927,
+        "model": "swiss-ai/Apertus-8B-Instruct-2509",
+        "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+        "head_experiment": "apertus-frozen-hidden-4096-v1",
+        "method": "frozen_hidden",
+        "retrieval": "full",
+        "precision": "bfloat16",
+        "device": "cpu"
+      }
+    },
+    {
+      "claim_language": "it",
+      "claim": "La proposta riduce l'et\u00e0 pensionabile a 60 anni.",
+      "training_inferred_fixture_label": 1,
+      "matches_fixture": false,
+      "actual_prediction": {
+        "label": 2,
+        "class_name": null,
+        "training_inferred_class_name": "contradiction",
+        "official_class_semantics_verified": false,
+        "probabilities": [
+          0.0008780910213337872,
+          0.0013297428486579565,
+          0.9977921661300083
+        ],
+        "probability_calibration": "Training-only connected-group out-of-fold scores",
+        "evidence": [
+          {
+            "id": "p1",
+            "page": 1,
+            "text": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.",
+            "language": "de",
+            "truncated": false
+          },
+          {
+            "id": "p2",
+            "page": 2,
+            "text": "La proposition pr\u00e9voit une contribution annuelle de 100 francs.",
+            "language": "fr",
+            "truncated": false
+          },
+          {
+            "id": "p3",
+            "page": 3,
+            "text": "La proposta prevede un contributo annuo di 100 franchi.",
+            "language": "it",
+            "truncated": false
+          }
+        ],
+        "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+        "document_id": "synthetic-demo-only",
+        "context_tokens": 164,
+        "reference_token_cap": 4096,
+        "truncated": false,
+        "model_input_premise": "Die Vorlage sieht einen j\u00e4hrlichen Beitrag von 100 Franken vor.\n\nLa proposition pr\u00e9voit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+        "evidence_prefix_alignment_verified": true,
+        "latency_seconds": 12.643211750000773,
+        "model": "swiss-ai/Apertus-8B-Instruct-2509",
+        "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+        "head_experiment": "apertus-frozen-hidden-4096-v1",
+        "method": "frozen_hidden",
+        "retrieval": "full",
+        "precision": "bfloat16",
+        "device": "cpu"
+      }
+    }
+  ],
+  "synthetic_fixture_matches": 2,
+  "macro_f1": null,
+  "notes": "Real selected hidden-state Apertus/head in complete Docker; synthetic DE/FR/IT fixtures, not OST validation. Original weights checked during startup. /benchmarks matches recorded selection. Clean-checkout proof retained separately. No host model backend or API key. Initial startup failed because old Docker build cache exhausted disk; task build cache removed and startup retried successfully. The Italian neutral fixture was misclassified as training-inferred contradiction; retained as a negative, not used for refitting. Startup was retried from track_2a because root Makefile has no start target.",
+  "docker_software_tests": {
+    "executed": 36,
+    "passed": 36,
+    "skipped": 0
+  },
+  "build_git_commit": "3d333c0204494aee44d5d2e464f5cd43280d74a2",
+  "build_working_tree_dirty": true,
+  "deployed_head_sha256": "004d1f55d436e6469d101bf34a9833c0a073995d3705224dabb8dea56513ee63",
+  "deployed_experiment_sha256": "b4dd4fcc2f9459757df75f9810c53dfceaaa96682f36fb5953d5d3ac84a4a735",
+  "docker_image": "sha256:62113883894c383624d3b86fc45d89446d2a7e359f2f3ca954b447e912af7797"
+}
