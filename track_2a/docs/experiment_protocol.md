@@ -3,8 +3,11 @@
 ## Status
 
 The pinned official OST dataset is available. A training-majority CPU statistical
-floor has been evaluated on the strict validation split. No Apertus experiment
-has been run: its endpoint remains unavailable. Unit tests use synthetic fixtures and mocked model
+floor has been evaluated on the strict validation split. A real Apertus 8B CPU synthetic diagnostic has completed (2/3 correct). A real OST
+CPU run was interrupted by environment restart after 30 training and 19 validation
+rows. Vast authentication now works; the first CUDA provisioning attempt was
+aborted because S3 logs/SSH transport were unavailable under the runtime network
+policy, and the task instance was destroyed with API absence verification. Unit tests use synthetic fixtures and mocked model
 transport; their success is not OST accuracy or evidence of Apertus performance.
 
 ## First required runs

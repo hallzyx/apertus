@@ -1,0 +1,10 @@
+{
+  "instance_id": 54573150,
+  "delete_success": true,
+  "verified_absent": true,
+  "account_instances": [],
+  "verified_at": "2026-10-07T02:36:24.289040+00:00",
+  "observed_credit_remaining_usd": 9.9984134205,
+  "observed_account_spend_delta_usd": 0.0015865794999996297,
+  "billing_settlement_note": "Point-in-time observation; asynchronous charges may settle later"
+}

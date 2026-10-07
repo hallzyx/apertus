@@ -209,20 +209,30 @@ uses the supplied reference, capped to its first 1,024 tokens, not a complete
 booklet or annotated gold evidence. All truncation and raw first-token logits
 are retained; no calibrated probabilities are asserted. Long-reference prefill
 has measured roughly 15–40 seconds per training example, substantially slower
-than the short smoke. At this checkpoint the experiment is **in progress**;
+than the short smoke. The environment restart interrupted this run after 30 training and 19 validation
+examples; partial artifacts are preserved and its status is **interrupted**;
 there is no completed validation Macro-F1 or final-test result to report. Inspect
 `experiments/apertus-8b-cpu-reference-1024-v1/experiment.json` for the actual
 state, and do not score an unfinished run as if it covered all validation rows.
 
 ## 9. Blockers, limitations and next research decision
 
-Secure Vast authentication remains unavailable. The public original Apertus 8B model has been downloaded with verified official
+Secure Vast authentication is now verified (HTTP 200). The account initially
+reported USD 10 credit. A task-created RTX 4090 (instance 54573150, pinned CUDA
+image, USD 0.40233/hour including 45 GB storage) was provisioned for paired
+1,024/4,096-token reference baselines. Its last observed state was GPU preparation;
+no GPU inference was verified. S3 logs were rejected by the runtime proxy and SSH
+transport was unavailable. The attempt was aborted, its metadata pushed, and the
+instance destroyed; API v1 confirmed an empty account instance list. See
+`experiments/vast-provision-v1/` and `budget.json` for timestamped cleanup and credit
+observations. Required `s3.amazonaws.com` and `ssh8.vast.ai` destinations are saved
+in the environment draft but require user application before another rental. The public original Apertus 8B model has been downloaded with verified official
 weight hashes and executed on CPU; no GPU or serving endpoint is prepared.
 The official event guide/terms URLs return HTTP 403 (error 1010). Multiple official
 booklet PDF URLs were probed and returned HTTP 503 upstream connection failures.
 The dataset has no minimal gold-evidence labels or exact page provenance.
 
-Required next actions: securely bind a replacement `VAST_API_KEY`; supply/access
+Required next actions: apply the saved log/SSH network destinations; supply/access
 the full OST specification, class mapping and official evaluator requirements;
 confirm whether evaluation is against supplied reference excerpts or complete
 booklets and whether gold evidence exists. Then cost and run the cheapest paired
