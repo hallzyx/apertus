@@ -17,8 +17,9 @@ and real multilingual retrieval work; no label or probabilities are invented.
 Official v1.5 weights require approved Hugging Face access and authentication;
 the task obtained authorized weights and verified real native v1.5 CPU inference.
 Cached weights need no Hugging Face token. Three real cross-language training PDF
-cases passed through the public CLI; these are integration checks. No v1.5 NLI
-Macro-F1 is claimed until the full benchmark completes.
+cases passed through the public CLI; these are integration checks. Real native A40
+GPU validation is now running; preliminary results are in the technical report.
+Full comparisons, decision-head training and the 310-row holdout remain pending.
 
 **The earlier 0.970353 Macro-F1 was a reference-only experiment with Apertus
 2509, not v1.5 or full-booklet production.** It remains documented as historical

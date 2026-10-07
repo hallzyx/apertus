@@ -1,5 +1,5 @@
 {
-  "status": "original_model_and_full_sources_verified_preparing_contexts",
+  "status": "real_native_gpu_validation_inference_started",
   "instance_id": 54666272,
   "estimate": {
     "offer_id": 51338028,
@@ -62,5 +62,40 @@
   "verified_at": "2026-10-07T16:15:11.473337+00:00",
   "source_destroyed_verified": true,
   "optional_cuda_extension_mismatch_resolved": true,
-  "e5_real_context_preparation_verified": true
+  "e5_real_context_preparation_verified": true,
+  "real_nli_predictions_at_least": 100,
+  "native_v15_loaded_successfully": true,
+  "initial_validation_context": "oracle/reference diagnostic only",
+  "real_inference_verified_at": "2026-10-07T16:20:58.134609+00:00",
+  "xielu": "Official Python fallback; optional experimental CUDA-fused xIELU not installed",
+  "provisional_completed_runs": [
+    {
+      "context": "oracle/reference",
+      "method": "score",
+      "n": 276,
+      "macro_f1_log_rounded": 0.535419,
+      "invalid_outputs": 0,
+      "production_system_score": false,
+      "artifact_recovery_sha_verification_pending": true
+    },
+    {
+      "context": "oracle/reference",
+      "method": "prompt",
+      "n": 276,
+      "macro_f1_log_rounded": 0.531363,
+      "invalid_outputs": 0,
+      "production_system_score": false,
+      "artifact_recovery_sha_verification_pending": true
+    },
+    {
+      "context": "hybrid booklet retrieval",
+      "method": "score",
+      "n": 276,
+      "macro_f1_log_rounded": 0.526883,
+      "invalid_outputs": 0,
+      "production_input": "booklet + claim only",
+      "official_hidden_score": false,
+      "artifact_recovery_sha_verification_pending": true
+    }
+  ]
 }

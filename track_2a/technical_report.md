@@ -8,10 +8,9 @@ must not require reference strings. The app now implements PDF processing,
 multilingual semantic/BM25 fusion retrieval, source provenance, a Docker UI and
 single/batch CLI. Exact CLI/evidence schemas are project choices, not blockers.
 
-**No full-booklet Apertus v1.5 NLI score is claimed.** Authorized v1.5 weights have been downloaded and SHA-256 verified. Native
+**Real native v1.5 GPU validation is running.** The first completed booklet-only hybrid/class-score baseline has preliminary validation Macro-F1 **0.526883** on all 276 rows, with zero invalid outputs. Oracle/reference class scoring is **0.535419**, and oracle direct generation **0.531363**. These are log-reported preliminary results, pending SHA-verified artifact recovery; full comparisons, decision-head training and the single 310-row holdout run are still pending. The runtime uses an A40, original SHA-verified weights, CUDA 12.8 and the pinned native fork; see `experiments/v15-provision-v8`. Authorized v1.5 weights have been downloaded and SHA-256 verified. Native
 CPU loading and three toy inferences succeeded; this is an environment check, not
-a benchmark. The former HTTP 401 access blocker is resolved. GPU OST evaluation
-is still pending and is not inferred from the toy check. The public CLI has also
+a benchmark. The former HTTP 401 access blocker is resolved. GPU validation now runs separately and is not inferred from the toy check. The public CLI has also
 completed three real training PDF cases (DE/FR/IT), with exact quote/page/offset/PDF
 hash checks. A Docker PDF upload and real native CPU decision reproduced the CLI
 class and 1,603 tokens. These are integration checks, not benchmark estimates; see
@@ -97,9 +96,11 @@ on cross-language overlap; hybrid wins aggregate overlap. NLI superiority is unp
 | Setup | Macro-F1 | Context tokens | Latency | Evidence |
 |---|---:|---:|---:|---|
 | Full-booklet Apertus v1.5 | Unrun | Unmeasured | Unmeasured | Full/capped source text |
-| Oracle/reference Apertus v1.5 | Unrun | Unmeasured | Unmeasured | Dataset reference, diagnostic only |
+| Oracle/reference Apertus v1.5, class score | 0.535419 (preliminary validation) | Recovery pending | Recovery pending | Dataset reference, diagnostic only |
+| Oracle/reference Apertus v1.5, direct generation | 0.531363 (preliminary validation) | Recovery pending | Recovery pending | Dataset reference, diagnostic only |
 | BM25 → Apertus v1.5 | Unrun | Unmeasured | Unmeasured | Real retrieval implemented/measured separately |
-| Hybrid → Apertus v1.5 | Unrun | Unmeasured | Unmeasured | Real retrieval implemented/measured separately |
+| Dense → Apertus v1.5 | Running | Unmeasured | Unmeasured | Real booklet passages |
+| Hybrid → Apertus v1.5, class score | 0.526883 (preliminary validation) | Recovery pending | Recovery pending | Real booklet passages; no reference input |
 | Legacy 2509 raw reference, 4096 cap | 0.453510 | 1996.15 | 0.328038 s | Supplied reference |
 | Legacy 2509 trained hidden head, 4096 cap | 0.970353 | 1996.15 | 0.323438 s | Supplied reference |
 
@@ -147,7 +148,7 @@ The USD 10 hard budget and USD 2 reserve remain binding; billing is asynchronous
 
 ## 8. Next steps
 
-Authorized weights and native CPU serving have been verified. Complete matched full/capped, oracle,
+Authorized weights, native CPU serving and real GPU class scoring have been verified. Complete matched full/capped, oracle,
 BM25/dense/hybrid v1.5 comparisons on validation; train any new v1.5 head on train only,
 freeze choices, then evaluate the 310 internal holdout once for NLI. Measure evidence
 quality manually alongside reference-overlap diagnostics. No Devpost access or exact
