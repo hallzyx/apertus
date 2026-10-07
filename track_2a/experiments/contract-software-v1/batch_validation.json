@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "scope": "Synthetic HTTP fixture checks batch interface only, not real Apertus inference",
+  "n": 3,
+  "production_input_fields": [
+    "id",
+    "document",
+    "claim"
+  ],
+  "references_or_labels_required": false,
+  "official_output_mapping_verified": true,
+  "existing_output_rejected": true,
+  "fixture_token_usage": 321,
+  "macro_f1": null
+}

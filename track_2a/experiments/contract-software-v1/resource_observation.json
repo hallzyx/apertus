@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-10-07T10:40:28.190878+00:00",
+  "task_instance_ids_absent": [
+    54573150,
+    54575345,
+    54580160
+  ],
+  "account_instance_ids": [],
+  "observed_total_credit_reduction_usd": 0.637380266000001,
+  "remaining_credit": 9.362619733999999,
+  "new_instances_created_for_booklet_work": 0,
+  "notes": "Billing may settle asynchronously; no unrelated instances altered."
+}

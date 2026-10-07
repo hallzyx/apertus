@@ -118,11 +118,16 @@ Project-defined CLI: `python -m ost_nli predict BOOKLET.pdf CLAIM --context hybr
 Batch JSONL contains id/document/claim only. Source passages carry pages/offsets/hash.
 Documented interface is separable from model/retrieval implementation.
 
-Host tests pass (36 tests). Docker/PDF/retrieval validation is recorded separately
-as it completes; synthetic HTTP fixture tests do not constitute real v1.5 inference.
+Host and Docker tests pass (36 tests each). A clean GitHub checkout successfully
+ran `make run`, downloaded fresh public E5 weights, and retrieved source passages
+from an official French PDF for German, French and Italian claims. Source hashes,
+pages and quote offsets were checked. Unconfigured v1.5 prediction correctly fails
+without returning a label. Records are in `experiments/contract-software-v1/`;
+the separate synthetic HTTP batch fixture does not constitute real v1.5 inference.
 No task GPU was rented for PDF/retrieval work. Prior three task-created leases were
 destroyed and paginated API absence verified. Prior observed total credit reduction:
-USD 0.637215 (asynchronous billing), out of USD 10 with USD 2 recovery reserve.
+USD 0.637380 (asynchronous billing, observed 2026-10-07), out of USD 10 with
+USD 2 recovery reserve. All task leases were absent at the latest observation.
 
 ## 8. Next steps
 

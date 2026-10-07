@@ -1,11 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 0.6372145636000006,
-  "actual_spend": 0.6372145636000006,
+  "estimated_spend": 0.637380266000001,
+  "actual_spend": 0.637380266000001,
   "actual_spend_note": "Timestamped account credit reduction after all task-created leases destroyed and absence verified; billing may settle asynchronously.",
   "active_instance_ids": [],
-  "remaining_estimated_budget": 9.3627854364,
+  "remaining_estimated_budget": 9.362619733999999,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -75,7 +75,7 @@
       "artifacts_persisted_before_destruction_commit": "c30e308609846289bf1711482526513b91c45d40"
     }
   ],
-  "account_credit_observed": 9.3627854364,
+  "account_credit_observed": 9.362619733999999,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T05:08:43.978357+00:00"
+  "account_checked_at": "2026-10-07T10:40:28.190878+00:00"
 }

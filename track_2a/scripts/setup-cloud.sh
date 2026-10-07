@@ -7,6 +7,8 @@ if [[ ! -x .venv/bin/python ]]; then
     uv venv .venv
 fi
 uv pip install --python .venv/bin/python --require-hashes -r track_2a/requirements-pdf.lock
+uv pip install --python .venv/bin/python --torch-backend cpu --require-hashes -r track_2a/requirements-cpu.lock
+uv pip install --python .venv/bin/python --require-hashes -r track_2a/requirements-head.lock
 make test PYTHON=/workspace/apertus/.venv/bin/python
 cd track_2a
 export PYTHONPATH=src

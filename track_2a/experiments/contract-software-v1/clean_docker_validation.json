@@ -1,0 +1,79 @@
+{
+  "status": "completed",
+  "clean_checkout_commit": "0b0784c",
+  "command": "make run",
+  "public_retrieval_weights_downloaded_automatically_in_docker": true,
+  "host_model_weights_or_python_backend_required": false,
+  "actual_official_pdf_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+  "pdf_pages": 72,
+  "pdf_upload_and_page_provenance_verified": true,
+  "actual_multilingual_retrieval": [
+    {
+      "id": "ost-v1.1-0019",
+      "claim_language": "de",
+      "document_language": "fr",
+      "passage_ids": [
+        "page-1-offset-0",
+        "page-43-offset-992",
+        "page-14-offset-974",
+        "page-30-offset-974",
+        "page-34-offset-0"
+      ],
+      "pages": [
+        1,
+        43,
+        14,
+        30,
+        34
+      ],
+      "source_quotes_verified": true,
+      "elapsed_seconds": 8.809515973000089
+    },
+    {
+      "id": "ost-v1.1-0174",
+      "claim_language": "fr",
+      "document_language": "fr",
+      "passage_ids": [
+        "page-51-offset-0",
+        "page-51-offset-1926",
+        "page-45-offset-0",
+        "page-44-offset-996",
+        "page-51-offset-934"
+      ],
+      "pages": [
+        51,
+        51,
+        45,
+        44,
+        51
+      ],
+      "source_quotes_verified": true,
+      "elapsed_seconds": 0.04106932500144467
+    },
+    {
+      "id": "ost-v1.1-0411",
+      "claim_language": "it",
+      "document_language": "fr",
+      "passage_ids": [
+        "page-10-offset-0",
+        "page-40-offset-1930",
+        "page-40-offset-3817",
+        "page-10-offset-983",
+        "page-29-offset-0"
+      ],
+      "pages": [
+        10,
+        40,
+        40,
+        10,
+        29
+      ],
+      "source_quotes_verified": true,
+      "elapsed_seconds": 0.03293259799829684
+    }
+  ],
+  "v15_endpoint_configured": false,
+  "unconfigured_inference_failed_without_fabricated_label": true,
+  "macro_f1": null,
+  "notes": "Actual official PDF and actual multilingual E5 inside clean-checkout Docker; NLI remains blocked by missing v1.5 access."
+}

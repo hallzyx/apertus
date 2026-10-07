@@ -23,6 +23,12 @@ logs or commands. Optional direct local v1.5 serving requires its gated weights
 and verified native architecture support; the old frozen backend cannot load its
 `apertus1p5` architecture or reuse its decision head.
 
+After securely configuring `HF_TOKEN` for `huggingface.co`, check access without
+downloading weights or renting a GPU:
+`../.venv/bin/python scripts/check_v15_access.py` from `track_2a/`.
+This checks the pinned model configuration and reports installed architecture
+support without printing the credential.
+
 ## Application and deterministic CLI
 
 Upload a PDF in the Docker UI, or supply canonical document JSON. Production uses
