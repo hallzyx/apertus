@@ -24,6 +24,27 @@ def main():
     expected_path=Path(__file__).resolve().parents[1]/'experiments/booklet-source-v2/manifest.json'
     expected={r['url']:r['sha256'] for r in json.loads(expected_path.read_text())['records']
               if r.get('status')=='completed'} if expected_path.exists() else {}
+    expected_sizes={r['url']:r['bytes'] for r in json.loads(expected_path.read_text())['records']
+                    if r.get('status')=='completed'} if expected_path.exists() else {}
+    def ranged_download(url):
+        total=expected_sizes[url];chunks=[];chunk_size=512*1024
+        for start in range(0,total,chunk_size):
+            end=min(total,start+chunk_size)-1
+            for retry in range(2):
+                parsed=urllib.parse.urlsplit(url)
+                query=parsed.query+('&' if parsed.query else '')+f'apertus_chunk={start}_{retry}'
+                request=urllib.request.Request(urllib.parse.urlunsplit(parsed._replace(query=query)),headers={
+                    'User-Agent':'Mozilla/5.0','Accept-Encoding':'identity','Cache-Control':'no-cache',
+                    'Range':f'bytes={start}-{end}'})
+                with urllib.request.urlopen(request,timeout=60) as response:
+                    status=response.status;content_range=response.headers.get('Content-Range')
+                    chunk=response.read(total+1 if status==200 else end-start+2)
+                if status==200 and len(chunk)==total and hashlib.sha256(chunk).hexdigest()==expected[url]:
+                    return chunk
+                if status==206 and content_range==f'bytes {start}-{end}/{total}' and len(chunk)==end-start+1:
+                    chunks.append(chunk);break
+                if retry==1:raise ValueError(f'Incomplete PDF range: {start}-{end}, received {len(chunk)} bytes')
+        return b''.join(chunks)
     def fetch(url):
         parsed = urllib.parse.urlsplit(url)
         if parsed.scheme != 'https' or parsed.hostname != 'www.bk.admin.ch':
@@ -46,12 +67,15 @@ def main():
                     request = urllib.request.Request(download_url, headers={
                         'User-Agent': 'Mozilla/5.0', 'Accept-Encoding': 'identity',
                         'Cache-Control': 'no-cache'})
-                    with urllib.request.urlopen(request, timeout=60) as response:
-                        content = response.read(50_000_001)
+                    if attempt==2 and url in expected_sizes:
+                        content=ranged_download(url)
+                    else:
+                        with urllib.request.urlopen(request, timeout=60) as response:
+                            content = response.read(50_000_001)
                     if len(content) > 50_000_000 or not content.startswith(b'%PDF-'):
                         raise ValueError('Invalid or oversized PDF')
                     if url in expected and hashlib.sha256(content).hexdigest()!=expected[url]:
-                        raise ValueError('Downloaded PDF does not match pinned source checksum')
+                        raise ValueError(f'Downloaded PDF checksum mismatch; received {len(content)} bytes, expected {expected_sizes[url]}')
                     partial = pdf.with_suffix('.part'); partial.write_bytes(content); partial.replace(pdf)
                 if target.exists():
                     doc = json.loads(target.read_text())

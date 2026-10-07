@@ -20,6 +20,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--sealed-token')
     p.add_argument('--token-env', help='Provider-managed temporary read credential; removed from child process environment')
+    p.add_argument('--allow-missing-training-source',action='store_true',help='Declare a training subset selected only by PDF availability; validation/test must stay complete')
     a=p.parse_args()
     root=Path('/workspace/apertus');os.chdir(root)
     os.environ.update(PYTHONPATH='track_2a/src',HF_HUB_DISABLE_XET='1',HF_HUB_DISABLE_TELEMETRY='1',
@@ -64,13 +65,27 @@ def main():
             '--splits',str(splits),'--output',str(full)])
     audit=json.loads((full/'audit.json').read_text())
     frozen=json.loads(Path('track_2a/experiments/booklet-source-v2/audit.json').read_text())
-    for split in ['train','validation','test']:
+    for split in ['validation','test']:
         if audit['partitions'][split]['sha256']!=frozen['partitions'][split]['sha256']:raise ValueError('Full booklet fingerprint mismatch')
+    partial_train=audit['partitions']['train']['sha256']!=frozen['partitions']['train']['sha256']
+    if partial_train:
+        if not a.allow_missing_training_source:raise ValueError('Full training booklet fingerprint mismatch')
+        from ost_nli.data import load_dataset
+        original={r['id']:r for r in load_dataset(splits/'train.jsonl')}
+        available=load_dataset(full/'train.jsonl');ids={r['id'] for r in available}
+        if len(available)<500 or len(ids)!=len(available) or not ids<=original.keys():raise ValueError('Invalid training availability subset')
+        if set(original)-ids!=set(audit['partitions']['train']['missing_ids']):raise ValueError('Unexplained training exclusions')
+        for row in available:
+            if any(row[k]!=original[row['id']][k] for k in ['label','claim','booklet_id','claim_language','document_language','source_booklet_url']):
+                raise ValueError('Training subset changed canonical labels/claims/groups')
+        print(f'V15_DECLARED_TRAIN_SUBSET {len(available)}/{len(original)}; validation/test complete; exclusions depend only on unavailable source PDFs',flush=True)
     from ost_nli.dense import download as download_e5
     if not Path('/workspace/e5/verified_manifest.json').exists():download_e5('/workspace/e5')
     if not Path('/workspace/v15-inputs/manifest.json').exists():
-        run(['python','track_2a/scripts/prepare_v15_inputs.py','--full-dir',str(full),'--reference-dir',str(splits),
-            '--embedding-dir','/workspace/e5','--cache-dir','/workspace/e5-vectors','--output','/workspace/v15-inputs'])
+        command=['python','track_2a/scripts/prepare_v15_inputs.py','--full-dir',str(full),'--reference-dir',str(splits),
+            '--embedding-dir','/workspace/e5','--cache-dir','/workspace/e5-vectors','--output','/workspace/v15-inputs']
+        if partial_train:command.append('--allow-train-subset')
+        run(command)
     print('V15_REPRODUCED_BOOKLET_INPUTS_VERIFIED',flush=True)
     run(['bash','track_2a/scripts/vast_v15_worker.sh'])
     run(['python','track_2a/scripts/finish_v15_research.py'])

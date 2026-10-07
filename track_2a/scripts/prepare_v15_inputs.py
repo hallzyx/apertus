@@ -18,6 +18,7 @@ def main():
     p.add_argument('--embedding-dir', required=True)
     p.add_argument('--cache-dir', required=True)
     p.add_argument('--output', required=True)
+    p.add_argument('--allow-train-subset',action='store_true')
     a = p.parse_args()
     out = Path(a.output)
     if out.exists(): raise ValueError('Frozen inputs must not be overwritten')
@@ -31,6 +32,16 @@ def main():
     for split in ['validation', 'train', 'test']:
         rows = load_dataset(Path(a.full_dir)/f'{split}.jsonl')
         refs = load_dataset(Path(a.reference_dir)/f'{split}.jsonl')
+        canonical_refs=refs
+        if split=='train' and a.allow_train_subset:
+            by_id={r['id']:r for r in refs}
+            if not all(r['id'] in by_id for r in rows):raise ValueError('Unknown training ID')
+            refs=[by_id[r['id']] for r in rows]
+            selected_ids={r['id'] for r in rows}
+            manifest['training_source_policy']={'canonical_n':len(canonical_refs),'selected_n':len(rows),
+                'selection':'Availability of SHA-256-verified source PDFs only; canonical labels/claims/groups unchanged',
+                'selected_ids':[r['id'] for r in rows],'missing_ids':[r['id'] for r in canonical_refs if r['id'] not in selected_ids],
+                'canonical_reference_sha256':fingerprint(canonical_refs),'validation_test_exclusions_allowed':False}
         if [r['id'] for r in rows] != [r['id'] for r in refs]: raise ValueError('ID mismatch')
         modes = ['full', 'reference', 'bm25', 'dense', 'hybrid'] if split == 'validation' else ['full', 'bm25', 'dense', 'hybrid']
         paths = {mode: out/f'{split}-{mode}.jsonl' for mode in modes}
