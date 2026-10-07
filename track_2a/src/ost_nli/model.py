@@ -143,9 +143,11 @@ class FrozenServiceClient:
             raise ValueError('Remote frozen endpoints require HTTPS')
 
     def predict(self,document,claim):
+        headers={'Content-Type':'application/json'}
+        if os.environ.get('LLM_API_KEY'):headers['Authorization']='Bearer '+os.environ['LLM_API_KEY']
         request=urllib.request.Request(self.base_url+'/nli',
             data=json.dumps({'document':document,'claim':claim,'context':'full'},ensure_ascii=False).encode(),
-            headers={'Content-Type':'application/json'})
+            headers=headers)
         try:
             opener = urllib.request.build_opener(urllib.request.ProxyHandler({})) if urllib.parse.urlsplit(self.base_url).scheme == 'http' else urllib.request.build_opener()
             with opener.open(request,timeout=180) as response:result=json.load(response)

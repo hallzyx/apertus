@@ -9,13 +9,17 @@ def main():
     import numpy as np
     from ost_nli.data import load_dataset,fingerprint,words
     from ost_nli.metrics import evaluate
+    from ost_nli.documents import reference_coverage
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',default='track_2a/experiments/apertus-v15-phase2-context-v1')
     p.add_argument('--output',default='track_2a/experiments/apertus-v15-phase2/context-results.json')
+    p.add_argument('--references',default='track_2a/data/private/splits-strict/validation.jsonl',help='Development-only reference adapter; never model input')
     a=p.parse_args();root=Path(a.root);out=Path(a.output)
     if out.exists():raise ValueError('Immutable context conclusion already exists')
     rows=load_dataset('track_2a/data/private/full-booklets-v2/validation.jsonl')
     assert fingerprint(rows)=='00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f'
+    refs={r['id']:r for r in load_dataset(a.references)}
+    assert set(refs)=={r['id'] for r in rows} and all(refs[r['id']]['label']==r['label'] for r in rows)
     assert json.loads((root/'experiment.json').read_text())['status']=='completed'
     contract=json.loads((root/'contract.json').read_text())
     assert hashlib.sha256((root/'inputs_manifest.json').read_bytes()).hexdigest()==contract['input_manifest_sha256']
@@ -58,7 +62,7 @@ def main():
             passages={p['id']:p for p in row['passages']}
             for passage in record['selected_passages']:
                 original=passages[passage['id']]
-                for key in ('text','page','char_start','char_end','source_pdf_sha256'):
+                for key in ('text','page','char_start','char_end','source_sha256'):
                     assert passage.get(key)==original.get(key)
                 checked_quotes+=1
         cap=protocol['conditions'][condition]['prompt_cap']
@@ -67,11 +71,15 @@ def main():
         if metrics['macro_f1']<full['macro_f1']-.02:failures.append('macro_f1_gap_exceeds0.02')
         if metrics['cross_lingual']['macro_f1']<full['cross_lingual']['macro_f1']-.03:failures.append('cross_lingual_gap_exceeds0.03')
         if any(metrics['per_class'][str(c)]['f1']<full['per_class'][str(c)]['f1']-.05 for c in range(3)):failures.append('class_f1_gap_exceeds0.05')
+        coverages=[reference_coverage(record['selected_passages'],'\n\n'.join(p['text'] for p in refs[row['id']]['passages'])) for row,record in zip(rows,evidence)]
+        observed=[v for v in coverages if v is not None]
         comparisons[condition]={'matched_head':metrics,'native_restricted_base_scores':evaluate(rows,base),
             'unchanged_full_head':evaluate(rows,unchanged),'deduplicated_macro_f1':evaluate(unique,[aligned[r['id']] for r in unique])['macro_f1'],
             'head_sha256':hashlib.sha256((fitted/'head.json').read_bytes()).hexdigest(),'source_head':str(fitted/'head.json'),
             'registered_selection_failures':failures,'token_cap':cap,
-            'reference_5gram_coverage':reference['conditions'][f'validation-{condition}']['mean_reference_5gram_coverage'],
+            'reference_5gram_coverage':float(np.mean(observed)) if observed else None,
+            'reference_coverage_definition':'Same page-local dehyphenated5gram diagnostic as original retrieval audit; no cross-passage ngrams',
+            'preparation_raw_overlap':reference['conditions'][f'validation-{condition}']['mean_reference_5gram_coverage'],
             'mean_selected_passages':sum(len(p['selected_passages']) for p in evidence)/len(evidence),
             'exact_source_quote_page_offset_checks':checked_quotes,
             'scope_caution':'Candidate source passages preserve provenance; lexical overlap is not semantic evidence scoring'}

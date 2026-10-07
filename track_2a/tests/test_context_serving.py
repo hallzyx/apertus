@@ -9,6 +9,7 @@ import threading
 import unittest
 import urllib.error
 import urllib.request
+from unittest.mock import patch
 
 from ost_nli.context_budget import DocumentPipeline
 from ost_nli.v15 import REPO,REVISION
@@ -34,6 +35,15 @@ class Retriever:
 
 
 class ContextServingTests(unittest.TestCase):
+    def test_template_model_url_routes_to_document_policy_without_frontend_retrieval(self):
+        from ost_nli.runtime import document_service_url,production_context
+        with patch('ost_nli.runtime.selected_choice',return_value={'context':'hybrid-2k','transport':'document-service'}):
+            with patch.dict(os.environ,{'FROZEN_BASE_URL':'','LLM_BASE_URL':'https://example.org/native/v1','RETRIEVAL_MODE':'bm25'}):
+                self.assertEqual(document_service_url(strict=True),'https://example.org/native')
+                self.assertEqual(production_context(),'full')
+            with patch.dict(os.environ,{'FROZEN_BASE_URL':'','LLM_BASE_URL':''}):
+                with self.assertRaises(ValueError):document_service_url(strict=True)
+
     def test_compact_pipeline_preserves_quotes_and_never_uses_reference(self):
         engine=Encoder();head={'context':'hybrid-1k','feature_kind':'hidden','model_revision':REVISION}
         pipeline=DocumentPipeline(engine,head,Retriever())

@@ -26,6 +26,7 @@ def make_server(engine, method='score', head=None, port=8001, pipeline=None):
                 size=int(self.headers.get('Content-Length','0'))
                 if not 0<size<=8_000_000:raise ValueError('Invalid body size')
                 body=json.loads(self.rfile.read(size))
+                if not isinstance(body,dict):raise ValueError('Request must be an object')
                 if self.path=='/nli':
                     if pipeline is None:raise ValueError('Document pipeline unavailable')
                     with lock:result=pipeline.predict(body['document'],body['claim'])

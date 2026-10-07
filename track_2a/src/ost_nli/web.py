@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from .data import validate_document
 from .model import ApertusClient, FrozenServiceClient, label_map, predict, select_context
 from .retrieval import retrieve
-from .runtime import production_context
+from .runtime import production_context, document_service_url
 
 RETRIEVER = None
 
@@ -69,7 +69,8 @@ class Handler(BaseHTTPRequestHandler):
         elif self.path == "/health":
             configured = False
             try:
-                (FrozenServiceClient() if os.environ.get('FROZEN_BASE_URL') else (ApertusClient(),label_map()));configured = True
+                service=document_service_url(strict=True)
+                (FrozenServiceClient(service) if service else (ApertusClient(),label_map()));configured = True
             except (ValueError,TypeError):
                 pass
             self.respond(200,{"status":"ok","retrieval_available":True,"model_configured":configured,"model_connectivity_verified":False,"benchmark_verified":False})
@@ -107,8 +108,9 @@ class Handler(BaseHTTPRequestHandler):
                 passages = selected_passages(doc,claim)
                 result = {"evidence":passages,"method":passages[0].get('retrieval_method','bm25')}
             else:
-                if os.environ.get('FROZEN_BASE_URL'):
-                    result = FrozenServiceClient().predict(doc,claim)
+                service=document_service_url(strict=True)
+                if service:
+                    result = FrozenServiceClient(service).predict(doc,claim)
                 else:
                     import time
                     began = time.perf_counter()

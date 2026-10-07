@@ -9,7 +9,7 @@ from .experiments import append_event, finish_record, new_record
 from .metrics import evaluate
 from .model import ApertusClient, FrozenServiceClient, label_map, predict
 from .retrieval import retrieve
-from .runtime import production_context, embedding_retriever
+from .runtime import production_context, embedding_retriever, document_service_url
 
 
 def emit(value, path=None):
@@ -106,8 +106,9 @@ def main():
                 raise ValueError("Reference/gold evidence is an evaluation diagnostic, never production input")
             os.environ['APERTUS_REQUIRED_GENERATION']='v1.5'
             doc = load_document(args.booklet)
-            if os.environ.get('FROZEN_BASE_URL'):
-                emit(FrozenServiceClient().predict(doc,args.claim))
+            service=document_service_url(strict=True)
+            if service:
+                emit(FrozenServiceClient(service).predict(doc,args.claim))
                 return
             began = time.perf_counter()
             mode = args.context
@@ -126,7 +127,8 @@ def main():
             if args.context in ('gold','reference'):
                 raise ValueError('Production batch input is booklet + claim, never reference/gold evidence')
             if Path(args.output).exists(): raise ValueError('Existing batch output cannot be overwritten')
-            frozen = FrozenServiceClient() if os.environ.get('FROZEN_BASE_URL') else None
+            service=document_service_url(strict=True)
+            frozen = FrozenServiceClient(service) if service else None
             client = None if frozen else ApertusClient(); documents = {}; results = []; seen = set(); retriever = None
             if not frozen and args.context in ('dense','hybrid'):
                 retriever = embedding_retriever()
