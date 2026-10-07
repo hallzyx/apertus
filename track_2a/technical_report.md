@@ -166,14 +166,18 @@ instances. Never treat stopping as destruction or leave GPU idle during CPU work
 The template layout is retained. `make run` starts the Docker workbench; image
 base and PDF package are pinned, with dependency hash and TLS verification enabled.
 The cloud helper resolves runtime proxy DNS and mounts trusted CA configuration,
-without committing secrets or hard-coded proxy addresses.
+without committing secrets or hard-coded proxy addresses. Tested install_script and
+start_skill contents, network additions and the missing secure Vast requirement
+are saved in the environment draft. They are not proof of publication or fresh-task
+restoration.
 
 Validation completed so far: 36 host tests, including PDF extraction/provenance,
 grouped split and duplicate-claim isolation, metric fixtures, schema-constrained
 request construction, actual HTTP client/evaluator round trip with a **synthetic
-mock endpoint**, and rejection of stale predictions. Docker smoke tests and real
-workbench retrieval have passed. A clean-checkout rebuild/start check is recorded
-separately in `experiments/software_validation.json` once completed.
+mock endpoint**, and rejection of stale predictions. All 36 tests also passed inside Docker with no skips. Clean-checkout `make run`,
+DE/FR/IT retrieval and original-page provenance passed after a restart using current
+code. Evidence is recorded in `experiments/software_validation.json`. Task-created
+local test containers were removed after validation.
 
 These are software checks, not evidence that real Apertus inference or official
 challenge accuracy works. The Docker UI's health response explicitly distinguishes

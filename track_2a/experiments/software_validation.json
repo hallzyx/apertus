@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-07T01:42:53.550616+00:00",
+  "clean_checkout_commit": "6b74524522692dee5b8e460ac98c32e40112a086",
+  "clean_checkout_status": "",
+  "docker_image": "sha256:d7e8062e9b4a2f200774be47ed4ffe409ff4de860e54091079278e0c6cf5248c",
+  "make_run_from_clean_checkout": "passed",
+  "host_tests": {
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0
+  },
+  "docker_tests": {
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0
+  },
+  "http_health": "passed",
+  "functional_retrieval_de_fr_it": "passed; synthetic fixture, not scientific relevance evaluation",
+  "original_page_provenance": "passed",
+  "missing_model_does_not_fabricate_classification": "passed",
+  "real_apertus_inference": "unrun",
+  "official_nli_accuracy": "unrun",
+  "frozen_data_verification": "passed",
+  "dependency_hash_and_tls_verification": "enabled and verified",
+  "vast_instances_created_by_task": [],
+  "vast_account_instances_verified": false,
+  "initial_docker_failures": [
+    "readonly Docker config directory",
+    "build proxy DNS missing",
+    "source file permissions unsuitable for nonroot runtime",
+    "missing Git binary in experiment metadata",
+    "old task test container held test port during restart"
+  ],
+  "resolution": [
+    "writable /tmp Docker config",
+    "resolved proxy add-host and trusted CA build secret",
+    "readable copied source",
+    "optional Git metadata plus source-code SHA-256",
+    "identified and removed old task container by recorded identity; repeated startup passed"
+  ]
+}
