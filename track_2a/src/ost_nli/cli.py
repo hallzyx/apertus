@@ -9,7 +9,7 @@ from .experiments import append_event, finish_record, new_record
 from .metrics import evaluate
 from .model import ApertusClient, label_map, predict
 from .retrieval import retrieve
-from .runtime import production_context
+from .runtime import production_context, embedding_retriever
 
 
 def emit(value, path=None):
@@ -109,8 +109,7 @@ def main():
             began = time.perf_counter()
             mode = args.context
             if mode in ('dense','hybrid'):
-                from .dense import MultilingualRetriever
-                retriever = MultilingualRetriever(os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small'))
+                retriever = embedding_retriever()
                 doc = {**doc,'passages':retriever.retrieve(doc['passages'],args.claim,args.k,mode)}
                 mode = 'full'
             result = predict({**doc,"claim":args.claim},ApertusClient(),label_map(),mode,args.k,args.max_context_bytes,args.method,args.diversify)
@@ -126,8 +125,7 @@ def main():
             if Path(args.output).exists(): raise ValueError('Existing batch output cannot be overwritten')
             client = ApertusClient(); documents = {}; results = []; seen = set(); retriever = None
             if args.context in ('dense','hybrid'):
-                from .dense import MultilingualRetriever
-                retriever = MultilingualRetriever(os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small'))
+                retriever = embedding_retriever()
             for row in read_jsonl(args.input):
                 if not isinstance(row.get('id'),str) or not row['id'] or row['id'] in seen:
                     raise ValueError('Batch IDs must be unique nonempty strings')
@@ -157,8 +155,8 @@ def main():
             client = ApertusClient()
             retriever = None
             if args.context in ('dense','hybrid'):
-                from .dense import MultilingualRetriever, REPO, REVISION
-                retriever = MultilingualRetriever(os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small'))
+                from .dense import REPO, REVISION
+                retriever = embedding_retriever()
             args.model_name = client.model
             record = new_record(args.id,rows,args)
             if retriever:

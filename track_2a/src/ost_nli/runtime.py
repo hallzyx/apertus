@@ -13,3 +13,11 @@ def production_context():
     if context not in ('full', 'bm25', 'dense', 'hybrid'):
         raise ValueError('Production context must be full, bm25, dense or hybrid')
     return context
+
+
+def embedding_retriever():
+    from .dense import download, MultilingualRetriever
+    directory = os.environ.get('EMBEDDING_MODEL_DIR', '/models/multilingual-e5-small')
+    if not (Path(directory)/'verified_manifest.json').exists():
+        download(directory)
+    return MultilingualRetriever(directory)

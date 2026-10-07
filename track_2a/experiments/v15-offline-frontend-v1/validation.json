@@ -1,0 +1,23 @@
+{
+  "real_pdf": true,
+  "pdf_sha256": "15391d5fdf2faac51ceff1f4b31f463a7b838587bc1e52ada57e85cc7e6c76d5",
+  "pages": 40,
+  "passages": 77,
+  "method": "full",
+  "evidence_n": 50,
+  "source_quotes_pages_offsets_verified": true,
+  "retrieval_seconds": 0.004171424996457063,
+  "network_none_frontend": true,
+  "embedding_cache_absent": true,
+  "supporting_retrieval_weights_not_downloaded": true,
+  "nli_in_this_check": false,
+  "classification_still_requires_apertus_endpoint": true,
+  "image_id": "sha256:170db67c7fe90ac13512647a7296d8eff523d8a9b89001c4fab20d8dea6b5565",
+  "fresh_image_no_source_mounts": true,
+  "tests_passed": 38,
+  "claim_language": "de",
+  "document_language": "fr",
+  "explicit_context_override": "RETRIEVAL_MODE=full",
+  "selection_file_pending": true,
+  "test_fixture_permission_correction": "Docker copied a root-owned 0600 PDF; only the container copy was made readable. Original private source permissions unchanged."
+}
