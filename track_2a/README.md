@@ -123,8 +123,8 @@ bash scripts/cloud-docker.sh smoke  # cloud proxy variant
 ```
 
 The synthetic example is a UI/test fixture, not official benchmark data.
-`experiments/budget.json` records the USD 10 ceiling and zero task-created rentals.
-Account-wide actual spend/instances are not verified without secure Vast access.
+`experiments/budget.json` records the USD 10 ceiling, observed spend, active leases and verified cleanup.
+Read its timestamped status before any new rental; billing can settle asynchronously.
 Never rent before costing GPU, storage, transfer and download/warm-up time.
 
 ## Licensing and provenance
@@ -137,3 +137,53 @@ to `OSTswiss/MNLIoverSwissVotingBooklets`. Source cards and research limitations
 are recorded in `docs/` and the technical report.
 pypdf is BSD-3-Clause; its license is included in the installed distribution.
 Final submission licensing remains subject to the official event terms.
+
+
+## Real frozen Apertus decision heads
+
+Completed real internal validation experiments and per-language/calibration metrics
+are committed in `experiments/` and summarized in `technical_report.md`. The current
+30-training-row option head reaches Macro-F1 0.743242 at a 4,096-token reference cap.
+This is internal supplied-reference validation, not an official challenge score.
+
+After the optional original-model CPU installation/download above, classify a new
+JSON/text/PDF directly from the repository root:
+
+```bash
+PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python -m ost_nli predict-frozen track_2a/data/example-booklet.json 'La proposta prevede un contributo annuo di 100 franchi.' --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/experiments/apertus-option-head-4096-v1
+```
+
+The head uses the exact official chat template and frozen BF16 model. It returns
+class 0/1/2, genuine classifier probabilities, exact model-input premise, available
+page provenance, tokenizer context tokens and measured latency. Official class names
+remain null without verified `OST_LABEL_MAP`; an explicitly marked training-inferred
+semantic name is separate. The 30-row head is uncalibrated. Full-booklet or BM25
+inputs are accepted for exploration but their challenge accuracy has not been measured.
+
+For a persistent local model serving the Docker workbench, start this process
+before `make run` in a second terminal (32 GB RAM and original weights required):
+
+```bash
+PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/serve_frozen_apertus.py --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/experiments/apertus-option-head-4096-v1 --host 0.0.0.0 --port 8001
+FROZEN_BASE_URL=http://host.docker.internal:8001 make run
+```
+
+The backend serializes inference to avoid concurrent memory pressure. Its `/health`
+identifies the loaded model/head; only a successful `/api/predict` proves connectivity.
+Keep this local service on a trusted development network. Default `make run` remains
+a lightweight workbench; an authorized Apertus endpoint can also use the documented
+OpenAI-compatible path. No inference credential is required for local frozen inference.
+
+For CPU training on recovered frozen caches, install:
+
+```bash
+UV_CACHE_DIR=/workspace/.cache/uv uv pip install --python .venv/bin/python --require-hashes -r track_2a/requirements-head.lock
+PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/frozen_head_experiment.py --cache track_2a/experiments/apertus-frozen-cache-v1 --cap 4096 --features option_logits --train track_2a/data/private/splits-strict/train.jsonl --validation track_2a/data/private/splits-strict/validation.jsonl --output-dir /tmp/new-frozen-head
+```
+
+The training script checks cache/data hashes and exact row IDs; grouped OOF training
+selects C and fits temperature without validation labels. Never overwrite completed
+outputs. `vast_feature_cache.sh` extracts the two context caps on a properly costed
+original-model CUDA lease; `recover_vast_cache.py` recovers checksummed UTF-8 parts
+from that task's stopped instance. Persist recovered results and destroy/verify the
+lease; stopping alone leaves billable storage.

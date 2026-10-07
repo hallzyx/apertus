@@ -2,17 +2,17 @@ import json
 import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from .data import validate_document
-from .model import ApertusClient, label_map, predict
+from .model import ApertusClient, FrozenServiceClient, label_map, predict
 from .retrieval import retrieve
 
 HTML = r'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apertus · Evidence Lab</title>
 <style>body{font:16px system-ui;background:#101827;color:#e8eef8;max-width:1050px;margin:50px auto;padding:0 24px}h1{font-size:42px}p{line-height:1.6;color:#b5c2d6}textarea,input,select{box-sizing:border-box;width:100%;background:#19253a;color:#fff;border:1px solid #43536d;border-radius:8px;padding:12px;margin:8px 0}textarea{min-height:160px}button{background:#77e3c2;color:#10231c;border:0;border-radius:8px;padding:12px 22px;font-weight:700;margin:12px 12px 12px 0;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#19253a;padding:20px;border-radius:12px}label{display:block;margin-top:20px}.tag{color:#77e3c2}#status{padding:12px;border:1px solid #43536d;border-radius:8px}small{color:#b5c2d6}</style>
-<span class="tag">TRACK 2A · OST · RESEARCH WORKBENCH</span><h1>Apertus Evidence Lab</h1><p>Verify multilingual claims against a Swiss voting booklet. Inspect the exact passages, page provenance and measured inference usage. Official benchmark results are pending; this interface does not imply validated accuracy.</p>
+<span class="tag">TRACK 2A · OST · RESEARCH WORKBENCH</span><h1>Apertus Evidence Lab</h1><p>Verify multilingual claims against a Swiss voting booklet. Inspect the exact passages, page provenance and measured inference usage. Internal experiments are documented in the technical report; official challenge compliance is pending.</p>
 <div id="status">Checking configuration…</div>
 <label for="doc">Booklet (canonical JSON with document_id and passages)</label><textarea id="doc">{"document_id":"synthetic-demo-only","passages":[{"id":"p1","page":1,"text":"Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor."},{"id":"p2","page":2,"text":"La proposition prévoit une contribution annuelle de 100 francs."},{"id":"p3","page":3,"text":"La proposta prevede un contributo annuo di 100 franchi."}]}</textarea>
 <small>This example is synthetic, not an official voting booklet. PDF and text ingestion are available through the CLI.</small>
 <label for="claim">Claim · DE / FR / IT / other languages</label><input id="claim" value="Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.">
-<button id="retrieve">Inspect lexical retrieval</button><button id="predict">Classify with Apertus</button><pre id="result" aria-live="polite">Choose an action. Lexical retrieval runs without a model; classification requires an Apertus endpoint and the verified official label mapping.</pre>
+<button id="retrieve">Inspect lexical retrieval</button><button id="predict">Classify with Apertus</button><pre id="result" aria-live="polite">Choose an action. Lexical retrieval runs without a model; classification requires a real Apertus backend. Official class names are shown only when verified.</pre>
 <script>
 const status=document.getElementById('status'),result=document.getElementById('result');
 fetch('/health').then(r=>r.json()).then(h=>{status.textContent=h.model_configured?'Apertus endpoint configured · connectivity and accuracy require a successful inference.':'Model unavailable · retrieval works; no classification or confidence is fabricated.';document.getElementById('predict').disabled=!h.model_configured;});
@@ -42,7 +42,7 @@ class Handler(BaseHTTPRequestHandler):
         elif self.path == "/health":
             configured = False
             try:
-                ApertusClient();label_map();configured = True
+                (FrozenServiceClient() if os.environ.get('FROZEN_BASE_URL') else (ApertusClient(),label_map()));configured = True
             except (ValueError,TypeError):
                 pass
             self.respond(200,{"status":"ok","retrieval_available":True,"model_configured":configured,"model_connectivity_verified":False,"benchmark_verified":False})
@@ -64,7 +64,7 @@ class Handler(BaseHTTPRequestHandler):
             if self.path == "/api/retrieve":
                 result = {"evidence":retrieve(doc["passages"],claim),"method":"bm25","warning":"Lexical baseline; cross-lingual relevance is not guaranteed"}
             else:
-                result = predict({**doc,"claim":claim},ApertusClient(),label_map())
+                result = FrozenServiceClient().predict(doc,claim) if os.environ.get('FROZEN_BASE_URL') else predict({**doc,"claim":claim},ApertusClient(),label_map())
             self.respond(200,result)
         except (ValueError,KeyError,TypeError):
             self.respond(400,{"error":"Invalid input or missing model/official label configuration"})

@@ -1,0 +1,78 @@
+{
+  "experiment_id": "frozen-live-software-v1",
+  "status": "completed",
+  "scope": "Real Apertus CPU model + learned 30-row head through actual Docker HTTP workbench; synthetic example, not OST accuracy",
+  "timestamp": "2026-10-07T03:50:27.824951+00:00",
+  "git_commit_at_execution": "b5f403a274e8d07a7e05597da385d2b7b5acc170",
+  "git_working_tree_dirty": true,
+  "source_hashes": {
+    "track_2a/src/ost_nli/frozen.py": "89ab28e3a8f938506a75409158d365e0c30dedac3e059d864013f79deed76d60",
+    "track_2a/src/ost_nli/model.py": "f6c54a526b2fbe46650dd908e06a5bcc4b1d501c7d36115b532349701cd23f14",
+    "track_2a/src/ost_nli/web.py": "27995e5059cd46e547b2ff9d7a5d7dd19aaf038f2deac059c943f42be3fffc40",
+    "track_2a/scripts/serve_frozen_apertus.py": "d4abdf187c3fc21461f2b542c9cbf06348fe178f2c73cc7137c91656d4e50a6e"
+  },
+  "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+  "head_experiment": "apertus-option-head-4096-v1",
+  "checks": {
+    "real_276_prediction_probability_parity_1024": true,
+    "real_276_prediction_probability_parity_4096": true,
+    "portable_head_probability_tolerance": 1e-12,
+    "actual_docker_italian_claim_response": true,
+    "original_shard_sha256_verified": true,
+    "feature_transport_archive_sha_round_trip": true,
+    "feature_transport_truncation_rejection": true
+  },
+  "actual_inference": {
+    "label": 0,
+    "class_name": null,
+    "training_inferred_class_name": "entailment",
+    "official_class_semantics_verified": false,
+    "probabilities": [
+      0.9988906436884132,
+      0.0011084293539870684,
+      9.269575997486633e-07
+    ],
+    "probability_calibration": "Uncalibrated trained head",
+    "evidence": [
+      {
+        "id": "p1",
+        "page": 1,
+        "text": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.",
+        "language": "de",
+        "truncated": false
+      },
+      {
+        "id": "p2",
+        "page": 2,
+        "text": "La proposition prévoit une contribution annuelle de 100 francs.",
+        "language": "fr",
+        "truncated": false
+      },
+      {
+        "id": "p3",
+        "page": 3,
+        "text": "La proposta prevede un contributo annuo di 100 franchi.",
+        "language": "it",
+        "truncated": false
+      }
+    ],
+    "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+    "document_id": "synthetic-demo-only",
+    "context_tokens": 167,
+    "reference_token_cap": 4096,
+    "truncated": false,
+    "model_input_premise": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.\n\nLa proposition prévoit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+    "evidence_prefix_alignment_verified": true,
+    "latency_seconds": 13.959580956000082,
+    "model": "swiss-ai/Apertus-8B-Instruct-2509",
+    "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+    "head_experiment": "apertus-option-head-4096-v1",
+    "method": "frozen_option_logits",
+    "retrieval": "full",
+    "precision": "bfloat16",
+    "device": "cpu"
+  },
+  "official_class_semantics_verified": false,
+  "macro_f1": null,
+  "compute_cost": 0.0
+}

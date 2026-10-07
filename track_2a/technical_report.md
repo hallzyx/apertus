@@ -1,46 +1,16 @@
 # Technical report — Apertus Evidence Lab
 
-Track 2A · OST · Hack Apertus Online. **Research checkpoint, not final submission.**
+Track 2A · OST · Hack Apertus. Research results on a frozen internal validation split; official submission compliance is pending the challenge specification.
 
-## 1. Problem and current result
+## 1. Result and architecture
 
-The goal is multilingual three-class NLI grounded in Swiss voting booklets, with
-relevant source evidence and efficient Apertus inference. The official data adapter,
-evaluation pipeline, leakage-aware partitions and Docker application are implemented.
-No Apertus inference run has executed yet. No claim of improved Macro-F1, calibrated
-Apertus confidence or final challenge readiness is made.
+Real original Apertus 8B inference on an RTX 4090 scored **0.451653 / 0.453510 Macro-F1** using 1,024 / 4,096-token supplied-reference caps. A small CPU classifier trained on the three Apertus option logits from just 30 balanced training rows improved these scores to **0.689366 / 0.743242**, respectively. This supports the decision-head hypothesis quantitatively; it does not establish official challenge performance.
 
-A CPU training-majority statistical floor scored **0.158379 Macro-F1** on 276 strict
-validation examples. This validates evaluator execution on real data; it is not an
-Apertus model or a submission architecture. The full final test partition is unscored.
+The current research pipeline is: supplied reference and multilingual claim → official Apertus chat template → original BF16 Apertus frozen inference → A/B/C option logits → training-only standardized multinomial linear classifier → numeric class. No replacement language model, remote model code, weight updates or final-test evaluation is used. Classification does not depend on explanation generation.
 
-## 2. Architecture and Apertus usage
+A larger frozen-feature experiment is in progress: cache option logits and 4,096-dimensional last assistant-prefix hidden representations for all 902 training and 276 validation rows at both context caps. Choose regularization using connected-document grouped training OOF Macro-F1, then fit scalar temperature using training OOF NLL only. Run downstream heads on CPU. Few independent groups limit uncertainty and calibration conclusions.
 
-Input JSON/text/PDF → passage extraction with provenance → candidate context selector
-→ Apertus OpenAI-compatible inference endpoint → strict JSON decision → independent
-metric evaluation and append-only experiment registry.
-
-Implemented candidates: provided-reference context, bounded full context for actual
-full documents, true gold evidence when annotated, BM25 and optional lexical
-diversification. Prompted and JSON-schema-constrained output paths exist. Evidence
-and claim are sent as data, with multilingual semantic/negation/numerical instructions.
-Invalid or truncated generation fails rather than being converted to a default class.
-Explanation generation is not required for classification.
-
-No context method has been selected empirically as the final architecture. Dense
-retrieval, hybrid retrieval, decomposition, direct class-logit scoring, frozen heads,
-QLoRA and adaptive computation remain unrun hypotheses. They will be added only after
-baseline comparisons demonstrate a useful reason.
-
-Public fallback model identified: `swiss-ai/Apertus-8B-Instruct-2509`, revision
-`b946d40447b2b597999b9c86d44bee0b452c919f`, Apache-2.0. Its model card requires
-Transformers >=4.56.0; config specifies 32 layers, hidden dimension 4096,
-8 KV heads and a 65,536-position maximum. Model weights have not been downloaded.
-`Apertus-v1.5-8B` was also inspected, but config access without authentication
-returned HTTP 401. The public 8B fallback avoids making a new gated credential
-an unconditional prerequisite. Exact serving support, quantization and memory must
-be verified before renting a GPU. Never assume the published maximum context fits
-24 GB VRAM; use the actual tokenizer and measured KV/weight/runtime memory.
+The public model is `swiss-ai/Apertus-8B-Instruct-2509`, immutable revision `b946d40447b2b597999b9c86d44bee0b452c919f`. All four original BF16 shards are verified against official Git LFS SHA-256 metadata. GPU stack: Torch 2.8.0+cu126, Transformers 4.56.2, SDPA, native PyTorch XIELU fallback, seed 42. Pinned image digest and exact source commits are in experiment records. No 70B, A100/H100 or QLoRA expenditure is justified yet.
 
 ## 3. Official dataset and methodology
 
@@ -104,152 +74,58 @@ results before claiming robust model improvements. With only three validation
 dates, uncertainty must be assessed at booklet level, not by treating rows as
 independent observations.
 
-## 5. Evaluation and measured floor
 
-Macro-F1 is the arithmetic mean of F1 for fixed classes 0/1/2, with absent/undefined
-class F1 set to zero. The evaluator reports per-class support, confusion matrices,
-claim-language and language-pair slices, and cross-lingual subsets. Exact ID matching
-and dataset fingerprints are required. Empty runs cannot pass.
+## 5. Evaluation and comparisons
 
-Prompt-token usage is the inference server's observed prompt-token count, including
-system prompt, evidence and claim. Missing usage remains null; byte caps are not
-token counts. Latency measures context selection plus endpoint request/parsing.
-Evidence metrics require actual annotated passage IDs and otherwise remain null.
-ECE (10 equal-width bins), multiclass Brier score and NLL require normalized real
-probabilities. Generated labels do not manufacture probabilities.
+Macro-F1 averages fixed classes 0/1/2; undefined class F1 is zero. Exact prediction IDs and dataset fingerprints are required. The evaluator also reports per-class F1, confusion matrices, DE/FR/IT and language-pair slices, cross-lingual performance, context tokens, latency, ECE with ten equal-width bins, multiclass Brier and NLL when real probabilities exist. Missing gold evidence metrics remain null.
 
-| Setup | Validation Macro-F1 | Status |
-|---|---:|---|
-| Training-majority CPU floor | 0.158379 | Executed; not Apertus; no semantic inference |
-| A: maximal practical full booklet → Apertus 8B | — | Unrun: endpoint and full PDFs unavailable; premise scope needs confirmation |
-| B: true gold evidence → Apertus 8B | — | Unrun: gold annotation not provided in current source |
-| Provided reference → Apertus 8B | — | Unrun: secure GPU/endpoint and verified class mapping needed |
-| BM25 → Apertus 8B | — | Implemented candidate, not evaluated |
-| Frozen representations / QLoRA / adaptive inference | — | No GO evidence; not started |
+All complete real OST comparisons below use the same 276 validation rows. The final 310-row test partition remains untouched. Context tokens include the system, claim and official chat template. GPU latency covers tokenization and inference; head latency adds a separately timed CPU head, and is not a measurement of an integrated live service.
 
-The floor predicts class 0 because it is the training majority, using training-only
-class priors. Validation accuracy is 0.311594; per-class F1 is
-0.475138 / 0 / 0. Per-language Macro-F1: DE 0.146032, FR 0.183575,
-IT 0.140056. Cross-lingual Macro-F1 is 0.153846 on 190 examples.
-Prior calibration: ECE 0.039847, Brier 0.668201, NLL 1.100875.
-This weak constant predictor illustrates why low ECE alone does not establish
-useful decisions. It consumes no LLM tokens and its CPU assignment timing is not
-an Apertus latency comparison.
+| Experiment | Validation Macro-F1 | Mean context tokens | Mean inference seconds |
+|---|---:|---:|---:|
+| cpu-majority-v1 | 0.158379 | 0 | 3.1203985616335506e-07 |
+| apertus-8b-gpu-reference-1024-v1 | 0.451653 | 983.6884057971015 | 0.15632816332230426 |
+| apertus-8b-gpu-reference-4096-v1 | 0.453510 | 1996.1485507246377 | 0.32803798428115744 |
+| apertus-option-head-1024-v1 | 0.689366 | 983.6884057971015 | 0.15646711742012973 |
+| apertus-option-head-4096-v1 | 0.743242 | 1996.1485507246377 | 0.32822530838622854 |
 
-Artifacts and full metrics: `experiments/cpu-majority-v1/`. Experiment code commit:
-`3b203db` (full SHA in experiment record). Registry includes started/completed events;
-failed real model runs also retain their failure status and partial predictions.
-There are no unreported successful Apertus runs.
+The raw baselines fit the semantic A/B/C to numeric correspondence exclusively on 30 training rows: [0,2,1]. This is supervised correspondence, not independent verification of official class names. Raw option scoring retains restricted logits and full-vocabulary greedy first-token outputs; it does not manufacture calibrated probabilities.
 
-## 6. Compute budget and lifecycle
+The 30-row heads use fixed C=1, row-centered option logits, train-only StandardScaler and multinomial L2 logistic regression. Their posterior probabilities are **uncalibrated**: 30 sampled rows do not permit a valid three-class connected-group OOF calibration split. The 1,024-token head reaches DE 0.649891 / FR 0.607866 / IT 0.785680, cross-lingual 0.683547. Its ECE is 0.099514, Brier 0.434337 and NLL 0.809435. Full metrics for every run are committed, including negative and interrupted experiments.
 
-Hard Vast budget USD 10; task-estimated spend USD 0; actual account spend unknown.
-No paid instance has been created by this task. Account-wide instance absence is
-not verified because `VAST_API_KEY` has no saved secure binding and is absent in
-the runtime. The chat-supplied credential was not stored or used; replace it using
-the secure environment settings.
+Expanding the raw context from 1,024 to 4,096 tokens raises Macro-F1 by only 0.001857 while mean latency approximately doubles. The descriptive connected-group bootstrap interval is [0,0.002514], based on only **two independent validation components**; it is not strong evidence of statistical significance. The trained 30-row head gains 0.053877 with longer context, so both caps remain candidates for full training.
 
-`experiments/budget.json` tracks totals, task instance IDs and a USD 2 reserve.
-The `budget-plan` command checks finite costs, runtime, disk, transfer, a margin
-and remaining research budget before any rental. It does not create an instance.
-Current offers, balance, actual storage charges and recovery margins must be
-verified through Vast before spending. Prefer a sufficient 4090/5090-class offer;
-no H100/A100/70B cost is justified by current evidence.
+Full-booklet baseline A and annotated-minimal-gold baseline B are **unrun**: the available source contains supplied references and no gold passage labels, and the premise scope is unresolved. The source references must not be renamed gold evidence. BM25/diversification are implemented and functionally tested, but unscored as retrieval architectures. Dense/hybrid retrieval, decomposition, fine-tuning and adaptive routing are unrun; retain no unsupported performance claims.
 
-For any future task-created instance: record its ID, GPU, price and purpose;
-set a bounded experiment; transfer and verify results in durable storage; destroy
-the instance; verify its absence through the API. Do not touch unrelated user
-instances. Never treat stopping as destruction or leave GPU idle during CPU work.
+## 6. Compute cost and lifecycle
 
-## 7. Reproducibility and software validation
+Hard Vast budget: USD 10, with USD 2 recovery reserve. `experiments/budget.json` is the authoritative timestamped ledger. Two prior RTX 4090 leases were destroyed and their absence verified through the paginated v1 API. Total observed credit reduction after these leases was approximately **USD 0.1501**; billing can settle asynchronously. The current frozen-cache lease is bounded at **USD 0.8284** including a conservative two-hour runtime, 45 GB storage and 25 GB model/data download. It must be destroyed after results are persisted and verified.
 
-The template layout is retained. `make run` starts the Docker workbench; image
-base and PDF package are pinned, with dependency hash and TLS verification enabled.
-The cloud helper resolves runtime proxy DNS and mounts trusted CA configuration,
-without committing secrets or hard-coded proxy addresses. Tested install_script and
-start_skill contents, network additions and the missing secure Vast requirement
-are saved in the environment draft. They are not proof of publication or fresh-task
-restoration.
+The first lease failed during provisioning when S3 logs were blocked; no GPU score is claimed. The second completed both original Apertus baselines. A long Docker-log base64 line was truncated; its archive checksum failed and that archive was rejected. Twelve JSON/JSONL results were recovered via stopped-instance UTF-8 `cat`, checked for valid JSON, exact validation IDs and source fingerprints, and metrics recomputed. `vast-provision-v2/artifact_integrity.json` records these checks honestly, without claiming the rejected archive hash passed.
 
-Validation completed so far: 36 host tests, including PDF extraction/provenance,
-grouped split and duplicate-claim isolation, metric fixtures, schema-constrained
-request construction, actual HTTP client/evaluator round trip with a **synthetic
-mock endpoint**, and rejection of stale predictions. All 36 tests also passed inside Docker with no skips. Clean-checkout `make run`,
-DE/FR/IT retrieval and original-page provenance passed after a restart using current
-code. Evidence is recorded in `experiments/software_validation.json`. Task-created
-local test containers were removed after validation.
+The new feature transport writes short-line base64 parts with source-side per-part and whole-archive SHA-256 checks. Results are persisted to GitHub before instance destruction. Temporary stopping is used only for recovery and never treated as cleanup. Authentication is securely bound to the Vast HTTPS destination and never copied into GPU instances or Git.
 
-These are software checks, not evidence that real Apertus inference or official
-challenge accuracy works. The Docker UI's health response explicitly distinguishes
-configuration presence from model connectivity and benchmark validation.
+## 7. Reproducibility and application validation
 
-## 8. Real Apertus CPU experiments
+`make run` starts the lightweight Docker workbench. The Python image and PDF dependency are pinned, package hashes and TLS verified. The cloud Docker helper handles trusted proxy CA configuration without hard-coded proxy addresses or committed credentials. The Docker app processes JSON/text/PDF, returns lexical evidence with exact available provenance, and supports an Apertus OpenAI-compatible endpoint with a verified official label mapping. It fails clearly when the model is unavailable; it does not invent classifications or confidence.
 
-Original `swiss-ai/Apertus-8B-Instruct-2509`, revision
-`b946d40447b2b597999b9c86d44bee0b452c919f`, has now executed on this
-machine. All four original BF16 weight shards were checked against official LFS
-SHA-256 metadata. The CPU stack is Torch 2.8.0+cpu / Transformers 4.56.2,
-SDPA, four threads, seed 42, no remote model code. Dependencies are hash locked
-in `requirements-cpu.lock`; `scripts/download_cpu_model.py` reproduces download
-and checksum verification including the official chat template.
+36 host tests and 36 Docker tests passed without skips, covering PDF/provenance, connected splitting, duplicate isolation, metric fixtures, strict outputs and a **synthetic HTTP endpoint**. A clean checkout, Docker startup/restart and DE/FR/IT retrieval were verified. These software checks are separate from the actual GPU scores above. Task-created validation containers were removed. See `experiments/software_validation.json`.
 
-The completed three-case cross-language synthetic diagnostic achieved **2/3**
-for both greedy generation and constrained A/B/C first-token choice. It failed
-the FR-premise / IT-claim contradiction case by returning neutral. Mean prompt
-length was 130 tokens and measured mean inference latency was **3.663 seconds**.
-These are real Apertus outputs, but synthetic diagnostic accuracy is not an OST
-score. Full artifacts and candid script/checkout provenance are in
-`experiments/apertus-8b-cpu-smoke-v1/`. Vast rental expenditure is zero.
+Optional real CPU inference uses hash-locked `requirements-cpu.lock` and the pinned original model downloader. Optional lightweight head training uses `requirements-head.lock`. Existing nonempty experiment directories are rejected. Dataset/model hashes and source revision are retained. Large raw data and weights are downloaded and verified separately rather than assumed to be present in a clean checkout.
 
-A real OST CPU run was launched from commit `a4091d0` against the frozen strict
-validation partition of 276 rows. A correspondence between semantic options and
-numeric labels is fitted exclusively on 30 balanced training examples; this is
-supervision and does not verify the official class-name convention. The prompt
-uses the supplied reference, capped to its first 1,024 tokens, not a complete
-booklet or annotated gold evidence. All truncation and raw first-token logits
-are retained; no calibrated probabilities are asserted. Long-reference prefill
-has measured roughly 15–40 seconds per training example, substantially slower
-than the short smoke. The environment restart interrupted this run after 30 training and 19 validation
-examples; partial artifacts are preserved and its status is **interrupted**;
-there is no completed validation Macro-F1 or final-test result to report. Inspect
-`experiments/apertus-8b-cpu-reference-1024-v1/experiment.json` for the actual
-state, and do not score an unfinished run as if it covered all validation rows.
+## 8. Negative results and limitations
 
-## 9. Blockers, limitations and next research decision
+The real three-case cross-language CPU diagnostic scored 2/3, including a French-premise/Italian-claim contradiction error, at 130 mean prompt tokens and 3.663 seconds. It is synthetic and not an OST score. A long CPU OST run was interrupted by environment publication after 30 training and 19 validation rows; partial predictions are preserved, and no full-run score is reported.
 
-Secure Vast authentication is now verified (HTTP 200). The account initially
-reported USD 10 credit. A task-created RTX 4090 (instance 54573150, pinned CUDA
-image, USD 0.40233/hour including 45 GB storage) was provisioned for paired
-1,024/4,096-token reference baselines. Its last observed state was GPU preparation;
-no GPU inference was verified. S3 logs were rejected by the runtime proxy and SSH
-transport was unavailable. The attempt was aborted, its metadata pushed, and the
-instance destroyed; API v1 confirmed an empty account instance list. See
-`experiments/vast-provision-v1/` and `budget.json` for timestamped cleanup and credit
-observations. Required `s3.amazonaws.com` and `ssh8.vast.ai` destinations are saved
-in the environment draft but require user application before another rental. The public original Apertus 8B model has been downloaded with verified official
-weight hashes and executed on CPU; no GPU or serving endpoint is prepared.
-The official event guide/terms URLs return HTTP 403 (error 1010). Multiple official
-booklet PDF URLs were probed and returned HTTP 503 upstream connection failures.
-The dataset has no minimal gold-evidence labels or exact page provenance.
+The official event guide/terms returned HTTP 403; booklet PDF probes returned HTTP 503. The dataset card does not independently define official numeric semantics, exact submission schema, admissible premise scope or gold evidence. These block an assertion of challenge compliance, full/gold comparison and evidence Recall@k. The model source is public and weights verified; secure Vast authentication and API/S3 transport now work. SSH is unavailable, but is unnecessary for the working API recovery path.
 
-Required next actions: apply the saved log/SSH network destinations; supply/access
-the full OST specification, class mapping and official evaluator requirements;
-confirm whether evaluation is against supplied reference excerpts or complete
-booklets and whether gold evidence exists. Then cost and run the cheapest paired
-8B baseline. No training, representation-head or fine-tuning GO decision is
-supported until those baseline results exist.
-
-The CLI and workbench are research scaffolding, not a completed challenge-compliant
-submission. PDF OCR, official interface/schema compliance, completed OST Apertus metrics,
-final system selection, final report, quantitative demo comparison and account-wide
-billable-resource verification remain outstanding.
+The training split contains only two connected components (838/64 rows); validation also contains two. Reported row-level scores are descriptive. Duplicate/translation sensitivity, calibration reliability and final-test generalization require careful assessment. OCR is not implemented. The default Docker workbench needs a configured inference endpoint for live classification. No full-booklet accuracy, gold retrieval score, official class-name verification or official final submission is claimed.
 
 ## References and licensing
 
+- [OST dataset](https://huggingface.co/datasets/OSTswiss/MNLIoverSwissVotingBooklets), revision and hashes above; metadata MIT.
+- [Apertus original 8B](https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509), immutable revision above; Apache-2.0.
 - [Official template](https://github.com/HackApertus/project-template), revision `7f2382275461baf3fa6c8855d157d86abffe9f0e`.
-- [OST source dataset](https://huggingface.co/datasets/OSTswiss/MNLIoverSwissVotingBooklets), revision recorded above.
-- [Public Apertus 8B model](https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509), revision recorded above; model card/config cached in docs.
-- [Official challenge guide](https://hackapertus.notion.site/getting-started-guide-onlinehack), inaccessible in this runtime.
+- [Official guide](https://hackapertus.notion.site/getting-started-guide-onlinehack), inaccessible from this runtime.
 
-Code Apache-2.0; this report CC-BY-4.0 following the template. OST source metadata
-MIT; pypdf BSD-3-Clause. Event-specific terms must be checked before submission.
+Code Apache-2.0; report CC-BY-4.0 following the template; pypdf BSD-3-Clause. Event-specific terms need verification before submission.

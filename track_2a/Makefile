@@ -10,7 +10,7 @@ build:
 run: build
 	$(MAKE) start
 start:
-	@if [ -n "$$HTTPS_PROXY" ] && command -v python >/dev/null && [ -z "$(DOCKER_RUN_ARGS)" ]; then bash scripts/cloud-docker.sh start; else docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e OST_LABEL_MAP $(IMAGE) serve --host 0.0.0.0 --port 8000; fi
+	@if [ -n "$$HTTPS_PROXY" ] && command -v python >/dev/null && [ -z "$(DOCKER_RUN_ARGS)" ]; then bash scripts/cloud-docker.sh start; else docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 --add-host host.docker.internal:host-gateway -e FROZEN_BASE_URL -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e OST_LABEL_MAP $(IMAGE) serve --host 0.0.0.0 --port 8000; fi
 test:
 	PYTHONPATH=src $(PYTHON) -m unittest discover -s tests -v
 smoke: build

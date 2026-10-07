@@ -2,13 +2,13 @@
 
 ## Status
 
-The pinned official OST dataset is available. A training-majority CPU statistical
-floor has been evaluated on the strict validation split. A real Apertus 8B CPU synthetic diagnostic has completed (2/3 correct). A real OST
-CPU run was interrupted by environment restart after 30 training and 19 validation
-rows. Vast authentication now works; the first CUDA provisioning attempt was
-aborted because S3 logs/SSH transport were unavailable under the runtime network
-policy, and the task instance was destroyed with API absence verification. Unit tests use synthetic fixtures and mocked model
-transport; their success is not OST accuracy or evidence of Apertus performance.
+Real original Apertus BF16 RTX 4090 inference has completed on all 276 strict
+validation examples at 1,024/4,096-token provided-reference caps. Macro-F1 is
+0.451653/0.453510. A train-only 30-row standardized option-logit classifier raises
+these to 0.689366/0.743242; this passes the cheap frozen-decision GO gate.
+A full 902-training-row option/hidden cache and grouped CPU heads are the next
+bounded experiment. Exact artifacts, failures and cleanup are in `experiments/`.
+The final 310-row test is untouched. Official full/gold scope is still unresolved.
 
 ## First required runs
 
@@ -32,11 +32,10 @@ transport; their success is not OST accuracy or evidence of Apertus performance.
 8. Compare prompted and constrained output; structured-output support must be
    verified, not silently replaced. Direct class-logit scoring requires a verified
    scoring path and tokenization of the full label alternatives.
-9. Frozen Apertus representations are a hypothesis, not an implemented improvement.
+9. Frozen option heads have measured improvements; hidden representations remain an experiment.
    Cache representations with dataset/model/prompt fingerprints before renting for
    another run. Train heads on CPU; calibrate using held-out training groups.
-10. QLoRA and adaptive retrieval require a quantitative GO decision. No fine-tuning
-    has been authorized by empirical results yet. At most two initial tuning runs.
+10. QLoRA and adaptive retrieval require a quantitative GO decision. The cheap head GO result does not require fine-tuning; compare full frozen heads first. At most two initial tuning runs.
 
 ## Existing baseline runner
 
@@ -58,11 +57,10 @@ Store actual model revision, GPU/stack and conclusion in experiment notes.
 
 ## Budget and lifecycle
 
-`experiments/budget.json` starts at USD 10. Current estimated spend is zero;
-actual account spend is unknown without authenticated account inspection. The empty
-active-instance list means this task has created none, not a verified empty account.
+`experiments/budget.json` starts at USD 10 and records current reservations and observed credit reduction.
+Read timestamped active lease/cleanup observations; billing may settle asynchronously.
 
-Use the official Vast API `https://console.vast.ai/api/v0/`, with the secret injected
+Use the official Vast API `https://console.vast.ai/api/v0/` (paginated instance lists use `/api/v1/instances/`), with the secret injected
 as `VAST_API_KEY`. Keys must never be printed or stored. Proxy-bound credentials
 must stay in Authorization headers to their declared destination, not SSH commands
 or request query strings. Before creation inspect account balance, existing instances,

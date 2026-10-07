@@ -107,3 +107,31 @@ def predict(row, client, mapping, mode="bm25", k=5, max_bytes=48000, method="pro
     except (KeyError,IndexError,TypeError,ValueError) as e:
         raise ValueError("Model did not return a complete valid three-class decision; fail rather than invent a label") from e
     return {"id":row.get("id"), "label":label,"class_name":mapping[str(label)],"probabilities":None,"evidence":selected,"evidence_ids":[p["id"] for p in selected],"context_tokens":response.get("usage",{}).get("prompt_tokens"),"context_token_definition":"Server-reported prompt tokens including system message and claim; null if unavailable", "context_bytes":len(context.encode()),"latency_seconds":time.perf_counter()-start,"model":client.model,"method":method,"retrieval":mode,"truncated":any(p["truncated"] for p in selected) or (mode=="full" and len(selected)<len(row["passages"])),"max_context_bytes":max_bytes}
+
+
+class FrozenServiceClient:
+    """Dedicated actual-head protocol, separate from chat generation endpoints."""
+    def __init__(self,base_url=None):
+        self.base_url=(base_url or os.environ.get('FROZEN_BASE_URL','')).rstrip('/')
+        u=urllib.parse.urlsplit(self.base_url)
+        if u.scheme not in ('http','https') or not u.hostname or u.username or u.password or u.query or u.fragment:
+            raise ValueError('FROZEN_BASE_URL must be a clean HTTP(S) endpoint')
+        if u.scheme=='http' and u.hostname not in ('localhost','127.0.0.1','::1','host.docker.internal'):
+            raise ValueError('Remote frozen endpoints require HTTPS')
+
+    def predict(self,document,claim):
+        request=urllib.request.Request(self.base_url+'/nli',
+            data=json.dumps({'document':document,'claim':claim,'context':'full'},ensure_ascii=False).encode(),
+            headers={'Content-Type':'application/json'})
+        try:
+            opener = urllib.request.build_opener(urllib.request.ProxyHandler({})) if urllib.parse.urlsplit(self.base_url).scheme == 'http' else urllib.request.build_opener()
+            with opener.open(request,timeout=180) as response:result=json.load(response)
+        except (urllib.error.URLError,TimeoutError):
+            raise RuntimeError('Frozen Apertus backend unavailable; no prediction produced') from None
+        if type(result.get('label')) is not int or result['label'] not in (0,1,2) or 'apertus' not in str(result.get('model','')).lower():
+            raise ValueError('Invalid frozen Apertus response')
+        probability=result.get('probabilities')
+        import math
+        if not isinstance(probability,list) or len(probability)!=3 or not all(isinstance(v,(int,float)) and math.isfinite(v) and 0<=v<=1 for v in probability) or abs(sum(probability)-1)>1e-6:
+            raise ValueError('Invalid frozen probabilities')
+        return result

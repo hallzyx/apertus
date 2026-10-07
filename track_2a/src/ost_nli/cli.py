@@ -38,6 +38,7 @@ def main():
     p = subs.add_parser("split");p.add_argument("dataset");p.add_argument("--output-dir",required=True);p.add_argument("--seed",type=int,default=42);p.add_argument("--validation-fraction",type=float,default=.2);p.add_argument("--test-fraction",type=float,default=.2)
     p = subs.add_parser("evaluate");p.add_argument("dataset");p.add_argument("predictions");p.add_argument("--output")
     p = subs.add_parser("retrieve");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--k",type=int,default=5);p.add_argument("--diversify",action="store_true")
+    p = subs.add_parser("predict-frozen");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--model-dir",required=True);p.add_argument("--head-dir",required=True);p.add_argument("--device",choices=["cpu","cuda"],default="cpu");p.add_argument("--context",choices=["full","bm25"],default="full");p.add_argument("--k",type=int,default=5)
     p = subs.add_parser("predict");p.add_argument("booklet");p.add_argument("claim");model_options(p)
     p = subs.add_parser("experiment");p.add_argument("dataset");p.add_argument("--id",required=True);p.add_argument("--split-name",required=True,choices=["train","validation","test"]);p.add_argument("--output-dir",required=True);p.add_argument("--registry",default="experiments/registry.jsonl");p.add_argument("--estimated-cost",type=float,default=0);p.add_argument("--gpu",default="unknown");p.add_argument("--notes",default="");model_options(p)
     p = subs.add_parser("serve");p.add_argument("--host",default="127.0.0.1");p.add_argument("--port",type=int,default=8000)
@@ -91,6 +92,11 @@ def main():
             emit(evaluate(rows,bundle["predictions"]),args.output)
         elif args.command == "retrieve":
             emit(retrieve(load_document(args.booklet)["passages"],args.claim,args.k,args.diversify))
+        elif args.command == "predict-frozen":
+            from .frozen import FrozenApertus
+            mapping = label_map() if os.environ.get("OST_LABEL_MAP") else None
+            emit(FrozenApertus(args.model_dir,args.head_dir,args.device).predict(
+                 load_document(args.booklet),args.claim,args.context,args.k,mapping))
         elif args.command == "predict":
             if args.context == "gold":
                 raise ValueError("Gold evidence is an evaluation diagnostic, unavailable in real CLI input")
