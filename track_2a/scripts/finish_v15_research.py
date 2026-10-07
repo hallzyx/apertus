@@ -37,7 +37,7 @@ def main():
         'files':[{'path':f.name,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in sorted(cache.iterdir())]}
     save(cache/'experiment.json',metadata)
     subprocess.run(['python','-m','pip','install','--no-cache-dir','--require-hashes',
-        '-r','track_2a/requirements-head.lock'],check=True)
+        '-r','track_2a/requirements-head-v15.lock'],check=True)
     heads=[]
     for features in ['option_logits','hidden']:
         headout=repo/f'track_2a/experiments/apertus-v15-{context}-{features}-v1'
