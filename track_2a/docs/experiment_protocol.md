@@ -1,89 +1,88 @@
-# Updated contract and next real runs
+# Apertus v1.5 booklet-grounded research protocol
 
-Follow docs/challenge_contract.md. Production requires Apertus v1.5 and full
-booklet + claim; old 2509 reference-only scores are historical diagnostics.
-CLI/evidence schema are project choices, not blockers. Devpost is unnecessary.
-Authenticate v1.5 weights or verify a v1.5 endpoint before any rental.
-Use train-only fitting; choose architecture on validation, freeze it, and run
-internal holdout NLI once. Real PDF retrieval diagnostics are committed separately.
+## Fixed task and inputs
 
-The historical protocol below records earlier research; its scope ambiguity
-was resolved by the supplied contract.
+Follow challenge_contract.md. Production receives a voting booklet PDF and claim
+only. Classes are 0 entailment, 1 neutral, 2 contradiction. DE/FR/IT and all nine
+language pairs are required. References are oracle diagnostics, never production
+inputs. CLI/evidence schemas are project choices; Devpost is unnecessary.
 
-# Research protocol
+Use the pinned native Apertus v1.5 revision a411d838600baf0e3635a3daf66fb7c55fc97bb6
+and official Transformers fork 3797303dda74844e3d1f8977ff5518bb91f818b4. Verify every
+original weight shard before loading. BF16 text and supported eager vision/audio
+tokenizers are used without quantization. Cached weights require no HF credential.
+The current model weights remain frozen; a trained decision head is distinct from
+Apertus fine-tuning or LoRA.
 
-## Status
+The canonical split is 902 train / 276 validation / 310 internal holdout. Grouping
+connects voting dates sharing normalized identical claims. All source PDFs must
+match pinned original hashes; no damaged or replacement PDF is accepted. Validation
+and test must be complete and fingerprint-identical. If public source availability
+still removes training PDFs, only the explicit bootstrap training-subset flag may
+be used: canonical IDs/claims/labels/groups remain unchanged, exclusions must match
+the PDF audit, and the exact selected/missing IDs and count must be reported.
+Selection depends on source availability, never training difficulty or test labels.
 
-Real original Apertus BF16 RTX 4090 inference has completed on all 276 strict
-validation examples at 1,024/4,096-token provided-reference caps. Macro-F1 is
-0.451653/0.453510. A train-only 30-row standardized option-logit classifier raises
-these to 0.689366/0.743242; this passes the cheap frozen-decision GO gate.
-The complete 902-training-row option/hidden cache and four grouped CPU heads
-are verified. Selected hidden4096 scores 0.970353 (deduplicated 0.965299),
-with training-only OOF temperature. Hidden1024 scores 0.958790 at about half
-the encoder latency. All three task GPU leases are destroyed, API verified;
-total observed credit reduction is USD 0.6372 (billing can settle asynchronously). Exact artifacts, failures and cleanup are in `experiments/`.
-The final 310-row test is untouched. Official full/gold scope is still unresolved.
+## Predeclared comparison and selection
 
-## First required runs
+1. Prepare plain-extraction full-booklet rows with source pages, offsets and SHA-256.
+2. Freeze full/capped, oracle/reference, BM25, E5 dense and hybrid k=5 contexts.
+   References are available only for the validation oracle experiment. Retrieval
+   reads booklet and claim, never the label/reference. Record byte/token truncation.
+3. On all 276 validation IDs, compare native restricted class scoring and prompted
+   JSON decisions for each context. Record Macro-F1, class/language/pair/cross-language
+   metrics, tokens and model/retrieval time. Invalid prompt outputs are reported
+   separately; a subset score is never presented as full output coverage.
+4. Select the highest validation Macro-F1 booklet-only class-score context, breaking
+   ties by fewer tokens. Exclude oracle contexts from production selection.
+5. Extract frozen Apertus option-logit and final hidden features for training and
+   that validation context. Fit two standardized logistic heads on train only, with
+   C in {0.001, 0.01, 0.1, 1}. Use up to five document/duplicate-claim grouped OOF
+   folds, requiring all three classes in fitting folds. Select C and temperature
+   from training OOF results; report actual group counts and source limitations.
+6. Compare both heads with the best complete valid booklet-only validation baseline.
+   The fixed head GO gate requires at least +0.02 Macro-F1. Otherwise retain the
+   best baseline. No LoRA, weight update or additional model is implied by this gate.
+7. Freeze the selected model/context/decision method and evaluate all 310 internal
+   holdout IDs once for NLI. Never optimize against this result. This is not the
+   organizer's hidden benchmark or an official challenge score.
+8. Exercise the actual public PDF CLI on one holdout example per claim language,
+   with PDF + claim only. Require labels to match frozen predictions and exact
+   quote/page provenance. Export source-checksummed results before lease destruction.
 
-1. Field audit and provided-reference adapter completed. Confirm official class
-   semantics, evidence interpretation and any required official evaluation protocol.
-2. Strict frozen manifest completed: 902/276/310 examples. Review translated
-   paraphrases and neutral claims' source booklet identities before training.
-3. Obtain verified Apertus model ID/revision and inference stack. Inspect context
-   window, quantization support, tokenizer, weights license and memory requirements.
-4. Rent only after a current offer has been costed against the budget. Include
-   downloads, warm-up, GPU rental, storage and transfer costs. Maintain a reserve.
-5. Obtain full PDFs and gold annotations first. reference_string is a provided
-   premise, not annotated minimal evidence. Run full context (A) and gold (B) on identical
-   validation example IDs, prompt/class mapping, model revision and precision.
-   Report document truncation and gold-empty counts. Use paired per-booklet bootstrap
-   intervals before claiming a meaningful difference.
-6. Record A vs B diagnostic: retrieval bottleneck only if evidence supports it;
-   gold-context failure may instead imply NLI/prompt/data-label issues.
-7. Measure BM25 and diversification next. Add multilingual dense/hybrid retrieval
-   only when errors justify it; compare recall, F1, actual tokens and latency.
-8. Compare prompted and constrained output; structured-output support must be
-   verified, not silently replaced. Direct class-logit scoring requires a verified
-   scoring path and tokenization of the full label alternatives.
-9. Frozen option heads have measured improvements; hidden representations improve Macro-F1 to 0.958790/0.970353.
-   Cache representations with dataset/model/prompt fingerprints before renting for
-   another run. Train heads on CPU; calibrate using held-out training groups.
-10. QLoRA and adaptive retrieval require a quantitative GO decision. The cheap head GO result does not require fine-tuning; the full frozen head is selected. No further QLoRA/70B/adaptive-routing spend is justified before official scope is resolved. At most two initial tuning runs if future evidence warrants them.
+The existing 5-gram reference-overlap retrieval diagnostics are not organizer
+semantic evidence scores, exact gold Recall@k, or NLI accuracy. Latency excludes
+first download, model loading and PDF parsing; separate retrieval and model timing
+is retained. Small independent group counts limit generalization and calibration.
 
-## Existing baseline runner
+## Execution and artifacts
 
-Run in `track_2a/`, with endpoint variables and verified mapping. The following
-full/gold commands require actual full-booklet/gold-annotated inputs. The provided-
-reference baseline currently available is documented in the README:
+Public scripts implement the sequence: remote_v15_bootstrap.py,
+prepare_booklets.py, prepare_v15_inputs.py, vast_v15_worker.sh,
+run_v15_experiments.py, train_v15_head.py and finish_v15_research.py.
+The successful source revision and script hashes are recorded in each artifact.
+Outputs are immutable; existing experiment directories cannot be overwritten.
+Completed research exports to experiments/apertus-v15-research-v1 with per-file
+SHA-256 and a source-checksummed archive. Binary features/raw data/weights are ignored
+by Git; JSON heads, predictions, metrics, manifests and negative results are retained.
+Integration checks in v15-access-v1, v15-real-cpu-cli-v1, v15-real-docker-v1 and
+v15-fresh-docker-v1 are real execution checks, not benchmark estimates.
 
-```bash
-PYTHONPATH=src python -m ost_nli experiment FULL_BOOKLET_VALIDATION.jsonl --id A-full --split-name validation --context full --output-dir experiments/artifacts/A-full --gpu ACTUAL_GPU --estimated-cost ACTUAL_ESTIMATE
-PYTHONPATH=src python -m ost_nli experiment GOLD_ANNOTATED_VALIDATION.jsonl --id B-gold --split-name validation --context gold --output-dir experiments/artifacts/B-gold --gpu ACTUAL_GPU --estimated-cost ACTUAL_ESTIMATE
-PYTHONPATH=src python -m ost_nli experiment data/private/splits-strict/validation.jsonl --id C-bm25 --split-name validation --context bm25 --k 5 --output-dir experiments/artifacts/C-bm25 --gpu ACTUAL_GPU --estimated-cost ACTUAL_ESTIMATE
-```
+## Budget and cleanup
 
-These commands are instructions for future real runs, **not executed experiments**.
-Started/completed/failed events are append-only. Partial predictions survive a failed
-run but are not scored as a completed run. Never overwrite an existing run directory.
-Commit code before scientific runs; a dirty working tree is flagged in the registry.
-Store actual model revision, GPU/stack and conclusion in experiment notes.
-
-## Budget and lifecycle
-
-`experiments/budget.json` starts at USD 10 and records current reservations and observed credit reduction.
-Read timestamped active lease/cleanup observations; billing may settle asynchronously.
-
-Use the official Vast API `https://console.vast.ai/api/v0/` (paginated instance lists use `/api/v1/instances/`), with the secret injected
-as `VAST_API_KEY`. Keys must never be printed or stored. Proxy-bound credentials
-must stay in Authorization headers to their declared destination, not SSH commands
-or request query strings. Before creation inspect account balance, existing instances,
-offer hourly price, VRAM, reliability, bandwidth and storage rate. Record the
-instance and spending reservation immediately, with a conservative runtime limit.
-
-Stop rental work before the conservative cost bound crosses USD 10, including storage
-and transfer. Persist results to the repository or verified durable storage **before**
-destroying the instance. Destroy (not merely stop) task-created instances and query
-the API until their absence is confirmed. Do not destroy pre-existing user instances.
-Without an accessible account, no rental or account-wide cleanup claim is permitted.
+Use the official Vast API through the existing VAST_API_KEY binding. Never print
+credentials, dump environments, add keys to source, or pass them in SSH commands.
+Before any rental inspect account balance, task-owned active leases, current offer,
+VRAM, storage/network charges and a bounded automatic destruction deadline.
+The total hard budget is USD 10 with USD 2 reserve. A stopped lease still retains
+storage charges; destroy it after artifacts/caches are verified elsewhere, and
+verify absence using paginated account instance listings. Never destroy unrelated
+user leases. Source/cache recovery may use private provider copy without HF keys;
+wait for destination readiness, then verify all original SHAs. In this task a running
+container needed an official reboot before copied files became visible; stopping
+and restarting is unsafe because resources may become unavailable. The controller
+must still verify results and destroy the final stopped research lease.
+Billing can settle asynchronously; report timestamped observed credit reduction and
+active reservations separately. Current status is experiments/budget.json, not any
+archived lease description. Legacy results and scope assumptions are preserved in
+legacy_experiment_protocol.md and legacy_apertus_2509_report.md.
