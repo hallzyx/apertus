@@ -1,0 +1,69 @@
+{
+  "instance_id": 54575345,
+  "transport": "Authenticated stopped-instance command API: cat individual UTF-8 artifacts; authorized S3 HTTPS reads",
+  "original_archive_sha256": "0495b8d8b5ee2bdb2abd51cfd7b083e15818c38fc60c2384d67d38abebefc9a6",
+  "original_archive_status": "Rejected truncated log payload; binary command transfer did not yield a result. Corrupt archive never used.",
+  "files": [
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-1024-v1/experiment.json",
+      "bytes": 6410,
+      "sha256": "69fc8297bab62ae457653ef27d81161beee0db92d4463bf4e7d8f344a75a17be"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-1024-v1/metrics.json",
+      "bytes": 27348,
+      "sha256": "f8b08e91ffe6c7df820698e98a8e50f28f38cdd73ead1fbd2ad4f192b4760a52"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-1024-v1/learned_mapping.json",
+      "bytes": 320,
+      "sha256": "6d6a6448212454cedc6b151e1ccd40f887086f9e448013558d7aa183d820f641"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-1024-v1/training_scores.jsonl",
+      "bytes": 9359,
+      "sha256": "a71c55a8561d5b6c5d7b122136c557a56bae21444b56054c9308d37de31f5953"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-1024-v1/predictions.jsonl",
+      "bytes": 121292,
+      "sha256": "6a0e87d75d4365379e9ad2f11a60830a47967d0c9783282ae29d2b0205bb6504"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-1024-v1/predictions.json",
+      "bytes": 157246,
+      "sha256": "089173e741014ada519561a29e500f8ec822ee88bb8176b5883f1495dc19864e"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-4096-v1/experiment.json",
+      "bytes": 6380,
+      "sha256": "3c9a169976fc68a558b28d98d27bcd09ea8a9dbb8f56f754137444615be0007c"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-4096-v1/metrics.json",
+      "bytes": 27287,
+      "sha256": "7d16995fbf9851960e82675aeb3e2b095350a2ef783f816724802c0e93a18c49"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-4096-v1/learned_mapping.json",
+      "bytes": 320,
+      "sha256": "6d6a6448212454cedc6b151e1ccd40f887086f9e448013558d7aa183d820f641"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-4096-v1/training_scores.jsonl",
+      "bytes": 9355,
+      "sha256": "15f7ae8b393afd188bdc03fb31fde680033fa13b0dfd446dbb27e152329ece74"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-4096-v1/predictions.jsonl",
+      "bytes": 121241,
+      "sha256": "d2690fb88592cb55b33a2fd651880fa60d55b178bf03b8ebc7359854c2a85328"
+    },
+    {
+      "path": "track_2a/experiments/apertus-8b-gpu-reference-4096-v1/predictions.json",
+      "bytes": 157195,
+      "sha256": "91d582a6e177bc7cbd6649ef320c9ac5a1c8ce0bc2a84ec1dd367fd20e341d7e"
+    }
+  ],
+  "verification": "JSON parse passed; local file hashes recorded for durable artifact integrity. Recompute dataset fingerprints, ID alignment and scientific metrics before accepting results."
+}

@@ -1,0 +1,464 @@
+{
+  "dataset_sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d",
+  "n": 276,
+  "runs": [
+    {
+      "experiment_id": "apertus-8b-gpu-reference-1024-v1",
+      "macro_f1": 0.4516532127561102,
+      "accuracy": 0.5181159420289855,
+      "per_class": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.12790697674418605,
+          "f1": 0.2268041237113402,
+          "support": 86
+        },
+        "1": {
+          "precision": 0.4418604651162791,
+          "recall": 0.9693877551020408,
+          "f1": 0.6070287539936102,
+          "support": 98
+        },
+        "2": {
+          "precision": 0.74,
+          "recall": 0.40217391304347827,
+          "f1": 0.5211267605633803,
+          "support": 92
+        }
+      },
+      "by_language": {
+        "de": {
+          "n": 82,
+          "macro_f1": 0.4023848491933599,
+          "accuracy": 0.47560975609756095,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.13043478260869565,
+              "f1": 0.23076923076923078,
+              "support": 23
+            },
+            "1": {
+              "precision": 0.421875,
+              "recall": 1.0,
+              "f1": 0.5934065934065934,
+              "support": 27
+            },
+            "2": {
+              "precision": 0.6,
+              "recall": 0.28125,
+              "f1": 0.3829787234042553,
+              "support": 32
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              14,
+              6
+            ],
+            [
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              23,
+              9
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 100,
+          "macro_f1": 0.35400303155573926,
+          "accuracy": 0.42,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.07894736842105263,
+              "f1": 0.14634146341463414,
+              "support": 38
+            },
+            "1": {
+              "precision": 0.36904761904761907,
+              "recall": 0.9117647058823529,
+              "f1": 0.5254237288135594,
+              "support": 34
+            },
+            "2": {
+              "precision": 0.6153846153846154,
+              "recall": 0.2857142857142857,
+              "f1": 0.3902439024390244,
+              "support": 28
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              33,
+              2
+            ],
+            [
+              0,
+              31,
+              3
+            ],
+            [
+              0,
+              20,
+              8
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 94,
+          "macro_f1": 0.5952041785375118,
+          "accuracy": 0.6595744680851063,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.2,
+              "f1": 0.3333333333333333,
+              "support": 25
+            },
+            "1": {
+              "precision": 0.5522388059701493,
+              "recall": 1.0,
+              "f1": 0.7115384615384616,
+              "support": 37
+            },
+            "2": {
+              "precision": 0.9090909090909091,
+              "recall": 0.625,
+              "f1": 0.7407407407407407,
+              "support": 32
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              18,
+              2
+            ],
+            [
+              0,
+              37,
+              0
+            ],
+            [
+              0,
+              12,
+              20
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 190,
+        "macro_f1": 0.4553001496548775,
+        "accuracy": 0.5210526315789473,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.12280701754385964,
+            "f1": 0.21875,
+            "support": 57
+          },
+          "1": {
+            "precision": 0.4266666666666667,
+            "recall": 1.0,
+            "f1": 0.5981308411214953,
+            "support": 64
+          },
+          "2": {
+            "precision": 0.8484848484848485,
+            "recall": 0.4057971014492754,
+            "f1": 0.5490196078431373,
+            "support": 69
+          }
+        },
+        "confusion_matrix": [
+          [
+            7,
+            45,
+            5
+          ],
+          [
+            0,
+            64,
+            0
+          ],
+          [
+            0,
+            41,
+            28
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 983.6884057971015,
+      "average_latency_seconds": 0.15632816332230426,
+      "truncated_examples": 119,
+      "numeric_mapping": [
+        0,
+        2,
+        1
+      ],
+      "runtime_seconds": 52.11496268585324
+    },
+    {
+      "experiment_id": "apertus-8b-gpu-reference-4096-v1",
+      "macro_f1": 0.45351021194986424,
+      "accuracy": 0.5217391304347826,
+      "per_class": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.12790697674418605,
+          "f1": 0.2268041237113402,
+          "support": 86
+        },
+        "1": {
+          "precision": 0.4429223744292237,
+          "recall": 0.9897959183673469,
+          "f1": 0.61198738170347,
+          "support": 98
+        },
+        "2": {
+          "precision": 0.782608695652174,
+          "recall": 0.391304347826087,
+          "f1": 0.5217391304347826,
+          "support": 92
+        }
+      },
+      "by_language": {
+        "de": {
+          "n": 82,
+          "macro_f1": 0.4023848491933599,
+          "accuracy": 0.47560975609756095,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.13043478260869565,
+              "f1": 0.23076923076923078,
+              "support": 23
+            },
+            "1": {
+              "precision": 0.421875,
+              "recall": 1.0,
+              "f1": 0.5934065934065934,
+              "support": 27
+            },
+            "2": {
+              "precision": 0.6,
+              "recall": 0.28125,
+              "f1": 0.3829787234042553,
+              "support": 32
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              14,
+              6
+            ],
+            [
+              0,
+              27,
+              0
+            ],
+            [
+              0,
+              23,
+              9
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 100,
+          "macro_f1": 0.37094954681604225,
+          "accuracy": 0.44,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.07894736842105263,
+              "f1": 0.14634146341463414,
+              "support": 38
+            },
+            "1": {
+              "precision": 0.3793103448275862,
+              "recall": 0.9705882352941176,
+              "f1": 0.5454545454545454,
+              "support": 34
+            },
+            "2": {
+              "precision": 0.8,
+              "recall": 0.2857142857142857,
+              "f1": 0.42105263157894735,
+              "support": 28
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              34,
+              1
+            ],
+            [
+              0,
+              33,
+              1
+            ],
+            [
+              0,
+              20,
+              8
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 94,
+          "macro_f1": 0.5850254567235699,
+          "accuracy": 0.648936170212766,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.2,
+              "f1": 0.3333333333333333,
+              "support": 25
+            },
+            "1": {
+              "precision": 0.5441176470588235,
+              "recall": 1.0,
+              "f1": 0.7047619047619048,
+              "support": 37
+            },
+            "2": {
+              "precision": 0.9047619047619048,
+              "recall": 0.59375,
+              "f1": 0.7169811320754716,
+              "support": 32
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              18,
+              2
+            ],
+            [
+              0,
+              37,
+              0
+            ],
+            [
+              0,
+              13,
+              19
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 190,
+        "macro_f1": 0.4561847609179523,
+        "accuracy": 0.5210526315789473,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.12280701754385964,
+            "f1": 0.21875,
+            "support": 57
+          },
+          "1": {
+            "precision": 0.423841059602649,
+            "recall": 1.0,
+            "f1": 0.5953488372093023,
+            "support": 64
+          },
+          "2": {
+            "precision": 0.875,
+            "recall": 0.4057971014492754,
+            "f1": 0.5544554455445545,
+            "support": 69
+          }
+        },
+        "confusion_matrix": [
+          [
+            7,
+            46,
+            4
+          ],
+          [
+            0,
+            64,
+            0
+          ],
+          [
+            0,
+            41,
+            28
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 1996.1485507246377,
+      "average_latency_seconds": 0.32803798428115744,
+      "truncated_examples": 37,
+      "numeric_mapping": [
+        0,
+        2,
+        1
+      ],
+      "runtime_seconds": 104.05032126232982
+    }
+  ],
+  "macro_f1_delta_b_minus_a": 0.0018569991937540387,
+  "numeric_mapping_equal": true,
+  "connected_validation_clusters": 2,
+  "bootstrap_seed": 42,
+  "bootstrap_draws": 5000,
+  "cluster_bootstrap_percentile_interval_95": [
+    0.0,
+    0.0025141107907818427
+  ],
+  "limitations": "Few independent validation groups: interval is descriptive, not reliable significance evidence. Mapping is supervised on training only; official class semantics and premise scope remain unverified. Provided-reference context is not gold/full-booklet evidence. No final test evaluated."
+}

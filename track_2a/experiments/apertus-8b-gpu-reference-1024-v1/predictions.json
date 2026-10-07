@@ -1,0 +1,5321 @@
+{
+  "dataset_sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d",
+  "configuration": {
+    "experiment_id": "apertus-8b-gpu-reference-1024-v1",
+    "timestamp": "2026-10-07T03:10:52.047301+00:00",
+    "status": "started",
+    "git_commit": "e0a1bea2dfa904fd67679aeb339f531a162ac157",
+    "source_script_sha256": "0b189ff1cae98096d529f75490e7615aaf152f86e2b5462e229455acfaa67156",
+    "dataset_split": "strict_validation",
+    "training_dataset_sha256": "9a95cf03912669132e390a676007e873aeb105b46a9bac12360f029fb571ce0c",
+    "validation_dataset_sha256": "cc98e02f307f1c78e1f12c434a5f3281ee8ff0f42d980bba9fca872f4c5e446d",
+    "training_mapping_ids": [
+      "ost-v1.1-0358",
+      "ost-v1.1-0267",
+      "ost-v1.1-0317",
+      "ost-v1.1-0387",
+      "ost-v1.1-0376",
+      "ost-v1.1-0069",
+      "ost-v1.1-0042",
+      "ost-v1.1-0091",
+      "ost-v1.1-0352",
+      "ost-v1.1-0102",
+      "ost-v1.1-0823",
+      "ost-v1.1-0793",
+      "ost-v1.1-0960",
+      "ost-v1.1-0650",
+      "ost-v1.1-0967",
+      "ost-v1.1-0630",
+      "ost-v1.1-0645",
+      "ost-v1.1-0651",
+      "ost-v1.1-0557",
+      "ost-v1.1-0815",
+      "ost-v1.1-1148",
+      "ost-v1.1-1041",
+      "ost-v1.1-1467",
+      "ost-v1.1-1047",
+      "ost-v1.1-1293",
+      "ost-v1.1-1178",
+      "ost-v1.1-1103",
+      "ost-v1.1-1108",
+      "ost-v1.1-1451",
+      "ost-v1.1-1329"
+    ],
+    "model": "swiss-ai/Apertus-8B-Instruct-2509",
+    "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+    "precision": "bfloat16",
+    "torch": "2.8.0+cu126",
+    "transformers": "4.56.2",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "threads": 4,
+    "retrieval_configuration": {
+      "mode": "provided_reference",
+      "reference_token_cap": 1024
+    },
+    "prompt_configuration": {
+      "semantic_options": [
+        "entailment",
+        "contradiction",
+        "neutral"
+      ],
+      "numeric_mapping": "Fitted on training only; official class-name semantics not asserted",
+      "method": "greedy-first-token and restricted option logits"
+    },
+    "training_configuration": {
+      "method": "6-permutation correspondence fit, maximize correct decisions on balanced training sample",
+      "examples": 30,
+      "seed": 42
+    },
+    "estimated_compute_cost": 0.0,
+    "actual_compute_cost": null,
+    "macro_f1": null,
+    "notes": "Internal held-out evaluation, not official challenge score; provided premise excerpts, not full booklet/gold annotations; first-token option probabilities are not calibrated",
+    "device": "cuda"
+  },
+  "predictions": [
+    {
+      "id": "ost-v1.1-0019",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.125,
+        27.25,
+        27.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 996,
+      "reference_tokens_original": 842,
+      "reference_tokens_used": 842,
+      "truncated": false,
+      "latency_seconds": 0.14994168560951948,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0022",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.75,
+        27.375,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 958,
+      "reference_tokens_original": 806,
+      "reference_tokens_used": 806,
+      "truncated": false,
+      "latency_seconds": 0.14643259812146425,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0024",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.875,
+        27.375,
+        28.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1031,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.16644471790641546,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0026",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        27.75,
+        30.0,
+        30.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 954,
+      "reference_tokens_original": 821,
+      "reference_tokens_used": 821,
+      "truncated": false,
+      "latency_seconds": 0.1446241158992052,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0030",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.875,
+        27.375,
+        28.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1031,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.1650236565619707,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0032",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.75,
+        27.625,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 994,
+      "reference_tokens_original": 836,
+      "reference_tokens_used": 836,
+      "truncated": false,
+      "latency_seconds": 0.1503109009936452,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0040",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        25.0,
+        29.125,
+        29.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1126,
+      "reference_tokens_original": 972,
+      "reference_tokens_used": 972,
+      "truncated": false,
+      "latency_seconds": 0.1766885221004486,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0050",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        25.0,
+        29.125,
+        29.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1126,
+      "reference_tokens_original": 972,
+      "reference_tokens_used": 972,
+      "truncated": false,
+      "latency_seconds": 0.17617563158273697,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0057",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        27.75,
+        30.0,
+        30.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 954,
+      "reference_tokens_original": 821,
+      "reference_tokens_used": 821,
+      "truncated": false,
+      "latency_seconds": 0.14427887741476297,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0064",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.875,
+        27.375,
+        28.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1031,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.1657609734684229,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0068",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.25,
+        25.375,
+        26.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1156,
+      "reference_tokens_original": 1939,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1846033800393343,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0080",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.375,
+        25.5,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1095,
+      "reference_tokens_original": 926,
+      "reference_tokens_used": 926,
+      "truncated": false,
+      "latency_seconds": 0.1744352113455534,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0081",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        26.0,
+        23.75,
+        25.375
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 473,
+      "reference_tokens_original": 341,
+      "reference_tokens_used": 341,
+      "truncated": false,
+      "latency_seconds": 0.0695468345656991,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0087",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        25.25,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 474,
+      "reference_tokens_original": 335,
+      "reference_tokens_used": 335,
+      "truncated": false,
+      "latency_seconds": 0.06973710656166077,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0105",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.0,
+        26.125,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 972,
+      "reference_tokens_original": 795,
+      "reference_tokens_used": 795,
+      "truncated": false,
+      "latency_seconds": 0.1489152666181326,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0114",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.125,
+        26.375,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1041,
+      "reference_tokens_original": 864,
+      "reference_tokens_used": 864,
+      "truncated": false,
+      "latency_seconds": 0.16604316141456366,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0119",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        26.125,
+        23.5,
+        25.875
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 440,
+      "reference_tokens_original": 320,
+      "reference_tokens_used": 320,
+      "truncated": false,
+      "latency_seconds": 0.06392830051481724,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0129",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        27.75,
+        30.0,
+        30.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 954,
+      "reference_tokens_original": 821,
+      "reference_tokens_used": 821,
+      "truncated": false,
+      "latency_seconds": 0.1449126172810793,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0136",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.625,
+        25.5,
+        25.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 460,
+      "reference_tokens_original": 322,
+      "reference_tokens_used": 322,
+      "truncated": false,
+      "latency_seconds": 0.06885885074734688,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0145",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.875,
+        27.375,
+        28.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1031,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.16482634842395782,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0146",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        27.875,
+        26.125,
+        26.75
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 521,
+      "reference_tokens_original": 384,
+      "reference_tokens_used": 384,
+      "truncated": false,
+      "latency_seconds": 0.08897599205374718,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0153",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.75,
+        27.625,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 994,
+      "reference_tokens_original": 836,
+      "reference_tokens_used": 836,
+      "truncated": false,
+      "latency_seconds": 0.1513067614287138,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0158",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        25.0,
+        29.125,
+        29.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1126,
+      "reference_tokens_original": 972,
+      "reference_tokens_used": 972,
+      "truncated": false,
+      "latency_seconds": 0.17657938320189714,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        25.25,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 583,
+      "reference_tokens_original": 441,
+      "reference_tokens_used": 441,
+      "truncated": false,
+      "latency_seconds": 0.09067702945321798,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0172",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        25.875,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1191,
+      "reference_tokens_original": 2633,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18842324055731297,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0173",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        26.125,
+        26.75,
+        26.75
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 941,
+      "reference_tokens_original": 805,
+      "reference_tokens_used": 805,
+      "truncated": false,
+      "latency_seconds": 0.14232200104743242,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0174",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.0,
+        26.875,
+        28.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1005,
+      "reference_tokens_original": 824,
+      "reference_tokens_used": 824,
+      "truncated": false,
+      "latency_seconds": 0.15174910612404346,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0186",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.5,
+        25.5,
+        25.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1162,
+      "reference_tokens_original": 2338,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18606978841125965,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0190",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        28.5,
+        28.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1073,
+      "reference_tokens_original": 935,
+      "reference_tokens_used": 935,
+      "truncated": false,
+      "latency_seconds": 0.1687497068196535,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0199",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.625,
+        27.125,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1164,
+      "reference_tokens_original": 2192,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18834832776337862,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0205",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.625,
+        25.625,
+        26.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 549,
+      "reference_tokens_original": 419,
+      "reference_tokens_used": 419,
+      "truncated": false,
+      "latency_seconds": 0.08990238979458809,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0211",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        28.5,
+        28.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1073,
+      "reference_tokens_original": 935,
+      "reference_tokens_used": 935,
+      "truncated": false,
+      "latency_seconds": 0.1682827863842249,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0212",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        28.375,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1088,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.16970282793045044,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0213",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        28.375,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1088,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.1689600683748722,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0215",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        28.375,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1088,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.1698437063023448,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0223",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.0,
+        28.875,
+        30.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1057,
+      "reference_tokens_original": 926,
+      "reference_tokens_used": 926,
+      "truncated": false,
+      "latency_seconds": 0.16739694587886333,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0224",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.75,
+        25.125,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 661,
+      "reference_tokens_original": 513,
+      "reference_tokens_used": 513,
+      "truncated": false,
+      "latency_seconds": 0.10271590854972601,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0227",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.375,
+        28.625,
+        30.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1221,
+      "reference_tokens_original": 1985,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19583887699991465,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0235",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        27.375,
+        28.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 764,
+      "reference_tokens_original": 620,
+      "reference_tokens_used": 620,
+      "truncated": false,
+      "latency_seconds": 0.11397741548717022,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0236",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.875,
+        25.5,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 826,
+      "reference_tokens_original": 697,
+      "reference_tokens_used": 697,
+      "truncated": false,
+      "latency_seconds": 0.12732567638158798,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0241",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.875,
+        29.375,
+        30.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1065,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.16790190991014242,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0243",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.875,
+        29.375,
+        30.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1065,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.16737422160804272,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0245",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.75,
+        25.125,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 661,
+      "reference_tokens_original": 513,
+      "reference_tokens_used": 513,
+      "truncated": false,
+      "latency_seconds": 0.10192570090293884,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0250",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.875,
+        27.375,
+        28.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1063,
+      "reference_tokens_original": 906,
+      "reference_tokens_used": 906,
+      "truncated": false,
+      "latency_seconds": 0.16896997764706612,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0254",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.875,
+        29.375,
+        30.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1065,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.16739931982010603,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0256",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        28.125,
+        27.375,
+        27.125
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 1004,
+      "reference_tokens_original": 864,
+      "reference_tokens_used": 864,
+      "truncated": false,
+      "latency_seconds": 0.15245939139276743,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0258",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.375,
+        25.5,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1011,
+      "reference_tokens_original": 825,
+      "reference_tokens_used": 825,
+      "truncated": false,
+      "latency_seconds": 0.15276902355253696,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0259",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.375,
+        28.625,
+        30.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1221,
+      "reference_tokens_original": 1985,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19636070262640715,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0262",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.75,
+        27.0,
+        27.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1096,
+      "reference_tokens_original": 935,
+      "reference_tokens_used": 935,
+      "truncated": false,
+      "latency_seconds": 0.17490173131227493,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0269",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        26.375,
+        26.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 916,
+      "reference_tokens_original": 751,
+      "reference_tokens_used": 751,
+      "truncated": false,
+      "latency_seconds": 0.14128846768289804,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0278",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.25,
+        28.375,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1088,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.17007802240550518,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0280",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        27.75,
+        25.5,
+        26.75
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 987,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.15125981345772743,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0298",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.75,
+        25.125,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 661,
+      "reference_tokens_original": 513,
+      "reference_tokens_used": 513,
+      "truncated": false,
+      "latency_seconds": 0.10327012650668621,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0299",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.375,
+        26.625,
+        27.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 991,
+      "reference_tokens_original": 854,
+      "reference_tokens_used": 854,
+      "truncated": false,
+      "latency_seconds": 0.15009214356541634,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0301",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.625,
+        27.125,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1164,
+      "reference_tokens_original": 2192,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18638233561068773,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0304",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        24.25,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 489,
+      "reference_tokens_original": 356,
+      "reference_tokens_used": 356,
+      "truncated": false,
+      "latency_seconds": 0.07120170444250107,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0305",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        25.25,
+        23.125,
+        25.25
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 498,
+      "reference_tokens_original": 353,
+      "reference_tokens_used": 353,
+      "truncated": false,
+      "latency_seconds": 0.07255086861550808,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0312",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.875,
+        26.5,
+        28.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1189,
+      "reference_tokens_original": 1507,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18730391561985016,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0318",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.875,
+        25.5,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 826,
+      "reference_tokens_original": 697,
+      "reference_tokens_used": 697,
+      "truncated": false,
+      "latency_seconds": 0.12718877382576466,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0320",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.625,
+        25.625,
+        26.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 549,
+      "reference_tokens_original": 419,
+      "reference_tokens_used": 419,
+      "truncated": false,
+      "latency_seconds": 0.09127260651439428,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0323",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        24.875,
+        26.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1178,
+      "reference_tokens_original": 1009,
+      "reference_tokens_used": 1009,
+      "truncated": false,
+      "latency_seconds": 0.18604035302996635,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0333",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        24.5,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 423,
+      "reference_tokens_original": 291,
+      "reference_tokens_used": 291,
+      "truncated": false,
+      "latency_seconds": 0.06358409207314253,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0338",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        28.0,
+        27.25,
+        27.75
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 754,
+      "reference_tokens_original": 599,
+      "reference_tokens_used": 599,
+      "truncated": false,
+      "latency_seconds": 0.1129650641232729,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0341",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        26.0,
+        27.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1199,
+      "reference_tokens_original": 2359,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18949571903795004,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0343",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        28.0,
+        27.125,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1116,
+      "reference_tokens_original": 978,
+      "reference_tokens_used": 978,
+      "truncated": false,
+      "latency_seconds": 0.1761561557650566,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0345",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        26.125,
+        26.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1214,
+      "reference_tokens_original": 2106,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19267486687749624,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0355",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        26.75,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 967,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.14879892487078905,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0359",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.0,
+        26.75,
+        28.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1055,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.16764916758984327,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0361",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        26.75,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 967,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.14910198375582695,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0363",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.0,
+        24.75,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 995,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.15135958325117826,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0391",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.0,
+        30.125,
+        30.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1061,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.1689675645902753,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0395",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        26.75,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 967,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.1497881133109331,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0399",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        25.0,
+        28.75,
+        28.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1114,
+      "reference_tokens_original": 928,
+      "reference_tokens_used": 928,
+      "truncated": false,
+      "latency_seconds": 0.17551949992775917,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0400",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.5,
+        24.75,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 568,
+      "reference_tokens_original": 406,
+      "reference_tokens_used": 406,
+      "truncated": false,
+      "latency_seconds": 0.09150161314755678,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0410",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        28.25,
+        28.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1116,
+      "reference_tokens_original": 972,
+      "reference_tokens_used": 972,
+      "truncated": false,
+      "latency_seconds": 0.1770574264228344,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0411",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        26.5,
+        23.25,
+        24.875
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 526,
+      "reference_tokens_original": 384,
+      "reference_tokens_used": 384,
+      "truncated": false,
+      "latency_seconds": 0.08997831493616104,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0412",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        25.25,
+        25.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 955,
+      "reference_tokens_original": 795,
+      "reference_tokens_used": 795,
+      "truncated": false,
+      "latency_seconds": 0.14421462453901768,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0422",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        25.625,
+        27.5,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 937,
+      "reference_tokens_original": 751,
+      "reference_tokens_used": 751,
+      "truncated": false,
+      "latency_seconds": 0.14365871343761683,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0432",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        25.0,
+        28.75,
+        28.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1114,
+      "reference_tokens_original": 928,
+      "reference_tokens_used": 928,
+      "truncated": false,
+      "latency_seconds": 0.17695276718586683,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0434",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        27.875,
+        24.0,
+        26.0
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 499,
+      "reference_tokens_original": 335,
+      "reference_tokens_used": 335,
+      "truncated": false,
+      "latency_seconds": 0.07187465857714415,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0446",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        25.625,
+        22.5,
+        25.0
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 470,
+      "reference_tokens_original": 320,
+      "reference_tokens_used": 320,
+      "truncated": false,
+      "latency_seconds": 0.06949333194643259,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0449",
+      "semantic_option_index": 0,
+      "first_token_option_logits": [
+        27.625,
+        26.625,
+        27.5
+      ],
+      "greedy_token": "A",
+      "greedy_option_index": 0,
+      "context_tokens": 749,
+      "reference_tokens_original": 599,
+      "reference_tokens_used": 599,
+      "truncated": false,
+      "latency_seconds": 0.11274138558655977,
+      "label": 0,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0456",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.0,
+        24.75,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 995,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.15170155558735132,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0460",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.0,
+        26.75,
+        28.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1055,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.16789246164262295,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0463",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        26.125,
+        26.75,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 967,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.14997492916882038,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0481",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        27.0,
+        30.125,
+        30.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1061,
+      "reference_tokens_original": 924,
+      "reference_tokens_used": 924,
+      "truncated": false,
+      "latency_seconds": 0.1685858154669404,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0499",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.0,
+        26.5,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1180,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1918743597343564,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0505",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.625,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1183,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19033713452517986,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0506",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.125,
+        26.75,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1182,
+      "reference_tokens_original": 3014,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18859225511550903,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0513",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        25.875,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1186,
+      "reference_tokens_original": 3014,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18915737327188253,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0515",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        27.25,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3688,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1905275285243988,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0519",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        27.25,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3688,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18961476627737284,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0525",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        19.875,
+        24.375,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1166,
+      "reference_tokens_original": 4053,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1911317314952612,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0526",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        25.875,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1186,
+      "reference_tokens_original": 3014,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1890453789383173,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0555",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.75,
+        27.875,
+        29.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1183,
+      "reference_tokens_original": 2634,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18816888611763716,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0558",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        27.25,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3688,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18914096150547266,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0563",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.375,
+        26.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1194,
+      "reference_tokens_original": 3014,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1913965968415141,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0566",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.375,
+        27.875,
+        29.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1183,
+      "reference_tokens_original": 3218,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1896558841690421,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0569",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.125,
+        26.75,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1182,
+      "reference_tokens_original": 3014,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18962612748146057,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0572",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.375,
+        24.875,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1192,
+      "reference_tokens_original": 2819,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19085777830332518,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0573",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.0,
+        26.875,
+        29.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1197,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19266544934362173,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0592",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        25.375,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 3826,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19068904779851437,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0597",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.0,
+        26.875,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1180,
+      "reference_tokens_original": 4201,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19217826891690493,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0599",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.5,
+        25.5,
+        27.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4771,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19036652147769928,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0604",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        27.25,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3688,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18919518496841192,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0610",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.0,
+        26.75,
+        27.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1172,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19049108866602182,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0616",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.75,
+        27.375,
+        29.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1172,
+      "reference_tokens_original": 2634,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1890450082719326,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0634",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        25.25,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1174,
+      "reference_tokens_original": 2819,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19005274213850498,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0638",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        26.25,
+        29.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1181,
+      "reference_tokens_original": 3779,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1903663408011198,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0640",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        26.375,
+        26.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 4201,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19056061189621687,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0642",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        28.625,
+        29.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1168,
+      "reference_tokens_original": 3455,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18922389019280672,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0646",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.875,
+        27.0,
+        28.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1178,
+      "reference_tokens_original": 3626,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1903398996219039,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0660",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        26.0,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1189,
+      "reference_tokens_original": 2700,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19032546319067478,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0664",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        24.875,
+        27.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1178,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19170155003666878,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0669",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        25.625,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1163,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19010308757424355,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0680",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.75,
+        25.875,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4053,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19110978953540325,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0682",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.0,
+        28.0,
+        30.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1177,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1895386604592204,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0685",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.25,
+        26.625,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1178,
+      "reference_tokens_original": 3455,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18959953635931015,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0686",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.0,
+        28.0,
+        30.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1177,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1905265273526311,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0693",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.75,
+        25.875,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4053,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1912043010815978,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0696",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.625,
+        26.625,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1178,
+      "reference_tokens_original": 3455,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18983808252960443,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0700",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.5,
+        25.5,
+        27.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19007583614438772,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0701",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        25.625,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1163,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19042624440044165,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0721",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.375,
+        27.5,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1170,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.189985073171556,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0723",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.0,
+        28.0,
+        30.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1177,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19007932301610708,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0726",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.25,
+        26.25,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1176,
+      "reference_tokens_original": 4053,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19171891175210476,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0727",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        25.75,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1185,
+      "reference_tokens_original": 3014,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19118355121463537,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0728",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.25,
+        27.625,
+        28.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 3483,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19178220443427563,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0731",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.5,
+        25.75,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19203364290297031,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0732",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.0,
+        26.5,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1172,
+      "reference_tokens_original": 3453,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1926316749304533,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0746",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        26.5,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4201,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1920089963823557,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0748",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        25.0,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1203,
+      "reference_tokens_original": 4771,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19282053504139185,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0761",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.0,
+        25.625,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 4725,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1915512327104807,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0765",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        25.75,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1179,
+      "reference_tokens_original": 3483,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18989205453544855,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0768",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.75,
+        26.0,
+        28.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1173,
+      "reference_tokens_original": 4771,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19099801685661077,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0777",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.375,
+        25.875,
+        28.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 3003,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1881923908367753,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0778",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.625,
+        25.25,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1166,
+      "reference_tokens_original": 2819,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18972336314618587,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0784",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.5,
+        27.0,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 4394,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19184216763824224,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0786",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.5,
+        25.5,
+        27.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19083931297063828,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0787",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.75,
+        28.125,
+        27.75
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1893574744462967,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0788",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.5,
+        26.5,
+        26.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1176,
+      "reference_tokens_original": 2700,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1890556886792183,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0791",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.5,
+        25.75,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19025997817516327,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0795",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.5,
+        27.875,
+        29.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1176,
+      "reference_tokens_original": 2634,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1888213511556387,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0798",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.75,
+        27.0,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 4394,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19175257720053196,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0802",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        25.5,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1158,
+      "reference_tokens_original": 4394,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19043746683746576,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0806",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.375,
+        27.5,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1170,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18946236558258533,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0817",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.75,
+        27.0,
+        28.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 3626,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18917491659522057,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0833",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        26.125,
+        28.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 4196,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19179155118763447,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0834",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        27.125,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1181,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19175033178180456,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0837",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        26.375,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1179,
+      "reference_tokens_original": 3779,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19033196475356817,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0838",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        26.375,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1179,
+      "reference_tokens_original": 3779,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1895666839554906,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0843",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.125,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1187,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19159589800983667,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0847",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        25.5,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1187,
+      "reference_tokens_original": 4225,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1921428618952632,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0851",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        27.125,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1181,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19202944543212652,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0852",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.375,
+        25.5,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1191,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19149657804518938,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0853",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        25.375,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1177,
+      "reference_tokens_original": 3453,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1910108309239149,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0864",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.25,
+        26.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1184,
+      "reference_tokens_original": 4201,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19207829795777798,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0865",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.25,
+        26.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1184,
+      "reference_tokens_original": 4201,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19229761697351933,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0867",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.25,
+        26.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1184,
+      "reference_tokens_original": 4201,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19247981533408165,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0874",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        27.125,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1181,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.191859089769423,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0875",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.25,
+        25.125,
+        25.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19017783179879189,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0878",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.0,
+        26.25,
+        29.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1185,
+      "reference_tokens_original": 2508,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18900841940194368,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0882",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.375,
+        26.5,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3218,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1891536759212613,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0884",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.125,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1187,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19232207350432873,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0897",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.0,
+        26.25,
+        29.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1185,
+      "reference_tokens_original": 2508,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1891436269506812,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0903",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        25.5,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1187,
+      "reference_tokens_original": 4225,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19204162899404764,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0909",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.5,
+        26.375,
+        28.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1181,
+      "reference_tokens_original": 2634,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18855954241007566,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0912",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.0,
+        24.375,
+        26.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1187,
+      "reference_tokens_original": 3986,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19306186586618423,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0915",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.625,
+        27.375,
+        29.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1182,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1921625193208456,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0919",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.375,
+        26.5,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 3218,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18943331949412823,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0937",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.5,
+        27.25,
+        28.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1174,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19070440623909235,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0943",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        25.625,
+        26.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1190,
+      "reference_tokens_original": 4225,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19375099148601294,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0944",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        27.25,
+        28.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1170,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1914654392749071,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0946",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        25.625,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1178,
+      "reference_tokens_original": 3986,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1916098538786173,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0952",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        25.375,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1177,
+      "reference_tokens_original": 3453,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19300697091966867,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0959",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.25,
+        25.125,
+        25.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1169,
+      "reference_tokens_original": 3257,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1904891850426793,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0963",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.5,
+        27.75,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1179,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1926467027515173,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0964",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.0,
+        26.25,
+        29.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1185,
+      "reference_tokens_original": 2508,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19021591264754534,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0969",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.125,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1187,
+      "reference_tokens_original": 4191,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19146672077476978,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0976",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        26.25,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1174,
+      "reference_tokens_original": 2700,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18958100210875273,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0980",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.875,
+        24.25,
+        26.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 2819,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1897801011800766,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0982",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        27.125,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1181,
+      "reference_tokens_original": 4640,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19140491355210543,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0983",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.25,
+        25.25,
+        25.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1177,
+      "reference_tokens_original": 4394,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19311410561203957,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0991",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.0,
+        27.75,
+        29.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1183,
+      "reference_tokens_original": 3804,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19075979199260473,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0995",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.25,
+        28.625,
+        28.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 995,
+      "reference_tokens_original": 839,
+      "reference_tokens_used": 839,
+      "truncated": false,
+      "latency_seconds": 0.15231611859053373,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-0996",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        24.75,
+        25.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 462,
+      "reference_tokens_original": 332,
+      "reference_tokens_used": 332,
+      "truncated": false,
+      "latency_seconds": 0.07011819537729025,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1001",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.625,
+        26.375,
+        26.375
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1028,
+      "reference_tokens_original": 878,
+      "reference_tokens_used": 878,
+      "truncated": false,
+      "latency_seconds": 0.16714061610400677,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1004",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        26.125,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 940,
+      "reference_tokens_original": 788,
+      "reference_tokens_used": 788,
+      "truncated": false,
+      "latency_seconds": 0.144229082390666,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1013",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.625,
+        27.75,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1053,
+      "reference_tokens_original": 918,
+      "reference_tokens_used": 918,
+      "truncated": false,
+      "latency_seconds": 0.16908076964318752,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1019",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        27.0,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 546,
+      "reference_tokens_original": 412,
+      "reference_tokens_used": 412,
+      "truncated": false,
+      "latency_seconds": 0.09276555571705103,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1029",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.5,
+        26.125,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 946,
+      "reference_tokens_original": 815,
+      "reference_tokens_used": 815,
+      "truncated": false,
+      "latency_seconds": 0.14463079907000065,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1036",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.5,
+        25.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 955,
+      "reference_tokens_original": 793,
+      "reference_tokens_used": 793,
+      "truncated": false,
+      "latency_seconds": 0.1453114878386259,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1037",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.5,
+        26.125,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 946,
+      "reference_tokens_original": 815,
+      "reference_tokens_used": 815,
+      "truncated": false,
+      "latency_seconds": 0.14501301757991314,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1052",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        27.125,
+        28.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 2023,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18826928827911615,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1056",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        26.625,
+        29.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 650,
+      "reference_tokens_original": 509,
+      "reference_tokens_used": 509,
+      "truncated": false,
+      "latency_seconds": 0.10358056891709566,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1057",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.625,
+        28.125,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 900,
+      "reference_tokens_original": 747,
+      "reference_tokens_used": 747,
+      "truncated": false,
+      "latency_seconds": 0.14068641886115074,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1063",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.375,
+        27.375,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 391,
+      "reference_tokens_original": 269,
+      "reference_tokens_used": 269,
+      "truncated": false,
+      "latency_seconds": 0.06599750928580761,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1064",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.25,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 438,
+      "reference_tokens_original": 315,
+      "reference_tokens_used": 315,
+      "truncated": false,
+      "latency_seconds": 0.06639255303889513,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1065",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        24.0,
+        28.75,
+        28.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1031,
+      "reference_tokens_original": 894,
+      "reference_tokens_used": 894,
+      "truncated": false,
+      "latency_seconds": 0.16685704421252012,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1066",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        27.125,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 969,
+      "reference_tokens_original": 841,
+      "reference_tokens_used": 841,
+      "truncated": false,
+      "latency_seconds": 0.14987322594970465,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1072",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.875,
+        27.0,
+        27.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 546,
+      "reference_tokens_original": 412,
+      "reference_tokens_used": 412,
+      "truncated": false,
+      "latency_seconds": 0.09358252491801977,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1076",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.625,
+        28.875,
+        28.875
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 993,
+      "reference_tokens_original": 836,
+      "reference_tokens_used": 836,
+      "truncated": false,
+      "latency_seconds": 0.15289755817502737,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1078",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.25,
+        27.125,
+        27.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 965,
+      "reference_tokens_original": 825,
+      "reference_tokens_used": 825,
+      "truncated": false,
+      "latency_seconds": 0.15033514704555273,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1080",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.125,
+        26.375,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 540,
+      "reference_tokens_original": 398,
+      "reference_tokens_used": 398,
+      "truncated": false,
+      "latency_seconds": 0.09185171127319336,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1084",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.5,
+        25.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 955,
+      "reference_tokens_original": 793,
+      "reference_tokens_used": 793,
+      "truncated": false,
+      "latency_seconds": 0.14685096684843302,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1096",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.25,
+        26.375,
+        26.375
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 466,
+      "reference_tokens_original": 346,
+      "reference_tokens_used": 346,
+      "truncated": false,
+      "latency_seconds": 0.07039053551852703,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1100",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.0,
+        25.125,
+        26.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 438,
+      "reference_tokens_original": 306,
+      "reference_tokens_used": 306,
+      "truncated": false,
+      "latency_seconds": 0.06578181777149439,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1109",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.75,
+        26.25,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1084,
+      "reference_tokens_original": 949,
+      "reference_tokens_used": 949,
+      "truncated": false,
+      "latency_seconds": 0.17117008846253157,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1110",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.25,
+        27.5,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 970,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.15064564906060696,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1116",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        27.125,
+        28.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1171,
+      "reference_tokens_original": 2023,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1883603325113654,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1118",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        26.375,
+        27.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 949,
+      "reference_tokens_original": 807,
+      "reference_tokens_used": 807,
+      "truncated": false,
+      "latency_seconds": 0.1454993775114417,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1130",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.5,
+        26.125,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 946,
+      "reference_tokens_original": 815,
+      "reference_tokens_used": 815,
+      "truncated": false,
+      "latency_seconds": 0.14517440553754568,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1138",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.25,
+        25.125,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 489,
+      "reference_tokens_original": 356,
+      "reference_tokens_used": 356,
+      "truncated": false,
+      "latency_seconds": 0.07248531375080347,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1144",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.375,
+        27.75,
+        27.625
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 450,
+      "reference_tokens_original": 320,
+      "reference_tokens_used": 320,
+      "truncated": false,
+      "latency_seconds": 0.07047958485782146,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1146",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.375,
+        25.5,
+        26.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 649,
+      "reference_tokens_original": 513,
+      "reference_tokens_used": 513,
+      "truncated": false,
+      "latency_seconds": 0.10239934548735619,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1151",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        26.375,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 459,
+      "reference_tokens_original": 329,
+      "reference_tokens_used": 329,
+      "truncated": false,
+      "latency_seconds": 0.07020484004169703,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1159",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.5,
+        26.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1160,
+      "reference_tokens_original": 1483,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18624163884669542,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1161",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.0,
+        26.25,
+        27.5
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1155,
+      "reference_tokens_original": 1009,
+      "reference_tokens_used": 1009,
+      "truncated": false,
+      "latency_seconds": 0.1849473975598812,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1162",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        26.75,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1150,
+      "reference_tokens_original": 2949,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1849344614893198,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1167",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.625,
+        25.75,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1158,
+      "reference_tokens_original": 1668,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18730434589087963,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1168",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.25,
+        26.0,
+        26.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 992,
+      "reference_tokens_original": 854,
+      "reference_tokens_used": 854,
+      "truncated": false,
+      "latency_seconds": 0.15380538161844015,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1170",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.5,
+        25.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 927,
+      "reference_tokens_original": 773,
+      "reference_tokens_used": 773,
+      "truncated": false,
+      "latency_seconds": 0.14310105796903372,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1172",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.125,
+        27.625,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1012,
+      "reference_tokens_original": 878,
+      "reference_tokens_used": 878,
+      "truncated": false,
+      "latency_seconds": 0.15446758549660444,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1174",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.25,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1163,
+      "reference_tokens_original": 4406,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.19118703808635473,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1192",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        25.0,
+        25.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 441,
+      "reference_tokens_original": 306,
+      "reference_tokens_used": 306,
+      "truncated": false,
+      "latency_seconds": 0.06571388803422451,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1194",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.0,
+        28.625,
+        27.625
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1106,
+      "reference_tokens_original": 978,
+      "reference_tokens_used": 978,
+      "truncated": false,
+      "latency_seconds": 0.17868855874985456,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1196",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        25.0,
+        25.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 441,
+      "reference_tokens_original": 306,
+      "reference_tokens_used": 306,
+      "truncated": false,
+      "latency_seconds": 0.06640414614230394,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1200",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.875,
+        26.25,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1153,
+      "reference_tokens_original": 1694,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1874341033399105,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1201",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        25.0,
+        25.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 441,
+      "reference_tokens_original": 306,
+      "reference_tokens_used": 306,
+      "truncated": false,
+      "latency_seconds": 0.06570005137473345,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1204",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.875,
+        26.25,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1153,
+      "reference_tokens_original": 1694,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18791448045521975,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1211",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.0,
+        27.125,
+        27.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 995,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.15196886658668518,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1221",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.0,
+        26.125,
+        26.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 916,
+      "reference_tokens_original": 777,
+      "reference_tokens_used": 777,
+      "truncated": false,
+      "latency_seconds": 0.14293352980166674,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1223",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.0,
+        25.625,
+        25.375
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 478,
+      "reference_tokens_original": 333,
+      "reference_tokens_used": 333,
+      "truncated": false,
+      "latency_seconds": 0.07082169875502586,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1234",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.875,
+        25.0,
+        25.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 441,
+      "reference_tokens_original": 306,
+      "reference_tokens_used": 306,
+      "truncated": false,
+      "latency_seconds": 0.06657255720347166,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1237",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.75,
+        25.75,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 715,
+      "reference_tokens_original": 574,
+      "reference_tokens_used": 574,
+      "truncated": false,
+      "latency_seconds": 0.11297986097633839,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1238",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.75,
+        25.625,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 652,
+      "reference_tokens_original": 513,
+      "reference_tokens_used": 513,
+      "truncated": false,
+      "latency_seconds": 0.10310553293675184,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1251",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.75,
+        28.625,
+        27.75
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 972,
+      "reference_tokens_original": 835,
+      "reference_tokens_used": 835,
+      "truncated": false,
+      "latency_seconds": 0.15154234133660793,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1256",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.625,
+        27.0,
+        27.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 899,
+      "reference_tokens_original": 752,
+      "reference_tokens_used": 752,
+      "truncated": false,
+      "latency_seconds": 0.14110084995627403,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1258",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        24.375,
+        25.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 525,
+      "reference_tokens_original": 398,
+      "reference_tokens_used": 398,
+      "truncated": false,
+      "latency_seconds": 0.09162611979991198,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1268",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.0,
+        28.625,
+        27.625
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1106,
+      "reference_tokens_original": 978,
+      "reference_tokens_used": 978,
+      "truncated": false,
+      "latency_seconds": 0.17756922263652086,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1269",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        26.625,
+        26.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 480,
+      "reference_tokens_original": 353,
+      "reference_tokens_used": 353,
+      "truncated": false,
+      "latency_seconds": 0.07137132715433836,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1286",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.75,
+        29.5,
+        28.625
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1043,
+      "reference_tokens_original": 912,
+      "reference_tokens_used": 912,
+      "truncated": false,
+      "latency_seconds": 0.16972061153501272,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1309",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        24.125,
+        25.75,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 457,
+      "reference_tokens_original": 329,
+      "reference_tokens_used": 329,
+      "truncated": false,
+      "latency_seconds": 0.06993211060762405,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1318",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.5,
+        26.25,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 426,
+      "reference_tokens_original": 304,
+      "reference_tokens_used": 304,
+      "truncated": false,
+      "latency_seconds": 0.06600462272763252,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1335",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.5,
+        26.75,
+        26.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 898,
+      "reference_tokens_original": 745,
+      "reference_tokens_used": 745,
+      "truncated": false,
+      "latency_seconds": 0.14176831487566233,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1340",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        23.0,
+        26.5,
+        26.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 1167,
+      "reference_tokens_original": 1415,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.1868076678365469,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1349",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.875,
+        28.0,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 972,
+      "reference_tokens_original": 835,
+      "reference_tokens_used": 835,
+      "truncated": false,
+      "latency_seconds": 0.150809021666646,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1350",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        24.0,
+        29.875,
+        29.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 993,
+      "reference_tokens_original": 839,
+      "reference_tokens_used": 839,
+      "truncated": false,
+      "latency_seconds": 0.1532752187922597,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1351",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.875,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1153,
+      "reference_tokens_original": 1694,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18794681131839752,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1352",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.375,
+        26.75,
+        26.625
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 744,
+      "reference_tokens_original": 599,
+      "reference_tokens_used": 599,
+      "truncated": false,
+      "latency_seconds": 0.11468293238431215,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1353",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.375,
+        26.75,
+        26.625
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 744,
+      "reference_tokens_original": 599,
+      "reference_tokens_used": 599,
+      "truncated": false,
+      "latency_seconds": 0.1145094009116292,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1362",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.875,
+        28.0,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 972,
+      "reference_tokens_original": 835,
+      "reference_tokens_used": 835,
+      "truncated": false,
+      "latency_seconds": 0.15134689770638943,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1373",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.875,
+        28.0,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 972,
+      "reference_tokens_original": 835,
+      "reference_tokens_used": 835,
+      "truncated": false,
+      "latency_seconds": 0.15063698403537273,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1381",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.5,
+        26.375,
+        26.25
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 940,
+      "reference_tokens_original": 777,
+      "reference_tokens_used": 777,
+      "truncated": false,
+      "latency_seconds": 0.14380481280386448,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1383",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.5,
+        27.5,
+        27.25
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 860,
+      "reference_tokens_original": 703,
+      "reference_tokens_used": 703,
+      "truncated": false,
+      "latency_seconds": 0.1339793773368001,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1384",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.625,
+        25.625,
+        26.375
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 720,
+      "reference_tokens_original": 574,
+      "reference_tokens_used": 574,
+      "truncated": false,
+      "latency_seconds": 0.11237832438200712,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1389",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.375,
+        23.0,
+        24.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 470,
+      "reference_tokens_original": 316,
+      "reference_tokens_used": 316,
+      "truncated": false,
+      "latency_seconds": 0.07103955280035734,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1400",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.375,
+        25.875,
+        27.125
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1153,
+      "reference_tokens_original": 1694,
+      "reference_tokens_used": 1024,
+      "truncated": true,
+      "latency_seconds": 0.18885275069624186,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1404",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.75,
+        26.625,
+        27.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 393,
+      "reference_tokens_original": 269,
+      "reference_tokens_used": 269,
+      "truncated": false,
+      "latency_seconds": 0.06595789454877377,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1409",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.0,
+        26.625,
+        26.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 839,
+      "reference_tokens_original": 697,
+      "reference_tokens_used": 697,
+      "truncated": false,
+      "latency_seconds": 0.13238587509840727,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1418",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.25,
+        28.125,
+        28.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1151,
+      "reference_tokens_original": 1016,
+      "reference_tokens_used": 1016,
+      "truncated": false,
+      "latency_seconds": 0.18019955419003963,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1421",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        21.25,
+        27.125,
+        27.25
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 896,
+      "reference_tokens_original": 752,
+      "reference_tokens_used": 752,
+      "truncated": false,
+      "latency_seconds": 0.13624685443937778,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1430",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.25,
+        28.25,
+        28.125
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 977,
+      "reference_tokens_original": 836,
+      "reference_tokens_used": 836,
+      "truncated": false,
+      "latency_seconds": 0.15239959862083197,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1432",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.5,
+        25.875,
+        26.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1097,
+      "reference_tokens_original": 949,
+      "reference_tokens_used": 949,
+      "truncated": false,
+      "latency_seconds": 0.17877321131527424,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1446",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.875,
+        28.0,
+        27.5
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 972,
+      "reference_tokens_original": 835,
+      "reference_tokens_used": 835,
+      "truncated": false,
+      "latency_seconds": 0.15262341499328613,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1450",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        24.0,
+        29.875,
+        29.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 993,
+      "reference_tokens_original": 839,
+      "reference_tokens_used": 839,
+      "truncated": false,
+      "latency_seconds": 0.15324124321341515,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1454",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.625,
+        26.375,
+        26.375
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 950,
+      "reference_tokens_original": 805,
+      "reference_tokens_used": 805,
+      "truncated": false,
+      "latency_seconds": 0.1450982615351677,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1455",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.0,
+        27.125,
+        27.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 899,
+      "reference_tokens_original": 752,
+      "reference_tokens_used": 752,
+      "truncated": false,
+      "latency_seconds": 0.14054929837584496,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1458",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        23.75,
+        23.5,
+        24.75
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 446,
+      "reference_tokens_original": 304,
+      "reference_tokens_used": 304,
+      "truncated": false,
+      "latency_seconds": 0.06640652008354664,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1459",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.375,
+        25.25,
+        25.0
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 483,
+      "reference_tokens_original": 333,
+      "reference_tokens_used": 333,
+      "truncated": false,
+      "latency_seconds": 0.07259386032819748,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1464",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        20.0,
+        24.5,
+        25.875
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 663,
+      "reference_tokens_original": 513,
+      "reference_tokens_used": 513,
+      "truncated": false,
+      "latency_seconds": 0.10458256211131811,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1469",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        20.25,
+        25.875,
+        25.75
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 484,
+      "reference_tokens_original": 353,
+      "reference_tokens_used": 353,
+      "truncated": false,
+      "latency_seconds": 0.07235929276794195,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1471",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        22.25,
+        26.625,
+        26.375
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 968,
+      "reference_tokens_original": 843,
+      "reference_tokens_used": 843,
+      "truncated": false,
+      "latency_seconds": 0.15150273591279984,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1472",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.75,
+        27.25,
+        27.625
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 426,
+      "reference_tokens_original": 291,
+      "reference_tokens_used": 291,
+      "truncated": false,
+      "latency_seconds": 0.06485581025481224,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1477",
+      "semantic_option_index": 2,
+      "first_token_option_logits": [
+        22.25,
+        27.75,
+        28.0
+      ],
+      "greedy_token": "C",
+      "greedy_option_index": 2,
+      "context_tokens": 1038,
+      "reference_tokens_original": 878,
+      "reference_tokens_used": 878,
+      "truncated": false,
+      "latency_seconds": 0.16844054777175188,
+      "label": 1,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    },
+    {
+      "id": "ost-v1.1-1481",
+      "semantic_option_index": 1,
+      "first_token_option_logits": [
+        21.25,
+        25.75,
+        25.75
+      ],
+      "greedy_token": "B",
+      "greedy_option_index": 1,
+      "context_tokens": 553,
+      "reference_tokens_original": 419,
+      "reference_tokens_used": 419,
+      "truncated": false,
+      "latency_seconds": 0.0928917657583952,
+      "label": 2,
+      "probabilities": null,
+      "probability_note": "Uncalibrated option logits retained; no calibrated class probabilities fabricated"
+    }
+  ]
+}

@@ -47,7 +47,16 @@ def main():
     (root / 'latest.log').write_text(text)
     digest = re.findall(r'APERTUS_RESULTS_SHA256=([0-9a-f]{64})', text)
     payloads = re.findall(r'APERTUS_RESULTS_B64=([A-Za-z0-9+/=]+)', text)
-    if digest and payloads:
+    chunks = re.findall(r'APERTUS_RESULTS_CHUNK=(\d+):([A-Za-z0-9+/=]+)',
+                        text.rsplit('APERTUS_RESULTS_SHA256=', 1)[-1])
+    if digest and chunks:
+        parts = {int(index): value for index, value in chunks}
+        if len(parts) != len(chunks) or sorted(parts) != list(range(len(parts))):
+            raise SystemExit('Missing, duplicated or truncated archive chunks')
+        data = base64.b64decode(''.join(parts[index] for index in range(len(parts))), validate=True)
+        if hashlib.sha256(data).hexdigest() != digest[-1]:
+            raise SystemExit('Remote chunked artifact checksum mismatch')
+    elif digest and payloads:
         # Docker logging can split a long stdout line into multiple records.
         suffix = text.rsplit('APERTUS_RESULTS_B64=', 1)[1]
         joined = ''
@@ -64,12 +73,16 @@ def main():
                 break
         if data is None:
             raise SystemExit('Remote artifact checksum mismatch')
+    else:
+        data = None
+    if data is not None:
         (root / 'results.tar.gz').write_bytes(data)
         (root / 'artifact_integrity.json').write_text(json.dumps(
             {'instance_id': args.instance, 'sha256': digest[-1], 'bytes': len(data),
              'verified': True}, indent=2) + '\n')
         print('Verified artifact archive recovered:', len(data), 'bytes')
     lines = [line for line in text.splitlines() if 'APERTUS_RESULTS_B64=' not in line
+             and 'APERTUS_RESULTS_CHUNK=' not in line
              and not (len(line) > 150 and re.fullmatch(r'[A-Za-z0-9+/=]+', line))]
     print('\n'.join(lines[-12:]))
 

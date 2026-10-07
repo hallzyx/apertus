@@ -15,9 +15,8 @@ emit_results() {
         tar -czf /workspace/results.tar.gz "${paths[@]}"
         printf 'APERTUS_RESULTS_SHA256='
         sha256sum /workspace/results.tar.gz | cut -d ' ' -f 1
-        printf 'APERTUS_RESULTS_B64='
-        base64 -w 0 /workspace/results.tar.gz
-        printf '\n'
+        # Vast trims log lines to 500 characters; retain indexed shorter chunks.
+        base64 -w 400 /workspace/results.tar.gz | awk '{printf "APERTUS_RESULTS_CHUNK=%d:%s\n", NR-1, $0}'
     fi
     exit "$result"
 }
