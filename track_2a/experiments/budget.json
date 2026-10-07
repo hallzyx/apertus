@@ -2,8 +2,8 @@
   "currency": "USD",
   "initial_budget": 10.0,
   "estimated_spend": 0.8472187499999999,
-  "actual_spend": 0.0,
-  "actual_spend_note": "Authenticated account: balance 0, credit 10 USD, no active instances; task has created none.",
+  "actual_spend": null,
+  "actual_spend_note": "Initial account balance 0 plus credit 10 USD; task instance is active, final billing not yet observed.",
   "active_instance_ids": [
     54573150
   ],
@@ -26,8 +26,9 @@
       "git_commit": "a3d859c37cf2050e056ef16482a984df5319e2bc",
       "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
       "created_at": "2026-10-07T02:29:53.349022+00:00",
-      "status": "created",
-      "instance_id": 54573150
+      "status": "destruction_requested",
+      "instance_id": 54573150,
+      "elapsed_seconds_before_destruction": 348.09328532218933
     }
   ],
   "account_credit_observed": 10.0,

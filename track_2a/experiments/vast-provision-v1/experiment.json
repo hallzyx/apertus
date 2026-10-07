@@ -1,0 +1,18 @@
+{
+  "experiment_id": "vast-apertus-baseline-provision-v1",
+  "timestamp": "2026-10-07T02:35:41.442255+00:00",
+  "status": "aborted",
+  "instance_id": 54573150,
+  "purpose": "Real original Apertus8B BF16 OST paired 1024/4096 reference baselines",
+  "model": "swiss-ai/Apertus-8B-Instruct-2509",
+  "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+  "git_commit": "a3d859c37cf2050e056ef16482a984df5319e2bc",
+  "gpu": "RTX 4090",
+  "hourly_total_usd": 0.40233333333333327,
+  "elapsed_seconds": 348.09328532218933,
+  "last_observed_instance_status": "created",
+  "last_observed_status_message": "Preparing GPUs...\n",
+  "macro_f1": null,
+  "actual_compute_cost": null,
+  "notes": "Authenticated API and provisioning succeeded. GPU inference/results not verified. S3 logs blocked by proxy HTTP403; SSH host DNS unavailable; direct SSH ports refused. Required destinations saved in configuration draft but runtime policy unchanged. Destroying only task-created instance to avoid unproductive spend."
+}
