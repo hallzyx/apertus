@@ -88,7 +88,7 @@ def main():
             'calibration': 'Scalar temperature minimizing training grouped OOF NLL; no validation labels'},
         'sklearn': sklearn.__version__, 'numpy': np.__version__, 'gpu': 'CPU head; actual Apertus CUDA cache reused',
         'actual_compute_cost': 0.0, 'estimated_compute_cost': 0.0, 'macro_f1': None,
-        'notes': 'Frozen real Apertus features; full 902-row training only. Few independent groups limit confidence in calibration and generalization. Latency sums cached GPU encoding and separately measured CPU head; not a live integrated service. Booklet-only context with fixed official class semantics; no reference input and no test fitting.'}
+        'notes': f'Frozen real Apertus features; {len(train)} declared training rows only. Few independent groups limit confidence in calibration and generalization. Latency sums cached GPU encoding and separately measured CPU head; not a live integrated service. Booklet-only context with fixed official class semantics; no reference input and no test fitting.'}
     append_event(registry, record)
     start = time.perf_counter()
     try:

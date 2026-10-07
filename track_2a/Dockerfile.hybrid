@@ -4,13 +4,19 @@ COPY requirements-cpu.lock ./
 RUN --mount=type=secret,id=cloud_ca \
     if [ -f /run/secrets/cloud_ca ]; then export PIP_CERT=/run/secrets/cloud_ca; fi; \
     pip install --no-cache-dir --no-deps --require-hashes --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-cpu.lock
-COPY src ./src
-COPY scripts/run_hybrid_workbench.py ./scripts/
-COPY deployment ./deployment
-COPY data/example-booklet.json ./data/example-booklet.json
-COPY tests ./tests
-RUN mkdir -p /models && chmod 777 /models
-RUN chmod -R a+rX /app/src /app/scripts /app/deployment /app/data /app/tests
+# One application layer also works on VFS-based cloud Docker daemons, which
+# otherwise copy the whole CPU dependency layer for every COPY/RUN step.
+RUN --mount=type=bind,source=src,target=/stage/src \
+    --mount=type=bind,source=scripts/run_hybrid_workbench.py,target=/stage/run_hybrid_workbench.py \
+    --mount=type=bind,source=deployment,target=/stage/deployment \
+    --mount=type=bind,source=data/example-booklet.json,target=/stage/example-booklet.json \
+    --mount=type=bind,source=tests,target=/stage/tests \
+    mkdir -p /app/scripts /app/data /models && \
+    cp -R /stage/src /app/src && cp -R /stage/deployment /app/deployment && \
+    cp -R /stage/tests /app/tests && \
+    cp /stage/run_hybrid_workbench.py /app/scripts/ && \
+    cp /stage/example-booklet.json /app/data/ && chmod 777 /models && \
+    chmod -R a+rX /app/src /app/scripts /app/deployment /app/data /app/tests
 ENV PYTHONPATH=/app/src PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 APERTUS_REQUIRED_GENERATION=v1.5 EMBEDDING_MODEL_DIR=/models/multilingual-e5-small RETRIEVAL_MODE=hybrid HF_HOME=/models/hf HF_HUB_DISABLE_XET=1 OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
 USER 65534:65534
 EXPOSE 8000

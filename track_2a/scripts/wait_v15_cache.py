@@ -9,7 +9,7 @@ def main():
     from ost_nli.v15 import REPO,REVISION,digest
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--directory',required=True)
-    parser.add_argument('--timeout',type=float,default=600)
+    parser.add_argument('--timeout',type=float,default=1800)
     args=parser.parse_args();root=Path(args.directory);deadline=time.monotonic()+args.timeout
     print('V15_WAITING_FOR_PRIVATE_CACHE_COPY',flush=True)
     while time.monotonic()<deadline:

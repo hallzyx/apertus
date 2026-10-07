@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.bk.admin.ch/dam/de/sd-web/iWYLyEPfLvhn/2024-09-22_erlaeuterungen_des_bundesrates.pdf",
+    "response_status": 200,
+    "content_range": null,
+    "bytes": 2680718,
+    "original_pinned_bytes_match": true
+  },
+  {
+    "url": "https://www.bk.admin.ch/dam/fr/sd-web/z11TVw3xAFqy/2024-06-09_explications_du_conseil_federal.pdf",
+    "response_status": 200,
+    "content_range": null,
+    "bytes": 2324659,
+    "original_pinned_bytes_match": true
+  }
+]

@@ -1,13 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 2.5815668705444446,
-  "actual_spend": 0.9058724261000002,
+  "estimated_spend": 1.3177522124000003,
+  "actual_spend": 1.3177522124000003,
   "actual_spend_note": "Timestamped account credit reduction after all task-created leases destroyed and absence verified; billing may settle asynchronously.",
   "active_instance_ids": [
     54642634
   ],
-  "remaining_estimated_budget": 7.418433129455556,
+  "remaining_estimated_budget": 8.6822477876,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -200,9 +200,53 @@
       "automatic_cleanup_deadline_seconds": 10800,
       "instance_id": 54642634,
       "status": "created"
+    },
+    {
+      "offer_id": 50135020,
+      "gpu": "RTX 5090",
+      "gpu_ram_mb": 32607,
+      "disk_gb": 50,
+      "hourly_gpu_usd": 0.4666666666666666,
+      "hourly_storage_usd": 0.023148148148148147,
+      "hourly_total_usd": 0.48981481481481476,
+      "expected_runtime_hours": 1,
+      "conservative_runtime_hours": 3,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 0.005208333333333333,
+      "estimated_total_usd_bound": 1.7798611111111111,
+      "purpose": "Recover verified v1.5 model cache from task-owned stopped instance 54642634 without Hugging Face credentials; complete full validation/test and declare any training-only source availability subset",
+      "git_commit": "f3393e654a5d0ef11330ba1af0d11586af9dd7ef",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T13:34:56.420857+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "instance_id": 54649350,
+      "status": "destroyed_verified",
+      "destroyed_verified_at": "2026-10-07T13:37:41.278911+00:00"
+    },
+    {
+      "offer_id": 50983173,
+      "gpu": "RTX 5090",
+      "gpu_ram_mb": 32607,
+      "disk_gb": 50,
+      "hourly_gpu_usd": 0.4666666666666666,
+      "hourly_storage_usd": 0.023148148148148147,
+      "hourly_total_usd": 0.48981481481481476,
+      "expected_runtime_hours": 1,
+      "conservative_runtime_hours": 3,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 0.005208333333333333,
+      "estimated_total_usd_bound": 1.7798611111111111,
+      "purpose": "Recover verified v1.5 model cache from task-owned stopped instance 54642634 without Hugging Face credentials; complete full validation/test and declare any training-only source availability subset",
+      "git_commit": "f3393e654a5d0ef11330ba1af0d11586af9dd7ef",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T13:39:42.487476+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "instance_id": 54649960,
+      "status": "destroyed_verified",
+      "destroyed_verified_at": "2026-10-07T14:01:42.349296+00:00"
     }
   ],
-  "account_credit_observed": 9.0973544792,
+  "account_credit_observed": 8.6822477876,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T12:37:32.165298+00:00"
+  "account_checked_at": "2026-10-07T14:01:42.349296+00:00"
 }
