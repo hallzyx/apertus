@@ -37,5 +37,11 @@
   "max_hours": 3,
   "lora": false,
   "additional_budget_cap_usd": 4.5,
-  "reserve_usd": 2
+  "reserve_usd": 2,
+  "per_class_guard": "No class F1 below original full by more than0.05",
+  "guard_amended_at_before_any_context_results": "2026-10-07T22:51:41.331763+00:00",
+  "final_candidate_grounding_guard": "Before deployment change, condition-matched wrong-booklet seeds42/1337 and cached empty-input frozen-head controls must each retain<90% of candidate correct F1 and have>0.05 F1 gap. If candidate fails, preserve original full deployment and report negative.",
+  "final_candidate_followup_gpu_bound": 555,
+  "final_candidate_followup_conditions": "552 wrong-document forwards + three DE/FR/IT public PDF CLI integration calls; no consumed310",
+  "final_candidate_followup_lease_bound_usd": 0.5168
 }

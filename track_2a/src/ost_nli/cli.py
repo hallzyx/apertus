@@ -7,7 +7,7 @@ from pathlib import Path
 from .data import fingerprint, inspect_dataset, load_dataset, load_document, read_jsonl, split_rows
 from .experiments import append_event, finish_record, new_record
 from .metrics import evaluate
-from .model import ApertusClient, label_map, predict
+from .model import ApertusClient, FrozenServiceClient, label_map, predict
 from .retrieval import retrieve
 from .runtime import production_context, embedding_retriever
 
@@ -106,6 +106,9 @@ def main():
                 raise ValueError("Reference/gold evidence is an evaluation diagnostic, never production input")
             os.environ['APERTUS_REQUIRED_GENERATION']='v1.5'
             doc = load_document(args.booklet)
+            if os.environ.get('FROZEN_BASE_URL'):
+                emit(FrozenServiceClient().predict(doc,args.claim))
+                return
             began = time.perf_counter()
             mode = args.context
             if mode in ('dense','hybrid'):
@@ -123,8 +126,9 @@ def main():
             if args.context in ('gold','reference'):
                 raise ValueError('Production batch input is booklet + claim, never reference/gold evidence')
             if Path(args.output).exists(): raise ValueError('Existing batch output cannot be overwritten')
-            client = ApertusClient(); documents = {}; results = []; seen = set(); retriever = None
-            if args.context in ('dense','hybrid'):
+            frozen = FrozenServiceClient() if os.environ.get('FROZEN_BASE_URL') else None
+            client = None if frozen else ApertusClient(); documents = {}; results = []; seen = set(); retriever = None
+            if not frozen and args.context in ('dense','hybrid'):
                 retriever = embedding_retriever()
             for row in read_jsonl(args.input):
                 if not isinstance(row.get('id'),str) or not row['id'] or row['id'] in seen:
@@ -133,6 +137,9 @@ def main():
                 path = Path(args.input).parent / row['document']
                 if str(path) not in documents: documents[str(path)] = load_document(path)
                 doc = documents[str(path)]; began = time.perf_counter(); mode = args.context
+                if frozen:
+                    result=frozen.predict(doc,row['claim']);result['id']=row['id'];results.append(result)
+                    continue
                 if retriever:
                     doc = {**doc,'passages':retriever.retrieve(doc['passages'],row['claim'],args.k,mode)}
                     mode = 'full'

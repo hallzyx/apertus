@@ -245,5 +245,6 @@
       "cap": 2048,
       "passages": 7
     }
-  ]
+  ],
+  "shared_production_packing_equivalent_checks": 30
 }
