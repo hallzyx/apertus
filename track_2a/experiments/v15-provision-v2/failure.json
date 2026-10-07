@@ -1,0 +1,28 @@
+{
+  "status": "failed_before_nli_evaluation",
+  "instance_id": 54633506,
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "weights_downloaded_and_verified": true,
+  "source_commit": "31b31c694b972c0d959e262a68f28dbbfd88581f",
+  "bootstrap_failure": "Two truncated PDF downloads left only 852 of 902 training rows. Strict fingerprint guard rejected the incomplete source before NLI experiments.",
+  "validation_rows_verified": 276,
+  "internal_test_rows_verified": 310,
+  "nli_benchmark_predictions": 0,
+  "repairs_committed": "920488aba6cebe3001e676a8d8308ac628db5268",
+  "repairs": [
+    "Reject mismatched PDF checksums, preserve bad cached files, retry downloads.",
+    "Rerun incomplete booklet preparation.",
+    "Use supported per-submodel attention implementations; actual native CPU inference passed."
+  ],
+  "remote_repair_failure": "Official Vast direct copies failed with Error during copying for task-owned code staging instances. A later GPU resume request reported required resources unavailable. Source hashes confirmed patches were not copied.",
+  "staging_instances_destroyed_verified": [
+    54635920,
+    54637927
+  ],
+  "instance_destroyed_verified": true,
+  "weights_preserved": "Fully verified local model copy; no weight files committed.",
+  "observed_total_task_spend_usd_at_cleanup": 0.8837078794000011,
+  "organizer_score": false,
+  "recorded_at": "2026-10-07T12:21:06.134328+00:00"
+}
