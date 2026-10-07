@@ -1,0 +1,7 @@
+# Official native v1.5 implementation, pinned by its model card.
+# CUDA torch 2.8.0 comes from the separately pinned PyTorch container.
+transformers @ https://github.com/swiss-ai/transformers/archive/3797303dda74844e3d1f8977ff5518bb91f818b4.tar.gz
+numpy==2.2.6
+safetensors==0.8.0
+tokenizers==0.22.2
+huggingface-hub==1.33.0
