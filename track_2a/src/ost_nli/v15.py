@@ -17,13 +17,24 @@ def digest(path):
     return h.hexdigest()
 
 
-def download(directory, token):
-    from huggingface_hub import HfApi, snapshot_download
+def download(directory, token, external_shard_dir=None):
+    from huggingface_hub import HfApi, snapshot_download, hf_hub_download
     if not token: raise ValueError('Authorized read token required for first download')
     info = HfApi().model_info(REPO, revision=REVISION, files_metadata=True, token=token)
     if info.sha != REVISION: raise ValueError('Model revision mismatch')
+    ignore = []
+    if external_shard_dir:
+        # A split cache permits small cloud disks without copying a large shard.
+        name='model-apertus-model-00002-of-00004.safetensors'
+        external=Path(hf_hub_download(REPO,name,revision=REVISION,token=token,local_dir=external_shard_dir))
+        Path(directory).mkdir(parents=True,exist_ok=True)
+        link=Path(directory)/name
+        if not link.exists():link.symlink_to(external)
+        if link.resolve()!=external.resolve():raise ValueError('Unexpected external shard target')
+        ignore=[name]
     root = Path(snapshot_download(REPO, revision=REVISION, token=token, local_dir=directory,
-        allow_patterns=['*.json','*.safetensors','*.jinja','*.model','*.txt','README.md'],max_workers=4))
+        allow_patterns=['*.json','*.safetensors','*.jinja','*.model','*.txt','README.md'],
+        ignore_patterns=ignore,max_workers=4))
     expected = json.loads((Path(__file__).resolve().parents[2]/'docs/apertus-v15-model-metadata.json').read_text())
     files = []
     for item in info.siblings:

@@ -1,0 +1,22 @@
+{
+  "instance_id": 54630169,
+  "status": "startup_transport_failed",
+  "timestamp": "2026-10-07T11:24:16.695588+00:00",
+  "gpu": "RTX 5090",
+  "real_v15_inference_completed": false,
+  "weights_downloaded": false,
+  "details": [
+    "HTTPS Hugging Face authentication verified in cloud.",
+    "Direct SSH connection refused; proxy SSH DNS unavailable.",
+    "Vast execute supports constrained reads only on stopped containers.",
+    "Template metadata update did not replace the pre-existing onstart file on resume.",
+    "Recycling after stopping left GPU resources unavailable; no model inference or training completed."
+  ],
+  "temporary_provider_credential": "Secure provider secret exists for next task lease; value never included in artifacts.",
+  "unavailable_search_offers": [
+    53867753,
+    50555695,
+    49025101
+  ],
+  "search_diagnosis": "GET offer results were stale; current CLI uses POST /bundles/."
+}
