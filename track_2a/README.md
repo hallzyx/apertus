@@ -20,6 +20,14 @@ server, not an estimate. Classification remains unavailable without a real endpo
 `LLM_TIMEOUT_SECONDS` defaults to 120; increase it for slow CPU endpoints (for
 example, 900). This is a client setting, not an organizer runtime limit.
 
+For Blackwell GPUs, install `requirements-v15-cuda.lock` in the pinned Python 3.11
+Linux runtime before `requirements-v15.lock`. Torch, TorchAudio and TorchVision
+must all use CUDA 12.8; the base image
+`pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69`
+contains CUDA 12.6 extensions, so CUDA availability alone is insufficient. Run
+`scripts/check_v15_cuda.py` and verify actual BF16/recurrent kernels, then native
+model/embedding loading. CPU uses its separately pinned CPU dependencies.
+
 The cloud proxy helper preserves TLS/CA verification. Do not expose keys in Git,
 logs or commands. Optional direct local v1.5 serving requires its gated weights
 and verified native architecture support; the old frozen backend cannot load its
@@ -45,7 +53,7 @@ With Docker running and cached assets, execute:
 
 ```bash
 # Mount your booklet and configure the same authorized endpoint.
-docker run --rm -v apertus-retrieval-models:/models -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY apertus-ost:hybrid predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --context hybrid --k 5
+docker run --rm -v apertus-retrieval-models:/models -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS apertus-ost:hybrid predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --context hybrid --k 5
 ```
 
 Host equivalent, after hash-locked CPU installation:

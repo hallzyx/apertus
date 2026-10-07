@@ -1,0 +1,15 @@
+{
+  "instance_id": 54660880,
+  "source_helper": 54664931,
+  "sha256": "224be987cb08b1f5b081477372a1a3801d3ca477dcb3b70a6dac88a5322d25f6",
+  "expected_sha256": "224be987cb08b1f5b081477372a1a3801d3ca477dcb3b70a6dac88a5322d25f6",
+  "verified": true,
+  "bytes": 34072,
+  "status": "Dependency lock copied and SHA verified; research GPU resume blocked by provider resources_unavailable",
+  "public_dependency_commit": "eceea5a",
+  "temporary_helper_instance": 54664931,
+  "temporary_helper_destroyed_verified": true,
+  "new_cache_recovery_instance": 54666272,
+  "benchmark_predictions_completed": 0,
+  "recorded_at": "2026-10-07T15:40:12.738085+00:00"
+}
