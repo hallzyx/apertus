@@ -1,5 +1,6 @@
 import json
 import os
+from pathlib import Path
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from .data import validate_document
 from .model import ApertusClient, FrozenServiceClient, label_map, predict
@@ -8,13 +9,14 @@ from .retrieval import retrieve
 HTML = r'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apertus · Evidence Lab</title>
 <style>body{font:16px system-ui;background:#101827;color:#e8eef8;max-width:1050px;margin:50px auto;padding:0 24px}h1{font-size:42px}p{line-height:1.6;color:#b5c2d6}textarea,input,select{box-sizing:border-box;width:100%;background:#19253a;color:#fff;border:1px solid #43536d;border-radius:8px;padding:12px;margin:8px 0}textarea{min-height:160px}button{background:#77e3c2;color:#10231c;border:0;border-radius:8px;padding:12px 22px;font-weight:700;margin:12px 12px 12px 0;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#19253a;padding:20px;border-radius:12px}label{display:block;margin-top:20px}.tag{color:#77e3c2}#status{padding:12px;border:1px solid #43536d;border-radius:8px}small{color:#b5c2d6}</style>
 <span class="tag">TRACK 2A · OST · RESEARCH WORKBENCH</span><h1>Apertus Evidence Lab</h1><p>Verify multilingual claims against a Swiss voting booklet. Inspect the exact passages, page provenance and measured inference usage. Internal experiments are documented in the technical report; official challenge compliance is pending.</p>
-<div id="status">Checking configuration…</div>
+<div id="benchmarks"></div><div id="status">Checking configuration…</div>
 <label for="doc">Booklet (canonical JSON with document_id and passages)</label><textarea id="doc">{"document_id":"synthetic-demo-only","passages":[{"id":"p1","page":1,"text":"Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor."},{"id":"p2","page":2,"text":"La proposition prévoit une contribution annuelle de 100 francs."},{"id":"p3","page":3,"text":"La proposta prevede un contributo annuo di 100 franchi."}]}</textarea>
 <small>This example is synthetic, not an official voting booklet. PDF and text ingestion are available through the CLI.</small>
 <label for="claim">Claim · DE / FR / IT / other languages</label><input id="claim" value="Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.">
 <button id="retrieve">Inspect lexical retrieval</button><button id="predict">Classify with Apertus</button><pre id="result" aria-live="polite">Choose an action. Lexical retrieval runs without a model; classification requires a real Apertus backend. Official class names are shown only when verified.</pre>
 <script>
 const status=document.getElementById('status'),result=document.getElementById('result');
+fetch('/benchmarks').then(r=>r.json()).then(b=>{if(b.results){document.getElementById('benchmarks').textContent='Internal validation Macro-F1 · raw Apertus '+b.results[0].macro_f1.toFixed(4)+' · learned head '+b.results[b.results.length-1].macro_f1.toFixed(4)+' · '+b.scope;}});
 fetch('/health').then(r=>r.json()).then(h=>{status.textContent=h.model_configured?'Apertus endpoint configured · connectivity and accuracy require a successful inference.':'Model unavailable · retrieval works; no classification or confidence is fabricated.';document.getElementById('predict').disabled=!h.model_configured;});
 async function run(action){let button=document.getElementById(action);button.disabled=true;try{const body={document:JSON.parse(document.getElementById('doc').value),claim:document.getElementById('claim').value};result.textContent='Running…';const response=await fetch('/api/'+action,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});result.textContent=JSON.stringify(await response.json(),null,2);}catch(e){result.textContent='Invalid input or network failure. Please check the booklet JSON.';}finally{button.disabled=false;}}
 document.getElementById('retrieve').onclick=()=>run('retrieve');document.getElementById('predict').onclick=()=>run('predict');
@@ -39,6 +41,9 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.respond(200,HTML,"text/html")
+        elif self.path == "/benchmarks":
+            path = Path(__file__).resolve().parents[2]/"deployment/benchmark.json"
+            self.respond(200,json.loads(path.read_text()) if path.exists() else {"available":False})
         elif self.path == "/health":
             configured = False
             try:

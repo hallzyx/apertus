@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "timestamp": "2026-10-07T03:59:26.367498+00:00",
+  "clean_checkout_commit": "c2062e6",
+  "command": "make run MODEL_CACHE=/workspace/.cache/apertus-8b FROZEN_ARGS='--model-dir /models' DOCKER_RUN_ARGS='--user 1000:1000'",
+  "scope": "Actual CPU Apertus/head and web UI inside one Docker container from clean GitHub clone",
+  "assets": "Only documented original public model directory reused; no host Python backend or raw dataset needed",
+  "model_weights_sha256_verified": true,
+  "docker_software_tests": {
+    "executed": 36,
+    "passed": 36,
+    "skipped": 0
+  },
+  "actual_prediction": {
+    "label": 0,
+    "class_name": null,
+    "training_inferred_class_name": "entailment",
+    "official_class_semantics_verified": false,
+    "probabilities": [
+      0.9988906436884132,
+      0.0011084293539870684,
+      9.269575997486633e-07
+    ],
+    "probability_calibration": "Uncalibrated trained head",
+    "evidence": [
+      {
+        "id": "p1",
+        "page": 1,
+        "text": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.",
+        "language": "de",
+        "truncated": false
+      },
+      {
+        "id": "p2",
+        "page": 2,
+        "text": "La proposition prévoit une contribution annuelle de 100 francs.",
+        "language": "fr",
+        "truncated": false
+      },
+      {
+        "id": "p3",
+        "page": 3,
+        "text": "La proposta prevede un contributo annuo di 100 franchi.",
+        "language": "it",
+        "truncated": false
+      }
+    ],
+    "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+    "document_id": "synthetic-demo-only",
+    "context_tokens": 167,
+    "reference_token_cap": 4096,
+    "truncated": false,
+    "model_input_premise": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.\n\nLa proposition prévoit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+    "evidence_prefix_alignment_verified": true,
+    "latency_seconds": 13.406779025000105,
+    "model": "swiss-ai/Apertus-8B-Instruct-2509",
+    "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+    "head_experiment": "apertus-option-head-4096-v1",
+    "method": "frozen_option_logits",
+    "retrieval": "full",
+    "precision": "bfloat16",
+    "device": "cpu"
+  },
+  "automatic_missing_model_download": "Implemented with pinned verified downloader; this clean-checkout test reused documented verified weights instead of downloading another 16.1 GB",
+  "macro_f1": null,
+  "notes": "Single synthetic positive request checks function, not challenge accuracy"
+}

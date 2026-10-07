@@ -6,6 +6,7 @@ RUN --mount=type=secret,id=cloud_ca \
     pip install --no-cache-dir --no-deps --require-hashes -r requirements-pdf.lock
 COPY pyproject.toml ./
 COPY src ./src
+COPY deployment ./deployment
 COPY tests ./tests
 COPY data/example-booklet.json ./data/example-booklet.json
 RUN chmod -R a+rX /app

@@ -1,0 +1,18 @@
+{
+  "scope": "Internal strict validation on 276 supplied-reference examples; 2 independent connected components; no final test or official score",
+  "official": false,
+  "results": [
+    {
+      "experiment": "apertus-8b-gpu-reference-4096-v1",
+      "macro_f1": 0.45351021194986424,
+      "mean_context_tokens": 1996.1485507246377,
+      "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.32803798428115744
+    },
+    {
+      "experiment": "apertus-option-head-4096-v1",
+      "macro_f1": 0.743242453361764,
+      "mean_context_tokens": 1996.1485507246377,
+      "mean_offline_gpu_encoder_plus_cpu_head_seconds": 0.32822530838622854
+    }
+  ]
+}
