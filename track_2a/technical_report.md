@@ -8,7 +8,7 @@ must not require reference strings. The app now implements PDF processing,
 multilingual semantic/BM25 fusion retrieval, source provenance, a Docker UI and
 single/batch CLI. Exact CLI/evidence schemas are project choices, not blockers.
 
-**All ten real native v1.5 validation comparisons are complete.** The best baseline is full/capped booklet context with restricted class scoring: preliminary Macro-F1 **0.671612** on all 276 validation rows, with zero invalid outputs. Two decision heads will be fitted using only the 902 training rows; a head must improve validation Macro-F1 by at least 0.02 before deployment. The single 310-row internal holdout run is still pending. These log-reported values await SHA-verified artifact recovery.
+**All ten real native v1.5 validation comparisons are complete.** The best baseline is full/capped booklet context with restricted class scoring: preliminary Macro-F1 **0.671612** on all 276 validation rows, with zero invalid outputs. Two decision heads will be fitted using only the 902 training rows; a head must improve validation Macro-F1 by at least 0.02 before deployment. The single 310-row internal holdout run is still pending. Per-run metric JSON has been recovered from the task-owned source (`experiments/v15-validation-metrics-recovered-v1`); source-checksummed predictions/features and final evaluation are still pending.
 
 The runtime uses an A40, original SHA-verified v1.5 weights, Torch 2.8.0/CUDA 12.8 and the pinned native fork. The temporary Hugging Face credential was removed from Vast and can be revoked. Native CPU/public PDF CLI integration and Docker checks are recorded separately; they are not benchmark estimates. The previous 0.970353 result used Apertus 2509 with supplied references and remains historical research.
 
@@ -26,7 +26,7 @@ The first extraction used PDF layout mode and fragmented words. Five training-on
 extraction comparisons motivated plain extraction; mean full-booklet reference
 5-gram coverage improved from 0.2834 to 0.8280 on validation. Both measurements are
 retained; matching is approximate and not organizer evidence grading. OCR is not
-implemented. Full context is explicitly byte-capped/truncation-reported when used.
+implemented. Full context is explicitly byte-capped/truncation-reported when used. All 276 validation full-context inputs were truncated at the 48,000-byte document-context budget; this baseline is full/capped, not an uncapped complete-booklet experiment.
 
 ## 3. Use of Apertus
 
@@ -90,16 +90,16 @@ on cross-language overlap; hybrid wins aggregate overlap. NLI superiority is unp
 
 | Validation setup | Macro-F1 | Valid outputs | Context tokens | Latency | Evidence |
 |---|---:|---:|---:|---:|---|
-| reference / score | 0.535419 (preliminary) | 276/276 | Recovery pending | Recovery pending | Oracle/reference diagnostic only |
-| reference / prompt | 0.531363 (preliminary) | 276/276 | Recovery pending | Recovery pending | Oracle/reference diagnostic only |
-| bm25 / score | 0.436482 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
-| bm25 / prompt | 0.402027 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
-| dense / score | 0.498261 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
-| dense / prompt | 0.509928 (valid subset) (preliminary) | 274/276 | Recovery pending | Recovery pending | Real booklet retrieval |
-| hybrid / score | 0.526883 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
-| hybrid / prompt | 0.496620 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
-| full / score | 0.671612 (preliminary) | 276/276 | Recovery pending | Recovery pending | Full/capped booklet input |
-| full / prompt | 0.552448 (preliminary) | 276/276 | Recovery pending | Recovery pending | Full/capped booklet input |
+| reference / score | 0.535419 (preliminary) | 276/276 | 2269.7 | 0.540 s | Oracle/reference diagnostic only |
+| reference / prompt | 0.531363 (preliminary) | 276/276 | 2266.7 | 0.779 s | Oracle/reference diagnostic only |
+| bm25 / score | 0.436482 (preliminary) | 276/276 | 1654.6 | 0.401 s | Real booklet retrieval |
+| bm25 / prompt | 0.402027 (preliminary) | 276/276 | 1651.6 | 0.642 s | Real booklet retrieval |
+| dense / score | 0.498261 (preliminary) | 276/276 | 1395.8 | 0.359 s | Real booklet retrieval |
+| dense / prompt | 0.509928 (valid subset) (preliminary) | 274/276 | 1396.1 | 0.601 s | Real booklet retrieval |
+| hybrid / score | 0.526883 (preliminary) | 276/276 | 1656.6 | 0.426 s | Real booklet retrieval |
+| hybrid / prompt | 0.496620 (preliminary) | 276/276 | 1653.6 | 0.667 s | Real booklet retrieval |
+| full / score | 0.671612 (preliminary) | 276/276 | 14106.1 | 3.635 s | Full/capped booklet input |
+| full / prompt | 0.552448 (preliminary) | 276/276 | 14103.1 | 3.911 s | Full/capped booklet input |
 
 Dense generation produced two invalid JSON decisions. Its Macro-F1 is on the 274 valid outputs; configurations with any invalid output are excluded from final selection. Oracle/reference results are diagnostic and are not a strict upper bound: additional booklet context can improve inference. All production comparisons use booklet + claim only.
 

@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-07T18:32:02.887005+00:00",
+  "source_instance_id": 54666272,
+  "read_only_source_transport": "Official Vast HTTPS cat output; file SHA-256 computed locally upon recovery",
+  "n_runs": 10,
+  "source_archive_and_prediction_recovery_pending": true,
+  "files": [
+    {
+      "path": "bm25-prompt.json",
+      "sha256": "5f2c97a330dedccab8793f14a3605c8ce55170d008a6c4fcdd8d5dad554a09c6",
+      "bytes": 12349
+    },
+    {
+      "path": "bm25-score.json",
+      "sha256": "f58525bdbf82cc70089ffef8aac9ccfc0dc96c3251621565e62e8e80a3bd1b68",
+      "bytes": 12546
+    },
+    {
+      "path": "dense-prompt.json",
+      "sha256": "1e031b1e45dd88f35238dfe297ef920f16cc855524e8d4f9cdfd7abcfde1a6a6",
+      "bytes": 12370
+    },
+    {
+      "path": "dense-score.json",
+      "sha256": "794c89893482e29ba7fb9d5853678c35a7562e388176e3386d794309b973ff05",
+      "bytes": 12456
+    },
+    {
+      "path": "full-prompt.json",
+      "sha256": "9219352c827ebb7fc36069a90e0bc1d38dc2ccb2eca798ac8e3618ce9eb1975a",
+      "bytes": 12823
+    },
+    {
+      "path": "full-score.json",
+      "sha256": "c795a4f4f16f68616f87f99f2b1dac1e4b702ee63fae5e0ea0f3a6989b207a79",
+      "bytes": 12837
+    },
+    {
+      "path": "hybrid-prompt.json",
+      "sha256": "cf443dc1b56c1a13fb38a3f6bb31e277fdcb544991e452962fa67b5ed065059b",
+      "bytes": 12367
+    },
+    {
+      "path": "hybrid-score.json",
+      "sha256": "bc52618e1a1dfb86f15945c111f8433822f8444b24daa095fd8215f7184d43e7",
+      "bytes": 12540
+    },
+    {
+      "path": "reference-prompt.json",
+      "sha256": "b582571ca45ee1a978d14f8f95337f34064356bfa5c3bb8e3c7e266c243e58cb",
+      "bytes": 12157
+    },
+    {
+      "path": "reference-score.json",
+      "sha256": "addf4e7067f35773a298ecf534a1e738678dfb40e98106aad60d096baa9b4362",
+      "bytes": 12433
+    }
+  ],
+  "official_challenge_score": false
+}
