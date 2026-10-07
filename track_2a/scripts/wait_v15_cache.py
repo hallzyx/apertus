@@ -17,6 +17,10 @@ def main():
             manifest=json.loads((root/'verified_manifest.json').read_text())
             if manifest['repo']!=REPO or manifest['revision']!=REVISION or not manifest['weights_verified']:
                 raise ValueError('Wrong cache revision')
+            expected=json.loads((Path(__file__).resolve().parents[1]/'docs/apertus-v15-model-metadata.json').read_text())['weights']
+            entries={entry['name']:entry for entry in manifest['files']}
+            if any(entries.get(entry['name'],{}).get('sha256')!=entry['sha256'] for entry in expected):
+                raise ValueError('Pinned original weight shards missing from cache manifest')
             if all((root/entry['name']).is_file() and (root/entry['name']).stat().st_size==entry['bytes'] for entry in manifest['files']):
                 for entry in manifest['files']:
                     if digest(root/entry['name'])!=entry['sha256']:raise ValueError('Transferred model checksum mismatch')
