@@ -113,7 +113,12 @@ def main():
         chosen.append(next(r for r in original if r['claim_language'].lower()==language))
     batch=[]
     for row in chosen:
-        pdf=repo/'track_2a/data/private/full-booklets-v2'/(hashlib.sha256(row['source_booklet_url'].encode()).hexdigest()+'.pdf')
+        name=hashlib.sha256(row['source_booklet_url'].encode()).hexdigest()+'.pdf'
+        pdf=next((repo/'track_2a/data/private'/directory/name for directory in
+                  ('full-booklets-v2','full-booklets-v1') if
+                  (repo/'track_2a/data/private'/directory/name).is_file()),None)
+        if pdf is None or hashlib.sha256(pdf.read_bytes()).hexdigest()!=row['source_pdf_sha256']:
+            raise ValueError('Original checksum-matched booklet PDF required for live CLI')
         batch.append({'id':row['id'],'document':str(pdf),'claim':row['claim']})
     batchfile=work/'v15-real-cli.jsonl'
     batchfile.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in batch))
