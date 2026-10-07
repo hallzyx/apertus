@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-10-07T05:08:34.063521+00:00",
+  "prompt_sha256": "ed578fd55ed4e390509031b5f083f1f7552a6fc80b9d11b7d89a52429c1a6d3e",
+  "matrices": [
+    {
+      "cap": 1024,
+      "split": "train",
+      "n": 902,
+      "hidden_shape": [
+        902,
+        4096
+      ],
+      "option_shape": [
+        902,
+        3
+      ],
+      "ids_labels_finite_verified": true
+    },
+    {
+      "cap": 1024,
+      "split": "validation",
+      "n": 276,
+      "hidden_shape": [
+        276,
+        4096
+      ],
+      "option_shape": [
+        276,
+        3
+      ],
+      "ids_labels_finite_verified": true
+    },
+    {
+      "cap": 4096,
+      "split": "train",
+      "n": 902,
+      "hidden_shape": [
+        902,
+        4096
+      ],
+      "option_shape": [
+        902,
+        3
+      ],
+      "ids_labels_finite_verified": true
+    },
+    {
+      "cap": 4096,
+      "split": "validation",
+      "n": 276,
+      "hidden_shape": [
+        276,
+        4096
+      ],
+      "option_shape": [
+        276,
+        3
+      ],
+      "ids_labels_finite_verified": true
+    }
+  ],
+  "test_encoded": false
+}
