@@ -69,3 +69,9 @@ Registered gate: **GO_WITH_LIMITATIONS**. No warning conditions. All2006 actual 
 Wrong-document scores retain only 63.2%/61.9% of correct-context score. These substantial drops support context dependence under the registered controls. They do not prove correct evidence reasoning: original labels are not true labels for intervened premises. Refitted claim-only capability .700 shows residual claim artifacts; empty-context original head .210 measures a different intervention. Only two wrong permutations and few events were tested.
 
 Source encodings and fitted claim-only audit: `../apertus-v15-phase2-controls-v1`; recovered archive SHA `d023629cf7e283a66b13b05c1f92b4c05165fc50544a7eac47aa049abe437c0b`. All105 export-part SHA checks, complete archive checksum and experiment file checks passed. Task-owned instance54722568 destroyed and verified absent via paginated provider API. New context study is preregistered in `context-protocol.json`; no efficiency architecture is selected yet.
+
+## Additional claim similarity audit
+
+Fixed1-nearest-neighbor E5 claim-only classifier: validation Macro-F1 .583725;64 of276 nearest-training claim cosines exceed .95,12 exceed .98. Three manually inspected high-similarity pairs are near paraphrases of Assembly recommend/reject/accept statements across different voting events. Exact normalized overlap being zero therefore does not establish semantic independence. High cosine alone is not duplicate-task or leakage proof: a numerical or negation change can reverse NLI, and different booklets are genuinely different premises. These development probes are not deployed.
+
+The registered final check includes an original full-head A6000 recheck to resolve the historical A40-versus-A6000 numerical confound. A compact candidate must additionally pass condition-matched wrong-booklet controls and three actual cross-language PDF CLI calls before deployment changes.
