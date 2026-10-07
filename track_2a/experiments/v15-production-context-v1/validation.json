@@ -1,0 +1,20 @@
+{
+  "real_pdf": true,
+  "pdf_sha256": "15391d5fdf2faac51ceff1f4b31f463a7b838587bc1e52ada57e85cc7e6c76d5",
+  "pages": 40,
+  "passages": 77,
+  "claim_language": "de",
+  "document_language": "fr",
+  "method": "full",
+  "evidence_n": 50,
+  "source_quotes_pages_offsets_verified": true,
+  "retrieval_seconds": 0.005142791997059248,
+  "fresh_image_no_source_mounts": true,
+  "tests_passed": 38,
+  "nli_in_this_check": false,
+  "make_run_verified": true,
+  "image_id": "sha256:88cb35af09e2bea5d54fcb2661a2540135e6780b3b71111b1adc1d2d0c3350f5",
+  "dockerfile_sha256": "83a57efa4fec43ab66f257c29b620c11f054f6606a0f349a52b5321bddfe6482",
+  "explicit_context_override": "RETRIEVAL_MODE=full",
+  "selection_file_pending": true
+}

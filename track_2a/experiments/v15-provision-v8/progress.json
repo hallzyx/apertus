@@ -4,8 +4,8 @@
   "gpu_instance_id": 54666272,
   "scope": "Frozen 276-row internal validation; provisional progress from task logs, SHA-verified artifact recovery pending",
   "official_hidden_score": false,
-  "log_sha256": "b8825e7256592430f3db199e8cacea84bf7b1d5a233e31372ea48d77703ef20d",
-  "updated_at": "2026-10-07T16:43:55.688472+00:00",
+  "log_sha256": "3d88f7a82dd9c234f7624441749ed4a0cfa0a8c50b60e0b25c4f75c33690e648",
+  "updated_at": "2026-10-07T17:16:36.103415+00:00",
   "completed_runs": [
     {
       "context": "reference",
@@ -89,6 +89,28 @@
       "method": "prompt",
       "n_total": 276,
       "macro_f1_log_rounded": 0.402027,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    },
+    {
+      "context": "full",
+      "method": "score",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.671612,
+      "invalid_outputs": 0,
+      "valid_n": 276,
+      "macro_f1_scope": "all 276 validation rows",
+      "valid_output_coverage": 1.0,
+      "oracle_only": false
+    },
+    {
+      "context": "full",
+      "method": "prompt",
+      "n_total": 276,
+      "macro_f1_log_rounded": 0.552448,
       "invalid_outputs": 0,
       "valid_n": 276,
       "macro_f1_scope": "all 276 validation rows",

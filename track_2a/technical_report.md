@@ -8,15 +8,9 @@ must not require reference strings. The app now implements PDF processing,
 multilingual semantic/BM25 fusion retrieval, source provenance, a Docker UI and
 single/batch CLI. Exact CLI/evidence schemas are project choices, not blockers.
 
-**Real native v1.5 GPU validation is running.** The first completed booklet-only hybrid/class-score baseline has preliminary validation Macro-F1 **0.526883** on all 276 rows, with zero invalid outputs. Oracle/reference class scoring is **0.535419**, and oracle direct generation **0.531363**. These are log-reported preliminary results, pending SHA-verified artifact recovery; full comparisons, decision-head training and the single 310-row holdout run are still pending. The runtime uses an A40, original SHA-verified weights, CUDA 12.8 and the pinned native fork; see `experiments/v15-provision-v8`. Authorized v1.5 weights have been downloaded and SHA-256 verified. Native
-CPU loading and three toy inferences succeeded; this is an environment check, not
-a benchmark. The former HTTP 401 access blocker is resolved. GPU validation now runs separately and is not inferred from the toy check. The public CLI has also
-completed three real training PDF cases (DE/FR/IT), with exact quote/page/offset/PDF
-hash checks. A Docker PDF upload and real native CPU decision reproduced the CLI
-class and 1,603 tokens. These are integration checks, not benchmark estimates; see
-`experiments/v15-real-cpu-cli-v1` and `experiments/v15-real-docker-v1`. The earlier 0.970353
-result used Apertus 2509 and supplied references; it is historical inference/head
-research, not the final challenge score or evidence of v1.5 performance.
+**All ten real native v1.5 validation comparisons are complete.** The best baseline is full/capped booklet context with restricted class scoring: preliminary Macro-F1 **0.671612** on all 276 validation rows, with zero invalid outputs. Two decision heads will be fitted using only the 902 training rows; a head must improve validation Macro-F1 by at least 0.02 before deployment. The single 310-row internal holdout run is still pending. These log-reported values await SHA-verified artifact recovery.
+
+The runtime uses an A40, original SHA-verified v1.5 weights, Torch 2.8.0/CUDA 12.8 and the pinned native fork. The temporary Hugging Face credential was removed from Vast and can be revoked. Native CPU/public PDF CLI integration and Docker checks are recorded separately; they are not benchmark estimates. The previous 0.970353 result used Apertus 2509 with supplied references and remains historical research.
 
 ## 2. Architecture
 
@@ -93,16 +87,20 @@ This diagnostic measures overlap with available references, not semantic evidenc
 correctness, official evidence score, or NLI Macro-F1. Dense slightly exceeds hybrid
 on cross-language overlap; hybrid wins aggregate overlap. NLI superiority is unproven.
 
-| Setup | Macro-F1 | Context tokens | Latency | Evidence |
-|---|---:|---:|---:|---|
-| Full-booklet Apertus v1.5 | Unrun | Unmeasured | Unmeasured | Full/capped source text |
-| Oracle/reference Apertus v1.5, class score | 0.535419 (preliminary validation) | Recovery pending | Recovery pending | Dataset reference, diagnostic only |
-| Oracle/reference Apertus v1.5, direct generation | 0.531363 (preliminary validation) | Recovery pending | Recovery pending | Dataset reference, diagnostic only |
-| BM25 → Apertus v1.5 | Unrun | Unmeasured | Unmeasured | Real retrieval implemented/measured separately |
-| Dense → Apertus v1.5 | Running | Unmeasured | Unmeasured | Real booklet passages |
-| Hybrid → Apertus v1.5, class score | 0.526883 (preliminary validation) | Recovery pending | Recovery pending | Real booklet passages; no reference input |
-| Legacy 2509 raw reference, 4096 cap | 0.453510 | 1996.15 | 0.328038 s | Supplied reference |
-| Legacy 2509 trained hidden head, 4096 cap | 0.970353 | 1996.15 | 0.323438 s | Supplied reference |
+| Validation setup | Macro-F1 | Valid outputs | Context tokens | Latency | Evidence |
+|---|---:|---:|---:|---:|---|
+| reference / score | 0.535419 (preliminary) | 276/276 | Recovery pending | Recovery pending | Oracle/reference diagnostic only |
+| reference / prompt | 0.531363 (preliminary) | 276/276 | Recovery pending | Recovery pending | Oracle/reference diagnostic only |
+| bm25 / score | 0.436482 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
+| bm25 / prompt | 0.402027 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
+| dense / score | 0.498261 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
+| dense / prompt | 0.509928 (valid subset) (preliminary) | 274/276 | Recovery pending | Recovery pending | Real booklet retrieval |
+| hybrid / score | 0.526883 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
+| hybrid / prompt | 0.496620 (preliminary) | 276/276 | Recovery pending | Recovery pending | Real booklet retrieval |
+| full / score | 0.671612 (preliminary) | 276/276 | Recovery pending | Recovery pending | Full/capped booklet input |
+| full / prompt | 0.552448 (preliminary) | 276/276 | Recovery pending | Recovery pending | Full/capped booklet input |
+
+Dense generation produced two invalid JSON decisions. Its Macro-F1 is on the 274 valid outputs; configurations with any invalid output are excluded from final selection. Oracle/reference results are diagnostic and are not a strict upper bound: additional booklet context can improve inference. All production comparisons use booklet + claim only.
 
 Legacy timings are offline GPU encoding plus separately timed CPU head, not live CPU
 or integrated service latency. Legacy exact-deduplicated score is 0.965299 on 207 rows.
@@ -132,7 +130,7 @@ Project-defined CLI: `python -m ost_nli predict BOOKLET.pdf CLAIM --context hybr
 Batch JSONL contains id/document/claim only. Source passages carry pages/offsets/hash.
 Documented interface is separable from model/retrieval implementation.
 
-The latest host and freshly rebuilt Docker image pass 37 tests each;
+The latest host and freshly rebuilt Docker image pass 38 tests each; `experiments/v15-production-context-v1` verifies full/capped source handling on a real French PDF and includes an HTTP regression that sends the same full context through CLI and web. The earlier 37-test image is recorded separately;
 `experiments/v15-fresh-docker-v1` records a real PDF upload and hybrid evidence
 retrieval through `make run` without mounting host source into the image. The
 following earlier clean-checkout check ran 36 tests. A clean GitHub checkout successfully
