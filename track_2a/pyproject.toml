@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apertus-ost"
+version = "0.1.0"
+description = "Document-grounded multilingual NLI research harness for Apertus"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pypdf==6.19.0"]
+research = ["numpy==2.2.6", "scikit-learn==1.7.2"]
+
+[project.scripts]
+ost-nli = "ost_nli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

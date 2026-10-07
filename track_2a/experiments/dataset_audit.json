@@ -1,0 +1,92 @@
+{
+  "dataset_sha256": "ef5e655739677aac9c873f04881662f2e18b33cad3eb99ab6a2b83644d3a197f",
+  "examples": 1488,
+  "documents": 667,
+  "booklets": 20,
+  "fields": [
+    "booklet_id",
+    "claim",
+    "claim_language",
+    "document_id",
+    "document_language",
+    "document_scope",
+    "evidence_annotation_available",
+    "evidence_ids",
+    "id",
+    "label",
+    "passages",
+    "provided_reference_ids",
+    "source_booklet_url",
+    "source_revision",
+    "source_row_index"
+  ],
+  "classes": {
+    "0": 495,
+    "1": 498,
+    "2": 495
+  },
+  "claim_languages": {
+    "de": 495,
+    "fr": 497,
+    "it": 496
+  },
+  "document_languages": {
+    "fr": 569,
+    "de": 455,
+    "it": 464
+  },
+  "language_pairs": {
+    "de->fr": 184,
+    "de->de": 159,
+    "de->it": 152,
+    "fr->it": 152,
+    "fr->fr": 196,
+    "fr->de": 149,
+    "it->de": 147,
+    "it->fr": 189,
+    "it->it": 160
+  },
+  "claim_lengths": {
+    "min": 6,
+    "mean": 22.580645161290324,
+    "median": 21.0,
+    "max": 63,
+    "unit": "unicode_word_count_not_model_tokens"
+  },
+  "evidence_lengths": {
+    "min": 0,
+    "mean": 0.0,
+    "median": 0.0,
+    "max": 0,
+    "unit": "unicode_word_count_not_model_tokens"
+  },
+  "empty_gold_evidence": 1488,
+  "claims_repeated_across_booklets": 12,
+  "leakage_warning": "Use shared booklet_id for all translations, versions and claims of one booklet. Grouping must be checked against official metadata.",
+  "source_repository": "OSTswiss/MNLIoverSwissVotingBooklets",
+  "source_revision": "9ff08597fb79dc68cbb3af9eb1388f34d21223e6",
+  "source_file_sha256": "87ee4afd9c0ee8861106c50f05884481402ca668aecf927df68fc52d915b02fd",
+  "license_metadata": "MIT",
+  "source_fields": [
+    "baseline_score",
+    "booklet_download_date",
+    "booklet_publish_date",
+    "booklet_url",
+    "claim",
+    "claim_language",
+    "entailment_label",
+    "reference_language",
+    "reference_string",
+    "vote"
+  ],
+  "original_document_urls": 60,
+  "voting_dates": 20,
+  "distinct_reference_strings": 667,
+  "exact_duplicate_examples": 335,
+  "exact_claims_crossing_booklet_dates": 8,
+  "provided_reference_annotation": "NLI premise excerpts, not annotated minimal gold evidence",
+  "numeric_class_semantics": "Not documented in source card; official rules confirmation required",
+  "baseline_score_handling": "Excluded from inputs, features and metrics; unknown source score semantics",
+  "full_booklets_available": false,
+  "page_provenance_available": false
+}

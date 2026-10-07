@@ -1,0 +1,9 @@
+{
+  "document_id": "synthetic-demo-only",
+  "language": "de",
+  "passages": [
+    {"id": "p1", "page": 1, "text": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.", "language": "de"},
+    {"id": "p2", "page": 2, "text": "La proposition prévoit une contribution annuelle de 100 francs.", "language": "fr"},
+    {"id": "p3", "page": 3, "text": "La proposta prevede un contributo annuo di 100 franchi.", "language": "it"}
+  ]
+}

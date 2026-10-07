@@ -1,0 +1,11 @@
+{
+  "currency": "USD",
+  "initial_budget": 10.0,
+  "estimated_spend": 0.0,
+  "actual_spend": null,
+  "actual_spend_note": "Account access unavailable; no instances created by this task.",
+  "active_instance_ids": [],
+  "remaining_estimated_budget": 10.0,
+  "recovery_reserve": 2.0,
+  "instances": []
+}
