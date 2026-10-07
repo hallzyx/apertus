@@ -6,6 +6,7 @@ transport key is deleted before model download; the credential exists in RAM onl
 """
 import argparse
 import base64
+import hashlib
 import json
 import os
 import subprocess
@@ -29,7 +30,11 @@ def main():
             try:run(['openssl','genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:3072','-out',str(private)])
             finally:os.umask(old)
         public=subprocess.check_output(['openssl','pkey','-in',str(private),'-pubout'])
-        print('HF_TRANSPORT_PUBLIC_KEY='+base64.b64encode(public).decode(),flush=True)
+        Path('/workspace/v15-transport-public.pem').write_bytes(public)
+        encoded=base64.b64encode(public).decode()
+        for i in range(0,len(encoded),400):
+            print('HF_TRANSPORT_PUBLIC_PART='+str(i//400)+':'+encoded[i:i+400],flush=True)
+        print('HF_TRANSPORT_PUBLIC_SHA256='+hashlib.sha256(public).hexdigest(),flush=True)
         return
     if not Path('/workspace/model/verified_manifest.json').exists():
         encrypted=base64.b64decode(a.sealed_token,validate=True)
