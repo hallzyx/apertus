@@ -27,5 +27,25 @@
   },
   "benchmark_bytes_match": true,
   "frontend_container": "apertus-phase2-frontend",
-  "rejected_initial_probe_file": "An old probe PDF failed parsing; verified complete original source PDF succeeded. No application repair required."
+  "rejected_initial_probe_file": "An old probe PDF failed parsing; verified complete original source PDF succeeded. No application repair required.",
+  "updated_ui_image": "sha256:07717eccff9524dd67ca9c25d91f3499ebb502f0181e3e16153c6a3702183be5",
+  "updated_ui_docker_tests": {
+    "passed": 38,
+    "failed": 0,
+    "skipped": 0
+  },
+  "updated_ui_live_pdf": {
+    "pages": 72,
+    "passages": 157,
+    "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b"
+  },
+  "ui_fields": [
+    "verdict",
+    "reported class confidence",
+    "exact retrieved quote/page",
+    "input tokens",
+    "inference milliseconds",
+    "raw JSON"
+  ],
+  "classification_backend_configured": false
 }
