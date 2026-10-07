@@ -1,0 +1,57 @@
+{
+  "pair_direction": "document_language -> claim_language",
+  "official_hidden_benchmark": false,
+  "partitions": {
+    "train": {
+      "n": 902,
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "language_pairs": {
+        "de->de": 112,
+        "de->fr": 101,
+        "de->it": 82,
+        "fr->de": 95,
+        "fr->fr": 127,
+        "fr->it": 120,
+        "it->de": 97,
+        "it->fr": 83,
+        "it->it": 85
+      },
+      "all_nine_pairs_present": true,
+      "cross_lingual_n": 578
+    },
+    "validation": {
+      "n": 276,
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "language_pairs": {
+        "de->de": 21,
+        "de->fr": 25,
+        "de->it": 30,
+        "fr->de": 36,
+        "fr->fr": 35,
+        "fr->it": 34,
+        "it->de": 25,
+        "it->fr": 40,
+        "it->it": 30
+      },
+      "all_nine_pairs_present": true,
+      "cross_lingual_n": 190
+    },
+    "test": {
+      "n": 310,
+      "dataset_sha256": "d464d1f45776fb9ff444e8e9319eac5b47c92af133e28f1305669326d98b50f6",
+      "language_pairs": {
+        "de->de": 26,
+        "de->fr": 23,
+        "de->it": 35,
+        "fr->de": 53,
+        "fr->fr": 34,
+        "fr->it": 35,
+        "it->de": 30,
+        "it->fr": 29,
+        "it->it": 45
+      },
+      "all_nine_pairs_present": true,
+      "cross_lingual_n": 205
+    }
+  }
+}

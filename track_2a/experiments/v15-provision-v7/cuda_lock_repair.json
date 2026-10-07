@@ -11,5 +11,8 @@
   "temporary_helper_destroyed_verified": true,
   "new_cache_recovery_instance": 54666272,
   "benchmark_predictions_completed": 0,
-  "recorded_at": "2026-10-07T15:40:12.738085+00:00"
+  "recorded_at": "2026-10-07T15:40:12.738085+00:00",
+  "destroyed_verified": true,
+  "cache_recovered_sha_verified_on_instance": 54666272,
+  "destroyed_verified_at": "2026-10-07T16:15:16.461673+00:00"
 }

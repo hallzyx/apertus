@@ -1,5 +1,5 @@
 {
-  "status": "real_cuda_passed_waiting_for_cache",
+  "status": "original_model_and_full_sources_verified_preparing_contexts",
   "instance_id": 54666272,
   "estimate": {
     "offer_id": 51338028,
@@ -40,5 +40,27 @@
     ],
     "bf16_matmul": true,
     "cudnn_recurrent_loading": true
-  }
+  },
+  "transfer_wait_refresh": {
+    "official_reboot_success": true,
+    "running_after_reboot": true,
+    "real_cuda_rechecked": true,
+    "reason": "Prevent fixed 1800-second process wait from expiring during a slow private provider copy; copy daemon continues outside the container",
+    "timestamp": "2026-10-07T16:03:36.351231+00:00"
+  },
+  "all_original_model_sha256_verified": true,
+  "full_original_902_276_310_fingerprints_verified": true,
+  "cache_transfer": {
+    "source": 54660880,
+    "destination": 54666272,
+    "copy_status": "Done receiving copy",
+    "reboot": {
+      "success": true
+    },
+    "timestamp": "2026-10-07T16:13:36.701901+00:00"
+  },
+  "verified_at": "2026-10-07T16:15:11.473337+00:00",
+  "source_destroyed_verified": true,
+  "optional_cuda_extension_mismatch_resolved": true,
+  "e5_real_context_preparation_verified": true
 }

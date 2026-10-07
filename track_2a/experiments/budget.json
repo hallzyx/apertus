@@ -1,14 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 5.2594711323666665,
-  "actual_spend": 2.0115544656999997,
+  "estimated_spend": 3.755571232166666,
+  "actual_spend": 2.307654565499999,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [
-    54660880,
     54666272
   ],
-  "remaining_estimated_budget": 4.7405288676333335,
+  "remaining_estimated_budget": 6.244428767833334,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -303,7 +302,8 @@
       "created_at": "2026-10-07T15:03:01.494369+00:00",
       "automatic_cleanup_deadline_seconds": 10800,
       "instance_id": 54660880,
-      "status": "created"
+      "status": "destroyed_verified",
+      "destroyed_verified_at": "2026-10-07T16:15:16.461673+00:00"
     },
     {
       "instance_id": 54664931,
@@ -342,7 +342,7 @@
       "status": "created"
     }
   ],
-  "account_credit_observed": 7.9934913573,
+  "account_credit_observed": 7.692345434500001,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T15:37:42.627277+00:00"
+  "account_checked_at": "2026-10-07T16:15:16.461673+00:00"
 }
