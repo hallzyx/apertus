@@ -1,0 +1,10 @@
+{
+  "helper_instance_id": 54659541,
+  "target_instance_id": 54653201,
+  "root_onstart_sha_verified": false,
+  "helper_destroyed_verified": true,
+  "controller_error": "Helper was destroyed before its queued script copy was verified because a failed shell step did not stop the next command. The original startup file remained unchanged. Future destruction must follow verified transfer in a separate successful tool step.",
+  "real_nli_predictions": 0,
+  "asset_integrity": "Existing verified model cache and complete 902/276/310 processed source rows remain intact.",
+  "timestamp": "2026-10-07T15:01:21.977522+00:00"
+}

@@ -1,13 +1,14 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 3.3502922518111093,
-  "actual_spend": 1.5704311406999985,
+  "estimated_spend": 5.35530426411111,
+  "actual_spend": 1.7754431529999994,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [
-    54653201
+    54653201,
+    54660880
   ],
-  "remaining_estimated_budget": 6.649707748188891,
+  "remaining_estimated_budget": 4.64469573588889,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -266,9 +267,45 @@
       "automatic_cleanup_deadline_seconds": 10800,
       "instance_id": 54653201,
       "status": "created"
+    },
+    {
+      "instance_id": 54659541,
+      "offer_id": 45668918,
+      "gpu": "RTX 5090",
+      "disk_gb": 8,
+      "hourly_total_usd": 0.4703703703703703,
+      "estimated_total_usd_bound": 0.08839506172839505,
+      "created_at": "2026-10-07T14:52:17.748743+00:00",
+      "automatic_cleanup_deadline_seconds": 600,
+      "status": "destroyed_verified",
+      "purpose": "Stage one public, checksum-verified startup script through supported provider copy; preserve existing model/data cache and repair CUDA stack on research instance. No model download, inference or credential.",
+      "git_commit": "a8f11a92a8bd69afdcd20d56218cbbe657595bfe",
+      "image": "python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d",
+      "destroyed_verified_at": "2026-10-07T14:56:10.031177+00:00"
+    },
+    {
+      "offer_id": 45669267,
+      "gpu": "RTX 5090",
+      "gpu_ram_mb": 32607,
+      "disk_gb": 50,
+      "hourly_gpu_usd": 0.4666666666666666,
+      "hourly_storage_usd": 0.023148148148148147,
+      "hourly_total_usd": 0.48981481481481476,
+      "expected_runtime_hours": 1,
+      "conservative_runtime_hours": 3,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 0.005208333333333333,
+      "estimated_total_usd_bound": 1.7798611111111111,
+      "purpose": "Transfer complete verified model/source cache from stopped task instance 54653201; use native Torch CUDA 12.8 with real kernel checks; all original 902/276/310 rows; no Hugging Face credential",
+      "git_commit": "a8f11a92a8bd69afdcd20d56218cbbe657595bfe",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-07T15:03:01.494369+00:00",
+      "automatic_cleanup_deadline_seconds": 10800,
+      "instance_id": 54660880,
+      "status": "created"
     }
   ],
-  "account_credit_observed": 8.429568859300002,
+  "account_credit_observed": 8.258161032,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-07T14:20:49.888819+00:00"
+  "account_checked_at": "2026-10-07T14:56:10.169847+00:00"
 }

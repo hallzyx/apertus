@@ -1,0 +1,15 @@
+{
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "capability": [
+    12,
+    0
+  ],
+  "bf16_matmul": true,
+  "cudnn_recurrent_loading": true,
+  "instance_id": 54660880,
+  "source_commit": "a8f11a92a8bd69afdcd20d56218cbbe657595bfe",
+  "model_inference_in_this_check": false,
+  "timestamp": "2026-10-07T15:07:48.079552+00:00"
+}
