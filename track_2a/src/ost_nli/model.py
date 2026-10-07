@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import time
 import urllib.error
@@ -57,11 +58,14 @@ def select_context(row, mode="bm25", k=5, max_bytes=48000, diversify=False):
 
 
 class ApertusClient:
-    def __init__(self, base_url=None, model=None, key=None, timeout=120, transport=None):
+    def __init__(self, base_url=None, model=None, key=None, timeout=None, transport=None):
         self.base_url = (base_url or os.environ.get("LLM_BASE_URL", "")).rstrip("/")
         self.model = model or os.environ.get("LLM_NAME") or 'swiss-ai/Apertus-v1.5-8B'
         self.key = key if key is not None else os.environ.get("LLM_API_KEY", "")
-        self.timeout, self.transport = timeout, transport
+        self.timeout = float(timeout if timeout is not None else os.environ.get('LLM_TIMEOUT_SECONDS', '120'))
+        if not math.isfinite(self.timeout) or self.timeout <= 0:
+            raise ValueError('LLM_TIMEOUT_SECONDS must be finite and positive')
+        self.transport = transport
         u = urllib.parse.urlsplit(self.base_url)
         if u.scheme not in ("http","https") or not u.hostname or u.username or u.password or u.query or u.fragment:
             raise ValueError("LLM_BASE_URL must be a clean http(s) endpoint base, usually ending /v1")

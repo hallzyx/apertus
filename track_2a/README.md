@@ -17,6 +17,8 @@ The default runtime rejects model names that do not identify Apertus v1.5.
 It does not silently substitute legacy Apertus 2509. Temperature is zero and output
 is strictly parsed as a JSON integer class. Model token usage must come from the
 server, not an estimate. Classification remains unavailable without a real endpoint.
+`LLM_TIMEOUT_SECONDS` defaults to 120; increase it for slow CPU endpoints (for
+example, 900). This is a client setting, not an organizer runtime limit.
 
 The cloud proxy helper preserves TLS/CA verification. Do not expose keys in Git,
 logs or commands. Optional direct local v1.5 serving requires its gated weights
