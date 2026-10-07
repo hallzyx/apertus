@@ -1,0 +1,19 @@
+{
+  "status": "failed_before_inference",
+  "instance_id": 54642634,
+  "model_cache_original_revision_verified": true,
+  "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "booklets_downloaded": 54,
+  "booklets_total": 60,
+  "training_available_n": 757,
+  "validation_n": 276,
+  "test_n": 310,
+  "validation_test_sha_match_frozen": true,
+  "real_nli_predictions": 0,
+  "failure": "Six downloaded PDF sources did not match pinned hashes; strict 902-row training fingerprint rejected 757-row availability subset. Container self-stopped before model loading. Resources unavailable for resume; verified model cache preserved for private copy to research lease.",
+  "recovery_policy": "Later explicit training-only source-availability subset is allowed, with canonical claims/labels/IDs unchanged and full validation/test required. No source hash is relaxed.",
+  "destroyed_verified": true,
+  "timestamp": "2026-10-07T14:11:06.678410+00:00",
+  "cache_recovered_sha_verified_on_instance": 54653201,
+  "destroyed_at": "2026-10-07T14:20:49.900942+00:00"
+}

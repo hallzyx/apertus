@@ -1,0 +1,15 @@
+{
+  "instance_id": 54653201,
+  "source_commit": "b37140f",
+  "status": "booklet_preparation_in_progress",
+  "real_nli_predictions": 0,
+  "private_model_copy": {
+    "source_instance": 54642634,
+    "all_original_model_file_hashes_verified": true,
+    "source_lease_destroyed_verified": true,
+    "hf_token_used": false,
+    "destination_restart_required_for_visibility": true
+  },
+  "cache_wait_seconds": 1800,
+  "restart_uses_same_existing_lease": true
+}
