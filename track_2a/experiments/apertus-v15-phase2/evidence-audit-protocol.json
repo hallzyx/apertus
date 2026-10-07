@@ -1,0 +1,15 @@
+{
+  "sampling": "Deterministic first validation row for each claim-language DE/FR/IT by gold class0/1/2, before candidate results. Gold used only for analysis sampling, never model input.",
+  "ids": [
+    "ost-v1.1-0019",
+    "ost-v1.1-0499",
+    "ost-v1.1-0995",
+    "ost-v1.1-0169",
+    "ost-v1.1-0664",
+    "ost-v1.1-1159",
+    "ost-v1.1-0333",
+    "ost-v1.1-0833",
+    "ost-v1.1-1335"
+  ],
+  "scope": "Nine source-inspected development cases; not blinded independent evidence scoring or population estimate. Reference used only to find passages for manual audit, not production retrieval. Neutral: irrelevant reference cannot prove booklet-wide absence."
+}
