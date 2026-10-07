@@ -74,5 +74,118 @@
   },
   "official_class_semantics_verified": false,
   "macro_f1": null,
-  "compute_cost": 0.0
+  "compute_cost": 0.0,
+  "additional_actual_docker_requests": {
+    "german": {
+      "label": 0,
+      "class_name": null,
+      "training_inferred_class_name": "entailment",
+      "official_class_semantics_verified": false,
+      "probabilities": [
+        0.998777871538991,
+        0.001220704080753915,
+        1.4243802549939544e-06
+      ],
+      "probability_calibration": "Uncalibrated trained head",
+      "evidence": [
+        {
+          "id": "p1",
+          "page": 1,
+          "text": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.",
+          "language": "de",
+          "truncated": false
+        },
+        {
+          "id": "p2",
+          "page": 2,
+          "text": "La proposition prévoit une contribution annuelle de 100 francs.",
+          "language": "fr",
+          "truncated": false
+        },
+        {
+          "id": "p3",
+          "page": 3,
+          "text": "La proposta prevede un contributo annuo di 100 franchi.",
+          "language": "it",
+          "truncated": false
+        }
+      ],
+      "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+      "document_id": "synthetic-demo-only",
+      "context_tokens": 166,
+      "reference_token_cap": 4096,
+      "truncated": false,
+      "model_input_premise": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.\n\nLa proposition prévoit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+      "evidence_prefix_alignment_verified": true,
+      "latency_seconds": 12.390954125999997,
+      "model": "swiss-ai/Apertus-8B-Instruct-2509",
+      "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+      "head_experiment": "apertus-option-head-4096-v1",
+      "method": "frozen_option_logits",
+      "retrieval": "full",
+      "precision": "bfloat16",
+      "device": "cpu"
+    },
+    "french": {
+      "label": 0,
+      "class_name": null,
+      "training_inferred_class_name": "entailment",
+      "official_class_semantics_verified": false,
+      "probabilities": [
+        0.6210933612304663,
+        0.08503753805535585,
+        0.2938691007141777
+      ],
+      "probability_calibration": "Uncalibrated trained head",
+      "evidence": [
+        {
+          "id": "p1",
+          "page": 1,
+          "text": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.",
+          "language": "de",
+          "truncated": false
+        },
+        {
+          "id": "p2",
+          "page": 2,
+          "text": "La proposition prévoit une contribution annuelle de 100 francs.",
+          "language": "fr",
+          "truncated": false
+        },
+        {
+          "id": "p3",
+          "page": 3,
+          "text": "La proposta prevede un contributo annuo di 100 franchi.",
+          "language": "it",
+          "truncated": false
+        }
+      ],
+      "evidence_role": "Input context candidates, not annotated or model-attributed minimal evidence",
+      "document_id": "synthetic-demo-only",
+      "context_tokens": 163,
+      "reference_token_cap": 4096,
+      "truncated": false,
+      "model_input_premise": "Die Vorlage sieht einen jährlichen Beitrag von 100 Franken vor.\n\nLa proposition prévoit une contribution annuelle de 100 francs.\n\nLa proposta prevede un contributo annuo di 100 franchi.",
+      "evidence_prefix_alignment_verified": true,
+      "latency_seconds": 12.220269200000075,
+      "model": "swiss-ai/Apertus-8B-Instruct-2509",
+      "model_revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+      "head_experiment": "apertus-option-head-4096-v1",
+      "method": "frozen_option_logits",
+      "retrieval": "full",
+      "precision": "bfloat16",
+      "device": "cpu"
+    }
+  },
+  "synthetic_diagnostic": {
+    "n": 3,
+    "correct": 2,
+    "expected_numeric_labels": {
+      "italian": 0,
+      "german": 0,
+      "french": 2
+    },
+    "failed_case": "French 200-franc claim against multilingual 100-franc premise predicted class 0, expected training-inferred contradiction class 2",
+    "not_ost_macro_f1": true
+  }
 }

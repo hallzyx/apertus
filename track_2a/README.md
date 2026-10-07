@@ -6,17 +6,38 @@ in `docs/official_track_readme.md`.
 
 ## Run through Docker
 
-Requires Docker with BuildKit and Make. No host Python dependencies are needed for
-ordinary `make run`. The image includes Python 3.11 and hash-verified pypdf for
-text-based PDF input. The base image is pinned by digest.
+Requires Docker with BuildKit, Make, **32 GB RAM** and approximately **20 GB free disk**.
+The default runtime installs hash-locked CPU inference dependencies in Docker and
+automatically downloads original Apertus 8B (16.1 GB) at the pinned revision. It
+verifies official shard SHA-256 hashes and retains weights in Docker volume
+`apertus-models`. No host Python installation, Vast rental or inference key is needed.
+The first startup waits for download and model loading, then serves port 8000.
 
 ```bash
 make run
 ```
 
-This starts the workbench on port 8000. Without a model it supports real lexical
-retrieval and clearly reports classification as unavailable. Configure an existing
-Apertus OpenAI-compatible endpoint for inference:
+This runs the real learned frozen Apertus classifier and web demo in one container.
+For an already verified model directory, mount only that public model directory
+and run with its owning user when host permissions are private:
+
+```bash
+make run MODEL_CACHE=/workspace/.cache/apertus-8b FROZEN_ARGS='--model-dir /models' DOCKER_RUN_ARGS="--user $(id -u):$(id -g)"
+```
+
+Do not mount the entire host cache or credential directories. The default named
+volume is writable by the non-root container user; its download does not require
+changing host permissions. Class names remain unknown without verified official
+mapping; training-inferred semantics are explicitly separate.
+
+For the smaller retrieval workbench or an existing authorized inference endpoint:
+
+```bash
+make run RUNTIME=workbench
+```
+
+This mode requires no model RAM/weights and supports lexical retrieval. Configure
+an Apertus OpenAI-compatible endpoint for generation inference:
 
 - `LLM_NAME`: exact Apertus model ID/version served by the endpoint.
 - `LLM_BASE_URL`: HTTPS endpoint base, conventionally ending `/v1`.
@@ -47,7 +68,7 @@ ordinary Docker networking and public CAs work with `make run`.
 
 The original public Apertus 8B model has executed on CPU. This optional workflow
 requires about 16.1 GB of weights, additional dependency/cache space, and at least
-32 GB RAM. It is separate from the lightweight Docker workbench. From the
+32 GB RAM. The default Docker runtime includes these dependencies; host installation is optional for research scripts. From the
 repository root:
 
 ```bash
@@ -170,8 +191,8 @@ FROZEN_BASE_URL=http://host.docker.internal:8001 make run
 
 The backend serializes inference to avoid concurrent memory pressure. Its `/health`
 identifies the loaded model/head; only a successful `/api/predict` proves connectivity.
-Keep this local service on a trusted development network. Default `make run` remains
-a lightweight workbench; an authorized Apertus endpoint can also use the documented
+Keep this local service on a trusted development network. `make run RUNTIME=workbench` selects
+the lightweight workbench; an authorized Apertus endpoint can also use the documented
 OpenAI-compatible path. No inference credential is required for local frozen inference.
 
 For CPU training on recovered frozen caches, install:
@@ -187,3 +208,13 @@ outputs. `vast_feature_cache.sh` extracts the two context caps on a properly cos
 original-model CUDA lease; `recover_vast_cache.py` recovers checksummed UTF-8 parts
 from that task's stopped instance. Persist recovered results and destroy/verify the
 lease; stopping alone leaves billable storage.
+
+
+The default complete Docker image can also classify a mounted document directly:
+
+```bash
+docker run --rm -v apertus-models:/models -v "$PWD/track_2a/data:/input:ro" apertus-ost:frozen --predict /input/example-booklet.json 'natural-language claim'
+```
+
+`--self-test` runs the software suite without downloading weights. Select
+`RUNTIME=workbench` for endpoint-mode commands using `apertus-ost:local`.

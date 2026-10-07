@@ -79,7 +79,7 @@ independent observations.
 
 Macro-F1 averages fixed classes 0/1/2; undefined class F1 is zero. Exact prediction IDs and dataset fingerprints are required. The evaluator also reports per-class F1, confusion matrices, DE/FR/IT and language-pair slices, cross-lingual performance, context tokens, latency, ECE with ten equal-width bins, multiclass Brier and NLL when real probabilities exist. Missing gold evidence metrics remain null.
 
-All complete real OST comparisons below use the same 276 validation rows. The final 310-row test partition remains untouched. Context tokens include the system, claim and official chat template. GPU latency covers tokenization and inference; head latency adds a separately timed CPU head, and is not a measurement of an integrated live service.
+All complete real OST comparisons below use the same 276 validation rows. The final 310-row test partition remains untouched. An exact-duplicate sensitivity check retains 207 validation rows: raw 4,096-token Macro-F1 is 0.488089 and its 30-row head is 0.739191; see `experiments/exact_duplicate_sensitivity.json`. Context tokens include the system, claim and official chat template. GPU latency covers tokenization and inference; head latency adds a separately timed CPU head, and is not a measurement of an integrated live service.
 
 | Experiment | Validation Macro-F1 | Mean context tokens | Mean inference seconds |
 |---|---:|---:|---:|
@@ -107,9 +107,11 @@ The new feature transport writes short-line base64 parts with source-side per-pa
 
 ## 7. Reproducibility and application validation
 
-`make run` starts the lightweight Docker workbench. The Python image and PDF dependency are pinned, package hashes and TLS verified. The cloud Docker helper handles trusted proxy CA configuration without hard-coded proxy addresses or committed credentials. The Docker app processes JSON/text/PDF, returns lexical evidence with exact available provenance, and supports an Apertus OpenAI-compatible endpoint with a verified official label mapping. It fails clearly when the model is unavailable; it does not invent classifications or confidence.
+`make run` starts the complete CPU frozen Apertus Docker application, including hash-locked inference dependencies and automatic pinned weight download into a named Docker volume. It needs 32 GB RAM and roughly 20 GB disk. `make run RUNTIME=workbench` starts the lightweight endpoint/retrieval mode. The Python image and PDF dependency are pinned, package hashes and TLS verified. The cloud Docker helper handles trusted proxy CA configuration without hard-coded proxy addresses or committed credentials. The Docker app processes JSON/text/PDF, returns lexical evidence with exact available provenance, and supports an Apertus OpenAI-compatible endpoint with a verified official label mapping. It fails clearly when the model is unavailable; it does not invent classifications or confidence.
 
 36 host tests and 36 Docker tests passed without skips, covering PDF/provenance, connected splitting, duplicate isolation, metric fixtures, strict outputs and a **synthetic HTTP endpoint**. A clean checkout, Docker startup/restart and DE/FR/IT retrieval were verified. These software checks are separate from the actual GPU scores above. Task-created validation containers were removed. See `experiments/software_validation.json`.
+
+The live frozen classifier has also executed through the Docker HTTP workbench in DE/FR/IT. It got 2/3 synthetic cases correct and failed the French numerical contradiction; these results are retained at `experiments/frozen-live-software-v1/`, not presented as an OST score.
 
 Optional real CPU inference uses hash-locked `requirements-cpu.lock` and the pinned original model downloader. Optional lightweight head training uses `requirements-head.lock`. Existing nonempty experiment directories are rejected. Dataset/model hashes and source revision are retained. Large raw data and weights are downloaded and verified separately rather than assumed to be present in a clean checkout.
 
@@ -119,7 +121,7 @@ The real three-case cross-language CPU diagnostic scored 2/3, including a French
 
 The official event guide/terms returned HTTP 403; booklet PDF probes returned HTTP 503. The dataset card does not independently define official numeric semantics, exact submission schema, admissible premise scope or gold evidence. These block an assertion of challenge compliance, full/gold comparison and evidence Recall@k. The model source is public and weights verified; secure Vast authentication and API/S3 transport now work. SSH is unavailable, but is unnecessary for the working API recovery path.
 
-The training split contains only two connected components (838/64 rows); validation also contains two. Reported row-level scores are descriptive. Duplicate/translation sensitivity, calibration reliability and final-test generalization require careful assessment. OCR is not implemented. The default Docker workbench needs a configured inference endpoint for live classification. No full-booklet accuracy, gold retrieval score, official class-name verification or official final submission is claimed.
+The training split contains only two connected components (838/64 rows); validation also contains two. Reported row-level scores are descriptive. Duplicate/translation sensitivity, calibration reliability and final-test generalization require careful assessment. OCR is not implemented. The complete default Docker runtime provides actual local inference; the lightweight endpoint mode requires a configured model. No full-booklet accuracy, gold retrieval score, official class-name verification or official final submission is claimed.
 
 ## References and licensing
 
