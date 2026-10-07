@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.bk.admin.ch/dam/de/sd-web/iWYLyEPfLvhn/2024-09-22_erlaeuterungen_des_bundesrates.pdf",
+    "bytes": 2680718,
+    "sha256": "d8e0047ae589df3bdaa91c93fcb0f6dd0cbb5e36f7aab00fe293ad996a9bfed4",
+    "retry_url_checksum_verified": true
+  },
+  {
+    "url": "https://www.bk.admin.ch/dam/fr/sd-web/z11TVw3xAFqy/2024-06-09_explications_du_conseil_federal.pdf",
+    "bytes": 2324659,
+    "sha256": "8cedb2df05d10299734c86d6d37d80fbd4bb4a6685044455792c77fc73f2d7f6",
+    "retry_url_checksum_verified": true
+  }
+]
