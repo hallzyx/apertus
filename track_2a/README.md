@@ -1,236 +1,113 @@
-# Apertus Evidence Lab
+# Track 2A · OST booklet-grounded multilingual NLI
 
-Track 2A · OST · Multilingual Natural Language Inference over Swiss Official Voting Booklets.
-The official template's track layout is retained. Original track instructions are
-in `docs/official_track_readme.md`.
+## Runtime
 
-## Run through Docker
+From the repository root, `make run` builds the pinned CPU Docker image and starts
+port 8000. It downloads the public supporting retrieval model
+`intfloat/multilingual-e5-small` at immutable revision
+`614241f622f53c4eeff9890bdc4f31cfecc418b3`, verifying original LFS hashes.
+The retrieval cache persists in Docker volume `apertus-retrieval-models`.
+A practical retrieval runtime is four CPU threads, roughly 2 GB RAM and at least
+3 GB free disk for Docker/retrieval weights. Apertus endpoint hardware is separate.
+Internet is required for first asset download and remote model inference.
 
-Requires Docker with BuildKit, Make, **32 GB RAM** and approximately **20 GB free disk**.
-The default runtime installs hash-locked CPU inference dependencies in Docker and
-automatically downloads original Apertus 8B (16.1 GB) at the pinned revision. It
-verifies official shard SHA-256 hashes and retains weights in Docker volume
-`apertus-models`. No host Python installation, Vast rental or inference key is needed.
-The first startup waits for download and model loading, then serves port 8000.
+Set `LLM_NAME=swiss-ai/Apertus-v1.5-8B`, `LLM_BASE_URL` to an authorized
+OpenAI-compatible endpoint ending `/v1`, and `LLM_API_KEY` securely if required.
+The default runtime rejects model names that do not identify Apertus v1.5.
+It does not silently substitute legacy Apertus 2509. Temperature is zero and output
+is strictly parsed as a JSON integer class. Model token usage must come from the
+server, not an estimate. Classification remains unavailable without a real endpoint.
 
-```bash
-make run
-```
+The cloud proxy helper preserves TLS/CA verification. Do not expose keys in Git,
+logs or commands. Optional direct local v1.5 serving requires its gated weights
+and verified native architecture support; the old frozen backend cannot load its
+`apertus1p5` architecture or reuse its decision head.
 
-This runs the real learned frozen Apertus classifier and web demo in one container.
-For an already verified model directory, mount only that public model directory
-and run with its owning user when host permissions are private:
+## Application and deterministic CLI
 
-```bash
-make run MODEL_CACHE=/workspace/.cache/apertus-8b FROZEN_ARGS='--model-dir /models' DOCKER_RUN_ARGS="--user $(id -u):$(id -g)"
-```
+Upload a PDF in the Docker UI, or supply canonical document JSON. Production uses
+only document text and claim. Returned labels are fixed:
+0 entailment, 1 neutral, 2 contradiction. Source evidence contains one-based page,
+exact extracted text, paragraph ID, source PDF SHA-256 and page-text character offsets.
+Several retrieved passages are allowed; they are candidate supporting context,
+not a claim of perfectly judged or uniquely correct evidence. PDFs with no selectable
+text need OCR; no evidence is fabricated.
 
-Do not mount the entire host cache or credential directories. The default named
-volume is writable by the non-root container user; its download does not require
-changing host permissions. Class names remain unknown without verified official
-mapping; training-inferred semantics are explicitly separate.
-
-For the smaller retrieval workbench or an existing authorized inference endpoint:
-
-```bash
-make run RUNTIME=workbench
-```
-
-This mode requires no model RAM/weights and supports lexical retrieval. Configure
-an Apertus OpenAI-compatible endpoint for generation inference:
-
-- `LLM_NAME`: exact Apertus model ID/version served by the endpoint.
-- `LLM_BASE_URL`: HTTPS endpoint base, conventionally ending `/v1`.
-- `LLM_API_KEY`: secure endpoint authentication, if required; never commit it.
-- `OST_LABEL_MAP`: JSON mapping official keys `"0"`, `"1"`, `"2"` to the verified
-  class names `entailment`, `contradiction`, `neutral`. The source dataset card does
-  not document these semantics; there is deliberately no guessed default.
-
-An endpoint name being configured does not prove connectivity. The workbench
-never fabricates labels, probabilities, usage or accuracy. Probabilities are null
-for generation methods; probability calibration is available in the evaluator
-when real class probabilities exist.
-
-In Codex Cloud's proxied Docker environment use:
+With Docker running and cached assets, execute:
 
 ```bash
-bash scripts/cloud-docker.sh run
+# Mount your booklet and configure the same authorized endpoint.
+docker run --rm -v apertus-retrieval-models:/models -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY apertus-ost:hybrid predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --context hybrid --k 5
 ```
 
-This resolves the current proxy hostname and supplies the environment's trusted
-CA bundle to Docker via supported build secrets/runtime mounts. No fixed IP,
-proxy credential or verification bypass is saved. Outside this environment,
-ordinary Docker networking and public CAs work with `make run`.
-
-## CLI
-
-### Optional real Apertus inference on CPU
-
-The original public Apertus 8B model has executed on CPU. This optional workflow
-requires about 16.1 GB of weights, additional dependency/cache space, and at least
-32 GB RAM. The default Docker runtime includes these dependencies; host installation is optional for research scripts. From the
-repository root:
+Host equivalent, after hash-locked CPU installation:
 
 ```bash
-UV_CACHE_DIR=/workspace/.cache/uv uv pip install --python .venv/bin/python --torch-backend cpu --require-hashes -r track_2a/requirements-cpu.lock
-.venv/bin/python track_2a/scripts/download_cpu_model.py --model-dir /workspace/.cache/apertus-8b
-.venv/bin/python track_2a/scripts/cpu_apertus_smoke.py --model-dir /workspace/.cache/apertus-8b --output-dir /tmp/apertus-new-smoke
-PYTHONPATH=track_2a/src .venv/bin/python track_2a/scripts/cpu_ost_experiment.py --model-dir /workspace/.cache/apertus-8b --train track_2a/data/private/splits-strict/train.jsonl --validation track_2a/data/private/splits-strict/validation.jsonl --output-dir track_2a/experiments/new-cpu-reference-run --train-per-class 10 --reference-token-cap 1024
+PYTHONPATH=track_2a/src EMBEDDING_MODEL_DIR=/workspace/.cache/multilingual-e5-small .venv/bin/python -m ost_nli predict /path/booklet.pdf 'The claim' --context hybrid --k 5
 ```
 
-Existing nonempty experiment directories are rejected. The completed short
-synthetic diagnostic got 2/3 correct, including a contradiction error; it is not
-an OST benchmark. The long-reference OST run is recorded separately and its
-`experiment.json` status must be `completed` before treating its metrics as a
-full validation result. The numeric option mapping uses training labels only;
-it does not establish the official class-name convention. CPU prefill on this
-machine can take 15–40 seconds per long example.
+Output includes `label`, `label_name`, `evidence`, `input_tokens`,
+`inference_time_ms`, model name and truncation flags. `probabilities` is null when
+the endpoint supplies only a class; no probabilities are synthesized.
+`model_inference_time_ms` separates the model call from overall retrieval + NLI time.
+PDF parsing/model initialization are separate startup/input-preparation costs.
+Exit code 0 means success; invalid input/unavailable inference exits 2. This is
+our documented interface, not an organizer-mandated JSON or CLI signature.
+
+Batch input is JSONL with unique `id`, `document` path and `claim`, no labels or
+reference strings. Relative document paths resolve against the input file directory:
+
+```json
+{"id":"example-1","document":"booklet.pdf","claim":"The claim"}
+```
 
 ```bash
-PYTHONPATH=src python -m ost_nli retrieve data/example-booklet.json 'jährlicher Beitrag 100 Franken'
-PYTHONPATH=src python -m ost_nli predict /path/to/booklet.pdf 'natural-language claim'
+PYTHONPATH=track_2a/src EMBEDDING_MODEL_DIR=/workspace/.cache/multilingual-e5-small .venv/bin/python -m ost_nli predict-batch /inputs/claims.jsonl --output /outputs/predictions.json --context hybrid
 ```
 
-JSON booklets contain `document_id` and `passages` with unique `id`, `text`, and
-optional one-based `page` and `language`. Text files retain paragraph provenance
-with unknown pages marked null. PDFs with no selectable text fail clearly; OCR
-is not implemented. The Docker CLI can process host files mounted read-only:
+Existing batch outputs are rejected. This same internal prediction function is
+separable from the CLI and can be adapted to any later evaluator interface.
+
+## Reproduce official booklet preparation and diagnostics
 
 ```bash
-docker run --rm -v "$PWD/data:/input:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e OST_LABEL_MAP apertus-ost:local predict /input/example-booklet.json 'claim'
+bash track_2a/scripts/setup-cloud.sh
+PYTHONPATH=track_2a/src .venv/bin/python track_2a/scripts/prepare_booklets.py --source track_2a/data/private/official/v1.1.jsonl --splits track_2a/data/private/splits-strict --output track_2a/data/private/full-booklets-v2
+PYTHONPATH=track_2a/src HF_HUB_DISABLE_XET=1 .venv/bin/python -c "from ost_nli.dense import download; download('/workspace/.cache/multilingual-e5-small')"
+PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/evaluate_booklet_retrieval.py --full track_2a/data/private/full-booklets-v2/validation.jsonl --reference track_2a/data/private/splits-strict/validation.jsonl --embedding-dir /workspace/.cache/multilingual-e5-small --cache-dir /workspace/.cache/e5-document-vectors --output /tmp/new-retrieval-validation
 ```
 
-Inference returns integer class, class name, available probabilities, selected
-passages, page/source provenance, server-reported prompt tokens and measured
-end-to-end latency. Classification is independent of explanations.
+60 official PDFs cover all 902/276/310 rows. Source URL/hash manifests and alignment
+are in `experiments/booklet-source-v2/`. The 5-gram overlap diagnostic is not the
+organizer's unspecified evidence score or exact gold Recall@k. Reference text is
+used only by the evaluator after retrieval, never by the retriever or production.
+The 310 split is our internal holdout, not the organizer's hidden benchmark.
 
-## Official data and evaluation
+Once real v1.5 inference access exists, run matched full/reference/BM25/hybrid
+experiments using the committed strict IDs. Reference inputs are diagnostics only:
 
 ```bash
-PYTHONPATH=src python -m ost_nli prepare-ost --output data/private/ost-reference.jsonl
-PYTHONPATH=src python -m ost_nli split data/private/ost-reference.jsonl --output-dir data/private/splits-strict --seed 42
-PYTHONPATH=src python -m ost_nli inspect data/private/ost-reference.jsonl
+cd track_2a
+PYTHONPATH=src ../.venv/bin/python -m ost_nli experiment data/private/full-booklets-v2/validation.jsonl --id v15-hybrid-validation --split-name validation --context hybrid --output-dir experiments/artifacts/v15-hybrid-validation
 ```
 
-The downloader pins OST dataset revision
-`9ff08597fb79dc68cbb3af9eb1388f34d21223e6` and verifies its published Git LFS SHA-256.
-Existing changed source files and existing output/split directories are rejected,
-not silently overwritten. The dataset provides references, not minimal gold
-evidence or full PDF text. The adapter marks this distinction explicitly.
+Set `EMBEDDING_MODEL_DIR` to the verified local E5 directory for this host command.
+The generic evaluator computes fixed three-class Macro-F1, class/language/pair/
+cross-lingual slices, actual tokens, latency and calibration only when real
+probabilities exist. Logs preserve started/completed/failed runs and partial results.
 
-Default splits keep voting dates together and connect dates that share normalized
-identical claims. Translations and near-duplicates still require a source audit.
-The current frozen split sizes are 902 train / 276 validation / 310 test. No
-official final test performance has been measured.
+## Legacy research and budget
 
-```bash
-PYTHONPATH=src python -m ost_nli experiment data/private/splits-strict/validation.jsonl --id reference-prompt-v1 --split-name validation --context reference --output-dir experiments/artifacts/reference-prompt-v1 --notes 'record exact model revision, quantization and stack'
-PYTHONPATH=src python -m ost_nli evaluate data/private/splits-strict/validation.jsonl experiments/artifacts/reference-prompt-v1/predictions.json
-```
+`make run RUNTIME=frozen` remains an optional original Apertus 2509 research
+runtime, requiring 32 GB RAM and about 20 GB disk for 16.1 GB weights. It is not
+compliant with the v1.5 generation requirement. Historical 0.970353 results are
+reference-only; see `docs/legacy_apertus_2509_report.md`. Binary feature caches are
+ignored in the current checkout and must be regenerated for those old experiments.
 
-The endpoint-based prompt runner requires an endpoint and verified label mapping.
-The complete frozen Docker uses local original weights and numeric heads instead. Dataset hashes
-and exact ID alignment prevent stale/mismatched predictions from being scored.
-The append-only registry preserves failed runs. Per-language and cross-lingual
-Macro-F1, token/latency coverage and calibration availability are reported.
-`--context gold` requires actual gold annotations; `--context full` refuses the
-provided-reference dataset rather than misreporting it as full-booklet context.
+All task-created Vast instances were destroyed and API absence verified. The
+USD 10 hard budget and USD 2 reserve remain in `experiments/budget.json`.
+Never rent before checking model access, stack support, current offer/cost and
+bounded cleanup; persist verified results before destruction. No new GPU lease
+was created for the current PDF/retrieval work.
 
-## Validation and budget
-
-```bash
-make test
-make smoke                 # tests inside Docker
-bash scripts/cloud-docker.sh smoke  # cloud proxy variant
-```
-
-The synthetic example is a UI/test fixture, not official benchmark data.
-`experiments/budget.json` records the USD 10 ceiling, observed spend, active leases and verified cleanup.
-Read its timestamped status before any new rental; billing can settle asynchronously.
-Never rent before costing GPU, storage, transfer and download/warm-up time.
-
-## Licensing and provenance
-
-Application code: Apache-2.0, inherited official project template license.
-Official template: `HackApertus/project-template`, revision
-`7f2382275461baf3fa6c8855d157d86abffe9f0e`.
-OST data: dataset metadata declares MIT; data downloaded separately, attributed
-to `OSTswiss/MNLIoverSwissVotingBooklets`. Source cards and research limitations
-are recorded in `docs/` and the technical report.
-pypdf is BSD-3-Clause; its license is included in the installed distribution.
-Final submission licensing remains subject to the official event terms.
-
-
-## Real frozen Apertus decision heads
-
-Completed real internal validation experiments and per-language/calibration metrics
-are committed in `experiments/` and summarized in `technical_report.md`. The selected
-902-training-row hidden-state head reaches Macro-F1 0.970353 at a 4,096-token reference cap.
-Its exact-duplicate sensitivity score is 0.965299; all 310 final-test rows remain untouched.
-This is internal supplied-reference validation, not an official challenge score.
-
-After the optional original-model CPU installation/download above, classify a new
-JSON/text/PDF directly from the repository root:
-
-```bash
-PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python -m ost_nli predict-frozen track_2a/data/example-booklet.json 'La proposta prevede un contributo annuo di 100 franchi.' --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/deployment
-```
-
-The head uses the exact official chat template and frozen BF16 model. It returns
-class 0/1/2, genuine classifier probabilities, exact model-input premise, available
-page provenance, tokenizer context tokens and measured latency. Official class names
-remain null without verified `OST_LABEL_MAP`; an explicitly marked training-inferred
-semantic name is separate. The selected head uses training-only connected-group OOF temperature calibration;
-only two independent training groups limit confidence. The older 30-row heads remain uncalibrated. Full-booklet or BM25
-inputs are accepted for exploration but their challenge accuracy has not been measured.
-
-For a persistent local model serving the Docker workbench, start this process
-before the lightweight workbench in a second terminal (32 GB RAM and original weights required):
-
-```bash
-PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/serve_frozen_apertus.py --model-dir /workspace/.cache/apertus-8b --head-dir track_2a/deployment --host 0.0.0.0 --port 8001
-FROZEN_BASE_URL=http://host.docker.internal:8001 make run RUNTIME=workbench
-```
-
-The backend serializes inference to avoid concurrent memory pressure. Its `/health`
-identifies the loaded model/head; only a successful `/api/predict` proves connectivity.
-Keep this local service on a trusted development network. `make run RUNTIME=workbench` selects
-the lightweight workbench; an authorized Apertus endpoint can also use the documented
-OpenAI-compatible path. No inference credential is required for local frozen inference.
-
-For CPU training on recovered frozen caches, install:
-
-```bash
-UV_CACHE_DIR=/workspace/.cache/uv uv pip install --python .venv/bin/python --require-hashes -r track_2a/requirements-head.lock
-PYTHONPATH=track_2a/src OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 .venv/bin/python track_2a/scripts/frozen_head_experiment.py --cache track_2a/experiments/apertus-frozen-cache-v1 --cap 4096 --features option_logits --train track_2a/data/private/splits-strict/train.jsonl --validation track_2a/data/private/splits-strict/validation.jsonl --output-dir /tmp/new-frozen-head
-```
-
-The training script checks cache/data hashes and exact row IDs; grouped OOF training
-selects C and fits temperature without validation labels. Never overwrite completed
-outputs. `vast_feature_cache.sh` extracts the two context caps on a properly costed
-original-model CUDA lease; `recover_vast_cache.py` recovers checksummed UTF-8 parts
-from that task's stopped instance. Persist recovered results and destroy/verify the
-lease; stopping alone leaves billable storage.
-
-
-The default complete Docker image can also classify a mounted document directly:
-
-```bash
-docker run --rm -v apertus-models:/models -v "$PWD/track_2a/data:/input:ro" apertus-ost:frozen --predict /input/example-booklet.json 'natural-language claim'
-```
-
-`--self-test` runs the software suite without downloading weights. Select
-`RUNTIME=workbench` for endpoint-mode commands using `apertus-ost:local`.
-
-
-Recompute the committed six-head comparison and all portable probability checks:
-
-```bash
-PYTHONPATH=track_2a/src .venv/bin/python track_2a/scripts/compare_frozen_heads.py --validation track_2a/data/private/splits-strict/validation.jsonl --cache track_2a/experiments/apertus-frozen-cache-v1 --experiments track_2a/experiments --output /tmp/frozen-head-comparison.json
-```
-
-`experiments/frozen_head_comparison.json` records the actual selection, calibration,
-language slices and exact-deduplicated sensitivity. The selected head's eight
-validation errors are retained in its `error_audit.json`. The prepared
-`final_frozen_evaluation.py` / `vast_final_evaluation.sh` path remains **unrun**;
-confirm official premise scope and submission rules before spending on final evaluation.
+Code/model licensing and additional results are in `technical_report.md`.

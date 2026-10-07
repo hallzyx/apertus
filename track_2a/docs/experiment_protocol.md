@@ -1,3 +1,15 @@
+# Updated contract and next real runs
+
+Follow docs/challenge_contract.md. Production requires Apertus v1.5 and full
+booklet + claim; old 2509 reference-only scores are historical diagnostics.
+CLI/evidence schema are project choices, not blockers. Devpost is unnecessary.
+Authenticate v1.5 weights or verify a v1.5 endpoint before any rental.
+Use train-only fitting; choose architecture on validation, freeze it, and run
+internal holdout NLI once. Real PDF retrieval diagnostics are committed separately.
+
+The historical protocol below records earlier research; its scope ambiguity
+was resolved by the supplied contract.
+
 # Research protocol
 
 ## Status

@@ -1,0 +1,248 @@
+{
+  "full_sha256": "d464d1f45776fb9ff444e8e9319eac5b47c92af133e28f1305669326d98b50f6",
+  "reference_sha256": "e901320094d2e828c06b5799e5acb0a98a78ebcd06e07473a34335d1f89bc346",
+  "n": 310,
+  "k": 5,
+  "model": "intfloat/multilingual-e5-small",
+  "results": {
+    "bm25": {
+      "n": 310,
+      "reference_5gram_mean_coverage": 0.19446848850409335,
+      "fraction_with_at_least_90_percent_reference_coverage": 0.01935483870967742,
+      "average_selected_characters": 4910.883870967742,
+      "average_retrieval_seconds_including_first_document_encoding": 0.009674840609589029,
+      "by_language_pair": {
+        "de->de": {
+          "n": 26,
+          "reference_5gram_mean_coverage": 0.41536062228727144,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.07692307692307693,
+          "average_selected_characters": 5354.153846153846,
+          "average_retrieval_seconds_including_first_document_encoding": 0.009363313537995474
+        },
+        "de->fr": {
+          "n": 23,
+          "reference_5gram_mean_coverage": 0.15212423896990337,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4961.347826086957,
+          "average_retrieval_seconds_including_first_document_encoding": 0.00819809269618734
+        },
+        "de->it": {
+          "n": 35,
+          "reference_5gram_mean_coverage": 0.0708793967656712,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4955.428571428572,
+          "average_retrieval_seconds_including_first_document_encoding": 0.007902575685251836
+        },
+        "fr->de": {
+          "n": 53,
+          "reference_5gram_mean_coverage": 0.15282053644177387,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4362.735849056604,
+          "average_retrieval_seconds_including_first_document_encoding": 0.009803217792549095
+        },
+        "fr->fr": {
+          "n": 34,
+          "reference_5gram_mean_coverage": 0.3672687070545027,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.058823529411764705,
+          "average_selected_characters": 5266.117647058823,
+          "average_retrieval_seconds_including_first_document_encoding": 0.010026633323564859
+        },
+        "fr->it": {
+          "n": 35,
+          "reference_5gram_mean_coverage": 0.14572714427352196,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.02857142857142857,
+          "average_selected_characters": 4887.342857142857,
+          "average_retrieval_seconds_including_first_document_encoding": 0.010986208228340339
+        },
+        "it->de": {
+          "n": 30,
+          "reference_5gram_mean_coverage": 0.12025086673222833,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4068.0,
+          "average_retrieval_seconds_including_first_document_encoding": 0.009868703266329248
+        },
+        "it->fr": {
+          "n": 29,
+          "reference_5gram_mean_coverage": 0.039164288562507324,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 5493.482758620689,
+          "average_retrieval_seconds_including_first_document_encoding": 0.01007520848286041
+        },
+        "it->it": {
+          "n": 45,
+          "reference_5gram_mean_coverage": 0.29057453294608165,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.022222222222222223,
+          "average_selected_characters": 5176.311111111111,
+          "average_retrieval_seconds_including_first_document_encoding": 0.010163836622167664
+        }
+      },
+      "cross_lingual": {
+        "n": 205,
+        "reference_5gram_mean_coverage": 0.11669690358230789,
+        "fraction_with_at_least_90_percent_reference_coverage": 0.004878048780487805,
+        "average_selected_characters": 4737.482926829268,
+        "average_retrieval_seconds_including_first_document_encoding": 0.009548664663346178
+      }
+    },
+    "dense": {
+      "n": 310,
+      "reference_5gram_mean_coverage": 0.2014005370067149,
+      "fraction_with_at_least_90_percent_reference_coverage": 0.012903225806451613,
+      "average_selected_characters": 3656.6548387096773,
+      "average_retrieval_seconds_including_first_document_encoding": 0.3752129991195092,
+      "by_language_pair": {
+        "de->de": {
+          "n": 26,
+          "reference_5gram_mean_coverage": 0.30920903765360674,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.038461538461538464,
+          "average_selected_characters": 3958.769230769231,
+          "average_retrieval_seconds_including_first_document_encoding": 1.1336830796926034
+        },
+        "de->fr": {
+          "n": 23,
+          "reference_5gram_mean_coverage": 0.06839833571717778,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 2486.2608695652175,
+          "average_retrieval_seconds_including_first_document_encoding": 0.017392922912815422
+        },
+        "de->it": {
+          "n": 35,
+          "reference_5gram_mean_coverage": 0.18633228500079746,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 3818.7714285714287,
+          "average_retrieval_seconds_including_first_document_encoding": 0.15276417977137108
+        },
+        "fr->de": {
+          "n": 53,
+          "reference_5gram_mean_coverage": 0.16977006608189757,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 3910.509433962264,
+          "average_retrieval_seconds_including_first_document_encoding": 0.5865372658869469
+        },
+        "fr->fr": {
+          "n": 34,
+          "reference_5gram_mean_coverage": 0.2549050153508724,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.08823529411764706,
+          "average_selected_characters": 3778.205882352941,
+          "average_retrieval_seconds_including_first_document_encoding": 0.32290157023571203
+        },
+        "fr->it": {
+          "n": 35,
+          "reference_5gram_mean_coverage": 0.2489447342095252,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 3852.7714285714287,
+          "average_retrieval_seconds_including_first_document_encoding": 0.017356580914201912
+        },
+        "it->de": {
+          "n": 30,
+          "reference_5gram_mean_coverage": 0.22102943183124538,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 3641.8333333333335,
+          "average_retrieval_seconds_including_first_document_encoding": 1.0494803947003675
+        },
+        "it->fr": {
+          "n": 29,
+          "reference_5gram_mean_coverage": 0.13139190198368828,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 2839.862068965517,
+          "average_retrieval_seconds_including_first_document_encoding": 0.20818660262099503
+        },
+        "it->it": {
+          "n": 45,
+          "reference_5gram_mean_coverage": 0.21068982138882014,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 3947.1111111111113,
+          "average_retrieval_seconds_including_first_document_encoding": 0.019978977933513106
+        }
+      },
+      "cross_lingual": {
+        "n": 205,
+        "reference_5gram_mean_coverage": 0.17681423906664034,
+        "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+        "average_selected_characters": 3534.419512195122,
+        "average_retrieval_seconds_including_first_document_encoding": 0.36567103541472135
+      }
+    },
+    "hybrid": {
+      "n": 310,
+      "reference_5gram_mean_coverage": 0.2535540904533304,
+      "fraction_with_at_least_90_percent_reference_coverage": 0.025806451612903226,
+      "average_selected_characters": 4834.435483870968,
+      "average_retrieval_seconds_including_first_document_encoding": 0.0267378837226246,
+      "by_language_pair": {
+        "de->de": {
+          "n": 26,
+          "reference_5gram_mean_coverage": 0.41352574863886127,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.07692307692307693,
+          "average_selected_characters": 5033.653846153846,
+          "average_retrieval_seconds_including_first_document_encoding": 0.025998672884620298
+        },
+        "de->fr": {
+          "n": 23,
+          "reference_5gram_mean_coverage": 0.1684744495366004,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4919.913043478261,
+          "average_retrieval_seconds_including_first_document_encoding": 0.025599826956275374
+        },
+        "de->it": {
+          "n": 35,
+          "reference_5gram_mean_coverage": 0.13264698158443528,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4953.942857142857,
+          "average_retrieval_seconds_including_first_document_encoding": 0.023407924657242674
+        },
+        "fr->de": {
+          "n": 53,
+          "reference_5gram_mean_coverage": 0.21919104383523075,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4719.433962264151,
+          "average_retrieval_seconds_including_first_document_encoding": 0.026686565717201755
+        },
+        "fr->fr": {
+          "n": 34,
+          "reference_5gram_mean_coverage": 0.3775048430893585,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.11764705882352941,
+          "average_selected_characters": 5013.970588235294,
+          "average_retrieval_seconds_including_first_document_encoding": 0.028661112500284455
+        },
+        "fr->it": {
+          "n": 35,
+          "reference_5gram_mean_coverage": 0.2693620397441956,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.02857142857142857,
+          "average_selected_characters": 4958.114285714286,
+          "average_retrieval_seconds_including_first_document_encoding": 0.027374468457128386
+        },
+        "it->de": {
+          "n": 30,
+          "reference_5gram_mean_coverage": 0.2590284202272125,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4364.133333333333,
+          "average_retrieval_seconds_including_first_document_encoding": 0.02699491873330165
+        },
+        "it->fr": {
+          "n": 29,
+          "reference_5gram_mean_coverage": 0.15143542913668115,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.034482758620689655,
+          "average_selected_characters": 4907.586206896552,
+          "average_retrieval_seconds_including_first_document_encoding": 0.026274070413788212
+        },
+        "it->it": {
+          "n": 45,
+          "reference_5gram_mean_coverage": 0.29533556555539087,
+          "fraction_with_at_least_90_percent_reference_coverage": 0.0,
+          "average_selected_characters": 4752.688888888889,
+          "average_retrieval_seconds_including_first_document_encoding": 0.028576383733242335
+        }
+      },
+      "cross_lingual": {
+        "n": 205,
+        "reference_5gram_mean_coverage": 0.2035357729799573,
+        "fraction_with_at_least_90_percent_reference_coverage": 0.00975609756097561,
+        "average_selected_characters": 4797.336585365853,
+        "average_retrieval_seconds_including_first_document_encoding": 0.026109089590282544
+      }
+    }
+  },
+  "macro_f1": null,
+  "notes": "Real PDFs and embeddings. Reference-overlap diagnostic, not official evidence scoring or NLI accuracy. Source references are never retrieval inputs. No parameter fitting or test-label selection."
+}
