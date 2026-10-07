@@ -1,5 +1,5 @@
 {
-  "scope": "Internal strict validation on 276 supplied-reference examples; 2 independent connected components; no final test or official score",
+  "scope": "Legacy Apertus 2509 oracle/reference diagnostic only: 276 internal examples. Not Apertus v1.5, not full-booklet production, not an official score.",
   "official": false,
   "selected_experiment_id": "apertus-frozen-hidden-4096-v1",
   "results": [
@@ -21,5 +21,6 @@
         "negative_log_likelihood": 0.057980358986467986
       }
     }
-  ]
+  ],
+  "legacy_research_only": true
 }

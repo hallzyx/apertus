@@ -28,7 +28,7 @@ class CliIntegration(unittest.TestCase):
             with tempfile.TemporaryDirectory() as tmp:
                 root=Path(tmp);dataset=root/'synthetic.jsonl';registry=root/'synthetic-registry.jsonl';out=root/'results'
                 dataset.write_text(''.join(json.dumps(example(i))+'\n' for i in range(3)))
-                env={**os.environ,'LLM_BASE_URL':f'http://127.0.0.1:{server.server_port}/v1','LLM_NAME':'synthetic-mock-Apertus','LLM_API_KEY':'unit-test-not-a-real-key','OST_LABEL_MAP':'{"0":"entailment","1":"contradiction","2":"neutral"}'}
+                env={**os.environ,'LLM_BASE_URL':f'http://127.0.0.1:{server.server_port}/v1','LLM_NAME':'synthetic-mock-Apertus-v1.5','LLM_API_KEY':'unit-test-not-a-real-key','OST_LABEL_MAP':'{"0":"entailment","1":"neutral","2":"contradiction"}'}
                 run=subprocess.run([sys.executable,'-m','ost_nli','experiment',str(dataset),'--id','synthetic-only','--split-name','validation','--output-dir',str(out),'--registry',str(registry)],env=env,capture_output=True,text=True)
                 self.assertEqual(run.returncode,0,run.stderr)
                 report=json.loads(run.stdout);self.assertEqual(report['n'],3);self.assertEqual(report['average_context_tokens'],42)

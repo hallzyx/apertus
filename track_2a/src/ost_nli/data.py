@@ -47,23 +47,10 @@ def load_document(path):
     if path.suffix.lower() == ".json":
         return validate_document(json.loads(path.read_text(encoding="utf-8")))
     if path.suffix.lower() == ".pdf":
-        try:
-            from pypdf import PdfReader
-        except ImportError as e:
-            raise ValueError("PDF input requires installation of the pdf extra") from e
-        passages = []
-        pdf = PdfReader(path)
-        if pdf.is_encrypted:
-            raise ValueError("Encrypted PDF input requires a separately supported decryption workflow")
-        for page_idx, page in enumerate(pdf.pages):
-            for i, text in enumerate(re.split(r"\n\s*\n", page.extract_text(extraction_mode="layout") or "")):
-                if text.strip():
-                    passages.append({"id": f"page-{page_idx+1}-p-{i+1}", "page": page_idx+1, "text": text.strip()})
-        if not passages:
-            raise ValueError("PDF has no selectable text; OCR is required and not silently inferred")
-    else:
-        text = path.read_text(encoding="utf-8")
-        passages = [{"id": f"p{i+1}", "page": None, "text": t.strip()} for i, t in enumerate(re.split(r"\n\s*\n", text)) if t.strip()]
+        from .documents import pdf_document
+        return pdf_document(path)
+    text = path.read_text(encoding="utf-8")
+    passages = [{"id": f"p{i+1}", "page": None, "text": t.strip()} for i, t in enumerate(re.split(r"\n\s*\n", text)) if t.strip()]
     return validate_document({"document_id": path.stem, "passages": passages})
 
 

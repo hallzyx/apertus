@@ -1,0 +1,44 @@
+{
+  "repo": "swiss-ai/Apertus-v1.5-8B",
+  "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "gated": "auto",
+  "model_type": "apertus1p5",
+  "architectures": [
+    "Apertus1p5ForConditionalGeneration"
+  ],
+  "weights": [
+    {
+      "name": "model-apertus-model-00001-of-00004.safetensors",
+      "bytes": 4026725622,
+      "sha256": "60d31e2d767d389ba990972a21cd0524e18c1ed39b65fcc727285db613ea81dc"
+    },
+    {
+      "name": "model-apertus-model-00002-of-00004.safetensors",
+      "bytes": 4701918018,
+      "sha256": "8a0ae0ba1c37a5571276f042085c8f782b6f02c68a888acf1ae35c33b8253bd9"
+    },
+    {
+      "name": "model-apertus-model-00003-of-00004.safetensors",
+      "bytes": 3791726250,
+      "sha256": "17f4ce43b67eacee899b6f23664d6b457259b2fbc89f5561cd69831d34a412c0"
+    },
+    {
+      "name": "model-apertus-model-00004-of-00004.safetensors",
+      "bytes": 4697854302,
+      "sha256": "40bf7c8ba48bfe6748b6cf796bfe65cea0115fe74d0aa38ad5fcdb6af2cf3e0d"
+    },
+    {
+      "name": "model-vision_tokenizer-model.safetensors",
+      "bytes": 872647552,
+      "sha256": "0f358b3c908d216172675cd57184ff6ce310705e385fedfd31c6f34e8197f9c8"
+    },
+    {
+      "name": "model-wavtokenizer-model.safetensors",
+      "bytes": 305269780,
+      "sha256": "b2632390709c3cb1319d1a0c1387d5364587b8a78a00efa2e93f15185ae82c02"
+    }
+  ],
+  "anonymous_config_request_status": 401,
+  "legacy_head_compatible": false,
+  "notes": "Metadata accessible; weights/config require authorized access. No v1.5 inference claimed."
+}

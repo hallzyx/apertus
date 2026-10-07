@@ -1,8 +1,8 @@
 .PHONY: run start build test smoke
-RUNTIME ?= frozen
-IMAGE ?= apertus-ost:$(if $(filter frozen,$(RUNTIME)),frozen,local)
-DOCKERFILE ?= $(if $(filter frozen,$(RUNTIME)),Dockerfile.frozen,Dockerfile)
-MODEL_CACHE ?= apertus-models
+RUNTIME ?= hybrid
+IMAGE ?= apertus-ost:$(RUNTIME)
+DOCKERFILE ?= $(if $(filter hybrid,$(RUNTIME)),Dockerfile.hybrid,$(if $(filter frozen,$(RUNTIME)),Dockerfile.frozen,Dockerfile))
+MODEL_CACHE ?= $(if $(filter hybrid,$(RUNTIME)),apertus-retrieval-models,apertus-models)
 FROZEN_ARGS ?=
 PORT ?= 8000
 PYTHON ?= $(if $(wildcard ../.venv/bin/python),../.venv/bin/python,python)
@@ -14,8 +14,8 @@ build:
 run: build
 	$(MAKE) start
 start:
-	@if [ -n "$$HTTPS_PROXY" ] && command -v python >/dev/null && [ -z "$(DOCKER_RUN_ARGS)" ]; then bash scripts/cloud-docker.sh start; elif [ "$(RUNTIME)" = frozen ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models -e OST_LABEL_MAP $(IMAGE) $(FROZEN_ARGS); else docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 --add-host host.docker.internal:host-gateway -e FROZEN_BASE_URL -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e OST_LABEL_MAP $(IMAGE) serve --host 0.0.0.0 --port 8000; fi
+	@if [ -n "$$HTTPS_PROXY" ] && command -v python >/dev/null && [ -z "$(DOCKER_RUN_ARGS)" ]; then bash scripts/cloud-docker.sh start; elif [ "$(RUNTIME)" = hybrid ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models --add-host host.docker.internal:host-gateway -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e RETRIEVAL_MODE $(IMAGE); elif [ "$(RUNTIME)" = frozen ]; then docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 -v $(MODEL_CACHE):/models -e OST_LABEL_MAP $(IMAGE) $(FROZEN_ARGS); else docker run --rm $(DOCKER_RUN_ARGS) -p $(PORT):8000 --add-host host.docker.internal:host-gateway -e FROZEN_BASE_URL -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e OST_LABEL_MAP $(IMAGE) serve --host 0.0.0.0 --port 8000; fi
 test:
 	PYTHONPATH=src $(PYTHON) -m unittest discover -s tests -v
 smoke: build
-	docker run --rm $(IMAGE) $(if $(filter frozen,$(RUNTIME)),--self-test,self-test)
+	docker run --rm $(if $(filter hybrid,$(RUNTIME)),--entrypoint python,) $(IMAGE) $(if $(filter hybrid,$(RUNTIME)),-m ost_nli self-test,$(if $(filter frozen,$(RUNTIME)),--self-test,self-test))

@@ -136,9 +136,9 @@ class RetrievalTests(unittest.TestCase):
 
 
 class ModelTests(unittest.TestCase):
-    mapping = {"0":"entailment","1":"contradiction","2":"neutral"} # synthetic test convention only
+    mapping = {"0":"entailment","1":"neutral","2":"contradiction"} # official OST contract
     def client(self, response):
-        return ApertusClient("http://localhost:8001/v1","test-Apertus",transport=lambda payload:response)
+        return ApertusClient("http://localhost:8001/v1","test-Apertus-v1.5",transport=lambda payload:response)
     def test_prediction(self):
         response={"choices":[{"finish_reason":"stop","message":{"content":'{"label": 1}'}}],"usage":{"prompt_tokens":123}}
         p=predict(example(),self.client(response),self.mapping)
@@ -153,11 +153,13 @@ class ModelTests(unittest.TestCase):
         seen=[]
         def transport(payload):
             seen.append(payload);return {"choices":[{"message":{"content":'{"label":0}'}}]}
-        c=ApertusClient("http://localhost:8001/v1","test-Apertus",transport=transport)
+        c=ApertusClient("http://localhost:8001/v1","test-Apertus-v1.5",transport=transport)
         p=predict(example(),c,self.mapping,method="constrained")
         self.assertIn("response_format",seen[0]);self.assertIsNone(p["context_tokens"])
     def test_unverified_mapping_not_defaulted(self):
         with self.assertRaises(ValueError):label_map('{"0":"neutral"}')
+        self.assertEqual(label_map(), {'0':'entailment','1':'neutral','2':'contradiction'})
+        with self.assertRaises(ValueError):label_map('{"0":"entailment","1":"contradiction","2":"neutral"}')
     def test_endpoint_security(self):
         for url in ["http://remote.example/v1","https://key:secret@example.com/v1","file:///tmp/model"]:
             with self.assertRaises(ValueError):ApertusClient(url,"Apertus")

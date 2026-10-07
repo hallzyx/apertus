@@ -6,14 +6,14 @@ import urllib.parse
 import urllib.request
 from .retrieval import retrieve
 
+OFFICIAL_LABEL_MAP = {"0": "entailment", "1": "neutral", "2": "contradiction"}
+
 
 def label_map(raw=None):
     raw = raw or os.environ.get("OST_LABEL_MAP")
-    if not raw:
-        raise ValueError('Set OST_LABEL_MAP to verified official mapping, e.g. a JSON object with keys 0,1,2. No default class semantics assumed.')
-    mapping = json.loads(raw)
-    if set(mapping) != {"0","1","2"} or set(mapping.values()) != {"entailment","contradiction","neutral"}:
-        raise ValueError("OST_LABEL_MAP must map keys 0/1/2 bijectively to entailment/contradiction/neutral")
+    mapping = json.loads(raw) if raw else dict(OFFICIAL_LABEL_MAP)
+    if mapping != OFFICIAL_LABEL_MAP:
+        raise ValueError("OST requires 0=entailment, 1=neutral, 2=contradiction")
     return mapping
 
 
@@ -57,7 +57,7 @@ def select_context(row, mode="bm25", k=5, max_bytes=48000, diversify=False):
 class ApertusClient:
     def __init__(self, base_url=None, model=None, key=None, timeout=120, transport=None):
         self.base_url = (base_url or os.environ.get("LLM_BASE_URL", "")).rstrip("/")
-        self.model = model or os.environ.get("LLM_NAME", "")
+        self.model = model or os.environ.get("LLM_NAME") or 'swiss-ai/Apertus-v1.5-8B'
         self.key = key if key is not None else os.environ.get("LLM_API_KEY", "")
         self.timeout, self.transport = timeout, transport
         u = urllib.parse.urlsplit(self.base_url)
@@ -67,6 +67,9 @@ class ApertusClient:
             raise ValueError("Remote model endpoints require HTTPS")
         if "apertus" not in self.model.lower():
             raise ValueError("LLM_NAME must explicitly identify an Apertus model")
+        generation = os.environ.get('APERTUS_REQUIRED_GENERATION')
+        if generation and generation not in self.model.lower():
+            raise ValueError('Production runtime requires Apertus ' + generation)
 
     def complete(self, messages, constrained=False):
         payload = {"model":self.model,"messages":messages,"temperature":0,"max_tokens":32}
@@ -106,7 +109,9 @@ def predict(row, client, mapping, mode="bm25", k=5, max_bytes=48000, method="pro
             raise ValueError("Invalid label")
     except (KeyError,IndexError,TypeError,ValueError) as e:
         raise ValueError("Model did not return a complete valid three-class decision; fail rather than invent a label") from e
-    return {"id":row.get("id"), "label":label,"class_name":mapping[str(label)],"probabilities":None,"evidence":selected,"evidence_ids":[p["id"] for p in selected],"context_tokens":response.get("usage",{}).get("prompt_tokens"),"context_token_definition":"Server-reported prompt tokens including system message and claim; null if unavailable", "context_bytes":len(context.encode()),"latency_seconds":time.perf_counter()-start,"model":client.model,"method":method,"retrieval":mode,"truncated":any(p["truncated"] for p in selected) or (mode=="full" and len(selected)<len(row["passages"])),"max_context_bytes":max_bytes}
+    latency = time.perf_counter()-start
+    tokens = response.get("usage",{}).get("prompt_tokens")
+    return {"id":row.get("id"), "label":label,"label_name":mapping[str(label)],"class_name":mapping[str(label)],"probabilities":None,"evidence":selected,"evidence_ids":[p["id"] for p in selected],"evidence_role":"Retrieved input passages; relevance and sufficiency require evaluation, not model-attributed minimal gold evidence","input_tokens":tokens,"inference_time_ms":latency*1000,"context_tokens":tokens,"context_token_definition":"Server-reported prompt tokens including system message and claim; null if unavailable", "context_bytes":len(context.encode()),"latency_seconds":latency,"model":client.model,"method":method,"retrieval":mode,"truncated":any(p["truncated"] for p in selected) or (mode=="full" and len(selected)<len(row["passages"])),"max_context_bytes":max_bytes}
 
 
 class FrozenServiceClient:

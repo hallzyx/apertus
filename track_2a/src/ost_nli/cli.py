@@ -21,7 +21,7 @@ def emit(value, path=None):
 
 
 def model_options(p):
-    p.add_argument("--context",choices=["full","gold","reference","bm25"],default="bm25")
+    p.add_argument("--context",choices=["full","gold","reference","bm25","dense","hybrid"],default="bm25")
     p.add_argument("--method",choices=["prompt","constrained"],default="prompt")
     p.add_argument("--k",type=int,default=5)
     p.add_argument("--max-context-bytes",type=int,default=48000)
@@ -40,6 +40,7 @@ def main():
     p = subs.add_parser("retrieve");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--k",type=int,default=5);p.add_argument("--diversify",action="store_true")
     p = subs.add_parser("predict-frozen");p.add_argument("booklet");p.add_argument("claim");p.add_argument("--model-dir",required=True);p.add_argument("--head-dir",required=True);p.add_argument("--device",choices=["cpu","cuda"],default="cpu");p.add_argument("--context",choices=["full","bm25"],default="full");p.add_argument("--k",type=int,default=5)
     p = subs.add_parser("predict");p.add_argument("booklet");p.add_argument("claim");model_options(p)
+    p = subs.add_parser("predict-batch");p.add_argument("input");p.add_argument("--output",required=True);model_options(p)
     p = subs.add_parser("experiment");p.add_argument("dataset");p.add_argument("--id",required=True);p.add_argument("--split-name",required=True,choices=["train","validation","test"]);p.add_argument("--output-dir",required=True);p.add_argument("--registry",default="experiments/registry.jsonl");p.add_argument("--estimated-cost",type=float,default=0);p.add_argument("--gpu",default="unknown");p.add_argument("--notes",default="");model_options(p)
     p = subs.add_parser("serve");p.add_argument("--host",default="127.0.0.1");p.add_argument("--port",type=int,default=8000)
     subs.add_parser("self-test")
@@ -101,7 +102,43 @@ def main():
             if args.context == "gold":
                 raise ValueError("Gold evidence is an evaluation diagnostic, unavailable in real CLI input")
             doc = load_document(args.booklet)
-            emit(predict({**doc,"claim":args.claim},ApertusClient(),label_map(),args.context,args.k,args.max_context_bytes,args.method,args.diversify))
+            began = time.perf_counter()
+            mode = args.context
+            if mode in ('dense','hybrid'):
+                from .dense import MultilingualRetriever
+                retriever = MultilingualRetriever(os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small'))
+                doc = {**doc,'passages':retriever.retrieve(doc['passages'],args.claim,args.k,mode)}
+                mode = 'full'
+            result = predict({**doc,"claim":args.claim},ApertusClient(),label_map(),mode,args.k,args.max_context_bytes,args.method,args.diversify)
+            result['retrieval'] = args.context
+            result['model_inference_time_ms'] = result['inference_time_ms']
+            result['inference_time_ms'] = (time.perf_counter()-began)*1000
+            result['latency_seconds'] = result['inference_time_ms']/1000
+            emit(result)
+        elif args.command == 'predict-batch':
+            if args.context in ('gold','reference'):
+                raise ValueError('Production batch input is booklet + claim, never reference/gold evidence')
+            if Path(args.output).exists(): raise ValueError('Existing batch output cannot be overwritten')
+            client = ApertusClient(); documents = {}; results = []; seen = set(); retriever = None
+            if args.context in ('dense','hybrid'):
+                from .dense import MultilingualRetriever
+                retriever = MultilingualRetriever(os.environ.get('EMBEDDING_MODEL_DIR','/models/multilingual-e5-small'))
+            for row in read_jsonl(args.input):
+                if not isinstance(row.get('id'),str) or not row['id'] or row['id'] in seen:
+                    raise ValueError('Batch IDs must be unique nonempty strings')
+                seen.add(row['id'])
+                path = Path(args.input).parent / row['document']
+                if str(path) not in documents: documents[str(path)] = load_document(path)
+                doc = documents[str(path)]; began = time.perf_counter(); mode = args.context
+                if retriever:
+                    doc = {**doc,'passages':retriever.retrieve(doc['passages'],row['claim'],args.k,mode)}
+                    mode = 'full'
+                result = predict({**doc,'id':row['id'],'claim':row['claim']},client,label_map(),mode,args.k,args.max_context_bytes,args.method,args.diversify)
+                result['retrieval']=args.context;result['model_inference_time_ms']=result['inference_time_ms']
+                result['inference_time_ms']=(time.perf_counter()-began)*1000;result['latency_seconds']=result['inference_time_ms']/1000
+                results.append(result)
+            if not results: raise ValueError('Empty batch')
+            emit({'predictions':results,'production_input':'booklet+claim only'},args.output)
         elif args.command == "experiment":
             if args.estimated_cost < 0:
                 raise ValueError("Cost cannot be negative")

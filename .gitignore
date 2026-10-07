@@ -6,3 +6,6 @@ __pycache__/
 track_2a/data/private/
 track_2a/experiments/artifacts/
 *.egg-info/
+
+# Regenerated binary research caches
+track_2a/experiments/**/*.npz
