@@ -93,10 +93,19 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
             'claim_language':row['claim_language'],'document_language':row['document_language'],
             'proposed_evidence':ranked,'output':value})
         print('PHASE2_EVIDENCE_ONLY_DIAGNOSTIC',row['id'],value['label'],flush=True)
+    unique_sample=[];seen=set()
+    for row in sample:
+        key=(row['document_id'],' '.join(words(row['claim'])))
+        if key not in seen:seen.add(key);unique_sample.append(row)
+    deduplicated={'direct-top20':evaluate(unique_sample,[baseline_by[r['id']] for r in unique_sample])}
+    for name,values in predictions.items():
+        aligned={p['id']:p for p in values}
+        deduplicated[name]=evaluate(unique_sample,[aligned[r['id']] for r in unique_sample])
     results={'scope':'Validation-only bounded diagnostics, not architecture selection or independent-test estimates. No training and no consumed310.',
         'sample_method':'First10 validation rows per gold-class/claim-language stratum;90 predetermined rows. Labels used only for analysis sampling, never messages.',
         'unique_sample_claim_document_pairs':len({(r['document_id'],' '.join(words(r['claim']))) for r in sample}),
         'sample_event_counts':{event:sum(r['booklet_id']==event for r in sample) for event in sorted({r['booklet_id'] for r in sample})},
+        'deduplicated_sample_metrics':deduplicated,
         'baseline_hybrid4k_same90':evaluate(sample,[baseline_by[r['id']] for r in sample]),
         'neighbors_same90':evaluate(sample,predictions['neighbors']),
         'diversity_same90':evaluate(sample,predictions['diverse']),
