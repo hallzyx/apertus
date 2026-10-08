@@ -12697,5 +12697,14 @@
     }
   ],
   "training_performed": false,
-  "consumed310_accessed": false
+  "consumed310_accessed": false,
+  "producer_script_sha256": "b21c620382a34c8166173846dcdaf770ff8985fc1eb63621618f845b39ecc3c7",
+  "producer_script_git_commit": "43da5a2b5c52a0b38c5dc9afee4a0eebe13fea7e",
+  "runtime_versions": {
+    "torch": "2.8.0+cpu",
+    "transformers": "4.56.2",
+    "numpy": "2.2.6"
+  },
+  "execution_device": "CPU cloud",
+  "producer_log": "SEMANTIC_REFERENCE_COMPLETED"
 }
