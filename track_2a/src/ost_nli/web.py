@@ -34,7 +34,7 @@ function showPrediction(data){summary.replaceChildren();if(!Number.isInteger(dat
  const verdict=document.createElement('h2');verdict.textContent=['0 · Entailment','1 · Neutral','2 · Contradiction'][data.label];summary.append(verdict);
  const usage=document.createElement('p'),p=data.probabilities;
  usage.textContent='Confidence: '+(Array.isArray(p)?(100*p[data.label]).toFixed(1)+'%':'unavailable')+' · Input tokens: '+(data.input_tokens??data.context_tokens??'unavailable')+' · Time: '+(typeof data.inference_time_ms==='number'?data.inference_time_ms.toFixed(0)+' ms':'unavailable');summary.append(usage);
- const note=document.createElement('p');note.textContent='Confidence describes the model decision, not political truth. The passages below were supplied to the model; their relevance and sufficiency need review.';summary.append(note);
+ const note=document.createElement('p');note.textContent='Confidence describes the model decision, not political truth. '+(data.evidence_note||'The passages below were supplied to the model; their relevance and sufficiency need review.');summary.append(note);
  for(const passage of data.evidence||[]){const quote=document.createElement('blockquote');quote.textContent='Page '+(passage.page??'unknown')+' · '+passage.text;summary.append(quote);}
 }
 fetch('/benchmarks').then(r=>r.json()).then(b=>{if(b.results){document.getElementById('benchmarks').textContent='Recorded Macro-F1 · '+b.results.map(r=>r.experiment+': '+r.macro_f1.toFixed(4)).join(' · ')+' · '+b.scope;}});
