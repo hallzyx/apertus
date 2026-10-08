@@ -25,6 +25,11 @@ def main():
     history={k:old.get(k) for k in ('choice','internal_test_macro_f1','internal_holdout_complete','source_head_sha256','status')}
     (root/'deployment/head-v15.json').write_bytes(blob)
     metrics=final['final_validation_metrics']
+    matched_base=final['selected_context_base_metrics']['macro_f1']
+    old.update(phase2_validation_macro_f1=metrics['macro_f1'],phase2_matched_base_macro_f1=matched_base,
+        phase2_head_gain_over_same_context_base=metrics['macro_f1']-matched_base,
+        phase2_gain_over_original_full_head=metrics['macro_f1']-.8944609902440983,
+        phase2_gain_scope='Development validation only; no matched compact held-out experiment')
     name=old['choice']['name'] if condition=='full' else f'phase2-{condition}-matched-head'
     choice={'name':name,'context':condition,
         'method':'head','head':'track_2a/deployment/head-v15.json','feature_kind':'hidden',
