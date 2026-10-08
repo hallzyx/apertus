@@ -32,6 +32,8 @@ def main():
         original_consumed310_score_applies_to_current_head=condition=='full',
         phase2_consumed310_accessed=False,lora='Not performed; all Apertus weights frozen')
     if condition!='full':
+        old['historical_source_cache']=old.get('source_cache')
+        old['source_cache']=json.loads((path.parent.parent/condition/'experiment.json').read_text())
         old.update(internal_test_macro_f1=None,internal_holdout_complete=False,
             head_macro_f1_gain=None,head_candidates_scope='Historical phase1 candidates; phase2 candidates recorded in context-results.json')
     selection_path.write_text(json.dumps(old,indent=2,allow_nan=False)+'\n')
