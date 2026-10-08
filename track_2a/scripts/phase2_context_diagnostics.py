@@ -84,13 +84,17 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
         evidence_cache={p['id']:p['selected_passages'] for p in [json.loads(s) for s in (Path('track_2a/experiments/apertus-v15-phase2-context-v1')/condition/'validation-evidence.jsonl').read_text().splitlines()]}
     for row in evidence_sample:
         selected=evidence_cache[row['id']] if evidence_cache is not None else select_context(row,mode='full')[0]
-        began=time.perf_counter();ranked=retriever.retrieve(selected,row['claim'],k=2,mode='hybrid')
+        proposed_k=max(1,min(2,len(selected)-1))
+        began=time.perf_counter();ranked=retriever.retrieve(selected,row['claim'],k=proposed_k,mode='hybrid') if selected else []
         retrieval_seconds=time.perf_counter()-began
         value=inferred(row,ranked,head,CONDITIONS[condition][0] if condition!='full' else None,'evidence-only')
         value['latency_seconds']+=retrieval_seconds;evidence_predictions.append(value)
         evidence_proofs.append({'id':row['id'],'original_label':candidate_by[row['id']]['label'],
             'evidence_only_label':value['label'],'decision_preserved':value['label']==candidate_by[row['id']]['label'],
             'claim_language':row['claim_language'],'document_language':row['document_language'],
+            'original_context_passage_count':len(selected),'original_context_tokens':candidate_by[row['id']]['context_tokens'],
+            'actual_evidence_passage_count':len(value['selected_passage_ids']),
+            'strict_context_reduction':len(value['selected_passage_ids'])<len(selected),
             'proposed_evidence':ranked,'output':value})
         print('PHASE2_EVIDENCE_ONLY_DIAGNOSTIC',row['id'],value['label'],flush=True)
     unique_sample=[];seen=set()
@@ -113,9 +117,11 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
         'diversity_policy':'Top30 hybrid candidates, accept up to20 while suppressing same-page overlap>=50% of shorter quote or word5gram Jaccard>=.55; exact whole quotes capped4096.',
         'redundancy_diagnostics':redundancy,'no_new_head_fitted':True,'mechanism_adopted':False,
         'timing_caution':'Neighbor/diversity request adds shared measured retrieval/preparation plus actual encoding/head; baseline is cached. Not paired live all-inference latency.',
-        'evidence_policy':'Rerank only classifier-input passages with frozen E5/hybrid and propose top2. First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim-language; up to12 actual evidence-only forwards with same frozen head.',
+        'evidence_policy':'Rerank only classifier-input passages with frozen E5/hybrid; k=max(1,min(2,original_passage_count-1)). Thus use up to2 quotes and ensure reduction whenever original context has>=2. First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim-language; up to12 actual evidence-only forwards with same frozen head.',
         'evidence_sufficiency_n':len(evidence_proofs),
         'evidence_decision_preservation_rate':sum(p['decision_preserved'] for p in evidence_proofs)/len(evidence_proofs) if evidence_proofs else None,
+        'evidence_strict_reduction_n':sum(p['strict_context_reduction'] for p in evidence_proofs),
+        'evidence_decision_preservation_when_strictly_reduced':sum(p['decision_preserved'] for p in evidence_proofs if p['strict_context_reduction'])/sum(p['strict_context_reduction'] for p in evidence_proofs) if any(p['strict_context_reduction'] for p in evidence_proofs) else None,
         'evidence_only_original_label_metrics':evaluate(evidence_sample,evidence_predictions) if evidence_sample else None,
         'evidence_proofs':evidence_proofs,
         'evidence_caution':'Preservation is a model sensitivity diagnostic, not human proof of sufficiency or attribution. A changed decision does not by itself invalidate source evidence. No absence proof for Neutral.',

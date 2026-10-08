@@ -52,7 +52,7 @@
     "neighbor_diversity_sample": "First10 validation rows per gold class and claim language,90 rows; both mechanisms compared to same cached hybrid4k head and same4096 cap. No new head training or deployment decision from this small diagnostic.",
     "neighbor_policy": "Top6 hybrid seeds, seed/previous/next source paragraphs with IDs deduplicated.",
     "diversity_policy": "Top30 candidates; accept up to20; suppress same-page overlap>=.50 of shorter quote OR word5gram Jaccard>=.55.",
-    "evidence_sample": "First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim language, up to12. Rerank only classifier-input passages with frozen E5/hybrid, propose top2, new actual evidence-only head forward. Decision preservation is diagnostic, not proof.",
+    "evidence_sample": "First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim language, up to12. Rerank only classifier-input passages with frozen E5/hybrid, propose k=max(1,min(2,original_passage_count-1)) source quotes, new actual evidence-only head forward. Decision preservation is diagnostic, not proof.",
     "extra_gpu_forward_bound": 192,
     "new_total_compact_bound": 1024,
     "new_total_full_bound": 472,
@@ -151,6 +151,7 @@
       "ost-v1.1-1373",
       "ost-v1.1-1381"
     ],
-    "evidence_dedup_rule_registered_before_context_head_results_at": "2026-10-08T00:19:35.363682+00:00"
+    "evidence_dedup_rule_registered_before_context_head_results_at": "2026-10-08T00:19:35.363682+00:00",
+    "evidence_reduction_rule_registered_before_context_head_results_at": "2026-10-08T00:31:14.405326+00:00"
   }
 }
