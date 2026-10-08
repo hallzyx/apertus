@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 root=Path(__file__).resolve().parents[1];phase=root/'experiments/apertus-v15-phase2'
 s=json.loads((root/'deployment/v15-selection.json').read_text());f=json.loads((root/s['phase2_results']).read_text());c=json.loads((phase/'context-results.json').read_text());b=json.loads((root/'experiments/budget.json').read_text());m=f['final_validation_metrics'];d=f['bounded_neighbor_diversity_evidence_diagnostics'];cal=m['calibration'];choice=f['final_choice']
-lines=['# Phase2: resumen científico de Apertus OST','',
+lines=['# Phase2: resumen científico de Apertus OST','', '![Comparación verificable de calidad y contexto](context-tradeoffs.png)','',
 '## 1. Controles de dependencia del documento','',
 '| Entrada del sistema original | Macro-F1 de validación |','|---|---:|',
 '| Folleto correcto |0.894461|','| Solo afirmación, cabeza entrenada exclusivamente en train |0.699640|',
