@@ -26,6 +26,10 @@ f"Validación final: F1 **{m['macro_f1']:.6f}**; cross-language **{m['cross_ling
 for q in f['confidence_buckets']:
  fmt=lambda value:f'{value:.3f}' if value is not None else '—'
  lines.append(f"|{q['low']:.2f}–{q['high']:.2f}|{q['n']}|{fmt(q['accuracy'])}|{fmt(q['mean_confidence'])}|")
+semantic_path=phase/'semantic-reference-diagnostic.json'
+if semantic_path.exists():
+ semantic=json.loads(semantic_path.read_text());q=semantic['entailment_contradiction']['conditions'].get(choice)
+ if q:lines+=['',f"Diagnóstico semántico complementario: presencia del pasaje fuente más próximo a la referencia E5 **{q['top1_presence_rate']:.1%}** en casos Entailment/Contradiction. Es una aproximación dependiente del mismo recuperador, no recall de evidencia humana ni evaluación oficial; véase semantic-reference-diagnostic.json."]
 lines+=['', 'Los umbrales adaptativos solo se simularon con caché, contabilizando ambos forwards al escalar. No se adopta complejidad adicional. Las probabilidades de controles con documento incorrecto no se interpretan como calibración de etiquetas NLI verdaderas.','',
 '## 6. Cómputo','',f"Gasto Vast total observado: **USD{b['actual_spend']:.4f}**. Gasto incremental Phase2: **USD{b['phase2']['additional_observed_spend_usd']:.4f}**. Crédito observado restante: **USD{float(b['account_credit_observed'])+float(b.get('account_balance_observed') or 0):.4f}**. Instancias de esta tarea activas: **{len(b['active_instance_ids'])}**, destrucción verificada por API paginada. Se conservó la reserva de USD2 y el límite adicional de USD4.50. Contabilidad del proveedor sujeta a cargos tardíos; budget.json y resource-audit.json contienen timestamps, precios, duración y observaciones por etapa.",'',
 '## 7. Conclusión científica','',
