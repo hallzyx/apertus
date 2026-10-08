@@ -30,7 +30,16 @@ def main():
     for entry in record['files']:
         if sha(root/entry['path'])!=entry['sha256']:raise ValueError('Final recovery checksum mismatch')
     proposal=json.loads(Path('track_2a/experiments/apertus-v15-phase2/context-results.json').read_text())
-    condition=proposal['provisional_choice'];assert record['context']==condition
+    extension=record.get('accuracy_extension',False)
+    condition='hybrid-8k' if extension else proposal['provisional_choice'];assert record['context']==condition
+    prior_root=Path('track_2a/experiments/apertus-v15-phase2-final-validation-v1')
+    prior=None
+    if extension:
+        prior=json.loads(Path('track_2a/experiments/apertus-v15-phase2/final-results.json').read_text())
+        assert prior['final_choice']=='hybrid-4k' and not prior['guard_failures']
+        assert sha(prior_root/'experiment.json')==prior['source_experiment_sha256']==record['reused_full_source_experiment_sha256']
+        for entry in json.loads((prior_root/'experiment.json').read_text())['files']:
+            assert sha(prior_root/entry['path'])==entry['sha256']
     controlroot=Path('track_2a/experiments/apertus-v15-phase2-controls-v1')
     contract=json.loads((controlroot/'contract.json').read_text())
     originalhead=Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json')
@@ -50,7 +59,7 @@ def main():
         assert q.argmax(1).tolist()==[aligned[r['id']]['label'] for r in rows]
         assert np.allclose(q,[aligned[r['id']]['probabilities'] for r in rows],atol=1e-6)
         return q
-    fresh=readlines(root/'correct-full-recheck.jsonl');verify_cache(root/'correct-full-recheck.npz',fresh,original)
+    fresh=readlines(root/'correct-full-recheck.jsonl');verify_cache((prior_root if extension else root)/'correct-full-recheck.npz',fresh,original)
     freshmetrics=evaluate(rows,fresh)
     base=[{**p,'label':p['native_base_scores_label'],'probabilities':p['native_base_scores_probabilities']} for p in fresh]
     historical=json.loads(Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/predictions.json').read_text())['predictions']
@@ -97,6 +106,13 @@ def main():
         if baseline<freshmetrics['macro_f1']-.02:failures.append('fresh_full_macro_guard')
         if candidate_metrics['cross_lingual']['macro_f1']<freshmetrics['cross_lingual']['macro_f1']-.03:failures.append('fresh_full_cross_lingual_guard')
         if any(candidate_metrics['per_class'][str(c)]['f1']<freshmetrics['per_class'][str(c)]['f1']-.05 for c in range(3)):failures.append('fresh_full_class_guard')
+    if extension:
+        previous=prior['final_validation_metrics']
+        if baseline<previous['macro_f1']+.04:failures.append('accuracy_material_macro_gain')
+        if candidate_metrics['cross_lingual']['macro_f1']<previous['cross_lingual']['macro_f1']+.03:failures.append('accuracy_material_cross_gain')
+        if any(candidate_metrics['per_class'][str(c)]['f1']<previous['per_class'][str(c)]['f1'] for c in range(3)):failures.append('accuracy_class_regression')
+        if candidate_metrics['average_context_tokens']>freshmetrics['average_context_tokens']*.75:failures.append('accuracy_context_efficiency')
+        if any(candidate_metrics[k]>previous[k] for k in ('brier_score','negative_log_likelihood')):failures.append('accuracy_calibration_regression')
     cli=json.loads((root/'cli-integration.json').read_text());front=json.loads((root/'frontend-real-inference.json').read_text())
     assert len(cli)==3 and {(p['claim_language'],p['document_language']) for p in cli}=={('de','fr'),('fr','it'),('it','de')}
     if not all(p['label_reproduced'] for p in cli) or not front['label_reproduced']:failures.append('real_pdf_api_replication')
@@ -126,17 +142,18 @@ def main():
         lookup={p['id']:p for p in rows_by[proof['id']]['passages']}
         for passage in proof['proposed_evidence']:
             assert all(passage.get(k)==lookup[passage['id']].get(k) for k in ('text','page','char_start','char_end','source_sha256'))
+    new_outputs={key:value for key,value in outputs.items() if not extension or key[0]=='evidence-only'}
     with np.load(root/'bounded-diagnostic-features.npz',allow_pickle=False) as cache:
-        assert len(cache['ids'])==len(outputs)==diagnostics['gpu_forward_count']
+        assert len(cache['ids'])==len(new_outputs)==diagnostics['gpu_forward_count']
         for iid,mode,x in zip(cache['ids'].tolist(),cache['modes'].tolist(),cache['hidden']):
             h=head if mode=='evidence-only' else head4
             z=((x.astype(np.float64)-np.asarray(h['feature_mean']))/np.asarray(h['feature_scale']))@np.asarray(h['coefficients']).T+np.asarray(h['intercept'])
             z/=h['temperature'];q=np.exp(z-z.max());q/=q.sum()
             output=outputs[(mode,iid)]
             assert int(q.argmax())==output['label'] and np.allclose(q,output['probabilities'],atol=1e-6)
-    assert record['gpu_forward_count']==(832 if condition!='full' else 280)+diagnostics['gpu_forward_count']
-    selected=condition if not failures else 'full'
-    chosen=candidate if selected==condition else fresh;by={p['id']:p for p in chosen}
+    assert record['gpu_forward_count']==(556 if extension else (832 if condition!='full' else 280))+diagnostics['gpu_forward_count']
+    selected=condition if not failures else ('hybrid-4k' if extension else 'full')
+    chosen=candidate if selected==condition else (json.loads(Path(proposal['comparisons']['hybrid-4k']['source_head']).with_name('predictions.json').read_text())['predictions'] if extension else fresh);by={p['id']:p for p in chosen}
     if selected=='full':selected_base={p['id']:p for p in base}
     else:
         directory=Path('track_2a/experiments/apertus-v15-phase2-context-v1')/selected
@@ -165,7 +182,7 @@ def main():
             if k in ('suspected_failure_mode','notes','diagnostic_comparison')},
         'cause':'Undetermined; original inspected hypothesis, if present, is not proof of cause for the selected context'}
         for r in rows if by[r['id']]['label']!=r['label']]
-    result={'status':'completed_frozen_final_validation','provisional_choice':condition,'final_choice':selected,
+    result={'accuracy_extension':extension,'architecture_selection_scope':'Exploratory accuracy extension after immutable registered 4k efficiency decision' if extension else 'Registered efficiency selection','status':'completed_frozen_final_validation','provisional_choice':condition,'final_choice':selected,
         'candidate_head_sha256':sha(headpath),'candidate_metrics':candidate_metrics,'guard_failures':failures,
         'full_recheck':replication,'context_matched_controls':controls,
         'final_validation_metrics':evaluate(rows,chosen),'deduplicated_macro_f1':evaluate(unique,[by[r['id']] for r in unique])['macro_f1'],

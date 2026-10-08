@@ -6,7 +6,12 @@ from pathlib import Path
 
 def main():
     root=Path('track_2a');phase=root/'experiments/apertus-v15-phase2'
-    final=json.loads((phase/'final-results.json').read_text())
+    result_path=phase/'final-results.json'
+    accuracy_path=phase/'accuracy-results.json'
+    if accuracy_path.exists():
+        alternative=json.loads(accuracy_path.read_text())
+        if alternative['final_choice']=='hybrid-8k' and not alternative['guard_failures']:result_path=accuracy_path
+    final=json.loads(result_path.read_text())
     proposal=json.loads((phase/'context-results.json').read_text())
     assert final['status']=='completed_frozen_final_validation' and not final['consumed310_accessed']
     selection_path=root/'deployment/v15-selection.json';old=json.loads(selection_path.read_text())
@@ -26,8 +31,8 @@ def main():
         'macro_f1':metrics['macro_f1'],'tokens':metrics['average_context_tokens']}
     if condition!='full':choice['transport']='document-service'
     old.update(choice=choice,phase2_completed=True,status='phase2_frozen_after_registered_validation',
-        phase2_results='experiments/apertus-v15-phase2/final-results.json',
-        phase2_result_sha256=hashlib.sha256((phase/'final-results.json').read_bytes()).hexdigest(),
+        phase2_results=str(result_path.relative_to(root)),
+        phase2_result_sha256=hashlib.sha256(result_path.read_bytes()).hexdigest(),
         source_head_sha256=hashlib.sha256(blob).hexdigest(),historical_original_full=history,
         original_consumed310_score_applies_to_current_head=condition=='full',
         phase2_consumed310_accessed=False,lora='Not performed; all Apertus weights frozen')
