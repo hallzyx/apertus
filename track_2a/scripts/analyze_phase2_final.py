@@ -114,6 +114,18 @@ def main():
         assert all(p['context_tokens']<=4096 for p in values)
     outputs={(name,p['id']):p for name,values in diagnostic_predictions.items() for p in values}
     outputs.update({('evidence-only',p['id']):p['output'] for p in diagnostics['evidence_proofs']})
+    from ost_nli.model import select_context,nli_messages
+    rows_by={r['id']:r for r in rows}
+    for (_,iid),output in outputs.items():
+        row=rows_by[iid];lookup={p['id']:p for p in row['passages']}
+        passages=[lookup[pid] for pid in output['selected_passage_ids']]
+        _,context=select_context({'passages':passages},mode='full',max_bytes=1000000)
+        expected=hashlib.sha256(json.dumps(nli_messages(context,row['claim']),ensure_ascii=False).encode()).hexdigest()
+        assert expected==output['prompt_sha256']
+    for proof in diagnostics['evidence_proofs']:
+        lookup={p['id']:p for p in rows_by[proof['id']]['passages']}
+        for passage in proof['proposed_evidence']:
+            assert all(passage.get(k)==lookup[passage['id']].get(k) for k in ('text','page','char_start','char_end','source_sha256'))
     with np.load(root/'bounded-diagnostic-features.npz',allow_pickle=False) as cache:
         assert len(cache['ids'])==len(outputs)==diagnostics['gpu_forward_count']
         for iid,mode,x in zip(cache['ids'].tolist(),cache['modes'].tolist(),cache['hidden']):
