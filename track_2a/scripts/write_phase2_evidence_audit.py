@@ -44,7 +44,8 @@ for iid in ids:
   'manual_source_interpretation':note,'inspected_direct_source_quotes':located,
   'inspected_direct_quote_present_in_model_input':bool(provided) if needle else None,
   'interpretation':'Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof.'})
-result={'scope':'Nine predetermined, non-blinded development source inspections by assistant; not an independent human evidence evaluation or organizer metric.',
+direct=[case for case in cases if case['gold']!=1]
+result={'inspected_direct_quote_presence':{'n_entailment_contradiction':len(direct),'present_in_input':sum(case['inspected_direct_quote_present_in_model_input'] for case in direct),'caution':'Six predetermined qualitative source inspections, not official evidence scoring or a claim that these are the only valid passages'},'scope':'Nine predetermined, non-blinded development source inspections by assistant; not an independent human evidence evaluation or organizer metric.',
  'context':choice,'cases':cases,'minimal_proof_extraction_implemented':False,
  'neutral_policy':'Return exact candidate model-context passages with explicit relevance/sufficiency caution; no claim that unrelated passages prove whole-document absence.',
  'source_protocol_sha256':hashlib.sha256((phase/'evidence-audit-protocol.json').read_bytes()).hexdigest()}
