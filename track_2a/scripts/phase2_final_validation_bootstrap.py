@@ -71,6 +71,10 @@ def main():
     correct=[];correct_hidden=[];correct_logits=[]
     for index,row in enumerate(rows):
         result=full_pipeline.predict(row,row['claim']);result['id']=row['id']
+        # Avoid repeating the entire capped booklet hundreds of times in Git.
+        # Real CLI/frontend proofs retain their exact source quote output.
+        result.pop('evidence',None)
+        result.update(document_id=row['document_id'],source_pdf_sha256=row['source_pdf_sha256'])
         correct_hidden.append(last['hidden']);correct_logits.append(last['option_logits'])
         scores=last['option_logits'].astype(np.float64);q=np.exp(scores-scores.max());q/=q.sum()
         result['native_base_scores_label']=int(q.argmax());result['native_base_scores_probabilities']=q.tolist();correct.append(result)
