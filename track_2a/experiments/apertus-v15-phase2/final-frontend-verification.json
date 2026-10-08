@@ -23,5 +23,15 @@
   },
   "make_run_from_clean_tracked_tree": true,
   "container_has_no_host_source_mount": true,
-  "live_native_backend_persistent_in_cloud": false
+  "live_native_backend_persistent_in_cloud": false,
+  "container_mounts": [
+    {
+      "Type": "bind",
+      "Source": "/etc/ssl/certs/ca-certificates.crt",
+      "Destination": "/run/cloud_ca",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    }
+  ]
 }

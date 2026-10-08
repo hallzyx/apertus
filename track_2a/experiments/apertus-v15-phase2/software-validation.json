@@ -1,0 +1,26 @@
+{
+  "source_commit": "5a333f1a61e684b986f778068a5babe0664154af",
+  "image_sha256": "sha256:17faec4ab4b83448aec0d0e4df1b0875fe82c56b2ebf11a16741f8086e533f80",
+  "deployment_head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+  "core_host_tests": 41,
+  "core_clean_docker_tests": 41,
+  "numpy_research_tests": 2,
+  "clean_make_run_passed": true,
+  "actual_pdf_pages": 72,
+  "browser_visual_test_performed": false,
+  "actual_model_inference_scope": "Archived final GPU three cross-language PDF CLI requests and one PDF frontend request; current CPU frontend has no native model backend.",
+  "logs": {
+    "host": {
+      "sha256": "1577e8ba92202f49f3a97a15569402dcdcfd795e1ea32fc33bfeadb7d504be1f",
+      "tests_passed": 41
+    },
+    "docker": {
+      "sha256": "6619acc642a9308d17c3c04ed62d73ce2645e88d140598f47961926caf8861c1",
+      "tests_passed": 41
+    },
+    "research": {
+      "sha256": "eb499731463f0cd6d107fbef3b2217b9206d69ff3cf1592eba0bde873dafccf5",
+      "tests_passed": 2
+    }
+  }
+}
