@@ -72,7 +72,11 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
     for lang in ('de','fr','it'):
         for label in (0,2):
             subset=[r for r in rows if r['claim_language']==lang and candidate_by[r['id']]['label']==label]
-            evidence_sample.extend(subset[:2])
+            seen=set();unique=[]
+            for row in subset:
+                key=(row['document_id'],' '.join(words(row['claim'])))
+                if key not in seen:seen.add(key);unique.append(row)
+            evidence_sample.extend(unique[:2])
     assert len(evidence_sample)<=12
     evidence_predictions=[];evidence_proofs=[]
     evidence_cache=None
@@ -91,6 +95,8 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
         print('PHASE2_EVIDENCE_ONLY_DIAGNOSTIC',row['id'],value['label'],flush=True)
     results={'scope':'Validation-only bounded diagnostics, not architecture selection or independent-test estimates. No training and no consumed310.',
         'sample_method':'First10 validation rows per gold-class/claim-language stratum;90 predetermined rows. Labels used only for analysis sampling, never messages.',
+        'unique_sample_claim_document_pairs':len({(r['document_id'],' '.join(words(r['claim']))) for r in sample}),
+        'sample_event_counts':{event:sum(r['booklet_id']==event for r in sample) for event in sorted({r['booklet_id'] for r in sample})},
         'baseline_hybrid4k_same90':evaluate(sample,[baseline_by[r['id']] for r in sample]),
         'neighbors_same90':evaluate(sample,predictions['neighbors']),
         'diversity_same90':evaluate(sample,predictions['diverse']),
@@ -98,7 +104,7 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
         'diversity_policy':'Top30 hybrid candidates, accept up to20 while suppressing same-page overlap>=50% of shorter quote or word5gram Jaccard>=.55; exact whole quotes capped4096.',
         'redundancy_diagnostics':redundancy,'no_new_head_fitted':True,'mechanism_adopted':False,
         'timing_caution':'Neighbor/diversity request adds shared measured retrieval/preparation plus actual encoding/head; baseline is cached. Not paired live all-inference latency.',
-        'evidence_policy':'Rerank only classifier-input passages with frozen E5/hybrid and propose top2. First2 predicted Entailment/Contradiction per claim-language; up to12 actual evidence-only forwards with same frozen head.',
+        'evidence_policy':'Rerank only classifier-input passages with frozen E5/hybrid and propose top2. First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim-language; up to12 actual evidence-only forwards with same frozen head.',
         'evidence_sufficiency_n':len(evidence_proofs),
         'evidence_decision_preservation_rate':sum(p['decision_preserved'] for p in evidence_proofs)/len(evidence_proofs) if evidence_proofs else None,
         'evidence_only_original_label_metrics':evaluate(evidence_sample,evidence_predictions) if evidence_sample else None,
