@@ -56,6 +56,7 @@ class DocumentPipeline:
             'probability_note':result['probability_note'],'model':REPO,'model_revision':REVISION,
             'decision_method':'head','context_policy':self.condition,'evidence':selected,
             'evidence_ids':[p['id'] for p in selected],'evidence_role':'Exact model input passages; relevance and sufficiency require review',
+            'evidence_note':('No supporting or contradicting proof is asserted for Neutral. Absence in selected passages does not prove absence from the full booklet.' if label==1 else 'These ranked source-context candidates are not validated minimal proof or model attribution.'),
             'input_tokens':result['context_tokens'],'context_tokens':result['context_tokens'],
             'prompt_token_cap':cap,'model_inference_time_ms':result['latency_seconds']*1000,
             'inference_time_ms':elapsed,'latency_seconds':elapsed/1000,
