@@ -156,4 +156,15 @@ def main():
     print('PHASE2_FINAL_VALIDATION_RESULTS_EXPORTED',flush=True)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    try:main()
+    except BaseException:
+        # Preserve partial scientific output before the outer lease stop trap.
+        root=Path('track_2a/experiments/apertus-v15-phase2-final-validation-v1')
+        if (root/'experiment.json').exists():
+            record=json.loads((root/'experiment.json').read_text());record['status']='interrupted'
+            record['files']=[{'path':str(p.relative_to(root)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+                for p in sorted(root.rglob('*')) if p.is_file() and p.name!='experiment.json']
+            (root/'experiment.json').write_text(json.dumps(record,indent=2)+'\n')
+            run(['python','track_2a/scripts/export_vast_cache.py','--relative-root',str(root)])
+        raise
