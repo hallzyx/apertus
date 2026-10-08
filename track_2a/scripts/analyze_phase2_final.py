@@ -112,7 +112,7 @@ def main():
         if candidate_metrics['cross_lingual']['macro_f1']<previous['cross_lingual']['macro_f1']+.03:failures.append('accuracy_material_cross_gain')
         if any(candidate_metrics['per_class'][str(c)]['f1']<previous['per_class'][str(c)]['f1'] for c in range(3)):failures.append('accuracy_class_regression')
         if candidate_metrics['average_context_tokens']>freshmetrics['average_context_tokens']*.75:failures.append('accuracy_context_efficiency')
-        if any(candidate_metrics[k]>previous[k] for k in ('brier_score','negative_log_likelihood')):failures.append('accuracy_calibration_regression')
+        if any(candidate_metrics['calibration'][k]>previous['calibration'][k] for k in ('brier_score','negative_log_likelihood')):failures.append('accuracy_calibration_regression')
     cli=json.loads((root/'cli-integration.json').read_text());front=json.loads((root/'frontend-real-inference.json').read_text())
     assert len(cli)==3 and {(p['claim_language'],p['document_language']) for p in cli}=={('de','fr'),('fr','it'),('it','de')}
     if not all(p['label_reproduced'] for p in cli) or not front['label_reproduced']:failures.append('real_pdf_api_replication')

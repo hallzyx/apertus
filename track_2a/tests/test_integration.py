@@ -18,6 +18,12 @@ class MockModel(BaseHTTPRequestHandler):
         payload=json.loads(self.rfile.read(int(self.headers['Content-Length'])))
         if hasattr(self.server, 'requests'):
             self.server.requests.append(payload)
+        if self.path=='/nli':
+            body=json.dumps({'label':0,'label_name':'entailment','probabilities':[.8,.1,.1],
+                'model':'synthetic-mock-Apertus-v1.5','retrieval':'full',
+                'evidence':payload['document']['passages'],'truncated':False,
+                'input_tokens':42,'inference_time_ms':1}).encode()
+            self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body);return
         if self.path!='/v1/chat/completions' or payload['temperature'] != 0:
             self.send_error(400);return
         body=json.dumps({'choices':[{'finish_reason':'stop','message':{'content':'{"label":0}'}}],'usage':{'prompt_tokens':42}}).encode()
@@ -25,7 +31,7 @@ class MockModel(BaseHTTPRequestHandler):
 
 
 class CliIntegration(unittest.TestCase):
-    def test_selected_full_context_reaches_model_through_cli_and_web(self):
+    def test_complete_document_reaches_native_service_through_cli_and_web(self):
         from ost_nli import web
         model = ThreadingHTTPServer(('127.0.0.1', 0), MockModel)
         model.requests = []
@@ -36,7 +42,7 @@ class CliIntegration(unittest.TestCase):
             {'id': 'background', 'page': 1, 'text': 'BACKGROUND_FULL_CONTEXT'},
             *[{'id': f'match-{i}', 'page': i+2, 'text': 'needle policy contribution'} for i in range(6)]
         ]}
-        env = {'RETRIEVAL_MODE': 'full', 'LLM_BASE_URL': f'http://127.0.0.1:{model.server_port}/v1',
+        env = {'FROZEN_BASE_URL':f'http://127.0.0.1:{model.server_port}', 'RETRIEVAL_MODE': 'full', 'LLM_BASE_URL': f'http://127.0.0.1:{model.server_port}/v1',
                'LLM_NAME': 'synthetic-mock-Apertus-v1.5', 'LLM_API_KEY': '',
                'OST_LABEL_MAP': '{"0":"entailment","1":"neutral","2":"contradiction"}'}
         try:
@@ -57,8 +63,9 @@ class CliIntegration(unittest.TestCase):
                     self.assertFalse(prediction['truncated'])
                 self.assertEqual(len(model.requests), 2)
                 for request in model.requests:
-                    self.assertIn('BACKGROUND_FULL_CONTEXT', request['messages'][1]['content'])
-                    self.assertIn('match-5', request['messages'][1]['content'])
+                    self.assertEqual(request['claim'],'needle')
+                    self.assertEqual(request['document'],doc)
+                    self.assertEqual(request['context'],'full')
         finally:
             for server in (model, app): server.shutdown();server.server_close()
             for thread in threads: thread.join(timeout=2)
