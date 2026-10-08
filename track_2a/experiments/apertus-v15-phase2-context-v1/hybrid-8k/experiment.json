@@ -1,0 +1,49 @@
+{
+  "repo": "swiss-ai/Apertus-v1.5-8B",
+  "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+  "torch": "2.8.0+cu128",
+  "transformers": "5.14.0.dev0",
+  "gpu": "NVIDIA RTX A6000",
+  "gpu_bytes": 50908823552,
+  "precision": "BF16 text; official tokenizer modules remain FP32",
+  "quantization": null,
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "git_commit": "6908c105a029b14f9100023d9e8a12739c2adf78",
+  "load_seconds": 84.96553897112608,
+  "input_manifest_sha256": "9c42aed605d1aec6d362b1b0091004b4cc9c9eefbd5be20786197b0d6267ca6b",
+  "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "engine_sha256": "3ff9b62a1178cbe401d66757a29bbd57add9d26de1fe804cbb851b9fb37b34d4",
+  "script_sha256": "735b906cbd19e398b748573d42d37c6ca362a1a73a9912e89f0703c9eb28505c",
+  "scope": "train/validation only; consumed310 untouched",
+  "conditions": [
+    "hybrid-1k",
+    "hybrid-2k",
+    "hybrid-4k",
+    "hybrid-8k",
+    "prefix-2k"
+  ],
+  "device": "cuda",
+  "weights_frozen": true,
+  "study": "context",
+  "context": "hybrid-8k",
+  "status": "completed",
+  "files": [
+    {
+      "path": "train.npz",
+      "sha256": "cf557a611251b93a8838a548a0726644751b96a5addd5dee338026cc33a01cbd"
+    },
+    {
+      "path": "validation.npz",
+      "sha256": "b66bae54fe9f2944775c34e635fda5a83401c17178fa1fc31ba733a3e56b8140"
+    },
+    {
+      "path": "validation_rows.jsonl",
+      "sha256": "4dbff7d9e584643d4938eb61fb5ac2f926b3f3ffa182beca2f76d8caecf5d092"
+    }
+  ],
+  "train_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+  "validation_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+  "training": "Frozen Apertus encodings; any head fitting is a separate train-only CPU stage"
+}

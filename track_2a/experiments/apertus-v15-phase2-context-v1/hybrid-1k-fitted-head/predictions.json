@@ -1,0 +1,3573 @@
+{
+  "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+  "configuration": {
+    "experiment_id": "hybrid-1k-fitted-head",
+    "status": "completed",
+    "timestamp": "2026-10-08T00:34:46.553029+00:00",
+    "git_commit": "6908c105a029b14f9100023d9e8a12739c2adf78",
+    "git_working_tree_dirty": true,
+    "source_script_sha256": "abe5784d6ec6caf500e4159e6ae21c1f4a138fb5b57874640d43c7bd8bf4a603",
+    "source_cache": "hybrid-1k",
+    "source_cache_git_commit": "6908c105a029b14f9100023d9e8a12739c2adf78",
+    "model": "swiss-ai/Apertus-v1.5-8B",
+    "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "precision": "BF16 text; official tokenizer modules remain FP32",
+    "features": "hidden",
+    "n_features": 4096,
+    "context": "hybrid-1k",
+    "train_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+    "validation_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+    "dataset_split": "strict_validation",
+    "training_configuration": {
+      "n": 902,
+      "seed": 42,
+      "C_grid": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "selection": "Training grouped OOF Macro-F1 only",
+      "groups": 2,
+      "folds": 2,
+      "max_iter": 2000,
+      "calibration": "Scalar temperature minimizing training grouped OOF NLL; no validation labels"
+    },
+    "sklearn": "1.7.2",
+    "numpy": "2.2.6",
+    "gpu": "CPU head; actual Apertus CUDA cache reused",
+    "actual_compute_cost": 0.0,
+    "estimated_compute_cost": 0.0,
+    "macro_f1": 0.8447294984543962,
+    "notes": "Frozen real Apertus features; 902 declared training rows only. Few independent groups limit confidence in calibration and generalization. Latency sums cached GPU encoding and separately measured CPU head; not a live integrated service. Booklet-only context with fixed official class semantics; no reference input and no test fitting.",
+    "n": 276,
+    "selected_C": 0.001,
+    "temperature": 0.8779782126203506,
+    "training_oof_macro_f1": 0.8395143438802496,
+    "runtime_seconds": 6.665431022644043,
+    "per_class_f1": {
+      "0": 0.7978723404255319,
+      "1": 0.8729281767955801,
+      "2": 0.8633879781420765
+    },
+    "per_language_performance": {
+      "de": {
+        "n": 82,
+        "macro_f1": 0.8168833615978895,
+        "accuracy": 0.8170731707317073,
+        "per_class": {
+          "0": {
+            "precision": 0.6052631578947368,
+            "recall": 1.0,
+            "f1": 0.7540983606557377,
+            "support": 23
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "support": 27
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8125,
+            "f1": 0.896551724137931,
+            "support": 32
+          }
+        },
+        "confusion_matrix": [
+          [
+            23,
+            0,
+            0
+          ],
+          [
+            9,
+            18,
+            0
+          ],
+          [
+            6,
+            0,
+            26
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 100,
+        "macro_f1": 0.8798242717734243,
+        "accuracy": 0.88,
+        "per_class": {
+          "0": {
+            "precision": 0.8717948717948718,
+            "recall": 0.8947368421052632,
+            "f1": 0.8831168831168831,
+            "support": 38
+          },
+          "1": {
+            "precision": 0.9333333333333333,
+            "recall": 0.8235294117647058,
+            "f1": 0.875,
+            "support": 34
+          },
+          "2": {
+            "precision": 0.8387096774193549,
+            "recall": 0.9285714285714286,
+            "f1": 0.8813559322033898,
+            "support": 28
+          }
+        },
+        "confusion_matrix": [
+          [
+            34,
+            2,
+            2
+          ],
+          [
+            3,
+            28,
+            3
+          ],
+          [
+            2,
+            0,
+            26
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 94,
+        "macro_f1": 0.8182828282828284,
+        "accuracy": 0.8297872340425532,
+        "per_class": {
+          "0": {
+            "precision": 0.72,
+            "recall": 0.72,
+            "f1": 0.72,
+            "support": 25
+          },
+          "1": {
+            "precision": 0.9428571428571428,
+            "recall": 0.8918918918918919,
+            "f1": 0.9166666666666666,
+            "support": 37
+          },
+          "2": {
+            "precision": 0.7941176470588235,
+            "recall": 0.84375,
+            "f1": 0.8181818181818182,
+            "support": 32
+          }
+        },
+        "confusion_matrix": [
+          [
+            18,
+            1,
+            6
+          ],
+          [
+            3,
+            33,
+            1
+          ],
+          [
+            4,
+            1,
+            27
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual_performance": {
+      "n": 190,
+      "macro_f1": 0.7955353425676229,
+      "accuracy": 0.7947368421052632,
+      "per_class": {
+        "0": {
+          "precision": 0.6388888888888888,
+          "recall": 0.8070175438596491,
+          "f1": 0.7131782945736435,
+          "support": 57
+        },
+        "1": {
+          "precision": 0.9245283018867925,
+          "recall": 0.765625,
+          "f1": 0.8376068376068376,
+          "support": 64
+        },
+        "2": {
+          "precision": 0.8615384615384616,
+          "recall": 0.8115942028985508,
+          "f1": 0.835820895522388,
+          "support": 69
+        }
+      },
+      "confusion_matrix": [
+        [
+          46,
+          3,
+          8
+        ],
+        [
+          14,
+          49,
+          1
+        ],
+        [
+          12,
+          1,
+          56
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "calibration_metrics": {
+      "ece": 0.04359366904782929,
+      "ece_bins": 10,
+      "brier_score": 0.2075309724714991,
+      "negative_log_likelihood": 0.3729115689899447
+    },
+    "uncalibrated_calibration_metrics": {
+      "ece": 0.027984052398953976,
+      "ece_bins": 10,
+      "brier_score": 0.20700951044368282,
+      "negative_log_likelihood": 0.36962325411760877
+    },
+    "average_context_tokens": 892.8405797101449,
+    "average_inference_latency": 0.5226733085253964,
+    "mean_head_only_latency_seconds": 0.00045707900131094283
+  },
+  "predictions": [
+    {
+      "id": "ost-v1.1-0019",
+      "label": 0,
+      "probabilities": [
+        0.7189697430713855,
+        0.022203224338421198,
+        0.2588270325901934
+      ],
+      "context_tokens": 963,
+      "latency_seconds": 12.002518936991692,
+      "head_only_latency_seconds": 0.000675395131111145
+    },
+    {
+      "id": "ost-v1.1-0022",
+      "label": 0,
+      "probabilities": [
+        0.9922688807683413,
+        0.0020805181416355847,
+        0.005650601090023289
+      ],
+      "context_tokens": 856,
+      "latency_seconds": 4.570656709372997,
+      "head_only_latency_seconds": 0.000529944896697998
+    },
+    {
+      "id": "ost-v1.1-0024",
+      "label": 0,
+      "probabilities": [
+        0.880111875365989,
+        0.005116742321588015,
+        0.11477138231242291
+      ],
+      "context_tokens": 928,
+      "latency_seconds": 4.942035958170891,
+      "head_only_latency_seconds": 0.0004947036504745483
+    },
+    {
+      "id": "ost-v1.1-0026",
+      "label": 0,
+      "probabilities": [
+        0.9863839959624487,
+        0.0022631491532855343,
+        0.011352854884265717
+      ],
+      "context_tokens": 823,
+      "latency_seconds": 9.871085315942764,
+      "head_only_latency_seconds": 0.0004588216543197632
+    },
+    {
+      "id": "ost-v1.1-0030",
+      "label": 0,
+      "probabilities": [
+        0.880111875365989,
+        0.005116742321588015,
+        0.11477138231242291
+      ],
+      "context_tokens": 928,
+      "latency_seconds": 0.2704208418726921,
+      "head_only_latency_seconds": 0.00045806169509887695
+    },
+    {
+      "id": "ost-v1.1-0032",
+      "label": 0,
+      "probabilities": [
+        0.9981974276052178,
+        0.00021648126629579157,
+        0.0015860911284864524
+      ],
+      "context_tokens": 993,
+      "latency_seconds": 9.341365531086922,
+      "head_only_latency_seconds": 0.0004681050777435303
+    },
+    {
+      "id": "ost-v1.1-0040",
+      "label": 0,
+      "probabilities": [
+        0.9894642531089142,
+        9.352943955296958e-05,
+        0.010442217451532954
+      ],
+      "context_tokens": 899,
+      "latency_seconds": 4.689042687416077,
+      "head_only_latency_seconds": 0.00045222043991088867
+    },
+    {
+      "id": "ost-v1.1-0050",
+      "label": 0,
+      "probabilities": [
+        0.9894642531089142,
+        9.352943955296958e-05,
+        0.010442217451532954
+      ],
+      "context_tokens": 899,
+      "latency_seconds": 0.26646099239587784,
+      "head_only_latency_seconds": 0.0004585087299346924
+    },
+    {
+      "id": "ost-v1.1-0057",
+      "label": 0,
+      "probabilities": [
+        0.9863839959624487,
+        0.0022631491532855343,
+        0.011352854884265717
+      ],
+      "context_tokens": 823,
+      "latency_seconds": 0.24449710547924042,
+      "head_only_latency_seconds": 0.00045255571603775024
+    },
+    {
+      "id": "ost-v1.1-0064",
+      "label": 0,
+      "probabilities": [
+        0.880111875365989,
+        0.005116742321588015,
+        0.11477138231242291
+      ],
+      "context_tokens": 928,
+      "latency_seconds": 0.2701219767332077,
+      "head_only_latency_seconds": 0.0005003958940505981
+    },
+    {
+      "id": "ost-v1.1-0068",
+      "label": 0,
+      "probabilities": [
+        0.991631893651609,
+        0.0008067552065425881,
+        0.0075613511418484314
+      ],
+      "context_tokens": 887,
+      "latency_seconds": 8.469423808157444,
+      "head_only_latency_seconds": 0.00045778602361679077
+    },
+    {
+      "id": "ost-v1.1-0080",
+      "label": 0,
+      "probabilities": [
+        0.8096269498555686,
+        0.12335486590723659,
+        0.06701818423719484
+      ],
+      "context_tokens": 876,
+      "latency_seconds": 0.26415911316871643,
+      "head_only_latency_seconds": 0.00045590102672576904
+    },
+    {
+      "id": "ost-v1.1-0081",
+      "label": 0,
+      "probabilities": [
+        0.9795888862836554,
+        0.0011618827170817967,
+        0.019249230999262897
+      ],
+      "context_tokens": 764,
+      "latency_seconds": 0.24028345942497253,
+      "head_only_latency_seconds": 0.0004463791847229004
+    },
+    {
+      "id": "ost-v1.1-0087",
+      "label": 0,
+      "probabilities": [
+        0.9888648261854945,
+        0.0004178440038873295,
+        0.01071732981061816
+      ],
+      "context_tokens": 977,
+      "latency_seconds": 0.28101619333028793,
+      "head_only_latency_seconds": 0.00044558197259902954
+    },
+    {
+      "id": "ost-v1.1-0105",
+      "label": 0,
+      "probabilities": [
+        0.9426360860174534,
+        0.00035356035327296193,
+        0.057010353629273626
+      ],
+      "context_tokens": 982,
+      "latency_seconds": 0.2753685191273689,
+      "head_only_latency_seconds": 0.00045055150985717773
+    },
+    {
+      "id": "ost-v1.1-0114",
+      "label": 0,
+      "probabilities": [
+        0.923140044917187,
+        2.3653316514137452e-05,
+        0.07683630176629895
+      ],
+      "context_tokens": 975,
+      "latency_seconds": 0.2876277044415474,
+      "head_only_latency_seconds": 0.0004505738615989685
+    },
+    {
+      "id": "ost-v1.1-0119",
+      "label": 0,
+      "probabilities": [
+        0.9803262698966104,
+        0.0028161253792418147,
+        0.016857604724147757
+      ],
+      "context_tokens": 835,
+      "latency_seconds": 0.24506434053182602,
+      "head_only_latency_seconds": 0.00045596063137054443
+    },
+    {
+      "id": "ost-v1.1-0129",
+      "label": 0,
+      "probabilities": [
+        0.9863839959624487,
+        0.0022631491532855343,
+        0.011352854884265717
+      ],
+      "context_tokens": 823,
+      "latency_seconds": 0.24401941895484924,
+      "head_only_latency_seconds": 0.0004995390772819519
+    },
+    {
+      "id": "ost-v1.1-0136",
+      "label": 0,
+      "probabilities": [
+        0.9962004918349165,
+        0.00019808413602904007,
+        0.003601424029054342
+      ],
+      "context_tokens": 732,
+      "latency_seconds": 0.22726568579673767,
+      "head_only_latency_seconds": 0.00046593695878982544
+    },
+    {
+      "id": "ost-v1.1-0145",
+      "label": 0,
+      "probabilities": [
+        0.880111875365989,
+        0.005116742321588015,
+        0.11477138231242291
+      ],
+      "context_tokens": 928,
+      "latency_seconds": 0.2701004073023796,
+      "head_only_latency_seconds": 0.00045483559370040894
+    },
+    {
+      "id": "ost-v1.1-0146",
+      "label": 0,
+      "probabilities": [
+        0.9896512296459888,
+        0.001404445145846538,
+        0.008944325208164587
+      ],
+      "context_tokens": 892,
+      "latency_seconds": 0.26132992655038834,
+      "head_only_latency_seconds": 0.0004507899284362793
+    },
+    {
+      "id": "ost-v1.1-0153",
+      "label": 0,
+      "probabilities": [
+        0.9981974276052178,
+        0.00021648126629579157,
+        0.0015860911284864524
+      ],
+      "context_tokens": 993,
+      "latency_seconds": 0.29385629296302795,
+      "head_only_latency_seconds": 0.00046341121196746826
+    },
+    {
+      "id": "ost-v1.1-0158",
+      "label": 0,
+      "probabilities": [
+        0.9894642531089142,
+        9.352943955296958e-05,
+        0.010442217451532954
+      ],
+      "context_tokens": 899,
+      "latency_seconds": 0.2743585929274559,
+      "head_only_latency_seconds": 0.0004550367593765259
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "label": 1,
+      "probabilities": [
+        0.02537840823897438,
+        0.8880012782516815,
+        0.08662031350934417
+      ],
+      "context_tokens": 833,
+      "latency_seconds": 10.876359067857265,
+      "head_only_latency_seconds": 0.00045978277921676636
+    },
+    {
+      "id": "ost-v1.1-0172",
+      "label": 0,
+      "probabilities": [
+        0.997275175118787,
+        0.00022577162909277247,
+        0.002499053252120054
+      ],
+      "context_tokens": 1013,
+      "latency_seconds": 0.285585381090641,
+      "head_only_latency_seconds": 0.0004526600241661072
+    },
+    {
+      "id": "ost-v1.1-0173",
+      "label": 0,
+      "probabilities": [
+        0.9928551699935826,
+        0.0008449120734235906,
+        0.006299917932993781
+      ],
+      "context_tokens": 924,
+      "latency_seconds": 0.269659586250782,
+      "head_only_latency_seconds": 0.0005911141633987427
+    },
+    {
+      "id": "ost-v1.1-0174",
+      "label": 0,
+      "probabilities": [
+        0.9956543259535204,
+        0.000614729114266292,
+        0.0037309449322131586
+      ],
+      "context_tokens": 900,
+      "latency_seconds": 0.29052380472421646,
+      "head_only_latency_seconds": 0.0004779025912284851
+    },
+    {
+      "id": "ost-v1.1-0186",
+      "label": 2,
+      "probabilities": [
+        0.10882167993444954,
+        0.007958887563739995,
+        0.8832194325018105
+      ],
+      "context_tokens": 1013,
+      "latency_seconds": 0.2838571220636368,
+      "head_only_latency_seconds": 0.00045865029096603394
+    },
+    {
+      "id": "ost-v1.1-0190",
+      "label": 0,
+      "probabilities": [
+        0.9958506937818344,
+        0.0003653663072917368,
+        0.0037839399108738204
+      ],
+      "context_tokens": 982,
+      "latency_seconds": 0.27546482533216476,
+      "head_only_latency_seconds": 0.00045032799243927
+    },
+    {
+      "id": "ost-v1.1-0199",
+      "label": 0,
+      "probabilities": [
+        0.998693893754635,
+        0.0002501080732810982,
+        0.0010559981720837794
+      ],
+      "context_tokens": 1012,
+      "latency_seconds": 0.2907921224832535,
+      "head_only_latency_seconds": 0.0004471689462661743
+    },
+    {
+      "id": "ost-v1.1-0205",
+      "label": 0,
+      "probabilities": [
+        0.982195846286784,
+        0.002280321323155863,
+        0.015523832390060156
+      ],
+      "context_tokens": 774,
+      "latency_seconds": 0.23231978714466095,
+      "head_only_latency_seconds": 0.0004452019929885864
+    },
+    {
+      "id": "ost-v1.1-0211",
+      "label": 0,
+      "probabilities": [
+        0.9958506937818344,
+        0.0003653663072917368,
+        0.0037839399108738204
+      ],
+      "context_tokens": 982,
+      "latency_seconds": 0.2790394276380539,
+      "head_only_latency_seconds": 0.00045074522495269775
+    },
+    {
+      "id": "ost-v1.1-0212",
+      "label": 0,
+      "probabilities": [
+        0.9959596610560918,
+        0.0004869758803449867,
+        0.0035533630635633594
+      ],
+      "context_tokens": 1023,
+      "latency_seconds": 0.2970694303512573,
+      "head_only_latency_seconds": 0.00045371055603027344
+    },
+    {
+      "id": "ost-v1.1-0213",
+      "label": 0,
+      "probabilities": [
+        0.9959596610560918,
+        0.0004869758803449867,
+        0.0035533630635633594
+      ],
+      "context_tokens": 1023,
+      "latency_seconds": 0.29989199340343475,
+      "head_only_latency_seconds": 0.00044974684715270996
+    },
+    {
+      "id": "ost-v1.1-0215",
+      "label": 0,
+      "probabilities": [
+        0.9959596610560918,
+        0.0004869758803449867,
+        0.0035533630635633594
+      ],
+      "context_tokens": 1023,
+      "latency_seconds": 0.2999225780367851,
+      "head_only_latency_seconds": 0.0005026310682296753
+    },
+    {
+      "id": "ost-v1.1-0223",
+      "label": 0,
+      "probabilities": [
+        0.9956970027719526,
+        0.0004462480314237639,
+        0.003856749196623528
+      ],
+      "context_tokens": 908,
+      "latency_seconds": 0.27772796154022217,
+      "head_only_latency_seconds": 0.000452481210231781
+    },
+    {
+      "id": "ost-v1.1-0224",
+      "label": 0,
+      "probabilities": [
+        0.9927008006005774,
+        0.0008539920581654789,
+        0.006445207341257046
+      ],
+      "context_tokens": 892,
+      "latency_seconds": 0.2686955854296684,
+      "head_only_latency_seconds": 0.0004564523696899414
+    },
+    {
+      "id": "ost-v1.1-0227",
+      "label": 0,
+      "probabilities": [
+        0.986666609007222,
+        0.000401867404209585,
+        0.012931523588568502
+      ],
+      "context_tokens": 850,
+      "latency_seconds": 0.28040800988674164,
+      "head_only_latency_seconds": 0.0004512295126914978
+    },
+    {
+      "id": "ost-v1.1-0235",
+      "label": 0,
+      "probabilities": [
+        0.629114469387623,
+        0.0010172900987502767,
+        0.36986824051362666
+      ],
+      "context_tokens": 839,
+      "latency_seconds": 0.2574322074651718,
+      "head_only_latency_seconds": 0.000447884202003479
+    },
+    {
+      "id": "ost-v1.1-0236",
+      "label": 0,
+      "probabilities": [
+        0.9891345844359745,
+        0.0026037466682808097,
+        0.008261668895744692
+      ],
+      "context_tokens": 847,
+      "latency_seconds": 0.25094614923000336,
+      "head_only_latency_seconds": 0.00044977664947509766
+    },
+    {
+      "id": "ost-v1.1-0241",
+      "label": 0,
+      "probabilities": [
+        0.6446954209564207,
+        0.00032354483471243274,
+        0.3549810342088669
+      ],
+      "context_tokens": 802,
+      "latency_seconds": 0.25381601601839066,
+      "head_only_latency_seconds": 0.0004586726427078247
+    },
+    {
+      "id": "ost-v1.1-0243",
+      "label": 0,
+      "probabilities": [
+        0.6446954209564207,
+        0.00032354483471243274,
+        0.3549810342088669
+      ],
+      "context_tokens": 802,
+      "latency_seconds": 0.24927445501089096,
+      "head_only_latency_seconds": 0.0004574805498123169
+    },
+    {
+      "id": "ost-v1.1-0245",
+      "label": 0,
+      "probabilities": [
+        0.9927008006005774,
+        0.0008539920581654789,
+        0.006445207341257046
+      ],
+      "context_tokens": 892,
+      "latency_seconds": 0.2699749544262886,
+      "head_only_latency_seconds": 0.00047331303358078003
+    },
+    {
+      "id": "ost-v1.1-0250",
+      "label": 0,
+      "probabilities": [
+        0.9121193596867349,
+        0.0011622288619462416,
+        0.08671841145131882
+      ],
+      "context_tokens": 909,
+      "latency_seconds": 0.2976749390363693,
+      "head_only_latency_seconds": 0.0004616454243659973
+    },
+    {
+      "id": "ost-v1.1-0254",
+      "label": 0,
+      "probabilities": [
+        0.6446954209564207,
+        0.00032354483471243274,
+        0.3549810342088669
+      ],
+      "context_tokens": 802,
+      "latency_seconds": 0.2511572167277336,
+      "head_only_latency_seconds": 0.00044752657413482666
+    },
+    {
+      "id": "ost-v1.1-0256",
+      "label": 0,
+      "probabilities": [
+        0.9983749269349523,
+        0.00021915914400970154,
+        0.001405913921037886
+      ],
+      "context_tokens": 929,
+      "latency_seconds": 0.28981921821832657,
+      "head_only_latency_seconds": 0.00044430047273635864
+    },
+    {
+      "id": "ost-v1.1-0258",
+      "label": 0,
+      "probabilities": [
+        0.9843142749433333,
+        0.0006174570196268694,
+        0.015068268037039869
+      ],
+      "context_tokens": 836,
+      "latency_seconds": 0.2772620990872383,
+      "head_only_latency_seconds": 0.0004432573914527893
+    },
+    {
+      "id": "ost-v1.1-0259",
+      "label": 0,
+      "probabilities": [
+        0.986666609007222,
+        0.000401867404209585,
+        0.012931523588568502
+      ],
+      "context_tokens": 850,
+      "latency_seconds": 0.27782098948955536,
+      "head_only_latency_seconds": 0.0004475712776184082
+    },
+    {
+      "id": "ost-v1.1-0262",
+      "label": 0,
+      "probabilities": [
+        0.9982833237403858,
+        0.00023324337917868222,
+        0.001483432880435677
+      ],
+      "context_tokens": 847,
+      "latency_seconds": 0.26350846141576767,
+      "head_only_latency_seconds": 0.00045233964920043945
+    },
+    {
+      "id": "ost-v1.1-0269",
+      "label": 0,
+      "probabilities": [
+        0.9994756241319299,
+        0.00011415543038525878,
+        0.00041022043768467907
+      ],
+      "context_tokens": 862,
+      "latency_seconds": 0.26607614755630493,
+      "head_only_latency_seconds": 0.00044339895248413086
+    },
+    {
+      "id": "ost-v1.1-0278",
+      "label": 0,
+      "probabilities": [
+        0.9959596610560918,
+        0.0004869758803449867,
+        0.0035533630635633594
+      ],
+      "context_tokens": 1023,
+      "latency_seconds": 0.29341235756874084,
+      "head_only_latency_seconds": 0.0004522576928138733
+    },
+    {
+      "id": "ost-v1.1-0280",
+      "label": 0,
+      "probabilities": [
+        0.9780201052109189,
+        0.0023842720906907203,
+        0.01959562269839042
+      ],
+      "context_tokens": 906,
+      "latency_seconds": 0.2803541570901871,
+      "head_only_latency_seconds": 0.00046034902334213257
+    },
+    {
+      "id": "ost-v1.1-0298",
+      "label": 0,
+      "probabilities": [
+        0.9927008006005774,
+        0.0008539920581654789,
+        0.006445207341257046
+      ],
+      "context_tokens": 892,
+      "latency_seconds": 0.2633311450481415,
+      "head_only_latency_seconds": 0.000462457537651062
+    },
+    {
+      "id": "ost-v1.1-0299",
+      "label": 0,
+      "probabilities": [
+        0.9907618068305507,
+        0.00032487275669162535,
+        0.008913320412757527
+      ],
+      "context_tokens": 994,
+      "latency_seconds": 0.27974753826856613,
+      "head_only_latency_seconds": 0.00044921785593032837
+    },
+    {
+      "id": "ost-v1.1-0301",
+      "label": 0,
+      "probabilities": [
+        0.998693893754635,
+        0.0002501080732810982,
+        0.0010559981720837794
+      ],
+      "context_tokens": 1012,
+      "latency_seconds": 0.2945437952876091,
+      "head_only_latency_seconds": 0.0004459694027900696
+    },
+    {
+      "id": "ost-v1.1-0304",
+      "label": 2,
+      "probabilities": [
+        0.21948270394852562,
+        0.18286966487982037,
+        0.597647631171654
+      ],
+      "context_tokens": 780,
+      "latency_seconds": 7.678215481340885,
+      "head_only_latency_seconds": 0.00044493377208709717
+    },
+    {
+      "id": "ost-v1.1-0305",
+      "label": 0,
+      "probabilities": [
+        0.9778529375158467,
+        0.0010841841525758716,
+        0.021062878331577523
+      ],
+      "context_tokens": 905,
+      "latency_seconds": 0.2807880789041519,
+      "head_only_latency_seconds": 0.0004466325044631958
+    },
+    {
+      "id": "ost-v1.1-0312",
+      "label": 0,
+      "probabilities": [
+        0.9442904194401306,
+        0.0016045015431840081,
+        0.05410507901668537
+      ],
+      "context_tokens": 909,
+      "latency_seconds": 0.2885487228631973,
+      "head_only_latency_seconds": 0.000445045530796051
+    },
+    {
+      "id": "ost-v1.1-0318",
+      "label": 0,
+      "probabilities": [
+        0.9891345844359745,
+        0.0026037466682808097,
+        0.008261668895744692
+      ],
+      "context_tokens": 847,
+      "latency_seconds": 0.24908554553985596,
+      "head_only_latency_seconds": 0.0004469156265258789
+    },
+    {
+      "id": "ost-v1.1-0320",
+      "label": 0,
+      "probabilities": [
+        0.982195846286784,
+        0.002280321323155863,
+        0.015523832390060156
+      ],
+      "context_tokens": 774,
+      "latency_seconds": 0.24214806407690048,
+      "head_only_latency_seconds": 0.0004500076174736023
+    },
+    {
+      "id": "ost-v1.1-0323",
+      "label": 1,
+      "probabilities": [
+        0.23999814502708933,
+        0.6957211769620015,
+        0.06428067801090918
+      ],
+      "context_tokens": 707,
+      "latency_seconds": 0.23591574281454086,
+      "head_only_latency_seconds": 0.0004988238215446472
+    },
+    {
+      "id": "ost-v1.1-0333",
+      "label": 1,
+      "probabilities": [
+        0.016066332037521783,
+        0.9359212057985077,
+        0.04801246216397057
+      ],
+      "context_tokens": 888,
+      "latency_seconds": 0.25200577080249786,
+      "head_only_latency_seconds": 0.0004468560218811035
+    },
+    {
+      "id": "ost-v1.1-0338",
+      "label": 0,
+      "probabilities": [
+        0.5883119256362326,
+        0.018544347882923598,
+        0.3931437264808439
+      ],
+      "context_tokens": 928,
+      "latency_seconds": 0.2883065566420555,
+      "head_only_latency_seconds": 0.00044279545545578003
+    },
+    {
+      "id": "ost-v1.1-0341",
+      "label": 0,
+      "probabilities": [
+        0.8842526489915201,
+        0.0005810074516336342,
+        0.11516634355684624
+      ],
+      "context_tokens": 869,
+      "latency_seconds": 0.25899581611156464,
+      "head_only_latency_seconds": 0.00044439733028411865
+    },
+    {
+      "id": "ost-v1.1-0343",
+      "label": 0,
+      "probabilities": [
+        0.9917278637441692,
+        0.0017260966831252765,
+        0.00654603957270557
+      ],
+      "context_tokens": 679,
+      "latency_seconds": 0.22266042977571487,
+      "head_only_latency_seconds": 0.00046191364526748657
+    },
+    {
+      "id": "ost-v1.1-0345",
+      "label": 0,
+      "probabilities": [
+        0.9878350503147291,
+        8.64691443443057e-05,
+        0.01207848054092669
+      ],
+      "context_tokens": 906,
+      "latency_seconds": 0.29780955612659454,
+      "head_only_latency_seconds": 0.00044508278369903564
+    },
+    {
+      "id": "ost-v1.1-0355",
+      "label": 2,
+      "probabilities": [
+        0.3818667547668774,
+        0.1514436773403936,
+        0.46668956789272886
+      ],
+      "context_tokens": 972,
+      "latency_seconds": 0.2754378989338875,
+      "head_only_latency_seconds": 0.0004509091377258301
+    },
+    {
+      "id": "ost-v1.1-0359",
+      "label": 2,
+      "probabilities": [
+        0.0284576867108335,
+        0.0006351239312711625,
+        0.9709071893578952
+      ],
+      "context_tokens": 944,
+      "latency_seconds": 0.2883668392896652,
+      "head_only_latency_seconds": 0.00044995546340942383
+    },
+    {
+      "id": "ost-v1.1-0361",
+      "label": 2,
+      "probabilities": [
+        0.3818667547668774,
+        0.1514436773403936,
+        0.46668956789272886
+      ],
+      "context_tokens": 972,
+      "latency_seconds": 0.27618248015642166,
+      "head_only_latency_seconds": 0.00048376619815826416
+    },
+    {
+      "id": "ost-v1.1-0363",
+      "label": 0,
+      "probabilities": [
+        0.669042222503466,
+        0.013797794439806603,
+        0.31715998305672727
+      ],
+      "context_tokens": 840,
+      "latency_seconds": 0.265204593539238,
+      "head_only_latency_seconds": 0.00045958906412124634
+    },
+    {
+      "id": "ost-v1.1-0391",
+      "label": 0,
+      "probabilities": [
+        0.9905962964473698,
+        0.0009223978518244166,
+        0.008481305700805943
+      ],
+      "context_tokens": 962,
+      "latency_seconds": 0.2857844680547714,
+      "head_only_latency_seconds": 0.00044526904821395874
+    },
+    {
+      "id": "ost-v1.1-0395",
+      "label": 2,
+      "probabilities": [
+        0.3818667547668774,
+        0.1514436773403936,
+        0.46668956789272886
+      ],
+      "context_tokens": 972,
+      "latency_seconds": 0.27752913534641266,
+      "head_only_latency_seconds": 0.0004410967230796814
+    },
+    {
+      "id": "ost-v1.1-0399",
+      "label": 0,
+      "probabilities": [
+        0.7409081946107224,
+        0.0005377753513200876,
+        0.25855403003795746
+      ],
+      "context_tokens": 970,
+      "latency_seconds": 0.29772642999887466,
+      "head_only_latency_seconds": 0.0004490390419960022
+    },
+    {
+      "id": "ost-v1.1-0400",
+      "label": 0,
+      "probabilities": [
+        0.9880702780199944,
+        0.0016546964585225812,
+        0.010275025521483098
+      ],
+      "context_tokens": 798,
+      "latency_seconds": 0.26615913212299347,
+      "head_only_latency_seconds": 0.0004419460892677307
+    },
+    {
+      "id": "ost-v1.1-0410",
+      "label": 0,
+      "probabilities": [
+        0.9952880488950946,
+        0.0005728931085864082,
+        0.0041390579963191355
+      ],
+      "context_tokens": 991,
+      "latency_seconds": 0.27182526141405106,
+      "head_only_latency_seconds": 0.00044821202754974365
+    },
+    {
+      "id": "ost-v1.1-0411",
+      "label": 0,
+      "probabilities": [
+        0.9307855156176584,
+        0.0015658510588482696,
+        0.06764863332349323
+      ],
+      "context_tokens": 941,
+      "latency_seconds": 0.2883581966161728,
+      "head_only_latency_seconds": 0.0004416853189468384
+    },
+    {
+      "id": "ost-v1.1-0412",
+      "label": 0,
+      "probabilities": [
+        0.9878214988655668,
+        0.0004501668739297434,
+        0.011728334260503495
+      ],
+      "context_tokens": 1012,
+      "latency_seconds": 0.2862201929092407,
+      "head_only_latency_seconds": 0.0005789473652839661
+    },
+    {
+      "id": "ost-v1.1-0422",
+      "label": 0,
+      "probabilities": [
+        0.997705320089852,
+        8.739106881744011e-05,
+        0.0022072888413306466
+      ],
+      "context_tokens": 934,
+      "latency_seconds": 0.2959649860858917,
+      "head_only_latency_seconds": 0.0005097165703773499
+    },
+    {
+      "id": "ost-v1.1-0432",
+      "label": 0,
+      "probabilities": [
+        0.7409081946107224,
+        0.0005377753513200876,
+        0.25855403003795746
+      ],
+      "context_tokens": 970,
+      "latency_seconds": 0.29126986861228943,
+      "head_only_latency_seconds": 0.00045005232095718384
+    },
+    {
+      "id": "ost-v1.1-0434",
+      "label": 0,
+      "probabilities": [
+        0.9960783974885642,
+        0.00047237018732418595,
+        0.0034492323241116945
+      ],
+      "context_tokens": 732,
+      "latency_seconds": 0.2447223886847496,
+      "head_only_latency_seconds": 0.000444069504737854
+    },
+    {
+      "id": "ost-v1.1-0446",
+      "label": 0,
+      "probabilities": [
+        0.993016291928003,
+        0.0008316611924425461,
+        0.006152046879554495
+      ],
+      "context_tokens": 843,
+      "latency_seconds": 0.2579958513379097,
+      "head_only_latency_seconds": 0.0004483908414840698
+    },
+    {
+      "id": "ost-v1.1-0449",
+      "label": 0,
+      "probabilities": [
+        0.489724853370528,
+        0.2628439038174354,
+        0.24743124281203652
+      ],
+      "context_tokens": 825,
+      "latency_seconds": 0.25546516478061676,
+      "head_only_latency_seconds": 0.00044918060302734375
+    },
+    {
+      "id": "ost-v1.1-0456",
+      "label": 0,
+      "probabilities": [
+        0.669042222503466,
+        0.013797794439806603,
+        0.31715998305672727
+      ],
+      "context_tokens": 840,
+      "latency_seconds": 0.258257232606411,
+      "head_only_latency_seconds": 0.0004414990544319153
+    },
+    {
+      "id": "ost-v1.1-0460",
+      "label": 2,
+      "probabilities": [
+        0.0284576867108335,
+        0.0006351239312711625,
+        0.9709071893578952
+      ],
+      "context_tokens": 944,
+      "latency_seconds": 0.2860509157180786,
+      "head_only_latency_seconds": 0.00045112520456314087
+    },
+    {
+      "id": "ost-v1.1-0463",
+      "label": 2,
+      "probabilities": [
+        0.3818667547668774,
+        0.1514436773403936,
+        0.46668956789272886
+      ],
+      "context_tokens": 972,
+      "latency_seconds": 0.27383850514888763,
+      "head_only_latency_seconds": 0.0004421621561050415
+    },
+    {
+      "id": "ost-v1.1-0481",
+      "label": 0,
+      "probabilities": [
+        0.9905962964473698,
+        0.0009223978518244166,
+        0.008481305700805943
+      ],
+      "context_tokens": 962,
+      "latency_seconds": 0.27985718846321106,
+      "head_only_latency_seconds": 0.000498645007610321
+    },
+    {
+      "id": "ost-v1.1-0499",
+      "label": 1,
+      "probabilities": [
+        0.0037675566042349633,
+        0.9960019531159661,
+        0.00023049027979909993
+      ],
+      "context_tokens": 778,
+      "latency_seconds": 0.2547822594642639,
+      "head_only_latency_seconds": 0.00045669078826904297
+    },
+    {
+      "id": "ost-v1.1-0505",
+      "label": 1,
+      "probabilities": [
+        0.0035898374932358266,
+        0.9937377474901434,
+        0.002672415016620755
+      ],
+      "context_tokens": 944,
+      "latency_seconds": 0.2905110791325569,
+      "head_only_latency_seconds": 0.00045143067836761475
+    },
+    {
+      "id": "ost-v1.1-0506",
+      "label": 0,
+      "probabilities": [
+        0.6501113961316036,
+        0.09143076272342178,
+        0.2584578411449745
+      ],
+      "context_tokens": 1023,
+      "latency_seconds": 0.29811152070760727,
+      "head_only_latency_seconds": 0.00044852495193481445
+    },
+    {
+      "id": "ost-v1.1-0513",
+      "label": 0,
+      "probabilities": [
+        0.6477652770414701,
+        0.23071474861329466,
+        0.12151997434523511
+      ],
+      "context_tokens": 709,
+      "latency_seconds": 0.23832569271326065,
+      "head_only_latency_seconds": 0.00044777244329452515
+    },
+    {
+      "id": "ost-v1.1-0515",
+      "label": 0,
+      "probabilities": [
+        0.46201268047049254,
+        0.19184973392196583,
+        0.3461375856075415
+      ],
+      "context_tokens": 895,
+      "latency_seconds": 0.2597295865416527,
+      "head_only_latency_seconds": 0.00045809149742126465
+    },
+    {
+      "id": "ost-v1.1-0519",
+      "label": 0,
+      "probabilities": [
+        0.46201268047049254,
+        0.19184973392196583,
+        0.3461375856075415
+      ],
+      "context_tokens": 895,
+      "latency_seconds": 0.2595677077770233,
+      "head_only_latency_seconds": 0.0004520118236541748
+    },
+    {
+      "id": "ost-v1.1-0525",
+      "label": 1,
+      "probabilities": [
+        0.1716186733055471,
+        0.7702893794042885,
+        0.05809194729016422
+      ],
+      "context_tokens": 931,
+      "latency_seconds": 0.28004562109708786,
+      "head_only_latency_seconds": 0.00044471025466918945
+    },
+    {
+      "id": "ost-v1.1-0526",
+      "label": 0,
+      "probabilities": [
+        0.6477652770414701,
+        0.23071474861329466,
+        0.12151997434523511
+      ],
+      "context_tokens": 709,
+      "latency_seconds": 0.2390843704342842,
+      "head_only_latency_seconds": 0.00045002996921539307
+    },
+    {
+      "id": "ost-v1.1-0555",
+      "label": 1,
+      "probabilities": [
+        0.03221492874527017,
+        0.9294915292142546,
+        0.03829354204047515
+      ],
+      "context_tokens": 862,
+      "latency_seconds": 0.26616498082876205,
+      "head_only_latency_seconds": 0.0004899501800537109
+    },
+    {
+      "id": "ost-v1.1-0558",
+      "label": 0,
+      "probabilities": [
+        0.46201268047049254,
+        0.19184973392196583,
+        0.3461375856075415
+      ],
+      "context_tokens": 895,
+      "latency_seconds": 0.2603246346116066,
+      "head_only_latency_seconds": 0.0004519447684288025
+    },
+    {
+      "id": "ost-v1.1-0563",
+      "label": 1,
+      "probabilities": [
+        0.326239933640012,
+        0.5579939838464204,
+        0.11576608251356758
+      ],
+      "context_tokens": 905,
+      "latency_seconds": 0.2870076671242714,
+      "head_only_latency_seconds": 0.00045058131217956543
+    },
+    {
+      "id": "ost-v1.1-0566",
+      "label": 1,
+      "probabilities": [
+        0.001080232801147933,
+        0.997050963134697,
+        0.001868804064155018
+      ],
+      "context_tokens": 860,
+      "latency_seconds": 0.2636691555380821,
+      "head_only_latency_seconds": 0.0004418492317199707
+    },
+    {
+      "id": "ost-v1.1-0569",
+      "label": 0,
+      "probabilities": [
+        0.6501113961316036,
+        0.09143076272342178,
+        0.2584578411449745
+      ],
+      "context_tokens": 1023,
+      "latency_seconds": 0.2959362789988518,
+      "head_only_latency_seconds": 0.0004385635256767273
+    },
+    {
+      "id": "ost-v1.1-0572",
+      "label": 1,
+      "probabilities": [
+        0.0113220946142309,
+        0.9843428020894592,
+        0.0043351032963100345
+      ],
+      "context_tokens": 992,
+      "latency_seconds": 0.2916877046227455,
+      "head_only_latency_seconds": 0.0004471316933631897
+    },
+    {
+      "id": "ost-v1.1-0573",
+      "label": 1,
+      "probabilities": [
+        0.05277973881585905,
+        0.9064936640894208,
+        0.040726597094720145
+      ],
+      "context_tokens": 911,
+      "latency_seconds": 0.29202377796173096,
+      "head_only_latency_seconds": 0.00045133382081985474
+    },
+    {
+      "id": "ost-v1.1-0592",
+      "label": 1,
+      "probabilities": [
+        0.0021594911619794988,
+        0.9935058972407087,
+        0.004334611597311669
+      ],
+      "context_tokens": 955,
+      "latency_seconds": 0.28132469207048416,
+      "head_only_latency_seconds": 0.00044508278369903564
+    },
+    {
+      "id": "ost-v1.1-0597",
+      "label": 1,
+      "probabilities": [
+        0.3922448219759447,
+        0.509047712477679,
+        0.09870746554637644
+      ],
+      "context_tokens": 932,
+      "latency_seconds": 0.2893693298101425,
+      "head_only_latency_seconds": 0.0005136355757713318
+    },
+    {
+      "id": "ost-v1.1-0599",
+      "label": 1,
+      "probabilities": [
+        0.007200905955905049,
+        0.9866670022462326,
+        0.006132091797862533
+      ],
+      "context_tokens": 961,
+      "latency_seconds": 0.2836596965789795,
+      "head_only_latency_seconds": 0.000455223023891449
+    },
+    {
+      "id": "ost-v1.1-0604",
+      "label": 0,
+      "probabilities": [
+        0.46201268047049254,
+        0.19184973392196583,
+        0.3461375856075415
+      ],
+      "context_tokens": 895,
+      "latency_seconds": 0.2606267109513283,
+      "head_only_latency_seconds": 0.0004501044750213623
+    },
+    {
+      "id": "ost-v1.1-0610",
+      "label": 1,
+      "probabilities": [
+        0.014891701207809695,
+        0.949282305767411,
+        0.035825993024779235
+      ],
+      "context_tokens": 732,
+      "latency_seconds": 0.23609257489442825,
+      "head_only_latency_seconds": 0.0004450008273124695
+    },
+    {
+      "id": "ost-v1.1-0616",
+      "label": 1,
+      "probabilities": [
+        0.0017907771655410094,
+        0.977643156328418,
+        0.020566066506041144
+      ],
+      "context_tokens": 727,
+      "latency_seconds": 0.22721899300813675,
+      "head_only_latency_seconds": 0.0004399791359901428
+    },
+    {
+      "id": "ost-v1.1-0634",
+      "label": 1,
+      "probabilities": [
+        0.025533571283420892,
+        0.9733935362082317,
+        0.0010728925083473243
+      ],
+      "context_tokens": 967,
+      "latency_seconds": 0.2815895527601242,
+      "head_only_latency_seconds": 0.0004531964659690857
+    },
+    {
+      "id": "ost-v1.1-0638",
+      "label": 1,
+      "probabilities": [
+        0.004822432590570245,
+        0.9947552805894129,
+        0.0004222868200171071
+      ],
+      "context_tokens": 860,
+      "latency_seconds": 0.25746840983629227,
+      "head_only_latency_seconds": 0.00044167786836624146
+    },
+    {
+      "id": "ost-v1.1-0640",
+      "label": 1,
+      "probabilities": [
+        0.0035770815616221977,
+        0.9954024020722394,
+        0.001020516366138432
+      ],
+      "context_tokens": 1001,
+      "latency_seconds": 0.28896013647317886,
+      "head_only_latency_seconds": 0.0004588961601257324
+    },
+    {
+      "id": "ost-v1.1-0642",
+      "label": 1,
+      "probabilities": [
+        0.000311150273112999,
+        0.9991124215789297,
+        0.0005764281479572203
+      ],
+      "context_tokens": 1019,
+      "latency_seconds": 0.2780184745788574,
+      "head_only_latency_seconds": 0.00044233351945877075
+    },
+    {
+      "id": "ost-v1.1-0646",
+      "label": 1,
+      "probabilities": [
+        0.0016660650377795813,
+        0.9945812030985051,
+        0.0037527318637153046
+      ],
+      "context_tokens": 870,
+      "latency_seconds": 0.26173149794340134,
+      "head_only_latency_seconds": 0.00048292428255081177
+    },
+    {
+      "id": "ost-v1.1-0660",
+      "label": 0,
+      "probabilities": [
+        0.794750253750413,
+        0.015058620193839753,
+        0.19019112605574728
+      ],
+      "context_tokens": 961,
+      "latency_seconds": 0.29476433992385864,
+      "head_only_latency_seconds": 0.000447884202003479
+    },
+    {
+      "id": "ost-v1.1-0664",
+      "label": 1,
+      "probabilities": [
+        0.17021509103897597,
+        0.7703072723694487,
+        0.059477636591575365
+      ],
+      "context_tokens": 909,
+      "latency_seconds": 0.28466295450925827,
+      "head_only_latency_seconds": 0.00045990198850631714
+    },
+    {
+      "id": "ost-v1.1-0669",
+      "label": 1,
+      "probabilities": [
+        0.010095087705251339,
+        0.9837558456056333,
+        0.006149066689115437
+      ],
+      "context_tokens": 849,
+      "latency_seconds": 0.25451089441776276,
+      "head_only_latency_seconds": 0.00044405460357666016
+    },
+    {
+      "id": "ost-v1.1-0680",
+      "label": 1,
+      "probabilities": [
+        0.014297544394166573,
+        0.9812582224745432,
+        0.0044442331312901494
+      ],
+      "context_tokens": 934,
+      "latency_seconds": 0.28738880902528763,
+      "head_only_latency_seconds": 0.0004533827304840088
+    },
+    {
+      "id": "ost-v1.1-0682",
+      "label": 1,
+      "probabilities": [
+        0.08576065043412694,
+        0.8030760570936794,
+        0.11116329247219371
+      ],
+      "context_tokens": 694,
+      "latency_seconds": 0.23582760244607925,
+      "head_only_latency_seconds": 0.0004436671733856201
+    },
+    {
+      "id": "ost-v1.1-0685",
+      "label": 1,
+      "probabilities": [
+        0.014253551294277488,
+        0.9786422824738753,
+        0.007104166231847142
+      ],
+      "context_tokens": 946,
+      "latency_seconds": 0.283052459359169,
+      "head_only_latency_seconds": 0.00044267624616622925
+    },
+    {
+      "id": "ost-v1.1-0686",
+      "label": 1,
+      "probabilities": [
+        0.08576065043412694,
+        0.8030760570936794,
+        0.11116329247219371
+      ],
+      "context_tokens": 694,
+      "latency_seconds": 0.2362251803278923,
+      "head_only_latency_seconds": 0.0004429370164871216
+    },
+    {
+      "id": "ost-v1.1-0693",
+      "label": 1,
+      "probabilities": [
+        0.014297544394166573,
+        0.9812582224745432,
+        0.0044442331312901494
+      ],
+      "context_tokens": 934,
+      "latency_seconds": 0.28934822231531143,
+      "head_only_latency_seconds": 0.00047456473112106323
+    },
+    {
+      "id": "ost-v1.1-0696",
+      "label": 1,
+      "probabilities": [
+        0.004504526885102752,
+        0.9774745897050731,
+        0.018020883409824173
+      ],
+      "context_tokens": 916,
+      "latency_seconds": 0.27169571071863174,
+      "head_only_latency_seconds": 0.000466667115688324
+    },
+    {
+      "id": "ost-v1.1-0700",
+      "label": 1,
+      "probabilities": [
+        0.04644087308995903,
+        0.9306239795877872,
+        0.02293514732225374
+      ],
+      "context_tokens": 901,
+      "latency_seconds": 0.28217822313308716,
+      "head_only_latency_seconds": 0.0004459470510482788
+    },
+    {
+      "id": "ost-v1.1-0701",
+      "label": 1,
+      "probabilities": [
+        0.010095087705251339,
+        0.9837558456056333,
+        0.006149066689115437
+      ],
+      "context_tokens": 849,
+      "latency_seconds": 0.25435321033000946,
+      "head_only_latency_seconds": 0.00045261532068252563
+    },
+    {
+      "id": "ost-v1.1-0721",
+      "label": 2,
+      "probabilities": [
+        0.1841421639925555,
+        0.3567391994314831,
+        0.45911863657596147
+      ],
+      "context_tokens": 899,
+      "latency_seconds": 0.29018106311559677,
+      "head_only_latency_seconds": 0.0004428848624229431
+    },
+    {
+      "id": "ost-v1.1-0723",
+      "label": 1,
+      "probabilities": [
+        0.08576065043412694,
+        0.8030760570936794,
+        0.11116329247219371
+      ],
+      "context_tokens": 694,
+      "latency_seconds": 0.23937860131263733,
+      "head_only_latency_seconds": 0.0004397779703140259
+    },
+    {
+      "id": "ost-v1.1-0726",
+      "label": 2,
+      "probabilities": [
+        0.20577871218954658,
+        0.016461133526896373,
+        0.777760154283557
+      ],
+      "context_tokens": 818,
+      "latency_seconds": 0.26329274475574493,
+      "head_only_latency_seconds": 0.0004470422863960266
+    },
+    {
+      "id": "ost-v1.1-0727",
+      "label": 1,
+      "probabilities": [
+        0.0011024034510558132,
+        0.9983849059885327,
+        0.0005126905604114356
+      ],
+      "context_tokens": 875,
+      "latency_seconds": 0.2673220932483673,
+      "head_only_latency_seconds": 0.000440351665019989
+    },
+    {
+      "id": "ost-v1.1-0728",
+      "label": 0,
+      "probabilities": [
+        0.5618942886338675,
+        0.04766618273235651,
+        0.390439528633776
+      ],
+      "context_tokens": 1008,
+      "latency_seconds": 0.28544771671295166,
+      "head_only_latency_seconds": 0.0004395022988319397
+    },
+    {
+      "id": "ost-v1.1-0731",
+      "label": 1,
+      "probabilities": [
+        0.01674903381585509,
+        0.9632537025461608,
+        0.019997263637984142
+      ],
+      "context_tokens": 910,
+      "latency_seconds": 0.28155726194381714,
+      "head_only_latency_seconds": 0.0006421059370040894
+    },
+    {
+      "id": "ost-v1.1-0732",
+      "label": 1,
+      "probabilities": [
+        0.21307109921505094,
+        0.5624143172683955,
+        0.2245145835165536
+      ],
+      "context_tokens": 842,
+      "latency_seconds": 0.26213856786489487,
+      "head_only_latency_seconds": 0.0004536733031272888
+    },
+    {
+      "id": "ost-v1.1-0746",
+      "label": 1,
+      "probabilities": [
+        0.0031259790077225354,
+        0.9910479528434275,
+        0.0058260681488500506
+      ],
+      "context_tokens": 888,
+      "latency_seconds": 0.2687237709760666,
+      "head_only_latency_seconds": 0.00044608116149902344
+    },
+    {
+      "id": "ost-v1.1-0748",
+      "label": 1,
+      "probabilities": [
+        0.024261985862471976,
+        0.9487253651031465,
+        0.02701264903438156
+      ],
+      "context_tokens": 992,
+      "latency_seconds": 0.3007182329893112,
+      "head_only_latency_seconds": 0.00044614821672439575
+    },
+    {
+      "id": "ost-v1.1-0761",
+      "label": 1,
+      "probabilities": [
+        0.030092967742608376,
+        0.9613931600379149,
+        0.008513872219476588
+      ],
+      "context_tokens": 863,
+      "latency_seconds": 0.25752101093530655,
+      "head_only_latency_seconds": 0.00044232606887817383
+    },
+    {
+      "id": "ost-v1.1-0765",
+      "label": 1,
+      "probabilities": [
+        0.0031631633696303043,
+        0.9879685424422943,
+        0.008868294188075403
+      ],
+      "context_tokens": 736,
+      "latency_seconds": 0.23099058866500854,
+      "head_only_latency_seconds": 0.0004400685429573059
+    },
+    {
+      "id": "ost-v1.1-0768",
+      "label": 0,
+      "probabilities": [
+        0.44388495276422857,
+        0.41882094144623916,
+        0.13729410578953233
+      ],
+      "context_tokens": 694,
+      "latency_seconds": 0.2311500459909439,
+      "head_only_latency_seconds": 0.0004459470510482788
+    },
+    {
+      "id": "ost-v1.1-0777",
+      "label": 1,
+      "probabilities": [
+        0.0026614831520232695,
+        0.9966303005342609,
+        0.0007082163137159448
+      ],
+      "context_tokens": 967,
+      "latency_seconds": 0.28238602727651596,
+      "head_only_latency_seconds": 0.00044921785593032837
+    },
+    {
+      "id": "ost-v1.1-0778",
+      "label": 1,
+      "probabilities": [
+        0.0029014755272927057,
+        0.9944141264210639,
+        0.002684398051643327
+      ],
+      "context_tokens": 849,
+      "latency_seconds": 0.24837757647037506,
+      "head_only_latency_seconds": 0.00048807263374328613
+    },
+    {
+      "id": "ost-v1.1-0784",
+      "label": 1,
+      "probabilities": [
+        0.002558529968917366,
+        0.9925547668796932,
+        0.004886703151389402
+      ],
+      "context_tokens": 1004,
+      "latency_seconds": 0.2856609746813774,
+      "head_only_latency_seconds": 0.00046277791261672974
+    },
+    {
+      "id": "ost-v1.1-0786",
+      "label": 1,
+      "probabilities": [
+        0.04644087308995903,
+        0.9306239795877872,
+        0.02293514732225374
+      ],
+      "context_tokens": 901,
+      "latency_seconds": 0.27893999218940735,
+      "head_only_latency_seconds": 0.0004512965679168701
+    },
+    {
+      "id": "ost-v1.1-0787",
+      "label": 0,
+      "probabilities": [
+        0.472994224064854,
+        0.3014040099617395,
+        0.22560176597340648
+      ],
+      "context_tokens": 859,
+      "latency_seconds": 0.266965314745903,
+      "head_only_latency_seconds": 0.0004513189196586609
+    },
+    {
+      "id": "ost-v1.1-0788",
+      "label": 1,
+      "probabilities": [
+        0.03461018959791562,
+        0.6763739138911605,
+        0.2890158965109238
+      ],
+      "context_tokens": 825,
+      "latency_seconds": 0.2560702860355377,
+      "head_only_latency_seconds": 0.00044736266136169434
+    },
+    {
+      "id": "ost-v1.1-0791",
+      "label": 1,
+      "probabilities": [
+        0.01674903381585509,
+        0.9632537025461608,
+        0.019997263637984142
+      ],
+      "context_tokens": 910,
+      "latency_seconds": 0.2822851166129112,
+      "head_only_latency_seconds": 0.00045437365770339966
+    },
+    {
+      "id": "ost-v1.1-0795",
+      "label": 1,
+      "probabilities": [
+        0.14183338881527194,
+        0.5374964298142263,
+        0.32067018137050174
+      ],
+      "context_tokens": 1005,
+      "latency_seconds": 0.29006829112768173,
+      "head_only_latency_seconds": 0.00045102834701538086
+    },
+    {
+      "id": "ost-v1.1-0798",
+      "label": 1,
+      "probabilities": [
+        0.000899033241942733,
+        0.9983729664504111,
+        0.0007280003076462179
+      ],
+      "context_tokens": 937,
+      "latency_seconds": 0.2812132090330124,
+      "head_only_latency_seconds": 0.0004542693495750427
+    },
+    {
+      "id": "ost-v1.1-0802",
+      "label": 1,
+      "probabilities": [
+        0.002395555750558382,
+        0.9917592941647977,
+        0.005845150084643893
+      ],
+      "context_tokens": 956,
+      "latency_seconds": 0.2757049649953842,
+      "head_only_latency_seconds": 0.0004474818706512451
+    },
+    {
+      "id": "ost-v1.1-0806",
+      "label": 2,
+      "probabilities": [
+        0.1841421639925555,
+        0.3567391994314831,
+        0.45911863657596147
+      ],
+      "context_tokens": 899,
+      "latency_seconds": 0.2856023460626602,
+      "head_only_latency_seconds": 0.0005025044083595276
+    },
+    {
+      "id": "ost-v1.1-0817",
+      "label": 1,
+      "probabilities": [
+        0.025440476497329126,
+        0.9602379361334615,
+        0.014321587369209283
+      ],
+      "context_tokens": 960,
+      "latency_seconds": 0.2842932865023613,
+      "head_only_latency_seconds": 0.0004475414752960205
+    },
+    {
+      "id": "ost-v1.1-0833",
+      "label": 1,
+      "probabilities": [
+        0.008561216245194516,
+        0.9772674503655308,
+        0.01417133338927455
+      ],
+      "context_tokens": 1016,
+      "latency_seconds": 0.2872331589460373,
+      "head_only_latency_seconds": 0.00044493377208709717
+    },
+    {
+      "id": "ost-v1.1-0834",
+      "label": 1,
+      "probabilities": [
+        0.0007081858266879546,
+        0.9983787655924723,
+        0.0009130485808396883
+      ],
+      "context_tokens": 794,
+      "latency_seconds": 0.2599914222955704,
+      "head_only_latency_seconds": 0.0004481375217437744
+    },
+    {
+      "id": "ost-v1.1-0837",
+      "label": 1,
+      "probabilities": [
+        0.0038109135164450998,
+        0.990486735913977,
+        0.005702350569577851
+      ],
+      "context_tokens": 888,
+      "latency_seconds": 0.2662132829427719,
+      "head_only_latency_seconds": 0.0004448443651199341
+    },
+    {
+      "id": "ost-v1.1-0838",
+      "label": 1,
+      "probabilities": [
+        0.0038109135164450998,
+        0.990486735913977,
+        0.005702350569577851
+      ],
+      "context_tokens": 888,
+      "latency_seconds": 0.26486043632030487,
+      "head_only_latency_seconds": 0.0004604905843734741
+    },
+    {
+      "id": "ost-v1.1-0843",
+      "label": 1,
+      "probabilities": [
+        0.005206987158732127,
+        0.9879840200673885,
+        0.006808992773879286
+      ],
+      "context_tokens": 849,
+      "latency_seconds": 0.261329784989357,
+      "head_only_latency_seconds": 0.0004470348358154297
+    },
+    {
+      "id": "ost-v1.1-0847",
+      "label": 1,
+      "probabilities": [
+        0.009025450958608223,
+        0.9796953422618713,
+        0.011279206779520368
+      ],
+      "context_tokens": 742,
+      "latency_seconds": 0.22957982867956161,
+      "head_only_latency_seconds": 0.0004532262682914734
+    },
+    {
+      "id": "ost-v1.1-0851",
+      "label": 1,
+      "probabilities": [
+        0.0007081858266879546,
+        0.9983787655924723,
+        0.0009130485808396883
+      ],
+      "context_tokens": 794,
+      "latency_seconds": 0.25815390050411224,
+      "head_only_latency_seconds": 0.0004863068461418152
+    },
+    {
+      "id": "ost-v1.1-0852",
+      "label": 1,
+      "probabilities": [
+        0.0036746194123134955,
+        0.9941334067888095,
+        0.002191973798876977
+      ],
+      "context_tokens": 927,
+      "latency_seconds": 0.29599761217832565,
+      "head_only_latency_seconds": 0.00046408921480178833
+    },
+    {
+      "id": "ost-v1.1-0853",
+      "label": 1,
+      "probabilities": [
+        0.010633655699697203,
+        0.98318839395507,
+        0.006177950345232939
+      ],
+      "context_tokens": 919,
+      "latency_seconds": 0.286919966340065,
+      "head_only_latency_seconds": 0.0004561617970466614
+    },
+    {
+      "id": "ost-v1.1-0864",
+      "label": 1,
+      "probabilities": [
+        0.02935007067067697,
+        0.8981660979923962,
+        0.07248383133692678
+      ],
+      "context_tokens": 955,
+      "latency_seconds": 0.294872410595417,
+      "head_only_latency_seconds": 0.00044742971658706665
+    },
+    {
+      "id": "ost-v1.1-0865",
+      "label": 1,
+      "probabilities": [
+        0.02935007067067697,
+        0.8981660979923962,
+        0.07248383133692678
+      ],
+      "context_tokens": 955,
+      "latency_seconds": 0.29335153102874756,
+      "head_only_latency_seconds": 0.0004605501890182495
+    },
+    {
+      "id": "ost-v1.1-0867",
+      "label": 1,
+      "probabilities": [
+        0.02935007067067697,
+        0.8981660979923962,
+        0.07248383133692678
+      ],
+      "context_tokens": 955,
+      "latency_seconds": 0.2937955856323242,
+      "head_only_latency_seconds": 0.00045453011989593506
+    },
+    {
+      "id": "ost-v1.1-0874",
+      "label": 1,
+      "probabilities": [
+        0.0007081858266879546,
+        0.9983787655924723,
+        0.0009130485808396883
+      ],
+      "context_tokens": 794,
+      "latency_seconds": 0.25721879303455353,
+      "head_only_latency_seconds": 0.0004456564784049988
+    },
+    {
+      "id": "ost-v1.1-0875",
+      "label": 1,
+      "probabilities": [
+        0.0031229587227972924,
+        0.9760175851975902,
+        0.020859456079612582
+      ],
+      "context_tokens": 846,
+      "latency_seconds": 0.256364107131958,
+      "head_only_latency_seconds": 0.0004511699080467224
+    },
+    {
+      "id": "ost-v1.1-0878",
+      "label": 0,
+      "probabilities": [
+        0.4305200323762159,
+        0.4237651727566815,
+        0.14571479486710268
+      ],
+      "context_tokens": 910,
+      "latency_seconds": 0.2793719545006752,
+      "head_only_latency_seconds": 0.0004402846097946167
+    },
+    {
+      "id": "ost-v1.1-0882",
+      "label": 1,
+      "probabilities": [
+        0.06914405971454171,
+        0.9217109793229455,
+        0.00914496096251265
+      ],
+      "context_tokens": 885,
+      "latency_seconds": 0.27209794521331787,
+      "head_only_latency_seconds": 0.0004844367504119873
+    },
+    {
+      "id": "ost-v1.1-0884",
+      "label": 1,
+      "probabilities": [
+        0.005206987158732127,
+        0.9879840200673885,
+        0.006808992773879286
+      ],
+      "context_tokens": 849,
+      "latency_seconds": 0.2646505683660507,
+      "head_only_latency_seconds": 0.0004472285509109497
+    },
+    {
+      "id": "ost-v1.1-0897",
+      "label": 0,
+      "probabilities": [
+        0.4305200323762159,
+        0.4237651727566815,
+        0.14571479486710268
+      ],
+      "context_tokens": 910,
+      "latency_seconds": 0.2844691723585129,
+      "head_only_latency_seconds": 0.0004490166902542114
+    },
+    {
+      "id": "ost-v1.1-0903",
+      "label": 1,
+      "probabilities": [
+        0.009025450958608223,
+        0.9796953422618713,
+        0.011279206779520368
+      ],
+      "context_tokens": 742,
+      "latency_seconds": 0.2304157391190529,
+      "head_only_latency_seconds": 0.0004492625594139099
+    },
+    {
+      "id": "ost-v1.1-0909",
+      "label": 1,
+      "probabilities": [
+        0.0007827710082856987,
+        0.9987258819291179,
+        0.0004913470625964236
+      ],
+      "context_tokens": 798,
+      "latency_seconds": 0.24743413925170898,
+      "head_only_latency_seconds": 0.0004404336214065552
+    },
+    {
+      "id": "ost-v1.1-0912",
+      "label": 1,
+      "probabilities": [
+        0.012192972122870346,
+        0.9807304448778175,
+        0.007076582999312054
+      ],
+      "context_tokens": 827,
+      "latency_seconds": 0.2569469064474106,
+      "head_only_latency_seconds": 0.0004505142569541931
+    },
+    {
+      "id": "ost-v1.1-0915",
+      "label": 1,
+      "probabilities": [
+        0.00040043950988703005,
+        0.9987072373520791,
+        0.0008923231380337086
+      ],
+      "context_tokens": 945,
+      "latency_seconds": 0.2854083999991417,
+      "head_only_latency_seconds": 0.00044231116771698
+    },
+    {
+      "id": "ost-v1.1-0919",
+      "label": 1,
+      "probabilities": [
+        0.06914405971454171,
+        0.9217109793229455,
+        0.00914496096251265
+      ],
+      "context_tokens": 885,
+      "latency_seconds": 0.25822701305150986,
+      "head_only_latency_seconds": 0.0004407837986946106
+    },
+    {
+      "id": "ost-v1.1-0937",
+      "label": 1,
+      "probabilities": [
+        0.00147295615128442,
+        0.9953981167236121,
+        0.003128927125103406
+      ],
+      "context_tokens": 996,
+      "latency_seconds": 0.28473326563835144,
+      "head_only_latency_seconds": 0.0004400908946990967
+    },
+    {
+      "id": "ost-v1.1-0943",
+      "label": 1,
+      "probabilities": [
+        0.01799116137148978,
+        0.9564620062570475,
+        0.02554683237146277
+      ],
+      "context_tokens": 948,
+      "latency_seconds": 0.2798212766647339,
+      "head_only_latency_seconds": 0.0005049556493759155
+    },
+    {
+      "id": "ost-v1.1-0944",
+      "label": 1,
+      "probabilities": [
+        0.0021101292309470224,
+        0.9925856624696787,
+        0.005304208299374289
+      ],
+      "context_tokens": 689,
+      "latency_seconds": 0.2295905128121376,
+      "head_only_latency_seconds": 0.0004467517137527466
+    },
+    {
+      "id": "ost-v1.1-0946",
+      "label": 2,
+      "probabilities": [
+        0.02835981753057171,
+        0.06846848539205465,
+        0.9031716970773738
+      ],
+      "context_tokens": 744,
+      "latency_seconds": 0.23906031250953674,
+      "head_only_latency_seconds": 0.00044164061546325684
+    },
+    {
+      "id": "ost-v1.1-0952",
+      "label": 1,
+      "probabilities": [
+        0.010633655699697203,
+        0.98318839395507,
+        0.006177950345232939
+      ],
+      "context_tokens": 919,
+      "latency_seconds": 0.28592438250780106,
+      "head_only_latency_seconds": 0.00043858587741851807
+    },
+    {
+      "id": "ost-v1.1-0959",
+      "label": 1,
+      "probabilities": [
+        0.0031229587227972924,
+        0.9760175851975902,
+        0.020859456079612582
+      ],
+      "context_tokens": 846,
+      "latency_seconds": 0.25535449385643005,
+      "head_only_latency_seconds": 0.000438690185546875
+    },
+    {
+      "id": "ost-v1.1-0963",
+      "label": 1,
+      "probabilities": [
+        0.0022032293016650303,
+        0.9948533135058251,
+        0.0029434571925099906
+      ],
+      "context_tokens": 742,
+      "latency_seconds": 0.24138570576906204,
+      "head_only_latency_seconds": 0.00045211613178253174
+    },
+    {
+      "id": "ost-v1.1-0964",
+      "label": 0,
+      "probabilities": [
+        0.4305200323762159,
+        0.4237651727566815,
+        0.14571479486710268
+      ],
+      "context_tokens": 910,
+      "latency_seconds": 0.2829683944582939,
+      "head_only_latency_seconds": 0.0004502236843109131
+    },
+    {
+      "id": "ost-v1.1-0969",
+      "label": 1,
+      "probabilities": [
+        0.005206987158732127,
+        0.9879840200673885,
+        0.006808992773879286
+      ],
+      "context_tokens": 849,
+      "latency_seconds": 0.26043716073036194,
+      "head_only_latency_seconds": 0.00045680999755859375
+    },
+    {
+      "id": "ost-v1.1-0976",
+      "label": 1,
+      "probabilities": [
+        0.010025040878902353,
+        0.9820065131318131,
+        0.007968445989284484
+      ],
+      "context_tokens": 825,
+      "latency_seconds": 0.2562401443719864,
+      "head_only_latency_seconds": 0.00048276036977767944
+    },
+    {
+      "id": "ost-v1.1-0980",
+      "label": 1,
+      "probabilities": [
+        0.018504206454838083,
+        0.9589743540465088,
+        0.022521439498653123
+      ],
+      "context_tokens": 962,
+      "latency_seconds": 0.2744446471333504,
+      "head_only_latency_seconds": 0.0005825906991958618
+    },
+    {
+      "id": "ost-v1.1-0982",
+      "label": 1,
+      "probabilities": [
+        0.0007081858266879546,
+        0.9983787655924723,
+        0.0009130485808396883
+      ],
+      "context_tokens": 794,
+      "latency_seconds": 0.2570890933275223,
+      "head_only_latency_seconds": 0.0004531368613243103
+    },
+    {
+      "id": "ost-v1.1-0983",
+      "label": 1,
+      "probabilities": [
+        0.004908026149441193,
+        0.9301486911833478,
+        0.06494328266721101
+      ],
+      "context_tokens": 941,
+      "latency_seconds": 0.28000225126743317,
+      "head_only_latency_seconds": 0.00045528262853622437
+    },
+    {
+      "id": "ost-v1.1-0991",
+      "label": 1,
+      "probabilities": [
+        0.0011173699852503297,
+        0.9952927824961584,
+        0.003589847518591344
+      ],
+      "context_tokens": 993,
+      "latency_seconds": 0.29180797189474106,
+      "head_only_latency_seconds": 0.0004428178071975708
+    },
+    {
+      "id": "ost-v1.1-0995",
+      "label": 2,
+      "probabilities": [
+        0.2705605623714778,
+        0.02709761080056017,
+        0.702341826827962
+      ],
+      "context_tokens": 907,
+      "latency_seconds": 0.2908836752176285,
+      "head_only_latency_seconds": 0.00043801963329315186
+    },
+    {
+      "id": "ost-v1.1-0996",
+      "label": 2,
+      "probabilities": [
+        0.19263841452133115,
+        0.12427476758340807,
+        0.6830868178952607
+      ],
+      "context_tokens": 769,
+      "latency_seconds": 0.2433963119983673,
+      "head_only_latency_seconds": 0.00043830275535583496
+    },
+    {
+      "id": "ost-v1.1-1001",
+      "label": 2,
+      "probabilities": [
+        0.016729223725624263,
+        0.008981611193510626,
+        0.974289165080865
+      ],
+      "context_tokens": 857,
+      "latency_seconds": 0.2615523338317871,
+      "head_only_latency_seconds": 0.00043898075819015503
+    },
+    {
+      "id": "ost-v1.1-1004",
+      "label": 2,
+      "probabilities": [
+        0.002184983240253778,
+        0.0012554042016133685,
+        0.9965596125581327
+      ],
+      "context_tokens": 894,
+      "latency_seconds": 0.27042336016893387,
+      "head_only_latency_seconds": 0.00044846534729003906
+    },
+    {
+      "id": "ost-v1.1-1013",
+      "label": 2,
+      "probabilities": [
+        0.14875901363161978,
+        0.0007060030684039809,
+        0.8505349832999762
+      ],
+      "context_tokens": 992,
+      "latency_seconds": 0.274831660091877,
+      "head_only_latency_seconds": 0.0004897937178611755
+    },
+    {
+      "id": "ost-v1.1-1019",
+      "label": 2,
+      "probabilities": [
+        0.24683358031289424,
+        0.25519910242308735,
+        0.4979673172640184
+      ],
+      "context_tokens": 877,
+      "latency_seconds": 0.2682265117764473,
+      "head_only_latency_seconds": 0.0004488155245780945
+    },
+    {
+      "id": "ost-v1.1-1029",
+      "label": 2,
+      "probabilities": [
+        0.0014696804207036378,
+        0.0015480437667281923,
+        0.9969822758125683
+      ],
+      "context_tokens": 990,
+      "latency_seconds": 0.28440384566783905,
+      "head_only_latency_seconds": 0.00044979900121688843
+    },
+    {
+      "id": "ost-v1.1-1036",
+      "label": 0,
+      "probabilities": [
+        0.8822359155277356,
+        0.00045254803359392576,
+        0.11731153643867052
+      ],
+      "context_tokens": 932,
+      "latency_seconds": 0.29206453263759613,
+      "head_only_latency_seconds": 0.0004479438066482544
+    },
+    {
+      "id": "ost-v1.1-1037",
+      "label": 2,
+      "probabilities": [
+        0.0014696804207036378,
+        0.0015480437667281923,
+        0.9969822758125683
+      ],
+      "context_tokens": 990,
+      "latency_seconds": 0.2849636450409889,
+      "head_only_latency_seconds": 0.0004581362009048462
+    },
+    {
+      "id": "ost-v1.1-1052",
+      "label": 0,
+      "probabilities": [
+        0.536389903372628,
+        0.005860306562117912,
+        0.457749790065254
+      ],
+      "context_tokens": 1010,
+      "latency_seconds": 0.28415443003177643,
+      "head_only_latency_seconds": 0.00046325474977493286
+    },
+    {
+      "id": "ost-v1.1-1056",
+      "label": 2,
+      "probabilities": [
+        0.00792956331090625,
+        0.010980610661104529,
+        0.9810898260279893
+      ],
+      "context_tokens": 987,
+      "latency_seconds": 0.28156181424856186,
+      "head_only_latency_seconds": 0.0004550144076347351
+    },
+    {
+      "id": "ost-v1.1-1057",
+      "label": 2,
+      "probabilities": [
+        0.0042832896066337224,
+        0.000703122491139801,
+        0.9950135879022264
+      ],
+      "context_tokens": 885,
+      "latency_seconds": 0.26541125774383545,
+      "head_only_latency_seconds": 0.0004497542977333069
+    },
+    {
+      "id": "ost-v1.1-1063",
+      "label": 2,
+      "probabilities": [
+        0.001759808858603865,
+        0.001987351140753352,
+        0.9962528400006427
+      ],
+      "context_tokens": 881,
+      "latency_seconds": 0.24378454685211182,
+      "head_only_latency_seconds": 0.0004980936646461487
+    },
+    {
+      "id": "ost-v1.1-1064",
+      "label": 2,
+      "probabilities": [
+        0.006168332084698596,
+        0.011290298693898639,
+        0.9825413692214029
+      ],
+      "context_tokens": 820,
+      "latency_seconds": 0.24475019425153732,
+      "head_only_latency_seconds": 0.000460304319858551
+    },
+    {
+      "id": "ost-v1.1-1065",
+      "label": 0,
+      "probabilities": [
+        0.9484335414425504,
+        0.0010414486790298087,
+        0.050525009878419666
+      ],
+      "context_tokens": 916,
+      "latency_seconds": 0.2789541035890579,
+      "head_only_latency_seconds": 0.00044737011194229126
+    },
+    {
+      "id": "ost-v1.1-1066",
+      "label": 2,
+      "probabilities": [
+        0.00581892593805325,
+        0.0067360574804351,
+        0.9874450165815116
+      ],
+      "context_tokens": 891,
+      "latency_seconds": 0.25741763412952423,
+      "head_only_latency_seconds": 0.0004474222660064697
+    },
+    {
+      "id": "ost-v1.1-1072",
+      "label": 2,
+      "probabilities": [
+        0.24683358031289424,
+        0.25519910242308735,
+        0.4979673172640184
+      ],
+      "context_tokens": 877,
+      "latency_seconds": 0.2560281753540039,
+      "head_only_latency_seconds": 0.0004452913999557495
+    },
+    {
+      "id": "ost-v1.1-1076",
+      "label": 2,
+      "probabilities": [
+        0.0039611211912139585,
+        0.0012998357249024565,
+        0.9947390430838836
+      ],
+      "context_tokens": 1021,
+      "latency_seconds": 0.30031485855579376,
+      "head_only_latency_seconds": 0.0004539415240287781
+    },
+    {
+      "id": "ost-v1.1-1078",
+      "label": 2,
+      "probabilities": [
+        0.009104714217828873,
+        0.009822601995187766,
+        0.9810726837869833
+      ],
+      "context_tokens": 800,
+      "latency_seconds": 0.2556969001889229,
+      "head_only_latency_seconds": 0.0004449412226676941
+    },
+    {
+      "id": "ost-v1.1-1080",
+      "label": 2,
+      "probabilities": [
+        0.0009671394925681766,
+        0.0014315287582201306,
+        0.9976013317492117
+      ],
+      "context_tokens": 762,
+      "latency_seconds": 0.2324080541729927,
+      "head_only_latency_seconds": 0.00044240057468414307
+    },
+    {
+      "id": "ost-v1.1-1084",
+      "label": 0,
+      "probabilities": [
+        0.8822359155277356,
+        0.00045254803359392576,
+        0.11731153643867052
+      ],
+      "context_tokens": 932,
+      "latency_seconds": 0.3004326969385147,
+      "head_only_latency_seconds": 0.0004483535885810852
+    },
+    {
+      "id": "ost-v1.1-1096",
+      "label": 2,
+      "probabilities": [
+        0.23755972749912688,
+        0.012818999715883737,
+        0.7496212727849894
+      ],
+      "context_tokens": 987,
+      "latency_seconds": 0.2718571424484253,
+      "head_only_latency_seconds": 0.0005081892013549805
+    },
+    {
+      "id": "ost-v1.1-1100",
+      "label": 2,
+      "probabilities": [
+        0.033768466876119924,
+        0.18708445094442164,
+        0.7791470821794585
+      ],
+      "context_tokens": 800,
+      "latency_seconds": 0.24739594012498856,
+      "head_only_latency_seconds": 0.00045034289360046387
+    },
+    {
+      "id": "ost-v1.1-1109",
+      "label": 2,
+      "probabilities": [
+        0.42249453250805924,
+        0.03977076058252783,
+        0.5377347069094129
+      ],
+      "context_tokens": 915,
+      "latency_seconds": 0.2722489833831787,
+      "head_only_latency_seconds": 0.00044079869985580444
+    },
+    {
+      "id": "ost-v1.1-1110",
+      "label": 2,
+      "probabilities": [
+        0.055487176484614126,
+        0.047294259442900256,
+        0.8972185640724857
+      ],
+      "context_tokens": 900,
+      "latency_seconds": 0.26748765259981155,
+      "head_only_latency_seconds": 0.00044680386781692505
+    },
+    {
+      "id": "ost-v1.1-1116",
+      "label": 0,
+      "probabilities": [
+        0.536389903372628,
+        0.005860306562117912,
+        0.457749790065254
+      ],
+      "context_tokens": 1010,
+      "latency_seconds": 0.2843749225139618,
+      "head_only_latency_seconds": 0.00043820589780807495
+    },
+    {
+      "id": "ost-v1.1-1118",
+      "label": 2,
+      "probabilities": [
+        0.14537195865163763,
+        0.03880519566222684,
+        0.8158228456861355
+      ],
+      "context_tokens": 787,
+      "latency_seconds": 0.2506454735994339,
+      "head_only_latency_seconds": 0.00044240802526474
+    },
+    {
+      "id": "ost-v1.1-1130",
+      "label": 2,
+      "probabilities": [
+        0.0014696804207036378,
+        0.0015480437667281923,
+        0.9969822758125683
+      ],
+      "context_tokens": 990,
+      "latency_seconds": 0.2874104306101799,
+      "head_only_latency_seconds": 0.0004413202404975891
+    },
+    {
+      "id": "ost-v1.1-1138",
+      "label": 2,
+      "probabilities": [
+        0.0027656094053354007,
+        0.007836718327071225,
+        0.9893976722675935
+      ],
+      "context_tokens": 857,
+      "latency_seconds": 0.25414787977933884,
+      "head_only_latency_seconds": 0.00044018030166625977
+    },
+    {
+      "id": "ost-v1.1-1144",
+      "label": 2,
+      "probabilities": [
+        0.028822224276373355,
+        0.0002504121948278471,
+        0.9709273635287987
+      ],
+      "context_tokens": 999,
+      "latency_seconds": 0.28462570905685425,
+      "head_only_latency_seconds": 0.0004833489656448364
+    },
+    {
+      "id": "ost-v1.1-1146",
+      "label": 0,
+      "probabilities": [
+        0.6482854705389374,
+        0.005272522487761489,
+        0.34644200697330113
+      ],
+      "context_tokens": 854,
+      "latency_seconds": 0.2503623887896538,
+      "head_only_latency_seconds": 0.00047346949577331543
+    },
+    {
+      "id": "ost-v1.1-1151",
+      "label": 2,
+      "probabilities": [
+        0.08197299791880487,
+        0.006062447688042134,
+        0.911964554393153
+      ],
+      "context_tokens": 908,
+      "latency_seconds": 0.2683130353689194,
+      "head_only_latency_seconds": 0.0004552975296974182
+    },
+    {
+      "id": "ost-v1.1-1159",
+      "label": 2,
+      "probabilities": [
+        0.028941045024874986,
+        0.059729904172447404,
+        0.9113290508026776
+      ],
+      "context_tokens": 831,
+      "latency_seconds": 0.2526904493570328,
+      "head_only_latency_seconds": 0.0004493147134780884
+    },
+    {
+      "id": "ost-v1.1-1161",
+      "label": 2,
+      "probabilities": [
+        0.06688343847202856,
+        0.022426732527160372,
+        0.910689829000811
+      ],
+      "context_tokens": 1013,
+      "latency_seconds": 0.292577862739563,
+      "head_only_latency_seconds": 0.000452674925327301
+    },
+    {
+      "id": "ost-v1.1-1162",
+      "label": 2,
+      "probabilities": [
+        0.16532631699826425,
+        0.0012040686444365883,
+        0.8334696143572992
+      ],
+      "context_tokens": 968,
+      "latency_seconds": 0.2734753116965294,
+      "head_only_latency_seconds": 0.0004459992051124573
+    },
+    {
+      "id": "ost-v1.1-1167",
+      "label": 0,
+      "probabilities": [
+        0.595170794166669,
+        0.05364340046040819,
+        0.3511858053729229
+      ],
+      "context_tokens": 720,
+      "latency_seconds": 0.2225673720240593,
+      "head_only_latency_seconds": 0.0004399791359901428
+    },
+    {
+      "id": "ost-v1.1-1168",
+      "label": 2,
+      "probabilities": [
+        0.0016876045658226041,
+        0.00039837301672712293,
+        0.9979140224174502
+      ],
+      "context_tokens": 995,
+      "latency_seconds": 0.28397494554519653,
+      "head_only_latency_seconds": 0.00043839961290359497
+    },
+    {
+      "id": "ost-v1.1-1170",
+      "label": 2,
+      "probabilities": [
+        0.1249836515944152,
+        0.4000559429218625,
+        0.47496040548372237
+      ],
+      "context_tokens": 731,
+      "latency_seconds": 0.23043448477983475,
+      "head_only_latency_seconds": 0.00044777244329452515
+    },
+    {
+      "id": "ost-v1.1-1172",
+      "label": 2,
+      "probabilities": [
+        0.060918992906064416,
+        0.4150738844550891,
+        0.5240071226388465
+      ],
+      "context_tokens": 785,
+      "latency_seconds": 0.2449130266904831,
+      "head_only_latency_seconds": 0.0004980340600013733
+    },
+    {
+      "id": "ost-v1.1-1174",
+      "label": 2,
+      "probabilities": [
+        0.4935258997341647,
+        0.00232922010639244,
+        0.5041448801594427
+      ],
+      "context_tokens": 858,
+      "latency_seconds": 0.25881901383399963,
+      "head_only_latency_seconds": 0.0004423186182975769
+    },
+    {
+      "id": "ost-v1.1-1192",
+      "label": 2,
+      "probabilities": [
+        0.13015255677140292,
+        0.009423047121751755,
+        0.8604243961068454
+      ],
+      "context_tokens": 893,
+      "latency_seconds": 0.2579907402396202,
+      "head_only_latency_seconds": 0.00044517219066619873
+    },
+    {
+      "id": "ost-v1.1-1194",
+      "label": 2,
+      "probabilities": [
+        0.011105004815198275,
+        1.8337606958402887e-05,
+        0.9888766575778433
+      ],
+      "context_tokens": 1007,
+      "latency_seconds": 0.2766362875699997,
+      "head_only_latency_seconds": 0.00044583529233932495
+    },
+    {
+      "id": "ost-v1.1-1196",
+      "label": 2,
+      "probabilities": [
+        0.13015255677140292,
+        0.009423047121751755,
+        0.8604243961068454
+      ],
+      "context_tokens": 893,
+      "latency_seconds": 0.25829605013132095,
+      "head_only_latency_seconds": 0.0004400983452796936
+    },
+    {
+      "id": "ost-v1.1-1200",
+      "label": 2,
+      "probabilities": [
+        0.04405673916686769,
+        0.07176195395770898,
+        0.8841813068754233
+      ],
+      "context_tokens": 803,
+      "latency_seconds": 0.24684008955955505,
+      "head_only_latency_seconds": 0.0004552006721496582
+    },
+    {
+      "id": "ost-v1.1-1201",
+      "label": 2,
+      "probabilities": [
+        0.13015255677140292,
+        0.009423047121751755,
+        0.8604243961068454
+      ],
+      "context_tokens": 893,
+      "latency_seconds": 0.2577574774622917,
+      "head_only_latency_seconds": 0.0004449710249900818
+    },
+    {
+      "id": "ost-v1.1-1204",
+      "label": 2,
+      "probabilities": [
+        0.04405673916686769,
+        0.07176195395770898,
+        0.8841813068754233
+      ],
+      "context_tokens": 803,
+      "latency_seconds": 0.24698153883218765,
+      "head_only_latency_seconds": 0.0004400312900543213
+    },
+    {
+      "id": "ost-v1.1-1211",
+      "label": 2,
+      "probabilities": [
+        0.30644743044737416,
+        0.3422422495373636,
+        0.35131032001526236
+      ],
+      "context_tokens": 866,
+      "latency_seconds": 0.2696113884449005,
+      "head_only_latency_seconds": 0.00047845393419265747
+    },
+    {
+      "id": "ost-v1.1-1221",
+      "label": 2,
+      "probabilities": [
+        0.23953121222025722,
+        0.050926744202296946,
+        0.7095420435774459
+      ],
+      "context_tokens": 913,
+      "latency_seconds": 0.2770572081208229,
+      "head_only_latency_seconds": 0.0004663243889808655
+    },
+    {
+      "id": "ost-v1.1-1223",
+      "label": 2,
+      "probabilities": [
+        0.009435692577833051,
+        0.005653096442125229,
+        0.9849112109800418
+      ],
+      "context_tokens": 908,
+      "latency_seconds": 0.2797243446111679,
+      "head_only_latency_seconds": 0.0005655139684677124
+    },
+    {
+      "id": "ost-v1.1-1234",
+      "label": 2,
+      "probabilities": [
+        0.13015255677140292,
+        0.009423047121751755,
+        0.8604243961068454
+      ],
+      "context_tokens": 893,
+      "latency_seconds": 0.25587181746959686,
+      "head_only_latency_seconds": 0.00046209990978240967
+    },
+    {
+      "id": "ost-v1.1-1237",
+      "label": 2,
+      "probabilities": [
+        0.47477287606846935,
+        0.014318676685529224,
+        0.5109084472460015
+      ],
+      "context_tokens": 825,
+      "latency_seconds": 0.2549949735403061,
+      "head_only_latency_seconds": 0.00045558810234069824
+    },
+    {
+      "id": "ost-v1.1-1238",
+      "label": 2,
+      "probabilities": [
+        0.0026379434699177005,
+        0.001995931421789037,
+        0.9953661251082933
+      ],
+      "context_tokens": 912,
+      "latency_seconds": 0.283535860478878,
+      "head_only_latency_seconds": 0.0004488900303840637
+    },
+    {
+      "id": "ost-v1.1-1251",
+      "label": 2,
+      "probabilities": [
+        0.0032830914079108285,
+        0.0015953002572021598,
+        0.995121608334887
+      ],
+      "context_tokens": 1008,
+      "latency_seconds": 0.2834526523947716,
+      "head_only_latency_seconds": 0.0004645809531211853
+    },
+    {
+      "id": "ost-v1.1-1256",
+      "label": 2,
+      "probabilities": [
+        0.32060353948298576,
+        0.007072605965295092,
+        0.6723238545517192
+      ],
+      "context_tokens": 899,
+      "latency_seconds": 0.275555357336998,
+      "head_only_latency_seconds": 0.00044861435890197754
+    },
+    {
+      "id": "ost-v1.1-1258",
+      "label": 2,
+      "probabilities": [
+        0.010604225428246697,
+        0.00045056291842872543,
+        0.9889452116533245
+      ],
+      "context_tokens": 854,
+      "latency_seconds": 0.24346213042736053,
+      "head_only_latency_seconds": 0.0004455000162124634
+    },
+    {
+      "id": "ost-v1.1-1268",
+      "label": 2,
+      "probabilities": [
+        0.011105004815198275,
+        1.8337606958402887e-05,
+        0.9888766575778433
+      ],
+      "context_tokens": 1007,
+      "latency_seconds": 0.2868903875350952,
+      "head_only_latency_seconds": 0.0004890561103820801
+    },
+    {
+      "id": "ost-v1.1-1269",
+      "label": 2,
+      "probabilities": [
+        0.0006685442628688019,
+        0.01758811508842362,
+        0.9817433406487075
+      ],
+      "context_tokens": 859,
+      "latency_seconds": 0.25510918349027634,
+      "head_only_latency_seconds": 0.00044849514961242676
+    },
+    {
+      "id": "ost-v1.1-1286",
+      "label": 2,
+      "probabilities": [
+        0.0015244870805048603,
+        0.002086369849936093,
+        0.9963891430695591
+      ],
+      "context_tokens": 717,
+      "latency_seconds": 0.22600845992565155,
+      "head_only_latency_seconds": 0.00045890361070632935
+    },
+    {
+      "id": "ost-v1.1-1309",
+      "label": 0,
+      "probabilities": [
+        0.4675383539284345,
+        0.07662795349137871,
+        0.4558336925801869
+      ],
+      "context_tokens": 911,
+      "latency_seconds": 0.2630508467555046,
+      "head_only_latency_seconds": 0.0004572868347167969
+    },
+    {
+      "id": "ost-v1.1-1318",
+      "label": 2,
+      "probabilities": [
+        0.15912486808971232,
+        0.24522381672501822,
+        0.5956513151852695
+      ],
+      "context_tokens": 988,
+      "latency_seconds": 0.2738887146115303,
+      "head_only_latency_seconds": 0.00045387446880340576
+    },
+    {
+      "id": "ost-v1.1-1335",
+      "label": 2,
+      "probabilities": [
+        0.476396904933284,
+        0.00039785553920541374,
+        0.5232052395275105
+      ],
+      "context_tokens": 799,
+      "latency_seconds": 0.24597129225730896,
+      "head_only_latency_seconds": 0.0004464462399482727
+    },
+    {
+      "id": "ost-v1.1-1340",
+      "label": 2,
+      "probabilities": [
+        0.002555767472603158,
+        0.003279378317026159,
+        0.9941648542103707
+      ],
+      "context_tokens": 883,
+      "latency_seconds": 0.26224447786808014,
+      "head_only_latency_seconds": 0.0004437640309333801
+    },
+    {
+      "id": "ost-v1.1-1349",
+      "label": 2,
+      "probabilities": [
+        0.002973155805187974,
+        0.002549126005454407,
+        0.9944777181893577
+      ],
+      "context_tokens": 782,
+      "latency_seconds": 0.24675973504781723,
+      "head_only_latency_seconds": 0.00044848769903182983
+    },
+    {
+      "id": "ost-v1.1-1350",
+      "label": 2,
+      "probabilities": [
+        0.013510710801984646,
+        0.0014889523465334378,
+        0.985000336851482
+      ],
+      "context_tokens": 889,
+      "latency_seconds": 0.2616935595870018,
+      "head_only_latency_seconds": 0.00047919899225234985
+    },
+    {
+      "id": "ost-v1.1-1351",
+      "label": 2,
+      "probabilities": [
+        0.010761481193455165,
+        0.0338361040339546,
+        0.9554024147725902
+      ],
+      "context_tokens": 1017,
+      "latency_seconds": 0.28075403720140457,
+      "head_only_latency_seconds": 0.00044859200716018677
+    },
+    {
+      "id": "ost-v1.1-1352",
+      "label": 0,
+      "probabilities": [
+        0.7505713627552222,
+        0.00025390775847498106,
+        0.2491747294863028
+      ],
+      "context_tokens": 894,
+      "latency_seconds": 0.26043379306793213,
+      "head_only_latency_seconds": 0.0004469454288482666
+    },
+    {
+      "id": "ost-v1.1-1353",
+      "label": 0,
+      "probabilities": [
+        0.7505713627552222,
+        0.00025390775847498106,
+        0.2491747294863028
+      ],
+      "context_tokens": 894,
+      "latency_seconds": 0.263033889234066,
+      "head_only_latency_seconds": 0.0004461631178855896
+    },
+    {
+      "id": "ost-v1.1-1362",
+      "label": 2,
+      "probabilities": [
+        0.002973155805187974,
+        0.002549126005454407,
+        0.9944777181893577
+      ],
+      "context_tokens": 782,
+      "latency_seconds": 0.2434806227684021,
+      "head_only_latency_seconds": 0.00045049190521240234
+    },
+    {
+      "id": "ost-v1.1-1373",
+      "label": 2,
+      "probabilities": [
+        0.002973155805187974,
+        0.002549126005454407,
+        0.9944777181893577
+      ],
+      "context_tokens": 782,
+      "latency_seconds": 0.24445807933807373,
+      "head_only_latency_seconds": 0.0004435330629348755
+    },
+    {
+      "id": "ost-v1.1-1381",
+      "label": 2,
+      "probabilities": [
+        0.008948169374707247,
+        0.0006690934315797429,
+        0.990382737193713
+      ],
+      "context_tokens": 922,
+      "latency_seconds": 0.2885877713561058,
+      "head_only_latency_seconds": 0.0004434064030647278
+    },
+    {
+      "id": "ost-v1.1-1383",
+      "label": 0,
+      "probabilities": [
+        0.6570692295517303,
+        0.027121462253492056,
+        0.3158093081947777
+      ],
+      "context_tokens": 1018,
+      "latency_seconds": 0.29317016154527664,
+      "head_only_latency_seconds": 0.00044286996126174927
+    },
+    {
+      "id": "ost-v1.1-1384",
+      "label": 2,
+      "probabilities": [
+        0.021804395481026105,
+        0.014043066881176737,
+        0.9641525376377971
+      ],
+      "context_tokens": 939,
+      "latency_seconds": 0.2925773188471794,
+      "head_only_latency_seconds": 0.00045127421617507935
+    },
+    {
+      "id": "ost-v1.1-1389",
+      "label": 0,
+      "probabilities": [
+        0.7336678516620437,
+        0.002066170248531373,
+        0.264265978089425
+      ],
+      "context_tokens": 1015,
+      "latency_seconds": 0.2932160943746567,
+      "head_only_latency_seconds": 0.0004911050200462341
+    },
+    {
+      "id": "ost-v1.1-1400",
+      "label": 2,
+      "probabilities": [
+        0.010761481193455165,
+        0.0338361040339546,
+        0.9554024147725902
+      ],
+      "context_tokens": 1017,
+      "latency_seconds": 0.2843930646777153,
+      "head_only_latency_seconds": 0.00047291070222854614
+    },
+    {
+      "id": "ost-v1.1-1404",
+      "label": 2,
+      "probabilities": [
+        0.057340953426065176,
+        0.15094441970901698,
+        0.7917146268649179
+      ],
+      "context_tokens": 854,
+      "latency_seconds": 0.2416170835494995,
+      "head_only_latency_seconds": 0.0004505962133407593
+    },
+    {
+      "id": "ost-v1.1-1409",
+      "label": 2,
+      "probabilities": [
+        0.040369142222870184,
+        0.0027211036365935143,
+        0.9569097541405364
+      ],
+      "context_tokens": 762,
+      "latency_seconds": 0.2468831092119217,
+      "head_only_latency_seconds": 0.00044758617877960205
+    },
+    {
+      "id": "ost-v1.1-1418",
+      "label": 2,
+      "probabilities": [
+        0.15482667132832548,
+        0.0006943427782538964,
+        0.8444789858934205
+      ],
+      "context_tokens": 866,
+      "latency_seconds": 0.2537453845143318,
+      "head_only_latency_seconds": 0.0004423856735229492
+    },
+    {
+      "id": "ost-v1.1-1421",
+      "label": 2,
+      "probabilities": [
+        0.16419158401872844,
+        0.23293781011838344,
+        0.6028706058628881
+      ],
+      "context_tokens": 824,
+      "latency_seconds": 0.25106794387102127,
+      "head_only_latency_seconds": 0.000443778932094574
+    },
+    {
+      "id": "ost-v1.1-1430",
+      "label": 2,
+      "probabilities": [
+        0.05992491885670822,
+        0.26638024555435047,
+        0.6736948355889413
+      ],
+      "context_tokens": 998,
+      "latency_seconds": 0.28395842760801315,
+      "head_only_latency_seconds": 0.0004496946930885315
+    },
+    {
+      "id": "ost-v1.1-1432",
+      "label": 2,
+      "probabilities": [
+        0.004887030439603445,
+        0.001934156472532815,
+        0.9931788130878638
+      ],
+      "context_tokens": 978,
+      "latency_seconds": 0.2894239127635956,
+      "head_only_latency_seconds": 0.0004632025957107544
+    },
+    {
+      "id": "ost-v1.1-1446",
+      "label": 2,
+      "probabilities": [
+        0.002973155805187974,
+        0.002549126005454407,
+        0.9944777181893577
+      ],
+      "context_tokens": 782,
+      "latency_seconds": 0.24688547104597092,
+      "head_only_latency_seconds": 0.0005134716629981995
+    },
+    {
+      "id": "ost-v1.1-1450",
+      "label": 2,
+      "probabilities": [
+        0.013510710801984646,
+        0.0014889523465334378,
+        0.985000336851482
+      ],
+      "context_tokens": 889,
+      "latency_seconds": 0.26255325973033905,
+      "head_only_latency_seconds": 0.0004298165440559387
+    },
+    {
+      "id": "ost-v1.1-1454",
+      "label": 2,
+      "probabilities": [
+        0.0013015916900757465,
+        0.0013104280053683828,
+        0.9973879803045559
+      ],
+      "context_tokens": 925,
+      "latency_seconds": 0.2726503387093544,
+      "head_only_latency_seconds": 0.00042457133531570435
+    },
+    {
+      "id": "ost-v1.1-1455",
+      "label": 1,
+      "probabilities": [
+        0.07580750161603247,
+        0.6172968802644163,
+        0.3068956181195511
+      ],
+      "context_tokens": 826,
+      "latency_seconds": 0.25142358243465424,
+      "head_only_latency_seconds": 0.0004670843482017517
+    },
+    {
+      "id": "ost-v1.1-1458",
+      "label": 2,
+      "probabilities": [
+        0.08204995067073512,
+        0.0375407966932571,
+        0.8804092526360079
+      ],
+      "context_tokens": 958,
+      "latency_seconds": 0.27841784060001373,
+      "head_only_latency_seconds": 0.0004287436604499817
+    },
+    {
+      "id": "ost-v1.1-1459",
+      "label": 2,
+      "probabilities": [
+        0.032584027966420105,
+        0.14111648580973823,
+        0.8262994862238418
+      ],
+      "context_tokens": 894,
+      "latency_seconds": 0.26506779342889786,
+      "head_only_latency_seconds": 0.0004570111632347107
+    },
+    {
+      "id": "ost-v1.1-1464",
+      "label": 2,
+      "probabilities": [
+        0.03171291716315831,
+        0.009405007232605041,
+        0.9588820756042366
+      ],
+      "context_tokens": 941,
+      "latency_seconds": 0.28500184416770935,
+      "head_only_latency_seconds": 0.0004420429468154907
+    },
+    {
+      "id": "ost-v1.1-1469",
+      "label": 2,
+      "probabilities": [
+        0.15088925330475214,
+        0.09466444133560767,
+        0.7544463053596402
+      ],
+      "context_tokens": 1005,
+      "latency_seconds": 0.28547273576259613,
+      "head_only_latency_seconds": 0.0004275962710380554
+    },
+    {
+      "id": "ost-v1.1-1471",
+      "label": 2,
+      "probabilities": [
+        0.006352049686509163,
+        0.006590163704416687,
+        0.9870577866090741
+      ],
+      "context_tokens": 972,
+      "latency_seconds": 0.2744729295372963,
+      "head_only_latency_seconds": 0.00040490180253982544
+    },
+    {
+      "id": "ost-v1.1-1472",
+      "label": 2,
+      "probabilities": [
+        0.014406469912238547,
+        0.0009173676589126431,
+        0.9846761624288488
+      ],
+      "context_tokens": 1011,
+      "latency_seconds": 0.2825554758310318,
+      "head_only_latency_seconds": 0.0004453212022781372
+    },
+    {
+      "id": "ost-v1.1-1477",
+      "label": 2,
+      "probabilities": [
+        0.001239671748500526,
+        0.00030237640695669017,
+        0.9984579518445427
+      ],
+      "context_tokens": 928,
+      "latency_seconds": 0.2932593375444412,
+      "head_only_latency_seconds": 0.0004033520817756653
+    },
+    {
+      "id": "ost-v1.1-1481",
+      "label": 2,
+      "probabilities": [
+        0.19600688452513743,
+        0.05826563409628154,
+        0.745727481378581
+      ],
+      "context_tokens": 881,
+      "latency_seconds": 0.25086809694767,
+      "head_only_latency_seconds": 0.00038541853427886963
+    }
+  ]
+}

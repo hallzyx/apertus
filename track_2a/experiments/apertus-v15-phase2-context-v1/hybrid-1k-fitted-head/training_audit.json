@@ -1,0 +1,45 @@
+{
+  "candidates": [
+    {
+      "C": 0.001,
+      "oof_macro_f1": 0.8395143438802496
+    },
+    {
+      "C": 0.01,
+      "oof_macro_f1": 0.8259511324538646
+    },
+    {
+      "C": 0.1,
+      "oof_macro_f1": 0.8127182495342037
+    },
+    {
+      "C": 1.0,
+      "oof_macro_f1": 0.8100415113968552
+    }
+  ],
+  "folds": [
+    {
+      "fit_n": 64,
+      "held_out_n": 838,
+      "fit_groups": [
+        "2021-03-07"
+      ],
+      "held_out_groups": [
+        "2020-09-27"
+      ]
+    },
+    {
+      "fit_n": 838,
+      "held_out_n": 64,
+      "fit_groups": [
+        "2020-09-27"
+      ],
+      "held_out_groups": [
+        "2021-03-07"
+      ]
+    }
+  ],
+  "oof_temperature_nll_before": 0.4788205048631759,
+  "oof_temperature_nll_after": 0.4746663582996013,
+  "temperature_fit_uses_validation": false
+}

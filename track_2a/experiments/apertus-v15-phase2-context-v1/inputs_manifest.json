@@ -1,0 +1,121 @@
+{
+  "study": "registered_context_sweep",
+  "scope": "train902/validation276 only; no consumed310",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "conditions": {
+    "train-hybrid-1k": {
+      "file": "train-hybrid-1k.jsonl",
+      "n": 902,
+      "sha256": "f735b531d269ca4014a0c9372ccdcea35698713c9da6e51e1823df3e334f242b",
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "prompt_cap": 1024,
+      "retrieval_depth": 5,
+      "mean_prepared_prompt_tokens": 905.370288248337,
+      "mean_reference_5gram_coverage": 0.14590748083640506,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "train-hybrid-2k": {
+      "file": "train-hybrid-2k.jsonl",
+      "n": 902,
+      "sha256": "096440e657234dc6a9aeab289fd2ccb3fd33a629213fefc29716fc91690a05af",
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "prompt_cap": 2048,
+      "retrieval_depth": 10,
+      "mean_prepared_prompt_tokens": 1946.2217294900222,
+      "mean_reference_5gram_coverage": 0.26667762192947553,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "train-hybrid-4k": {
+      "file": "train-hybrid-4k.jsonl",
+      "n": 902,
+      "sha256": "352eee75873f63bf0dd6f85f75a8d7ecfb2d6dfb07a099ccf9b6c74ddd13641d",
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "prompt_cap": 4096,
+      "retrieval_depth": 20,
+      "mean_prepared_prompt_tokens": 4016.279379157428,
+      "mean_reference_5gram_coverage": 0.41418720753952426,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "train-hybrid-8k": {
+      "file": "train-hybrid-8k.jsonl",
+      "n": 902,
+      "sha256": "ff3d197ae7a5b627a9047c62e806e33e1f57514c65b8cacd20fe143d2e3290cc",
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "prompt_cap": 8192,
+      "retrieval_depth": 30,
+      "mean_prepared_prompt_tokens": 8046.566518847007,
+      "mean_reference_5gram_coverage": 0.5604993997647926,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "train-prefix-2k": {
+      "file": "train-prefix-2k.jsonl",
+      "n": 902,
+      "sha256": "81c22703ef4a8e3a606682cd358aae393d290d6d1024475210443304876762fd",
+      "dataset_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+      "prompt_cap": 2048,
+      "retrieval_depth": null,
+      "mean_prepared_prompt_tokens": 1901.570953436807,
+      "mean_reference_5gram_coverage": 0.1252537491761377,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "validation-hybrid-1k": {
+      "file": "validation-hybrid-1k.jsonl",
+      "n": 276,
+      "sha256": "d9572c4ce08fa9907e8ca381cc13ca159dd73525f56ffe363e15de1035fe46a9",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "prompt_cap": 1024,
+      "retrieval_depth": 5,
+      "mean_prepared_prompt_tokens": 892.8405797101449,
+      "mean_reference_5gram_coverage": 0.13808004522843106,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "validation-hybrid-2k": {
+      "file": "validation-hybrid-2k.jsonl",
+      "n": 276,
+      "sha256": "23e4d69549a6968395dd5aa981e8049d00597b0a3d7dfb23a1f5ddcfdebd4cb0",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "prompt_cap": 2048,
+      "retrieval_depth": 10,
+      "mean_prepared_prompt_tokens": 1940.9927536231885,
+      "mean_reference_5gram_coverage": 0.23536999226060498,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "validation-hybrid-4k": {
+      "file": "validation-hybrid-4k.jsonl",
+      "n": 276,
+      "sha256": "ba67daa86d5defd775900ed2270f6c07e34164924d6c101348a8a36287718fd2",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "prompt_cap": 4096,
+      "retrieval_depth": 20,
+      "mean_prepared_prompt_tokens": 4017.3623188405795,
+      "mean_reference_5gram_coverage": 0.34673633935539644,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "validation-hybrid-8k": {
+      "file": "validation-hybrid-8k.jsonl",
+      "n": 276,
+      "sha256": "4969b9bb8313a11fb8d4c9e29a0ad5fa53e31b8038f5a2094bf1c4ffc3669d9c",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "prompt_cap": 8192,
+      "retrieval_depth": 30,
+      "mean_prepared_prompt_tokens": 8059.641304347826,
+      "mean_reference_5gram_coverage": 0.48796084575264814,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    },
+    "validation-prefix-2k": {
+      "file": "validation-prefix-2k.jsonl",
+      "n": 276,
+      "sha256": "723436da8dce658540fb3ab11ea68186333b4a8ef10a00909edbdbe4732fdd3d",
+      "dataset_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+      "prompt_cap": 2048,
+      "retrieval_depth": null,
+      "mean_prepared_prompt_tokens": 1920.9202898550725,
+      "mean_reference_5gram_coverage": 0.12152751001402344,
+      "reference_overlap_caution": "Development lexical diagnostic only; Neutral reference may deliberately be unrelated; not organizer evidence scoring"
+    }
+  },
+  "source_script_sha256": "f66494c7d86e239637754571cd99067245d0068612016da7f6ca6fcd66e8d830",
+  "packing": "Whole exact passages; hybrid skips oversize candidates, prefix stops; total prompt cap includes system, claim and assistant prefix",
+  "caution": "Depth and token cap varied jointly under bounded budget; not a factorial attribution of their effects"
+}

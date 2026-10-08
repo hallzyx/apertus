@@ -1,0 +1,256 @@
+{
+  "experiment_id": "hybrid-2k-fitted-head",
+  "status": "completed",
+  "timestamp": "2026-10-08T00:35:05.938533+00:00",
+  "git_commit": "6908c105a029b14f9100023d9e8a12739c2adf78",
+  "git_working_tree_dirty": true,
+  "source_script_sha256": "abe5784d6ec6caf500e4159e6ae21c1f4a138fb5b57874640d43c7bd8bf4a603",
+  "source_cache": "hybrid-2k",
+  "source_cache_git_commit": "6908c105a029b14f9100023d9e8a12739c2adf78",
+  "model": "swiss-ai/Apertus-v1.5-8B",
+  "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "precision": "BF16 text; official tokenizer modules remain FP32",
+  "features": "hidden",
+  "n_features": 4096,
+  "context": "hybrid-2k",
+  "train_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+  "validation_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+  "dataset_split": "strict_validation",
+  "training_configuration": {
+    "n": 902,
+    "seed": 42,
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "selection": "Training grouped OOF Macro-F1 only",
+    "groups": 2,
+    "folds": 2,
+    "max_iter": 2000,
+    "calibration": "Scalar temperature minimizing training grouped OOF NLL; no validation labels"
+  },
+  "sklearn": "1.7.2",
+  "numpy": "2.2.6",
+  "gpu": "CPU head; actual Apertus CUDA cache reused",
+  "actual_compute_cost": 0.0,
+  "estimated_compute_cost": 0.0,
+  "macro_f1": 0.8875754875754875,
+  "notes": "Frozen real Apertus features; 902 declared training rows only. Few independent groups limit confidence in calibration and generalization. Latency sums cached GPU encoding and separately measured CPU head; not a live integrated service. Booklet-only context with fixed official class semantics; no reference input and no test fitting.",
+  "n": 276,
+  "selected_C": 0.001,
+  "temperature": 0.8358544488398827,
+  "training_oof_macro_f1": 0.8786148887845417,
+  "runtime_seconds": 6.348289147019386,
+  "per_class_f1": {
+    "0": 0.8681318681318682,
+    "1": 0.918918918918919,
+    "2": 0.8756756756756757
+  },
+  "per_language_performance": {
+    "de": {
+      "n": 82,
+      "macro_f1": 0.9114646464646464,
+      "accuracy": 0.9146341463414634,
+      "per_class": {
+        "0": {
+          "precision": 0.8518518518518519,
+          "recall": 1.0,
+          "f1": 0.92,
+          "support": 23
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.7777777777777778,
+          "f1": 0.875,
+          "support": 27
+        },
+        "2": {
+          "precision": 0.9117647058823529,
+          "recall": 0.96875,
+          "f1": 0.9393939393939394,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          23,
+          0,
+          0
+        ],
+        [
+          3,
+          21,
+          3
+        ],
+        [
+          1,
+          0,
+          31
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "fr": {
+      "n": 100,
+      "macro_f1": 0.9177609427609429,
+      "accuracy": 0.92,
+      "per_class": {
+        "0": {
+          "precision": 0.8809523809523809,
+          "recall": 0.9736842105263158,
+          "f1": 0.925,
+          "support": 38
+        },
+        "1": {
+          "precision": 0.96875,
+          "recall": 0.9117647058823529,
+          "f1": 0.9393939393939394,
+          "support": 34
+        },
+        "2": {
+          "precision": 0.9230769230769231,
+          "recall": 0.8571428571428571,
+          "f1": 0.8888888888888888,
+          "support": 28
+        }
+      },
+      "confusion_matrix": [
+        [
+          37,
+          0,
+          1
+        ],
+        [
+          2,
+          31,
+          1
+        ],
+        [
+          3,
+          1,
+          24
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "it": {
+      "n": 94,
+      "macro_f1": 0.8201155651859877,
+      "accuracy": 0.8297872340425532,
+      "per_class": {
+        "0": {
+          "precision": 0.7037037037037037,
+          "recall": 0.76,
+          "f1": 0.7307692307692307,
+          "support": 25
+        },
+        "1": {
+          "precision": 0.9705882352941176,
+          "recall": 0.8918918918918919,
+          "f1": 0.9295774647887324,
+          "support": 37
+        },
+        "2": {
+          "precision": 0.7878787878787878,
+          "recall": 0.8125,
+          "f1": 0.8,
+          "support": 32
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          0,
+          6
+        ],
+        [
+          3,
+          33,
+          1
+        ],
+        [
+          5,
+          1,
+          26
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "cross_lingual_performance": {
+    "n": 190,
+    "macro_f1": 0.8427957517505144,
+    "accuracy": 0.8421052631578947,
+    "per_class": {
+      "0": {
+        "precision": 0.746268656716418,
+        "recall": 0.8771929824561403,
+        "f1": 0.8064516129032258,
+        "support": 57
+      },
+      "1": {
+        "precision": 0.9629629629629629,
+        "recall": 0.8125,
+        "f1": 0.8813559322033898,
+        "support": 64
+      },
+      "2": {
+        "precision": 0.8405797101449275,
+        "recall": 0.8405797101449275,
+        "f1": 0.8405797101449275,
+        "support": 69
+      }
+    },
+    "confusion_matrix": [
+      [
+        50,
+        0,
+        7
+      ],
+      [
+        8,
+        52,
+        4
+      ],
+      [
+        9,
+        2,
+        58
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ]
+  },
+  "calibration_metrics": {
+    "ece": 0.050423723423054456,
+    "ece_bins": 10,
+    "brier_score": 0.13954853379965337,
+    "negative_log_likelihood": 0.2880157546195173
+  },
+  "uncalibrated_calibration_metrics": {
+    "ece": 0.05192686594306016,
+    "ece_bins": 10,
+    "brier_score": 0.1414412532720602,
+    "negative_log_likelihood": 0.2861240965810978
+  },
+  "average_context_tokens": 1940.9927536231885,
+  "average_inference_latency": 0.7769509904842445,
+  "mean_head_only_latency_seconds": 0.0004288536914880725
+}

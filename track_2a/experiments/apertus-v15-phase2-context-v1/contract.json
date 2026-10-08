@@ -1,0 +1,17 @@
+{
+  "input_manifest_sha256": "9c42aed605d1aec6d362b1b0091004b4cc9c9eefbd5be20786197b0d6267ca6b",
+  "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+  "engine_sha256": "3ff9b62a1178cbe401d66757a29bbd57add9d26de1fe804cbb851b9fb37b34d4",
+  "script_sha256": "735b906cbd19e398b748573d42d37c6ca362a1a73a9912e89f0703c9eb28505c",
+  "scope": "train/validation only; consumed310 untouched",
+  "conditions": [
+    "hybrid-1k",
+    "hybrid-2k",
+    "hybrid-4k",
+    "hybrid-8k",
+    "prefix-2k"
+  ],
+  "device": "cuda",
+  "weights_frozen": true,
+  "study": "context"
+}
