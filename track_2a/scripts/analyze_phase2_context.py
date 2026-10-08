@@ -87,7 +87,7 @@ def main():
         if not failures:candidates.append((metrics['average_context_tokens'],-metrics['macro_f1'],condition))
     choice=min(candidates)[2] if candidates else 'full'
     groups=np.asarray(connected_groups(rows));units=sorted(set(groups.tolist()))
-    generator=np.random.default_rng(42);resamples=[]
+    generator=np.random.default_rng(42)
     original_labels={p['id']:p['label'] for p in baseline}
     deltas={condition:[] for condition in predictions}
     for _ in range(2000):
@@ -115,11 +115,19 @@ def main():
                         'latency_seconds':p['latency_seconds']+original[row['id']]['latency_seconds']}
                 routed.append(p)
             simulations.append({'threshold':threshold,'escalated':escalated,'metrics':evaluate(rows,routed)})
+    points={condition:(value['matched_head']['macro_f1'],value['matched_head']['average_context_tokens'],value['matched_head']['average_latency_seconds']) for condition,value in comparisons.items()}
+    points['historical-full']=(full['macro_f1'],full['average_context_tokens'],full['average_latency_seconds'])
+    frontier=[name for name,(f1,tokens,seconds) in points.items() if not any(
+        other!=name and score>=f1 and count<=tokens and latency<=seconds and
+        (score>f1 or count<tokens or latency<seconds)
+        for other,(score,count,latency) in points.items())]
     result={'status':'completed_context_comparison_provisional_selection','scope':'Validation276 architecture development only; no consumed310 access',
         'original_full':full,'comparisons':comparisons,'provisional_choice':choice,
         'deployment_changed':False,'requires_context_matched_grounding_check':choice!='full',
         'decision_rule':protocol['selection_rule'],'per_class_guard':protocol['per_class_guard'],
         'group_aware_paired_resampling':resampling,
+        'observed_f1_token_time_frontier':frontier,
+        'frontier_caution':'Observed cached timing tradeoff, not paired live service latency; historical-full A40 versus new A6000. Oracle excluded. Selection additionally requires registered class/language/grounding guards.',
         'adaptive_routing_simulations':simulations,'adaptive_routing_selected':False,
         'routing_caution':'Fixed-grid cached simulations, no trained router or threshold adopted. Escalation costs both forwards. Compact on A6000 plus historical full on A40 is not paired live latency.',
         'validation_cautions':'Three events, two duplicate-connected units,207 unique claim/document pairs; reference-vs-booklet scope conflict remains. High validation F1 alone does not establish generalization.',
