@@ -1,0 +1,27 @@
+{
+  "scope": "Actual clean tracked-tree make run Docker frontend, no host source bind; PDF/source and deployment packaging checks. Actual NLI proofs are archived separately from GPU integration; no NLI score invented here.",
+  "source_commit": "5a333f1a61e684b986f778068a5babe0664154af",
+  "image_sha256": "sha256:17faec4ab4b83448aec0d0e4df1b0875fe82c56b2ebf11a16741f8086e533f80",
+  "head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+  "health": {
+    "status": "ok",
+    "retrieval_available": true,
+    "model_configured": false,
+    "model_connectivity_verified": false,
+    "benchmark_verified": false
+  },
+  "pdf_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+  "pdf_pages": 72,
+  "pdf_passages": 157,
+  "selected_source_quotes": 52,
+  "exact_source_quote_provenance_verified": true,
+  "benchmark_json_equal": true,
+  "ui_fields_present": true,
+  "unconfigured_prediction": {
+    "http_status": 400,
+    "no_prediction_produced": true
+  },
+  "make_run_from_clean_tracked_tree": true,
+  "container_has_no_host_source_mount": true,
+  "live_native_backend_persistent_in_cloud": false
+}
