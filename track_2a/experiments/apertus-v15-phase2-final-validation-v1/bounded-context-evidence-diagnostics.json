@@ -1,0 +1,5989 @@
+{
+  "scope": "Validation-only bounded diagnostics, not architecture selection or independent-test estimates. No training and no consumed310.",
+  "sample_method": "First10 validation rows per gold-class/claim-language stratum;90 predetermined rows. Labels used only for analysis sampling, never messages.",
+  "unique_sample_claim_document_pairs": 72,
+  "sample_event_counts": {
+    "2021-09-26": 17,
+    "2023-06-18": 24,
+    "2026-03-08": 49
+  },
+  "deduplicated_sample_metrics": {
+    "direct-top20": {
+      "n": 72,
+      "macro_f1": 0.8645873233014135,
+      "accuracy": 0.8611111111111112,
+      "per_class": {
+        "0": {
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058,
+          "support": 24
+        },
+        "1": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9090909090909091,
+          "f1": 0.9302325581395349,
+          "support": 22
+        },
+        "2": {
+          "precision": 0.875,
+          "recall": 0.8076923076923077,
+          "f1": 0.84,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          1,
+          2
+        ],
+        [
+          1,
+          20,
+          1
+        ],
+        [
+          5,
+          0,
+          21
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "by_language": {
+        "de": {
+          "n": 22,
+          "macro_f1": 0.8189542483660132,
+          "accuracy": 0.8181818181818182,
+          "per_class": {
+            "0": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.7142857142857143,
+              "f1": 0.8333333333333334,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 0.7777777777777778,
+              "f1": 0.8235294117647058,
+              "support": 9
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              2,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 26,
+          "macro_f1": 0.8592592592592593,
+          "accuracy": 0.8461538461538461,
+          "per_class": {
+            "0": {
+              "precision": 0.7272727272727273,
+              "recall": 0.8888888888888888,
+              "f1": 0.8,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 0.7,
+              "f1": 0.7777777777777778,
+              "support": 10
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              1
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              3,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 24,
+          "macro_f1": 0.9165032679738562,
+          "accuracy": 0.9166666666666666,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "1": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 1.0,
+              "f1": 0.9333333333333333,
+              "support": 7
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              1,
+              1
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "by_language_pair": {
+        "de->de": {
+          "n": 4,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->fr": {
+          "n": 10,
+          "macro_f1": 0.7936507936507936,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->it": {
+          "n": 8,
+          "macro_f1": 0.75,
+          "accuracy": 0.75,
+          "per_class": {
+            "0": {
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5,
+              "support": 1
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.75,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->de": {
+          "n": 7,
+          "macro_f1": 0.6296296296296297,
+          "accuracy": 0.8571428571428571,
+          "per_class": {
+            "0": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->fr": {
+          "n": 4,
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->it": {
+          "n": 15,
+          "macro_f1": 0.8119658119658119,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334,
+              "f1": 0.7692307692307693,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666666,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->de": {
+          "n": 10,
+          "macro_f1": 0.8857142857142857,
+          "accuracy": 0.9,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 4
+            },
+            "1": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->fr": {
+          "n": 6,
+          "macro_f1": 0.8222222222222223,
+          "accuracy": 0.8333333333333334,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->it": {
+          "n": 8,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 56,
+        "macro_f1": 0.8260547937967293,
+        "accuracy": 0.8214285714285714,
+        "per_class": {
+          "0": {
+            "precision": 0.7,
+            "recall": 0.8235294117647058,
+            "f1": 0.7567567567567568,
+            "support": 17
+          },
+          "1": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1": 0.9032258064516129,
+            "support": 16
+          },
+          "2": {
+            "precision": 0.8571428571428571,
+            "recall": 0.782608695652174,
+            "f1": 0.8181818181818182,
+            "support": 23
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            1,
+            2
+          ],
+          [
+            1,
+            14,
+            1
+          ],
+          [
+            5,
+            0,
+            18
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 4009.347222222222,
+      "context_tokens_coverage": 1.0,
+      "average_latency_seconds": 1.862992336249186,
+      "latency_seconds_coverage": 1.0,
+      "calibration": {
+        "ece": 0.08594374919231108,
+        "ece_bins": 10,
+        "brier_score": 0.2112562838265971,
+        "negative_log_likelihood": 0.4097730855898728
+      },
+      "probability_coverage": 1.0,
+      "evidence": {
+        "n_annotated": 0,
+        "recall": null,
+        "precision": null,
+        "all_gold_retrieved": null,
+        "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+      }
+    },
+    "neighbors": {
+      "n": 72,
+      "macro_f1": 0.9054232804232804,
+      "accuracy": 0.9027777777777778,
+      "per_class": {
+        "0": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "support": 24
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523,
+          "support": 22
+        },
+        "2": {
+          "precision": 0.8571428571428571,
+          "recall": 0.9230769230769231,
+          "f1": 0.8888888888888888,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          0,
+          3
+        ],
+        [
+          1,
+          20,
+          1
+        ],
+        [
+          2,
+          0,
+          24
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "by_language": {
+        "de": {
+          "n": 22,
+          "macro_f1": 0.8597883597883597,
+          "accuracy": 0.8636363636363636,
+          "per_class": {
+            "0": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.7142857142857143,
+              "f1": 0.8333333333333334,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              1,
+              0,
+              8
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 26,
+          "macro_f1": 0.9296296296296296,
+          "accuracy": 0.9230769230769231,
+          "per_class": {
+            "0": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.9,
+              "recall": 0.9,
+              "f1": 0.9,
+              "support": 10
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              1
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              1,
+              0,
+              9
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 24,
+          "macro_f1": 0.9166666666666666,
+          "accuracy": 0.9166666666666666,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "2": {
+              "precision": 0.7777777777777778,
+              "recall": 1.0,
+              "f1": 0.875,
+              "support": 7
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              2
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "by_language_pair": {
+        "de->de": {
+          "n": 4,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->fr": {
+          "n": 10,
+          "macro_f1": 0.7936507936507936,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->it": {
+          "n": 8,
+          "macro_f1": 0.8518518518518517,
+          "accuracy": 0.875,
+          "per_class": {
+            "0": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->de": {
+          "n": 7,
+          "macro_f1": 0.6296296296296297,
+          "accuracy": 0.8571428571428571,
+          "per_class": {
+            "0": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->fr": {
+          "n": 4,
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->it": {
+          "n": 15,
+          "macro_f1": 0.9393939393939394,
+          "accuracy": 0.9333333333333333,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              5
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->de": {
+          "n": 10,
+          "macro_f1": 0.9153439153439153,
+          "accuracy": 0.9,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 4
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 4
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->fr": {
+          "n": 6,
+          "macro_f1": 0.8222222222222223,
+          "accuracy": 0.8333333333333334,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->it": {
+          "n": 8,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 56,
+        "macro_f1": 0.8772875816993464,
+        "accuracy": 0.875,
+        "per_class": {
+          "0": {
+            "precision": 0.8235294117647058,
+            "recall": 0.8235294117647058,
+            "f1": 0.8235294117647058,
+            "support": 17
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "support": 16
+          },
+          "2": {
+            "precision": 0.84,
+            "recall": 0.9130434782608695,
+            "f1": 0.875,
+            "support": 23
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            0,
+            3
+          ],
+          [
+            1,
+            14,
+            1
+          ],
+          [
+            2,
+            0,
+            21
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 3866.3888888888887,
+      "context_tokens_coverage": 1.0,
+      "average_latency_seconds": 0.9955289777782228,
+      "latency_seconds_coverage": 1.0,
+      "calibration": {
+        "ece": 0.040546923647662006,
+        "ece_bins": 10,
+        "brier_score": 0.13955722371084608,
+        "negative_log_likelihood": 0.28552498254445585
+      },
+      "probability_coverage": 1.0,
+      "evidence": {
+        "n_annotated": 0,
+        "recall": null,
+        "precision": null,
+        "all_gold_retrieved": null,
+        "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+      }
+    },
+    "diverse": {
+      "n": 72,
+      "macro_f1": 0.8778430871454127,
+      "accuracy": 0.875,
+      "per_class": {
+        "0": {
+          "precision": 0.84,
+          "recall": 0.875,
+          "f1": 0.8571428571428571,
+          "support": 24
+        },
+        "1": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9090909090909091,
+          "f1": 0.9302325581395349,
+          "support": 22
+        },
+        "2": {
+          "precision": 0.8461538461538461,
+          "recall": 0.8461538461538461,
+          "f1": 0.8461538461538461,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          1,
+          2
+        ],
+        [
+          0,
+          20,
+          2
+        ],
+        [
+          4,
+          0,
+          22
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "by_language": {
+        "de": {
+          "n": 22,
+          "macro_f1": 0.8661718398560504,
+          "accuracy": 0.8636363636363636,
+          "per_class": {
+            "0": {
+              "precision": 0.8571428571428571,
+              "recall": 1.0,
+              "f1": 0.9230769230769231,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.7142857142857143,
+              "f1": 0.8333333333333334,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.8,
+              "recall": 0.8888888888888888,
+              "f1": 0.8421052631578947,
+              "support": 9
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              2
+            ],
+            [
+              1,
+              0,
+              8
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 26,
+          "macro_f1": 0.8592592592592593,
+          "accuracy": 0.8461538461538461,
+          "per_class": {
+            "0": {
+              "precision": 0.7272727272727273,
+              "recall": 0.8888888888888888,
+              "f1": 0.8,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 0.7,
+              "f1": 0.7777777777777778,
+              "support": 10
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              1
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              3,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 24,
+          "macro_f1": 0.9165032679738562,
+          "accuracy": 0.9166666666666666,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "1": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 1.0,
+              "f1": 0.9333333333333333,
+              "support": 7
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              1,
+              1
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "by_language_pair": {
+        "de->de": {
+          "n": 4,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->fr": {
+          "n": 10,
+          "macro_f1": 0.8055555555555555,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.6,
+              "recall": 1.0,
+              "f1": 0.75,
+              "support": 3
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->it": {
+          "n": 8,
+          "macro_f1": 0.8518518518518517,
+          "accuracy": 0.875,
+          "per_class": {
+            "0": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->de": {
+          "n": 7,
+          "macro_f1": 0.6296296296296297,
+          "accuracy": 0.8571428571428571,
+          "per_class": {
+            "0": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->fr": {
+          "n": 4,
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->it": {
+          "n": 15,
+          "macro_f1": 0.8119658119658119,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334,
+              "f1": 0.7692307692307693,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666666,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->de": {
+          "n": 10,
+          "macro_f1": 0.8857142857142857,
+          "accuracy": 0.9,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 4
+            },
+            "1": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->fr": {
+          "n": 6,
+          "macro_f1": 0.8222222222222223,
+          "accuracy": 0.8333333333333334,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->it": {
+          "n": 8,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 56,
+        "macro_f1": 0.8431042543244507,
+        "accuracy": 0.8392857142857143,
+        "per_class": {
+          "0": {
+            "precision": 0.7777777777777778,
+            "recall": 0.8235294117647058,
+            "f1": 0.8,
+            "support": 17
+          },
+          "1": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1": 0.9032258064516129,
+            "support": 16
+          },
+          "2": {
+            "precision": 0.8260869565217391,
+            "recall": 0.8260869565217391,
+            "f1": 0.8260869565217391,
+            "support": 23
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            1,
+            2
+          ],
+          [
+            0,
+            14,
+            2
+          ],
+          [
+            4,
+            0,
+            19
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 4016.0416666666665,
+      "context_tokens_coverage": 1.0,
+      "average_latency_seconds": 1.0848688269034028,
+      "latency_seconds_coverage": 1.0,
+      "calibration": {
+        "ece": 0.07057807030855656,
+        "ece_bins": 10,
+        "brier_score": 0.18806092890134138,
+        "negative_log_likelihood": 0.35316417361527425
+      },
+      "probability_coverage": 1.0,
+      "evidence": {
+        "n_annotated": 0,
+        "recall": null,
+        "precision": null,
+        "all_gold_retrieved": null,
+        "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+      }
+    }
+  },
+  "baseline_hybrid4k_same90": {
+    "n": 90,
+    "macro_f1": 0.8785449890067073,
+    "accuracy": 0.8777777777777778,
+    "per_class": {
+      "0": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1": 0.8571428571428571,
+        "support": 30
+      },
+      "1": {
+        "precision": 0.9642857142857143,
+        "recall": 0.9,
+        "f1": 0.9310344827586207,
+        "support": 30
+      },
+      "2": {
+        "precision": 0.8620689655172413,
+        "recall": 0.8333333333333334,
+        "f1": 0.847457627118644,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        1,
+        2
+      ],
+      [
+        1,
+        27,
+        2
+      ],
+      [
+        5,
+        0,
+        25
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 30,
+        "macro_f1": 0.8310315430520033,
+        "accuracy": 0.8333333333333334,
+        "per_class": {
+          "0": {
+            "precision": 0.7692307692307693,
+            "recall": 1.0,
+            "f1": 0.8695652173913043,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            7,
+            2
+          ],
+          [
+            2,
+            0,
+            8
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 30,
+        "macro_f1": 0.8653198653198654,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7777777777777778,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            3,
+            0,
+            7
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 30,
+        "macro_f1": 0.9312169312169312,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 10
+          },
+          "1": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            8,
+            1,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 6,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 13,
+        "macro_f1": 0.7435064935064934,
+        "accuracy": 0.7692307692307693,
+        "per_class": {
+          "0": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714,
+            "support": 5
+          },
+          "2": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 11,
+        "macro_f1": 0.8055555555555555,
+        "accuracy": 0.8181818181818182,
+        "per_class": {
+          "0": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 7,
+        "macro_f1": 0.6296296296296297,
+        "accuracy": 0.8571428571428571,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->fr": {
+        "n": 5,
+        "macro_f1": 0.6666666666666666,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 18,
+        "macro_f1": 0.8222222222222223,
+        "accuracy": 0.8333333333333334,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8,
+            "support": 7
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1": 0.6666666666666666,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 11,
+        "macro_f1": 0.8857142857142857,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 9,
+        "macro_f1": 0.9047619047619048,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 10,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 69,
+      "macro_f1": 0.8440133500208594,
+      "accuracy": 0.8405797101449275,
+      "per_class": {
+        "0": {
+          "precision": 0.76,
+          "recall": 0.8636363636363636,
+          "f1": 0.8085106382978723,
+          "support": 22
+        },
+        "1": {
+          "precision": 0.9473684210526315,
+          "recall": 0.8571428571428571,
+          "f1": 0.9,
+          "support": 21
+        },
+        "2": {
+          "precision": 0.84,
+          "recall": 0.8076923076923077,
+          "f1": 0.8235294117647058,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          1,
+          2
+        ],
+        [
+          1,
+          18,
+          2
+        ],
+        [
+          5,
+          0,
+          21
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 4010.011111111111,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 1.7119900207552645,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.07972558041076183,
+      "ece_bins": 10,
+      "brier_score": 0.19332000252674295,
+      "negative_log_likelihood": 0.37744201831458457
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "neighbors_same90": {
+    "n": 90,
+    "macro_f1": 0.9120857699805068,
+    "accuracy": 0.9111111111111111,
+    "per_class": {
+      "0": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9,
+        "support": 30
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526315,
+        "support": 30
+      },
+      "2": {
+        "precision": 0.8484848484848485,
+        "recall": 0.9333333333333333,
+        "f1": 0.8888888888888888,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        0,
+        3
+      ],
+      [
+        1,
+        27,
+        2
+      ],
+      [
+        2,
+        0,
+        28
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 30,
+        "macro_f1": 0.8632543926661573,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.8181818181818182,
+            "recall": 0.9,
+            "f1": 0.8571428571428571,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            7,
+            2
+          ],
+          [
+            1,
+            0,
+            9
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 30,
+        "macro_f1": 0.9333333333333332,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            1,
+            0,
+            9
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 30,
+        "macro_f1": 0.9326599326599326,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            8,
+            0,
+            2
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 6,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 13,
+        "macro_f1": 0.7435064935064934,
+        "accuracy": 0.7692307692307693,
+        "per_class": {
+          "0": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714,
+            "support": 5
+          },
+          "2": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 11,
+        "macro_f1": 0.8962962962962964,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 7,
+        "macro_f1": 0.6296296296296297,
+        "accuracy": 0.8571428571428571,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->fr": {
+        "n": 5,
+        "macro_f1": 0.6666666666666666,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 18,
+        "macro_f1": 0.9440559440559441,
+        "accuracy": 0.9444444444444444,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.9230769230769231,
+            "support": 7
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 11,
+        "macro_f1": 0.9220779220779222,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 9,
+        "macro_f1": 0.9047619047619048,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 10,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 69,
+      "macro_f1": 0.8864801864801864,
+      "accuracy": 0.8840579710144928,
+      "per_class": {
+        "0": {
+          "precision": 0.8636363636363636,
+          "recall": 0.8636363636363636,
+          "f1": 0.8636363636363636,
+          "support": 22
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.9230769230769231,
+          "support": 21
+        },
+        "2": {
+          "precision": 0.8275862068965517,
+          "recall": 0.9230769230769231,
+          "f1": 0.8727272727272727,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          0,
+          3
+        ],
+        [
+          1,
+          18,
+          2
+        ],
+        [
+          2,
+          0,
+          24
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 3866.211111111111,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 0.9948850711186726,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.03229095329163309,
+      "ece_bins": 10,
+      "brier_score": 0.12750209136025265,
+      "negative_log_likelihood": 0.2556402962084
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "diversity_same90": {
+    "n": 90,
+    "macro_f1": 0.8895798002638026,
+    "accuracy": 0.8888888888888888,
+    "per_class": {
+      "0": {
+        "precision": 0.8709677419354839,
+        "recall": 0.9,
+        "f1": 0.8852459016393442,
+        "support": 30
+      },
+      "1": {
+        "precision": 0.9642857142857143,
+        "recall": 0.9,
+        "f1": 0.9310344827586207,
+        "support": 30
+      },
+      "2": {
+        "precision": 0.8387096774193549,
+        "recall": 0.8666666666666667,
+        "f1": 0.8524590163934426,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        1,
+        2
+      ],
+      [
+        0,
+        27,
+        3
+      ],
+      [
+        4,
+        0,
+        26
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 30,
+        "macro_f1": 0.8646973941091588,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            1,
+            0,
+            9
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 30,
+        "macro_f1": 0.8653198653198654,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7777777777777778,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            3,
+            0,
+            7
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 30,
+        "macro_f1": 0.9312169312169312,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 10
+          },
+          "1": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            8,
+            1,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 6,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 13,
+        "macro_f1": 0.746031746031746,
+        "accuracy": 0.7692307692307693,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714,
+            "support": 5
+          },
+          "2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 11,
+        "macro_f1": 0.8962962962962964,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 7,
+        "macro_f1": 0.6296296296296297,
+        "accuracy": 0.8571428571428571,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->fr": {
+        "n": 5,
+        "macro_f1": 0.6666666666666666,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 18,
+        "macro_f1": 0.8222222222222223,
+        "accuracy": 0.8333333333333334,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8,
+            "support": 7
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1": 0.6666666666666666,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 11,
+        "macro_f1": 0.8857142857142857,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 9,
+        "macro_f1": 0.9047619047619048,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 10,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 69,
+      "macro_f1": 0.8582110412299091,
+      "accuracy": 0.855072463768116,
+      "per_class": {
+        "0": {
+          "precision": 0.8260869565217391,
+          "recall": 0.8636363636363636,
+          "f1": 0.8444444444444444,
+          "support": 22
+        },
+        "1": {
+          "precision": 0.9473684210526315,
+          "recall": 0.8571428571428571,
+          "f1": 0.9,
+          "support": 21
+        },
+        "2": {
+          "precision": 0.8148148148148148,
+          "recall": 0.8461538461538461,
+          "f1": 0.8301886792452831,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          1,
+          2
+        ],
+        [
+          0,
+          18,
+          3
+        ],
+        [
+          4,
+          0,
+          22
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 4022.4555555555557,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 1.0868891243305472,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.06223591545662375,
+      "ece_bins": 10,
+      "brier_score": 0.1699649304742834,
+      "negative_log_likelihood": 0.3289255385541205
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "neighbors_policy": "Six highest hybrid-ranked seeds, each seed/previous/next in source order, deduplicated, exact whole quotes capped4096; unchanged matched direct20 hybrid4k head.",
+  "diversity_policy": "Top30 hybrid candidates, accept up to20 while suppressing same-page overlap>=50% of shorter quote or word5gram Jaccard>=.55; exact whole quotes capped4096.",
+  "redundancy_diagnostics": [
+    {
+      "id": "ost-v1.1-0019",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0022",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0024",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0026",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0030",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0032",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0040",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0050",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0057",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0064",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0499",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0505",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0506",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0513",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0515",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0519",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0525",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0526",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0555",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0558",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0995",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0996",
+      "redundant_pairs_among_top20": 5,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1001",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1004",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1013",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1019",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1029",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1036",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1037",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1052",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0172",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0173",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0174",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0186",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0190",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0199",
+      "redundant_pairs_among_top20": 5,
+      "diversity_suppressed": 7,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0205",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0211",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0212",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0664",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0669",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0680",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0682",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0685",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0686",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0693",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0696",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0700",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0701",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1159",
+      "redundant_pairs_among_top20": 6,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1161",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1162",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1167",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1168",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1170",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1172",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1174",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1192",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1194",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0333",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0338",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0341",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0343",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0345",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0355",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0359",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0361",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0363",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0391",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0833",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0834",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0837",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0838",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0843",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0847",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0851",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0852",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0853",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0864",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1335",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1340",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1349",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1350",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1351",
+      "redundant_pairs_among_top20": 5,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1352",
+      "redundant_pairs_among_top20": 6,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1353",
+      "redundant_pairs_among_top20": 6,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1362",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1373",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1381",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    }
+  ],
+  "no_new_head_fitted": true,
+  "mechanism_adopted": false,
+  "timing_caution": "Neighbor/diversity request adds shared measured retrieval/preparation plus actual encoding/head; baseline is cached. Not paired live all-inference latency.",
+  "evidence_policy": "Rerank only classifier-input passages with frozen E5/hybrid; k=max(1,min(2,original_passage_count-1)). Thus use up to2 quotes and ensure reduction whenever original context has>=2. First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim-language; up to12 actual evidence-only forwards with same frozen head.",
+  "evidence_sufficiency_n": 12,
+  "evidence_decision_preservation_rate": 0.25,
+  "evidence_strict_reduction_n": 12,
+  "evidence_decision_preservation_when_strictly_reduced": 0.25,
+  "evidence_only_original_label_metrics": {
+    "n": 12,
+    "macro_f1": 0.2878787878787879,
+    "accuracy": 0.4166666666666667,
+    "per_class": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.2222222222222222,
+        "f1": 0.36363636363636365,
+        "support": 9
+      },
+      "1": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "support": 3
+      },
+      "2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": [
+      [
+        2,
+        6,
+        1
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 4,
+        "macro_f1": 0.48888888888888893,
+        "accuracy": 0.75,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 4,
+        "macro_f1": 0.13333333333333333,
+        "accuracy": 0.25,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 4
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 4,
+        "macro_f1": 0.13333333333333333,
+        "accuracy": 0.25,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "support": 1
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 1,
+        "macro_f1": 0.3333333333333333,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 3,
+        "macro_f1": 0.26666666666666666,
+        "accuracy": 0.6666666666666666,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "1": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 1,
+        "macro_f1": 0.0,
+        "accuracy": 0.0,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 3,
+        "macro_f1": 0.16666666666666666,
+        "accuracy": 0.3333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "support": 3
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 2,
+        "macro_f1": 0.0,
+        "accuracy": 0.0,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 2,
+        "macro_f1": 0.2222222222222222,
+        "accuracy": 0.5,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "1": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 11,
+      "macro_f1": 0.24074074074074073,
+      "accuracy": 0.36363636363636365,
+      "per_class": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.125,
+          "f1": 0.2222222222222222,
+          "support": 8
+        },
+        "1": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 3
+        },
+        "2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 685.6666666666666,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 1.1021160023907821,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.5056401175918734,
+      "ece_bins": 10,
+      "brier_score": 1.0802764747478637,
+      "negative_log_likelihood": 2.7883373409993712
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "evidence_proofs": [
+    {
+      "id": "ost-v1.1-0019",
+      "original_label": 0,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "de",
+      "document_language": "fr",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 4044,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-1-offset-0",
+          "paragraph_id": "page-1-offset-0",
+          "page": 1,
+          "text": "Initiative pour un fonds climatTroisième objet \nLoi fédérale sur l’imposition \nindividuelle\nQuatrième objet \nInitiative SSRDeuxième objet  \nInitiative « L’argent liquide, c’est \nla liberté » et contre-projet direct\nPremier objet   \n8 mars 2026\nVotation populaire  \nKlimafonds-InitiativeDritte Vorlage  \nBundesgesetz über die \nIndividualbesteuerung\nVierte Vorlage  \nSRG-InitiativeZweite Vorlage  \nInitiative « Bargeld ist Freiheit » \nund direkter Gegenentwurf\nErste Vorlage  \n8. März 2026\nVolksabstimmung  ",
+          "char_start": 0,
+          "char_end": 505,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8101086020469666,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03252247488101534,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-30-offset-974",
+          "paragraph_id": "page-30-offset-974",
+          "page": 30,
+          "text": "s dans les \ndomaines de l’information, de la culture, de la formation, du \ndivertissement et du sport. Le Conseil fédéral impose à la SSR \nd’investir au moins 50 % de ses revenus provenant de la rede-\nvance dans l’information. Les programmes de la SSR doivent \npromouvoir la compréhension, la cohésion et les échanges \nentre les différentes régions du pays, les communautés linguis -\ntiques, les cultures, les religions et les groupes sociaux. La SSR \ndoit également tenir compte des particularités du pays et des \nbesoins des cantons.\nLa SSR se compose de plusieurs unités d’entreprise, dont \nSchweizer Radio und Fernsehen SRF en Suisse alémanique,  \nRadio Télévision Suisse RTS en Suisse romande, Radiotelevisione \nsvizzera RSI en Suisse italienne et Radiotelevisiun Svizra  \nRumantscha RTR en Suisse romanche.\n1 Données de l'Administration fédérale des contributions (AFC), \nétat en 2023\nRéduction de la \ncharge des \nentreprises\nMandat de la SSR\nStructure de la SSR",
+          "char_start": 974,
+          "char_end": 1942,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.7774481177330017,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03057889822595705,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0019",
+        "label": 1,
+        "probabilities": [
+          0.005341158482974546,
+          0.9937388927184256,
+          0.0009199487985999211
+        ],
+        "context_tokens": 663,
+        "latency_seconds": 1.1234655007719994,
+        "selected_passage_ids": [
+          "page-1-offset-0",
+          "page-30-offset-974"
+        ],
+        "pages": [
+          1,
+          30
+        ],
+        "prompt_sha256": "ca71fe5ceaafa6ff44216fa24b63dd33a3a0a8cf1910d8f329b4a9410a142129"
+      }
+    },
+    {
+      "id": "ost-v1.1-0022",
+      "original_label": 0,
+      "evidence_only_label": 0,
+      "decision_preserved": true,
+      "claim_language": "de",
+      "document_language": "de",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 3918,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-25-offset-977",
+          "paragraph_id": "page-25-offset-977",
+          "page": 25,
+          "text": "niert die Ehe nicht als Verbindung zwischen Frau und \nMann. Das Parlament hat zudem entschieden, dass auch für \nden Zugang zur Samenspende für verheiratete Frauenpaare \neine Gesetzesrevision genügt.\n-\nNach der Öffnung der Ehe für gleichgeschlechtliche Paare \nkönnen keine neuen eingetragenen Partnerschaften mehr \ngeschlossen werden. Paare, die bereits in einer eingetragenen \nPartnerschaft leben, können diese weiterführen oder durch \neine gemeinsame Erklärung beim Zivilstandsamt in eine Ehe \numwandeln.\nAdoption\nFortpflanzungs\nmedizin\n-\nKeine Verfassungs\nänderung\n-\nUmwandlung  \nin Ehe",
+          "char_start": 977,
+          "char_end": 1565,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.9022597670555115,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03200204813108039,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-29-offset-998",
+          "paragraph_id": "page-29-offset-998",
+          "page": 29,
+          "text": "ie Ehe nicht als Verbindung zwischen \nFrau und Mann. \n \nAus all diesen Gründen empfehlen Bundesrat und Parla\nment, die Änderung des Schweizerischen Zivilgesetzbuches \n(Ehe für alle) anzunehmen.\n-\n J a\n  admin.ch/ehe-fuer-alle\nRecht auf Kenntnis \nder Abstammung\nStrikt geregelte \nFortpflanzungs\nmedizin\n-\nVerfassung erlaubt \nEhe für alle\nEmpfehlung  \nvon Bundesrat  \nund Parlament",
+          "char_start": 998,
+          "char_end": 1377,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.9128522872924805,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03177805800756621,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0022",
+        "label": 0,
+        "probabilities": [
+          0.98916658346695,
+          0.001487976909787447,
+          0.009345439623262702
+        ],
+        "context_tokens": 515,
+        "latency_seconds": 1.04847402125597,
+        "selected_passage_ids": [
+          "page-25-offset-977",
+          "page-29-offset-998"
+        ],
+        "pages": [
+          25,
+          29
+        ],
+        "prompt_sha256": "b19bf717e00882819558938b2f52440d2e59256f3a6ca9966d1f7a9d4ba4c239"
+      }
+    },
+    {
+      "id": "ost-v1.1-0513",
+      "original_label": 2,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "de",
+      "document_language": "fr",
+      "original_context_passage_count": 14,
+      "original_context_tokens": 4004,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-1-offset-0",
+          "paragraph_id": "page-1-offset-0",
+          "page": 1,
+          "text": "Initiative pour un fonds climatTroisième objet \nLoi fédérale sur l’imposition \nindividuelle\nQuatrième objet \nInitiative SSRDeuxième objet  \nInitiative « L’argent liquide, c’est \nla liberté » et contre-projet direct\nPremier objet   \n8 mars 2026\nVotation populaire  \nKlimafonds-InitiativeDritte Vorlage  \nBundesgesetz über die \nIndividualbesteuerung\nVierte Vorlage  \nSRG-InitiativeZweite Vorlage  \nInitiative « Bargeld ist Freiheit » \nund direkter Gegenentwurf\nErste Vorlage  \n8. März 2026\nVolksabstimmung  ",
+          "char_start": 0,
+          "char_end": 505,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8339331150054932,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.032018442622950824,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-43-offset-0",
+          "paragraph_id": "page-43-offset-0",
+          "page": 43,
+          "text": "43\nEn adoptant la loi sur le climat et l’innovation, la Suisse  \na décidé de réduire ses émissions de gaz à effet de serre, avant \ntout de CO2, à zéro net d’ici à 2050 : les émissions seront autant \nque possible réduites et l’effet des émissions restantes, diffici -\nlement évitables, sera compensé. La Suisse contribue ainsi  \nà protéger le climat à l’échelle mondiale, conformément  \nà l’Accord de Paris.\nLa Confédération dispose chaque année d’environ 2 mil-\nliards de francs pour la protection du climat et la transformation \ndu système énergétique1. Elle encourage ainsi en particulier :\n– la réduction des émissions de gaz à effet de serre, grâce \npar exemple au remplacement des chauffages au mazout \npar des pompes à chaleur  ;\n– le développement des énergies renouvelables, grâce par \nexemple à l’encouragement des installations solaires  ;\n– l’adaptation aux conséquences des changements clima -\ntiques, telles que les crues, les glissements de terrain et \nles vagues de chaleur ;\n– les technologies permettant d’extraire le CO 2 et de le \nstocker durablement.\nLa Confédération dépense bien plus de 500 millions de \nfrancs par an dans le domaine de la biodiversité 2. Elle soutient ",
+          "char_start": 0,
+          "char_end": 1192,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8440721035003662,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03177805800756621,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0513",
+        "label": 1,
+        "probabilities": [
+          0.0026623214575699134,
+          0.9963058979291357,
+          0.001031780613294377
+        ],
+        "context_tokens": 709,
+        "latency_seconds": 1.1863245218992233,
+        "selected_passage_ids": [
+          "page-1-offset-0",
+          "page-43-offset-0"
+        ],
+        "pages": [
+          1,
+          43
+        ],
+        "prompt_sha256": "1fd7e3ad5e13a9c5dc8e315fdd125857ae5f3441b99605ee363d91ae69ac9c0d"
+      }
+    },
+    {
+      "id": "ost-v1.1-0660",
+      "original_label": 2,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "de",
+      "document_language": "fr",
+      "original_context_passage_count": 15,
+      "original_context_tokens": 3971,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-1-offset-0",
+          "paragraph_id": "page-1-offset-0",
+          "page": 1,
+          "text": "Initiative pour un fonds climatTroisième objet \nLoi fédérale sur l’imposition \nindividuelle\nQuatrième objet \nInitiative SSRDeuxième objet  \nInitiative « L’argent liquide, c’est \nla liberté » et contre-projet direct\nPremier objet   \n8 mars 2026\nVotation populaire  \nKlimafonds-InitiativeDritte Vorlage  \nBundesgesetz über die \nIndividualbesteuerung\nVierte Vorlage  \nSRG-InitiativeZweite Vorlage  \nInitiative « Bargeld ist Freiheit » \nund direkter Gegenentwurf\nErste Vorlage  \n8. März 2026\nVolksabstimmung  ",
+          "char_start": 0,
+          "char_end": 505,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.83770352602005,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030679156908665108,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-43-offset-0",
+          "paragraph_id": "page-43-offset-0",
+          "page": 43,
+          "text": "43\nEn adoptant la loi sur le climat et l’innovation, la Suisse  \na décidé de réduire ses émissions de gaz à effet de serre, avant \ntout de CO2, à zéro net d’ici à 2050 : les émissions seront autant \nque possible réduites et l’effet des émissions restantes, diffici -\nlement évitables, sera compensé. La Suisse contribue ainsi  \nà protéger le climat à l’échelle mondiale, conformément  \nà l’Accord de Paris.\nLa Confédération dispose chaque année d’environ 2 mil-\nliards de francs pour la protection du climat et la transformation \ndu système énergétique1. Elle encourage ainsi en particulier :\n– la réduction des émissions de gaz à effet de serre, grâce \npar exemple au remplacement des chauffages au mazout \npar des pompes à chaleur  ;\n– le développement des énergies renouvelables, grâce par \nexemple à l’encouragement des installations solaires  ;\n– l’adaptation aux conséquences des changements clima -\ntiques, telles que les crues, les glissements de terrain et \nles vagues de chaleur ;\n– les technologies permettant d’extraire le CO 2 et de le \nstocker durablement.\nLa Confédération dépense bien plus de 500 millions de \nfrancs par an dans le domaine de la biodiversité 2. Elle soutient ",
+          "char_start": 0,
+          "char_end": 1192,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8569023013114929,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030536130536130537,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0660",
+        "label": 1,
+        "probabilities": [
+          0.001522824314254006,
+          0.9974962872506757,
+          0.000980888435070224
+        ],
+        "context_tokens": 712,
+        "latency_seconds": 1.264948919415474,
+        "selected_passage_ids": [
+          "page-1-offset-0",
+          "page-43-offset-0"
+        ],
+        "pages": [
+          1,
+          43
+        ],
+        "prompt_sha256": "374044b9289b5100feccccc80b05f28d875ad142a1c70fdd79c86584272f1f32"
+      }
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "original_label": 0,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "fr",
+      "document_language": "it",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 4072,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-57-offset-1975",
+          "paragraph_id": "page-57-offset-1975",
+          "page": 57,
+          "text": "le > \nImposizione dei coniugi e famiglia > Imposizione individuale 2024 > \nCalculs de l’AFC illustrant la proposition de la CER-N du 01.04.2025 ).\nSul livello \noccupazionale\nSull’onere \namministrativo\nAltre ripercussioni",
+          "char_start": 1975,
+          "char_end": 2195,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8374837040901184,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03278688524590164,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-47-offset-0",
+          "paragraph_id": "page-47-offset-0",
+          "page": 47,
+          "text": "47\nIl comitato d’iniziativa è l’autore del testo di queste due pagine. \nIn quanto tale è responsabile del suo contenuto e delle scelte lessicali.\n– nelle energie rinnovabili: per promuovere la produzione \ndi elettricità a partire dall’energia solare, idrica ed eolica \nal fine di assicurare l’autosufficienza energetica;\n– nel risanamento di edifici: per sostituire sistemi di riscal -\ndamento a gasolio nocivi per il clima con pompe di calore \nmoderne, per ridurre la nostra dipendenza dal gas estero \ne per migliorare l’efficienza energetica degli immobili; \n– in tecnologie rispettose dell’ambiente: per sostenere \nl’industria nella transizione verso metodi di produzione \npiù sostenibili.\nA tal fine investiamo anche nella formazione di personale \nqualificato concentrandoci sui nostri punti di forza: l’eccellenza \ndel nostro polo di ricerca nel campo dell’innovazione ed azien -\nde solide in tutte le regioni.\nOgni anno la Svizzera importa energia per circa 8 miliardi \ndi franchi. Accettare la nostra iniziativa significa investire \nquesti miliardi in Svizzera. Sostituendo il gasolio e il gas ridu -\nciamo il nostro grado di dipendenza dall’estero e le emissioni ",
+          "char_start": 0,
+          "char_end": 1171,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8291792869567871,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03125763125763126,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0169",
+        "label": 1,
+        "probabilities": [
+          0.00016564299536458627,
+          0.9925480750213452,
+          0.007286281983290152
+        ],
+        "context_tokens": 635,
+        "latency_seconds": 1.0395096763968468,
+        "selected_passage_ids": [
+          "page-57-offset-1975",
+          "page-47-offset-0"
+        ],
+        "pages": [
+          57,
+          47
+        ],
+        "prompt_sha256": "ea09a3e504b99235ca7497cec82d7c7afd4c4f67c6305a3ee6d07ea699bbfa69"
+      }
+    },
+    {
+      "id": "ost-v1.1-0172",
+      "original_label": 0,
+      "evidence_only_label": 0,
+      "decision_preserved": true,
+      "claim_language": "fr",
+      "document_language": "it",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 4058,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-4-offset-990",
+          "paragraph_id": "page-4-offset-990",
+          "page": 4,
+          "text": "ale elevati.  \nA partire da un determinato importo, nel calcolo dell’imposta  \ni redditi da capitale devono essere ponderati maggiormente e \nconteggiati una volta e mezzo. Per ogni franco superiore a \nquesto importo si dovrebbero pagare le imposte come se si \ntrattasse di 1.50 franchi. Se l’iniziativa sarà accettata, spetterà \nal Parlamento stabilire l’importo oltre il quale si applicherà tale \nassoggettamento. Il gettito supplementare risultante sarebbe \nimpiegato per ridurre l’imposizione delle persone con redditi \nda lavoro bassi o medi oppure in favore del benessere sociale.\nContesto\nIl progetto\nIn breve",
+          "char_start": 990,
+          "char_end": 1605,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/NJXQlhZXHqDA/2021-09-26_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "d01075b2fabc1609d8c7e2b5ede595286c504d35ea4947b1fa0709fddbb63538",
+          "retrieval_score": 0.8602151870727539,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.032018442622950824,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-14-offset-0",
+          "paragraph_id": "page-14-offset-0",
+          "page": 14,
+          "text": "14 Primo oggetto: «Sgravare i salari, tassare equamente il capitale»\nOltre al reddito imponibile, le aliquote ﬁscali sono deter\nminanti al ﬁne del calcolo dell’imposta. L’iniziativa non le \nmenziona, pertanto la loro deﬁnizione continua a essere di \ncompetenza di Confederazione e Cantoni. Se le aliquote ﬁscali \nrestano invariate, a partire da un determinato importo le per\nsone pagheranno più imposte sul reddito da capitale.\n- \n- \nSecondo l’iniziativa, il gettito supplementare risultante \ndalla maggiore imposizione del reddito da capitale sarà \ndestinato alla riduzione dell’imposizione delle persone con \nredditi da lavoro bassi o medi o a prestazioni in favore del \nbenessere sociale.\n Le modalità di attuazione non sono ancora deﬁnite. In \ncaso di accettazione sarà il Parlamento a decidere concreta\nmente come attuare l’iniziativa. Dovrebbe in particolare \ndeﬁnire quali redditi rientrano nella nozione di reddito da \ncapitale, a partire da quale importo si applicherà l’imposizione \npiù alta e come ridistribuire il gettito supplementare così \nottenuto.\n-\nA causa della maggiore imposizione del reddito da capita\nle potrebbero veriﬁcarsi cambiamenti comportamentali, ad ",
+          "char_start": 0,
+          "char_end": 1180,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/NJXQlhZXHqDA/2021-09-26_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "d01075b2fabc1609d8c7e2b5ede595286c504d35ea4947b1fa0709fddbb63538",
+          "retrieval_score": 0.8491840362548828,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031054405392392875,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0172",
+        "label": 0,
+        "probabilities": [
+          0.9993946060611618,
+          0.00021825321003329996,
+          0.0003871407288050074
+        ],
+        "context_tokens": 765,
+        "latency_seconds": 1.0083412528038025,
+        "selected_passage_ids": [
+          "page-4-offset-990",
+          "page-14-offset-0"
+        ],
+        "pages": [
+          4,
+          14
+        ],
+        "prompt_sha256": "f46965432fb5519953c2dda070e23331ee636d28e7b4d0e56dc3d46826336aee"
+      }
+    },
+    {
+      "id": "ost-v1.1-0186",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "fr",
+      "document_language": "it",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 3893,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-57-offset-1975",
+          "paragraph_id": "page-57-offset-1975",
+          "page": 57,
+          "text": "le > \nImposizione dei coniugi e famiglia > Imposizione individuale 2024 > \nCalculs de l’AFC illustrant la proposition de la CER-N du 01.04.2025 ).\nSul livello \noccupazionale\nSull’onere \namministrativo\nAltre ripercussioni",
+          "char_start": 1975,
+          "char_end": 2195,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8055747747421265,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031754032258064516,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-39-offset-964",
+          "paragraph_id": "page-39-offset-964",
+          "page": 39,
+          "text": ". Infatti, per usufruire delle offerte di \nemittenti a pagamento e di servizi di streaming si dovranno \nprobabilmente pagare supplementi, ad esempio per le trasmis -\nsioni sportive, le serie e i film.\nPer tutte queste ragioni, Consiglio federale e Parlamento \nraccomandano di respingere l’iniziativa SSR.\nNo\n admin.ch/iniziativa-ssr\nPluralità e qualità \nminacciate\nRispettare  \nle regioni\nRicevere un’offerta \nattrattiva\nAssicurare  \nla presenza di \ncontenuti svizzeri\nIl consumo di \nmedia potrebbe \ndiventare più \ncostoso\nRaccomandazione \ndel Consiglio \nfederale e del \nParlamento",
+          "char_start": 964,
+          "char_end": 1545,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8089576959609985,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031054405392392875,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0186",
+        "label": 2,
+        "probabilities": [
+          0.0513253729428448,
+          0.008803362978423296,
+          0.9398712640787318
+        ],
+        "context_tokens": 495,
+        "latency_seconds": 1.0655665174126625,
+        "selected_passage_ids": [
+          "page-57-offset-1975",
+          "page-39-offset-964"
+        ],
+        "pages": [
+          57,
+          39
+        ],
+        "prompt_sha256": "e6a51cc200177933ff1d3506a99e54fed2eabc0fe1858f70cadd04d2662fe647"
+      }
+    },
+    {
+      "id": "ost-v1.1-0304",
+      "original_label": 2,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "fr",
+      "document_language": "de",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 4090,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-3-offset-0",
+          "paragraph_id": "page-3-offset-0",
+          "page": 3,
+          "text": "3\nBundesgesetz über die Ziele im Klimaschutz, die Innovation \nund die Stärkung der Energie  sicherheit (indirekter Gegenvor -\nschlag zur Gletscher-Initiative)\nIn Kürze  6\nIm Detail  24\nArgumente  30\nAbstimmungstexte   34\nÄnderung vom 16. Dezember 2022 des Covid-19-Gesetzes\nIn Kürze  8\nIm Detail  42\nArgumente  48\nAbstimmungstext   52\nErste Vorlage\nZweite Vorlage\nDritte Vorlage\nInhaltsverzeichnis\nDie App zu den  \nAbstimmungen:    \nV\noteInfo\nDie Videos zu den  \nA\nbstimmungen:   \n  admin.ch/videos-de\nUmsetzung des OECD/G20-Projekts zur Besteuerung grosser \nUnternehmensgruppen\nIn Kürze  4\nIm Detail  10\nArgumente  18\nAbstimmungstext   20",
+          "char_start": 0,
+          "char_end": 639,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+          "retrieval_score": 0.8289699554443359,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031009615384615385,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-54-offset-966",
+          "paragraph_id": "page-54-offset-966",
+          "page": 54,
+          "text": "Corona virus Sars-CoV-2 ausgesetzt waren, \nund zur Erstellung diesbezüglicher Statistiken verwendet werden. Sie dürfen insbe-\nsondere nicht zur Anordnung und Durchsetzung von Massnahmen nach den Arti-\nkeln 33–38 durch kantonale Behörden oder zu r polizeilichen, stra frechtlichen oder \nnachrichtendienstlichen Verwertung verwendet werden. \n3 Die Teilnahme an den Systemen ist für alle Personen freiwillig. Behörden, Unter-\nnehmen und Einzelpersonen dürfen keine Person aufgrund ihrer Teilnahme oder \nNichtteilnahme bevorzugen oder benachteil igen; abweichende Vereinbarungen sind \nunwirksam. \n4 Eine Person, die von einem der Systeme darüber benachrichtigt wurde, dass sie \npotenziell dem Coronavirus Sars-CoV-2 ausgesetzt war, kann gegen Nachweis der \nBenachrichtigung kostenlos Tests auf Infektion mit dem Coronavirus durchführen \nlassen. \n5 Die Systeme sind nach folgenden Grundsätzen ausgestaltet: \na. Bei der Datenbearbeitung werden al le angemessenen technischen und orga-\nnisatorischen Massnahmen getroffen, um zu verhindern, dass die teilneh-\nmenden Personen bestimmbar sind.  \n  \n5  SR 171.10 \n6 SR 818.101 \nCovid-19-Gesetz \n5 ",
+          "char_start": 966,
+          "char_end": 2102,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+          "retrieval_score": 0.7964611053466797,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030621785881252923,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0304",
+        "label": 1,
+        "probabilities": [
+          0.0030764843783579136,
+          0.9962853547370393,
+          0.0006381608846029785
+        ],
+        "context_tokens": 792,
+        "latency_seconds": 1.096915453672409,
+        "selected_passage_ids": [
+          "page-3-offset-0",
+          "page-54-offset-966"
+        ],
+        "pages": [
+          3,
+          54
+        ],
+        "prompt_sha256": "814650d6770b8bff46cfd1643cf66fe72ae54070ac7ff4e4a7a4e74508f3d637"
+      }
+    },
+    {
+      "id": "ost-v1.1-0338",
+      "original_label": 0,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "it",
+      "document_language": "de",
+      "original_context_passage_count": 12,
+      "original_context_tokens": 3941,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-32-offset-999",
+          "paragraph_id": "page-32-offset-999",
+          "page": 32,
+          "text": "e die SRG ihre Programme \ndeutlich reduzieren und Sendungen streichen. Insbesondere \nwürde es weniger Berichterstattung aus den Regionen geben \nund bestehende Standorte würden wegfallen. Auch könnten \nUnterhaltungssendungen und Sportprogramme wohl kaum \nmehr durch die SRG bereitgestellt werden. Ab dem Jahr 2029 \nwürde die SRG noch zirka 630 Millionen Franken aus der Abgabe \nerhalten – das wäre etwa halb so viel wie bisher. Dies ergeben \nPrognosen des Bundesamts für Kommunikation (BAKOM).5\n4 «Die SRG stellt sich neu auf und rückt näher zusammen  », Medien -\nmitteilung der SRG vom 30. Juni 2025 (  srgssr.ch > news-medien )\n5 Botschaft des Bundesrates vom 19. Juni 2024 zur Volksinitiative \n« 200 Franken sind genug! (SRG -Initiative)  »; BBl 2024 1720 Ziff. 4.2.1 \n(  fedlex.admin.ch > Bundesblatt > Ausgaben des Bundesblattes > \n2024 > Juli > 138 )\nGegenprojekt  \ndes Bundesrates\nSRG im Umbau\nFolgen der \nInitiative\nHalbierung  \nder Abgaben  \nfür die SRG",
+          "char_start": 999,
+          "char_end": 1960,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/MDRXrtFaVPNG/2026-03-08_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d0c794f37d6d2cb25e9969ed058e2a7d7c3e2508f7f03e2b5e90415d364f6170",
+          "retrieval_score": 0.8043394088745117,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.0315136476426799,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-27-offset-995",
+          "paragraph_id": "page-27-offset-995",
+          "page": 27,
+          "text": "e schweizerische Währung ist der Franken. \n2bis Die Schweizerische Nationalbank gewährleistet die Bargeldversorgung. \nII \nDieser Gegenentwurf wird Volk und Ständen zur Abstimmung unterbreitet. Sofern \ndie am 15. Februar 2023 eingereichte Volksi nitiative «Ja zu einer unabhängigen, \nfreien Schweizer Währung mit Münzen oder Banknoten (Bargeld ist Freiheit)» nicht \nzurückgezogen wird, wird er zusammen mit der Volksinitiative nach dem Verfahren \ngemäss Artikel 139b der Bundesverfassung Volk und Ständen zur Abstimmung un-\nterbreitet. \n  \n \n1 SR 101 \n2 BBl 2023 602 \n3 BBl 2024 1679 \n2 \nAbstimmungstext \nBundesbeschluss \nüber die schweizerische Währung und die Bargeldversorgung  \n(direkter Gegenentwurf zur Volksinitiative «Ja zu einer unabhängigen, \nfreien Schweizer Währung mit Münzen oder Banknoten  \n[Bargeld ist Freiheit]») \nvom 17. September 2025 \nDie Bundesversammlung der Schweizerischen Eidgenossenschaft,  \ngestützt auf Artikel 139 Absatz 5 der Bundesverfassung1, \nnach Prüfung der am 15. Februar 20232 eingereichten Volksinitiative  \n«Ja zu einer unabhängigen, freien Schweizer Währung mit Münzen oder Banknoten \n(Bargeld ist Freiheit)», ",
+          "char_start": 995,
+          "char_end": 2145,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/MDRXrtFaVPNG/2026-03-08_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d0c794f37d6d2cb25e9969ed058e2a7d7c3e2508f7f03e2b5e90415d364f6170",
+          "retrieval_score": 0.7822911739349365,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03057889822595705,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0338",
+        "label": 1,
+        "probabilities": [
+          0.04596671984813558,
+          0.9207708781570438,
+          0.033262401994820646
+        ],
+        "context_tokens": 923,
+        "latency_seconds": 1.0642884001135826,
+        "selected_passage_ids": [
+          "page-32-offset-999",
+          "page-27-offset-995"
+        ],
+        "pages": [
+          32,
+          27
+        ],
+        "prompt_sha256": "f1dd431f967aee1d7497316768bb9aac4a758791d00d66275feb3664988918c6"
+      }
+    },
+    {
+      "id": "ost-v1.1-0341",
+      "original_label": 0,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "it",
+      "document_language": "de",
+      "original_context_passage_count": 14,
+      "original_context_tokens": 4039,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-8-offset-0",
+          "paragraph_id": "page-8-offset-0",
+          "page": 8,
+          "text": "8 Erste Vorlage: «Löhne entlasten, Kapital gerecht besteuern»\nArgumente Initiativkomitee  1 6\nArgumente Bundesrat und Parlament  1 8\nAbstimmungstext  2 0\nVolksinitiative  \n«Löhne entlasten, Kapital \n g erecht besteuern»\nIm Detail ",
+          "char_start": 0,
+          "char_end": 230,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.849591076374054,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030621785881252923,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-3-offset-0",
+          "paragraph_id": "page-3-offset-0",
+          "page": 3,
+          "text": "3\nDie Videos zu den  \nAbstimmungen:\n  admin.ch/videos-de\nDie App zu den  \nAbstimmungen:\nVoteInfo\n \nVolksinitiative «Löhne entlasten, Kapital gerecht besteuern»\nIn Kürze  4  –  5\nIm Detail  8\nArgumente  1 6\nAbstimmungstext  2 0\nEhe für alle\nIn Kürze  6  – 7\nIm Detail  2 2\nArgumente  2 6\nAbstimmungstext  3 0\nErste Vorlage\nZweite Vorlage ",
+          "char_start": 0,
+          "char_end": 337,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.8408702611923218,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03055037313432836,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0341",
+        "label": 1,
+        "probabilities": [
+          0.006754499323651471,
+          0.9864322023728909,
+          0.006813298303457524
+        ],
+        "context_tokens": 476,
+        "latency_seconds": 1.1126214265823364,
+        "selected_passage_ids": [
+          "page-8-offset-0",
+          "page-3-offset-0"
+        ],
+        "pages": [
+          8,
+          3
+        ],
+        "prompt_sha256": "2b09132ce2b5ac7c882d3e7bd7db8607559398c4dbc6d0b9138510b0e344b6e4"
+      }
+    },
+    {
+      "id": "ost-v1.1-0363",
+      "original_label": 2,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "it",
+      "document_language": "fr",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 4026,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-19-offset-0",
+          "paragraph_id": "page-19-offset-0",
+          "page": 19,
+          "text": "19\nLe projet respecte les principes du fédéralisme  : les can-\ntons exécuteront les dispositions régissant l’impôt complémen -\ntaire et pourront, fondamentalement, utiliser librement les \nrecettes qui leur reviennent. Ils devront néanmoins tenir \ncompte des communes de manière appropriée.\nLa modification constitutionnelle proposée permettra au \nConseil fédéral d’introduire l’impôt complémentaire dès 2024, \npar voie d’ordonnance. Le Conseil fédéral fera entrer en vigueur \nl’ordonnance lorsque d’autres États introduiront l’imposition \nminimale. Il aura alors six ans pour soumettre un projet de loi \nau Parlement.\nUne mise en œuvre initiale par le biais d’une ordonnance \na aussi un avantage : lorsque le Parlement édictera la loi,  \nil pourra tenir compte de l’expérience acquise avec l’impôt \ncomplémentaire et procéder, le cas échéant, aux adaptations \nrequises. \nPour toutes ces raisons, le Conseil fédéral et le Parlement \nvous recommandent d’accepter l’arrêté fédéral sur une imposi -\ntion particulière des grands groupes d’entreprises (Mise en \nœuvre du projet conjoint de l’OCDE et du G20 sur l’imposition \ndes grands groupes d’entreprises).\nOui\n admin.ch/imposition-ocde\nRespect du ",
+          "char_start": 0,
+          "char_end": 1195,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/Lv5UWt6X1iUj/2023-06-18_explications_du_conseil_federal.pdf",
+          "source_sha256": "925a6f553a6f67059cebacccfa7d4efcffc3a31d5441d9c978a57546b6b8bdd6",
+          "retrieval_score": 0.8608049750328064,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03125763125763126,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-22-offset-0",
+          "paragraph_id": "page-22-offset-0",
+          "page": 22,
+          "text": "22  22 Premier objet  : projet de l’OCDE et du G20\nImposition particulière des grands groupes d’entreprises. AF \n4 \n4 Le Conseil fédéral peut déroger aux princi pes énoncés à l’al. 2 s’il estime que cela \nest nécessaire pour permettre la mise en œuvre de l’imposition minimale. Il peut \ndéclarer applicables les règl es types internationales et les réglementations connexes. \nIl peut aussi déléguer ces compétences au Département fédéral des finances. \n5 Les cantons exécutent les dispositions ré gissant l’impôt complémentaire sous la \nsurveillance de l’Administration fédérale des contributions. Le Conseil fédéral peut \noctroyer des indemnités pour les charges administratives liées à l’exécution de ces \ndispositions. \n6 Le produit brut de l’impôt complémentai re revient à raison de 75 % aux cantons \nauxquels les entités constitutives sont rattac hées fiscalement. Les cantons tiennent \ncompte des communes de manière appropriée. Le produit brut de l’impôt complé-\nmentaire sur les activités exonérées de l’impôt sur le bénéfice des entités constitu-\ntives de la Confédération, des cantons et des communes revient à la collectivité \npublique concernée. ",
+          "char_start": 0,
+          "char_end": 1159,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/Lv5UWt6X1iUj/2023-06-18_explications_du_conseil_federal.pdf",
+          "source_sha256": "925a6f553a6f67059cebacccfa7d4efcffc3a31d5441d9c978a57546b6b8bdd6",
+          "retrieval_score": 0.8429697155952454,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030834914611005692,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0363",
+        "label": 1,
+        "probabilities": [
+          0.10875855003917773,
+          0.6211008827421639,
+          0.27014056721865837
+        ],
+        "context_tokens": 836,
+        "latency_seconds": 1.0842444002628326,
+        "selected_passage_ids": [
+          "page-19-offset-0",
+          "page-22-offset-0"
+        ],
+        "pages": [
+          19,
+          22
+        ],
+        "prompt_sha256": "3ef6fc380771642d9e2eeb1d6ec44bf666d1571fac207255fdbfff6f0dcc0692"
+      }
+    },
+    {
+      "id": "ost-v1.1-0946",
+      "original_label": 2,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "it",
+      "document_language": "fr",
+      "original_context_passage_count": 13,
+      "original_context_tokens": 4027,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-28-offset-984",
+          "paragraph_id": "page-28-offset-984",
+          "page": 28,
+          "text": " sur dix ans. \nLe projet prévoit que la Suisse soit neutre sur le plan \nclimatique d’ici à 2050. Il contient les mesures nécessaires pour \navancer dans cette direction. D’autres mesures requises pour \natteindre cet objectif seront définies dans des lois distinctes. \nProcéder ainsi permet de tenir compte des progrès techno -\nlogiques. Le référendum peut être lancé contre chacune des \nlois concernées ; s’il aboutit, le peuple a le dernier mot.\nDeuxième objet  : loi sur le climat et l’innovation\nExtraction et \nstockage du CO2\nL’administration va \nde l’avant\nPas de nouvelles \ntaxes\nParticipation \ndémocratique",
+          "char_start": 984,
+          "char_end": 1596,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/Lv5UWt6X1iUj/2023-06-18_explications_du_conseil_federal.pdf",
+          "source_sha256": "925a6f553a6f67059cebacccfa7d4efcffc3a31d5441d9c978a57546b6b8bdd6",
+          "retrieval_score": 0.8245594501495361,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03200204813108039,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-29-offset-0",
+          "paragraph_id": "page-29-offset-0",
+          "page": 29,
+          "text": "29\nLe projet est un contre-projet indirect à l’initiative pour \nles glaciers, que le comité d’initiative a retirée au profit de \ncelui-ci aux conditions suivantes  : si le peuple accepte le projet, \nl’initiative n’a plus lieu d’être ; s’il le rejette, il reviendra au \ncomité d’initiative de décider si l’initiative pour les glaciers doit \nêtre soumise au peuple.\nUn approvisionnement énergétique neutre sur le plan climatique \nest possible\nDeux études 3 établies sur mandat de la Confédération montrent \nqu’il est possible pour la Suisse, tant techniquement que financière -\nment, de s’approvisionner en énergie tout en respectant la neutra -\nlité climatique d’ici à 2050. Les technologies nécessaires sont dispo -\nnibles ou en train d’être développées. Pour remplacer le gaz et  \nle mazout, la Suisse aura besoin de plus d’électricité. Il faut donc \ndévelopper en particulier les énergies renouvelables telles que \nl’hydraulique et le photovoltaïque (panneaux solaires). En parallèle, \naugmenter l’efficacité ou – comme le projet le prévoit – remplacer \nles chauffages électriques permettra d’économiser beaucoup \nd’électricité.\n3 Energieperspektiven 2050+. Technischer Bericht (2020), Prognos ",
+          "char_start": 0,
+          "char_end": 1196,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/Lv5UWt6X1iUj/2023-06-18_explications_du_conseil_federal.pdf",
+          "source_sha256": "925a6f553a6f67059cebacccfa7d4efcffc3a31d5441d9c978a57546b6b8bdd6",
+          "retrieval_score": 0.8169054985046387,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031009615384615385,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0946",
+        "label": 1,
+        "probabilities": [
+          0.010402858612935606,
+          0.6345704865669208,
+          0.3550266548201435
+        ],
+        "context_tokens": 707,
+        "latency_seconds": 1.1306919381022453,
+        "selected_passage_ids": [
+          "page-28-offset-984",
+          "page-29-offset-0"
+        ],
+        "pages": [
+          28,
+          29
+        ],
+        "prompt_sha256": "55823ddc5c775d3479ec9bf3c785a9046de8ccca3f9dcfaf683f5276e86cfb87"
+      }
+    }
+  ],
+  "evidence_caution": "Preservation is a model sensitivity diagnostic, not human proof of sufficiency or attribution. A changed decision does not by itself invalidate source evidence. No absence proof for Neutral.",
+  "gpu_forward_count": 192,
+  "tokens_p50_p95": {
+    "neighbors": [
+      3926.0,
+      4084.95
+    ],
+    "diverse": [
+      4033.5,
+      4091.1
+    ]
+  }
+}

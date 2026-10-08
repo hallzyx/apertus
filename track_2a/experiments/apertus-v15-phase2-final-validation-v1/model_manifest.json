@@ -1,0 +1,89 @@
+{
+  "repo": "swiss-ai/Apertus-v1.5-8B",
+  "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+  "weights_verified": true,
+  "files": [
+    {
+      "name": "LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "name": "README.md",
+      "sha256": "18a51aaaa92c5e286580dfa30e2fd065fac4c81b8e30776c0e294afafd5edc60",
+      "bytes": 16103
+    },
+    {
+      "name": "chat_template.jinja",
+      "sha256": "d23af2850029e9df88bb017e06e0c14a0462604588f1dbe4f519cdfac3e260e0",
+      "bytes": 16614
+    },
+    {
+      "name": "config.json",
+      "sha256": "391963f8b992c8445f68123306c8fb4aff1df62ddb5477989efd5cd2d491b686",
+      "bytes": 2607
+    },
+    {
+      "name": "generation_config.json",
+      "sha256": "9131f56adebe0d591ba8ddc2d18d18edaf762a1ebce6750b24319c86b1d7d6d5",
+      "bytes": 157
+    },
+    {
+      "name": "model-apertus-model-00001-of-00004.safetensors",
+      "sha256": "60d31e2d767d389ba990972a21cd0524e18c1ed39b65fcc727285db613ea81dc",
+      "bytes": 4026725622
+    },
+    {
+      "name": "model-apertus-model-00002-of-00004.safetensors",
+      "sha256": "8a0ae0ba1c37a5571276f042085c8f782b6f02c68a888acf1ae35c33b8253bd9",
+      "bytes": 4701918018
+    },
+    {
+      "name": "model-apertus-model-00003-of-00004.safetensors",
+      "sha256": "17f4ce43b67eacee899b6f23664d6b457259b2fbc89f5561cd69831d34a412c0",
+      "bytes": 3791726250
+    },
+    {
+      "name": "model-apertus-model-00004-of-00004.safetensors",
+      "sha256": "40bf7c8ba48bfe6748b6cf796bfe65cea0115fe74d0aa38ad5fcdb6af2cf3e0d",
+      "bytes": 4697854302
+    },
+    {
+      "name": "model-vision_tokenizer-model.safetensors",
+      "sha256": "0f358b3c908d216172675cd57184ff6ce310705e385fedfd31c6f34e8197f9c8",
+      "bytes": 872647552
+    },
+    {
+      "name": "model-wavtokenizer-model.safetensors",
+      "sha256": "b2632390709c3cb1319d1a0c1387d5364587b8a78a00efa2e93f15185ae82c02",
+      "bytes": 305269780
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "sha256": "d7277f7abd8d669b6711987f41c90acffadf3a36e8589d7b9172275220836818",
+      "bytes": 100124
+    },
+    {
+      "name": "processor_config.json",
+      "sha256": "6ac8e5d4654417f54c73ae7d5949371d1269785e34e11ec424682bb652367711",
+      "bytes": 763
+    },
+    {
+      "name": "special_tokens_map.json",
+      "sha256": "358c249e2fb29060c6b73157d428853b0c48710deffc8ee670ab1013880946c9",
+      "bytes": 552
+    },
+    {
+      "name": "tokenizer.json",
+      "sha256": "1f2f6198ea5789e5a90ec7c5ec5cf0d5242cf5b8de007105537c91d777581582",
+      "bytes": 44028400
+    },
+    {
+      "name": "tokenizer_config.json",
+      "sha256": "43cdc9d1f25c45ae88cd4ee6509ec63a8088a19af1dc7300d13b874a626de871",
+      "bytes": 2030
+    }
+  ],
+  "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+  "token_persisted": false
+}

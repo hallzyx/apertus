@@ -1,11 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 5.1267642106700055,
-  "actual_spend": 4.4795148729000065,
+  "estimated_spend": 5.10084564673334,
+  "actual_spend": 4.743273630120008,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [],
-  "remaining_estimated_budget": 4.8732357893299945,
+  "remaining_estimated_budget": 4.89915435326666,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -474,21 +474,46 @@
       "phase": 2,
       "last_provider_status_verified_at": "2026-10-07T22:53:44.469600+00:00",
       "destroyed_verified_at": "2026-10-08T00:46:04.445015+00:00"
+    },
+    {
+      "instance_id": 54745581,
+      "offer_id": 21004752,
+      "gpu": "RTX A6000",
+      "gpu_ram_mb": 49140,
+      "disk_gb": 60,
+      "hourly_gpu_usd": 0.39999999999999997,
+      "hourly_storage_usd": 0.016666666666666663,
+      "hourly_total_usd": 0.41666666666666663,
+      "expected_runtime_hours": 0.6,
+      "conservative_runtime_hours": 1.25,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 3.90625e-06,
+      "estimated_total_usd_bound": 0.6209505208333332,
+      "purpose": "Phase2 frozen candidate matched wrong-document checks, original-full A6000 recheck, three real PDF CLI calls and actual frontend inference; no training/no consumed310/no LoRA",
+      "new_gpu_forward_passes_bound": 1024,
+      "cached_features_cannot_substitute": "Changed input requires fresh forward; old full/retrieval cache reused for CPU sensitivity diagnostics",
+      "git_commit": "e51364a0dff4f0a4eb5bedc38ec2c50b8a82f672",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "created_at": "2026-10-08T00:48:16.024284+00:00",
+      "automatic_cleanup_deadline_seconds": 4500,
+      "status": "destroyed_verified",
+      "phase": 2,
+      "destroyed_verified_at": "2026-10-08T01:34:49.877161+00:00"
     }
   ],
-  "account_credit_observed": 5.5204851270999935,
+  "account_credit_observed": 5.256726369879992,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-08T00:46:04.445015+00:00",
-  "outstanding_task_lease_reservations_usd": 1.3501171875,
+  "account_checked_at": "2026-10-08T01:34:49.877161+00:00",
+  "outstanding_task_lease_reservations_usd": 0.6209505208333332,
   "all_task_instances_destroyed_verified": false,
   "phase2": {
     "authorized_additional_discretionary_cap_usd": 4.5,
     "credit_at_start": 6.534131191329995,
     "started_at": "2026-10-07T21:39:52.332096+00:00",
-    "gpu_leases_created": 2,
+    "gpu_leases_created": 3,
     "additional_observed_spend_usd": 0.9896326681299996,
-    "status": "context_study_running",
+    "status": "final_validation_running",
     "reserve_usd": 2,
-    "estimated_reserved_spend_usd": 1.3501171875
+    "estimated_reserved_spend_usd": 0.6209505208333332
   }
 }
