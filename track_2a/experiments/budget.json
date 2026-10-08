@@ -1,11 +1,13 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 5.10084564673334,
+  "estimated_spend": 5.3642241509533415,
   "actual_spend": 4.743273630120008,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
-  "active_instance_ids": [],
-  "remaining_estimated_budget": 4.89915435326666,
+  "active_instance_ids": [
+    54752495
+  ],
+  "remaining_estimated_budget": 4.6357758490466585,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -499,6 +501,32 @@
       "status": "destroyed_verified",
       "phase": 2,
       "destroyed_verified_at": "2026-10-08T01:34:49.877161+00:00"
+    },
+    {
+      "instance_id": 54752495,
+      "offer_id": 21004766,
+      "gpu": "RTX A6000",
+      "gpu_ram_mb": 49140,
+      "disk_gb": 60,
+      "hourly_gpu_usd": 0.39999999999999997,
+      "hourly_storage_usd": 0.016666666666666663,
+      "hourly_total_usd": 0.41666666666666663,
+      "expected_runtime_hours": 0.75,
+      "conservative_runtime_hours": 1.25,
+      "download_gb_bound": 30,
+      "download_rate_usd_gb": 3.90625e-06,
+      "estimated_total_usd_bound": 0.6209505208333332,
+      "purpose": "Phase2 separate frozen 8k accuracy verification: matched wrong-document checks, three actual PDF CLI calls, actual frontend and evidence-only probes. Reuses verified full recheck and unchanged neighbor/diversity ablations; no training/no consumed310/no LoRA",
+      "new_gpu_forward_passes_bound": 568,
+      "cached_features_cannot_substitute": "Changed input requires fresh forward; old full/retrieval cache reused for CPU sensitivity diagnostics",
+      "git_commit": "99a64fb40c63f44843379e2bf6a27f1c5acc80ee",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "account_credit_before_creation": 5.256726369879992,
+      "account_checked_before_creation_at": "2026-10-08T01:34:53.744485+00:00",
+      "created_at": "2026-10-08T01:34:53.744485+00:00",
+      "automatic_cleanup_deadline_seconds": 4500,
+      "status": "created",
+      "phase": 2
     }
   ],
   "account_credit_observed": 5.256726369879992,
@@ -510,7 +538,7 @@
     "authorized_additional_discretionary_cap_usd": 4.5,
     "credit_at_start": 6.534131191329995,
     "started_at": "2026-10-07T21:39:52.332096+00:00",
-    "gpu_leases_created": 3,
+    "gpu_leases_created": 4,
     "additional_observed_spend_usd": 0.9896326681299996,
     "status": "final_validation_running",
     "reserve_usd": 2,
