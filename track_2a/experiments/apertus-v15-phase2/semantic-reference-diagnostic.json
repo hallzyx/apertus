@@ -12706,5 +12706,6 @@
     "numpy": "2.2.6"
   },
   "execution_device": "CPU cloud",
-  "producer_log": "SEMANTIC_REFERENCE_COMPLETED"
+  "producer_log": "SEMANTIC_REFERENCE_COMPLETED",
+  "reference_identity_alignment_verified": true
 }
