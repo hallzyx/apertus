@@ -32,9 +32,8 @@ def main():
     try:download('/workspace/model',token)
     finally:del token
     from ost_nli.dense import download as download_e5,MultilingualRetriever
-    retriever=None
-    if condition.startswith('hybrid-'):
-        download_e5('/workspace/e5');retriever=MultilingualRetriever('/workspace/e5')
+    # Also needed by the registered bounded evidence/neighbor diagnostics.
+    download_e5('/workspace/e5');retriever=MultilingualRetriever('/workspace/e5')
     source=Path('/workspace/phase2-source');full=Path('/workspace/phase2-booklets')
     run(['python','track_2a/scripts/prepare_phase2_source.py','--output',str(source)])
     run(['python','track_2a/scripts/prepare_booklets.py','--source',str(source/'selected-official.jsonl'),
@@ -144,10 +143,13 @@ def main():
         finally:front.shutdown();front.server_close();front_thread.join()
     finally:server.shutdown();server.server_close();thread.join()
     (root/'cli-integration.json').write_text(json.dumps(integration,indent=2,allow_nan=False)+'\n')
+    from phase2_context_diagnostics import run_diagnostics
+    candidate_predictions=correct if condition=='full' else json.loads((source_head.parent/'predictions.json').read_text())['predictions']
+    diagnostics=run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,root)
     (root/'model_manifest.json').write_bytes(Path('/workspace/model/verified_manifest.json').read_bytes())
     if retriever:(root/'retriever_manifest.json').write_bytes(Path('/workspace/e5/verified_manifest.json').read_bytes())
     files=[{'path':str(p.relative_to(root)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file() and p.name!='experiment.json']
-    record.update(status='completed',files=files,gpu_forward_count=832 if condition!='full' else 280,
+    record.update(status='completed',files=files,gpu_forward_count=(832 if condition!='full' else 280)+diagnostics['gpu_forward_count'],
         full_recheck_reason='Resolve original A40-correct versus A6000-control precision/hardware confound; validation only')
     (root/'experiment.json').write_text(json.dumps(record,indent=2)+'\n')
     run(['python','track_2a/scripts/export_vast_cache.py','--relative-root',str(root)])

@@ -73,7 +73,12 @@ def main():
                 assert prediction['id']==r['id'] and prediction['donor_booklet_id']!=r['booklet_id']
                 assert prediction['donor_language']==r['document_language']
         metrics=evaluate(rows,pred);f1=metrics['macro_f1'];baseline=candidate_metrics['macro_f1']
-        controls[f'wrong-{seed}']={'original_label_retention_metrics':metrics,'retention':f1/baseline,'gap':baseline-f1}
+        neutral=[p for p in pred if p['label']==1]
+        controls[f'wrong-{seed}']={'original_label_retention_metrics':metrics,'retention':f1/baseline,'gap':baseline-f1,
+            'neutral_prediction_rate':len(neutral)/len(pred),
+            'mean_neutral_confidence':sum(p['probabilities'][1] for p in neutral)/len(neutral) if neutral else None,
+            'prediction_change_rate':sum(p['label']!=candidate_by[p['id']]['label'] for p in pred)/len(pred),
+            'calibration_caution':'Probabilities against original labels here do not assess true swapped-premise NLI calibration'}
         if f1/baseline>=.90 or baseline-f1<=.05:failures.append(f'wrong-{seed}_grounding_guard')
     emptyfolder=controlroot/'claim-only';manifest=json.loads((emptyfolder/'experiment.json').read_text())
     for entry in manifest['files']:assert sha(emptyfolder/entry['path'])==entry['sha256']
@@ -95,6 +100,29 @@ def main():
     cli=json.loads((root/'cli-integration.json').read_text());front=json.loads((root/'frontend-real-inference.json').read_text())
     assert len(cli)==3 and {(p['claim_language'],p['document_language']) for p in cli}=={('de','fr'),('fr','it'),('it','de')}
     if not all(p['label_reproduced'] for p in cli) or not front['label_reproduced']:failures.append('real_pdf_api_replication')
+    diagnostics=json.loads((root/'bounded-context-evidence-diagnostics.json').read_text())
+    sample=[]
+    for language in ('de','fr','it'):
+        for label in (0,1,2):sample.extend([r for r in rows if r['claim_language']==language and r['label']==label][:10])
+    assert len(sample)==90
+    head4path=Path(proposal['comparisons']['hybrid-4k']['source_head']);head4=json.loads(head4path.read_text())
+    assert sha(head4path)==proposal['comparisons']['hybrid-4k']['head_sha256']
+    diagnostic_predictions={name:readlines(root/f'{name}-diagnostic-predictions.jsonl') for name in ('neighbors','diverse')}
+    for name,values in diagnostic_predictions.items():
+        measured=evaluate(sample,values)
+        assert abs(measured['macro_f1']-diagnostics['neighbors_same90' if name=='neighbors' else 'diversity_same90']['macro_f1'])<1e-12
+        assert all(p['context_tokens']<=4096 for p in values)
+    outputs={(name,p['id']):p for name,values in diagnostic_predictions.items() for p in values}
+    outputs.update({('evidence-only',p['id']):p['output'] for p in diagnostics['evidence_proofs']})
+    with np.load(root/'bounded-diagnostic-features.npz',allow_pickle=False) as cache:
+        assert len(cache['ids'])==len(outputs)==diagnostics['gpu_forward_count']
+        for iid,mode,x in zip(cache['ids'].tolist(),cache['modes'].tolist(),cache['hidden']):
+            h=head if mode=='evidence-only' else head4
+            z=((x.astype(np.float64)-np.asarray(h['feature_mean']))/np.asarray(h['feature_scale']))@np.asarray(h['coefficients']).T+np.asarray(h['intercept'])
+            z/=h['temperature'];q=np.exp(z-z.max());q/=q.sum()
+            output=outputs[(mode,iid)]
+            assert int(q.argmax())==output['label'] and np.allclose(q,output['probabilities'],atol=1e-6)
+    assert record['gpu_forward_count']==(832 if condition!='full' else 280)+diagnostics['gpu_forward_count']
     selected=condition if not failures else 'full'
     chosen=candidate if selected==condition else fresh;by={p['id']:p for p in chosen}
     seen=set();unique=[]
@@ -120,6 +148,7 @@ def main():
         'full_recheck':replication,'context_matched_controls':controls,
         'final_validation_metrics':evaluate(rows,chosen),'deduplicated_macro_f1':evaluate(unique,[by[r['id']] for r in unique])['macro_f1'],
         'confidence_buckets':buckets,'final_validation_errors':errors,
+        'bounded_neighbor_diversity_evidence_diagnostics':diagnostics,
         'by_voting_event':{event:evaluate([r for r in rows if r['booklet_id']==event],[by[r['id']] for r in rows if r['booklet_id']==event]) for event in sorted({r['booklet_id'] for r in rows})},
         'real_pdf_cli':cli,'real_frontend':front,'actual_gpu_forward_count':record['gpu_forward_count'],
         'training_performed':False,'lora_performed':False,'consumed310_accessed':False,'deployment_changed':False,
