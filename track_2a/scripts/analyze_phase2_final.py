@@ -137,6 +137,14 @@ def main():
     assert record['gpu_forward_count']==(832 if condition!='full' else 280)+diagnostics['gpu_forward_count']
     selected=condition if not failures else 'full'
     chosen=candidate if selected==condition else fresh;by={p['id']:p for p in chosen}
+    if selected=='full':selected_base={p['id']:p for p in base}
+    else:
+        directory=Path('track_2a/experiments/apertus-v15-phase2-context-v1')/selected
+        with np.load(directory/'validation.npz',allow_pickle=False) as cache:
+            assert cache['ids'].tolist()==[r['id'] for r in rows]
+            scores=cache['option_logits'].astype(np.float64)
+        q=np.exp(scores-scores.max(1,keepdims=True));q/=q.sum(1,keepdims=True)
+        selected_base={r['id']:{'id':r['id'],'label':int(p.argmax()),'probabilities':p.tolist()} for r,p in zip(rows,q)}
     seen=set();unique=[]
     for r in rows:
         key=(r['document_id'],' '.join(words(r['claim'])))
@@ -151,6 +159,8 @@ def main():
     errors=[{'id':r['id'],'gold':r['label'],'predicted':by[r['id']]['label'],
         'claim_language':r['claim_language'],'document_language':r['document_language'],
         'booklet_id':r['booklet_id'],'claim':r['claim'],
+        'base_restricted_label_same_context':selected_base[r['id']]['label'],
+        'base_correct_head_wrong_same_context':selected_base[r['id']]['label']==r['label'],
         'original_source_inspection':{k:v for k,v in original_errors.get(r['id'],{}).items()
             if k in ('suspected_failure_mode','notes','diagnostic_comparison')},
         'cause':'Undetermined; original inspected hypothesis, if present, is not proof of cause for the selected context'}
@@ -160,6 +170,12 @@ def main():
         'full_recheck':replication,'context_matched_controls':controls,
         'final_validation_metrics':evaluate(rows,chosen),'deduplicated_macro_f1':evaluate(unique,[by[r['id']] for r in unique])['macro_f1'],
         'confidence_buckets':buckets,'final_validation_errors':errors,
+        'selected_context_base_metrics':evaluate(rows,list(selected_base.values())),
+        'selected_base_head_disagreement':{
+            'both_correct':sum(by[r['id']]['label']==r['label'] and selected_base[r['id']]['label']==r['label'] for r in rows),
+            'head_correct_base_wrong':sum(by[r['id']]['label']==r['label'] and selected_base[r['id']]['label']!=r['label'] for r in rows),
+            'base_correct_head_wrong':sum(by[r['id']]['label']!=r['label'] and selected_base[r['id']]['label']==r['label'] for r in rows),
+            'both_wrong':sum(by[r['id']]['label']!=r['label'] and selected_base[r['id']]['label']!=r['label'] for r in rows)},
         'bounded_neighbor_diversity_evidence_diagnostics':diagnostics,
         'by_voting_event':{event:evaluate([r for r in rows if r['booklet_id']==event],[by[r['id']] for r in rows if r['booklet_id']==event]) for event in sorted({r['booklet_id'] for r in rows})},
         'real_pdf_cli':cli,'real_frontend':front,'actual_gpu_forward_count':record['gpu_forward_count'],
