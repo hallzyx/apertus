@@ -40,6 +40,8 @@ def main():
         assert sha(prior_root/'experiment.json')==prior['source_experiment_sha256']==record['reused_full_source_experiment_sha256']
         for entry in json.loads((prior_root/'experiment.json').read_text())['files']:
             assert sha(prior_root/entry['path'])==entry['sha256']
+        for name in ('correct-full-recheck.jsonl','correct-full-recheck-metrics.json','neighbors-diagnostic-predictions.jsonl','diverse-diagnostic-predictions.jsonl'):
+            assert sha(root/name)==sha(prior_root/name)
     controlroot=Path('track_2a/experiments/apertus-v15-phase2-controls-v1')
     contract=json.loads((controlroot/'contract.json').read_text())
     originalhead=Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json')
