@@ -31,7 +31,7 @@ def main():
  positions=np.arange(3);width=.25
  for index,(name,m,color) in enumerate([('Original full',full,'#858585'),('4k',context['comparisons']['hybrid-4k']['matched_head'],'#65a3bc'),('8k',context['comparisons']['hybrid-8k']['matched_head'],'#d45b24')]):
   right.bar(positions+(index-1)*width,[m['per_class'][str(k)]['f1'] for k in range(3)],width=width,label=name,color=color)
- right.set(xticks=positions,xticklabels=['Entailment','Neutral','Contradiction'],ylim=(.75,1),ylabel='Class F1',title='All three official classes')
+ right.set(xticks=positions,xticklabels=['Entailment','Neutral','Contradiction'],ylim=(0,1),ylabel='Class F1',title='All three official classes')
  right.tick_params(axis='x',labelsize=9);right.legend(fontsize=9,loc='lower left');right.grid(axis='y',alpha=.2)
  fig.suptitle('Frozen Apertus v1.5: verified development results',fontsize=16,y=.98)
  fig.text(.5,.91,'276 rows · 207 distinct pairs · 3 voting events · no new held-out evaluation',ha='center',fontsize=10,color='#555555')
