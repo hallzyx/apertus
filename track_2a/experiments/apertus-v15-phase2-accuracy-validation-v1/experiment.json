@@ -1,0 +1,95 @@
+{
+  "status": "completed",
+  "context": "hybrid-8k",
+  "head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+  "validation_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+  "model_metadata": {
+    "repo": "swiss-ai/Apertus-v1.5-8B",
+    "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.14.0.dev0",
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_bytes": 50908823552,
+    "precision": "BF16 text; official tokenizer modules remain FP32",
+    "quantization": null
+  },
+  "git_commit": "99a64fb40c63f44843379e2bf6a27f1c5acc80ee",
+  "source_script_sha256": "9465422bd8176de1bdb93faba557205cbcd43544073ce18eb749318b0a907b67",
+  "engine_sha256": "3ff9b62a1178cbe401d66757a29bbd57add9d26de1fe804cbb851b9fb37b34d4",
+  "pipeline_sha256": "310e0c13a68141d5b60bcb8e2d13b153ee05452fe764db264891058d022b88de",
+  "training_performed": false,
+  "holdout_accessed": false,
+  "accuracy_extension": true,
+  "full_recheck_reused": true,
+  "interpretation": "Original labels measure retention under swapped premises; actual swapped-pair NLI labels unknown",
+  "reused_full_source_experiment_sha256": "b11d2fd4cb4619c33621e4deb36d5545b024caf84e6731502b161c44397a6198",
+  "files": [
+    {
+      "path": "bounded-context-evidence-diagnostics.json",
+      "sha256": "b3e1fa783d61da642322af2b241de0206d678c389d9a09745e8957d5ef41aef1"
+    },
+    {
+      "path": "bounded-diagnostic-features.npz",
+      "sha256": "c8e72155a5e63470498e963549036817f3853c1aab9aa974fcbcdc571dff5872"
+    },
+    {
+      "path": "cli-integration.json",
+      "sha256": "8d314a4b0ae46af366db3bb33065d6da8c0b520b4b2456af3c31c14733830149"
+    },
+    {
+      "path": "correct-full-recheck-metrics.json",
+      "sha256": "631816e804edf8cb0e771c5425185edf7532ef640afc0243ec69df49173ed14b"
+    },
+    {
+      "path": "correct-full-recheck.jsonl",
+      "sha256": "f48746212dc55ef491fd26af072278826e1f3b7cf8b3b7b1d8ccf07b082c0705"
+    },
+    {
+      "path": "diverse-diagnostic-predictions.jsonl",
+      "sha256": "c07704841b1bb89a879ffac313c4c1797bd1ee7c3b267efc3f83ee74e7209626"
+    },
+    {
+      "path": "frontend-real-inference.json",
+      "sha256": "750d9357c1f7bbf3d7917f0031f2edd570a061b5dd6896f2fc78c1aeaf455c54"
+    },
+    {
+      "path": "model_manifest.json",
+      "sha256": "0743422fe366104c8e990cdf258023802cfc903c21b4864aaafb4d5076957541"
+    },
+    {
+      "path": "neighbors-diagnostic-predictions.jsonl",
+      "sha256": "e1a370647b3b0156a57dc2fcf698e64e8616e1609feb8b2d385fd75720a4e152"
+    },
+    {
+      "path": "retriever_manifest.json",
+      "sha256": "95923f10360f7580f48362369291b7d719e76ac0fdd3b0fcbcffb1e804fbae57"
+    },
+    {
+      "path": "wrong-1337/metrics.json",
+      "sha256": "46710dcb491eb22a12a2c2bb6e233d14a6f5c251f00e9cf9113ed13594dd027e"
+    },
+    {
+      "path": "wrong-1337/predictions.jsonl",
+      "sha256": "fc55b527697e83fd7cf6c27f78889f3b7338d3c76effe4e13239aad18856906d"
+    },
+    {
+      "path": "wrong-1337/validation.npz",
+      "sha256": "3266a1547d75892dd39acc33ddf91f153a5b2bd7b5c0d0c60369ed18060bda60"
+    },
+    {
+      "path": "wrong-42/metrics.json",
+      "sha256": "42f7353a8f81d26b1cbe3a40642b6bb79171968b7eb6ff0cf24b3387c3995109"
+    },
+    {
+      "path": "wrong-42/predictions.jsonl",
+      "sha256": "e46e67d6e571b255e51e44ad949b96c1305caf6bb84759b76820118b4813aa72"
+    },
+    {
+      "path": "wrong-42/validation.npz",
+      "sha256": "4d7e617bbfca28ad4b148d2354bf00a7f4db89d9042229b728be457af65daf3e"
+    }
+  ],
+  "gpu_forward_count": 568,
+  "full_recheck_reason": "Resolve original A40-correct versus A6000-control precision/hardware confound; validation only"
+}

@@ -1,0 +1,6037 @@
+{
+  "scope": "Validation-only bounded diagnostics, not architecture selection or independent-test estimates. No training and no consumed310.",
+  "sample_method": "First10 validation rows per gold-class/claim-language stratum;90 predetermined rows. Labels used only for analysis sampling, never messages.",
+  "unique_sample_claim_document_pairs": 72,
+  "sample_event_counts": {
+    "2021-09-26": 17,
+    "2023-06-18": 24,
+    "2026-03-08": 49
+  },
+  "deduplicated_sample_metrics": {
+    "direct-top20": {
+      "n": 72,
+      "macro_f1": 0.8645873233014135,
+      "accuracy": 0.8611111111111112,
+      "per_class": {
+        "0": {
+          "precision": 0.7777777777777778,
+          "recall": 0.875,
+          "f1": 0.8235294117647058,
+          "support": 24
+        },
+        "1": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9090909090909091,
+          "f1": 0.9302325581395349,
+          "support": 22
+        },
+        "2": {
+          "precision": 0.875,
+          "recall": 0.8076923076923077,
+          "f1": 0.84,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          1,
+          2
+        ],
+        [
+          1,
+          20,
+          1
+        ],
+        [
+          5,
+          0,
+          21
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "by_language": {
+        "de": {
+          "n": 22,
+          "macro_f1": 0.8189542483660132,
+          "accuracy": 0.8181818181818182,
+          "per_class": {
+            "0": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.7142857142857143,
+              "f1": 0.8333333333333334,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 0.7777777777777778,
+              "f1": 0.8235294117647058,
+              "support": 9
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              2,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 26,
+          "macro_f1": 0.8592592592592593,
+          "accuracy": 0.8461538461538461,
+          "per_class": {
+            "0": {
+              "precision": 0.7272727272727273,
+              "recall": 0.8888888888888888,
+              "f1": 0.8,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 0.7,
+              "f1": 0.7777777777777778,
+              "support": 10
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              1
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              3,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 24,
+          "macro_f1": 0.9165032679738562,
+          "accuracy": 0.9166666666666666,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "1": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 1.0,
+              "f1": 0.9333333333333333,
+              "support": 7
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              1,
+              1
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "by_language_pair": {
+        "de->de": {
+          "n": 4,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->fr": {
+          "n": 10,
+          "macro_f1": 0.7936507936507936,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->it": {
+          "n": 8,
+          "macro_f1": 0.75,
+          "accuracy": 0.75,
+          "per_class": {
+            "0": {
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5,
+              "support": 1
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.75,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->de": {
+          "n": 7,
+          "macro_f1": 0.6296296296296297,
+          "accuracy": 0.8571428571428571,
+          "per_class": {
+            "0": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->fr": {
+          "n": 4,
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->it": {
+          "n": 15,
+          "macro_f1": 0.8119658119658119,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334,
+              "f1": 0.7692307692307693,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666666,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->de": {
+          "n": 10,
+          "macro_f1": 0.8857142857142857,
+          "accuracy": 0.9,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 4
+            },
+            "1": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->fr": {
+          "n": 6,
+          "macro_f1": 0.8222222222222223,
+          "accuracy": 0.8333333333333334,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->it": {
+          "n": 8,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 56,
+        "macro_f1": 0.8260547937967293,
+        "accuracy": 0.8214285714285714,
+        "per_class": {
+          "0": {
+            "precision": 0.7,
+            "recall": 0.8235294117647058,
+            "f1": 0.7567567567567568,
+            "support": 17
+          },
+          "1": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1": 0.9032258064516129,
+            "support": 16
+          },
+          "2": {
+            "precision": 0.8571428571428571,
+            "recall": 0.782608695652174,
+            "f1": 0.8181818181818182,
+            "support": 23
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            1,
+            2
+          ],
+          [
+            1,
+            14,
+            1
+          ],
+          [
+            5,
+            0,
+            18
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 4009.347222222222,
+      "context_tokens_coverage": 1.0,
+      "average_latency_seconds": 1.862992336249186,
+      "latency_seconds_coverage": 1.0,
+      "calibration": {
+        "ece": 0.08594374919231108,
+        "ece_bins": 10,
+        "brier_score": 0.2112562838265971,
+        "negative_log_likelihood": 0.4097730855898728
+      },
+      "probability_coverage": 1.0,
+      "evidence": {
+        "n_annotated": 0,
+        "recall": null,
+        "precision": null,
+        "all_gold_retrieved": null,
+        "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+      }
+    },
+    "neighbors": {
+      "n": 72,
+      "macro_f1": 0.9054232804232804,
+      "accuracy": 0.9027777777777778,
+      "per_class": {
+        "0": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "support": 24
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523,
+          "support": 22
+        },
+        "2": {
+          "precision": 0.8571428571428571,
+          "recall": 0.9230769230769231,
+          "f1": 0.8888888888888888,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          0,
+          3
+        ],
+        [
+          1,
+          20,
+          1
+        ],
+        [
+          2,
+          0,
+          24
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "by_language": {
+        "de": {
+          "n": 22,
+          "macro_f1": 0.8597883597883597,
+          "accuracy": 0.8636363636363636,
+          "per_class": {
+            "0": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.7142857142857143,
+              "f1": 0.8333333333333334,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              1,
+              0,
+              8
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 26,
+          "macro_f1": 0.9296296296296296,
+          "accuracy": 0.9230769230769231,
+          "per_class": {
+            "0": {
+              "precision": 0.8888888888888888,
+              "recall": 0.8888888888888888,
+              "f1": 0.8888888888888888,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.9,
+              "recall": 0.9,
+              "f1": 0.9,
+              "support": 10
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              1
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              1,
+              0,
+              9
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 24,
+          "macro_f1": 0.9166666666666666,
+          "accuracy": 0.9166666666666666,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "2": {
+              "precision": 0.7777777777777778,
+              "recall": 1.0,
+              "f1": 0.875,
+              "support": 7
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              0,
+              2
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "by_language_pair": {
+        "de->de": {
+          "n": 4,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->fr": {
+          "n": 10,
+          "macro_f1": 0.7936507936507936,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "support": 3
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->it": {
+          "n": 8,
+          "macro_f1": 0.8518518518518517,
+          "accuracy": 0.875,
+          "per_class": {
+            "0": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->de": {
+          "n": 7,
+          "macro_f1": 0.6296296296296297,
+          "accuracy": 0.8571428571428571,
+          "per_class": {
+            "0": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->fr": {
+          "n": 4,
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->it": {
+          "n": 15,
+          "macro_f1": 0.9393939393939394,
+          "accuracy": 0.9333333333333333,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              5
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->de": {
+          "n": 10,
+          "macro_f1": 0.9153439153439153,
+          "accuracy": 0.9,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 4
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8888888888888888,
+              "support": 4
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->fr": {
+          "n": 6,
+          "macro_f1": 0.8222222222222223,
+          "accuracy": 0.8333333333333334,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->it": {
+          "n": 8,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 56,
+        "macro_f1": 0.8772875816993464,
+        "accuracy": 0.875,
+        "per_class": {
+          "0": {
+            "precision": 0.8235294117647058,
+            "recall": 0.8235294117647058,
+            "f1": 0.8235294117647058,
+            "support": 17
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333,
+            "support": 16
+          },
+          "2": {
+            "precision": 0.84,
+            "recall": 0.9130434782608695,
+            "f1": 0.875,
+            "support": 23
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            0,
+            3
+          ],
+          [
+            1,
+            14,
+            1
+          ],
+          [
+            2,
+            0,
+            21
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 3866.3888888888887,
+      "context_tokens_coverage": 1.0,
+      "average_latency_seconds": 0.9955289777782228,
+      "latency_seconds_coverage": 1.0,
+      "calibration": {
+        "ece": 0.040546923647662006,
+        "ece_bins": 10,
+        "brier_score": 0.13955722371084608,
+        "negative_log_likelihood": 0.28552498254445585
+      },
+      "probability_coverage": 1.0,
+      "evidence": {
+        "n_annotated": 0,
+        "recall": null,
+        "precision": null,
+        "all_gold_retrieved": null,
+        "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+      }
+    },
+    "diverse": {
+      "n": 72,
+      "macro_f1": 0.8778430871454127,
+      "accuracy": 0.875,
+      "per_class": {
+        "0": {
+          "precision": 0.84,
+          "recall": 0.875,
+          "f1": 0.8571428571428571,
+          "support": 24
+        },
+        "1": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9090909090909091,
+          "f1": 0.9302325581395349,
+          "support": 22
+        },
+        "2": {
+          "precision": 0.8461538461538461,
+          "recall": 0.8461538461538461,
+          "f1": 0.8461538461538461,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          1,
+          2
+        ],
+        [
+          0,
+          20,
+          2
+        ],
+        [
+          4,
+          0,
+          22
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "by_language": {
+        "de": {
+          "n": 22,
+          "macro_f1": 0.8661718398560504,
+          "accuracy": 0.8636363636363636,
+          "per_class": {
+            "0": {
+              "precision": 0.8571428571428571,
+              "recall": 1.0,
+              "f1": 0.9230769230769231,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.7142857142857143,
+              "f1": 0.8333333333333334,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.8,
+              "recall": 0.8888888888888888,
+              "f1": 0.8421052631578947,
+              "support": 9
+            }
+          },
+          "confusion_matrix": [
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              2
+            ],
+            [
+              1,
+              0,
+              8
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr": {
+          "n": 26,
+          "macro_f1": 0.8592592592592593,
+          "accuracy": 0.8461538461538461,
+          "per_class": {
+            "0": {
+              "precision": 0.7272727272727273,
+              "recall": 0.8888888888888888,
+              "f1": 0.8,
+              "support": 9
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 7
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 0.7,
+              "f1": 0.7777777777777778,
+              "support": 10
+            }
+          },
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              1
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              3,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it": {
+          "n": 24,
+          "macro_f1": 0.9165032679738562,
+          "accuracy": 0.9166666666666666,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.7777777777777778,
+              "f1": 0.875,
+              "support": 9
+            },
+            "1": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "2": {
+              "precision": 0.875,
+              "recall": 1.0,
+              "f1": 0.9333333333333333,
+              "support": 7
+            }
+          },
+          "confusion_matrix": [
+            [
+              7,
+              1,
+              1
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              7
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "by_language_pair": {
+        "de->de": {
+          "n": 4,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->fr": {
+          "n": 10,
+          "macro_f1": 0.8055555555555555,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.6,
+              "recall": 1.0,
+              "f1": 0.75,
+              "support": 3
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "de->it": {
+          "n": 8,
+          "macro_f1": 0.8518518518518517,
+          "accuracy": 0.875,
+          "per_class": {
+            "0": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->de": {
+          "n": 7,
+          "macro_f1": 0.6296296296296297,
+          "accuracy": 0.8571428571428571,
+          "per_class": {
+            "0": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8888888888888888,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->fr": {
+          "n": 4,
+          "macro_f1": 0.6666666666666666,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1
+            },
+            "2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fr->it": {
+          "n": 15,
+          "macro_f1": 0.8119658119658119,
+          "accuracy": 0.8,
+          "per_class": {
+            "0": {
+              "precision": 0.7142857142857143,
+              "recall": 0.8333333333333334,
+              "f1": 0.7692307692307693,
+              "support": 6
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666666,
+              "support": 5
+            }
+          },
+          "confusion_matrix": [
+            [
+              5,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              2,
+              0,
+              3
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->de": {
+          "n": 10,
+          "macro_f1": 0.8857142857142857,
+          "accuracy": 0.9,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 4
+            },
+            "1": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "support": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            }
+          },
+          "confusion_matrix": [
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->fr": {
+          "n": 6,
+          "macro_f1": 0.8222222222222223,
+          "accuracy": 0.8333333333333334,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8,
+              "support": 3
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "2": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 1
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        "it->it": {
+          "n": 8,
+          "macro_f1": 1.0,
+          "accuracy": 1.0,
+          "per_class": {
+            "0": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            },
+            "1": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 2
+            }
+          },
+          "confusion_matrix": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              2
+            ]
+          ],
+          "class_order": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "cross_lingual": {
+        "n": 56,
+        "macro_f1": 0.8431042543244507,
+        "accuracy": 0.8392857142857143,
+        "per_class": {
+          "0": {
+            "precision": 0.7777777777777778,
+            "recall": 0.8235294117647058,
+            "f1": 0.8,
+            "support": 17
+          },
+          "1": {
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1": 0.9032258064516129,
+            "support": 16
+          },
+          "2": {
+            "precision": 0.8260869565217391,
+            "recall": 0.8260869565217391,
+            "f1": 0.8260869565217391,
+            "support": 23
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            1,
+            2
+          ],
+          [
+            0,
+            14,
+            2
+          ],
+          [
+            4,
+            0,
+            19
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "average_context_tokens": 4016.0416666666665,
+      "context_tokens_coverage": 1.0,
+      "average_latency_seconds": 1.0848688269034028,
+      "latency_seconds_coverage": 1.0,
+      "calibration": {
+        "ece": 0.07057807030855656,
+        "ece_bins": 10,
+        "brier_score": 0.18806092890134138,
+        "negative_log_likelihood": 0.35316417361527425
+      },
+      "probability_coverage": 1.0,
+      "evidence": {
+        "n_annotated": 0,
+        "recall": null,
+        "precision": null,
+        "all_gold_retrieved": null,
+        "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+      }
+    }
+  },
+  "baseline_hybrid4k_same90": {
+    "n": 90,
+    "macro_f1": 0.8785449890067073,
+    "accuracy": 0.8777777777777778,
+    "per_class": {
+      "0": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1": 0.8571428571428571,
+        "support": 30
+      },
+      "1": {
+        "precision": 0.9642857142857143,
+        "recall": 0.9,
+        "f1": 0.9310344827586207,
+        "support": 30
+      },
+      "2": {
+        "precision": 0.8620689655172413,
+        "recall": 0.8333333333333334,
+        "f1": 0.847457627118644,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        1,
+        2
+      ],
+      [
+        1,
+        27,
+        2
+      ],
+      [
+        5,
+        0,
+        25
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 30,
+        "macro_f1": 0.8310315430520033,
+        "accuracy": 0.8333333333333334,
+        "per_class": {
+          "0": {
+            "precision": 0.7692307692307693,
+            "recall": 1.0,
+            "f1": 0.8695652173913043,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            7,
+            2
+          ],
+          [
+            2,
+            0,
+            8
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 30,
+        "macro_f1": 0.8653198653198654,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7777777777777778,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            3,
+            0,
+            7
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 30,
+        "macro_f1": 0.9312169312169312,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 10
+          },
+          "1": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            8,
+            1,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 6,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 13,
+        "macro_f1": 0.7435064935064934,
+        "accuracy": 0.7692307692307693,
+        "per_class": {
+          "0": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714,
+            "support": 5
+          },
+          "2": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 11,
+        "macro_f1": 0.8055555555555555,
+        "accuracy": 0.8181818181818182,
+        "per_class": {
+          "0": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 7,
+        "macro_f1": 0.6296296296296297,
+        "accuracy": 0.8571428571428571,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->fr": {
+        "n": 5,
+        "macro_f1": 0.6666666666666666,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 18,
+        "macro_f1": 0.8222222222222223,
+        "accuracy": 0.8333333333333334,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8,
+            "support": 7
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1": 0.6666666666666666,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 11,
+        "macro_f1": 0.8857142857142857,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 9,
+        "macro_f1": 0.9047619047619048,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 10,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 69,
+      "macro_f1": 0.8440133500208594,
+      "accuracy": 0.8405797101449275,
+      "per_class": {
+        "0": {
+          "precision": 0.76,
+          "recall": 0.8636363636363636,
+          "f1": 0.8085106382978723,
+          "support": 22
+        },
+        "1": {
+          "precision": 0.9473684210526315,
+          "recall": 0.8571428571428571,
+          "f1": 0.9,
+          "support": 21
+        },
+        "2": {
+          "precision": 0.84,
+          "recall": 0.8076923076923077,
+          "f1": 0.8235294117647058,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          1,
+          2
+        ],
+        [
+          1,
+          18,
+          2
+        ],
+        [
+          5,
+          0,
+          21
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 4010.011111111111,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 1.7119900207552645,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.07972558041076183,
+      "ece_bins": 10,
+      "brier_score": 0.19332000252674295,
+      "negative_log_likelihood": 0.37744201831458457
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "neighbors_same90": {
+    "n": 90,
+    "macro_f1": 0.9120857699805068,
+    "accuracy": 0.9111111111111111,
+    "per_class": {
+      "0": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9,
+        "support": 30
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526315,
+        "support": 30
+      },
+      "2": {
+        "precision": 0.8484848484848485,
+        "recall": 0.9333333333333333,
+        "f1": 0.8888888888888888,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        0,
+        3
+      ],
+      [
+        1,
+        27,
+        2
+      ],
+      [
+        2,
+        0,
+        28
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 30,
+        "macro_f1": 0.8632543926661573,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.8181818181818182,
+            "recall": 0.9,
+            "f1": 0.8571428571428571,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            7,
+            2
+          ],
+          [
+            1,
+            0,
+            9
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 30,
+        "macro_f1": 0.9333333333333332,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            1,
+            0,
+            9
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 30,
+        "macro_f1": 0.9326599326599326,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            8,
+            0,
+            2
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 6,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 13,
+        "macro_f1": 0.7435064935064934,
+        "accuracy": 0.7692307692307693,
+        "per_class": {
+          "0": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714,
+            "support": 5
+          },
+          "2": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 11,
+        "macro_f1": 0.8962962962962964,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 7,
+        "macro_f1": 0.6296296296296297,
+        "accuracy": 0.8571428571428571,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->fr": {
+        "n": 5,
+        "macro_f1": 0.6666666666666666,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 18,
+        "macro_f1": 0.9440559440559441,
+        "accuracy": 0.9444444444444444,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.9230769230769231,
+            "support": 7
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 11,
+        "macro_f1": 0.9220779220779222,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 9,
+        "macro_f1": 0.9047619047619048,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 10,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 69,
+      "macro_f1": 0.8864801864801864,
+      "accuracy": 0.8840579710144928,
+      "per_class": {
+        "0": {
+          "precision": 0.8636363636363636,
+          "recall": 0.8636363636363636,
+          "f1": 0.8636363636363636,
+          "support": 22
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.9230769230769231,
+          "support": 21
+        },
+        "2": {
+          "precision": 0.8275862068965517,
+          "recall": 0.9230769230769231,
+          "f1": 0.8727272727272727,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          0,
+          3
+        ],
+        [
+          1,
+          18,
+          2
+        ],
+        [
+          2,
+          0,
+          24
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 3866.211111111111,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 0.9948850711186726,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.03229095329163309,
+      "ece_bins": 10,
+      "brier_score": 0.12750209136025265,
+      "negative_log_likelihood": 0.2556402962084
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "diversity_same90": {
+    "n": 90,
+    "macro_f1": 0.8895798002638026,
+    "accuracy": 0.8888888888888888,
+    "per_class": {
+      "0": {
+        "precision": 0.8709677419354839,
+        "recall": 0.9,
+        "f1": 0.8852459016393442,
+        "support": 30
+      },
+      "1": {
+        "precision": 0.9642857142857143,
+        "recall": 0.9,
+        "f1": 0.9310344827586207,
+        "support": 30
+      },
+      "2": {
+        "precision": 0.8387096774193549,
+        "recall": 0.8666666666666667,
+        "f1": 0.8524590163934426,
+        "support": 30
+      }
+    },
+    "confusion_matrix": [
+      [
+        27,
+        1,
+        2
+      ],
+      [
+        0,
+        27,
+        3
+      ],
+      [
+        4,
+        0,
+        26
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 30,
+        "macro_f1": 0.8646973941091588,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            1,
+            0,
+            9
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 30,
+        "macro_f1": 0.8653198653198654,
+        "accuracy": 0.8666666666666667,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182,
+            "support": 10
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7777777777777778,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            3,
+            0,
+            7
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 30,
+        "macro_f1": 0.9312169312169312,
+        "accuracy": 0.9333333333333333,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 10
+          },
+          "1": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          },
+          "2": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523,
+            "support": 10
+          }
+        },
+        "confusion_matrix": [
+          [
+            8,
+            1,
+            1
+          ],
+          [
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            10
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 6,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 13,
+        "macro_f1": 0.746031746031746,
+        "accuracy": 0.7692307692307693,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714,
+            "support": 5
+          },
+          "2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 11,
+        "macro_f1": 0.8962962962962964,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 7,
+        "macro_f1": 0.6296296296296297,
+        "accuracy": 0.8571428571428571,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->fr": {
+        "n": 5,
+        "macro_f1": 0.6666666666666666,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 18,
+        "macro_f1": 0.8222222222222223,
+        "accuracy": 0.8333333333333334,
+        "per_class": {
+          "0": {
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8,
+            "support": 7
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1": 0.6666666666666666,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 11,
+        "macro_f1": 0.8857142857142857,
+        "accuracy": 0.9090909090909091,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 5
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            5
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->fr": {
+        "n": 9,
+        "macro_f1": 0.9047619047619048,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 4
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 10,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 69,
+      "macro_f1": 0.8582110412299091,
+      "accuracy": 0.855072463768116,
+      "per_class": {
+        "0": {
+          "precision": 0.8260869565217391,
+          "recall": 0.8636363636363636,
+          "f1": 0.8444444444444444,
+          "support": 22
+        },
+        "1": {
+          "precision": 0.9473684210526315,
+          "recall": 0.8571428571428571,
+          "f1": 0.9,
+          "support": 21
+        },
+        "2": {
+          "precision": 0.8148148148148148,
+          "recall": 0.8461538461538461,
+          "f1": 0.8301886792452831,
+          "support": 26
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          1,
+          2
+        ],
+        [
+          0,
+          18,
+          3
+        ],
+        [
+          4,
+          0,
+          22
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 4022.4555555555557,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 1.0868891243305472,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.06223591545662375,
+      "ece_bins": 10,
+      "brier_score": 0.1699649304742834,
+      "negative_log_likelihood": 0.3289255385541205
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "neighbors_policy": "Six highest hybrid-ranked seeds, each seed/previous/next in source order, deduplicated, exact whole quotes capped4096; unchanged matched direct20 hybrid4k head.",
+  "diversity_policy": "Top30 hybrid candidates, accept up to20 while suppressing same-page overlap>=50% of shorter quote or word5gram Jaccard>=.55; exact whole quotes capped4096.",
+  "redundancy_diagnostics": [
+    {
+      "id": "ost-v1.1-0019",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0022",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0024",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0026",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0030",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0032",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0040",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0050",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0057",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0064",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0499",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0505",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0506",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0513",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0515",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0519",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0525",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0526",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0555",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0558",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0995",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0996",
+      "redundant_pairs_among_top20": 5,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1001",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1004",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1013",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1019",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1029",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1036",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1037",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1052",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0172",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0173",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0174",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0186",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0190",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0199",
+      "redundant_pairs_among_top20": 5,
+      "diversity_suppressed": 7,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0205",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0211",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0212",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0664",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0669",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0680",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0682",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0685",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0686",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0693",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0696",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0700",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0701",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1159",
+      "redundant_pairs_among_top20": 6,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1161",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1162",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1167",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1168",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1170",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1172",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1174",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 5,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1192",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1194",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0333",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0338",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0341",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0343",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0345",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0355",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0359",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0361",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0363",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0391",
+      "redundant_pairs_among_top20": 2,
+      "diversity_suppressed": 2,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0833",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0834",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0837",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0838",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0843",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0847",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0851",
+      "redundant_pairs_among_top20": 0,
+      "diversity_suppressed": 0,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0852",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 3,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0853",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-0864",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1335",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1340",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1349",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1350",
+      "redundant_pairs_among_top20": 3,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1351",
+      "redundant_pairs_among_top20": 5,
+      "diversity_suppressed": 6,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1352",
+      "redundant_pairs_among_top20": 6,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1353",
+      "redundant_pairs_among_top20": 6,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1362",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1373",
+      "redundant_pairs_among_top20": 4,
+      "diversity_suppressed": 4,
+      "diverse_candidates": 20
+    },
+    {
+      "id": "ost-v1.1-1381",
+      "redundant_pairs_among_top20": 1,
+      "diversity_suppressed": 1,
+      "diverse_candidates": 20
+    }
+  ],
+  "no_new_head_fitted": true,
+  "mechanism_adopted": false,
+  "timing_caution": "Neighbor/diversity request adds shared measured retrieval/preparation plus actual encoding/head; baseline is cached. Not paired live all-inference latency.",
+  "evidence_policy": "Rerank only classifier-input passages with frozen E5/hybrid; k=max(1,min(2,original_passage_count-1)). Thus use up to2 quotes and ensure reduction whenever original context has>=2. First2 distinct normalized claim/document pairs predicted Entailment/Contradiction per claim-language; up to12 actual evidence-only forwards with same frozen head.",
+  "evidence_sufficiency_n": 12,
+  "evidence_decision_preservation_rate": 0.75,
+  "evidence_strict_reduction_n": 12,
+  "evidence_decision_preservation_when_strictly_reduced": 0.75,
+  "evidence_only_original_label_metrics": {
+    "n": 12,
+    "macro_f1": 0.5079365079365079,
+    "accuracy": 0.75,
+    "per_class": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 6
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "2": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 6
+      }
+    },
+    "confusion_matrix": [
+      [
+        3,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6
+      ]
+    ],
+    "class_order": [
+      0,
+      1,
+      2
+    ],
+    "by_language": {
+      "de": {
+        "n": 4,
+        "macro_f1": 0.48888888888888893,
+        "accuracy": 0.75,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr": {
+        "n": 4,
+        "macro_f1": 0.5555555555555555,
+        "accuracy": 0.75,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it": {
+        "n": 4,
+        "macro_f1": 0.48888888888888893,
+        "accuracy": 0.75,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "by_language_pair": {
+      "de->de": {
+        "n": 1,
+        "macro_f1": 0.3333333333333333,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->fr": {
+        "n": 2,
+        "macro_f1": 0.2222222222222222,
+        "accuracy": 0.5,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "de->it": {
+        "n": 1,
+        "macro_f1": 0.3333333333333333,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->de": {
+        "n": 1,
+        "macro_f1": 0.3333333333333333,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fr->it": {
+        "n": 3,
+        "macro_f1": 0.5555555555555555,
+        "accuracy": 0.6666666666666666,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->de": {
+        "n": 3,
+        "macro_f1": 0.4444444444444444,
+        "accuracy": 0.6666666666666666,
+        "per_class": {
+          "0": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "it->it": {
+        "n": 1,
+        "macro_f1": 0.3333333333333333,
+        "accuracy": 1.0,
+        "per_class": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "class_order": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "cross_lingual": {
+      "n": 10,
+      "macro_f1": 0.4682539682539682,
+      "accuracy": 0.7,
+      "per_class": {
+        "0": {
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1": 0.5714285714285714,
+          "support": 5
+        },
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "2": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1": 0.8333333333333334,
+          "support": 5
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "class_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "average_context_tokens": 753.25,
+    "context_tokens_coverage": 1.0,
+    "average_latency_seconds": 1.9338862753162782,
+    "latency_seconds_coverage": 1.0,
+    "calibration": {
+      "ece": 0.17045793386682473,
+      "ece_bins": 10,
+      "brier_score": 0.42175774654388504,
+      "negative_log_likelihood": 1.3219475733559007
+    },
+    "probability_coverage": 1.0,
+    "evidence": {
+      "n_annotated": 0,
+      "recall": null,
+      "precision": null,
+      "all_gold_retrieved": null,
+      "definition": "Passage-ID match; excludes empty gold evidence; not semantic or span correctness"
+    }
+  },
+  "evidence_proofs": [
+    {
+      "id": "ost-v1.1-0019",
+      "original_label": 0,
+      "evidence_only_label": 2,
+      "decision_preserved": false,
+      "claim_language": "de",
+      "document_language": "fr",
+      "original_context_passage_count": 30,
+      "original_context_tokens": 7859,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-1-offset-0",
+          "paragraph_id": "page-1-offset-0",
+          "page": 1,
+          "text": "Initiative pour un fonds climatTroisième objet \nLoi fédérale sur l’imposition \nindividuelle\nQuatrième objet \nInitiative SSRDeuxième objet  \nInitiative « L’argent liquide, c’est \nla liberté » et contre-projet direct\nPremier objet   \n8 mars 2026\nVotation populaire  \nKlimafonds-InitiativeDritte Vorlage  \nBundesgesetz über die \nIndividualbesteuerung\nVierte Vorlage  \nSRG-InitiativeZweite Vorlage  \nInitiative « Bargeld ist Freiheit » \nund direkter Gegenentwurf\nErste Vorlage  \n8. März 2026\nVolksabstimmung  ",
+          "char_start": 0,
+          "char_end": 505,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8101086020469666,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031544957774465976,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-30-offset-974",
+          "paragraph_id": "page-30-offset-974",
+          "page": 30,
+          "text": "s dans les \ndomaines de l’information, de la culture, de la formation, du \ndivertissement et du sport. Le Conseil fédéral impose à la SSR \nd’investir au moins 50 % de ses revenus provenant de la rede-\nvance dans l’information. Les programmes de la SSR doivent \npromouvoir la compréhension, la cohésion et les échanges \nentre les différentes régions du pays, les communautés linguis -\ntiques, les cultures, les religions et les groupes sociaux. La SSR \ndoit également tenir compte des particularités du pays et des \nbesoins des cantons.\nLa SSR se compose de plusieurs unités d’entreprise, dont \nSchweizer Radio und Fernsehen SRF en Suisse alémanique,  \nRadio Télévision Suisse RTS en Suisse romande, Radiotelevisione \nsvizzera RSI en Suisse italienne et Radiotelevisiun Svizra  \nRumantscha RTR en Suisse romanche.\n1 Données de l'Administration fédérale des contributions (AFC), \nétat en 2023\nRéduction de la \ncharge des \nentreprises\nMandat de la SSR\nStructure de la SSR",
+          "char_start": 974,
+          "char_end": 1942,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.7774481177330017,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.028373015873015873,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0019",
+        "label": 2,
+        "probabilities": [
+          0.027841542725098905,
+          0.45079224448761945,
+          0.5213662127872817
+        ],
+        "context_tokens": 663,
+        "latency_seconds": 2.2872016802430153,
+        "selected_passage_ids": [
+          "page-1-offset-0",
+          "page-30-offset-974"
+        ],
+        "pages": [
+          1,
+          30
+        ],
+        "prompt_sha256": "ca71fe5ceaafa6ff44216fa24b63dd33a3a0a8cf1910d8f329b4a9410a142129"
+      }
+    },
+    {
+      "id": "ost-v1.1-0022",
+      "original_label": 0,
+      "evidence_only_label": 0,
+      "decision_preserved": true,
+      "claim_language": "de",
+      "document_language": "de",
+      "original_context_passage_count": 27,
+      "original_context_tokens": 8090,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-29-offset-998",
+          "paragraph_id": "page-29-offset-998",
+          "page": 29,
+          "text": "ie Ehe nicht als Verbindung zwischen \nFrau und Mann. \n \nAus all diesen Gründen empfehlen Bundesrat und Parla\nment, die Änderung des Schweizerischen Zivilgesetzbuches \n(Ehe für alle) anzunehmen.\n-\n J a\n  admin.ch/ehe-fuer-alle\nRecht auf Kenntnis \nder Abstammung\nStrikt geregelte \nFortpflanzungs\nmedizin\n-\nVerfassung erlaubt \nEhe für alle\nEmpfehlung  \nvon Bundesrat  \nund Parlament",
+          "char_start": 998,
+          "char_end": 1377,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.9128522872924805,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.032018442622950824,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-25-offset-977",
+          "paragraph_id": "page-25-offset-977",
+          "page": 25,
+          "text": "niert die Ehe nicht als Verbindung zwischen Frau und \nMann. Das Parlament hat zudem entschieden, dass auch für \nden Zugang zur Samenspende für verheiratete Frauenpaare \neine Gesetzesrevision genügt.\n-\nNach der Öffnung der Ehe für gleichgeschlechtliche Paare \nkönnen keine neuen eingetragenen Partnerschaften mehr \ngeschlossen werden. Paare, die bereits in einer eingetragenen \nPartnerschaft leben, können diese weiterführen oder durch \neine gemeinsame Erklärung beim Zivilstandsamt in eine Ehe \numwandeln.\nAdoption\nFortpflanzungs\nmedizin\n-\nKeine Verfassungs\nänderung\n-\nUmwandlung  \nin Ehe",
+          "char_start": 977,
+          "char_end": 1565,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.9022597670555115,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03200204813108039,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0022",
+        "label": 0,
+        "probabilities": [
+          0.9992299482565415,
+          0.00013090419108423708,
+          0.0006391475523742859
+        ],
+        "context_tokens": 515,
+        "latency_seconds": 1.9786740094423294,
+        "selected_passage_ids": [
+          "page-29-offset-998",
+          "page-25-offset-977"
+        ],
+        "pages": [
+          29,
+          25
+        ],
+        "prompt_sha256": "0d8a6c736fdae5cd8b84c7183abb70fb8d39eb8ef4b4a2471aae3df6a77c04ec"
+      }
+    },
+    {
+      "id": "ost-v1.1-0995",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "de",
+      "document_language": "it",
+      "original_context_passage_count": 27,
+      "original_context_tokens": 8120,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-45-offset-1960",
+          "paragraph_id": "page-45-offset-1960",
+          "page": 45,
+          "text": "alb oder \nausserhalb der Schweiz), nach Nationalität\n –  Frontalieri stranieri secondo il Cantone in cui lavorano, il Paese di \nresidenza, la divisione economica e il sesso)\nSviluppo di  \nmedicamenti \nanti-COVID-19\nL’app SwissCovid \npuò essere \nriattivata\nRestrizioni \nd’entrata\nGarantire l’ingres -\nso dei frontalieri",
+          "char_start": 1960,
+          "char_end": 2278,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/Lv5UWt6X1iUj/2023-06-18_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a",
+          "retrieval_score": 0.8240711688995361,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030834914611005692,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-44-offset-962",
+          "paragraph_id": "page-44-offset-962",
+          "page": 44,
+          "text": "el virus potenzialmente in \ngrado di compromettere la tenuta del sistema sanitario.\nQualora la situazione epidemiologica dovesse considere -\nvolmente aggravarsi, la Confederazione potrebbe obbligare  \ni datori di lavoro a proteggere maggiormente le persone \nparticolarmente a rischio, consentendo loro di lavorare da casa \no di svolgere un’attività alternativa equivalente sul luogo di \nlavoro o a domicilio.\nIn caso di aumento dei malati, è importante che la Confe -\nderazione sia informata sul numero e sull’occupazione dei posti \nletto negli ospedali svizzeri. La legge COVID-19 prevede che il \nConsiglio federale possa obbligare i Cantoni a notificare l’occu -\npazione dei posti letto ospedalieri, segnatamente di quelli in \nterapia intensiva. Può inoltre obbligare fabbricanti, distributo -\nri, laboratori nonché ospedali e case di cura a notificare le loro \nscorte di medicamenti, dispositivi di protezione e altro materia -\nle medico importante. In tal modo possono essere individuate \ncarenze dovute alla pandemia e prevenute lacune \nnell'approvvigionamento.\nTerzo oggetto: Legge COVID-19\nRapido accesso a \nnuovi medicamenti \nanti-COVID-19\nCertificato  \nCOVID-19 per i \nviaggi all’estero",
+          "char_start": 962,
+          "char_end": 2157,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/Lv5UWt6X1iUj/2023-06-18_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a",
+          "retrieval_score": 0.8287369012832642,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030834914611005692,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0995",
+        "label": 2,
+        "probabilities": [
+          0.0077982219017685905,
+          0.15061632089887939,
+          0.8415854571993521
+        ],
+        "context_tokens": 680,
+        "latency_seconds": 1.7857541367411613,
+        "selected_passage_ids": [
+          "page-45-offset-1960",
+          "page-44-offset-962"
+        ],
+        "pages": [
+          45,
+          44
+        ],
+        "prompt_sha256": "f7bb644abf79913e916f3ef17b43cae31b66c57c81de80d78b0b09bc0a0095d9"
+      }
+    },
+    {
+      "id": "ost-v1.1-0996",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "de",
+      "document_language": "fr",
+      "original_context_passage_count": 27,
+      "original_context_tokens": 8115,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-1-offset-0",
+          "paragraph_id": "page-1-offset-0",
+          "page": 1,
+          "text": "Initiative pour un fonds climatTroisième objet \nLoi fédérale sur l’imposition \nindividuelle\nQuatrième objet \nInitiative SSRDeuxième objet  \nInitiative « L’argent liquide, c’est \nla liberté » et contre-projet direct\nPremier objet   \n8 mars 2026\nVotation populaire  \nKlimafonds-InitiativeDritte Vorlage  \nBundesgesetz über die \nIndividualbesteuerung\nVierte Vorlage  \nSRG-InitiativeZweite Vorlage  \nInitiative « Bargeld ist Freiheit » \nund direkter Gegenentwurf\nErste Vorlage  \n8. März 2026\nVolksabstimmung  ",
+          "char_start": 0,
+          "char_end": 505,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8711937665939331,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.032266458495966696,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-40-offset-0",
+          "paragraph_id": "page-40-offset-0",
+          "page": 40,
+          "text": "40\nTexte soumis au vote\nArrêté fédéral  \nrelatif à l’initiative populaire  \n« 200 francs, ça suffit  ! (initiative SSR) » \n  \ndu 26 septembre 2025\nDeuxième objet  : initiative SSR\nTexte soumis au vote\nTexte soumis au vote\nTexte soumis au vote\n2 \nTexte soumis au vote \nArrêté fédéral \nrelatif à l’initiative populaire  \n«200 francs, ça suffit! (initiative SSR)» \ndu 26 septembre 2025 \nL’Assemblée fédérale de la Confédération suisse, \nvu l’art. 139, al. 5, de la Constitution1,  \nvu l’initiative populaire «200 francs, ça suffit! (initiative SSR)» \ndéposée le 10 août 20232,  \nvu le message du Conseil fédéral du 19 juin 20243, \narrête: \nArt. 1 \n1 L’initiative populaire du 10 août 2023 «200 francs, ça suffit! (initiative SSR)» est \nvalable et sera soumise au vote du peuple et des cantons.  \n2 Elle a la teneur suivante: \nLa Constitution est modifiée comme suit: \nArt. 93, al. 6 \n6 Pour financer les programmes de radio et de télévision qui fournissent un service \nindispensable à la collectivité, la Conféd ération perçoit une redevance de 200 francs \npar an, exclusivement auprès des ménages privés. Les personnes morales, les sociétés ",
+          "char_start": 0,
+          "char_end": 1139,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+          "retrieval_score": 0.8548057079315186,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031009615384615385,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0996",
+        "label": 2,
+        "probabilities": [
+          0.0006636858407116524,
+          0.062102361723930834,
+          0.9372339524353575
+        ],
+        "context_tokens": 769,
+        "latency_seconds": 1.9998673498630524,
+        "selected_passage_ids": [
+          "page-1-offset-0",
+          "page-40-offset-0"
+        ],
+        "pages": [
+          1,
+          40
+        ],
+        "prompt_sha256": "4c9f8d5b444b4ab0896692363a6de7774a9915d3b4a8988992b8e88d366779e1"
+      }
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "original_label": 0,
+      "evidence_only_label": 1,
+      "decision_preserved": false,
+      "claim_language": "fr",
+      "document_language": "it",
+      "original_context_passage_count": 24,
+      "original_context_tokens": 8147,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-57-offset-1975",
+          "paragraph_id": "page-57-offset-1975",
+          "page": 57,
+          "text": "le > \nImposizione dei coniugi e famiglia > Imposizione individuale 2024 > \nCalculs de l’AFC illustrant la proposition de la CER-N du 01.04.2025 ).\nSul livello \noccupazionale\nSull’onere \namministrativo\nAltre ripercussioni",
+          "char_start": 1975,
+          "char_end": 2195,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8374837040901184,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03278688524590164,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-1-offset-0",
+          "paragraph_id": "page-1-offset-0",
+          "page": 1,
+          "text": "Iniziativa per un fondo  \nper il clima\nTerzo oggetto  \nLegge federale sull’imposizione \nindividuale\nQuarto oggetto  \nIniziativa SSRSecondo oggetto  \nIniziativa « Il denaro contante  \nè libertà » e controprogetto  \ndiretto\nPrimo oggetto  \n8 marzo 2026\nVotazione popolare  \nKlimafonds-InitiativeDritte Vorlage  \nBundesgesetz über die \nIndividualbesteuerung\nVierte Vorlage  \nSRG-InitiativeZweite Vorlage  \nInitiative « Bargeld ist Freiheit » \nund direkter Gegenentwurf\nErste Vorlage  \n8. März 2026\nVolksabstimmung  ",
+          "char_start": 0,
+          "char_end": 512,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8226275444030762,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03128054740957967,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0169",
+        "label": 1,
+        "probabilities": [
+          0.000709591194761892,
+          0.8507794876396022,
+          0.148510921165636
+        ],
+        "context_tokens": 495,
+        "latency_seconds": 1.7325176000595093,
+        "selected_passage_ids": [
+          "page-57-offset-1975",
+          "page-1-offset-0"
+        ],
+        "pages": [
+          57,
+          1
+        ],
+        "prompt_sha256": "393d6002be4a2e9fb97dd96e1d83902014be9b152e724f5b98d4d64c26c82677"
+      }
+    },
+    {
+      "id": "ost-v1.1-0172",
+      "original_label": 0,
+      "evidence_only_label": 0,
+      "decision_preserved": true,
+      "claim_language": "fr",
+      "document_language": "it",
+      "original_context_passage_count": 25,
+      "original_context_tokens": 8151,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-4-offset-990",
+          "paragraph_id": "page-4-offset-990",
+          "page": 4,
+          "text": "ale elevati.  \nA partire da un determinato importo, nel calcolo dell’imposta  \ni redditi da capitale devono essere ponderati maggiormente e \nconteggiati una volta e mezzo. Per ogni franco superiore a \nquesto importo si dovrebbero pagare le imposte come se si \ntrattasse di 1.50 franchi. Se l’iniziativa sarà accettata, spetterà \nal Parlamento stabilire l’importo oltre il quale si applicherà tale \nassoggettamento. Il gettito supplementare risultante sarebbe \nimpiegato per ridurre l’imposizione delle persone con redditi \nda lavoro bassi o medi oppure in favore del benessere sociale.\nContesto\nIl progetto\nIn breve",
+          "char_start": 990,
+          "char_end": 1605,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/NJXQlhZXHqDA/2021-09-26_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "d01075b2fabc1609d8c7e2b5ede595286c504d35ea4947b1fa0709fddbb63538",
+          "retrieval_score": 0.8602151870727539,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03131881575727918,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-18-offset-0",
+          "paragraph_id": "page-18-offset-0",
+          "page": 18,
+          "text": "18\nConsiglio federale e Parlamento\nPoiché nel raffronto internazionale il reddito in Svizzera è \ndistribuito in modo equo, la necessità di una sua ridistribu\nzione è più bassa. Inoltre quest’ultima avviene già me-\ndiante le imposte e le prestazioni sociali. L’iniziativa mette \nin pericolo l’attrattiva della piazza ﬁnanziaria Svizzera e \nindebolisce l’incentivo al risparmio. È proprio in tempi di \ncrisi che servono i risparmi. La costituzione di capitale è \nimportante per i posti di lavoro e la prosperità e non deve \nessere ostacolata da un’imposizione più alta. Il Consiglio \nfederale e il Parlamento respingono l’iniziativa popolare, in \nparticolare per i motivi esposti qui di seguito.\n-\nIn Svizzera il reddito è distribuito in modo più equo che \nnella maggior parte degli altri Paesi dell’OCSE. Inoltre le \nimposte e le prestazioni sociali costituiscono già un’importante \nstrumento di ridistribuzione: le uscite per le prestazioni sociali \nrappresentano oltre un quarto della prestazione economica \ntotale. Dalla metà degli anni Novanta la quota del reddito da \ncapitale rispetto al reddito totale è rimasta costante. Non \noccorre quindi intervenire. ",
+          "char_start": 0,
+          "char_end": 1161,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/NJXQlhZXHqDA/2021-09-26_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "d01075b2fabc1609d8c7e2b5ede595286c504d35ea4947b1fa0709fddbb63538",
+          "retrieval_score": 0.8360121846199036,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03009207275993712,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0172",
+        "label": 0,
+        "probabilities": [
+          0.9997996492098838,
+          1.5872689018465733e-05,
+          0.00018447810109779365
+        ],
+        "context_tokens": 743,
+        "latency_seconds": 1.8309879675507545,
+        "selected_passage_ids": [
+          "page-4-offset-990",
+          "page-18-offset-0"
+        ],
+        "pages": [
+          4,
+          18
+        ],
+        "prompt_sha256": "040f0fdc0830aa840da1d1d4f81d3c84a74ca0d1836998e87b196fdda7ceeed1"
+      }
+    },
+    {
+      "id": "ost-v1.1-1159",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "fr",
+      "document_language": "de",
+      "original_context_passage_count": 27,
+      "original_context_tokens": 8184,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-21-offset-0",
+          "paragraph_id": "page-21-offset-0",
+          "page": 21,
+          "text": "21\nBesondere Besteuerung grosser Unternehmensgruppen. BB \n3 \na. Die Vorschriften gelten für die Geschäftseinheiten einer multinationalen \nUnternehmensgruppe, die einen konsolidierten jährlichen Umsatz von \n750 Millionen Euro erreicht.  \nb. Unterschreiten die massgebenden St euern der Geschäftseinheiten in der \nSchweiz oder einem anderen Steuerhohe itsgebiet gesamthaft die Mindestbe-\nsteuerung zum Satz von 15 Prozent der massgebenden Gewinne, so erhebt \nder Bund zum Ausgleich der Differenz zwischen dem effektiven Steuersatz \nund dem Mindeststeuersatz eine Ergänzungssteuer. \nc. Massgebende Steuern sind insbesondere die in der Erfolgsrechnung der Ge-\nschäftseinheiten verbuchten direkten Steuern. \nd. Massgebender Gewinn eine r Geschäftseinheit ist de r für die konsolidierte \nJahresrechnung der Unternehmensgruppe  nach einem anerkannten Rech-\nnungslegungsstandard ermittelte Gewinn oder Verlust vor Herausrechnung \nder Transaktionen zwischen den Geschäftseinheiten und nach Berücksichti-\ngung anderer Korrekturen;  nicht berücksichtigt werden Gewinne und Ver-\nluste aus dem internationalen Seeverkehr. \ne. Der effektive Steuersatz für ein Steuerhoheitsgebiet berechnet sich, indem ",
+          "char_start": 0,
+          "char_end": 1188,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+          "retrieval_score": 0.8258374333381653,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031544957774465976,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-20-offset-1938",
+          "paragraph_id": "page-20-offset-1938",
+          "page": 20,
+          "text": "ernehmensgruppen. BB \n3 \na. Die Vorschriften gelten für die Geschäftseinheiten einer multinationalen \nUnternehmensgruppe, die einen konsolidierten jährlichen Umsatz von \n750 Millionen Euro erreicht.  \nb. Unterschreiten die massgebenden St euern der Geschäftseinheiten in der \nSchweiz oder einem anderen Steuerhohe itsgebiet gesamthaft die Mindestbe-\nsteuerung zum Satz von 15 Prozent der massgebenden Gewinne, so erhebt \nder Bund zum Ausgleich der Differenz zwischen dem effektiven Steuersatz \nund dem Mindeststeuersatz eine Ergänzungssteuer. \nc. Massgebende Steuern sind insbesondere die in der Erfolgsrechnung der Ge-\nschäftseinheiten verbuchten direkten Steuern. \nd. Massgebender Gewinn eine r Geschäftseinheit ist de r für die konsolidierte \nJahresrechnung der Unternehmensgruppe  nach einem anerkannten Rech-\nnungslegungsstandard ermittelte Gewinn oder Verlust vor Herausrechnung \nder Transaktionen zwischen den Geschäftseinheiten und nach Berücksichti-\ngung anderer Korrekturen;  nicht berücksichtigt werden Gewinne und Ver-\nluste aus dem internationalen Seeverkehr. \ne. Der effektive Steuersatz für ein Steuerhoheitsgebiet berechnet sich, indem ",
+          "char_start": 1938,
+          "char_end": 3090,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+          "retrieval_score": 0.8230206370353699,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.0315136476426799,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-1159",
+        "label": 2,
+        "probabilities": [
+          0.0005956902024081722,
+          0.0017324895682917407,
+          0.9976718202293
+        ],
+        "context_tokens": 831,
+        "latency_seconds": 1.9208734557032585,
+        "selected_passage_ids": [
+          "page-21-offset-0",
+          "page-20-offset-1938"
+        ],
+        "pages": [
+          21,
+          20
+        ],
+        "prompt_sha256": "e244cceddb007c91cd85c29a3b206608ece81a7ad6eb81a6bf8b3232ec4f9688"
+      }
+    },
+    {
+      "id": "ost-v1.1-1161",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "fr",
+      "document_language": "it",
+      "original_context_passage_count": 26,
+      "original_context_tokens": 8137,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-18-offset-0",
+          "paragraph_id": "page-18-offset-0",
+          "page": 18,
+          "text": "18 Primo oggetto: Iniziativa sul denaro contante e controprogetto\nMentre l’iniziativa impiega formulazioni nuove, il contro -\nprogetto riprende in gran parte le disposizioni di legge esisten -\nti senza modificarne il tenore. Il controprogetto stabilisce \ninfatti che, come finora, la BNS garantisce l’approvvigionamen -\nto in numerario. L’iniziativa menziona invece la \nConfederazione.\nOggi la legge stabilisce che l’approvvigionamento in \nnumerario deve essere garantito e che il franco è l’unità mone -\ntaria svizzera. Sia l’iniziativa sia il controprogetto prevedono \nl’iscrizione di questi due punti nella Costituzione. Questo \navrebbe innanzitutto un effetto simbolico: sottolineerebbe \nl’importanza del contante e del franco come valuta nazionale. \nInoltre, in entrambi i casi una modifica sarebbe possibile unica -\nmente se una maggioranza degli aventi diritto di voto e dei \nCantoni la approvasse in votazione popolare (maggioranza del \nPopolo e dei Cantoni).\nNé l’iniziativa né il controprogetto comporterebbero \ncambiamenti nella vita quotidiana. Non ne deriverebbero \nnuovi compiti né costi aggiuntivi. La BNS adempie già oggi al ",
+          "char_start": 0,
+          "char_end": 1141,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8284907937049866,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031024531024531024,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-17-offset-980",
+          "paragraph_id": "page-17-offset-980",
+          "page": 17,
+          "text": "\ncostituzionale.\nIn concreto l’iniziativa chiede due nuove disposizioni \ncostituzionali: in primo luogo, la Confederazione deve garanti -\nre che monete e banconote siano sempre disponibili in quanti -\ntà sufficiente. L’iniziativa non specifica però tale quantità. In \nsecondo luogo, la sostituzione del franco svizzero con un’altra \nvaluta deve essere possibile solo con il consenso del Popolo  \ne dei Cantoni.\nAnche il controprogetto intende iscrivere nella Costituzio -\nne il principio secondo cui l’approvvigionamento in numerario \ndeve essere garantito e che il franco è la valuta svizzera. A tal \nfine, prevede di riprendere nella Costituzione due disposizioni \ndi legge esistenti, sostanzialmente invariate. Queste stabilisco -\nno che la BNS garantisce l’approvvigionamento in numerario  \ne che l’unità monetaria svizzera è il franco.\n1 Nelle presenti spiegazioni i termini «  contante  » e « numerario  » sono \nsinonimi.\n2 Sondaggio sui mezzi di pagamento presso i privati in Svizzera 2024, \nBanca nazionale svizzera (  snb.ch/it/ > La BNS > Compiti e obiettivi > \nBanconote e monete > Sondaggio sui mezzi di pagamento presso  \ni privati > 2024 )\nObiettivi \ndell’iniziativa\nChe cosa chiede ",
+          "char_start": 980,
+          "char_end": 2177,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8399271965026855,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.030886196246139225,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-1161",
+        "label": 2,
+        "probabilities": [
+          5.113442923039487e-05,
+          0.00043352161999640033,
+          0.9995153439507732
+        ],
+        "context_tokens": 898,
+        "latency_seconds": 1.944160558283329,
+        "selected_passage_ids": [
+          "page-18-offset-0",
+          "page-17-offset-980"
+        ],
+        "pages": [
+          18,
+          17
+        ],
+        "prompt_sha256": "9b76cb5373c4aa23dd8aa28bce1a98840b68184bc851c737f8a2810744569be9"
+      }
+    },
+    {
+      "id": "ost-v1.1-0338",
+      "original_label": 0,
+      "evidence_only_label": 2,
+      "decision_preserved": false,
+      "claim_language": "it",
+      "document_language": "de",
+      "original_context_passage_count": 25,
+      "original_context_tokens": 8117,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-32-offset-999",
+          "paragraph_id": "page-32-offset-999",
+          "page": 32,
+          "text": "e die SRG ihre Programme \ndeutlich reduzieren und Sendungen streichen. Insbesondere \nwürde es weniger Berichterstattung aus den Regionen geben \nund bestehende Standorte würden wegfallen. Auch könnten \nUnterhaltungssendungen und Sportprogramme wohl kaum \nmehr durch die SRG bereitgestellt werden. Ab dem Jahr 2029 \nwürde die SRG noch zirka 630 Millionen Franken aus der Abgabe \nerhalten – das wäre etwa halb so viel wie bisher. Dies ergeben \nPrognosen des Bundesamts für Kommunikation (BAKOM).5\n4 «Die SRG stellt sich neu auf und rückt näher zusammen  », Medien -\nmitteilung der SRG vom 30. Juni 2025 (  srgssr.ch > news-medien )\n5 Botschaft des Bundesrates vom 19. Juni 2024 zur Volksinitiative \n« 200 Franken sind genug! (SRG -Initiative)  »; BBl 2024 1720 Ziff. 4.2.1 \n(  fedlex.admin.ch > Bundesblatt > Ausgaben des Bundesblattes > \n2024 > Juli > 138 )\nGegenprojekt  \ndes Bundesrates\nSRG im Umbau\nFolgen der \nInitiative\nHalbierung  \nder Abgaben  \nfür die SRG",
+          "char_start": 999,
+          "char_end": 1960,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/MDRXrtFaVPNG/2026-03-08_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d0c794f37d6d2cb25e9969ed058e2a7d7c3e2508f7f03e2b5e90415d364f6170",
+          "retrieval_score": 0.8043394088745117,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.028949545078577336,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-27-offset-995",
+          "paragraph_id": "page-27-offset-995",
+          "page": 27,
+          "text": "e schweizerische Währung ist der Franken. \n2bis Die Schweizerische Nationalbank gewährleistet die Bargeldversorgung. \nII \nDieser Gegenentwurf wird Volk und Ständen zur Abstimmung unterbreitet. Sofern \ndie am 15. Februar 2023 eingereichte Volksi nitiative «Ja zu einer unabhängigen, \nfreien Schweizer Währung mit Münzen oder Banknoten (Bargeld ist Freiheit)» nicht \nzurückgezogen wird, wird er zusammen mit der Volksinitiative nach dem Verfahren \ngemäss Artikel 139b der Bundesverfassung Volk und Ständen zur Abstimmung un-\nterbreitet. \n  \n \n1 SR 101 \n2 BBl 2023 602 \n3 BBl 2024 1679 \n2 \nAbstimmungstext \nBundesbeschluss \nüber die schweizerische Währung und die Bargeldversorgung  \n(direkter Gegenentwurf zur Volksinitiative «Ja zu einer unabhängigen, \nfreien Schweizer Währung mit Münzen oder Banknoten  \n[Bargeld ist Freiheit]») \nvom 17. September 2025 \nDie Bundesversammlung der Schweizerischen Eidgenossenschaft,  \ngestützt auf Artikel 139 Absatz 5 der Bundesverfassung1, \nnach Prüfung der am 15. Februar 20232 eingereichten Volksinitiative  \n«Ja zu einer unabhängigen, freien Schweizer Währung mit Münzen oder Banknoten \n(Bargeld ist Freiheit)», ",
+          "char_start": 995,
+          "char_end": 2145,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/MDRXrtFaVPNG/2026-03-08_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d0c794f37d6d2cb25e9969ed058e2a7d7c3e2508f7f03e2b5e90415d364f6170",
+          "retrieval_score": 0.7822911739349365,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.02821869488536155,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0338",
+        "label": 2,
+        "probabilities": [
+          0.008522331828747825,
+          0.06816437135174581,
+          0.9233132968195064
+        ],
+        "context_tokens": 923,
+        "latency_seconds": 1.827017106115818,
+        "selected_passage_ids": [
+          "page-32-offset-999",
+          "page-27-offset-995"
+        ],
+        "pages": [
+          32,
+          27
+        ],
+        "prompt_sha256": "f1dd431f967aee1d7497316768bb9aac4a758791d00d66275feb3664988918c6"
+      }
+    },
+    {
+      "id": "ost-v1.1-0341",
+      "original_label": 0,
+      "evidence_only_label": 0,
+      "decision_preserved": true,
+      "claim_language": "it",
+      "document_language": "de",
+      "original_context_passage_count": 28,
+      "original_context_tokens": 7999,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-3-offset-0",
+          "paragraph_id": "page-3-offset-0",
+          "page": 3,
+          "text": "3\nDie Videos zu den  \nAbstimmungen:\n  admin.ch/videos-de\nDie App zu den  \nAbstimmungen:\nVoteInfo\n \nVolksinitiative «Löhne entlasten, Kapital gerecht besteuern»\nIn Kürze  4  –  5\nIm Detail  8\nArgumente  1 6\nAbstimmungstext  2 0\nEhe für alle\nIn Kürze  6  – 7\nIm Detail  2 2\nArgumente  2 6\nAbstimmungstext  3 0\nErste Vorlage\nZweite Vorlage ",
+          "char_start": 0,
+          "char_end": 337,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.8408702611923218,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.029631255487269532,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-20-offset-0",
+          "paragraph_id": "page-20-offset-0",
+          "page": 20,
+          "text": "20\n§\nErste Vorlage: «Löhne entlasten, Kapital gerecht besteuern»\nAbstimmungstext\n \nBundesbeschluss\nüber die Volksinitiative «Löhne entlasten,   \nKapital gerecht besteuern»\nvom 19. März 2021\nDie Bundesversammlung der Schweizerischen Eidgenossenschaft, \ngestützt auf Artikel 139 Absatz 5 der Bundesverfassung1, \nnach Prüfung der am 2. April 20192 eingereichten Volksinitiative \n«Löhne entlasten, Kapital gerecht besteuern», \nnach Einsicht in die Botschaft des Bundesrates vom 6. März 20203, \nbeschliesst: \nArt. 1 \n1 Die Volksinitiative vom 2. April 2019 «Löhne entlasten, Kapital gerecht besteu\nern» ist gültig und wird Volk und Ständen zur Abstimmung unterbreitet. \n-\n2 Sie lautet: \nDie Bundesverfassung wird wie folgt geändert: \nArt. 127a B esteuerung von Kapitaleinkommen und Arbeitseinkommen \n1 Kapitaleinkommensteile über einem durch das Gesetz festgelegten Betrag sind im \nUmfang von 150 Prozent steuerbar. \n2 Der Mehrertrag, der sich aus der Besteuerung der Kapitaleinkommensteile nach \nAbsatz 1 im Umfang von 150 Prozent statt 100 Prozent ergibt, ist für die Ermässi\ngung der Besteuerung von Personen mit tiefen oder mittleren Arbeitseinkommen ",
+          "char_start": 0,
+          "char_end": 1150,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.8417473435401917,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.02904040404040404,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-0341",
+        "label": 0,
+        "probabilities": [
+          0.9825555365155211,
+          0.0010975182305665578,
+          0.01634694525391239
+        ],
+        "context_tokens": 769,
+        "latency_seconds": 2.0204146802425385,
+        "selected_passage_ids": [
+          "page-3-offset-0",
+          "page-20-offset-0"
+        ],
+        "pages": [
+          3,
+          20
+        ],
+        "prompt_sha256": "957a61cf1f97d4fa5444b4aab14556d8ad4f99d0c05019f14b083f10fe004c19"
+      }
+    },
+    {
+      "id": "ost-v1.1-1335",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "it",
+      "document_language": "de",
+      "original_context_passage_count": 29,
+      "original_context_tokens": 8177,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-14-offset-963",
+          "paragraph_id": "page-14-offset-963",
+          "page": 14,
+          "text": "erung greift und \nwie die Umverteilung des dadurch erzielten Mehrertrags \nausgestaltet wird.\nAufgrund der höheren Besteuerung von Kapitaleinkom\nmen könnte es zu Verhaltensanpassungen kommen. Personen \nmit hohen Kapitaleinkommen könnten zum Beispiel ihren \nWohnsitz verlegen. Im Weiteren könnte sich das Sparverhalten \nändern, weil das Einkommen, das mit dem angesparten Kapital \nerzielt wird, stärker besteuert wird. Das Ausmass solcher Ver\nhaltensanpassungen kann nicht abgeschätzt werden, auch weil \nunklar ist, wie die Initiative umgesetzt würde. Daher lässt sich \nauch der Mehrertrag aus der höheren Besteuerung von Kapi\ntaleinkommen nicht beziffern. Da Kapitaleinkommen sehr \nsteuerempfindlich ist, dürften die von den Initiantinnen und \nInitianten erhofften Mehreinnahmen kaum eintreffen. Der \ndamit bezweckte Umverteilungseffekt dürfte damit nicht \nerreicht werden.\n-\n- \n- \nSteuersätze\nUmverteilung  \ndes Mehrertrags\nUmsetzung offen\nAuswirkungen",
+          "char_start": 963,
+          "char_end": 1915,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.7989023923873901,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.029418126757516764,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-27-offset-0",
+          "paragraph_id": "page-27-offset-0",
+          "page": 27,
+          "text": "27\nDie Samenspende wird vom medizinischen Ausnahmefall \nzum gesetzlichen Regelfall – ohne Rücksicht auf die Konse\nquenzen für die Kinder. Das Recht, seine beiden biologischen \nEltern zu kennen und von ihnen betreut zu werden, bleibt den \nKindern bis zum 18. L ebensjahr grundsätzlich verwehrt. Dabei \nist die Verwurzelung in der Ursprungsfamilie für die kindliche \nIdentitätsbildung zentral. Die Samenspende soll darum die \nAusnahme bleiben. Kinder brauchen Vorbilder von beiden \nGeschlechtern – die Samenspende für lesbische Paare verwehrt \nihnen jedoch per Gesetz den Vater.\n-\nIndem «Unfruchtbarkeit» in der Gesetzesvorlage verfas\nsungswidrig in «unerfüllten Kinderwunsch» umgedeutet wird, \nkönnen sich künftig auch weitere Gruppen (Alleinstehende, \nschwule Paare) auf ihren unerfüllten Kinderwunsch berufen. \nBald dürften Forderungen nach der Eizellenspende und der \nethisch fragwürdigen Leihmutterschaft folgen.\n-\nDarum empfehlen die Referendumskomitees:\n  Nein\n  ehefueralle-nein.ch\n  nein-zur-samenspende-für-gleichgeschlechtliche-paare.ch\n  mariage-homosexuel.ch\nKindeswohl bleibt \nauf der Strecke\nLeihmutterschaft \nals Nächstes?\nEmpfehlung der \nReferendums\nkomitees\n-",
+          "char_start": 0,
+          "char_end": 1175,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+          "retrieval_score": 0.7498063445091248,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.027757078986587184,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-1335",
+        "label": 2,
+        "probabilities": [
+          0.006587465586585129,
+          0.0008315835323617033,
+          0.9925809508810531
+        ],
+        "context_tokens": 870,
+        "latency_seconds": 2.028957135975361,
+        "selected_passage_ids": [
+          "page-14-offset-963",
+          "page-27-offset-0"
+        ],
+        "pages": [
+          14,
+          27
+        ],
+        "prompt_sha256": "c7514530811ea3dde12d50313a127d00982600c0aebe9062c96f9425b77ff2f7"
+      }
+    },
+    {
+      "id": "ost-v1.1-1340",
+      "original_label": 2,
+      "evidence_only_label": 2,
+      "decision_preserved": true,
+      "claim_language": "it",
+      "document_language": "it",
+      "original_context_passage_count": 25,
+      "original_context_tokens": 8123,
+      "actual_evidence_passage_count": 2,
+      "strict_context_reduction": true,
+      "proposed_evidence": [
+        {
+          "id": "page-20-offset-0",
+          "paragraph_id": "page-20-offset-0",
+          "page": 20,
+          "text": "20\nGli  \nargomenti \nComitato d’iniziativa\nPrimo oggetto: Iniziativa sul denaro contante e controprogetto\nGli argomenti\nGli argomenti\nGli argomenti del comitato d’iniziativa\nIl Popolo è responsabile per la nostra valuta, non le banche. \nAccettando l’iniziativa, esso obbliga la Confederazione a \ngarantire durevolmente l’approvvigionamento in banconote  \ne monete. Il controprogetto diretto trasferisce invece questo \ncompito alla Banca nazionale, priva di potere. Solo la nostra \niniziativa garantisce a livello costituzionale che il denaro fisico, \nossia banconote e monete, sia mantenuto: a prova di crisi, \nindipendente e basato su una decisione democratica.\nIl controprogetto diretto resta impreciso: menziona \nsoltanto il « numerario  », un concetto che già domani potrebbe \nincludere anche il denaro digitale della banca centrale. La \nnostra iniziativa dice chiaramente quello che deve essere pro -\ntetto: le banconote e le monete. Solo così è possibile mantene -\nre il denaro fisico, indipendente dall’elettricità, dalla rete  \ne dagli interessi dei grandi gruppi, anonimo, a prova di crisi  \ne comprensibile per tutte le generazioni.",
+          "char_start": 0,
+          "char_end": 1141,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8941801190376282,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.03252247488101534,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        },
+        {
+          "id": "page-20-offset-941",
+          "paragraph_id": "page-20-offset-941",
+          "page": 20,
+          "text": "o così è possibile mantene -\nre il denaro fisico, indipendente dall’elettricità, dalla rete  \ne dagli interessi dei grandi gruppi, anonimo, a prova di crisi  \ne comprensibile per tutte le generazioni.\nIl controprogetto diretto trasferisce la responsabilità alla \nBanca nazionale, senza vincolare la Confederazione. Tuttavia, \nsolo la Confederazione può agire: essa ha la competenza  \nlegislativa per adottare misure volte a garantire l’approvvigio -\nnamento. Solo con un sì alle banconote e alle monete il Popolo \nassegna questo mandato alla politica, affinché in tutto il Paese \nil denaro fisico rimanga disponibile.\nLe banconote e le monete sono parte della nostra quoti -\ndianità e della nostra identità. Creano fiducia e prossimità \nquando si tratta di pagare, fare regali o risparmiare. Tutti \ncapiscono il valore di ciò che si tiene in mano. Se le banconote \ne le monete scomparissero, si perderebbe una parte della \nnostra libertà vissuta. La nostra iniziativa fa in modo che que -\nste rimangano, come segno tangibile di affidabilità e \nautodeterminazione.\nRegole chiare  \nper il denaro fisico\nIl Popolo vincola  \nla politica\nAl Popolo stanno a \ncuore le banconote \ne le monete",
+          "char_start": 941,
+          "char_end": 2125,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+          "retrieval_score": 0.8906347751617432,
+          "retrieval_method": "hybrid",
+          "fusion_score": 0.031054405392392875,
+          "embedding_model": "intfloat/multilingual-e5-small",
+          "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "truncated": false
+        }
+      ],
+      "output": {
+        "id": "ost-v1.1-1340",
+        "label": 2,
+        "probabilities": [
+          1.3847604403395477e-06,
+          0.00013506476183535815,
+          0.9998635504777242
+        ],
+        "context_tokens": 883,
+        "latency_seconds": 1.8502096235752106,
+        "selected_passage_ids": [
+          "page-20-offset-0",
+          "page-20-offset-941"
+        ],
+        "pages": [
+          20,
+          20
+        ],
+        "prompt_sha256": "058c298df22809c9c8820676fd554d76056d0e7db7a1977689e8a5a1bd09fbfd"
+      }
+    }
+  ],
+  "evidence_caution": "Preservation is a model sensitivity diagnostic, not human proof of sufficiency or attribution. A changed decision does not by itself invalidate source evidence. No absence proof for Neutral.",
+  "gpu_forward_count": 12,
+  "retrieval_ablations_reused": true,
+  "tokens_p50_p95": {
+    "neighbors": [
+      3926.0,
+      4084.95
+    ],
+    "diverse": [
+      4033.5,
+      4091.1
+    ]
+  }
+}
