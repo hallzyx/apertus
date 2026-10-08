@@ -1,0 +1,88 @@
+{
+  "phase2_observed_spend": 1.512826222750003,
+  "total_observed_spend": 4.978695031420008,
+  "remaining_observed_credit": 5.021304968579992,
+  "active_task_instances": [],
+  "observations": [
+    {
+      "instance_id": 54722568,
+      "gpu": "RTX A6000",
+      "vram_mb": 49140,
+      "hourly_total_usd": 0.41666666666666663,
+      "lifecycle_hours": 0.9068503513888889,
+      "runtime_caution": "Creation to verified deletion includes installation, downloads, recovery and stopped storage time; not pure GPU inference duration.",
+      "quoted_conservative_cost_bound": 1.3501171875,
+      "observed_credit_after_close": 6.223352976829995,
+      "account_window_credit_reduction": 0.3107782145,
+      "cost_caution": "Account observations include asynchronous provider billing, not isolated lease invoices.",
+      "purpose": "Phase2 claim-only902train/276val, frozen full-head wrong-event same-language seeds42/1337 and generic276; no consumed310/no LoRA",
+      "actual_forward_bound": 2006,
+      "destroyed_verified_at": "2026-10-07T22:37:45.494542+00:00"
+    },
+    {
+      "instance_id": 54730019,
+      "gpu": "RTX A6000",
+      "vram_mb": 49140,
+      "hourly_total_usd": 0.41666666666666663,
+      "lifecycle_hours": 2.0324325525,
+      "runtime_caution": "Creation to verified deletion includes installation, downloads, recovery and stopped storage time; not pure GPU inference duration.",
+      "quoted_conservative_cost_bound": 1.3501171875,
+      "observed_credit_after_close": 5.5204851270999935,
+      "account_window_credit_reduction": 0.7028678497300014,
+      "cost_caution": "Account observations include asynchronous provider billing, not isolated lease invoices.",
+      "purpose": "Phase2 registered context-matched hidden heads hybrid1k/2k/4k/8k and prefix2k; train902/validation276 only, no consumed310/no LoRA",
+      "actual_forward_bound": 5890,
+      "destroyed_verified_at": "2026-10-08T00:46:04.445015+00:00"
+    },
+    {
+      "instance_id": 54745581,
+      "gpu": "RTX A6000",
+      "vram_mb": 49140,
+      "hourly_total_usd": 0.41666666666666663,
+      "lifecycle_hours": 0.7760702436111111,
+      "runtime_caution": "Creation to verified deletion includes installation, downloads, recovery and stopped storage time; not pure GPU inference duration.",
+      "quoted_conservative_cost_bound": 0.6209505208333332,
+      "observed_credit_after_close": 5.256726369879992,
+      "account_window_credit_reduction": 0.2637587572200015,
+      "cost_caution": "Account observations include asynchronous provider billing, not isolated lease invoices.",
+      "purpose": "Phase2 frozen candidate matched wrong-document checks, original-full A6000 recheck, three real PDF CLI calls and actual frontend inference; no training/no consumed310/no LoRA",
+      "actual_forward_bound": 1024,
+      "destroyed_verified_at": "2026-10-08T01:34:49.877161+00:00"
+    },
+    {
+      "instance_id": 54752495,
+      "gpu": "RTX A6000",
+      "vram_mb": 49140,
+      "hourly_total_usd": 0.41666666666666663,
+      "lifecycle_hours": 0.6402116558333334,
+      "runtime_caution": "Creation to verified deletion includes installation, downloads, recovery and stopped storage time; not pure GPU inference duration.",
+      "quoted_conservative_cost_bound": 0.6209505208333332,
+      "observed_credit_after_close": 5.021481740579992,
+      "account_window_credit_reduction": 0.23524462930000034,
+      "cost_caution": "Account observations include asynchronous provider billing, not isolated lease invoices.",
+      "purpose": "Phase2 separate frozen 8k accuracy verification: matched wrong-document checks, three actual PDF CLI calls, actual frontend and evidence-only probes. Reuses verified full recheck and unchanged neighbor/diversity ablations; no training/no consumed310/no LoRA",
+      "actual_forward_bound": 568,
+      "destroyed_verified_at": "2026-10-08T02:13:18.506446+00:00"
+    }
+  ],
+  "macro_f1_per_major_stage": [
+    {
+      "stage": "Phase1 trained hidden decision head",
+      "from": 0.6716119853717717,
+      "to": 0.8944609902440983,
+      "gain": 0.22284900487232662
+    },
+    {
+      "stage": "Phase2 controls",
+      "gain": 0,
+      "purpose": "Falsification and confidence in context dependence, not score optimization"
+    },
+    {
+      "stage": "Phase2 matched context/head selection",
+      "from": 0.8944609902440983,
+      "to": 0.9490694993412384,
+      "gain": 0.0546085090971401
+    }
+  ],
+  "scope": "Development validation gains; no phase2 consumed310 access or independent hidden-test gain."
+}

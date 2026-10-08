@@ -1,10 +1,10 @@
 {
-  "scope": "Apertus v1.5 booklet + claim only. Internal booklet-disjoint validation and holdout; not organizer hidden evaluation.",
+  "scope": "Internal validation architecture development; historical310 score applies only to original full head, not a newly selected compact head. Not organizer hidden evaluation.",
   "official": false,
   "legacy_research_only": false,
   "model": "swiss-ai/Apertus-v1.5-8B",
   "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
-  "selected_experiment_id": "apertus-v15-full-hidden-v1",
+  "selected_experiment_id": "phase2-hybrid-8k-matched-head",
   "apertus_weights_frozen": true,
   "lora": false,
   "results": [
@@ -129,8 +129,56 @@
         "brier_score": 0.16811942615460612,
         "negative_log_likelihood": 0.3158977908500724
       }
+    },
+    {
+      "experiment": "phase2-hybrid-1k-matched-head",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.8447294984543962,
+      "mean_context_tokens": 892.8405797101449,
+      "mean_inference_seconds": 0.5226733085253964,
+      "scope": "A6000 cached encoding + retrieval + CPU head; not live full request timing"
+    },
+    {
+      "experiment": "phase2-hybrid-2k-matched-head",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.8875754875754875,
+      "mean_context_tokens": 1940.9927536231885,
+      "mean_inference_seconds": 0.7769509904842445,
+      "scope": "A6000 cached encoding + retrieval + CPU head; not live full request timing"
+    },
+    {
+      "experiment": "phase2-hybrid-4k-matched-head",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.8869417303874233,
+      "mean_context_tokens": 4017.3623188405795,
+      "mean_inference_seconds": 1.365442737262102,
+      "scope": "A6000 cached encoding + retrieval + CPU head; not live full request timing"
+    },
+    {
+      "experiment": "phase2-hybrid-8k-matched-head",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.9490694993412384,
+      "mean_context_tokens": 8059.641304347826,
+      "mean_inference_seconds": 2.51969115557554,
+      "scope": "A6000 cached encoding + retrieval + CPU head; not live full request timing"
+    },
+    {
+      "experiment": "phase2-prefix-2k-matched-head",
+      "split": "validation",
+      "n": 276,
+      "macro_f1": 0.7667637543300804,
+      "mean_context_tokens": 1920.9202898550725,
+      "mean_inference_seconds": 0.4528823292179816,
+      "scope": "A6000 cached encoding + retrieval + CPU head; not live full request timing"
     }
   ],
   "baseline_test_comparison_available": false,
-  "internal_test_truncated_inputs": 310
+  "internal_test_truncated_inputs": 310,
+  "selected_context": "hybrid-8k",
+  "phase2_complete": true,
+  "phase2_final_validation_macro_f1": 0.9490694993412384
 }

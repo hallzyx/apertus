@@ -1,11 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 5.3642241509533415,
-  "actual_spend": 4.978518259420008,
+  "estimated_spend": 4.978695031420008,
+  "actual_spend": 4.978695031420008,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [],
-  "remaining_estimated_budget": 4.6357758490466585,
+  "remaining_estimated_budget": 5.021304968579992,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -528,19 +528,23 @@
       "destroyed_verified_at": "2026-10-08T02:13:18.506446+00:00"
     }
   ],
-  "account_credit_observed": 5.021481740579992,
+  "account_credit_observed": 5.021304968579992,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-08T02:13:18.506446+00:00",
-  "outstanding_task_lease_reservations_usd": 0.6209505208333332,
-  "all_task_instances_destroyed_verified": false,
+  "account_checked_at": "2026-10-08T02:14:17.173797+00:00",
+  "outstanding_task_lease_reservations_usd": 0,
+  "all_task_instances_destroyed_verified": true,
   "phase2": {
     "authorized_additional_discretionary_cap_usd": 4.5,
     "credit_at_start": 6.534131191329995,
     "started_at": "2026-10-07T21:39:52.332096+00:00",
     "gpu_leases_created": 4,
-    "additional_observed_spend_usd": 0.9896326681299996,
-    "status": "final_validation_running",
+    "additional_observed_spend_usd": 1.512826222750003,
+    "status": "completed_recovered_verified_all_owned_leases_destroyed",
     "reserve_usd": 2,
-    "estimated_reserved_spend_usd": 0.6209505208333332
-  }
+    "estimated_reserved_spend_usd": 0,
+    "completed_at": "2026-10-08T02:14:17.173797+00:00"
+  },
+  "final_provider_listing_pages_checked": 1,
+  "final_provider_cleanup_checked_at": "2026-10-08T02:14:17.173797+00:00",
+  "provider_ownership_scope": "Only ledger task-owned instances destroyed; unrelated user resources preserved"
 }

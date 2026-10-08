@@ -2,15 +2,15 @@
 
 ## Runtime
 
-From the repository root, `make run` builds the pinned PDF/HTTP Docker image and starts port 8000. `deployment/v15-selection.json` supplies the validation-selected context; currently this is full/capped booklet text, with a 48,000-byte document-context budget and explicit truncation reporting. No supporting retrieval model is downloaded by the default frontend. Apertus endpoint hardware and weights are separate.
+From the repository root, `make run` builds the pinned PDF/HTTP Docker image and starts port 8000. `deployment/v15-selection.json` supplies the validation-selected context; the frozen selection is **hybrid-8k**, with a total native prompt-token cap and exact whole source passages. The frontend forwards the complete document to the native backend, which owns context packing and matching-head inference. No supporting retrieval model is downloaded by the default frontend. Apertus endpoint hardware and weights are separate.
 
 Optional retrieval runs use `make run RUNTIME=hybrid RETRIEVAL_MODE=hybrid` (or `dense`). That image loads the public supporting `intfloat/multilingual-e5-small` model at revision `614241f622f53c4eeff9890bdc4f31cfecc418b3`, verifying original hashes and retaining assets in volume `apertus-retrieval-models`. Full/BM25 modes skip E5. Retrieval research uses four CPU threads; VFS cloud Docker can require around 8 GB free during a retrieval-image build. Classification requires the configured Apertus endpoint.
 
 Set `LLM_NAME=swiss-ai/Apertus-v1.5-8B`, `LLM_BASE_URL` to an authorized
-OpenAI-compatible endpoint ending `/v1`, and `LLM_API_KEY` securely if required.
+selected native head endpoint ending `/v1` (the client uses its `/nli` document API), and `LLM_API_KEY` securely if required.
 The default runtime rejects model names that do not identify Apertus v1.5.
-It does not silently substitute legacy Apertus 2509. Temperature is zero and output
-is strictly parsed as a JSON integer class. Model token usage must come from the
+It does not silently substitute legacy Apertus 2509. The native decision head returns the official integer class and normalized
+three-class probabilities; no sampling is used. Model token usage must come from the
 server, not an estimate. Classification remains unavailable without a real endpoint.
 `LLM_TIMEOUT_SECONDS` defaults to 120; increase it for slow CPU endpoints (for
 example, 900). This is a client setting, not an organizer runtime limit.
@@ -48,18 +48,18 @@ With Docker running and cached assets, execute:
 
 ```bash
 # Mount your booklet and configure the same authorized endpoint.
-docker run --rm -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS apertus-ost:api predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.' --k 5
+docker run --rm -v "$PWD/inputs:/inputs:ro" -e LLM_NAME -e LLM_BASE_URL -e LLM_API_KEY -e LLM_TIMEOUT_SECONDS apertus-ost:api predict /inputs/booklet.pdf 'La proposta prevede un contributo annuo di 100 franchi.'
 ```
 
-Host equivalent, after hash-locked PDF installation (uses the selected full/capped context):
+Host equivalent, after hash-locked PDF installation (uses the frozen native document service):
 
 ```bash
 PYTHONPATH=track_2a/src .venv/bin/python -m ost_nli predict /path/booklet.pdf 'The claim'
 ```
 
 Output includes `label`, `label_name`, `evidence`, `input_tokens`,
-`inference_time_ms`, model name and truncation flags. `probabilities` is null when
-the endpoint supplies only a class; no probabilities are synthesized.
+`inference_time_ms`, model name and truncation flags. The selected head returns normalized `probabilities` in class order0/1/2.
+Generic class-only research endpoints cannot reproduce this head.
 `model_inference_time_ms` separates the model call from overall retrieval + NLI time.
 PDF parsing/model initialization are separate startup/input-preparation costs.
 Exit code 0 means success; invalid input/unavailable inference exits 2. This is
@@ -104,18 +104,23 @@ PYTHONPATH=track_2a/src HF_HUB_DISABLE_XET=1 python - <<'PY'
 import os
 from ost_nli.v15 import download
 download(os.environ['APERTUS_MODEL_DIR'], os.environ['HF_TOKEN'])
+from ost_nli.dense import download as download_embeddings
+download_embeddings("/workspace/.cache/multilingual-e5-small")
 PY
 PYTHONPATH=track_2a/src HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
   python track_2a/scripts/serve_v15.py \
   --model-dir "$APERTUS_MODEL_DIR" --device cuda \
-  --method head --head track_2a/deployment/head-v15.json --port 8001
+  --method head --head track_2a/deployment/head-v15.json \
+  --retriever-dir /workspace/.cache/multilingual-e5-small --port 8001
 ```
 
 The download helper verifies the original pinned revision and all six weight
 shard hashes; the server rechecks its manifest before loading. Weights total
 about 18.4 GB and must remain outside Git. Cached inference does not need a token.
 Wait for `V15_SERVING_READY` and verify the backend's `/health` reports
-`method: head`. The service listens on loopback.
+`method: head` and the **hybrid-8k** context policy. The service listens on loopback.
+Hybrid inference requires the verified E5 cache; do not replace the pinned Swiss
+Transformers fork with ordinary Transformers via an unrelated requirements install.
 
 On Linux, connect the Docker frontend to that host backend in another terminal:
 
@@ -127,7 +132,7 @@ unset FROZEN_BASE_URL
 make run DOCKER_RUN_ARGS='--network host -e NO_PROXY=127.0.0.1,localhost'
 ```
 
-For another hosting arrangement, set a reachable authorized `/v1` endpoint and
+For another hosting arrangement, set a reachable authorized native `/nli` head backend (using its base URL or `/v1` alias) and
 its required API credential securely. Earlier CPU smoke checks used `--device cpu`
 with a separately pinned CPU Torch installation, but CPU inference is slow and
 the reported benchmark latencies are GPU measurements. Increase client timeout
@@ -178,3 +183,56 @@ bounded cleanup; persist verified results before destruction. Real v1.5 GPU rese
 checks are not GPU benchmark results.
 
 Code/model licensing and additional results are in `technical_report.md`.
+
+
+## Completed Phase2 research
+
+The final hybrid-8k head obtains validation Macro-F1 0.949069; this is development on276 rows/207 distinct pairs/three events. The original registered4k efficiency decision and any separately registered8k accuracy extension are recorded independently. No new hidden evaluation, LoRA or model-weight tuning. See [technical report](technical_report.md) and [phase2 artifacts](experiments/apertus-v15-phase2/README.md). Evidence is exact source context, with an explicit caution about sufficiency and booklet-wide Neutral.
+
+
+### Native backend inside Docker
+
+The native dependencies can stay inside Docker too. On a Linux GPU host with the
+NVIDIA container runtime, use the same pinned PyTorch image that ran the real Vast
+experiments. The first download needs an authorized `HF_TOKEN` configured securely
+on that host; the cloud network secret does not transfer itself to another machine.
+The model volume persists verified assets outside Git. Cached startup needs no token.
+This recipe uses the four dependency locks and native service exercised by the
+GPU experiments; the current CPU cloud does not provide a local GPU backend.
+
+```bash
+docker run --rm --gpus all --network host -i \
+  -v "$PWD:/workspace/apertus:ro" -v apertus-v15-assets:/models \
+  -e HF_TOKEN -w /workspace/apertus \
+  pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69 \
+  bash -s <<'SH'
+set -euo pipefail
+export PYTHONPATH=track_2a/src HF_HUB_DISABLE_XET=1 HF_HOME=/models/hf OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4
+for lock in requirements-v15-cuda.lock requirements-v15.lock requirements-head-v15.lock requirements-pdf.lock; do
+  python -m pip install --no-cache-dir --require-hashes -r "track_2a/$lock"
+done
+python track_2a/scripts/check_v15_cuda.py
+python - <<'PY'
+import os
+from pathlib import Path
+from ost_nli.v15 import download
+from ost_nli.dense import download as download_embeddings
+if not Path('/models/apertus-v15/verified_manifest.json').exists():
+    token=os.environ.get('HF_TOKEN')
+    if not token:raise SystemExit('Authorized HF_TOKEN required for the first model download')
+    download('/models/apertus-v15',token)
+if not Path('/models/e5/verified_manifest.json').exists():
+    download_embeddings('/models/e5')
+PY
+unset HF_TOKEN
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+exec python track_2a/scripts/serve_v15.py --model-dir /models/apertus-v15 \
+  --device cuda --method head --head track_2a/deployment/head-v15.json \
+  --retriever-dir /models/e5 --port 8001
+SH
+```
+
+Start the frontend in another terminal with the Linux host-network command above.
+No Python packages are installed manually on the host by this container recipe.
+Weights are verified again before serving. The API remains on loopback; a remote
+hosting arrangement needs its own authorized HTTPS transport.

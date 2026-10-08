@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "path": "experiments/apertus-v15-phase2/context-results.json",
+      "sha256": "839e985bcc24b29fb8568e4e253faea1de55d9745dc01db7389353e6253333ff"
+    },
+    {
+      "path": "experiments/apertus-v15-phase2/adaptive-8k-simulation.json",
+      "sha256": "fb965b1f9598a6e38f9444b077deed0651dc5d83a69969dc4b6c5ca921039ebd"
+    },
+    {
+      "path": "experiments/apertus-v15-phase2/accuracy-results.json",
+      "sha256": "e856285168f92a2f11d678715dfb4e79415fa2d3be57c8d48c587b6f92a60083"
+    },
+    {
+      "path": "deployment/v15-selection.json",
+      "sha256": "d5483f192f3bce3b9540de7e11251b8602b5fb40e9d21eb441d10ed383f0d37c"
+    }
+  ],
+  "script_sha256": "0e3a2457dfc405d6ce65125841f8ec45ffafb5269133819ba3ea0b84bf92002c",
+  "matplotlib_version": "3.10.7",
+  "numpy_version": "2.2.6",
+  "scope": "Development comparisons only; no claim of independent hidden-test superiority."
+}

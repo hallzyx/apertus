@@ -1,12 +1,13 @@
 {
   "choice": {
-    "name": "apertus-v15-full-hidden-v1",
-    "context": "full",
+    "name": "phase2-hybrid-8k-matched-head",
+    "context": "hybrid-8k",
     "method": "head",
     "head": "track_2a/deployment/head-v15.json",
     "feature_kind": "hidden",
-    "macro_f1": 0.8944609902440983,
-    "tokens": 14106.115942028986
+    "macro_f1": 0.9490694993412384,
+    "tokens": 8059.641304347826,
+    "transport": "document-service"
   },
   "best_baseline": {
     "name": "full-score",
@@ -35,15 +36,111 @@
       "tokens": 14106.115942028986
     }
   ],
-  "head_macro_f1_gain": 0.22284900487232662,
+  "head_macro_f1_gain": null,
   "decision_head_gate": "GO",
   "gate_rule": "Use a trained head only if validation Macro-F1 improves over the best booklet-only baseline by at least 0.02; rule fixed before seeing results.",
   "test_used_for_selection": false,
-  "lora": "Not performed; all Apertus weights remain frozen",
+  "lora": "Not performed; all Apertus weights frozen",
   "git_commit": "15c6e57b4992a513ffa5f5eec350282e11dd63d5",
   "model": "swiss-ai/Apertus-v1.5-8B",
   "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
   "source_cache": {
+    "repo": "swiss-ai/Apertus-v1.5-8B",
+    "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.14.0.dev0",
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_bytes": 50908823552,
+    "precision": "BF16 text; official tokenizer modules remain FP32",
+    "quantization": null,
+    "model": "swiss-ai/Apertus-v1.5-8B",
+    "model_revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "git_commit": "6908c105a029b14f9100023d9e8a12739c2adf78",
+    "load_seconds": 84.96553897112608,
+    "input_manifest_sha256": "9c42aed605d1aec6d362b1b0091004b4cc9c9eefbd5be20786197b0d6267ca6b",
+    "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+    "engine_sha256": "3ff9b62a1178cbe401d66757a29bbd57add9d26de1fe804cbb851b9fb37b34d4",
+    "script_sha256": "735b906cbd19e398b748573d42d37c6ca362a1a73a9912e89f0703c9eb28505c",
+    "scope": "train/validation only; consumed310 untouched",
+    "conditions": [
+      "hybrid-1k",
+      "hybrid-2k",
+      "hybrid-4k",
+      "hybrid-8k",
+      "prefix-2k"
+    ],
+    "device": "cuda",
+    "weights_frozen": true,
+    "study": "context",
+    "context": "hybrid-8k",
+    "status": "completed",
+    "files": [
+      {
+        "path": "train.npz",
+        "sha256": "cf557a611251b93a8838a548a0726644751b96a5addd5dee338026cc33a01cbd"
+      },
+      {
+        "path": "validation.npz",
+        "sha256": "b66bae54fe9f2944775c34e635fda5a83401c17178fa1fc31ba733a3e56b8140"
+      },
+      {
+        "path": "validation_rows.jsonl",
+        "sha256": "4dbff7d9e584643d4938eb61fb5ac2f926b3f3ffa182beca2f76d8caecf5d092"
+      }
+    ],
+    "train_sha256": "73dfb46269072ba2c2451c7810faf91b6fccfe658a09afb0d82ff83b4bf45cd5",
+    "validation_sha256": "00839ac3040e4a75cc4a122338a62a38919bb997648aeb3a9af7f7415d93e74f",
+    "training": "Frozen Apertus encodings; any head fitting is a separate train-only CPU stage"
+  },
+  "status": "phase2_frozen_after_registered_validation",
+  "head_training_complete": true,
+  "internal_holdout_complete": false,
+  "source_head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+  "artifact_sha_verified_recovery_pending": false,
+  "internal_test_macro_f1": null,
+  "official_challenge_score": false,
+  "source": "experiments/apertus-v15-research-v1/final/selection.json",
+  "resume_audit": {
+    "logical_heldout_evaluations": 1,
+    "persisted_predictions_before_interruption": 26,
+    "preserved_verbatim": true,
+    "completed_predictions_reinferred": false,
+    "model_or_head_refitted": false,
+    "selection_changed": false,
+    "test_used_for_selection": false,
+    "selection_sha256": "bc4b2d236bffab31a52048b419cc37bd0e532251be474005d37f6eb01c5480b4",
+    "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+    "initial_prefix_sha256": "08826a7350450a0e34045e08489d316454b7457f7915a9b984820b83832adf75",
+    "source_resume_script_sha256": "833f35e47cf0357cc05999f1f5edfc959ada9002ee281c9e85098f7e06773a51",
+    "reason": "Cloud controller reboot interrupted the original frozen holdout; resume appends only its missing canonical IDs."
+  },
+  "phase2_validation_macro_f1": 0.9490694993412384,
+  "phase2_matched_base_macro_f1": 0.5487752155668199,
+  "phase2_head_gain_over_same_context_base": 0.40029428377441856,
+  "phase2_gain_over_original_full_head": 0.0546085090971401,
+  "phase2_gain_scope": "Development validation only; no matched compact held-out experiment",
+  "phase2_completed": true,
+  "phase2_results": "experiments/apertus-v15-phase2/accuracy-results.json",
+  "phase2_result_sha256": "e856285168f92a2f11d678715dfb4e79415fa2d3be57c8d48c587b6f92a60083",
+  "historical_original_full": {
+    "choice": {
+      "name": "apertus-v15-full-hidden-v1",
+      "context": "full",
+      "method": "head",
+      "head": "track_2a/deployment/head-v15.json",
+      "feature_kind": "hidden",
+      "macro_f1": 0.8944609902440983,
+      "tokens": 14106.115942028986
+    },
+    "internal_test_macro_f1": 0.8999203919167176,
+    "internal_holdout_complete": true,
+    "source_head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
+    "status": "completed_frozen_internal_evaluation"
+  },
+  "original_consumed310_score_applies_to_current_head": false,
+  "phase2_consumed310_accessed": false,
+  "historical_source_cache": {
     "repo": "swiss-ai/Apertus-v1.5-8B",
     "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
     "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
@@ -83,26 +180,5 @@
       }
     ]
   },
-  "status": "completed_frozen_internal_evaluation",
-  "head_training_complete": true,
-  "internal_holdout_complete": true,
-  "source_head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
-  "artifact_sha_verified_recovery_pending": false,
-  "internal_test_macro_f1": 0.8999203919167176,
-  "official_challenge_score": false,
-  "source": "experiments/apertus-v15-research-v1/final/selection.json",
-  "resume_audit": {
-    "logical_heldout_evaluations": 1,
-    "persisted_predictions_before_interruption": 26,
-    "preserved_verbatim": true,
-    "completed_predictions_reinferred": false,
-    "model_or_head_refitted": false,
-    "selection_changed": false,
-    "test_used_for_selection": false,
-    "selection_sha256": "bc4b2d236bffab31a52048b419cc37bd0e532251be474005d37f6eb01c5480b4",
-    "head_sha256": "a4a8279f5db10dfe7b7927eefff93f460027769fbd7a5b6a33f64bc6233368d6",
-    "initial_prefix_sha256": "08826a7350450a0e34045e08489d316454b7457f7915a9b984820b83832adf75",
-    "source_resume_script_sha256": "833f35e47cf0357cc05999f1f5edfc959ada9002ee281c9e85098f7e06773a51",
-    "reason": "Cloud controller reboot interrupted the original frozen holdout; resume appends only its missing canonical IDs."
-  }
+  "head_candidates_scope": "Historical phase1 candidates; phase2 candidates recorded in context-results.json"
 }

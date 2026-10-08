@@ -1,0 +1,276 @@
+{
+  "inspected_direct_quote_presence": {
+    "n_entailment_contradiction": 6,
+    "present_in_input": 6,
+    "caution": "Six predetermined qualitative source inspections, not official evidence scoring or a claim that these are the only valid passages"
+  },
+  "scope": "Nine predetermined, non-blinded development source inspections by assistant; not an independent human evidence evaluation or organizer metric.",
+  "context": "hybrid-8k",
+  "cases": [
+    {
+      "id": "ost-v1.1-0019",
+      "gold": 0,
+      "claim": "Der Bundesrat führt an, dass der Gegenentwurf bewährte Formulierungen aus geltenden Gesetzen übernimmt, die rechtlich klar sind und sich in der Anwendung bewährt haben.",
+      "claim_language": "de",
+      "document_language": "fr",
+      "source_pdf_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+      "selected_source_quote_count": 30,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "French Federal Council/Parliament argument explicitly says current-law formulations are tried, legally unambiguous and established in application. This directly supports the German attributed claim.",
+      "inspected_direct_source_quotes": [
+        {
+          "id": "page-7-offset-0",
+          "paragraph_id": "page-7-offset-0",
+          "page": 7,
+          "text": "7\nNon\nQuelques membres du Conseil national rejettent  \nle contre-projet. Ils le jugent aussi inutile que l’initiative,  \nestimant que le cadre juridique actuel est suffisant.\n parlement.ch > Mots-clés, objets, … > 24.063\nAcceptez-vous l’arrêté fédéral du  \n17 septembre 2025 sur la monnaie suisse \net l’approvisionnement en numéraire ?\nLa question qui \nvous est posée \nconcernant le \ncontre-projet\nOui\nLa garantie de l’approvisionnement en numéraire et  \nle franc comme monnaie suisse seront inscrits dans la Constitu -\ntion, au lieu de ne l’être que dans la loi. Contrairement  \nà l’initiative, le contre-projet reprend des formulations de loi \néprouvées qui sont juridiquement univoques et faciles  \nà mettre en œuvre. \n admin.ch/initiative-argent-liquide  \nRecommandation \ndu Conseil fédéral \net du Parlement\nPosition de  \nla minorité  \ndu Parlement\nVote du  \nConseil national\nVote du  \nConseil des États\n 183 oui\n 7 non\n0 abstention\n 43 oui\n0 non\n0 abstention",
+          "char_start": 0,
+          "char_end": 963,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b"
+        },
+        {
+          "id": "page-24-offset-0",
+          "paragraph_id": "page-24-offset-0",
+          "page": 24,
+          "text": "24\nArguments Conseil fédéral et Parlement\nTant l’initiative populaire que le contre-projet visent à inscrire \ndans la Constitution l’approvisionnement en numéraire et  \nle franc suisse comme monnaie nationale. Alors que le contre-  \nprojet reprend des dispositions de loi qui ont fait leurs \npreuves, l’initiative utilise de nouvelles formulations, inadé -\nquates. Le Conseil fédéral et le Parlement rejettent l’initiative \npopulaire et soutiennent le contre-projet, notamment pour  \nles raisons suivantes.\nLe contre-projet renforce le statut juridique de l’argent \nliquide et du franc comme monnaie. Reprenant les revendica -\ntions légitimes de l’initiative, il vise à inscrire deux principes \nimportants dans la Constitution  : la Banque nationale suisse \ncontinuera d’assurer l’approvisionnement en numéraire,  \net le franc est et restera la monnaie de la Suisse. L’ajout de  \nces principes dans la Constitution enverra un signal fort. \nLe contre-projet reprend des formulations figurant dans \ndes lois en vigueur. Ces formulations ont fait leurs preuves, \nelles sont juridiquement univoques, et leur application est bien \nétablie. L’initiative, par contre, utilise de nouvelles formula -",
+          "char_start": 0,
+          "char_end": 1191,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b"
+        },
+        {
+          "id": "page-24-offset-991",
+          "paragraph_id": "page-24-offset-991",
+          "page": 24,
+          "text": "dans \ndes lois en vigueur. Ces formulations ont fait leurs preuves, \nelles sont juridiquement univoques, et leur application est bien \nétablie. L’initiative, par contre, utilise de nouvelles formula -\ntions qui soulèvent d’inutiles questions d’interprétation. \nLe texte de l’initiative prévoit par ailleurs expressément  \nla tenue d’une votation populaire réunissant la majorité du \npeuple et celle des cantons si un projet propose de remplacer \nle franc par une autre monnaie. Cet ajout est inutile  :  \nla Constitution ne peut être modifiée qu’à la faveur d’une \nvotation populaire réunissant la majorité du peuple et celle des \ncantons. Le contre-projet renonce délibérément à toute dispo -\nsition superflue afin que la Constitution reste concise et \ncompréhensible.\nRenforcement de \nl’argent liquide et \nde la monnaie\nDes formulations \nqui ont fait leurs \npreuves\nPas de dispositions \nsuperflues\nPremier objet  : initiative pour l’argent liquide et contre-projet\nArguments du Conseil fédéral  \net du Parlement",
+          "char_start": 991,
+          "char_end": 2004,
+          "source_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+          "source_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b"
+        }
+      ],
+      "inspected_direct_quote_present_in_model_input": true,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-0499",
+      "gold": 1,
+      "claim": "Der Bundesrat begründet die Notwendigkeit der AHV-21-Reform damit, die finanzielle Nachhaltigkeit der Altersvorsorge langfristig zu gewährleisten.",
+      "claim_language": "de",
+      "document_language": "it",
+      "source_pdf_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+      "selected_source_quote_count": 26,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "AHV21 pension-funding claim; development reference is an unrelated2026SSR-fees topic. No supporting or contradicting passage was established in this inspection. An unrelated passage cannot prove full-booklet absence; no gold evidence is manufactured for Neutral.",
+      "inspected_direct_source_quotes": [],
+      "inspected_direct_quote_present_in_model_input": null,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-0995",
+      "gold": 2,
+      "claim": "Das Komitee vertritt die Auffassung, dass eine Verlängerung des COVID-Gesetzes notwendig und sinnvoll ist, weil sie die Bevölkerung vor einer möglichen neuen Welle schützt und die demokratischen Rechte der Bürger stärkt.",
+      "claim_language": "de",
+      "document_language": "it",
+      "source_pdf_sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a",
+      "selected_source_quote_count": 27,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "Italian committee argument says extending COVID law is unnecessary/harmful and preserves powers incompatible with democracy. This contradicts the German attributed committee claim; general Federal Council pro-extension arguments must not be substituted for committee attribution.",
+      "inspected_direct_source_quotes": [
+        {
+          "id": "page-48-offset-0",
+          "paragraph_id": "page-48-offset-0",
+          "page": 48,
+          "text": "48\nGli \nargomenti \nTerzo oggetto: Legge COVID-19\nComitato referendario\nProrogare la legge COVID è inutile e dannoso. Nonostante la \nConfederazione abbia proclamato la fine della pandemia e \nrevocato tutte le restrizioni, la legge permette di reintrodurre \nin qualsiasi momento un certificato e altre misure discrimina -\ntorie. Noi tutti – vaccinati e non vaccinati – ne abbiamo però \nabbastanza di discordia e discriminazioni. Votando NO ricom -\npattiamo una società divisa e torniamo finalmente alla \nnormalità. \nIl certificato è inutile. Nell’ultima votazione sulla legge \nCOVID i cittadini sono stati ingannati a questo riguardo: al \ntelegiornale della SRF del 27 ottobre 2021 il consigliere federa -\nle Alain Berset aveva infatti dichiarato che con il certificato si \npoteva dimostrare di non essere contagiosi. In realtà i vaccinati \npossono tuttavia trasmettere il virus quanto i non vaccinati. \nChristoph Berger, presidente della Commissione federale per  \nle vaccinazioni, ha del resto ammesso, nel Tages-Anzeiger del  \n23 gennaio 2023, che la vaccinazione non ha nessun impatto sulla \ntrasmissione del virus. Non ha perciò senso prorogare la base ",
+          "char_start": 0,
+          "char_end": 1156,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/Lv5UWt6X1iUj/2023-06-18_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a"
+        },
+        {
+          "id": "page-48-offset-956",
+          "paragraph_id": "page-48-offset-956",
+          "page": 48,
+          "text": "e per  \nle vaccinazioni, ha del resto ammesso, nel Tages-Anzeiger del  \n23 gennaio 2023, che la vaccinazione non ha nessun impatto sulla \ntrasmissione del virus. Non ha perciò senso prorogare la base \nlegale del certificato. Il certificato non è di alcuna utilità  \nneppure per i viaggi all’estero, visto che disponiamo già di un \ncertificato di vaccinazione riconosciuto in tutto il mondo.\nProrogare la legge COVID è inutile. La Confederazione  \nha del resto posto fine a tutte le restrizioni. Queste non si sono \nperaltro rivelate efficaci e non hanno assicurato alla popolazio -\nne la protezione promessa. Le sproporzionate misure adottate \nhanno inflitto grandi sofferenze a tutti, giovani e meno giova -\nni, e hanno avuto conseguenze psicologiche in particolare  \nper le ragazze e le giovani donne.\nGrazie alla proroga della legge, il Consiglio federale \nconserva poteri incompatibili con una democrazia. Mentre le \nleggi COVID vengono abrogate praticamente ovunque nel \nmondo, la Svizzera mantiene in vigore la sua, continuando così \na mettere in pericolo il tessuto democratico del Paese. È ora di \nripristinare pienamente la democrazia diretta: lo stato di ecce -",
+          "char_start": 956,
+          "char_end": 2127,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/Lv5UWt6X1iUj/2023-06-18_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a"
+        }
+      ],
+      "inspected_direct_quote_present_in_model_input": true,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-0169",
+      "gold": 0,
+      "claim": "Le résumé précise que l’initiative vise à ramener la redevance des ménages à 200 francs par an et à dispenser toutes les entreprises de son paiement.",
+      "claim_language": "fr",
+      "document_language": "it",
+      "source_pdf_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b",
+      "selected_source_quote_count": 24,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "Italian summary explicitly says200 francs annually and exemption of all companies. It supports the French claim and distinguishes the initiative from the government300-franc counterproposal.",
+      "inspected_direct_source_quotes": [
+        {
+          "id": "page-10-offset-961",
+          "paragraph_id": "page-10-offset-961",
+          "page": 10,
+          "text": "assoggettate all’imposta \nsul valore aggiunto. La SSR deve dunque risparmiare e propor -\nre un’offerta ridotta, ma comunque di buona qualità. In tal \nmodo i media privati avranno più margine d’azione.\nL’iniziativa intende ridurre i mezzi a disposizione della SSR \nin misura maggiore rispetto a quanto proposto dal Consiglio \nfederale. La SSR dovrebbe limitarsi a fornire «  un servizio indi-\nspensabile alla collettività  ». L’iniziativa prevede di ridurre il \ncanone per le economie domestiche a 200 franchi all’anno e di \nesentare tutte le imprese dall’obbligo di pagarlo. L’iniziativa \nconcerne esclusivamente la SSR; le radio locali e le televisioni \nregionali che ricevono fondi provenienti dalla riscossione del \ncanone radiotelevisivo non ne sono toccate.\nL’iniziativa\nContesto\nIn breve In breve",
+          "char_start": 961,
+          "char_end": 1763,
+          "source_url": "https://www.bk.admin.ch/dam/it/sd-web/MDRXrtFaVPNG/2026-03-08_spiegazioni_del_consigliofederale.pdf",
+          "source_sha256": "a6ff4964b4cfc0a9d82936cb1e1200396201d66ea29331c5c94d312b35b64a1b"
+        }
+      ],
+      "inspected_direct_quote_present_in_model_input": true,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-0664",
+      "gold": 1,
+      "claim": "Le comité estime que la réforme des caisses de pension devrait être reportée à 2026 afin de permettre une concertation plus approfondie avec les partenaires sociaux.",
+      "claim_language": "fr",
+      "document_language": "it",
+      "source_pdf_sha256": "1f61954e466f96ae0743dec3791bd68b5a10d7ddfaa3e58a95e9bde3a6d6bc6a",
+      "selected_source_quote_count": 27,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "Pension reform deferral/2026/social-partner claim; development reference concerns climate law. No supporting or contradicting source passage established. Irrelevance supports a cautious abstention but is not a proof of booklet-wide absence.",
+      "inspected_direct_source_quotes": [],
+      "inspected_direct_quote_present_in_model_input": null,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-1159",
+      "gold": 2,
+      "claim": "Le texte de vote affirme que la taxation minimale s’applique aux entreprises dont le chiffre d’affaires annuel consolidé atteint 500 millions d’euros.",
+      "claim_language": "fr",
+      "document_language": "de",
+      "source_pdf_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+      "selected_source_quote_count": 27,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "German legal text and overview specify750 million euros, not500. Legal paragraphs on pages20/21 directly contradict the French numeric claim; overview alone is less precise for a claim specifically attributing the voting text.",
+      "inspected_direct_source_quotes": [
+        {
+          "id": "page-11-offset-0",
+          "paragraph_id": "page-11-offset-0",
+          "page": 11,
+          "text": "11\nDie zwei Säulen des OECD/G20-Projekts 2\nBesteuerung im Marktstaat (Säule 1):  Sie betrifft Unternehmensgrup -\npen mit einem jährlichen Umsatz von mindestens 20 Milliarden Euro \nund einer Profitabilität von mindestens 10 Prozent. Es geht gemäss \nSchätzung der OECD um die rund 100 grössten und profitabelsten \nUnternehmensgruppen der Welt. Sie sollen neu auch dort besteuert \nwerden, wo sie ihre Waren verkaufen oder ihre Dienstleistungen \nerbringen. Ausgenommen sind regulierte Finanzdienstleistungen \nund der Rohstoffabbau. Für die Umsetzung braucht es ein interna -\ntionales Übereinkommen. Damit soll Rechtssicherheit geschaffen \nund es sollen nationale Alleingänge verhindert werden. Welche \nLänder das Übereinkommen unterzeichnen werden und wann dies \ngeschieht, ist noch offen.\nMindestbesteuerung (Säule 2):  Sie betrifft Unternehmensgruppen \nmit Unternehmen in mehr als einem Land und mit einem Jahresum -\nsatz von mindestens 750 Millionen Euro. Diese Unternehmensgrup -\npen sollen neu in jedem Land mindestens 15 Prozent Steuern auf \nihrem Gewinn bezahlen. Der Gewinn wird nach international \neinheitlichen Regeln ermittelt; diese unterscheiden sich von den ",
+          "char_start": 0,
+          "char_end": 1168,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881"
+        },
+        {
+          "id": "page-20-offset-993",
+          "paragraph_id": "page-20-offset-993",
+          "page": 20,
+          "text": "n von: \na. den Grundsätzen der Allgemeinheit und der Gleichmässigkeit der Besteue-\nrung sowie dem Grundsatz der Besteuerung nach der wirtschaftlichen Leis-\ntungsfähigkeit gemäss Artikel 127 Absatz 2; \nb. den maximalen Steuersätzen gemäss Artikel 128 Absatz 1;  \nc. den Vorschriften über den Vollzug gemäss Artikel 128 Absatz 4 erster Satz; \nd. den Ausnahmen von der Steuerharmonisierung gemäss Artikel 129 Absatz 2 \nzweiter Satz. \nArt. 197 Ziff. 153 \n15. Übergangsbestimmungen zu Art. 129a \n(Besondere Besteuerung grosser Unternehmensgruppen) \n1 Der Bundesrat kann die bis zum Inkraf ttreten der gesetzlichen Bestimmungen \nerforderlichen Vorschriften über die Mindestbesteuerung grosser Unternehmens-\ngruppen erlassen. \n2 Er beachtet dabei folgende Grundsätze: \n  \n1 BBl 2022 1700 \n2 SR 101 \n3 Die endgültige Ziffer dieser Übergangsbe stimmungen wird nach der Volksabstimmung \nvon der Bundeskanzlei festgelegt. \nBesondere Besteuerung grosser Unternehmensgruppen. BB \n3 \na. Die Vorschriften gelten für die Geschäftseinheiten einer multinationalen \nUnternehmensgruppe, die einen konsolidierten jährlichen Umsatz von \n750 Millionen Euro erreicht.  ",
+          "char_start": 993,
+          "char_end": 2138,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881"
+        },
+        {
+          "id": "page-20-offset-1938",
+          "paragraph_id": "page-20-offset-1938",
+          "page": 20,
+          "text": "ernehmensgruppen. BB \n3 \na. Die Vorschriften gelten für die Geschäftseinheiten einer multinationalen \nUnternehmensgruppe, die einen konsolidierten jährlichen Umsatz von \n750 Millionen Euro erreicht.  \nb. Unterschreiten die massgebenden St euern der Geschäftseinheiten in der \nSchweiz oder einem anderen Steuerhohe itsgebiet gesamthaft die Mindestbe-\nsteuerung zum Satz von 15 Prozent der massgebenden Gewinne, so erhebt \nder Bund zum Ausgleich der Differenz zwischen dem effektiven Steuersatz \nund dem Mindeststeuersatz eine Ergänzungssteuer. \nc. Massgebende Steuern sind insbesondere die in der Erfolgsrechnung der Ge-\nschäftseinheiten verbuchten direkten Steuern. \nd. Massgebender Gewinn eine r Geschäftseinheit ist de r für die konsolidierte \nJahresrechnung der Unternehmensgruppe  nach einem anerkannten Rech-\nnungslegungsstandard ermittelte Gewinn oder Verlust vor Herausrechnung \nder Transaktionen zwischen den Geschäftseinheiten und nach Berücksichti-\ngung anderer Korrekturen;  nicht berücksichtigt werden Gewinne und Ver-\nluste aus dem internationalen Seeverkehr. \ne. Der effektive Steuersatz für ein Steuerhoheitsgebiet berechnet sich, indem ",
+          "char_start": 1938,
+          "char_end": 3090,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881"
+        },
+        {
+          "id": "page-21-offset-0",
+          "paragraph_id": "page-21-offset-0",
+          "page": 21,
+          "text": "21\nBesondere Besteuerung grosser Unternehmensgruppen. BB \n3 \na. Die Vorschriften gelten für die Geschäftseinheiten einer multinationalen \nUnternehmensgruppe, die einen konsolidierten jährlichen Umsatz von \n750 Millionen Euro erreicht.  \nb. Unterschreiten die massgebenden St euern der Geschäftseinheiten in der \nSchweiz oder einem anderen Steuerhohe itsgebiet gesamthaft die Mindestbe-\nsteuerung zum Satz von 15 Prozent der massgebenden Gewinne, so erhebt \nder Bund zum Ausgleich der Differenz zwischen dem effektiven Steuersatz \nund dem Mindeststeuersatz eine Ergänzungssteuer. \nc. Massgebende Steuern sind insbesondere die in der Erfolgsrechnung der Ge-\nschäftseinheiten verbuchten direkten Steuern. \nd. Massgebender Gewinn eine r Geschäftseinheit ist de r für die konsolidierte \nJahresrechnung der Unternehmensgruppe  nach einem anerkannten Rech-\nnungslegungsstandard ermittelte Gewinn oder Verlust vor Herausrechnung \nder Transaktionen zwischen den Geschäftseinheiten und nach Berücksichti-\ngung anderer Korrekturen;  nicht berücksichtigt werden Gewinne und Ver-\nluste aus dem internationalen Seeverkehr. \ne. Der effektive Steuersatz für ein Steuerhoheitsgebiet berechnet sich, indem ",
+          "char_start": 0,
+          "char_end": 1188,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881"
+        }
+      ],
+      "inspected_direct_quote_present_in_model_input": true,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-0333",
+      "gold": 0,
+      "claim": "Nel riepilogo si sostiene che circa il 75% dell’energia consumata in Svizzera proviene dalle importazioni.",
+      "claim_language": "it",
+      "document_language": "de",
+      "source_pdf_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881",
+      "selected_source_quote_count": 24,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "German summary page6 says approximately three quarters imported.75% is numerically equivalent and supports the Italian claim. A correct passage does not guarantee the trained decision head uses the equivalence.",
+      "inspected_direct_source_quotes": [
+        {
+          "id": "page-6-offset-0",
+          "paragraph_id": "page-6-offset-0",
+          "page": 6,
+          "text": "Zweite Vorlage: Klima- und Innovationsgesetz6\nDie Schweiz importiert rund drei Viertel ihrer Energie. \nErdöl und Erdgas, die in der Schweiz verbraucht werden, stam -\nmen vollständig aus dem Ausland. Diese fossilen Energieträger \nsind nicht unendlich verfügbar und belasten das Klima stark. \nUm die Abhängigkeit vom Ausland und die Umweltbelastung \nzu verringern, wollen Bundesrat und Parlament den Verbrauch \nvon Öl und Gas senken. Gleichzeitig soll mehr Energie in der \nSchweiz produziert werden.\nAusgangslage\nMit der Vorlage senkt die Schweiz schrittweise den Ver -\nbrauch von Erdöl und Erdgas. Ziel ist, dass die Schweiz bis 2050 \nklimaneutral wird. Die Vorlage sieht Massnahmen vor, um den \nEnergieverbrauch zu reduzieren. Wer seine Öl-, Gas- oder \nElektroheizung ersetzt, wird finanziell entlastet. Zudem wer -\nden Unternehmen unterstützt, die in klimafreundliche Techno -\nlogien investieren. Die Vorlage ist ein indirekter Gegenvor -\nschlag zur Gletscher-Initiative. Anders als die Initiative enthält \nsie kein Verbot fossiler Energieträger wie Benzin, Diesel, Heizöl \nund Gas. Gegen die Vorlage wurde das Referendum ergriffen. \nDie Vorlage\nVorlagen im Detail  24\nArgumente  30",
+          "char_start": 0,
+          "char_end": 1183,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/Lv5UWt6X1iUj/2023-06-18_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "d496622d23589e2c9379d2172e0d8c60eca4bbd119588c656c39d49170862881"
+        }
+      ],
+      "inspected_direct_quote_present_in_model_input": true,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-0833",
+      "gold": 1,
+      "claim": "Se il voto viene approvato, l’Italia adotterà una nuova legge per la tutela ambientale del Mediterraneo.",
+      "claim_language": "it",
+      "document_language": "de",
+      "source_pdf_sha256": "d0c794f37d6d2cb25e9969ed058e2a7d7c3e2508f7f03e2b5e90415d364f6170",
+      "selected_source_quote_count": 27,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "Claim asserts Italian Mediterranean environmental legislation conditional on the Swiss vote. The development reference concerns Swiss individual taxation. No such supporting/contradicting passage established. External-world knowledge is not used to label the statement false.",
+      "inspected_direct_source_quotes": [],
+      "inspected_direct_quote_present_in_model_input": null,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    },
+    {
+      "id": "ost-v1.1-1335",
+      "gold": 2,
+      "claim": "Il comitato afferma che i redditi da capitale non beneficiano di agevolazioni fiscali e che l’attuale sistema di tassazione è già equo per tutti i cittadini.",
+      "claim_language": "it",
+      "document_language": "de",
+      "source_pdf_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341",
+      "selected_source_quote_count": 29,
+      "exact_quote_provenance_verified": true,
+      "manual_source_interpretation": "German committee argument page17 explicitly says capital income is privileged and proposes fairer taxation. This contradicts the Italian attributed claim; Council and committee positions must remain distinct.",
+      "inspected_direct_source_quotes": [
+        {
+          "id": "page-5-offset-0",
+          "paragraph_id": "page-5-offset-0",
+          "page": 5,
+          "text": "5\nWollen Sie die Volksinitiative  \n«Löhne entlasten, Kapital gerecht \n b esteuern» annehmen?\n  Nein\n \n F ür Bundesrat und Parlament schwächt die Initiative den \nStandort Schweiz und die Anreize zum Sparen. Dies hat \nschädliche Auswirkungen auf Arbeitsplätze und Wohlstand.  \nIm internationalen Vergleich sind die Einkommen in der \nSchweiz gleichmässig verteilt, und Kapital wird bereits recht \nhoch besteuert.\n  admin.ch/besteuerung-kapital\n Ja  \nFür das Komitee führt die Initiative zu einer gerechteren \nBesteuerung und sie entlastet 99% der Bevölkerung. Heute \nseien Kapitaleinkommen auf diverse Arten privilegiert. Davon \nprofitierten die Reichsten, die mit Geld spekulierten. Dieses \nfehle den arbeitenden Menschen und in der Realwirtschaft. \n \n  99prozent.ch\n  99prozent-ja.ch\n  66 Ja\n  128 Nein\n0 Enthaltungen\n \n  13 Ja\n  31 Nein\n0 Enthaltungen\nAbstimmungsfrage\nEmpfehlung  \nvon Bundesrat  \nund Parlament\nEmpfehlung des \nInitiativkomitees\nAbstimmung  \nim Nationalrat\nAbstimmung  \nim Ständerat",
+          "char_start": 0,
+          "char_end": 999,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341"
+        },
+        {
+          "id": "page-17-offset-0",
+          "paragraph_id": "page-17-offset-0",
+          "page": 17,
+          "text": "17\nDie steigende Ungleichheit schadet auch der Wirtschaft. \nEin grosser Teil der Vermögen der Reichsten wird für Spekula\ntionen an den Finanzmärkten verwendet und fliesst nicht in \ndie Realwirtschaft. Kommt das Geld hingegen den arbeitenden \nMenschen zugute, wird es dem Wirtschaftskreislauf zurück\ngeführt und die Kaufkraft steigt. Davon profitieren auch die \nkleinen Betriebe, die während der Pandemie massiv gelitten \nhaben.\n-\n-\nHeute sind Kapitaleinkommen auf diverse Arten privi\nlegiert. So müssen Grossaktionärinnen und Grossaktionäre \nbeispielsweise nur auf 70% ihres Kapitaleinkommens Steuern \nzahlen – während alle anderen ihr gesamtes Einkommen \nversteuern. Unser Wohlstand wird aber von den Menschen \ngeschaffen, die jeden Tag in Büros, auf Baustellen und im \nHaushalt arbeiten. Heute bereichert sich das reichste 1% auf \nKosten von uns allen und wird dazu noch steuerlich bevorteilt. \n-\n \n \nMit der 99%-Initiative sorgen wir für eine gerechtere \nBesteuerung von Grossaktionärinnen und Grossaktionären und \nentlasten 99% der Bevölkerung. Mit den Einnahmen können \ndie Steuern für Menschen mit tiefen und mittleren Einkommen \ngesenkt und der Service public gestärkt werden, z. . durch ",
+          "char_start": 0,
+          "char_end": 1195,
+          "source_url": "https://www.bk.admin.ch/dam/de/sd-web/NJXQlhZXHqDA/2021-09-26_erlaeuterungen_des_bundesrates.pdf",
+          "source_sha256": "ebb4288817f5f5fdbde3aa24bf67688220e6c8e2f9fcf82f947a44aec046f341"
+        }
+      ],
+      "inspected_direct_quote_present_in_model_input": true,
+      "interpretation": "Presence proves this inspected quote was supplied, not model attribution. Absence does not exclude another valid passage. Neutral has no fabricated supporting proof."
+    }
+  ],
+  "minimal_proof_extraction_implemented": false,
+  "neutral_policy": "Return exact candidate model-context passages with explicit relevance/sufficiency caution; no claim that unrelated passages prove whole-document absence.",
+  "source_protocol_sha256": "5d86cb44b7ce338f58c236385752e62e2f3c214c46bf7d53cb1dcf316b58040f"
+}

@@ -1,0 +1,1233 @@
+{
+  "scope": "Cached actual Apertus evidence-only features, unchanged previously fitted heads. No new model call/head fit/temperature or hidden310 access.",
+  "interpretation": "Alternative short-context heads cannot certify semantic relevance or prove causality. This tests sensitivity to a different frozen decision mapping; it is not automatic evidence rejection or a production policy. Low preservation remains an important limitation.",
+  "heads_adopted": false,
+  "experiments": [
+    {
+      "experiment": "track_2a/experiments/apertus-v15-phase2-final-validation-v1",
+      "original_context": "hybrid-4k",
+      "source_feature_sha256": "c417b73e36a3aa04158e8b0cfcdb8d0ae4027ec270db4ccc427e53d1c24fd930",
+      "sample_caution": "Separate predetermined predicted-class/language samples per candidate; rates across4k/8k are not necessarily paired because case IDs can differ.",
+      "frozen_head_replays": {
+        "hybrid-1k": {
+          "head_sha256": "d8ff2e39630a91fb745ad830a48ef75835d707cd40f1adbcbbbdee4cb8267093",
+          "decision_preservation_rate": 0.3333333333333333,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.8259639168127528,
+                0.11078975278590518,
+                0.06324633040134206
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.995049966341901,
+                0.00027190420933318545,
+                0.0046781294487657065
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0513",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.610753546686879,
+                0.24307732893475212,
+                0.14616912437836893
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0660",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.5891279040463033,
+                0.2906605312271294,
+                0.12021156472656729
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.04608250899969341,
+                0.8635470926953153,
+                0.09037039830499145
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9957139320014381,
+                0.0006367187576404595,
+                0.0036493492409213455
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0186",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.04196862102186625,
+                0.0006817434705346794,
+                0.9573496355075991
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0304",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.26214622349302413,
+                0.6147462840721586,
+                0.12310749243481726
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.41752507275521134,
+                0.013787804930437056,
+                0.5686871223143516
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.3234636891688579,
+                0.5050597644057192,
+                0.17147654642542282
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0363",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.5786506764871732,
+                0.0315591984275942,
+                0.3897901250852327
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0946",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0312020286435421,
+                0.6261633989847839,
+                0.34263457237167394
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            }
+          ]
+        },
+        "hybrid-2k": {
+          "head_sha256": "02dea8d41c634bbf6c51c19b413cbcd6c605e31e2137e931aac959260684d674",
+          "decision_preservation_rate": 0.3333333333333333,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0847647790456933,
+                0.900526132883403,
+                0.014709088070903821
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9920738489877211,
+                0.0014841781991554674,
+                0.006441972813123483
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0513",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.03997628515770634,
+                0.9511746958287197,
+                0.008849019013574171
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0660",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.07779199103451409,
+                0.9142311530747961,
+                0.007976855890689714
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.004835795150717782,
+                0.9694529357351632,
+                0.025711269114119032
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9986712116897057,
+                0.00045694817289189583,
+                0.0008718401374023236
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0186",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.09427211898676516,
+                0.003495099187123634,
+                0.9022327818261113
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0304",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.016007931178335034,
+                0.9757107369938323,
+                0.008281331827832741
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.4645150169980405,
+                0.3188161779015036,
+                0.21666880510045597
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.02268524768680842,
+                0.9553053496898909,
+                0.022009402623300693
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0363",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.45180490057384515,
+                0.23137612458612555,
+                0.31681897484002935
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0946",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.020752877478046543,
+                0.7969188504086131,
+                0.18232827211334035
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            }
+          ]
+        },
+        "hybrid-4k": {
+          "head_sha256": "b53be4b23ae519e326be6e0058248d103087fcad45a19877511f670a4614848d",
+          "decision_preservation_rate": 0.25,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.005341158482974532,
+                0.9937388927184256,
+                0.0009199487985999186
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.98916658346695,
+                0.001487976909787447,
+                0.009345439623262702
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0513",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0026623214575699134,
+                0.9963058979291357,
+                0.0010317806132943788
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0660",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0015228243142540057,
+                0.9974962872506757,
+                0.000980888435070224
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.00016564299536458597,
+                0.9925480750213452,
+                0.00728628198329012
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9993946060611618,
+                0.00021825321003329996,
+                0.0003871407288050078
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0186",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0513253729428448,
+                0.008803362978423305,
+                0.9398712640787318
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0304",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.003076484378357916,
+                0.9962853547370393,
+                0.0006381608846029779
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.04596671984813555,
+                0.9207708781570438,
+                0.033262401994820695
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.006754499323651482,
+                0.9864322023728909,
+                0.006813298303457524
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0363",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.10875855003917777,
+                0.6211008827421639,
+                0.2701405672186583
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0946",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.010402858612935618,
+                0.6345704865669205,
+                0.35502665482014395
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            }
+          ]
+        },
+        "hybrid-8k": {
+          "head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+          "decision_preservation_rate": 0.4166666666666667,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.027841542725098856,
+                0.45079224448761945,
+                0.5213662127872817
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9994294643158327,
+                0.00022380022248395587,
+                0.0003467354616833469
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0513",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.024739645722895366,
+                0.6779036203315091,
+                0.2973567339455954
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0660",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.009330054016051581,
+                0.925698242411475,
+                0.06497170357247332
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.00025311468633728955,
+                0.40793471912705526,
+                0.5918121661866075
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9998189958074571,
+                1.888549208020371e-05,
+                0.00016211870046257013
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0186",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0035247091492578014,
+                0.0003313900307863627,
+                0.996143900819956
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0304",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0035305673674806246,
+                0.8994266300469621,
+                0.09704280258555711
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.008522331828747825,
+                0.06816437135174575,
+                0.9233132968195064
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.003987415593237679,
+                0.664473232702469,
+                0.3315393517042933
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0363",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.06750709783389075,
+                0.05071061568168306,
+                0.8817822864844262
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0946",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0008366797844890091,
+                0.0856627284015323,
+                0.9135005918139787
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            }
+          ]
+        }
+      },
+      "native_restricted_score_decision_preservation": 0.5833333333333334
+    },
+    {
+      "experiment": "track_2a/experiments/apertus-v15-phase2-accuracy-validation-v1",
+      "original_context": "hybrid-8k",
+      "source_feature_sha256": "c8e72155a5e63470498e963549036817f3853c1aab9aa974fcbcdc571dff5872",
+      "sample_caution": "Separate predetermined predicted-class/language samples per candidate; rates across4k/8k are not necessarily paired because case IDs can differ.",
+      "frozen_head_replays": {
+        "hybrid-1k": {
+          "head_sha256": "d8ff2e39630a91fb745ad830a48ef75835d707cd40f1adbcbbbdee4cb8267093",
+          "decision_preservation_rate": 0.75,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.8259639168127528,
+                0.11078975278590518,
+                0.06324633040134206
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9822245611998589,
+                0.00031091846941222516,
+                0.017464520330728886
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0995",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.3661020323666044,
+                0.31227703489632985,
+                0.3216209327370657
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0996",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.19263841452133126,
+                0.12427476758340805,
+                0.6830868178952607
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.03735956135954503,
+                0.8212844724426668,
+                0.14135596619778817
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9973333925644953,
+                0.00029780242213942076,
+                0.0023688050133653243
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1159",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.028941045024874955,
+                0.05972990417244737,
+                0.9113290508026778
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1161",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.032339172577443,
+                0.012148458205392329,
+                0.9555123692171645
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.41752507275521134,
+                0.013787804930437056,
+                0.5686871223143516
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9472084497405009,
+                0.001199363878293554,
+                0.05159218638120544
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1335",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.06480776364360823,
+                0.0006041714669181,
+                0.9345880648894738
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1340",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0025557674726031624,
+                0.003279378317026162,
+                0.9941648542103707
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            }
+          ]
+        },
+        "hybrid-2k": {
+          "head_sha256": "02dea8d41c634bbf6c51c19b413cbcd6c605e31e2137e931aac959260684d674",
+          "decision_preservation_rate": 0.75,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0847647790456933,
+                0.900526132883403,
+                0.014709088070903821
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9789343387299382,
+                0.002118061231488379,
+                0.018947600038573504
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0995",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0537142110069038,
+                0.9032234973034766,
+                0.043062291689619454
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0996",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.06753829746371115,
+                0.24239510858565214,
+                0.6900665939506367
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0023591304068071935,
+                0.9787783491561859,
+                0.01886252043700715
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9992058397625724,
+                0.000141644311521378,
+                0.0006525159259063426
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1159",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.033778807142925124,
+                0.08797630691048162,
+                0.8782448859465933
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1161",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.033532337959716066,
+                0.04653935505743254,
+                0.9199283069828514
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.4645150169980405,
+                0.3188161779015036,
+                0.21666880510045597
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9658216736177897,
+                0.0030728643190044897,
+                0.031105462063205684
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1335",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.2197344873470838,
+                0.0032823238416580017,
+                0.776983188811258
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1340",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0006273943448263184,
+                0.020304375052209982,
+                0.9790682306029638
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            }
+          ]
+        },
+        "hybrid-4k": {
+          "head_sha256": "b53be4b23ae519e326be6e0058248d103087fcad45a19877511f670a4614848d",
+          "decision_preservation_rate": 0.6666666666666666,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.005341158482974532,
+                0.9937388927184256,
+                0.0009199487985999186
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9638706693439559,
+                0.0012331611163042687,
+                0.03489616953973967
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0995",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0037830368575761785,
+                0.9835581993703555,
+                0.012658763772068288
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0996",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0029198672762109482,
+                0.2011344798466784,
+                0.7959456528771107
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0007405110596755093,
+                0.995102313970171,
+                0.0041571749701534875
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9993154245462753,
+                0.00013638947321005084,
+                0.0005481859805146345
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1159",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.006051205113264862,
+                0.04799997364951417,
+                0.9459488212372209
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1161",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.005573995233375698,
+                0.019325661804971726,
+                0.9751003429616527
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.04596671984813555,
+                0.9207708781570438,
+                0.033262401994820695
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.96670736272965,
+                0.005298336668064867,
+                0.027994300602285263
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1335",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.05104093896003935,
+                0.006310870009323462,
+                0.9426481910306372
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1340",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                3.955399056589126e-05,
+                0.0027420776615640404,
+                0.9972183683478701
+              ],
+              "same_decision_head": false,
+              "within_head_token_cap": true
+            }
+          ]
+        },
+        "hybrid-8k": {
+          "head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+          "decision_preservation_rate": 0.75,
+          "n": 12,
+          "rows": [
+            {
+              "id": "ost-v1.1-0019",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.027841542725098856,
+                0.45079224448761945,
+                0.5213662127872817
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0022",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9992299482565415,
+                0.00013090419108423708,
+                0.0006391475523742899
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0995",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.007798221901768582,
+                0.1506163208988795,
+                0.841585457199352
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0996",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0006636858407116537,
+                0.06210236172393082,
+                0.9372339524353576
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0169",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 1,
+              "probabilities": [
+                0.0007095911947618903,
+                0.8507794876396018,
+                0.14851092116563633
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0172",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9997996492098838,
+                1.5872689018465706e-05,
+                0.00018447810109779332
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1159",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.0005956902024081722,
+                0.0017324895682917375,
+                0.9976718202293
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1161",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                5.113442923039514e-05,
+                0.00043352161999640033,
+                0.9995153439507732
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0338",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.008522331828747825,
+                0.06816437135174575,
+                0.9233132968195064
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-0341",
+              "original_long_context_decision": 0,
+              "replayed_short_evidence_decision": 0,
+              "probabilities": [
+                0.9825555365155211,
+                0.0010975182305665617,
+                0.016346945253912448
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1335",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                0.006587465586585123,
+                0.0008315835323617048,
+                0.9925809508810531
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            },
+            {
+              "id": "ost-v1.1-1340",
+              "original_long_context_decision": 2,
+              "replayed_short_evidence_decision": 2,
+              "probabilities": [
+                1.3847604403395526e-06,
+                0.00013506476183535815,
+                0.9998635504777242
+              ],
+              "same_decision_head": true,
+              "within_head_token_cap": true
+            }
+          ]
+        }
+      },
+      "native_restricted_score_decision_preservation": 0.6666666666666666
+    }
+  ]
+}

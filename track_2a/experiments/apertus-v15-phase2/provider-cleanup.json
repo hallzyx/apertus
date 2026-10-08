@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-08T02:14:17.173797+00:00",
+  "listing_pages": 1,
+  "task_owned_instance_count": 25,
+  "task_owned_ids_remaining": [],
+  "unrelated_instances_preserved_count": 0,
+  "credit_observed": 5.021304968579992,
+  "phase2_additional_observed_spend": 1.512826222750003,
+  "total_observed_spend": 4.978695031420008,
+  "reserve_required": 2,
+  "authorized_phase2_cap": 4.5,
+  "billing_caution": "Timestamped account-credit observations, not final provider invoices; late charges can settle later. User-managed credentials preserved."
+}
