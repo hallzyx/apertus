@@ -8,7 +8,8 @@ from pathlib import Path
 def main():
     import numpy as np
     from ost_nli.data import load_dataset,fingerprint,words
-    from ost_nli.metrics import evaluate
+    from ost_nli.metrics import evaluate,classification
+    from phase2_cpu_audit import connected_groups
     from ost_nli.documents import reference_coverage
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root',default='track_2a/experiments/apertus-v15-phase2-context-v1')
@@ -85,6 +86,22 @@ def main():
             'scope_caution':'Candidate source passages preserve provenance; lexical overlap is not semantic evidence scoring'}
         if not failures:candidates.append((metrics['average_context_tokens'],-metrics['macro_f1'],condition))
     choice=min(candidates)[2] if candidates else 'full'
+    groups=np.asarray(connected_groups(rows));units=sorted(set(groups.tolist()))
+    generator=np.random.default_rng(42);resamples=[]
+    original_labels={p['id']:p['label'] for p in baseline}
+    deltas={condition:[] for condition in predictions}
+    for _ in range(2000):
+        selected=np.concatenate([np.flatnonzero(groups==unit) for unit in generator.choice(units,len(units),replace=True)])
+        truth=[rows[int(i)]['label'] for i in selected]
+        original=classification(truth,[original_labels[rows[int(i)]['id']] for i in selected])['macro_f1']
+        for condition,pred in predictions.items():
+            aligned={p['id']:p['label'] for p in pred}
+            value=classification(truth,[aligned[rows[int(i)]['id']] for i in selected])['macro_f1']
+            deltas[condition].append(value-original)
+    resampling={'seed':42,'replicates':2000,'connected_units':len(units),
+        'unit_sizes':[int((groups==unit).sum()) for unit in units],
+        'paired_f1_difference_percentiles_2_5_97_5':{condition:np.quantile(values,[.025,.975]).tolist() for condition,values in deltas.items()},
+        'interpretation':'Descriptive sensitivity only: two duplicate-connected units cannot support reliable population confidence intervals or superiority claims. Not used for selection.'}
     simulations=[]
     if choice!='full':
         compact={p['id']:p for p in predictions[choice]};original={p['id']:p for p in baseline}
@@ -102,6 +119,7 @@ def main():
         'original_full':full,'comparisons':comparisons,'provisional_choice':choice,
         'deployment_changed':False,'requires_context_matched_grounding_check':choice!='full',
         'decision_rule':protocol['selection_rule'],'per_class_guard':protocol['per_class_guard'],
+        'group_aware_paired_resampling':resampling,
         'adaptive_routing_simulations':simulations,'adaptive_routing_selected':False,
         'routing_caution':'Fixed-grid cached simulations, no trained router or threshold adopted. Escalation costs both forwards. Compact on A6000 plus historical full on A40 is not paired live latency.',
         'validation_cautions':'Three events, two duplicate-connected units,207 unique claim/document pairs; reference-vs-booklet scope conflict remains. High validation F1 alone does not establish generalization.',
