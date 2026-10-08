@@ -1,5 +1,6 @@
 """Frozen provisional candidate: matched wrong-booklet controls and real PDF CLI."""
 import hashlib
+import argparse
 import json
 import os
 from pathlib import Path
@@ -13,8 +14,15 @@ from phase2_remote_bootstrap import run
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--accuracy-extension',action='store_true')
+    args=parser.parse_args()
     proposal=json.loads(Path('track_2a/experiments/apertus-v15-phase2/context-results.json').read_text())
-    condition=proposal['provisional_choice']
+    condition='hybrid-8k' if args.accuracy_extension else proposal['provisional_choice']
+    prior_root=Path('track_2a/experiments/apertus-v15-phase2-final-validation-v1')
+    if args.accuracy_extension:
+        prior=json.loads(Path('track_2a/experiments/apertus-v15-phase2/final-results.json').read_text())
+        assert prior['final_choice']=='hybrid-4k' and not prior['guard_failures']
+        assert prior['source_experiment_sha256']==hashlib.sha256((prior_root/'experiment.json').read_bytes()).hexdigest()
     source_head=Path(proposal['comparisons'][condition]['source_head']) if condition!='full' else Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json')
     head_bytes=source_head.read_bytes()
     expected_sha=proposal['comparisons'][condition]['head_sha256'] if condition!='full' else json.loads(Path('track_2a/experiments/apertus-v15-phase2-controls-v1/contract.json').read_text())['head_sha256']
@@ -47,7 +55,7 @@ def main():
     engine=Engine('/workspace/model','cuda')
     from ost_nli.context_budget import DocumentPipeline
     pipeline=DocumentPipeline(engine,head,retriever)
-    root=Path('track_2a/experiments/apertus-v15-phase2-final-validation-v1');root.mkdir(parents=True)
+    root=Path('track_2a/experiments/apertus-v15-phase2-accuracy-validation-v1' if args.accuracy_extension else 'track_2a/experiments/apertus-v15-phase2-final-validation-v1');root.mkdir(parents=True)
     documents={r['document_id']:r for r in rows}
     record={'status':'started','context':condition,'head_sha256':hashlib.sha256(head_bytes).hexdigest(),
         'validation_sha256':fingerprint(rows),'model_metadata':engine.metadata,
@@ -55,7 +63,8 @@ def main():
         'source_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'engine_sha256':hashlib.sha256(Path('track_2a/src/ost_nli/v15.py').read_bytes()).hexdigest(),
         'pipeline_sha256':hashlib.sha256(Path('track_2a/src/ost_nli/context_budget.py').read_bytes()).hexdigest(),
-        'training_performed':False,'holdout_accessed':False,
+        'training_performed':False,'holdout_accessed':False,'accuracy_extension':args.accuracy_extension,
+        'full_recheck_reused':args.accuracy_extension,
         'interpretation':'Original labels measure retention under swapped premises; actual swapped-pair NLI labels unknown'}
     (root/'experiment.json').write_text(json.dumps(record,indent=2)+'\n')
     original_infer=engine.infer;last={}
@@ -68,7 +77,7 @@ def main():
     assert hashlib.sha256(Path('track_2a/experiments/apertus-v15-research-v1/apertus-v15-full-hidden-v1/head.json').read_bytes()).hexdigest()==json.loads(Path('track_2a/experiments/apertus-v15-phase2-controls-v1/contract.json').read_text())['head_sha256']
     full_pipeline=DocumentPipeline(engine,original_head)
     correct=[];correct_hidden=[];correct_logits=[]
-    for index,row in enumerate(rows):
+    for index,row in enumerate([] if args.accuracy_extension else rows):
         result=full_pipeline.predict(row,row['claim']);result['id']=row['id']
         # Avoid repeating the entire capped booklet hundreds of times in Git.
         # Real CLI/frontend proofs retain their exact source quote output.
@@ -79,10 +88,19 @@ def main():
         result['native_base_scores_label']=int(q.argmax());result['native_base_scores_probabilities']=q.tolist();correct.append(result)
         with (root/'correct-full-recheck.jsonl').open('a') as file:file.write(json.dumps(result,ensure_ascii=False,allow_nan=False)+'\n')
         if (index+1)%20==0 or index+1==len(rows):print('PHASE2_FULL_RECHECK',index+1,len(rows),flush=True)
-    (root/'correct-full-recheck-metrics.json').write_text(json.dumps(evaluate(rows,correct),indent=2)+'\n')
-    np.savez_compressed(root/'correct-full-recheck.npz',ids=np.asarray([r['id'] for r in rows]),
-        labels=np.asarray([r['label'] for r in rows]),hidden=np.asarray(correct_hidden,dtype=np.float32),
-        option_logits=np.asarray(correct_logits,dtype=np.float32))
+    if args.accuracy_extension:
+        prior_manifest=json.loads((prior_root/'experiment.json').read_text())
+        for name in ('correct-full-recheck.jsonl','correct-full-recheck-metrics.json'):
+            entry=next(e for e in prior_manifest['files'] if e['path']==name)
+            assert hashlib.sha256((prior_root/name).read_bytes()).hexdigest()==entry['sha256']
+            (root/name).write_bytes((prior_root/name).read_bytes())
+        correct=[json.loads(s) for s in (root/'correct-full-recheck.jsonl').read_text().splitlines()]
+        record['reused_full_source_experiment_sha256']=hashlib.sha256((prior_root/'experiment.json').read_bytes()).hexdigest()
+    else:
+        (root/'correct-full-recheck-metrics.json').write_text(json.dumps(evaluate(rows,correct),indent=2)+'\n')
+        np.savez_compressed(root/'correct-full-recheck.npz',ids=np.asarray([r['id'] for r in rows]),
+            labels=np.asarray([r['label'] for r in rows]),hidden=np.asarray(correct_hidden,dtype=np.float32),
+            option_logits=np.asarray(correct_logits,dtype=np.float32))
     for seed in ([42,1337] if condition!='full' else []):
         folder=root/f'wrong-{seed}';folder.mkdir();predictions=[];hidden=[];logits=[]
         for index,row in enumerate(rows):
@@ -145,22 +163,23 @@ def main():
     (root/'cli-integration.json').write_text(json.dumps(integration,indent=2,allow_nan=False)+'\n')
     from phase2_context_diagnostics import run_diagnostics
     candidate_predictions=correct if condition=='full' else json.loads((source_head.parent/'predictions.json').read_text())['predictions']
-    diagnostics=run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,root)
+    reused=json.loads((prior_root/'bounded-context-evidence-diagnostics.json').read_text()) if args.accuracy_extension else None
+    diagnostics=run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,root,reused)
     (root/'model_manifest.json').write_bytes(Path('/workspace/model/verified_manifest.json').read_bytes())
     if retriever:(root/'retriever_manifest.json').write_bytes(Path('/workspace/e5/verified_manifest.json').read_bytes())
     files=[{'path':str(p.relative_to(root)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file() and p.name!='experiment.json']
-    record.update(status='completed',files=files,gpu_forward_count=(832 if condition!='full' else 280)+diagnostics['gpu_forward_count'],
+    record.update(status='completed',files=files,gpu_forward_count=(556 if args.accuracy_extension else (832 if condition!='full' else 280))+diagnostics['gpu_forward_count'],
         full_recheck_reason='Resolve original A40-correct versus A6000-control precision/hardware confound; validation only')
     (root/'experiment.json').write_text(json.dumps(record,indent=2)+'\n')
     run(['python','track_2a/scripts/export_vast_cache.py','--relative-root',str(root)])
-    print('PHASE2_FINAL_VALIDATION_RESULTS_EXPORTED',flush=True)
+    print('PHASE2_ACCURACY_VALIDATION_RESULTS_EXPORTED' if args.accuracy_extension else 'PHASE2_FINAL_VALIDATION_RESULTS_EXPORTED',flush=True)
 
 
 if __name__=='__main__':
     try:main()
     except BaseException:
         # Preserve partial scientific output before the outer lease stop trap.
-        root=Path('track_2a/experiments/apertus-v15-phase2-final-validation-v1')
+        root=Path('track_2a/experiments/apertus-v15-phase2-accuracy-validation-v1' if '--accuracy-extension' in sys.argv else 'track_2a/experiments/apertus-v15-phase2-final-validation-v1')
         if (root/'experiment.json').exists():
             record=json.loads((root/'experiment.json').read_text());record['status']='interrupted'
             record['files']=[{'path':str(p.relative_to(root)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}

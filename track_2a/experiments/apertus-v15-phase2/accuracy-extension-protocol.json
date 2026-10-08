@@ -1,0 +1,21 @@
+{
+  "registered_at": "2026-10-08T00:51:40.602217+00:00",
+  "registered_after_context_results_before_new8k_controls": true,
+  "exploratory_architecture_selection_not_blind_discovery": true,
+  "reason": "8k improves validation F1 by0.062128 over preregistered4k candidate, cross-language by0.088212, Brier0.0705 versus0.1758;8059tokens versus full14106. This is a material accuracy alternative, not a tiny gain.",
+  "registered_efficiency_candidate": "hybrid-4k",
+  "accuracy_candidate": "hybrid-8k",
+  "run_only_if_registered4k_final_guards_pass": true,
+  "promotion_rule": "8k must pass identical wrong42/wrong1337/empty retention<.90 and gap>.05 gates, actual CLI/frontend label reproduction, source quote provenance, no per-class regression vs4k, >=.04 overall and>=.03 cross-language F1 improvement over4k, <=75% original full tokens and no worse Brier/NLL. Otherwise preserve verified4k. No head or temperature refit, no next-candidate chase.",
+  "scope": "Same validation276 architecture development; no new held-out proof; consumed310 never accessed.",
+  "full_recheck_policy": "Reuse already-verified original-full A6000 recheck and its original source SHAs; do not re-infer276 again.",
+  "retrieval_ablations_policy": "Reuse already-verified90-case neighbor/diversity diagnostics on unchanged4k head; do not repeat180 GPU forwards.",
+  "new_gpu_forward_bound": 568,
+  "conditions": "552 wrong8k +3 real PDF CLI +1 actual frontend +up to12 strictly-reduced evidence-only cases",
+  "lease_bound_usd": 0.621,
+  "lease_max_hours": 1.25,
+  "additional_budget_cap_usd": 4.5,
+  "minimum_reserve_usd": 2,
+  "fine_tuning": false,
+  "lora": false
+}

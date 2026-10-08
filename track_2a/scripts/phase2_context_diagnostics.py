@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 
 
-def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,root):
+def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,root,reuse_ablations=None):
     from ost_nli.context_budget import CONDITIONS,pack_passages
     from ost_nli.model import select_context,nli_messages
     from ost_nli.data import words
@@ -47,7 +47,7 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
             if length and overlap/length>=.5:return True
         ga,gb=grams(a),grams(b);union=ga|gb
         return bool(union) and len(ga&gb)/len(union)>=.55
-    for index,row in enumerate(sample):
+    for index,row in enumerate([] if reuse_ablations else sample):
         began=time.perf_counter();ranked=retriever.retrieve(row['passages'],row['claim'],k=30,mode='hybrid')
         lookup={p['id']:i for i,p in enumerate(row['passages'])};neighbors=[];seen=set()
         for seed in ranked[:6]:
@@ -101,18 +101,24 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
     for row in sample:
         key=(row['document_id'],' '.join(words(row['claim'])))
         if key not in seen:seen.add(key);unique_sample.append(row)
-    deduplicated={'direct-top20':evaluate(unique_sample,[baseline_by[r['id']] for r in unique_sample])}
-    for name,values in predictions.items():
-        aligned={p['id']:p for p in values}
-        deduplicated[name]=evaluate(unique_sample,[aligned[r['id']] for r in unique_sample])
+    if reuse_ablations:
+        deduplicated=reuse_ablations['deduplicated_sample_metrics']
+        neighbor_metrics=reuse_ablations['neighbors_same90'];diversity_metrics=reuse_ablations['diversity_same90']
+        redundancy=reuse_ablations['redundancy_diagnostics']
+    else:
+        deduplicated={'direct-top20':evaluate(unique_sample,[baseline_by[r['id']] for r in unique_sample])}
+        for name,values in predictions.items():
+            aligned={p['id']:p for p in values}
+            deduplicated[name]=evaluate(unique_sample,[aligned[r['id']] for r in unique_sample])
+        neighbor_metrics=evaluate(sample,predictions['neighbors']);diversity_metrics=evaluate(sample,predictions['diverse'])
     results={'scope':'Validation-only bounded diagnostics, not architecture selection or independent-test estimates. No training and no consumed310.',
         'sample_method':'First10 validation rows per gold-class/claim-language stratum;90 predetermined rows. Labels used only for analysis sampling, never messages.',
         'unique_sample_claim_document_pairs':len({(r['document_id'],' '.join(words(r['claim']))) for r in sample}),
         'sample_event_counts':{event:sum(r['booklet_id']==event for r in sample) for event in sorted({r['booklet_id'] for r in sample})},
         'deduplicated_sample_metrics':deduplicated,
         'baseline_hybrid4k_same90':evaluate(sample,[baseline_by[r['id']] for r in sample]),
-        'neighbors_same90':evaluate(sample,predictions['neighbors']),
-        'diversity_same90':evaluate(sample,predictions['diverse']),
+        'neighbors_same90':neighbor_metrics,
+        'diversity_same90':diversity_metrics,
         'neighbors_policy':'Six highest hybrid-ranked seeds, each seed/previous/next in source order, deduplicated, exact whole quotes capped4096; unchanged matched direct20 hybrid4k head.',
         'diversity_policy':'Top30 hybrid candidates, accept up to20 while suppressing same-page overlap>=50% of shorter quote or word5gram Jaccard>=.55; exact whole quotes capped4096.',
         'redundancy_diagnostics':redundancy,'no_new_head_fitted':True,'mechanism_adopted':False,
@@ -125,10 +131,13 @@ def run_diagnostics(engine,retriever,rows,head,condition,candidate_predictions,r
         'evidence_only_original_label_metrics':evaluate(evidence_sample,evidence_predictions) if evidence_sample else None,
         'evidence_proofs':evidence_proofs,
         'evidence_caution':'Preservation is a model sensitivity diagnostic, not human proof of sufficiency or attribution. A changed decision does not by itself invalidate source evidence. No absence proof for Neutral.',
-        'gpu_forward_count':2*len(sample)+len(evidence_proofs),
-        'tokens_p50_p95':{name:np.quantile([p['context_tokens'] for p in pred],[.5,.95]).tolist() for name,pred in predictions.items()}}
+        'gpu_forward_count':(0 if reuse_ablations else 2*len(sample))+len(evidence_proofs),
+        'retrieval_ablations_reused':bool(reuse_ablations),
+        'tokens_p50_p95':reuse_ablations['tokens_p50_p95'] if reuse_ablations else {name:np.quantile([p['context_tokens'] for p in pred],[.5,.95]).tolist() for name,pred in predictions.items()}}
     for name,pred in predictions.items():
-        (root/f'{name}-diagnostic-predictions.jsonl').write_text(''.join(json.dumps(p,ensure_ascii=False,allow_nan=False)+'\n' for p in pred))
+        if reuse_ablations:
+            (root/f'{name}-diagnostic-predictions.jsonl').write_bytes((Path('track_2a/experiments/apertus-v15-phase2-final-validation-v1')/f'{name}-diagnostic-predictions.jsonl').read_bytes())
+        else:(root/f'{name}-diagnostic-predictions.jsonl').write_text(''.join(json.dumps(p,ensure_ascii=False,allow_nan=False)+'\n' for p in pred))
     np.savez_compressed(root/'bounded-diagnostic-features.npz',ids=np.asarray([r[0] for r in features]),
         modes=np.asarray([r[1] for r in features]),hidden=np.asarray([r[2] for r in features],dtype=np.float32),
         option_logits=np.asarray([r[3] for r in features],dtype=np.float32))
