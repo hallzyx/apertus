@@ -1,0 +1,17 @@
+services:
+  app:
+    image: apertus-ost:api
+    build:
+      context: ./track_2a
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:${APP_PORT:-8000}:8000"
+    environment:
+      FROZEN_BASE_URL: ${FROZEN_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_NAME: swiss-ai/Apertus-v1.5-8B
+      LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-120}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    init: true
+    restart: unless-stopped

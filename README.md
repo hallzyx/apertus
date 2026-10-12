@@ -5,6 +5,19 @@ NLI. The app extracts PDF passages with source pages and hashes, supplies the
 validation-selected **hybrid-8k** context, and classifies using **frozen Apertus v1.5**
 plus a training-only calibrated decision head. Hybrid retrieval uses supporting E5/BM25.
 
+## Probar la app en tu PC
+
+Con Docker Desktop instalado, copia `.env.example` a `.env` y ejecuta:
+
+```bash
+docker compose up --build -d
+```
+
+Abre http://localhost:8000. La extracción de PDF funciona sin GPU; la clasificación
+requiere el backend nativo configurado. Sigue la [guía para PC](docs/PROBAR_EN_PC.md).
+
+## Arranque del entorno de desarrollo
+
 ```bash
 export LLM_NAME=swiss-ai/Apertus-v1.5-8B
 export LLM_BASE_URL=https://YOUR_AUTHORIZED_APERTUS_ENDPOINT/v1
