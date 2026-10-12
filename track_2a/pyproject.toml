@@ -18,3 +18,6 @@ ost-nli = "ost_nli.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+ost_nli = ["ui_translations.json"]

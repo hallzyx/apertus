@@ -67,3 +67,15 @@ Las respuestas de clasificación y los fallos controlados del navegador usan
 fixtures sintéticos. La revisión no valida inferencia GPU, calidad predictiva,
 Safari/Firefox ni el uso con lectores de pantalla. Los recursos de modelo,
 datasets y política de inferencia no se modificaron.
+
+## Selector de idiomas
+
+La interfaz incorpora ES/EN/DE/FR/IT, detección inicial del navegador y preferencia
+persistente. Se comprobaron `es-PE`, `de-CH`, `fr-CH`, `it-CH`, `rm-CH`, `ja-JP`
+y `de-DE`; los dos últimos usan inglés. `rm-CH` usa alemán como alternativa.
+Los tres nuevos tests de Chromium comprueban detección/persistencia, cambios con
+una consulta y citas abiertas sin alterar el texto de origen, y mensajes en inglés
+sin desbordamiento a 320 px. En total son nueve tests de navegador.
+
+Capturas adicionales: [inglés](english-desktop.png), [alemán móvil](german-mobile.png),
+[francés](french-desktop.png) e [italiano móvil](italian-mobile.png).

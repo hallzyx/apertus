@@ -37,7 +37,7 @@ class WebBrowserTests(unittest.TestCase):
         cls.thread.join(timeout=2)
 
     def setUp(self):
-        self.page = self.browser.new_page(viewport={'width': 1440, 'height': 1000})
+        self.page = self.browser.new_page(locale='es-ES', viewport={'width': 1440, 'height': 1000})
         self.errors = []
         self.page.on('pageerror', lambda error: self.errors.append(str(error)))
 
@@ -163,3 +163,47 @@ class WebBrowserTests(unittest.TestCase):
         self.page.locator('.passage').first.wait_for()
         self.page.set_viewport_size({'width': 320, 'height': 900})
         self.assertFalse(self.page.evaluate('document.documentElement.scrollWidth > window.innerWidth'))
+
+    def test_language_detection_and_saved_override(self):
+        for locale, expected in [('es-PE','es'),('de-CH','de'),('fr-CH','fr'),('it-CH','it'),('rm-CH','de'),('ja-JP','en'),('de-DE','en')]:
+            with self.subTest(locale=locale):
+                context=self.browser.new_context(locale=locale)
+                page=context.new_page()
+                page.goto(f'http://127.0.0.1:{self.server.server_port}',wait_until='networkidle')
+                self.assertEqual(page.locator('html').get_attribute('lang'),expected)
+                self.assertEqual(page.locator('#ui-language').input_value(),expected)
+                page.select_option('#ui-language','es')
+                page.reload(wait_until='networkidle')
+                self.assertEqual(page.locator('html').get_attribute('lang'),'es')
+                context.close()
+
+    def test_language_switch_preserves_query_and_source_text(self):
+        self.open()
+        self.demo()
+        claim=self.page.locator('#claim').input_value()
+        document=self.page.locator('#doc').input_value()
+        self.page.locator('#retrieve').click()
+        self.page.locator('.passage').first.wait_for()
+        quote=self.page.locator('blockquote').first.inner_text()
+        for language in ['en','de','fr','it','es']:
+            self.page.select_option('#ui-language',language)
+            self.assertEqual(self.page.locator('html').get_attribute('lang'),language)
+            self.assertEqual(self.page.locator('#claim').input_value(),claim)
+            self.assertEqual(self.page.locator('#doc').input_value(),document)
+            self.assertEqual(self.page.locator('blockquote').first.inner_text(),quote)
+            self.assertFalse(self.page.locator('#download').is_hidden())
+        self.assertIn('Seleccionar PDF',self.page.locator('.file-picker').inner_text())
+
+    def test_english_mobile_layout_and_live_messages(self):
+        self.open()
+        self.page.select_option('#ui-language','en')
+        self.page.set_viewport_size({'width':320,'height':900})
+        self.assertIn('PDF',self.page.locator('.file-picker').inner_text())
+        self.assertNotIn('Seleccionar',self.page.locator('.file-picker').inner_text())
+        self.assertEqual(self.page.locator('#retrieve').inner_text(),'Inspect passages')
+        self.demo()
+        self.assertNotIn('La fuente es',self.page.locator('#summary').inner_text())
+        self.page.locator('#retrieve').click()
+        self.page.locator('.passage').first.wait_for()
+        self.page.wait_for_function("!document.getElementById('feedback').textContent.includes('Pasajes recuperados')")
+        self.assertLessEqual(self.page.evaluate('document.documentElement.scrollWidth'),320)

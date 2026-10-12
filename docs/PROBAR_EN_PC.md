@@ -76,3 +76,13 @@ Se cargó un PDF real de 72 páginas, se extrajeron 157 pasajes y se comprobó l
 recuperación. Sin backend la clasificación permanece deshabilitada. Las pruebas
 reales de Apertus del laboratorio están archivadas en el informe técnico; esta
 entrega de interfaz no reevalúa el modelo ni modifica sus pesos o cabeza.
+
+## Idioma de la interfaz
+
+El selector del encabezado ofrece español, inglés, alemán, francés e italiano.
+En la primera visita se utiliza la preferencia principal del navegador:
+`es`/`es-*` → español; `de-CH`, `fr-CH`, `it-CH` → el idioma suizo
+correspondiente; `rm-CH` → alemán (no hay traducción al romanche); cualquier
+otro idioma → inglés. No se detecta la ubicación ni se accede a ajustes privados
+del PC: se usa el idioma que el navegador informa. La selección manual queda
+guardada en ese navegador. Las citas, afirmaciones y el JSON original no se traducen.
