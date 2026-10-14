@@ -1,0 +1,388 @@
+{
+  "voice": "Kokoro v1.0 af_heart, synthetic American English voice",
+  "engine": "kokoro-onnx 0.4.9; CPUExecutionProvider",
+  "model_sha256": "7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5",
+  "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+  "duration_seconds": 118.27066666666667,
+  "peak_amplitude": 0.8117875456809998,
+  "subtitle_timing": "Sentence audio timing; within-sentence cues proportionally timed by word count",
+  "scenes": [
+    {
+      "id": "01",
+      "type": "opening",
+      "title": "A claim. A booklet.",
+      "kicker": "APERTUS \u00b7 EVIDENCE LAB",
+      "body": "Three possible answers.",
+      "narration": "A claim can sound convincing. But does the official voting booklet actually support it? That is the question behind Apertus Evidence Lab.",
+      "target_start_seconds": 0,
+      "target_end_seconds": 10,
+      "visual_direction": "Red inset-square mark. A statement card faces a stack of booklet pages. Headline: \u201cA claim. A booklet. Three possible answers.\u201d Small title: APERTUS \u00b7 EVIDENCE LAB / OST TRACK 2A.",
+      "evidence": [
+        "track_2a/technical_report.md"
+      ],
+      "start": 0,
+      "duration": 9.305333333333333
+    },
+    {
+      "id": "02",
+      "type": "problem",
+      "title": "What does the booklet establish?",
+      "kicker": "OST \u00b7 TRACK 2A",
+      "body": "0 Supported   /   1 Neutral   /   2 Contradicted",
+      "narration": "The OST challenge asks us to compare a claim with a Swiss voting booklet: supported, contradicted, or not established. And the claim and document may be in different languages.",
+      "target_start_seconds": 10,
+      "target_end_seconds": 23,
+      "visual_direction": "Three cards appear: \u201c0 \u00b7 Entailment / Supported\u201d, \u201c1 \u00b7 Neutral / Not established\u201d, \u201c2 \u00b7 Contradiction / Contradicted\u201d. DE / FR / IT badges connect across a simple 3\u00d73 grid.",
+      "evidence": [
+        "track_2a/technical_report.md"
+      ],
+      "start": 9.305333333333333,
+      "duration": 12.133333333333333
+    },
+    {
+      "id": "03",
+      "type": "architecture",
+      "title": "Frozen model. Trained decision head.",
+      "kicker": "JEV-STYLE STARTING POINT",
+      "body": "Apertus v1.5 \u2192 internal representations \u2192 small classifier",
+      "narration": "Our starting point is a Jev-style approach: keep the language model frozen, and train a small decision head on its internal representations. Here, Apertus version one point five supplies those representations.",
+      "target_start_seconds": 23,
+      "target_end_seconds": 37,
+      "visual_direction": "Method card: \u201cStarting point: Jev-style frozen features\u201d. Two blocks: FROZEN APERTUS v1.5 \u2192 SMALL TRAINED DECISION HEAD. Padlock icon only on Apertus. Label beneath: \u201c902 training examples \u00b7 No LoRA\u201d.",
+      "evidence": [
+        "track_2a/technical_report.md"
+      ],
+      "attribution_note": "Jev-style inspiration supplied by user; no corroborating Jev citation found in repo. Verified project method is frozen representations plus trained logistic-regression head.",
+      "start": 21.438666666666666,
+      "duration": 14.864
+    },
+    {
+      "id": "04",
+      "type": "architecture",
+      "title": "Find the pages. Preserve the source.",
+      "kicker": "HYBRID RETRIEVAL",
+      "body": "Keyword + multilingual semantic search \u2192 8K context budget",
+      "narration": "We build the document pipeline around it. Extract page text, combine keyword and multilingual semantic retrieval, and pack original passages into an eight-thousand-token context budget. Production needs only the booklet and the claim.",
+      "target_start_seconds": 37,
+      "target_end_seconds": 52,
+      "visual_direction": "A PDF page breaks into exact passage cards. Two paths, KEYWORD + MULTILINGUAL SEMANTIC SEARCH, merge into an 8K CONTEXT BUDGET, then the model. Headline: \u201cFind the relevant pages. Preserve the source.\u201d",
+      "evidence": [
+        "track_2a/technical_report.md"
+      ],
+      "start": 36.30266666666667,
+      "duration": 15.790666666666667
+    },
+    {
+      "id": "05",
+      "type": "limits",
+      "title": "Test the method, not just the score.",
+      "kicker": "EXPERIMENTAL DESIGN",
+      "body": "902 train \u00b7 276 development validation \u00b7 document interventions",
+      "narration": "We separate training and development validation by connected voting events. We compare context budgets and test what happens with empty or wrong-event documents. Performance drops support document dependence, with limitations.",
+      "target_start_seconds": 52,
+      "target_end_seconds": 65,
+      "visual_direction": "A clean horizontal split: 902 TRAIN / 276 DEVELOPMENT VALIDATION / 310 HISTORICAL HOLDOUT. Highlight train and validation; dim historical holdout. Then small cards \u201cEmpty document\u201d and \u201cWrong-event document\u201d.",
+      "evidence": [
+        "track_2a/technical_report.md"
+      ],
+      "start": 52.093333333333334,
+      "duration": 15.001333333333333
+    },
+    {
+      "id": "06",
+      "type": "benchmark",
+      "title": "From baseline to selected system",
+      "kicker": "DEVELOPMENT VALIDATION \u00b7 N = 276",
+      "body": "Base .672 \u2192 original full head .894 \u2192 selected hybrid-8k .949",
+      "narration": "On two hundred seventy-six development examples, the best base configuration scores point six seven two Macro F-one. The original full-context head reaches point eight nine four. Our selected hybrid eight-K system reaches point nine four nine, and point nine four two across languages.",
+      "target_start_seconds": 65,
+      "target_end_seconds": 82,
+      "visual_direction": "Proper zero-based horizontal bars, Macro-F1 scale 0\u20131: base full/capped .672; original full/capped head .894; selected hybrid-8k .949. At right: \u201c0.942 cross-language Macro-F1\u201d. Persistent banner: \u201cDEVELOPMENT VALIDATION \u00b7 276 ROWS \u00b7 NOT ORGANIZER-HIDDEN RESULTS\u201d.",
+      "evidence": [
+        "track_2a/technical_report.md",
+        "track_2a/deployment/benchmark.json"
+      ],
+      "chart": {
+        "axis_min": 0,
+        "axis_max": 1,
+        "metric": "Macro-F1",
+        "series": [
+          {
+            "label": "Base \u00b7 full/capped",
+            "value": 0.671612
+          },
+          {
+            "label": "Original head \u00b7 full/capped",
+            "value": 0.894461
+          },
+          {
+            "label": "Selected head \u00b7 hybrid-8k",
+            "value": 0.949069
+          }
+        ],
+        "callout": "0.941796 cross-language",
+        "qualifier": "Same 276-row development validation set. Hybrid-8k selected in later architecture development; context differs. Not organizer-hidden evaluation."
+      },
+      "start": 67.09466666666667,
+      "duration": 19.652
+    },
+    {
+      "id": "07",
+      "type": "benchmark",
+      "title": "43% fewer prompt tokens",
+      "kicker": "DEVELOPMENT CONTEXT COMPARISON",
+      "body": "14,106 full/capped \u2192 8,060 hybrid-8k",
+      "narration": "That selected configuration uses about forty-three percent fewer prompt tokens than the original full-context system. These are development results, not the organizer's hidden evaluation.",
+      "target_start_seconds": 82,
+      "target_end_seconds": 94,
+      "visual_direction": "Two proportional context bars: full/capped 14,106 vs hybrid-8k 8,060 mean prompt tokens. Main callout: \u201c43% fewer prompt tokens\u201d. Small readable qualifier: \u201cSame development set \u00b7 architecture selection\u201d.",
+      "evidence": [
+        "track_2a/technical_report.md",
+        "track_2a/deployment/benchmark.json"
+      ],
+      "chart": {
+        "metric": "Mean prompt tokens",
+        "series": [
+          {
+            "label": "Original full/capped",
+            "value": 14106.1
+          },
+          {
+            "label": "Selected hybrid-8k",
+            "value": 8059.6
+          }
+        ],
+        "qualifier": "42.864% fewer prompt tokens; not a latency or cost claim."
+      },
+      "start": 86.74666666666667,
+      "duration": 12.922666666666666
+    },
+    {
+      "id": "08",
+      "type": "demo",
+      "title": "Every decision has a source trail.",
+      "kicker": "INSPECTABLE OUTPUT",
+      "body": "Verdict \u00b7 exact quotes \u00b7 source pages \u00b7 downloadable JSON",
+      "narration": "The interface returns a decision with inspectable source passages, page numbers, and downloadable results. Those passages show the source context; they are not claimed as a validated minimal proof.",
+      "target_start_seconds": 94,
+      "target_end_seconds": 106,
+      "visual_direction": "Use actual app screenshot or existing demo crop: verdict, confidence, source page and quotation. Add callouts: \u201cExact quote\u201d, \u201cPage\u201d, \u201cPDF fingerprint\u201d, \u201cExportable JSON\u201d. Small footer: \u201cSource context \u2260 validated minimal proof\u201d.",
+      "evidence": [
+        "track_2a/technical_report.md",
+        "docs/demo/README.md",
+        "track_2a/experiments/apertus-live-demo-en-v1/verification.json"
+      ],
+      "start": 99.66933333333334,
+      "duration": 13.541333333333334
+    },
+    {
+      "id": "09",
+      "type": "closing",
+      "title": "Read the claim. Check the source.",
+      "kicker": "APERTUS \u00b7 EVIDENCE LAB",
+      "body": "Next: the application walkthrough",
+      "narration": "Apertus Evidence Lab. Read the claim. Check the source.",
+      "target_start_seconds": 106,
+      "target_end_seconds": 112,
+      "visual_direction": "Red line terminates at underlined source page. Brand lockup, headline: \u201cRead the claim. Check the source.\u201d Small CTA: \u201cNext: the live application walkthrough\u201d.",
+      "evidence": [
+        "track_2a/technical_report.md"
+      ],
+      "start": 113.21066666666667,
+      "duration": 5.06
+    }
+  ],
+  "video_sha256": "e2c8dd7179d9be821f5b71b88ab7268b9e5edea515bda9e9b340bc4b761e474c",
+  "video_bytes": 3965011,
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 1453056,
+        "duration": "118.250000",
+        "bit_rate": "163646",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "2838",
+        "extradata_size": 46,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]",
+          "encoder": "Lavc61.19.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "24000",
+        "channels": 1,
+        "channel_layout": "mono",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/24000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 2838504,
+        "duration": "118.271000",
+        "bit_rate": "99594",
+        "nb_frames": "2773",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      },
+      {
+        "index": 2,
+        "codec_name": "mov_text",
+        "codec_long_name": "MOV text",
+        "codec_type": "subtitle",
+        "codec_tag_string": "tx3g",
+        "codec_tag": "0x67337874",
+        "id": "0x3",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/1000000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 117541000,
+        "duration": "117.541000",
+        "bit_rate": "121",
+        "nb_frames": "47",
+        "extradata_size": 68,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "handler_name": "SubtitleHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/workspace/apertus/docs/intro-draft/apertus-intro-draft.mp4",
+      "nb_streams": 3,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "118.271000",
+      "size": "3965011",
+      "bit_rate": "268198",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.103"
+      }
+    }
+  },
+  "status": "creative draft, not final submission",
+  "subtitle_format": "Burned English captions plus selectable English track and SRT",
+  "source_git_commit": "c495a71a2dfbe7491483be8f5483aac26d6b0b34",
+  "validation": {
+    "full_video_audio_decode": "passed; FFmpeg decoded all streams without errors",
+    "subtitles_monotonic_and_within_duration": true,
+    "visual_review": "Astra reviewed contact sheet/benchmark; primary checked final benchmark/closing frames",
+    "reported_metrics_source": "track_2a/technical_report.md",
+    "no_new_gpu_lease": true
+  }
+}

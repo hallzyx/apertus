@@ -1,0 +1,100 @@
+1
+00:00:00,450 --> 00:00:02,178
+A claim can sound convincing.
+
+2
+00:00:02,358 --> 00:00:05,302
+But does the official voting booklet actually support it?
+
+3
+00:00:05,482 --> 00:00:08,575
+That is the question behind Apertus Evidence Lab.
+
+4
+00:00:09,755 --> 00:00:17,350
+The OST challenge asks us to compare a claim with a Swiss voting booklet:
+supported, contradicted, or not established.
+
+5
+00:00:17,530 --> 00:00:20,709
+And the claim and document may be in different languages.
+
+6
+00:00:21,889 --> 00:00:30,870
+Our starting point is a Jev-style approach: keep the language model frozen,
+and train a small decision head on its internal representations.
+
+7
+00:00:31,050 --> 00:00:35,573
+Here, Apertus version one point five supplies those representations.
+
+8
+00:00:36,753 --> 00:00:39,014
+We build the document pipeline around it.
+
+9
+00:00:39,194 --> 00:00:48,602
+Extract page text, combine keyword and multilingual semantic retrieval, and
+pack original passages into an eight-thousand-token context budget.
+
+10
+00:00:48,782 --> 00:00:51,363
+Production needs only the booklet and the claim.
+
+11
+00:00:52,543 --> 00:00:57,087
+We separate training and development validation by connected voting events.
+
+12
+00:00:57,267 --> 00:01:02,366
+We compare context budgets and test what happens with empty or wrong-event
+documents.
+
+13
+00:01:02,546 --> 00:01:06,365
+Performance drops support document dependence, with limitations.
+
+14
+00:01:07,545 --> 00:01:15,331
+On two hundred seventy-six development examples, the best base configuration
+scores point six seven two Macro F-one.
+
+15
+00:01:15,511 --> 00:01:19,031
+The original full-context head reaches point eight nine four.
+
+16
+00:01:19,211 --> 00:01:26,017
+Our selected hybrid eight-K system reaches point nine four nine, and point
+nine four two across languages.
+
+17
+00:01:27,197 --> 00:01:34,727
+That selected configuration uses about forty-three percent fewer prompt
+tokens than the original full-context system.
+
+18
+00:01:34,907 --> 00:01:38,939
+These are development results, not the organizer's hidden evaluation.
+
+19
+00:01:40,119 --> 00:01:46,903
+The interface returns a decision with inspectable source passages, page
+numbers, and downloadable results.
+
+20
+00:01:47,083 --> 00:01:52,481
+Those passages show the source context; they are not claimed as a validated
+minimal proof.
+
+21
+00:01:53,661 --> 00:01:55,026
+Apertus Evidence Lab.
+
+22
+00:01:55,206 --> 00:01:56,273
+Read the claim.
+
+23
+00:01:56,453 --> 00:01:57,541
+Check the source.

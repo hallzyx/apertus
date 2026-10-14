@@ -1,0 +1,168 @@
+[
+  {
+    "id": "01",
+    "type": "opening",
+    "title": "A claim. A booklet.",
+    "kicker": "APERTUS · EVIDENCE LAB",
+    "body": "Three possible answers.",
+    "narration": "A claim can sound convincing. But does the official voting booklet actually support it? That is the question behind Apertus Evidence Lab.",
+    "target_start_seconds": 0,
+    "target_end_seconds": 10,
+    "visual_direction": "Red inset-square mark. A statement card faces a stack of booklet pages. Headline: “A claim. A booklet. Three possible answers.” Small title: APERTUS · EVIDENCE LAB / OST TRACK 2A.",
+    "evidence": [
+      "track_2a/technical_report.md"
+    ]
+  },
+  {
+    "id": "02",
+    "type": "problem",
+    "title": "What does the booklet establish?",
+    "kicker": "OST · TRACK 2A",
+    "body": "0 Supported   /   1 Neutral   /   2 Contradicted",
+    "narration": "The OST challenge asks us to compare a claim with a Swiss voting booklet: supported, contradicted, or not established. And the claim and document may be in different languages.",
+    "target_start_seconds": 10,
+    "target_end_seconds": 23,
+    "visual_direction": "Three cards appear: “0 · Entailment / Supported”, “1 · Neutral / Not established”, “2 · Contradiction / Contradicted”. DE / FR / IT badges connect across a simple 3×3 grid.",
+    "evidence": [
+      "track_2a/technical_report.md"
+    ]
+  },
+  {
+    "id": "03",
+    "type": "architecture",
+    "title": "Frozen model. Trained decision head.",
+    "kicker": "JEV-STYLE STARTING POINT",
+    "body": "Apertus v1.5 → internal representations → small classifier",
+    "narration": "Our starting point is a Jev-style approach: keep the language model frozen, and train a small decision head on its internal representations. Here, Apertus version one point five supplies those representations.",
+    "target_start_seconds": 23,
+    "target_end_seconds": 37,
+    "visual_direction": "Method card: “Starting point: Jev-style frozen features”. Two blocks: FROZEN APERTUS v1.5 → SMALL TRAINED DECISION HEAD. Padlock icon only on Apertus. Label beneath: “902 training examples · No LoRA”.",
+    "evidence": [
+      "track_2a/technical_report.md"
+    ],
+    "attribution_note": "Jev-style inspiration supplied by user; no corroborating Jev citation found in repo. Verified project method is frozen representations plus trained logistic-regression head."
+  },
+  {
+    "id": "04",
+    "type": "architecture",
+    "title": "Find the pages. Preserve the source.",
+    "kicker": "HYBRID RETRIEVAL",
+    "body": "Keyword + multilingual semantic search → 8K context budget",
+    "narration": "We build the document pipeline around it. Extract page text, combine keyword and multilingual semantic retrieval, and pack original passages into an eight-thousand-token context budget. Production needs only the booklet and the claim.",
+    "target_start_seconds": 37,
+    "target_end_seconds": 52,
+    "visual_direction": "A PDF page breaks into exact passage cards. Two paths, KEYWORD + MULTILINGUAL SEMANTIC SEARCH, merge into an 8K CONTEXT BUDGET, then the model. Headline: “Find the relevant pages. Preserve the source.”",
+    "evidence": [
+      "track_2a/technical_report.md"
+    ]
+  },
+  {
+    "id": "05",
+    "type": "limits",
+    "title": "Test the method, not just the score.",
+    "kicker": "EXPERIMENTAL DESIGN",
+    "body": "902 train · 276 development validation · document interventions",
+    "narration": "We separate training and development validation by connected voting events. We compare context budgets and test what happens with empty or wrong-event documents. Performance drops support document dependence, with limitations.",
+    "target_start_seconds": 52,
+    "target_end_seconds": 65,
+    "visual_direction": "A clean horizontal split: 902 TRAIN / 276 DEVELOPMENT VALIDATION / 310 HISTORICAL HOLDOUT. Highlight train and validation; dim historical holdout. Then small cards “Empty document” and “Wrong-event document”.",
+    "evidence": [
+      "track_2a/technical_report.md"
+    ]
+  },
+  {
+    "id": "06",
+    "type": "benchmark",
+    "title": "From baseline to selected system",
+    "kicker": "DEVELOPMENT VALIDATION · N = 276",
+    "body": "Base .672 → original full head .894 → selected hybrid-8k .949",
+    "narration": "On two hundred seventy-six development examples, the best base configuration scores point six seven two Macro F-one. The original full-context head reaches point eight nine four. Our selected hybrid eight-K system reaches point nine four nine, and point nine four two across languages.",
+    "target_start_seconds": 65,
+    "target_end_seconds": 82,
+    "visual_direction": "Proper zero-based horizontal bars, Macro-F1 scale 0–1: base full/capped .672; original full/capped head .894; selected hybrid-8k .949. At right: “0.942 cross-language Macro-F1”. Persistent banner: “DEVELOPMENT VALIDATION · 276 ROWS · NOT ORGANIZER-HIDDEN RESULTS”.",
+    "evidence": [
+      "track_2a/technical_report.md",
+      "track_2a/deployment/benchmark.json"
+    ],
+    "chart": {
+      "axis_min": 0,
+      "axis_max": 1,
+      "metric": "Macro-F1",
+      "series": [
+        {
+          "label": "Base · full/capped",
+          "value": 0.671612
+        },
+        {
+          "label": "Original head · full/capped",
+          "value": 0.894461
+        },
+        {
+          "label": "Selected head · hybrid-8k",
+          "value": 0.949069
+        }
+      ],
+      "callout": "0.941796 cross-language",
+      "qualifier": "Same 276-row development validation set. Hybrid-8k selected in later architecture development; context differs. Not organizer-hidden evaluation."
+    }
+  },
+  {
+    "id": "07",
+    "type": "benchmark",
+    "title": "43% fewer prompt tokens",
+    "kicker": "DEVELOPMENT CONTEXT COMPARISON",
+    "body": "14,106 full/capped → 8,060 hybrid-8k",
+    "narration": "That selected configuration uses about forty-three percent fewer prompt tokens than the original full-context system. These are development results, not the organizer's hidden evaluation.",
+    "target_start_seconds": 82,
+    "target_end_seconds": 94,
+    "visual_direction": "Two proportional context bars: full/capped 14,106 vs hybrid-8k 8,060 mean prompt tokens. Main callout: “43% fewer prompt tokens”. Small readable qualifier: “Same development set · architecture selection”.",
+    "evidence": [
+      "track_2a/technical_report.md",
+      "track_2a/deployment/benchmark.json"
+    ],
+    "chart": {
+      "metric": "Mean prompt tokens",
+      "series": [
+        {
+          "label": "Original full/capped",
+          "value": 14106.1
+        },
+        {
+          "label": "Selected hybrid-8k",
+          "value": 8059.6
+        }
+      ],
+      "qualifier": "42.864% fewer prompt tokens; not a latency or cost claim."
+    }
+  },
+  {
+    "id": "08",
+    "type": "demo",
+    "title": "Every decision has a source trail.",
+    "kicker": "INSPECTABLE OUTPUT",
+    "body": "Verdict · exact quotes · source pages · downloadable JSON",
+    "narration": "The interface returns a decision with inspectable source passages, page numbers, and downloadable results. Those passages show the source context; they are not claimed as a validated minimal proof.",
+    "target_start_seconds": 94,
+    "target_end_seconds": 106,
+    "visual_direction": "Use actual app screenshot or existing demo crop: verdict, confidence, source page and quotation. Add callouts: “Exact quote”, “Page”, “PDF fingerprint”, “Exportable JSON”. Small footer: “Source context ≠ validated minimal proof”.",
+    "evidence": [
+      "track_2a/technical_report.md",
+      "docs/demo/README.md",
+      "track_2a/experiments/apertus-live-demo-en-v1/verification.json"
+    ]
+  },
+  {
+    "id": "09",
+    "type": "closing",
+    "title": "Read the claim. Check the source.",
+    "kicker": "APERTUS · EVIDENCE LAB",
+    "body": "Next: the application walkthrough",
+    "narration": "Apertus Evidence Lab. Read the claim. Check the source.",
+    "target_start_seconds": 106,
+    "target_end_seconds": 112,
+    "visual_direction": "Red line terminates at underlined source page. Brand lockup, headline: “Read the claim. Check the source.” Small CTA: “Next: the live application walkthrough”.",
+    "evidence": [
+      "track_2a/technical_report.md"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+A claim can sound convincing. But does the official voting booklet actually support it? That is the question behind Apertus Evidence Lab.
+
+The OST challenge asks us to compare a claim with a Swiss voting booklet: supported, contradicted, or not established. And the claim and document may be in different languages.
+
+Our starting point is a Jev-style approach: keep the language model frozen, and train a small decision head on its internal representations. Here, Apertus version one point five supplies those representations.
+
+We build the document pipeline around it. Extract page text, combine keyword and multilingual semantic retrieval, and pack original passages into an eight-thousand-token context budget. Production needs only the booklet and the claim.
+
+We separate training and development validation by connected voting events. We compare context budgets and test what happens with empty or wrong-event documents. Performance drops support document dependence, with limitations.
+
+On two hundred seventy-six development examples, the best base configuration scores point six seven two Macro F-one. The original full-context head reaches point eight nine four. Our selected hybrid eight-K system reaches point nine four nine, and point nine four two across languages.
+
+That selected configuration uses about forty-three percent fewer prompt tokens than the original full-context system. These are development results, not the organizer's hidden evaluation.
+
+The interface returns a decision with inspectable source passages, page numbers, and downloadable results. Those passages show the source context; they are not claimed as a validated minimal proof.
+
+Apertus Evidence Lab. Read the claim. Check the source.
