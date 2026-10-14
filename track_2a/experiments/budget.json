@@ -1,11 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 4.978695031420008,
-  "actual_spend": 4.978695031420008,
+  "estimated_spend": 5.202731392420009,
+  "actual_spend": 5.202731392420009,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [],
-  "remaining_estimated_budget": 5.021304968579992,
+  "remaining_estimated_budget": 4.797268607579991,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -526,11 +526,50 @@
       "status": "destroyed_verified",
       "phase": 2,
       "destroyed_verified_at": "2026-10-08T02:13:18.506446+00:00"
+    },
+    {
+      "instance_id": 55988267,
+      "offer_id": 21004752,
+      "gpu": "RTX A6000",
+      "disk_gb": 60,
+      "hourly_total_usd": 0.41666666666666663,
+      "estimated_total_usd_bound": 0.6709583333333333,
+      "purpose": "Actual current app browser demo: official PDF, three native frozen-head predictions and downloads. No training, benchmark evaluation or holdout access.",
+      "git_commit": "7a8a4fa0d9595095dd1409e899bad1a1b62cb220",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "account_credit_before_creation": 5.020459026679991,
+      "created_at": "2026-10-14T20:34:51.354549+00:00",
+      "automatic_cleanup_deadline_seconds": 4500,
+      "status": "destroyed_verified",
+      "phase": "app-demo",
+      "recording_commit": "9bbf570386c6f05a1bf17119cf88ec9a06e89d6f",
+      "first_failure": "Official PDF server closed connection; model and E5 downloads succeeded; no predictions produced. Recovered failure log and empty export manifest before retry.",
+      "retry_started_at": "2026-10-14T20:58:15.819360+00:00",
+      "same_gpu_recorded_repeat": true,
+      "failure": "PDF origin closed connection. Startup update did not replace cached onstart script; restart cloned into existing checkout and exited. No predictions or fitting. Original logs and export checksum preserved before creating corrected runner.",
+      "destroyed_verified_at": "2026-10-14T21:20:43.793392+00:00"
+    },
+    {
+      "instance_id": 55991148,
+      "offer_id": 21004761,
+      "gpu": "RTX A6000",
+      "disk_gb": 60,
+      "hourly_total_usd": 0.41666666666666663,
+      "estimated_total_usd_bound": 0.6709583333333333,
+      "purpose": "Actual recorded repetition of current app browser demo: official PDF, three native frozen-head predictions and downloads. No training, benchmark evaluation or holdout access.",
+      "git_commit": "9bbf570386c6f05a1bf17119cf88ec9a06e89d6f",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "account_credit_before_creation": 4.910583497479992,
+      "created_at": "2026-10-14T21:00:44.419865+00:00",
+      "automatic_cleanup_deadline_seconds": 4500,
+      "status": "destroyed_verified",
+      "phase": "app-demo",
+      "destroyed_verified_at": "2026-10-14T21:20:44.475348+00:00"
     }
   ],
-  "account_credit_observed": 5.021304968579992,
+  "account_credit_observed": 4.797268607579991,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-08T02:14:17.173797+00:00",
+  "account_checked_at": "2026-10-14T21:23:24.340184+00:00",
   "outstanding_task_lease_reservations_usd": 0,
   "all_task_instances_destroyed_verified": true,
   "phase2": {
@@ -545,6 +584,21 @@
     "completed_at": "2026-10-08T02:14:17.173797+00:00"
   },
   "final_provider_listing_pages_checked": 1,
-  "final_provider_cleanup_checked_at": "2026-10-08T02:14:17.173797+00:00",
-  "provider_ownership_scope": "Only ledger task-owned instances destroyed; unrelated user resources preserved"
+  "final_provider_cleanup_checked_at": "2026-10-14T21:23:24.340184+00:00",
+  "provider_ownership_scope": "Only ledger task-owned instances destroyed; unrelated user resources preserved",
+  "demo": {
+    "status": "completed_recorded_verified_all_owned_leases_destroyed",
+    "estimated_reserved_spend_usd": 0,
+    "credit_at_start": 5.020459026679991,
+    "first_failure": "Official PDF server closed connection; model and E5 downloads succeeded; no predictions produced. Recovered failure log and empty export manifest before retry.",
+    "failed_instance_preserved": 55988267,
+    "recording_reserved_spend_usd": 0,
+    "recording_credit_at_start": 4.910583497479992,
+    "completed_at": "2026-10-14T21:23:24.340184+00:00",
+    "observed_spend_usd": 0.2231904191000007,
+    "actual_nli_forward_count": 6,
+    "same_backend_between_successful_passes": true,
+    "video_mp4_sha256": "78c8a7f05b43932773f03f3aeb6020ecb8d61df84a7752e4f61ddd14ab3b440f",
+    "video_duration_seconds": 47.56
+  }
 }

@@ -52,3 +52,7 @@ See [runtime and CLI](track_2a/README.md), [technical report](track_2a/technical
 and [adopted contract](track_2a/docs/challenge_contract.md). Full source booklets and
 large assets are downloaded/generated separately; `track_2a/data/` contains only
 small tracked examples. No Devpost integration is needed for this track.
+
+## Demo real de la app
+
+[Video del recorrido completo](docs/demo/README.md): PDF oficial, tres afirmaciones DE/FR/IT, inferencia real de Apertus con la cabeza congelada, pasajes y descarga JSON. Se comprobó una primera pasada y se grabó la segunda con el mismo backend activo. Es una prueba funcional, no un nuevo benchmark.

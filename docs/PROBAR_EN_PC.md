@@ -86,3 +86,7 @@ correspondiente; `rm-CH` → alemán (no hay traducción al romanche); cualquier
 otro idioma → inglés. No se detecta la ubicación ni se accede a ajustes privados
 del PC: se usa el idioma que el navegador informa. La selección manual queda
 guardada en ese navegador. Las citas, afirmaciones y el JSON original no se traducen.
+
+## Demo grabada con el modelo real
+
+Puedes ver el [video y recorrido](demo/README.md). El [PDF oficial de ejemplo](../track_2a/data/demo/votation-2026-03-08-fr.pdf) está incluido para probar el mismo flujo. Para clasificar hay que conectar el backend nativo; la grabación no publica un servidor GPU permanente.
