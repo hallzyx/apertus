@@ -4,12 +4,14 @@ import json
 import os
 from pathlib import Path
 import shutil
+import sys
 import subprocess
 import threading
 import urllib.request
 from http.server import ThreadingHTTPServer
 
-ROOT=Path('track_2a/experiments/apertus-live-demo-v1')
+RECORD='--record' in sys.argv
+ROOT=Path('track_2a/experiments/apertus-live-demo-recorded-v1' if RECORD else 'track_2a/experiments/apertus-live-demo-v1')
 PDF_URL='https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf'
 PDF_SHA='2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b'
 HEAD_SHA='2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1'
@@ -50,22 +52,27 @@ def main():
     frontend=ThreadingHTTPServer(('127.0.0.1',0),Handler)
     frontend_thread=threading.Thread(target=frontend.serve_forever,daemon=True);frontend_thread.start()
     from playwright.sync_api import sync_playwright
-    record={'status':'running','git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'pdf_url':PDF_URL,'pdf_sha256':PDF_SHA,'head_sha256':HEAD_SHA,'model':engine.metadata,'context':'hybrid-8k','training_performed':False,'holdout_accessed':False,'scope':'Actual current app browser PDF upload, native Apertus inference, source quotes and JSON download. Unannotated demo claims, not accuracy evaluation.','predictions':[]}
+    record={'status':'running','git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'pdf_url':PDF_URL,'pdf_sha256':PDF_SHA,'head_sha256':HEAD_SHA,'model':engine.metadata,'context':'hybrid-8k','training_performed':False,'holdout_accessed':False,'scope':'Actual current app browser PDF upload, native Apertus inference, source quotes and JSON download. Unannotated demo claims, not accuracy evaluation.','predictions':[],'recorded_repeat':RECORD}
     (ROOT/'verification.json').write_text(json.dumps(record,indent=2)+'\n')
     try:
         with sync_playwright() as playwright:
             browser=playwright.chromium.launch(headless=True,args=['--no-sandbox'])
-            page=browser.new_page(locale='es-PE',viewport={'width':1440,'height':1100});errors=[]
+            page=browser.new_page(locale='es-PE',viewport={'width':1440,'height':1100},**({'record_video_dir':str(ROOT/'video'),'record_video_size':{'width':1440,'height':1100}} if RECORD else {}));errors=[]
             page.on('pageerror',lambda error:errors.append(str(error)))
             page.goto(f'http://127.0.0.1:{frontend.server_port}',wait_until='networkidle')
+            if RECORD:page.wait_for_timeout(2500)
             page.screenshot(path=str(ROOT/'01-start.png'),full_page=True)
+            page.locator('#pdf').scroll_into_view_if_needed()
             page.locator('#pdf').set_input_files(str(pdf))
             page.wait_for_function("document.getElementById('doc').value.length>0 && !document.getElementById('claim').disabled",timeout=90000)
             document=json.loads(page.locator('#doc').input_value());lookup={p['id']:p for p in document['passages']}
             record['pdf_pages']=document['pages'];record['document_passages']=len(document['passages'])
+            if RECORD:page.wait_for_timeout(2500)
             claims=[('de','Die schweizerische Währung ist der Franken.'),('fr','Le contre-projet direct propose d’inscrire dans la Constitution que la monnaie suisse est le franc.'),('it','Il controprogetto diretto stabilisce che la valuta svizzera è l’euro.')]
             for index,(language,claim) in enumerate(claims,1):
+                page.locator('#claim').scroll_into_view_if_needed()
                 page.locator('#claim').fill(claim)
+                if RECORD:page.wait_for_timeout(2500)
                 if index==1:page.screenshot(path=str(ROOT/'02-pdf-and-claim.png'),full_page=True)
                 if page.locator('#predict').is_disabled():raise ValueError('Actual native backend not configured in browser')
                 page.locator('#predict').click()
@@ -82,12 +89,21 @@ def main():
                 page.locator('#results').scroll_into_view_if_needed()
                 page.evaluate("document.getElementById('results').scrollIntoView({block:'start'})")
                 page.screenshot(path=str(ROOT/f'03-result-{language}.png'),full_page=False)
+                if RECORD:
+                    page.wait_for_timeout(4000)
+                    page.locator('.passage').first.scroll_into_view_if_needed()
+                    page.wait_for_timeout(2500)
                 record['predictions'].append({'claim_language':language,'claim':claim,'label':result['label'],'input_tokens':result['input_tokens'],'inference_time_ms':result['inference_time_ms'],'exact_source_quotes_pages_verified':True,'download_json_equal':True,'output':output.name})
                 (ROOT/'verification.json').write_text(json.dumps(record,indent=2,ensure_ascii=False)+'\n')
                 print('LIVE_DEMO_REAL_BROWSER_PREDICTION',language,'label',result['label'],'tokens',result['input_tokens'],flush=True)
             assert not errors
             record.update(status='completed',browser_errors=errors,browser_version=browser.version,actual_native_inference=True)
+            video=page.video
             browser.close()
+            if RECORD:
+                video.save_as(str(ROOT/'demo.webm'))
+                shutil.rmtree(ROOT/'video')
+                record['video']='demo.webm'
     finally:
         frontend.shutdown();frontend.server_close();backend.shutdown();backend.server_close()
     record['files']=[{'path':str(p.relative_to(ROOT)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(ROOT.iterdir()) if p.is_file() and p.name!='verification.json']
