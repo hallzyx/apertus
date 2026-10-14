@@ -1,56 +1,28 @@
-# Demo real de Apertus Evidence Lab
+# Apertus Evidence Lab — English demo
 
-[Ver o descargar el video MP4](apertus-demo.mp4?raw=true).
+[Watch or download the English video](apertus-demo.mp4?raw=true) · [Step-by-step walkthrough with screenshots](STEP_BY_STEP.md) · [PC setup](../PROBAR_EN_PC.md)
 
-Grabación de la pantalla de la app en Chromium: PDF oficial de 72 páginas →
-afirmación → Apertus v1.5-8B con cabeza entrenada y recuperación híbrida 8k →
-etiqueta, probabilidad, citas/páginas, tokens y tiempo → descarga JSON.
+Real Chromium recording: official PDF → claim → Apertus v1.5-8B with the frozen decision head and hybrid 8k context → label, probabilities, source passages/pages, tokens and measured time → JSON download. The interface is English; claims and quoted source text retain their original languages.
 
-Se comprobó primero el recorrido con tres afirmaciones y después se repitió
-completo con grabación, manteniendo el mismo backend cargado entre ambas pasadas.
-La segunda pasada reprodujo las etiquetas 0, 0 y 2. Son ejemplos de funcionamiento
-sin etiquetas de evaluación anotadas; no constituyen una medición de precisión
-ni cambian el Macro-F1 del laboratorio. No se usó el test interno de 310 ejemplos,
-no hubo entrenamiento, ni se sustituyó la cabeza por la API base de CSCS.
+Three predictions were checked first, then repeated with recording while the same native GPU backend remained loaded. Both passes reproduced labels 0, 0 and 2. These unannotated functional examples are not an accuracy benchmark. No training or internal 310-example test access occurred.
 
-El MP4 dura 47.56 segundos, resolución 1440×1100, sin audio.
-Es una conversión H.264 de la grabación original, sin cortes ni aceleración.
-Se revisaron imágenes del inicio, espera de inferencia y resultado final.
+The video lasts 46.08 seconds at 1440×1100, without audio. It is an H.264 conversion of the original recording, without cuts or speed changes.
 
-| Afirmación | Texto | Etiqueta | Tokens | Tiempo registrado, segunda pasada |
-|---|---|---:|---:|---:|
-| DE | Die schweizerische Währung ist der Franken. | 0 | 8072 | 2.235 s |
-| FR | Le contre-projet direct propose d’inscrire dans la Constitution que la monnaie suisse est le franc. | 0 | 8149 | 2.153 s |
-| IT | Il controprogetto diretto stabilisce che la valuta svizzera è l’euro. | 2 | 8161 | 2.185 s |
+| Claim language | Label | Context tokens | Recorded inference time |
+|---|---:|---:|---:|
+| de | 0 | 8072 | 2.271 s |
+| fr | 0 | 8149 | 2.253 s |
+| it | 2 | 8161 | 2.256 s |
 
-0 = Entailment / apoyada; 1 = Neutral / información insuficiente;
-2 = Contradiction / contradicha. Los tiempos incluyen recuperación e inferencia
-con la GPU ya preparada; no son garantías para otras máquinas o documentos.
-La primera consulta de la primera pasada tardó 14.079 s con preparación fría.
-Las citas son texto original del PDF y acompañan la decisión; no certifican
-por sí mismas evidencia mínima suficiente.
+0 = Entailment; 1 = Neutral; 2 = Contradiction. Recorded times include retrieval and inference on the prepared GPU and are not guarantees for other machines. Source passages support inspection; the output is document-grounded inference, not political advice or independent fact checking.
 
-## Repetir en tu PC
+The temporary GPU was destroyed after artifact recovery and verification. This recording does not publish a persistent model server. On your PC, PDF inspection works without the backend; classification requires a reachable native backend configured as documented.
 
-Arranca la app con la [guía para PC](../PROBAR_EN_PC.md) y configura el backend
-nativo. Sube [este mismo folleto oficial](../../track_2a/data/demo/votation-2026-03-08-fr.pdf)
-y prueba las afirmaciones de la tabla. Sin el backend puedes cargar el PDF e
-inspeccionar pasajes, pero la clasificación permanece deshabilitada.
+## Reproducible artifacts
 
-Las GPU temporales se conservaron durante la comprobación y la grabación.
-Después de recuperar y verificar el video y sus resultados, ambas instancias de
-la tarea fueron eliminadas y su ausencia comprobada en el listado del proveedor.
-No queda un backend persistente publicado como resultado de esta demo.
-
-## Evidencia reproducible
-
-- [Prueba de video e integridad](video-integrity.json).
-- [Recuperación, saldo y cierre de recursos](resource-verification.json).
-- [Verificación de seis inferencias reales](../../track_2a/experiments/apertus-live-demo-recorded-v1/verification.json).
-- [Script del recorrido y la grabación](../../track_2a/scripts/demo_v15_browser.py).
-
-El primer intento falló al descargar el PDF desde su servidor oficial, después
-de verificar los pesos. Se conservó el diagnóstico y se corrigió usando una copia
-pequeña sin modificaciones, con el SHA-256 fijado y atribución a la Cancillería
-Federal. El recorrido exitoso y su repetición usaron la misma GPU, sin apagar
-Apertus entre ambas. Los tokens de usuario nunca se incluyeron en archivos de Git.
+- [Six native predictions and session provenance](../../track_2a/experiments/apertus-live-demo-en-v1/verification.json).
+- [Original browser recording](../../track_2a/experiments/apertus-live-demo-en-v1/demo.webm).
+- [Video hashes and encoding](video-integrity.json).
+- [GPU cleanup and account observation](resource-verification.json).
+- [Browser demo runner](../../track_2a/scripts/demo_v15_browser.py).
+- [Official booklet and attribution](../../track_2a/data/demo/README.md).

@@ -89,4 +89,4 @@ guardada en ese navegador. Las citas, afirmaciones y el JSON original no se trad
 
 ## Demo grabada con el modelo real
 
-Puedes ver el [video y recorrido](demo/README.md). El [PDF oficial de ejemplo](../track_2a/data/demo/votation-2026-03-08-fr.pdf) está incluido para probar el mismo flujo. Para clasificar hay que conectar el backend nativo; la grabación no publica un servidor GPU permanente.
+Puedes ver el [video en inglés](demo/README.md) y el [recorrido paso a paso con capturas](demo/STEP_BY_STEP.md). El [PDF oficial de ejemplo](../track_2a/data/demo/votation-2026-03-08-fr.pdf) está incluido para probar el mismo flujo. Para clasificar hay que conectar el backend nativo; la grabación no publica un servidor GPU permanente.

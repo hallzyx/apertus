@@ -1,24 +1,14 @@
 {
-  "checked_at_utc": "2026-10-14T21:23:24.340184+00:00",
-  "owned_demo_ids": [
-    55988267,
-    55991148
-  ],
-  "owned_demo_instances_absent": true,
-  "all_historical_task_ids_absent": true,
-  "pages_checked": 1,
-  "unrelated_instance_count": 0,
-  "remaining_credit_usd": 4.797268607579991,
-  "demo_observed_spend_usd": 0.2231904191000007,
-  "reserve_usd": 2,
-  "no_active_task_instances": true,
-  "billing_note": "Observed account credit reduction; provider may post delayed billing. User-owned secrets and unrelated instances preserved.",
-  "remote_archive_integrity": {
-    "instance_id": 55991148,
-    "archive_sha256": "589b491515e3695fef348c860aa8a10f8272994b1d7b68706d5e3b6149da52cb",
-    "archive_bytes": 5186661,
-    "part_count": 18,
-    "original_remote_archive_verified": true,
-    "cache_status": "completed"
-  }
+  "checked_at": "2026-10-14T22:02:08.913858+00:00",
+  "recording_instance_id": 55995795,
+  "all_task_owned_instances_absent": true,
+  "listing_pages_checked": 1,
+  "ownership_scope": "Only ledger-owned task resources; unrelated resources preserved",
+  "account_credit_usd": 4.568417532179992,
+  "english_demo_observed_spend_usd": 0.22731201379999977,
+  "reserve_usd": 2.0,
+  "ui_locale": "en-US",
+  "actual_native_predictions": 6,
+  "same_backend_between_passes": true,
+  "video_sha256": "ea50815b23fd606fa9a897fab29470d68373a50b4bc2cc1e04cd1d1f9636e3ae"
 }

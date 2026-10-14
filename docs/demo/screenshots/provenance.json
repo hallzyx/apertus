@@ -1,0 +1,15 @@
+{
+  "ui_locale": "en-US",
+  "source_video": "../apertus-demo.mp4",
+  "video_frames_seconds": {
+    "02-booklet-loaded.png": 6,
+    "04-inference-running.png": 12
+  },
+  "json_screenshot_source": "../../../track_2a/experiments/apertus-live-demo-en-v1/pass-2-prediction-de.json",
+  "json_screenshot_method": "Actual downloaded JSON served by a temporary loopback HTTP server and opened in Chromium; no additional inference or edited response.",
+  "sha256": {
+    "02-booklet-loaded.png": "9f679cdd3e1a3992a188bbed31b8953e73fda0877819977d47db1ee86c898afe",
+    "04-inference-running.png": "83b7049f0b5f0033ff7e567ef06883706024c82289817587336cad8f5dcba69a",
+    "06-downloaded-json.png": "626abde45e9db9318837b9e4971bd4f959e881c1cc814d6738b210817bd98052"
+  }
+}

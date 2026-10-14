@@ -1,8 +1,9 @@
 {
-  "source_verification_commit": "9bbf570386c6f05a1bf17119cf88ec9a06e89d6f",
-  "source_webm_sha256": "f20c393f291f208cf169e5836d515df7747b931e0170f0510dd92a15e1e8ad06",
-  "mp4_sha256": "78c8a7f05b43932773f03f3aeb6020ecb8d61df84a7752e4f61ddd14ab3b440f",
-  "duration_seconds": 47.56,
+  "ui_locale": "en-US",
+  "source_verification_commit": "b5bdd18a2d8ace713381254091f65c70bf3d4fc0",
+  "source_webm_sha256": "70fcc5ddb6ac7ecee11096428dc98031bba7a05f0a59d588e3173441373ea6dc",
+  "mp4_sha256": "ea50815b23fd606fa9a897fab29470d68373a50b4bc2cc1e04cd1d1f9636e3ae",
+  "duration_seconds": 46.08,
   "width": 1440,
   "height": 1100,
   "encoding": "H.264 yuv420p; re-encoded from original actual browser recording. No cuts, playback speed changes or invented predictions.",
@@ -19,7 +20,7 @@
       "claim": "Die schweizerische Währung ist der Franken.",
       "label": 0,
       "input_tokens": 8072,
-      "inference_time_ms": 14079.439617693424,
+      "inference_time_ms": 12443.788664415479,
       "exact_source_quotes_pages_verified": true,
       "download_json_equal": true,
       "output": "pass-1-prediction-de.json"
@@ -30,7 +31,7 @@
       "claim": "Le contre-projet direct propose d’inscrire dans la Constitution que la monnaie suisse est le franc.",
       "label": 0,
       "input_tokens": 8149,
-      "inference_time_ms": 2089.3454030156136,
+      "inference_time_ms": 2245.6173710525036,
       "exact_source_quotes_pages_verified": true,
       "download_json_equal": true,
       "output": "pass-1-prediction-fr.json"
@@ -41,7 +42,7 @@
       "claim": "Il controprogetto diretto stabilisce che la valuta svizzera è l’euro.",
       "label": 2,
       "input_tokens": 8161,
-      "inference_time_ms": 2132.578819990158,
+      "inference_time_ms": 2224.264870863408,
       "exact_source_quotes_pages_verified": true,
       "download_json_equal": true,
       "output": "pass-1-prediction-it.json"
@@ -52,7 +53,7 @@
       "claim": "Die schweizerische Währung ist der Franken.",
       "label": 0,
       "input_tokens": 8072,
-      "inference_time_ms": 2235.108934342861,
+      "inference_time_ms": 2270.5135149881244,
       "exact_source_quotes_pages_verified": true,
       "download_json_equal": true,
       "output": "pass-2-prediction-de.json"
@@ -63,7 +64,7 @@
       "claim": "Le contre-projet direct propose d’inscrire dans la Constitution que la monnaie suisse est le franc.",
       "label": 0,
       "input_tokens": 8149,
-      "inference_time_ms": 2152.6400446891785,
+      "inference_time_ms": 2253.4815869294107,
       "exact_source_quotes_pages_verified": true,
       "download_json_equal": true,
       "output": "pass-2-prediction-fr.json"
@@ -74,7 +75,7 @@
       "claim": "Il controprogetto diretto stabilisce che la valuta svizzera è l’euro.",
       "label": 2,
       "input_tokens": 8161,
-      "inference_time_ms": 2185.4896917939186,
+      "inference_time_ms": 2255.6218369863927,
       "exact_source_quotes_pages_verified": true,
       "download_json_equal": true,
       "output": "pass-2-prediction-it.json"

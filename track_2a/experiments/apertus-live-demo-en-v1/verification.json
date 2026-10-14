@@ -1,0 +1,170 @@
+{
+  "status": "completed",
+  "git_commit": "b5bdd18a2d8ace713381254091f65c70bf3d4fc0",
+  "pdf_url": "https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf",
+  "pdf_sha256": "2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b",
+  "head_sha256": "2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1",
+  "model": {
+    "repo": "swiss-ai/Apertus-v1.5-8B",
+    "revision": "a411d838600baf0e3635a3daf66fb7c55fc97bb6",
+    "transformers_revision": "3797303dda74844e3d1f8977ff5518bb91f818b4",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.14.0.dev0",
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_bytes": 50897289216,
+    "precision": "BF16 text; official tokenizer modules remain FP32",
+    "quantization": null
+  },
+  "context": "hybrid-8k",
+  "training_performed": false,
+  "holdout_accessed": false,
+  "scope": "Actual current app browser PDF upload, native Apertus inference, source quotes and JSON download. Unannotated demo claims, not accuracy evaluation.",
+  "predictions": [
+    {
+      "pass": 1,
+      "claim_language": "de",
+      "claim": "Die schweizerische Währung ist der Franken.",
+      "label": 0,
+      "input_tokens": 8072,
+      "inference_time_ms": 12443.788664415479,
+      "exact_source_quotes_pages_verified": true,
+      "download_json_equal": true,
+      "output": "pass-1-prediction-de.json"
+    },
+    {
+      "pass": 1,
+      "claim_language": "fr",
+      "claim": "Le contre-projet direct propose d’inscrire dans la Constitution que la monnaie suisse est le franc.",
+      "label": 0,
+      "input_tokens": 8149,
+      "inference_time_ms": 2245.6173710525036,
+      "exact_source_quotes_pages_verified": true,
+      "download_json_equal": true,
+      "output": "pass-1-prediction-fr.json"
+    },
+    {
+      "pass": 1,
+      "claim_language": "it",
+      "claim": "Il controprogetto diretto stabilisce che la valuta svizzera è l’euro.",
+      "label": 2,
+      "input_tokens": 8161,
+      "inference_time_ms": 2224.264870863408,
+      "exact_source_quotes_pages_verified": true,
+      "download_json_equal": true,
+      "output": "pass-1-prediction-it.json"
+    },
+    {
+      "pass": 2,
+      "claim_language": "de",
+      "claim": "Die schweizerische Währung ist der Franken.",
+      "label": 0,
+      "input_tokens": 8072,
+      "inference_time_ms": 2270.5135149881244,
+      "exact_source_quotes_pages_verified": true,
+      "download_json_equal": true,
+      "output": "pass-2-prediction-de.json"
+    },
+    {
+      "pass": 2,
+      "claim_language": "fr",
+      "claim": "Le contre-projet direct propose d’inscrire dans la Constitution que la monnaie suisse est le franc.",
+      "label": 0,
+      "input_tokens": 8149,
+      "inference_time_ms": 2253.4815869294107,
+      "exact_source_quotes_pages_verified": true,
+      "download_json_equal": true,
+      "output": "pass-2-prediction-fr.json"
+    },
+    {
+      "pass": 2,
+      "claim_language": "it",
+      "claim": "Il controprogetto diretto stabilisce che la valuta svizzera è l’euro.",
+      "label": 2,
+      "input_tokens": 8161,
+      "inference_time_ms": 2255.6218369863927,
+      "exact_source_quotes_pages_verified": true,
+      "download_json_equal": true,
+      "output": "pass-2-prediction-it.json"
+    }
+  ],
+  "recorded_repeat": true,
+  "ui_locale": "en-US",
+  "pdf_pages": 72,
+  "document_passages": 157,
+  "video": "demo.webm",
+  "second_pass_labels_reproduced": true,
+  "same_native_backend_kept_running_between_passes": true,
+  "browser_errors": [],
+  "browser_version": "151.0.7922.34",
+  "actual_native_inference": true,
+  "files": [
+    {
+      "path": "demo.webm",
+      "sha256": "70fcc5ddb6ac7ecee11096428dc98031bba7a05f0a59d588e3173441373ea6dc"
+    },
+    {
+      "path": "pass-1-01-start.png",
+      "sha256": "1b32ed6d5716e7ad91bca07194f714ccb8df7561d9cc461cfbddfc6b5d2949ce"
+    },
+    {
+      "path": "pass-1-02-pdf-and-claim.png",
+      "sha256": "e43553247a6b2d7fb9be56e904988d3b88445b55845eb4de2939b410d1a5a358"
+    },
+    {
+      "path": "pass-1-03-result-de.png",
+      "sha256": "b9ed1ccf3e35f43e7c38036e0c2cc7b1c44664fd378afe35a6db4f0fb0183a80"
+    },
+    {
+      "path": "pass-1-03-result-fr.png",
+      "sha256": "4f4e82d04544139efa989af05fb076b6c2f608e8d54c37eecfaf5ef892bece40"
+    },
+    {
+      "path": "pass-1-03-result-it.png",
+      "sha256": "6dbc1cb23af40de894139c7e516633511a82d600bbf9f64fffe762c1fdd9bfc8"
+    },
+    {
+      "path": "pass-1-prediction-de.json",
+      "sha256": "d8492e023d49f1496cd7854ffea49a46f7147eb8b71545b3e45f5e60f3ee013b"
+    },
+    {
+      "path": "pass-1-prediction-fr.json",
+      "sha256": "b2af23a35452bc661a43a8d52c23035f7c3e81ff29ccdb3998ff99837f803cdb"
+    },
+    {
+      "path": "pass-1-prediction-it.json",
+      "sha256": "f2d2f50233c613541b551fc62de758a597607edb1ca48ef67d43ae000b930fc1"
+    },
+    {
+      "path": "pass-2-01-start.png",
+      "sha256": "1b32ed6d5716e7ad91bca07194f714ccb8df7561d9cc461cfbddfc6b5d2949ce"
+    },
+    {
+      "path": "pass-2-02-pdf-and-claim.png",
+      "sha256": "e43553247a6b2d7fb9be56e904988d3b88445b55845eb4de2939b410d1a5a358"
+    },
+    {
+      "path": "pass-2-03-result-de.png",
+      "sha256": "215ae9a1c885703bda628ae02905034ba1ca3964e8c186d44eba04095394c4a7"
+    },
+    {
+      "path": "pass-2-03-result-fr.png",
+      "sha256": "26d62c94deba30b3e631851522907c87c06a08044a204eb622e3fe69f5a2aadb"
+    },
+    {
+      "path": "pass-2-03-result-it.png",
+      "sha256": "a670b5cb5ca7a77461e61be676dc9a2e9253bd66205e90a5b64d06c86a416bc0"
+    },
+    {
+      "path": "pass-2-prediction-de.json",
+      "sha256": "9e733d2d11e3b8f9b551a8612916e2026a2772c5ef7a9a3a4189188967258014"
+    },
+    {
+      "path": "pass-2-prediction-fr.json",
+      "sha256": "b36316b1a21ae6e5c67564c421ba850d6513db18553600a433477d0260bddd8c"
+    },
+    {
+      "path": "pass-2-prediction-it.json",
+      "sha256": "d31b858e2e2f471138fb890bb3667ff740e6b6a1074cdc7eb5df13384b76c5a0"
+    }
+  ]
+}

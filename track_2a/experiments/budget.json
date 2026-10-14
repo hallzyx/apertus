@@ -1,11 +1,11 @@
 {
   "currency": "USD",
   "initial_budget": 10.0,
-  "estimated_spend": 5.202731392420009,
-  "actual_spend": 5.202731392420009,
+  "estimated_spend": 5.431582467820008,
+  "actual_spend": 5.431582467820008,
   "actual_spend_note": "Timestamped account credit reduction; active task leases and conservative remaining bounds are reported separately. Provider billing can settle asynchronously.",
   "active_instance_ids": [],
-  "remaining_estimated_budget": 4.797268607579991,
+  "remaining_estimated_budget": 4.568417532179992,
   "recovery_reserve": 2.0,
   "instances": [
     {
@@ -565,11 +565,28 @@
       "status": "destroyed_verified",
       "phase": "app-demo",
       "destroyed_verified_at": "2026-10-14T21:20:44.475348+00:00"
+    },
+    {
+      "instance_id": 55995795,
+      "offer_id": 51092045,
+      "gpu": "RTX A6000",
+      "disk_gb": 60,
+      "hourly_total_usd": 0.42777777777777776,
+      "estimated_total_usd_bound": 0.951388888888889,
+      "purpose": "English UI actual browser demonstration: official PDF, first verified flow plus recorded repeat on the same backend; six native frozen-head forward passes and JSON downloads. No training, benchmark evaluation or holdout access.",
+      "git_commit": "b5bdd18a2d8ace713381254091f65c70bf3d4fc0",
+      "image": "pytorch/pytorch@sha256:dab81780fd94483b67b4b5679cc0024939b08e48540d39476d284cb29002ed69",
+      "account_credit_before_creation": 4.795729545979992,
+      "created_at": "2026-10-14T21:40:42.660934+00:00",
+      "automatic_cleanup_deadline_seconds": 4500,
+      "status": "destroyed_verified",
+      "phase": "app-demo",
+      "destroyed_verified_at": "2026-10-14T22:02:08.452737+00:00"
     }
   ],
-  "account_credit_observed": 4.797268607579991,
+  "account_credit_observed": 4.568417532179992,
   "account_balance_observed": 0,
-  "account_checked_at": "2026-10-14T21:23:24.340184+00:00",
+  "account_checked_at": "2026-10-14T22:02:08.913858+00:00",
   "outstanding_task_lease_reservations_usd": 0,
   "all_task_instances_destroyed_verified": true,
   "phase2": {
@@ -584,7 +601,7 @@
     "completed_at": "2026-10-08T02:14:17.173797+00:00"
   },
   "final_provider_listing_pages_checked": 1,
-  "final_provider_cleanup_checked_at": "2026-10-14T21:23:24.340184+00:00",
+  "final_provider_cleanup_checked_at": "2026-10-14T22:02:08.913858+00:00",
   "provider_ownership_scope": "Only ledger task-owned instances destroyed; unrelated user resources preserved",
   "demo": {
     "status": "completed_recorded_verified_all_owned_leases_destroyed",
@@ -600,5 +617,16 @@
     "same_backend_between_successful_passes": true,
     "video_mp4_sha256": "78c8a7f05b43932773f03f3aeb6020ecb8d61df84a7752e4f61ddd14ab3b440f",
     "video_duration_seconds": 47.56
+  },
+  "demo_english": {
+    "status": "completed_recorded_verified_all_owned_leases_destroyed",
+    "estimated_reserved_spend_usd": 0,
+    "credit_at_start": 4.795729545979992,
+    "completed_at": "2026-10-14T22:02:08.913858+00:00",
+    "observed_spend_usd": 0.22731201379999977,
+    "actual_nli_forward_count": 6,
+    "same_backend_between_successful_passes": true,
+    "video_mp4_sha256": "ea50815b23fd606fa9a897fab29470d68373a50b4bc2cc1e04cd1d1f9636e3ae",
+    "video_duration_seconds": 46.08
   }
 }
