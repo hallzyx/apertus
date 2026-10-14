@@ -11,7 +11,8 @@ import urllib.request
 from http.server import ThreadingHTTPServer
 
 RECORD='--record' in sys.argv
-ROOT=Path('track_2a/experiments/apertus-live-demo-recorded-v1' if RECORD else 'track_2a/experiments/apertus-live-demo-v1')
+UI_LOCALE=os.environ.get('DEMO_UI_LOCALE','es-PE')
+ROOT=Path('track_2a/experiments/apertus-live-demo-en-v1') if UI_LOCALE.startswith('en') else Path('track_2a/experiments/apertus-live-demo-recorded-v1' if RECORD else 'track_2a/experiments/apertus-live-demo-v1')
 PDF_URL='https://www.bk.admin.ch/dam/fr/sd-web/MDRXrtFaVPNG/2026-03-08_explications_du_conseil_federal.pdf'
 PDF_SHA='2ec02c4d1e2cffae67f89fc5b07af117fa455f5a925cdcd3db0938e1855d053b'
 HEAD_SHA='2f6a3ede1bab5e69e86938c6af8ce46a468158a40d176fe3883a593cc8dafcc1'
@@ -56,7 +57,7 @@ def main():
     frontend=ThreadingHTTPServer(('127.0.0.1',0),Handler)
     frontend_thread=threading.Thread(target=frontend.serve_forever,daemon=True);frontend_thread.start()
     from playwright.sync_api import sync_playwright
-    record={'status':'running','git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'pdf_url':PDF_URL,'pdf_sha256':PDF_SHA,'head_sha256':HEAD_SHA,'model':engine.metadata,'context':'hybrid-8k','training_performed':False,'holdout_accessed':False,'scope':'Actual current app browser PDF upload, native Apertus inference, source quotes and JSON download. Unannotated demo claims, not accuracy evaluation.','predictions':[],'recorded_repeat':RECORD}
+    record={'status':'running','git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'pdf_url':PDF_URL,'pdf_sha256':PDF_SHA,'head_sha256':HEAD_SHA,'model':engine.metadata,'context':'hybrid-8k','training_performed':False,'holdout_accessed':False,'scope':'Actual current app browser PDF upload, native Apertus inference, source quotes and JSON download. Unannotated demo claims, not accuracy evaluation.','predictions':[],'recorded_repeat':RECORD,'ui_locale':UI_LOCALE}
     (ROOT/'verification.json').write_text(json.dumps(record,indent=2)+'\n')
     try:
         with sync_playwright() as playwright:
@@ -66,9 +67,10 @@ def main():
             for pass_number in ((1,2) if RECORD else (1,)):
                 capture=RECORD and pass_number==2
                 prefix=f'pass-{pass_number}'
-                page=browser.new_page(locale='es-PE',viewport={'width':1440,'height':1100},**({'record_video_dir':str(ROOT/'video'),'record_video_size':{'width':1440,'height':1100}} if capture else {}))
+                page=browser.new_page(locale=UI_LOCALE,viewport={'width':1440,'height':1100},**({'record_video_dir':str(ROOT/'video'),'record_video_size':{'width':1440,'height':1100}} if capture else {}))
                 page.on('pageerror',lambda error:errors.append(str(error)))
                 page.goto(f'http://127.0.0.1:{frontend.server_port}',wait_until='networkidle')
+                if UI_LOCALE.startswith('en'):assert page.locator('html').get_attribute('lang')=='en'
                 if capture:page.wait_for_timeout(2500)
                 page.screenshot(path=str(ROOT/(prefix+'-01-start.png')),full_page=True)
                 page.locator('#pdf').scroll_into_view_if_needed()
