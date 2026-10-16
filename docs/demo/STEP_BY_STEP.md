@@ -4,7 +4,7 @@ This walkthrough uses the **English interface** and a real Apertus v1.5-8B
 backend with our frozen decision head and hybrid 8k context. The screenshots
 come from the recorded session; the predictions are not mocked.
 
-[Watch the English video](apertus-demo.mp4?raw=true) · [PC setup](../PROBAR_EN_PC.md)
+[Watch the English video](apertus-demo.mp4?raw=true) · [PC setup](../TRY_ON_YOUR_PC.md)
 
 ## 1. Open the app
 

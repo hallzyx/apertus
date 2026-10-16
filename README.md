@@ -5,18 +5,20 @@ NLI. The app extracts PDF passages with source pages and hashes, supplies the
 validation-selected **hybrid-8k** context, and classifies using **frozen Apertus v1.5**
 plus a training-only calibrated decision head. Hybrid retrieval uses supporting E5/BM25.
 
-## Probar la app en tu PC
+**Demo video:** https://youtu.be/fZ6E64EZnrs
 
-Con Docker Desktop instalado, copia `.env.example` a `.env` y ejecuta:
+## Try the app on your PC
+
+With Docker Desktop installed, copy `.env.example` to `.env` and run:
 
 ```bash
 docker compose up --build -d
 ```
 
-Abre http://localhost:8000. La extracción de PDF funciona sin GPU; la clasificación
-requiere el backend nativo configurado. Sigue la [guía para PC](docs/PROBAR_EN_PC.md).
+Open http://localhost:8000. PDF extraction works without a GPU; classification
+requires the configured native backend. Follow the [PC guide](docs/TRY_ON_YOUR_PC.md).
 
-## Arranque del entorno de desarrollo
+## Development environment setup
 
 ```bash
 export LLM_NAME=swiss-ai/Apertus-v1.5-8B
@@ -53,6 +55,6 @@ and [adopted contract](track_2a/docs/challenge_contract.md). Full source booklet
 large assets are downloaded/generated separately; `track_2a/data/` contains only
 small tracked examples. No Devpost integration is needed for this track.
 
-## Demo real de la app
+## Recorded demo of the app
 
-[Video en inglés](docs/demo/README.md) y [recorrido paso a paso con capturas](docs/demo/STEP_BY_STEP.md): PDF oficial, tres afirmaciones DE/FR/IT, inferencia real de Apertus con la cabeza congelada, pasajes y descarga JSON. Se comprobó una primera pasada y se grabó la segunda con el mismo backend activo. Es una prueba funcional, no un nuevo benchmark.
+[English video](docs/demo/README.md) and [step-by-step walkthrough with screenshots](docs/demo/STEP_BY_STEP.md): official PDF, three DE/FR/IT claims, real Apertus inference with the frozen head, passages and JSON download. A first pass was verified and the second was recorded with the same backend still running. It is a functional test, not a new benchmark.

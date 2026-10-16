@@ -1,6 +1,6 @@
 # Apertus Evidence Lab — English demo
 
-[Watch or download the English video](apertus-demo.mp4?raw=true) · [Step-by-step walkthrough with screenshots](STEP_BY_STEP.md) · [PC setup](../PROBAR_EN_PC.md)
+[Watch or download the English video](apertus-demo.mp4?raw=true) · [Step-by-step walkthrough with screenshots](STEP_BY_STEP.md) · [PC setup](../TRY_ON_YOUR_PC.md)
 
 Real Chromium recording: official PDF → claim → Apertus v1.5-8B with the frozen decision head and hybrid 8k context → label, probabilities, source passages/pages, tokens and measured time → JSON download. The interface is English; claims and quoted source text retain their original languages.
 
