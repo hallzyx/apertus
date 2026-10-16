@@ -1,714 +1,714 @@
 {
-  "Ir al laboratorio": {
-    "en": "Skip to the lab",
+  "Skip to the lab": {
+    "es": "Ir al laboratorio",
     "de": "Zum Labor springen",
     "fr": "Aller au laboratoire",
     "it": "Vai al laboratorio"
   },
   "Swiss multilingual NLI": {
-    "en": "Swiss multilingual NLI",
+    "es": "Swiss multilingual NLI",
     "de": "Mehrsprachige Schweizer NLI",
     "fr": "NLI multilingue suisse",
     "it": "NLI multilingue svizzera"
   },
-  "Lectura crítica · Evidencia documental": {
-    "en": "Critical reading · Documentary evidence",
+  "Critical reading · Documentary evidence": {
+    "es": "Lectura crítica · Evidencia documental",
     "de": "Kritisches Lesen · Dokumentenbelege",
     "fr": "Lecture critique · Éléments documentaires",
     "it": "Lettura critica · Riscontri documentali"
   },
-  "Del documento": {
-    "en": "From the document",
+  "From the document": {
+    "es": "Del documento",
     "de": "Vom Dokument",
     "fr": "Du document",
     "it": "Dal documento"
   },
-  "a la": {
-    "en": "to the",
+  "to the": {
+    "es": "a la",
     "de": "zu den",
     "fr": "aux",
     "it": "ai"
   },
-  "evidencia.": {
-    "en": "evidence.",
+  "evidence.": {
+    "es": "evidencia.",
     "de": "Belegen.",
     "fr": "éléments probants.",
     "it": "riscontri."
   },
-  "Del documento a la evidencia.": {
-    "en": "From the document to the evidence.",
+  "From the document to the evidence.": {
+    "es": "Del documento a la evidencia.",
     "de": "Vom Dokument zu den Belegen.",
     "fr": "Du document aux éléments probants.",
     "it": "Dal documento ai riscontri."
   },
-  "Contrasta una afirmación con un folleto de votación suizo. Explora los pasajes de origen y revisa lo que el documento permite concluir.": {
-    "en": "Check a claim against a Swiss voting booklet. Explore the source passages and review what the document supports.",
+  "Check a claim against a Swiss voting booklet. Explore the source passages and review what the document supports.": {
+    "es": "Contrasta una afirmación con un folleto de votación suizo. Explora los pasajes de origen y revisa lo que el documento permite concluir.",
     "de": "Prüfen Sie eine Aussage anhand eines Schweizer Abstimmungsbüchleins. Lesen Sie die Originalpassagen und prüfen Sie, welche Schlüsse das Dokument zulässt.",
     "fr": "Confrontez une affirmation à une brochure de votation suisse. Explorez les passages sources et examinez les conclusions que le document permet de tirer.",
     "it": "Confronta un'affermazione con un opuscolo di votazione svizzero. Esplora i passaggi originali e valuta quali conclusioni consente il documento."
   },
-  "Idiomas admitidos": {
-    "en": "Supported languages",
+  "Supported languages": {
+    "es": "Idiomas admitidos",
     "de": "Unterstützte Sprachen",
     "fr": "Langues prises en charge",
     "it": "Lingue supportate"
   },
-  "Tres idiomas. Una fuente.": {
-    "en": "Three languages. One source.",
+  "Three languages. One source.": {
+    "es": "Tres idiomas. Una fuente.",
     "de": "Drei Sprachen. Eine Quelle.",
     "fr": "Trois langues. Une source.",
     "it": "Tre lingue. Una fonte."
   },
-  "Pasos del análisis": {
-    "en": "Analysis steps",
+  "Analysis steps": {
+    "es": "Pasos del análisis",
     "de": "Analyseschritte",
     "fr": "Étapes de l'analyse",
     "it": "Fasi dell'analisi"
   },
-  "Carga el documento": {
-    "en": "Upload the document",
+  "Upload the document": {
+    "es": "Carga el documento",
     "de": "Dokument hochladen",
     "fr": "Importer le document",
     "it": "Carica il documento"
   },
-  "Formula una afirmación": {
-    "en": "Write a claim",
+  "Write a claim": {
+    "es": "Formula una afirmación",
     "de": "Aussage formulieren",
     "fr": "Formuler une affirmation",
     "it": "Formula un'affermazione"
   },
-  "Revisa la evidencia": {
-    "en": "Review the evidence",
+  "Review the evidence": {
+    "es": "Revisa la evidencia",
     "de": "Belege prüfen",
     "fr": "Examiner les éléments probants",
     "it": "Esamina i riscontri"
   },
-  "Tu consulta": {
-    "en": "Your query",
+  "Your query": {
+    "es": "Tu consulta",
     "de": "Ihre Anfrage",
     "fr": "Votre requête",
     "it": "La tua richiesta"
   },
-  "Documento + afirmación": {
-    "en": "Document + claim",
+  "Document + claim": {
+    "es": "Documento + afirmación",
     "de": "Dokument + Aussage",
     "fr": "Document + affirmation",
     "it": "Documento + affermazione"
   },
-  "Folleto de votación": {
-    "en": "Voting booklet",
+  "Voting booklet": {
+    "es": "Folleto de votación",
     "de": "Abstimmungsbüchlein",
     "fr": "Brochure de votation",
     "it": "Opuscolo di votazione"
   },
-  "Empieza con el documento original": {
-    "en": "Start with the original document",
+  "Start with the original document": {
+    "es": "Empieza con el documento original",
     "de": "Mit dem Originaldokument beginnen",
     "fr": "Commencez par le document original",
     "it": "Inizia dal documento originale"
   },
-  "PDF con texto seleccionable · hasta 50 MB.": {
-    "en": "PDF with selectable text · up to 50 MB.",
+  "PDF with selectable text · up to 50 MB.": {
+    "es": "PDF con texto seleccionable · hasta 50 MB.",
     "de": "PDF mit auswählbarem Text · bis zu 50 MB.",
     "fr": "PDF avec texte sélectionnable · jusqu'à 50 Mo.",
     "it": "PDF con testo selezionabile · fino a 50 MB."
   },
-  "La extracción conserva las páginas de origen.": {
-    "en": "Extraction preserves the original page references.",
+  "Extraction preserves the original page references.": {
+    "es": "La extracción conserva las páginas de origen.",
     "de": "Die Extraktion erhält die ursprünglichen Seitenangaben.",
     "fr": "L'extraction conserve les références aux pages d'origine.",
     "it": "L'estrazione conserva i riferimenti alle pagine originali."
   },
-  "Seleccionar PDF": {
-    "en": "Select PDF",
+  "Select PDF": {
+    "es": "Seleccionar PDF",
     "de": "PDF auswählen",
     "fr": "Choisir un PDF",
     "it": "Seleziona PDF"
   },
-  "Ningún documento seleccionado.": {
-    "en": "No document selected.",
+  "No document selected.": {
+    "es": "Ningún documento seleccionado.",
     "de": "Kein Dokument ausgewählt.",
     "fr": "Aucun document sélectionné.",
     "it": "Nessun documento selezionato."
   },
-  "Afirmación a contrastar": {
-    "en": "Claim to check",
+  "Claim to check": {
+    "es": "Afirmación a contrastar",
     "de": "Zu prüfende Aussage",
     "fr": "Affirmation à examiner",
     "it": "Affermazione da verificare"
   },
-  "Escribe una afirmación concreta en alemán, francés o italiano…": {
-    "en": "Write a specific claim in German, French or Italian…",
+  "Write a specific claim in German, French or Italian…": {
+    "es": "Escribe una afirmación concreta en alemán, francés o italiano…",
     "de": "Formulieren Sie eine konkrete Aussage auf Deutsch, Französisch oder Italienisch…",
     "fr": "Formulez une affirmation précise en allemand, en français ou en italien…",
     "it": "Scrivi un'affermazione precisa in tedesco, francese o italiano…"
   },
-  "Puede estar en un idioma distinto al del documento.": {
-    "en": "It can be in a different language from the document.",
+  "It can be in a different language from the document.": {
+    "es": "Puede estar en un idioma distinto al del documento.",
     "de": "Die Sprache kann von der des Dokuments abweichen.",
     "fr": "Elle peut être dans une autre langue que le document.",
     "it": "Può essere in una lingua diversa da quella del documento."
   },
-  "Inspeccionar pasajes": {
-    "en": "Inspect passages",
+  "Inspect passages": {
+    "es": "Inspeccionar pasajes",
     "de": "Passagen ansehen",
     "fr": "Examiner les passages",
     "it": "Esamina i passaggi"
   },
-  "Evaluar afirmación": {
-    "en": "Evaluate claim",
+  "Evaluate claim": {
+    "es": "Evaluar afirmación",
     "de": "Aussage bewerten",
     "fr": "Évaluer l'affirmation",
     "it": "Valuta l'affermazione"
   },
-  "Comprobando configuración del backend…": {
-    "en": "Checking backend configuration…",
+  "Checking backend configuration…": {
+    "es": "Comprobando configuración del backend…",
     "de": "Backend-Konfiguration wird geprüft…",
     "fr": "Vérification de la configuration du backend…",
     "it": "Verifica della configurazione del backend…"
   },
-  "Entrada avanzada / ejemplo sintético": {
-    "en": "Advanced input / synthetic example",
+  "Advanced input / synthetic example": {
+    "es": "Entrada avanzada / ejemplo sintético",
     "de": "Erweiterte Eingabe / synthetisches Beispiel",
     "fr": "Saisie avancée / exemple synthétique",
     "it": "Inserimento avanzato / esempio sintetico"
   },
-  "Puedes pegar un documento canónico en JSON. El ejemplo es inventado y solo sirve para explorar la interfaz.": {
-    "en": "You can paste a document in canonical JSON format. The example is fictional and is only for exploring the interface.",
+  "You can paste a document in canonical JSON format. The example is fictional and is only for exploring the interface.": {
+    "es": "Puedes pegar un documento canónico en JSON. El ejemplo es inventado y solo sirve para explorar la interfaz.",
     "de": "Sie können ein Dokument im kanonischen JSON-Format einfügen. Das Beispiel ist erfunden und dient nur zum Erkunden der Oberfläche.",
     "fr": "Vous pouvez coller un document au format JSON canonique. L'exemple est fictif et sert uniquement à explorer l'interface.",
     "it": "Puoi incollare un documento nel formato JSON canonico. L'esempio è inventato e serve solo a esplorare l'interfaccia."
   },
-  "Cargar ejemplo sintético": {
-    "en": "Load synthetic example",
+  "Load synthetic example": {
+    "es": "Cargar ejemplo sintético",
     "de": "Synthetisches Beispiel laden",
     "fr": "Charger l'exemple synthétique",
     "it": "Carica esempio sintetico"
   },
-  "JSON con document_id y passages": {
-    "en": "JSON with document_id and passages",
+  "JSON with document_id and passages": {
+    "es": "JSON con document_id y passages",
     "de": "JSON mit document_id und passages",
     "fr": "JSON avec document_id et passages",
     "it": "JSON con document_id e passages"
   },
-  "Editar esta entrada sustituye al PDF seleccionado.": {
-    "en": "Editing this input replaces the selected PDF.",
+  "Editing this input replaces the selected PDF.": {
+    "es": "Editar esta entrada sustituye al PDF seleccionado.",
     "de": "Durch Bearbeiten dieser Eingabe wird das ausgewählte PDF ersetzt.",
     "fr": "Modifier cette saisie remplace le PDF sélectionné.",
     "it": "Modificare questo campo sostituisce il PDF selezionato."
   },
-  "Evidencia documental": {
-    "en": "Documentary evidence",
+  "Documentary evidence": {
+    "es": "Evidencia documental",
     "de": "Dokumentenbelege",
     "fr": "Éléments documentaires",
     "it": "Riscontri documentali"
   },
-  "POR EXPLORAR": {
-    "en": "READY TO EXPLORE",
+  "READY TO EXPLORE": {
+    "es": "POR EXPLORAR",
     "de": "ZU ERKUNDEN",
     "fr": "À EXPLORER",
     "it": "DA ESPLORARE"
   },
-  "La fuente es el punto": {
-    "en": "Start with",
+  "Start with": {
+    "es": "La fuente es el punto",
     "de": "Die Quelle ist",
     "fr": "Tout commence",
     "it": "Il punto di partenza"
   },
-  "de partida.": {
-    "en": "the source.",
+  "the source.": {
+    "es": "de partida.",
     "de": "der Ausgangspunkt.",
     "fr": "par la source.",
     "it": "è la fonte."
   },
-  "La fuente es el punto de partida.": {
-    "en": "Start with the source.",
+  "Start with the source.": {
+    "es": "La fuente es el punto de partida.",
     "de": "Die Quelle ist der Ausgangspunkt.",
     "fr": "Tout commence par la source.",
     "it": "Il punto di partenza è la fonte."
   },
-  "Carga un folleto y escribe una afirmación para ver los pasajes relevantes, con sus páginas de origen.": {
-    "en": "Upload a booklet and write a claim to see relevant passages with their original page references.",
+  "Upload a booklet and write a claim to see relevant passages with their original page references.": {
+    "es": "Carga un folleto y escribe una afirmación para ver los pasajes relevantes, con sus páginas de origen.",
     "de": "Laden Sie ein Abstimmungsbüchlein hoch und formulieren Sie eine Aussage, um relevante Passagen mit ihren Seitenangaben zu sehen.",
     "fr": "Importez une brochure et formulez une affirmation pour consulter les passages pertinents avec leurs pages d'origine.",
     "it": "Carica un opuscolo e scrivi un'affermazione per visualizzare i passaggi pertinenti con le relative pagine originali."
   },
-  "Cada conclusión requiere lectura crítica": {
-    "en": "Every conclusion requires critical reading",
+  "Every conclusion requires critical reading": {
+    "es": "Cada conclusión requiere lectura crítica",
     "de": "Jeder Schluss erfordert kritisches Lesen",
     "fr": "Toute conclusion nécessite une lecture critique",
     "it": "Ogni conclusione richiede una lettura critica"
   },
-  "Descargar resultado JSON": {
-    "en": "Download JSON result",
+  "Download JSON result": {
+    "es": "Descargar resultado JSON",
     "de": "JSON-Ergebnis herunterladen",
     "fr": "Télécharger le résultat JSON",
     "it": "Scarica risultato JSON"
   },
-  "Ver respuesta completa · JSON": {
-    "en": "View full response · JSON",
+  "View full response · JSON": {
+    "es": "Ver respuesta completa · JSON",
     "de": "Vollständige Antwort ansehen · JSON",
     "fr": "Voir la réponse complète · JSON",
     "it": "Visualizza risposta completa · JSON"
   },
-  "Cómo interpretar los resultados": {
-    "en": "How to interpret the results",
+  "How to interpret the results": {
+    "es": "Cómo interpretar los resultados",
     "de": "Ergebnisse richtig einordnen",
     "fr": "Comment interpréter les résultats",
     "it": "Come interpretare i risultati"
   },
-  "El documento define el alcance.": {
-    "en": "The document defines the scope.",
+  "The document defines the scope.": {
+    "es": "El documento define el alcance.",
     "de": "Das Dokument bestimmt den Geltungsbereich.",
     "fr": "Le document définit la portée.",
     "it": "Il documento definisce l'ambito."
   },
-  "La clasificación describe la relación entre la afirmación y el folleto. No determina la verdad general ni ofrece consejo político.": {
-    "en": "The classification describes the relationship between the claim and the booklet. It does not establish general truth or offer political advice.",
+  "The classification describes the relationship between the claim and the booklet. It does not establish general truth or offer political advice.": {
+    "es": "La clasificación describe la relación entre la afirmación y el folleto. No determina la verdad general ni ofrece consejo político.",
     "de": "Die Klassifikation beschreibt die Beziehung zwischen der Aussage und dem Abstimmungsbüchlein. Sie stellt keine allgemeingültige Wahrheit fest und gibt keine politischen Empfehlungen.",
     "fr": "La classification décrit la relation entre l'affirmation et la brochure. Elle n'établit pas une vérité générale et ne fournit pas de conseil politique.",
     "it": "La classificazione descrive la relazione tra l'affermazione e l'opuscolo. Non stabilisce una verità generale e non fornisce consigli politici."
   },
-  "Los pasajes requieren tu revisión.": {
-    "en": "The passages need your review.",
+  "The passages need your review.": {
+    "es": "Los pasajes requieren tu revisión.",
     "de": "Die Passagen erfordern Ihre Prüfung.",
     "fr": "Les passages nécessitent votre examen.",
     "it": "I passaggi richiedono il tuo esame."
   },
-  "Inspeccionar pasajes permite explorar la fuente sin un backend de inferencia. Evaluar requiere Apertus; los pasajes recuperados no son una conclusión.": {
-    "en": "Inspecting passages lets you explore the source without an inference backend. Evaluation requires Apertus; retrieved passages are not a conclusion.",
+  "Inspecting passages lets you explore the source without an inference backend. Evaluation requires Apertus; retrieved passages are not a conclusion.": {
+    "es": "Inspeccionar pasajes permite explorar la fuente sin un backend de inferencia. Evaluar requiere Apertus; los pasajes recuperados no son una conclusión.",
     "de": "Sie können die Passagen ohne Inferenz-Backend ansehen. Die Bewertung erfordert Apertus; die gefundenen Passagen stellen noch keine Schlussfolgerung dar.",
     "fr": "L'examen des passages permet d'explorer la source sans backend d'inférence. L'évaluation nécessite Apertus ; les passages retrouvés ne constituent pas une conclusion.",
     "it": "L'esame dei passaggi consente di esplorare la fonte senza un backend di inferenza. La valutazione richiede Apertus; i passaggi recuperati non costituiscono una conclusione."
   },
-  "Resultados del laboratorio y alcance de las métricas": {
-    "en": "Lab results and scope of the metrics",
+  "Lab results and scope of the metrics": {
+    "es": "Resultados del laboratorio y alcance de las métricas",
     "de": "Laborergebnisse und Geltungsbereich der Metriken",
     "fr": "Résultats du laboratoire et portée des métriques",
     "it": "Risultati del laboratorio e ambito delle metriche"
   },
-  "Cargando resultados registrados…": {
-    "en": "Loading recorded results…",
+  "Loading recorded results…": {
+    "es": "Cargando resultados registrados…",
     "de": "Gespeicherte Ergebnisse werden geladen…",
     "fr": "Chargement des résultats enregistrés…",
     "it": "Caricamento dei risultati registrati…"
   },
-  "Herramienta de investigación · No es un servicio oficial de votación": {
-    "en": "Research tool · Not an official voting service",
+  "Research tool · Not an official voting service": {
+    "es": "Herramienta de investigación · No es un servicio oficial de votación",
     "de": "Forschungswerkzeug · Kein offizieller Abstimmungsdienst",
     "fr": "Outil de recherche · Pas un service officiel de votation",
     "it": "Strumento di ricerca · Non è un servizio ufficiale di votazione"
   },
-  "No disponible": {
-    "en": "Not available",
+  "Not available": {
+    "es": "No disponible",
     "de": "Nicht verfügbar",
     "fr": "Indisponible",
     "it": "Non disponibile"
   },
-  "EVALUACIÓN": {
-    "en": "EVALUATION",
+  "EVALUATION": {
+    "es": "EVALUACIÓN",
     "de": "BEWERTUNG",
     "fr": "ÉVALUATION",
     "it": "VALUTAZIONE"
   },
-  "PASAJES": {
-    "en": "PASSAGES",
+  "PASSAGES": {
+    "es": "PASAJES",
     "de": "PASSAGEN",
     "fr": "PASSAGES",
     "it": "PASSAGGI"
   },
-  "EJEMPLO SINTÉTICO · NO ES UN FOLLETO OFICIAL": {
-    "en": "SYNTHETIC EXAMPLE · NOT AN OFFICIAL BOOKLET",
+  "SYNTHETIC EXAMPLE · NOT AN OFFICIAL BOOKLET": {
+    "es": "EJEMPLO SINTÉTICO · NO ES UN FOLLETO OFICIAL",
     "de": "SYNTHETISCHES BEISPIEL · KEIN OFFIZIELLES ABSTIMMUNGSBÜCHLEIN",
     "fr": "EXEMPLE SYNTHÉTIQUE · PAS UNE BROCHURE OFFICIELLE",
     "it": "ESEMPIO SINTETICO · NON È UN OPUSCOLO UFFICIALE"
   },
-  "FUENTE · ": {
-    "en": "SOURCE · ",
+  "SOURCE · ": {
+    "es": "FUENTE · ",
     "de": "QUELLE · ",
     "fr": "SOURCE · ",
     "it": "FONTE · "
   },
-  "FUENTE · {source}": {
-    "en": "SOURCE · {source}",
+  "SOURCE · {source}": {
+    "es": "FUENTE · {source}",
     "de": "QUELLE · {source}",
     "fr": "SOURCE · {source}",
     "it": "FONTE · {source}"
   },
-  "Apoyada por el documento": {
-    "en": "Supported by the document",
+  "Supported by the document": {
+    "es": "Apoyada por el documento",
     "de": "Vom Dokument gestützt",
     "fr": "Étayée par le document",
     "it": "Supportata dal documento"
   },
-  "Información insuficiente": {
-    "en": "Insufficient information",
+  "Insufficient information": {
+    "es": "Información insuficiente",
     "de": "Unzureichende Informationen",
     "fr": "Informations insuffisantes",
     "it": "Informazioni insufficienti"
   },
-  "Contradicha por el documento": {
-    "en": "Contradicted by the document",
+  "Contradicted by the document": {
+    "es": "Contradicha por el documento",
     "de": "Vom Dokument widerlegt",
     "fr": "Contredite par le document",
     "it": "Contraddetta dal documento"
   },
-  " · Clasificación del modelo": {
-    "en": " · Model classification",
+  " · Model classification": {
+    "es": " · Clasificación del modelo",
     "de": " · Modellklassifikation",
     "fr": " · Classification du modèle",
     "it": " · Classificazione del modello"
   },
-  "Clasificación del modelo": {
-    "en": "Model classification",
+  "Model classification": {
+    "es": "Clasificación del modelo",
     "de": "Modellklassifikation",
     "fr": "Classification du modèle",
     "it": "Classificazione del modello"
   },
-  "Probabilidad de clase¹": {
-    "en": "Class probability¹",
+  "Class probability¹": {
+    "es": "Probabilidad de clase¹",
     "de": "Klassenwahrscheinlichkeit¹",
     "fr": "Probabilité de classe¹",
     "it": "Probabilità della classe¹"
   },
-  "Tokens de entrada": {
-    "en": "Input tokens",
+  "Input tokens": {
+    "es": "Tokens de entrada",
     "de": "Eingabetokens",
     "fr": "Tokens d'entrée",
     "it": "Token in ingresso"
   },
-  "Tiempo de inferencia": {
-    "en": "Inference time",
+  "Inference time": {
+    "es": "Tiempo de inferencia",
     "de": "Inferenzzeit",
     "fr": "Temps d'inférence",
     "it": "Tempo di inferenza"
   },
-  "¹ Probabilidad producida por el modelo, sin garantía de calibración. No mide la veracidad de una afirmación.": {
-    "en": "¹ Probability produced by the model, with no guarantee of calibration. It does not measure the truth of a claim.",
+  "¹ Probability produced by the model, with no guarantee of calibration. It does not measure the truth of a claim.": {
+    "es": "¹ Probabilidad producida por el modelo, sin garantía de calibración. No mide la veracidad de una afirmación.",
     "de": "¹ Vom Modell berechnete Wahrscheinlichkeit ohne Gewähr für die Kalibrierung. Sie misst nicht den Wahrheitsgehalt einer Aussage.",
     "fr": "¹ Probabilité produite par le modèle, sans garantie de calibration. Elle ne mesure pas la véracité d'une affirmation.",
     "it": "¹ Probabilità prodotta dal modello, senza garanzia di calibrazione. Non misura la veridicità di un'affermazione."
   },
-  "Pasajes para tu revisión": {
-    "en": "Passages for your review",
+  "Passages for your review": {
+    "es": "Pasajes para tu revisión",
     "de": "Passagen zur Prüfung",
     "fr": "Passages à examiner",
     "it": "Passaggi da esaminare"
   },
-  "La recuperación selecciona texto relacionado con la consulta. No clasifica la afirmación como apoyada o contradicha.": {
-    "en": "Retrieval selects text related to the query. It does not classify the claim as supported or contradicted.",
+  "Retrieval selects text related to the query. It does not classify the claim as supported or contradicted.": {
+    "es": "La recuperación selecciona texto relacionado con la consulta. No clasifica la afirmación como apoyada o contradicha.",
     "de": "Die Suche wählt Text aus, der zur Anfrage passt. Sie klassifiziert die Aussage nicht als gestützt oder widerlegt.",
     "fr": "La recherche sélectionne du texte lié à la requête. Elle ne classe pas l'affirmation comme étayée ou contredite.",
     "it": "Il recupero seleziona testo pertinente alla richiesta. Non classifica l'affermazione come supportata o contraddetta."
   },
-  "Contexto truncado: el modelo no ha recibido todo el texto disponible. Revisa el alcance antes de interpretar la clasificación.": {
-    "en": "Truncated context: the model did not receive all available text. Review the scope before interpreting the classification.",
+  "Truncated context: the model did not receive all available text. Review the scope before interpreting the classification.": {
+    "es": "Contexto truncado: el modelo no ha recibido todo el texto disponible. Revisa el alcance antes de interpretar la clasificación.",
     "de": "Gekürzter Kontext: Das Modell hat nicht den gesamten verfügbaren Text erhalten. Prüfen Sie den Umfang, bevor Sie die Klassifikation interpretieren.",
     "fr": "Contexte tronqué : le modèle n'a pas reçu tout le texte disponible. Vérifiez la portée avant d'interpréter la classification.",
     "it": "Contesto troncato: il modello non ha ricevuto tutto il testo disponibile. Verifica l'ambito prima di interpretare la classificazione."
   },
-  "Estos pasajes acompañan la respuesta del modelo; revisa su relevancia y suficiencia en el documento original.": {
-    "en": "These passages accompany the model's response; review their relevance and sufficiency in the original document.",
+  "These passages accompany the model’s response; review their relevance and sufficiency in the original document.": {
+    "es": "Estos pasajes acompañan la respuesta del modelo; revisa su relevancia y suficiencia en el documento original.",
     "de": "Diese Passagen begleiten die Modellantwort. Prüfen Sie im Originaldokument, ob sie relevant und ausreichend sind.",
     "fr": "Ces passages accompagnent la réponse du modèle ; vérifiez leur pertinence et leur suffisance dans le document original.",
     "it": "Questi passaggi accompagnano la risposta del modello; verificane la pertinenza e la sufficienza nel documento originale."
   },
-  "Pasajes del documento": {
-    "en": "Document passages",
+  "Document passages": {
+    "es": "Pasajes del documento",
     "de": "Passagen aus dem Dokument",
     "fr": "Passages du document",
     "it": "Passaggi del documento"
   },
-  " pasaje": {
-    "en": " passage",
+  " passage": {
+    "es": " pasaje",
     "de": " Passage",
     "fr": " passage",
     "it": " passaggio"
   },
-  " pasajes": {
-    "en": " passages",
+  " passages": {
+    "es": " pasajes",
     "de": " Passagen",
     "fr": " passages",
     "it": " passaggi"
   },
-  "{count} pasaje": {
-    "en": "{count} passage",
+  "{count} passage": {
+    "es": "{count} pasaje",
     "de": "{count} Passage",
     "fr": "{count} passage",
     "it": "{count} passaggio"
   },
-  "{count} pasajes": {
-    "en": "{count} passages",
+  "{count} passages": {
+    "es": "{count} pasajes",
     "de": "{count} Passagen",
     "fr": "{count} passages",
     "it": "{count} passaggi"
   },
-  "La respuesta no contiene pasajes. No se han generado citas.": {
-    "en": "The response contains no passages. No quotations have been generated.",
+  "The response contains no passages. No quotations have been generated.": {
+    "es": "La respuesta no contiene pasajes. No se han generado citas.",
     "de": "Die Antwort enthält keine Passagen. Es wurden keine Zitate erzeugt.",
     "fr": "La réponse ne contient aucun passage. Aucune citation n'a été générée.",
     "it": "La risposta non contiene passaggi. Non sono state generate citazioni."
   },
-  "PÁGINA NO DISPONIBLE": {
-    "en": "PAGE NOT AVAILABLE",
+  "PAGE NOT AVAILABLE": {
+    "es": "PÁGINA NO DISPONIBLE",
     "de": "SEITE NICHT VERFÜGBAR",
     "fr": "PAGE INDISPONIBLE",
     "it": "PAGINA NON DISPONIBILE"
   },
-  "PÁGINA ": {
-    "en": "PAGE ",
+  "PAGE ": {
+    "es": "PÁGINA ",
     "de": "SEITE ",
     "fr": "PAGE ",
     "it": "PAGINA "
   },
-  "PÁGINA {page}": {
-    "en": "PAGE {page}",
+  "PAGE {page}": {
+    "es": "PÁGINA {page}",
     "de": "SEITE {page}",
     "fr": "PAGE {page}",
     "it": "PAGINA {page}"
   },
-  "Texto no disponible": {
-    "en": "Text not available",
+  "Text not available": {
+    "es": "Texto no disponible",
     "de": "Text nicht verfügbar",
     "fr": "Texte indisponible",
     "it": "Testo non disponibile"
   },
-  "Referencia del pasaje": {
-    "en": "Passage reference",
+  "Passage reference": {
+    "es": "Referencia del pasaje",
     "de": "Passagenreferenz",
     "fr": "Référence du passage",
     "it": "Riferimento del passaggio"
   },
-  "El servidor devolvió una respuesta que no se pudo leer. Inténtalo de nuevo.": {
-    "en": "The server returned a response that could not be read. Please try again.",
+  "The server returned a response that could not be read. Please try again.": {
+    "es": "El servidor devolvió una respuesta que no se pudo leer. Inténtalo de nuevo.",
     "de": "Die Serverantwort konnte nicht gelesen werden. Versuchen Sie es erneut.",
     "fr": "La réponse du serveur n'a pas pu être lue. Réessayez.",
     "it": "Non è stato possibile leggere la risposta del server. Riprova."
   },
-  "No se pudo extraer texto del PDF. Usa un archivo de hasta 50 MB, sin cifrar y con texto seleccionable.": {
-    "en": "Text could not be extracted from the PDF. Use an unencrypted file up to 50 MB with selectable text.",
+  "Text could not be extracted from the PDF. Use an unencrypted file up to 50 MB with selectable text.": {
+    "es": "No se pudo extraer texto del PDF. Usa un archivo de hasta 50 MB, sin cifrar y con texto seleccionable.",
     "de": "Aus dem PDF konnte kein Text extrahiert werden. Verwenden Sie eine unverschlüsselte Datei bis 50 MB mit auswählbarem Text.",
     "fr": "Le texte du PDF n'a pas pu être extrait. Utilisez un fichier non chiffré de 50 Mo maximum avec du texte sélectionnable.",
     "it": "Non è stato possibile estrarre il testo dal PDF. Usa un file non cifrato fino a 50 MB con testo selezionabile."
   },
-  "No se pudo conectar con Apertus. No se ha producido ninguna decisión. Comprueba el backend e inténtalo de nuevo.": {
-    "en": "Could not connect to Apertus. No decision was produced. Check the backend and try again.",
+  "Could not connect to Apertus. No decision was produced. Check the backend and try again.": {
+    "es": "No se pudo conectar con Apertus. No se ha producido ninguna decisión. Comprueba el backend e inténtalo de nuevo.",
     "de": "Keine Verbindung zu Apertus möglich. Es wurde keine Entscheidung ausgegeben. Prüfen Sie das Backend und versuchen Sie es erneut.",
     "fr": "Impossible de se connecter à Apertus. Aucune décision n'a été produite. Vérifiez le backend et réessayez.",
     "it": "Impossibile connettersi ad Apertus. Non è stata prodotta alcuna decisione. Controlla il backend e riprova."
   },
-  "La solicitud no se pudo completar. Revisa el documento, la afirmación y la configuración del modelo.": {
-    "en": "The request could not be completed. Check the document, the claim and the model configuration.",
+  "The request could not be completed. Check the document, the claim and the model configuration.": {
+    "es": "La solicitud no se pudo completar. Revisa el documento, la afirmación y la configuración del modelo.",
     "de": "Die Anfrage konnte nicht abgeschlossen werden. Prüfen Sie das Dokument, die Aussage und die Modellkonfiguration.",
     "fr": "La requête n'a pas pu aboutir. Vérifiez le document, l'affirmation et la configuration du modèle.",
     "it": "Non è stato possibile completare la richiesta. Controlla il documento, l'affermazione e la configurazione del modello."
   },
-  "La solicitud tardó demasiado. Comprueba el servidor e inténtalo de nuevo.": {
-    "en": "The request timed out. Check the server and try again.",
+  "The request timed out. Check the server and try again.": {
+    "es": "La solicitud tardó demasiado. Comprueba el servidor e inténtalo de nuevo.",
     "de": "Die Anfrage hat zu lange gedauert. Prüfen Sie den Server und versuchen Sie es erneut.",
     "fr": "Le délai de la requête a été dépassé. Vérifiez le serveur et réessayez.",
     "it": "La richiesta ha impiegato troppo tempo. Controlla il server e riprova."
   },
-  "No se pudo conectar con el servidor. Comprueba la conexión e inténtalo de nuevo.": {
-    "en": "Could not connect to the server. Check the connection and try again.",
+  "Could not connect to the server. Check the connection and try again.": {
+    "es": "No se pudo conectar con el servidor. Comprueba la conexión e inténtalo de nuevo.",
     "de": "Keine Verbindung zum Server möglich. Prüfen Sie die Verbindung und versuchen Sie es erneut.",
     "fr": "Impossible de se connecter au serveur. Vérifiez la connexion et réessayez.",
     "it": "Impossibile connettersi al server. Controlla la connessione e riprova."
   },
-  "El documento JSON no es válido. Incluye document_id y una lista de passages con texto.": {
-    "en": "The JSON document is invalid. Include document_id and a passages list containing text.",
+  "The JSON document is invalid. Include document_id and a passages list containing text.": {
+    "es": "El documento JSON no es válido. Incluye document_id y una lista de passages con texto.",
     "de": "Das JSON-Dokument ist ungültig. Es muss document_id und eine Liste passages mit Text enthalten.",
     "fr": "Le document JSON n'est pas valide. Incluez document_id et une liste passages contenant du texte.",
     "it": "Il documento JSON non è valido. Includi document_id e un elenco passages contenente testo."
   },
-  "EN CURSO": {
-    "en": "IN PROGRESS",
+  "IN PROGRESS": {
+    "es": "EN CURSO",
     "de": "IN BEARBEITUNG",
     "fr": "EN COURS",
     "it": "IN CORSO"
   },
-  "Evaluando la afirmación con Apertus…": {
-    "en": "Evaluating the claim with Apertus…",
+  "Evaluating the claim with Apertus…": {
+    "es": "Evaluando la afirmación con Apertus…",
     "de": "Die Aussage wird mit Apertus bewertet…",
     "fr": "Évaluation de l'affirmation avec Apertus…",
     "it": "Valutazione dell'affermazione con Apertus…"
   },
-  "Buscando pasajes en el documento…": {
-    "en": "Searching for passages in the document…",
+  "Searching for passages in the document…": {
+    "es": "Buscando pasajes en el documento…",
     "de": "Passagen im Dokument werden gesucht…",
     "fr": "Recherche de passages dans le document…",
     "it": "Ricerca di passaggi nel documento…"
   },
-  "El backend no devolvió una clasificación válida. No se ha mostrado ninguna decisión.": {
-    "en": "The backend did not return a valid classification. No decision has been displayed.",
+  "The backend did not return a valid classification. No decision has been displayed.": {
+    "es": "El backend no devolvió una clasificación válida. No se ha mostrado ninguna decisión.",
     "de": "Das Backend hat keine gültige Klassifikation zurückgegeben. Es wurde keine Entscheidung angezeigt.",
     "fr": "Le backend n'a pas renvoyé de classification valide. Aucune décision n'a été affichée.",
     "it": "Il backend non ha restituito una classificazione valida. Non è stata mostrata alcuna decisione."
   },
-  "Evaluación completada. Revisa la evidencia.": {
-    "en": "Evaluation complete. Review the evidence.",
+  "Evaluation complete. Review the evidence.": {
+    "es": "Evaluación completada. Revisa la evidencia.",
     "de": "Bewertung abgeschlossen. Prüfen Sie die Belege.",
     "fr": "Évaluation terminée. Examinez les éléments probants.",
     "it": "Valutazione completata. Esamina i riscontri."
   },
-  "Pasajes recuperados. No se ha emitido una clasificación.": {
-    "en": "Passages retrieved. No classification has been issued.",
+  "Passages retrieved. No classification has been issued.": {
+    "es": "Pasajes recuperados. No se ha emitido una clasificación.",
     "de": "Passagen gefunden. Es wurde keine Klassifikation ausgegeben.",
     "fr": "Passages retrouvés. Aucune classification n'a été émise.",
     "it": "Passaggi recuperati. Non è stata emessa alcuna classificazione."
   },
-  "REVISAR": {
-    "en": "REVIEW",
+  "REVIEW": {
+    "es": "REVISAR",
     "de": "PRÜFEN",
     "fr": "À VÉRIFIER",
     "it": "DA VERIFICARE"
   },
-  "Documento JSON introducido manualmente.": {
-    "en": "Manually entered JSON document.",
+  "Manually entered JSON document.": {
+    "es": "Documento JSON introducido manualmente.",
     "de": "Manuell eingegebenes JSON-Dokument.",
     "fr": "Document JSON saisi manuellement.",
     "it": "Documento JSON inserito manualmente."
   },
-  "Ejemplo sintético · 3 pasajes · no es un folleto oficial": {
-    "en": "Synthetic example · 3 passages · not an official booklet",
+  "Synthetic example · 3 passages · not an official booklet": {
+    "es": "Ejemplo sintético · 3 pasajes · no es un folleto oficial",
     "de": "Synthetisches Beispiel · 3 Passagen · kein offizielles Abstimmungsbüchlein",
     "fr": "Exemple synthétique · 3 passages · pas une brochure officielle",
     "it": "Esempio sintetico · 3 passaggi · non è un opuscolo ufficiale"
   },
-  "Leyendo ": {
-    "en": "Reading ",
+  "Reading ": {
+    "es": "Leyendo ",
     "de": "Lesen: ",
     "fr": "Lecture de ",
     "it": "Lettura di "
   },
-  "Leyendo {filename}…": {
-    "en": "Reading {filename}…",
+  "Reading {filename}…": {
+    "es": "Leyendo {filename}…",
     "de": "{filename} wird gelesen…",
     "fr": "Lecture de {filename}…",
     "it": "Lettura di {filename}…"
   },
-  "Archivo no cargado.": {
-    "en": "File not uploaded.",
+  "File not uploaded.": {
+    "es": "Archivo no cargado.",
     "de": "Datei nicht hochgeladen.",
     "fr": "Fichier non importé.",
     "it": "File non caricato."
   },
-  "El PDF supera el límite de 50 MB. Selecciona un archivo más pequeño.": {
-    "en": "The PDF exceeds the 50 MB limit. Select a smaller file.",
+  "The PDF exceeds the 50 MB limit. Select a smaller file.": {
+    "es": "El PDF supera el límite de 50 MB. Selecciona un archivo más pequeño.",
     "de": "Das PDF überschreitet die Grenze von 50 MB. Wählen Sie eine kleinere Datei.",
     "fr": "Le PDF dépasse la limite de 50 Mo. Sélectionnez un fichier plus petit.",
     "it": "Il PDF supera il limite di 50 MB. Seleziona un file più piccolo."
   },
-  "Extrayendo texto y páginas del PDF…": {
-    "en": "Extracting text and pages from the PDF…",
+  "Extracting text and pages from the PDF…": {
+    "es": "Extrayendo texto y páginas del PDF…",
     "de": "Text und Seiten werden aus dem PDF extrahiert…",
     "fr": "Extraction du texte et des pages du PDF…",
     "it": "Estrazione del testo e delle pagine dal PDF…"
   },
-  " página · ": {
-    "en": " page · ",
+  " page · ": {
+    "es": " página · ",
     "de": " Seite · ",
     "fr": " page · ",
     "it": " pagina · "
   },
-  " páginas · ": {
-    "en": " pages · ",
+  " pages · ": {
+    "es": " páginas · ",
     "de": " Seiten · ",
     "fr": " pages · ",
     "it": " pagine · "
   },
-  "{count} página": {
-    "en": "{count} page",
+  "{count} page": {
+    "es": "{count} página",
     "de": "{count} Seite",
     "fr": "{count} page",
     "it": "{count} pagina"
   },
-  "{count} páginas": {
-    "en": "{count} pages",
+  "{count} pages": {
+    "es": "{count} páginas",
     "de": "{count} Seiten",
     "fr": "{count} pages",
     "it": "{count} pagine"
   },
-  "Documento listo. Escribe la afirmación que quieres contrastar.": {
-    "en": "Document ready. Write the claim you want to check.",
+  "Document ready. Write the claim you want to check.": {
+    "es": "Documento listo. Escribe la afirmación que quieres contrastar.",
     "de": "Dokument bereit. Formulieren Sie die Aussage, die Sie prüfen möchten.",
     "fr": "Document prêt. Formulez l'affirmation à examiner.",
     "it": "Documento pronto. Scrivi l'affermazione che vuoi verificare."
   },
-  "Archivo no cargado. Selecciona otro PDF.": {
-    "en": "File not uploaded. Select another PDF.",
+  "File not uploaded. Select another PDF.": {
+    "es": "Archivo no cargado. Selecciona otro PDF.",
     "de": "Datei nicht hochgeladen. Wählen Sie ein anderes PDF.",
     "fr": "Fichier non importé. Sélectionnez un autre PDF.",
     "it": "File non caricato. Seleziona un altro PDF."
   },
-  "Backend configurado. La conexión se comprueba al evaluar.": {
-    "en": "Backend configured. The connection is checked during evaluation.",
+  "Backend configured. The connection is checked during evaluation.": {
+    "es": "Backend configurado. La conexión se comprueba al evaluar.",
     "de": "Backend konfiguriert. Die Verbindung wird bei der Bewertung geprüft.",
     "fr": "Backend configuré. La connexion est vérifiée lors de l'évaluation.",
     "it": "Backend configurato. La connessione viene verificata durante la valutazione."
   },
-  "Sin backend de Apertus. Puedes inspeccionar pasajes; la evaluación requiere el modelo.": {
-    "en": "No Apertus backend. You can inspect passages; evaluation requires the model.",
+  "No Apertus backend. You can inspect passages; evaluation requires the model.": {
+    "es": "Sin backend de Apertus. Puedes inspeccionar pasajes; la evaluación requiere el modelo.",
     "de": "Kein Apertus-Backend. Sie können Passagen ansehen; die Bewertung erfordert das Modell.",
     "fr": "Aucun backend Apertus. Vous pouvez examiner les passages ; l'évaluation nécessite le modèle.",
     "it": "Nessun backend Apertus. Puoi esaminare i passaggi; la valutazione richiede il modello."
   },
-  "No se pudo comprobar el backend. Recarga la página para reintentar; puedes inspeccionar pasajes.": {
-    "en": "Could not check the backend. Reload the page to retry; you can still inspect passages.",
+  "Could not check the backend. Reload the page to retry; you can still inspect passages.": {
+    "es": "No se pudo comprobar el backend. Recarga la página para reintentar; puedes inspeccionar pasajes.",
     "de": "Das Backend konnte nicht geprüft werden. Laden Sie die Seite neu, um es erneut zu versuchen; Sie können weiterhin Passagen ansehen.",
     "fr": "Le backend n'a pas pu être vérifié. Rechargez la page pour réessayer ; vous pouvez toujours examiner les passages.",
     "it": "Non è stato possibile verificare il backend. Ricarica la pagina per riprovare; puoi comunque esaminare i passaggi."
   },
-  "No hay métricas registradas disponibles.": {
-    "en": "No recorded metrics are available.",
+  "No recorded metrics are available.": {
+    "es": "No hay métricas registradas disponibles.",
     "de": "Keine gespeicherten Metriken verfügbar.",
     "fr": "Aucune métrique enregistrée n'est disponible.",
     "it": "Nessuna metrica registrata disponibile."
   },
-  "histórico": {
-    "en": "historical",
+  "historical": {
+    "es": "histórico",
     "de": "historisch",
     "fr": "historique",
     "it": "storico"
   },
-  "Las métricas corresponden a experimentos registrados; no garantizan el resultado de una consulta nueva.": {
-    "en": "The metrics describe recorded experiments; they do not guarantee the outcome of a new query.",
+  "The metrics describe recorded experiments; they do not guarantee the outcome of a new query.": {
+    "es": "Las métricas corresponden a experimentos registrados; no garantizan el resultado de una consulta nueva.",
     "de": "Die Metriken beziehen sich auf dokumentierte Experimente; sie garantieren kein Ergebnis für eine neue Anfrage.",
     "fr": "Les métriques correspondent à des expériences enregistrées ; elles ne garantissent pas le résultat d'une nouvelle requête.",
     "it": "Le metriche si riferiscono a esperimenti registrati; non garantiscono il risultato di una nuova richiesta."
   },
-  "Las métricas registradas no están disponibles en este momento.": {
-    "en": "Recorded metrics are currently unavailable.",
+  "Recorded metrics are currently unavailable.": {
+    "es": "Las métricas registradas no están disponibles en este momento.",
     "de": "Die gespeicherten Metriken sind derzeit nicht verfügbar.",
     "fr": "Les métriques enregistrées sont indisponibles pour le moment.",
     "it": "Le metriche registrate non sono al momento disponibili."
   },
-  "Idioma de la interfaz": {
-    "en": "Interface language",
+  "Interface language": {
+    "es": "Idioma de la interfaz",
     "de": "Sprache der Oberfläche",
     "fr": "Langue de l'interface",
     "it": "Lingua dell'interfaccia"
   },
-  "Seleccionar idioma": {
-    "en": "Select language",
+  "Select language": {
+    "es": "Seleccionar idioma",
     "de": "Sprache auswählen",
     "fr": "Choisir la langue",
     "it": "Seleziona lingua"
   },
-  "Automático": {
-    "en": "Automatic",
+  "Automatic": {
+    "es": "Automático",
     "de": "Automatisch",
     "fr": "Automatique",
     "it": "Automatico"
   },
-  "Idioma": {
-    "en": "Language",
+  "Language": {
+    "es": "Idioma",
     "de": "Sprache",
     "fr": "Langue",
     "it": "Lingua"
   },
-  "a la ": {
-    "en": "to the ",
+  "to the ": {
+    "es": "a la ",
     "de": "zu den ",
     "fr": "aux ",
     "it": "ai "
