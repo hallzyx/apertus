@@ -1,65 +1,65 @@
-# Phase2: resumen científico de Apertus OST
+# Phase2: Apertus OST research summary
 
-![Comparación verificable de calidad y contexto](context-tradeoffs.png)
+![Verified quality and context comparison](context-tradeoffs.png)
 
-## 1. Controles de dependencia del documento
+## 1. Document-dependence controls
 
-| Entrada del sistema original | Macro-F1 de validación |
+| Original system input | Validation Macro-F1 |
 |---|---:|
-| Folleto correcto |0.894461|
-| Solo afirmación, cabeza entrenada exclusivamente en train |0.699640|
-| Folleto de otro evento, mismo idioma; seed42 |0.565341|
-| Folleto de otro evento, mismo idioma; seed1337 |0.553328|
-| Premisa vacía, cabeza original congelada |0.210229|
-| Premisa genérica, cabeza original congelada |0.174688|
+| Correct booklet |0.894461|
+| Claim only, head trained exclusively on train |0.699640|
+| Booklet from another event, same language; seed42 |0.565341|
+| Booklet from another event, same language; seed1337 |0.553328|
+| Empty premise, frozen original head |0.210229|
+| Generic premise, frozen original head |0.174688|
 
-La caída con folletos incorrectos respalda dependencia del contexto. El buen resultado sin documento muestra señales de clase en las afirmaciones; estos controles no demuestran grounding semántico universal. Las etiquetas originales miden retención bajo intervenciones, no la verdad NLI de las nuevas parejas.
+The drop with wrong booklets supports context dependence. The good result without a document shows class signal in the claims alone; these controls do not demonstrate universal semantic grounding. The original labels measure retention under interventions, not the NLI truth of the new pairs.
 
-Controles de la cabeza/contexto final: wrong-42=0.468262, wrong-1337=0.453133, empty=0.273247. Todos los controles registrados exigidos para la selección pasan.
+Controls for the final head/context: wrong-42=0.468262, wrong-1337=0.453133, empty=0.273247. All registered controls required for selection pass.
 
-## 2. Contexto y frontera observada
+## 2. Context and observed frontier
 
-| Contexto/cabeza correspondiente | Macro-F1 | Tokens medios | Segundos medidos en caché |
+| Matched context/head | Macro-F1 | Mean tokens | Cached measured seconds |
 |---|---:|---:|---:|
 |hybrid-1k|0.844729|893|0.523|
 |hybrid-2k|0.887575|1941|0.777|
 |hybrid-4k|0.886942|4017|1.365|
 |hybrid-8k|0.949069|8060|2.520|
 |prefix-2k|0.766764|1921|0.453|
-|Original full, comprobación A6000|0.894461|14106|3.316|
+|Original full, A6000 recheck|0.894461|14106|3.316|
 
-La frontera observada entre configuraciones estáticas de F1/tokens/latencia contiene1k,2k,8k y prefix2k.4k fue la elección de eficiencia registrada bajo restricciones adicionales por clase e idioma; no se presenta como punto global no dominado. La alternativa8k se registró separadamente tras observar una mejora material. La selección de arquitectura usa validación y no es descubrimiento ciego. Las latencias de contextos compactos suman codificación, recuperación y cabeza por separado; no incluyen arranque, extracción PDF ni HTTP.
+The observed frontier among static F1/token/latency configurations contains 1k, 2k, 8k and prefix2k. 4k was the registered efficiency choice under additional per-class and per-language constraints; it is not presented as a globally non-dominated point. The 8k alternative was registered separately after a material improvement was observed. Architecture selection uses validation and is not blind discovery. Latencies for compact contexts sum encoding, retrieval and head separately; they exclude start-up, PDF extraction and HTTP.
 
-## 3. Evidencia
+## 3. Evidence
 
-Se verificaron texto exacto, página, offsets y SHA del PDF. El solapamiento lexical5gram con referencias para hybrid-8k es un diagnóstico de desarrollo, no la métrica oficial. Referencias nunca son necesarias en producción. Se ejecutaron **12** inferencias reales solo con las1–2 citas propuestas: preservación **75.0%**; **12** contextos fueron estrictamente reducidos, con preservación **75.0%**. Esto mide sensibilidad, no prueba humana de suficiencia ni atribución.
+Exact text, page, offsets and PDF SHA were verified. The lexical 5-gram overlap with references for hybrid-8k is a development diagnostic, not the official metric. References are never required in production. **12** real inferences were run with only the 1–2 proposed quotes: decision preservation **75.0%**; **12** contexts were strictly reduced, with preservation **75.0%**. This measures sensitivity, not human proof of sufficiency or attribution.
 
-La inspección cualitativa de9 casos por idioma/clase está en evidence-audit.json. Las citas de salida siguen siendo contexto fuente ordenado, no pruebas mínimas certificadas. Neutral requiere cautela: no encontrar evidencia en el contexto seleccionado no prueba ausencia en todo el folleto. La posible ambigüedad de alcance de ost-v1.1-0732 se conserva sin cambiar etiquetas. Las expansiones por vecinos/diversidad usan90 casos fijos y no se adoptan a partir de esa pequeña muestra.
+The qualitative inspection of 9 cases per language/class is in evidence-audit.json. Output quotes remain ordered source context, not certified minimal proofs. Neutral requires caution: not finding evidence in the selected context does not prove absence from the whole booklet. The possible scope ambiguity of ost-v1.1-0732 is preserved without changing labels. Neighbor/diversity expansions use 90 fixed cases and are not adopted on the basis of that small sample.
 
-## 4. Arquitectura congelada
+## 4. Frozen architecture
 
-**hybrid-8k**, recuperación híbrida E5/BM25, pasajes íntegros con presupuesto de tokens nativo, Apertus v1.5 congelado y cabeza logística multiclase entrenada/calibrada solo con train. Sin LoRA, QLoRA,70B, cuantización ni router adaptativo.
+**hybrid-8k**, hybrid E5/BM25 retrieval, whole passages within the native token budget, frozen Apertus v1.5 and a multiclass logistic head trained/calibrated on train only. No LoRA, QLoRA, 70B, quantization or adaptive router.
 
 ```mermaid
 flowchart LR
- PDF[Folleto PDF] --> Parse[Pasajes con página y offsets]
- Parse --> Retrieve[Recuperación E5 y BM25]
- Claim[Afirmación DE FR IT] --> Retrieve
- Retrieve --> Context[Contexto hybrid-8k]
- Context --> Apertus[Apertus v1.5 congelado]
- Apertus --> Head[Cabeza calibrada con train]
- Head --> Label[Clase 0 1 2 y confianza]
- Context --> Quotes[Citas fuente y páginas]
- Label --> Metrics[Tokens y tiempo]
+ PDF[Booklet PDF] --> Parse[Passages with page and offsets]
+ Parse --> Retrieve[E5 and BM25 retrieval]
+ Claim[DE FR IT claim] --> Retrieve
+ Retrieve --> Context[hybrid-8k context]
+ Context --> Apertus[Frozen Apertus v1.5]
+ Apertus --> Head[Head calibrated on train]
+ Head --> Label[Class 0 1 2 and confidence]
+ Context --> Quotes[Source quotes and pages]
+ Label --> Metrics[Tokens and time]
 ```
 
-Validación final: F1 **0.949069**; cross-language **0.941796**;207 parejas deduplicadas **0.945610**. CLI con3 PDFs cross-language y petición real de subida/predicción del frontend se verificaron sobre GPU. El Docker frontend requiere el backend nativo configurado; las GPUs desechables se destruyeron tras archivar las pruebas.
+Final validation: F1 **0.949069**; cross-language **0.941796**; 207 deduplicated pairs **0.945610**. The CLI on 3 cross-language PDFs and a real frontend upload/prediction request were verified on GPU. The Docker frontend requires the configured native backend; the disposable GPUs were destroyed after the evidence was archived.
 
-## 5. Calibración
+## 5. Calibration
 
-ECE10 bins **0.028410** · Brier **0.070524** · NLL **0.139329**. Temperatura elegida con OOF de train; no recalibración en validación.
+ECE (10 bins) **0.028410** · Brier **0.070524** · NLL **0.139329**. Temperature chosen with train OOF; no recalibration on validation.
 
-| Confianza | n | Exactitud | Confianza media |
+| Confidence | n | Accuracy | Mean confidence |
 |---|---:|---:|---:|
 |0.00–0.50|3|0.333|0.490|
 |0.50–0.70|15|0.467|0.636|
@@ -67,22 +67,22 @@ ECE10 bins **0.028410** · Brier **0.070524** · NLL **0.139329**. Temperatura e
 |0.85–0.95|30|1.000|0.916|
 |0.95–1.00|210|0.990|0.991|
 
-Diagnóstico semántico complementario: presencia del pasaje fuente más próximo a la referencia E5 **78.1%** en casos Entailment/Contradiction. Es una aproximación dependiente del mismo recuperador, no recall de evidencia humana ni evaluación oficial; véase semantic-reference-diagnostic.json.
+Complementary semantic diagnostic: presence of the source passage nearest to the E5 reference **78.1%** on Entailment/Contradiction cases. It is an approximation that depends on the same retriever, not human evidence recall or an official evaluation; see semantic-reference-diagnostic.json.
 
-La simulación4k→8k con umbral0.95 logra F1 **0.945312**, **5853** tokens y **1.949s**, escalando **22.8%** de los ejemplos. Es una alternativa prometedora, no un resultado negativo.8k fijo ofrece mayor F1, mayor presencia de pasajes próximos a referencia y una sola cabeza/forward; el router carece de verificación propia de ejecución completa y de transferencia del umbral a folletos independientes. No se adopta en producción.
+The 4k→8k simulation with threshold 0.95 reaches F1 **0.945312**, **5853** tokens and **1.949s**, escalating **22.8%** of the examples. It is a promising alternative, not a negative result. Fixed 8k offers higher F1, higher presence of passages near the reference and a single head/forward; the router lacks its own end-to-end verification and threshold transfer to independent booklets. It is not adopted in production.
 
-Los umbrales adaptativos solo se simularon con caché, contabilizando ambos forwards al escalar. No se adopta complejidad adicional. Las probabilidades de controles con documento incorrecto no se interpretan como calibración de etiquetas NLI verdaderas.
+The adaptive thresholds were only simulated from cache, counting both forwards when escalating. No additional complexity is adopted. The probabilities of wrong-document controls are not interpreted as calibration of true NLI labels.
 
-## 6. Cómputo
+## 6. Compute
 
-Gasto Vast total observado: **USD4.9787**. Gasto incremental Phase2: **USD1.5128**. Crédito observado restante: **USD5.0213**. Instancias de esta tarea activas: **0**, destrucción verificada por API paginada. Se conservó la reserva de USD2 y el límite adicional de USD4.50. Contabilidad del proveedor sujeta a cargos tardíos; budget.json y resource-audit.json contienen timestamps, precios, duración y observaciones por etapa.
+Total observed Vast spend: **USD4.9787**. Incremental Phase2 spend: **USD1.5128**. Observed remaining credit: **USD5.0213**. Active instances for this task: **0**, destruction verified through the paginated API. The USD2 reserve and the additional USD4.50 cap were kept. Provider accounting is subject to late charges; budget.json and resource-audit.json contain timestamps, prices, duration and per-stage observations.
 
-## 7. Conclusión científica
+## 7. Scientific conclusion
 
-**La hipótesis recibe apoyo parcial en este benchmark de desarrollo.** Las representaciones de Apertus congelado permiten una cabeza ligera con F10.949, y los controles de folletos incorrectos reducen materialmente la retención. El contexto baja de aproximadamente14106 a8060 tokens sin sacrificar la calidad de validación. Esto justifica la arquitectura final, no una afirmación universal de razonamiento o generalización.
+**The hypothesis receives partial support on this development benchmark.** Frozen Apertus representations allow a lightweight head with F1 0.949, and the wrong-booklet controls materially reduce retention. The context drops from roughly 14106 to 8060 tokens without sacrificing validation quality. This justifies the final architecture, not a universal claim of reasoning or generalization.
 
-Persisten señales en las afirmaciones, solo3 eventos y2 unidades conectadas de validación, duplicados/paráfrasis, posible ambigüedad de alcance y evidencia no certificada. Se requiere evaluación en nuevos folletos independientes. Los310 ejemplos consumidos nunca se reabrieron en Phase2: su F1 histórico0.899920 pertenece únicamente al sistema original full, no a la nueva cabeza compacta. No se justifica gastar el remanente en LoRA con esta evidencia.
+Remaining caveats: class signal in the claims, only 3 events and 2 connected validation units, duplicates/paraphrases, possible scope ambiguity and uncertified evidence. Evaluation on new independent booklets is required. The 310 consumed examples were never reopened in Phase2: their historical F1 0.899920 belongs only to the original full system, not to the new compact head. This evidence does not justify spending the remaining credit on LoRA.
 
-Fuente completa: [technical_report.md](../../technical_report.md); métricas: context-results.json, final-results.json y accuracy-results.json cuando exista; errores: selected-error-analysis.jsonl.
+Full source: [technical_report.md](../../technical_report.md); metrics: context-results.json, final-results.json and accuracy-results.json when present; errors: selected-error-analysis.jsonl.
 
 The 4k and 8k minimal-evidence audits use different class/language-stratified cohorts; 3/12 versus 9/12 is descriptive, not a paired causal comparison.
